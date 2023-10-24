@@ -1,0 +1,11 @@
+/public
+resources/
+themes/
+node_modules/
+.hugo_build.lock
+
+# editor
+*.swp
+
+# linter
+test/
