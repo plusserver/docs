@@ -1,6 +1,6 @@
-# plusserver Kubernetes Engine: technical documentation repo
+# plusserver: technical documentation repo
 
-[plusserver Kubernetes Engine](https://www.plusserver.com/en/produkte/managed-kubernetes) is an enterprise-scale, open-source Kubernetes engine provided by [plusserver](https://plusserver.com). The technical documentation is published [here](https://docs.pske.get-cloud.io).
+[plusserver](https://plusserver.com). The technical documentation is published [here](https://docs.plusserver.com).
 
 ## Contributions
 

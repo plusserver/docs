@@ -1,6 +1,6 @@
 ---
-title: "Schnellstart"
-linkTitle: "Schnellstart"
+title: "Quickstartguide"
+linkTitle: "Quickstartguide"
 weight: 20
 date: 2023-03-14
 ---

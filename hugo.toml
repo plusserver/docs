@@ -1,4 +1,4 @@
-baseURL = 'https://docs.pske.get-cloud.io/'
+baseURL = 'https://docs.plusserver.com/'
 languageCode = 'en-us'
 
 # Language settings
@@ -61,7 +61,7 @@ includeFields = ''
 # Language configuration
 [languages]
 [languages.en]
-title = "Plusserver Documentation"
+title = "plusserver Documentation"
 [languages.en.params]
 description = "The technical documentation for all plusserver products"
 languageName = "English"
