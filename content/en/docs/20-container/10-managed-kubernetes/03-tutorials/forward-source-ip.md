@@ -1,7 +1,6 @@
-
 ---
-title: "Forward Source IP"
-linkTitle: "Forward Source IP"
+title: "Proxy Protocol - Forward Source IP"
+linkTitle: "Proxy Protocol - Forward Source IP"
 weight: 4
 date: 2023-02-21
 ---
