@@ -15,7 +15,7 @@ To contribute, follow these steps:
 2. Clone the forked repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/pluscloudopen/pske-docs.git
+git clone https://github.com/plusserver/docs.git
 ```
 
 3. Create a new branch to work on your changes:
@@ -68,7 +68,7 @@ Ref: [Developing inside a Container](https://code.visualstudio.com/docs/devconta
 1. Clone the GitHub repo to your local machine by running the following command in your terminal:
 
 ```bash
-git clone https://github.com/pluscloudopen/pske-docs.git
+git clone https://github.com/plusserver/docs.git
 ```
 
 2. Make sure you have Visual Studio Code (VSCode) installed on your machine. If you don't have it already, you can download it from the [official website](https://code.visualstudio.com/).

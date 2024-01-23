@@ -109,7 +109,7 @@ disable = false
 privacyEnhanced = false
 
 [params]
-copyright = "PlusServer GmbH"
+copyright = "plusserver gmbh"
 privacy_policy = "https://www.plusserver.com/en/privacy-policy"
 
 # First one is picked as the Twitter card image if not set on page.
@@ -124,13 +124,13 @@ privacy_policy = "https://www.plusserver.com/en/privacy-policy"
 #weight=30
 
 
-# Flag used in the "version-banner" partial to decide whether to display a 
+# Flag used in the "version-banner" partial to decide whether to display a
 # banner on every page indicating that this is an archived version of the docs.
 # Set this flag to "true" if you want to display the banner.
 #archived_version = false
 
 # The version number for the version of the docs represented in this doc set.
-# Used in the "version-banner" partial to display a version number for the 
+# Used in the "version-banner" partial to display a version number for the
 # current doc set.
 #version = "0.0"
 
@@ -139,7 +139,7 @@ privacy_policy = "https://www.plusserver.com/en/privacy-policy"
 #url_latest_version = "https://example.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/pluscloudopen/pske-docs"
+github_repo = "https://github.com/plusserver/docs"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
 #github_project_repo = "https://github.com/pluscloudopen/docs"
 
@@ -164,7 +164,7 @@ prism_syntax_highlighting = true
 
 # User interface configuration
 [params.ui]
-#  Set to true to disable breadcrumb navigation.
+# Set to true to disable breadcrumb navigation.
 breadcrumb_disable = false
 taxonomy_breadcrumb_disable = true
 # Set to true to disable the About link in the site footer
@@ -187,11 +187,11 @@ ul_show = 2
 [params.ui.feedback]
 enable = false
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-yes = 'Glad to hear it! Please <a href="https://github.com/pluscloudopen/pske-docs/issues/new">tell us how we can improve</a>.'
-no = 'Sorry to hear that. Please <a href="https://github.com/pluscloudopen/pske-docs/issues/new">tell us how we can improve</a>.'
+yes = 'Glad to hear it! Please <a href="https://github.com/plusserver/docs/issues/new">tell us how we can improve</a>.'
+no = 'Sorry to hear that. Please <a href="https://github.com/plusserver/docs/issues/new">tell us how we can improve</a>.'
 
 # Adds a reading time to the top of each doc.
-# If you want this feature, but occasionally need to remove the Reading time from a single page, 
+# If you want this feature, but occasionally need to remove the Reading time from a single page,
 # add "hide_readingtime: true" to the page's front matter
 [params.ui.readingtime]
 enable = true
@@ -199,26 +199,26 @@ enable = true
 [params.links]
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 [[params.links.user]]
-name = "plusserver Kubernetes Engine"
-url = "https://www.plusserver.com/en/produkte/managed-kubernetes"
+name = "plusserver"
+url = "https://www.plusserver.com/en/"
 icon = "fa-solid fa-house"
-desc = "plusserver Kubernetes Engine product page"
+desc = "plusserver homepage"
 [[params.links.user]]
 name = "GitHub"
-url = "https://github.com/pluscloudopen"
+url = "https://github.com/plusserver"
 icon = "fab fa-github"
 desc = "Development takes place here!"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 name = "Contact"
-url = "https://www.plusserver.com/en/about-us/plusserver-contact"
+url = "https://www.plusserver.com/en/support/"
 icon = "fa-solid fa-phone"
-desc = "PlusServer GmbH Contact"
+desc = "plusserver gmbh Contact"
 [[params.links.developer]]
-name = "Company Information"
-url = "https://www.plusserver.com/en/company-information"
+name = "Imprint"
+url = "https://www.plusserver.com/en/imprint/"
 icon = "fa-solid fa-gavel"
-desc = "PlusServer GmbH Legal notice"
+desc = "plusserver gmbh Legal notice"
 
 # hugo module configuration
 

@@ -1,4 +1,4 @@
-module github.com/pluscloudopen/pske-docs
+module github.com/plusserver/docs
 
 go 1.19
 
