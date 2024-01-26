@@ -51,7 +51,7 @@ Please use the in-document-base64 style.
 
 Please use codeblock with the matching lanaguage highlighter.
 
-## Docsy Imfo/Alert-Blocks
+## Docsy Info/Alert-Blocks
 
 ### Info
 
@@ -61,7 +61,7 @@ This is a info.
 {{% /alert %}}
 ```
 
-### Alter
+### Alert
 
 ```
 {{% alert title="Warning" color="warning" %}}
