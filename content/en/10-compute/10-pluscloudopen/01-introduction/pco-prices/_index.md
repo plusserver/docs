@@ -1,5 +1,6 @@
 ---
 title: "PCO Prices"
+type: "docs"
 weight: 20
 date: 2023-06-26
 ---

@@ -1,5 +1,6 @@
 ---
 title: "plusserver Regions and Availability Zones"
+type: "docs"
 weight: 10
 date: 2023-03-10
 ---

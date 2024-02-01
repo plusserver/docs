@@ -1,6 +1,7 @@
 ---
 #https://gohugo.io/content-management/page-bundles/
 title: "From zero to first login into a VM with Horizon"
+type: "docs"
 date: 2023-03-20
 description: >
   Click your first VM in Horizon and log in

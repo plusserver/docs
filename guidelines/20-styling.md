@@ -11,7 +11,7 @@ Every project-structure follows the following rules:
   - 01-introduction
   - 02-reference
   - 03-tutorials
-  - 04-releasonotes
+  - 04-releasenotes
 - Maximal folder depth is 3
 
 ## Document Header
@@ -24,7 +24,7 @@ title: "TITLE"
 linkTitle: "Link Title"
 type: "docs"
 weight: 30 # optional
-date: 2030-01-01
+date: 2030-01-01 # please use actual date
 description: # optional
 ---
 ```

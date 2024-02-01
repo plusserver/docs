@@ -1,6 +1,7 @@
 ---
 #https://gohugo.io/content-management/page-bundles/
 title: "Can not login into new launched instance"
+type: "docs"
 date: 2023-02-24
 description: >
   You have started a new instance but can not login with your putty generated ssh key.

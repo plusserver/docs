@@ -1,5 +1,6 @@
 ---
 title: "Networks, Loadbalancers, Floating IPs and Security Groups"
+type: "docs"
 weight: 50
 date: 2023-02-24
 description: >

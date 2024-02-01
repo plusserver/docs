@@ -1,5 +1,6 @@
 ---
 title: "Creating Instances"
+type: "docs"
 weight: 50
 date: 2023-02-24
 description: >

@@ -1,6 +1,7 @@
 ---
 #https://gohugo.io/content-management/page-bundles/
 title: "Login not possible"
+type: "docs"
 date: 2023-02-24
 description: >
   You have received your initial credentials via e-mail and want to login into Horizon, but that does not work.

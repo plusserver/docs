@@ -1,5 +1,6 @@
 ---
 title: "PCO Environments"
+type: "docs"
 weight: 20
 date: 2023-03-10
 description: >

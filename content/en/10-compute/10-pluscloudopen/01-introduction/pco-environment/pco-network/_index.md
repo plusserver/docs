@@ -1,5 +1,6 @@
 ---
 title: "PCO Network"
+type: "docs"
 weight: 30
 date: 2023-03-10
 ---

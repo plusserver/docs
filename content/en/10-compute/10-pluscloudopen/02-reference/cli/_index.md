@@ -1,5 +1,6 @@
 ---
 title: "OpenStack on the Command Line (CLI)"
+type: "docs"
 weight: 50
 date: 2023-02-24
 description: >

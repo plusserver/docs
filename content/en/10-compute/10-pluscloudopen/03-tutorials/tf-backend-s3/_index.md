@@ -1,6 +1,7 @@
 ---
 #https://gohugo.io/content-management/page-bundles/
 title: "OpenStack Object Storage as a Backend for Terraform Statefiles"
+type: "docs"
 date: 2023-03-14
 description: >
   Manage your Infrastructure as Code (IaC) with Hashicorp Terraform and use OpenStack Object Storage as a Backend
