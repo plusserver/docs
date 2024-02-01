@@ -62,9 +62,18 @@ includeFields = ''
 [languages]
 [languages.en]
 title = "plusserver Documentation"
+languageName = "English"
+weight = 1
 [languages.en.params]
 description = "The technical documentation for all plusserver products"
-languageName = "English"
+time_format_default = "02.01.2006"
+time_format_blog = "02.01.2006"
+[languages.de]
+title = "plusserver Documentation"
+languageName = "Deutsch"
+contentDir = "content/de"
+[languages.de.params]
+description = "The technical documentation for all plusserver products"
 time_format_default = "02.01.2006"
 time_format_blog = "02.01.2006"
 
