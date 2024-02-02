@@ -22,7 +22,7 @@ Each pluscloud open environment is designed as a "shared nothing" infrastructure
 | scs1        | DE-WEST  | DE-WEST-2         |
 
 {{% alert title="Note" color="info" %}}
-scs1 is a development environment solely provided in the [Sovereign Cloud Stack](https://scs.community) & [GAIA-X](https://gaia-x.eu) context
+scs1 is a development environment solely provided in the [Sovereign Cloud Stack](https://scs.community) & [GAIA-X](https://gaia-x.eu) context.
 {{% /alert %}}
 
 ### UI/API endpoints
