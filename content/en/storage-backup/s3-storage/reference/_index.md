@@ -3,7 +3,7 @@ title: "Reference"
 linkTitle: "Reference"
 type: "docs"
 weight: 2
-date: 2023-02-21
+date: 2024-02-06
 description: >
-    Technical details about plusstorage S3.
+    Documentation on working with various features of plusserver S3
 ---
