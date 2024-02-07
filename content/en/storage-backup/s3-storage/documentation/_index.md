@@ -1,8 +1,8 @@
 ---
-title: "Reference"
-linkTitle: "Reference"
+title: "Documentation"
+linkTitle: "Documentation"
 type: "docs"
-weight: 2
+weight: 20
 date: 2024-02-06
 description: >
     Documentation on working with various features of plusserver S3

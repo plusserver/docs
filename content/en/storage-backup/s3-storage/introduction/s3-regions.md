@@ -1,6 +1,6 @@
 ---
-title: "S3 Regions"
-linkTitle: "S3 Regions"
+title: "S3 Regions and Endpoints"
+linkTitle: "S3 Regions and Endpoints"
 type: "docs"
 weight: 10
 date: "2024-02-06"

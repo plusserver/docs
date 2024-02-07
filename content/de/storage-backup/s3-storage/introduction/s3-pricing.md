@@ -1,6 +1,6 @@
 ---
 title: "S3 Preise und Speicherrichtlinien"
-linkTitle: "S3 Preise"
+linkTitle: "S3 Preise und Richtlinien"
 type: "docs"
 weight: 20
 date: "2024-02-06"

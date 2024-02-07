@@ -2,7 +2,7 @@
 title: "Introduction"
 linkTitle: "Introduction"
 type: "docs"
-weight: 2
+weight: 10
 date: 2024-02-06
 description: >
     Everything you need for a perfect start with your plusserver s3

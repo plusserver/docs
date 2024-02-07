@@ -1,6 +1,6 @@
 ---
 title: "S3 Pricing and Storage Policies"
-linkTitle: "S3 Pricing"
+linkTitle: "S3 Pricing and Policies"
 type: "docs"
 weight: 20
 date: "2024-02-06"
