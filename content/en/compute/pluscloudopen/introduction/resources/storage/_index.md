@@ -20,17 +20,21 @@ In addition to the basic block storage functionality, pluscloud open also offers
 ## Local SSD Storage
 
 {{% alert title="Note" color="info" %}}
-pluscloud open will soon offer a local storage option.
+pluscloud open will soon offer the Local SSD Storage option.
 {{% /alert %}}
+
+Standard shared storage based on Ceph has a balanced performance profile that is not suitable for all use cases. In particular, Etcd and transactional databases such as Postgres are known to have performance issues here.
+
+pluscloud open offers Local SSD Storage as an option for storing data on instances. Local SSD Storage is non-shared storage that is physically attached to the instance and provides high input/output operations per second (IOPS) and low latency. It is ideal for applications that require high performance and low latency.
+
+Local SSD Storage is ideal for volatile or temporary workloads such as caches. Also good candidates for Local SSD Storage are highly automated replicated databases or key-value stores such as Patroni or Etcd, which have automatic replication and failover built into the software stack.
+
 {{% alert title="Note" color="warning" %}}
-Keep in mind that local storage is not replicated, so it's important to ensure data backups are regularly performed.
+Local SSD Storage shares the same lifecylce as the VM instance. If the VM is deleted or crashes the Local SSD storage data will be lost as well. What's more, your VMs cannot be resized or live-migrated to another hypervisor in case of a hypervisor maintenance. In the event of a hardware failure your Local SSD data could be completely lost. Even if there is no disk failure, there will be regular disk downtime.
 {{% /alert %}}
 
-pluscloud open offers Local SSD Storage as an option for storing data on instances. Local SSD Storage is non-shared storage that is physically attached to the instance and provides high input/output operations per second (iops) and low latency. It is ideal for applications that require high-performance and low latency.
 
-However, Local SSD Storage has some caveats. It is limited to the size of the instance and cannot be resized. It also shares the same lifecylce as the VM instance. If the VM is deleted or crashes the Local SSD storage data will be lost as well. What's more, your VMs cannot be live-migrated to another hypervisor in case of a hypervisor maintenance. In the event of a hardware failure your Local SSD data might me lost completely.
-
-Therefore, it is recommended to use Local SSD Storage only for volatile or temporary workloads like caches. Also good candidates for Local SSD Storage are highly-automated replicated databases or key-value-stores like Patroni or Etcd that have automatic replication and failover built into the software stack.
+See [reference](../../../reference/local-storage/) to learn how to use Local SSD Storage.
 
 ## Object Storage
 
@@ -49,5 +53,4 @@ With Object Storage on pluscloud open, customers can enjoy a hassle-free storage
 Object Storage on pluscloud open is designed for moderate amounts of data and file storage needs. However, for larger-scale data storage requirements, plusserver provides a dedicated solution called "S3 Storage". This solution offers highly scalable, cost-effective object storage with maximum availability, as well as optional georedundancy features. With S3 Storage, users can easily store and retrieve large amounts of data, ensuring data availability and accessibility in case of any infrastructure failure or other disruptions.
 {{% /alert %}}
 
-
-Hallo Ralf
+See [reference](../../../reference/object-storage/) to learn how to use Object Storage.
