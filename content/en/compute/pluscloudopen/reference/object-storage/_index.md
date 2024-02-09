@@ -1,7 +1,7 @@
 ---
 title: "Object Storage"
 type: "docs"
-weight: 50
+weight: 60
 date: 2023-02-24
 description: >
   Manage containers and objects
@@ -9,8 +9,8 @@ description: >
 
 ## Overview
 
-Pluscloud open provides [object storage](https://en.wikipedia.org/wiki/Object_storage) compatible to Openstacks [Swift](https://wiki.openstack.org/wiki/Swift) and Amazons [S3](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) protocols. 
-It is basically provided for "cloud native" use cases: 
+Pluscloud open provides [object storage](https://en.wikipedia.org/wiki/Object_storage) compatible to Openstacks [Swift](https://wiki.openstack.org/wiki/Swift) and Amazons [S3](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) protocols.
+It is basically provided for "cloud native" use cases:
 
 * as a backend for infrastructure as code scenarios (like backend storage for terraform state files), which can be used by a group of developers.
 * as a file/content repository for scale-out scenarios, where cloud instances, spawned from images, would load current content from object storage (instead of mounting an NFS volume, what would be considered as "bad design" in cloud contexts).
@@ -69,16 +69,16 @@ As the ``openstack container`` command seems not to allow uploads (yet?), you ha
                         [--meta <name:value>] [--header <header>] [--use-slo]
                         [--ignore-checksum] [--object-name <object-name>]
                         <container> <file_or_directory> [<file_or_directory>] [...]
-    
+
     Uploads specified files and directories to the given container.
-    
+
     Positional arguments:
       <container>           Name of container to upload to.
       <file_or_directory>   Name of file or directory to upload. Specify multiple
                             times for multiple uploads. If "-" is specified, reads
                             content from standard input (--object-name is required
                             in this case).
-    
+
     Optional arguments:
       -c, --changed         Only upload files that have changed since the last
                             upload.

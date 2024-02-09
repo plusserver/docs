@@ -4,12 +4,12 @@ type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Creating Instances with the Horizon gui
+  Creating Instances with the Horizon GUI
 ---
 ## Launch Instance
 Using the button "Launch Instance" you can create one or more new instances and start them. An guided dialogue helps you to go through all required steps. As soon as you have entered enough information for launching an instance the button "Create Instance" becomes available and you can start your new instance(s). Asterisks (*) mark required information.
 
-Keep in mind that shell access to the new instance is only possible via ssh key authentication. Thus you either need to create a ssh keypair during instance creation or upload your keypair beforehand. 
+Keep in mind that shell access to the new instance is only possible via ssh key authentication. Thus you either need to create a ssh keypair during instance creation or upload your keypair beforehand.
 Clicking on "**Launch Instance**" opens a dialogue, which will guide you through several steps, which have to be completed to launch an instance:
 
 ![screenshot of the launch instance menu](./2023-03-30_10-39.png)
@@ -18,17 +18,17 @@ As usual Asterisks (*) mark required information and as soon as enough informati
 
 You need to give your new instance a name in the "**Instance Name**" field. The description is optional. There is only one "**Availability Zone**" you can choose. You can use the "**Count**" field to spawn serveral instances of the same type at the same time.
 
-"Next" you should define the "**Source**" of your instance. Basically you choose, what image your instance should be based on. 
+"Next" you should define the "**Source**" of your instance. Basically you choose, what image your instance should be based on.
 
 <img src="2023-03-30_11-09.png" alt="screenshot of the source menu" width="50%" height="50%" title="Source Menu">
 
 First you choose whether your new instance should be booted from an image (and you see a list of the items available to you under "**Available**"), from an instance snapshot, from a volume or from a volume snapshot. If you choose an existing volume, you can only boot one instance from it. If you choose an image or a snapshot, you can boot more than one instance from it. You choose the item you want by clicking on on the little "up" arrow on the right.
 
-Next you define the "**Volume Size**" of the root volume of your new instance. If you set no value here (or one which is too small), the size will automatically adjusted to the size of the image you choose. 
+Next you define the "**Volume Size**" of the root volume of your new instance. If you set no value here (or one which is too small), the size will automatically adjusted to the size of the image you choose.
 
 The options on the right side ("**Create New Volume**" and "**Delete Volume on Instance Delete**") determine the lifecycle of the root volume of your instance. If you want, that your instance and its root volume are deleted when the instance is deleted, you should choose not to create a new volume (the option to delete the volume on instance delete will be deactivated). If you have chosen to create a volume, you can choose to have the volume deleted on instance deletion. If you don't choose this option, the root volume of the instance will "survive" the deletion of the instance (and consume storage and be billed).
 
-Now - by clicking on "Next" - you have to choose the "**Flavor**" of your new instance. "Flavors" determine the "dimensions" of your new instance regarding the number of virtual CPUs, the amount of virtual memory and the size of the root disk. 
+Now - by clicking on "Next" - you have to choose the "**Flavor**" of your new instance. "Flavors" determine the "dimensions" of your new instance regarding the number of virtual CPUs, the amount of virtual memory and the size of the root disk.
 
 <img src="2023-03-31_09-52.png" alt="screenshot of the flavor menu" width="50%" height="50%" title="Flavor Menu">
 
@@ -52,7 +52,7 @@ The "**Key Pair**" menu allows you to generate a new ssh public/privatey key pai
 
 <img src="2023-03-31_13-30.png" alt="screenshot of the key pair menu" width="50%" height="50%" title="Key Pair Menu">
 
-If you create a key pair, you are presented with the _private_ key, which you should save to your local workstation and protect from eavesdropping through third parties. The public half of the key pair is saved in your OpenStack project. If you choose to import a "key pair" you actually only import the _public_ part of your key pair. The private key remains in your posession. 
+If you create a key pair, you are presented with the _private_ key, which you should save to your local workstation and protect from eavesdropping through third parties. The public half of the key pair is saved in your OpenStack project. If you choose to import a "key pair" you actually only import the _public_ part of your key pair. The private key remains in your posession.
 
 You can also quickly create a new public/private key pair on the command line with ``ssh-keygen -t rsa -f cloud.key`` and then import the public key ``cloud.key.pub`` into your OpenStack project.
 If you are using Windows you would use PuttyGen to do the same - just be sure to choose ``openssh`` as the key format.
@@ -64,11 +64,7 @@ If you are using Windows you would use PuttyGen to do the same - just be sure to
 As many cloud images use [cloud-init](https://cloudinit.readthedocs.io/en/latest/) for customization nowadays, this option might be used a little less common than usual.
 Another option here is "**Disk Partition**", which can be done "automatic" and "manual". "Automatic" basically creates one partition per volume. With "manual" you can create more partitions per volume.
 
-With "**Server Groups**" you can assign your new instance to an existing server group in order to let your new instance be created either next to other instances in that server group or explicitly not next to other instances in that group (affinity - anti-affinity).
-
-<img src="2023-03-31_13-54.png" alt="screenshot of the server group menu" width="50%" height="50%" title="Server Group Menu">
-
-Server groups can have affinity, anti-affinity, soft-affinity and soft-anti-affinity policies. While the affinity policy will fail (and not create the instance), when it cannot place the new instance next to an existing instance of that server group, the soft-affinity policy will place the new instance not next to an existing instance of that server group, if it is not possible (but create the new instance anyway).
+With ["**Server Groups**"](../server-groups/) you can assign your new instance to an existing server group in order to let your new instance be created either next to other instances in that server group or explicitly not next to other instances in that group (affinity - anti-affinity).
 
 If you want to add some "**Scheduler Hints**" in order to affect the placement of your new instance you can either choose from the existing metadata catalog or create your own keys in the first line of the left side.
 
