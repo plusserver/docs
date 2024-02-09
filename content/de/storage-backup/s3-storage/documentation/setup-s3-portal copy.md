@@ -3,7 +3,7 @@ title: "Einrichtung S3 Portal"
 linkTitle: "Einrichtung S3 Portal"
 type: "docs"
 weight: 10
-date: 2024-02-06
+date: "2024-02-06"
 ---
 In diesem Abschnitt zeigen wir Ihnen, wie Sie eine Standardgruppe erstellen und Berechtigungen für die plusserver S3-Weboberfläche zuweisen können. Dies ermöglicht es den Benutzern in dieser Gruppe, auf alle Buckets zuzugreifen. 
 
@@ -43,7 +43,7 @@ Bitte seien Sie vorsichtig beim Festlegen von Berechtigungen und stellen Sie sic
 
 Weitere Informationen zu den einzelnen AWS-Berechtigungen finden Sie in der offiziellen AWS-Dokumentation: [AWS User and role policy examples](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html).
 
-{{% alert title="Warning" color="warning"%}}
+{{% alert title="Warnung" color="warning"%}}
 Die Beispiel-Policy gibt Benutzern umfassende Zugriffsrechte auf S3-Ressourcen. Bevor Sie diese Policy anwenden, stellen Sie bitte sicher, dass Sie die Rechte Ihrer Benutzer auf das Nötigste beschränken, um die Sicherheit und den Schutz Ihrer Daten zu gewährleisten.
 {{% /alert %}}
 

@@ -5,15 +5,16 @@ type: "docs"
 weight: 20
 date: "2024-02-06"
 ---
-Hier finden Sie die Preise für die verschiedenen Serviceklassen unseres PlusServer S3 Service.
+Hier finden Sie die Preise für die verschiedenen Serviceklassen unseres plusserver S3 Service.
 
 ## Preise pro GB
 
-| Serviceklasse | Preis pro GB  |
+| Serviceklasse | Preis pro GB*  |
 |---------------|--------------|
 | Standard      | 0,022€        |
 | Replikation   | 0,039€        |
 | Mirror        | 0,044€        |
+*Listenpreise Stand 2024-02-08
 
 ## Speicherrichtlinien
 

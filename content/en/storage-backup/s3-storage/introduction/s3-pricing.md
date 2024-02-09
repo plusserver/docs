@@ -9,11 +9,12 @@ Here you will find the prices for the various service classes of our PlusServer 
 
 ## Prices per GB
 
-| Service Class | Price per GB  |
+| Service Class | Price per GB* |
 |---------------|--------------|
 | Standard      | €0.022       |
 | Replication   | €0.039       |
 | Mirror        | €0.044       |
+*List Prices as of 08/02/2024
 
 ## Storage Policies
 

@@ -3,7 +3,7 @@ title: "Release Notes"
 linkTitle: "Release Notes"
 type: "docs"
 weight: 40
-date: 2024-02-06
+date: "2024-02-06"
 description: >
     Changelog of plusserver s3
 ---
