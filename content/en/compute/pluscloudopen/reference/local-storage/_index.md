@@ -21,16 +21,16 @@ pluscloud open offers Local SSD Storage as an option for storing data on instanc
 Local SSD Storage is ideal for volatile or temporary workloads such as caches. Also good candidates for Local SSD Storage are highly automated replicated databases or key-value stores such as Patroni or Etcd, which have automatic replication and failover built into the software stack.
 
 {{% alert title="Note" color="warning" %}}
-Local SSD Storage shares the same lifecylce as the VM instance. If the VM is deleted or crashes the Local SSD storage data will be lost as well. What's more, your VMs cannot be resized or live-migrated to another hypervisor in case of a hypervisor maintenance. In the event of a hardware failure your Local SSD data could be completely lost. Even if there is no disk failure, there will be regular disk downtime.
+Local SSD Storage shares the same lifecylce as the VM instance. If the VM is deleted or crashes the Local SSD Storage data will be lost as well. What's more, your VMs cannot be resized or live-migrated to another hypervisor in case of a hypervisor maintenance. In the event of a hardware failure your Local SSD data could be completely lost. Even if there is no disk failure, there will be regular disk downtime.
 {{% /alert %}}
 
 ### Comparison of the characteristics of Ceph volumes with those of Local SSD Storage
 
-There are fundamental differences between  Ceph volumes with those of Local SSD Storage.
+There are fundamental differences between Ceph volumes with those of Local SSD Storage.
 
-As with shared storage, the underlying storage system provides redundancy and availability. The customer's application can rely on the 3x replicated highly available storage.
+As with shared storage, the underlying storage system provides redundancy and availability. Your application can rely on the 3x replicated highly available storage.
 
-As with Local SSD Storage, the customer can access the local disk in a raw fashion and achieve near 1:1 performance. However, the customer's software stack is responsible for handling redundancy and availability.
+As with Local SSD Storage, you can access the local disk in a raw fashion and achieve near 1:1 performance. However, your software stack is responsible for handling redundancy and availability.
 
 **Use cases for Local SSD Storage:**
 
