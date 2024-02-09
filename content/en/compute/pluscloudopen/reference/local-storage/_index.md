@@ -61,33 +61,39 @@ There are two cases where VMs running on Local SSD Storage will experience downt
 
 #### Periodic reboots
 
-Any Local SSD Storage hypervisor will need to be rebooted periodically.  Typically this will be once a month. You should therefore expect your VMs to be down on a regular basis.
+Any Local SSD Storage hypervisor will need to be **rebooted periodically**.  Typically this will be **once a month**. You should therefore expect your VMs to be down on a regular basis.
 
-The average downtime is approximately half an hour, but can vary. All VMs will receive an ACPI shutdown signal prior to maintenance. VMs are given one minute to shut down properly.
+The average downtime is **approximately half an hour**, but can vary. All VMs will receive an ACPI shutdown signal prior to maintenance. VMs are given **one minute to shut down** properly.
 
 After this time, they will simply shut down.
 
-You should expect your VMs to remain powered off after the hypervisor reboots. We are currently planning a feature that will allow you to configure the VM to automatically restart if necessary.
+You should expect your VMs to **remain powered off** after the hypervisor reboots. We are currently planning a feature that will allow you to configure the VM to automatically restart if necessary.
 
-There will be a 30 minute pause between hypervisor reboots. This will give your software stack time to reconfigure.
+There will be a **30 minute pause** between hypervisor reboots. This will give your software stack time to reconfigure.
 
-However, all VMs on the same hypervisor will be affected. You will need to enable anti-affinity server grouping.
+However, all VMs on the same hypervisor will be affected. You will need to enable **anti-affinity** [Server Groups](../instances-and-images/server-groups/).
 
 #### Hardware Failure
 
-In the event of a complete hardware failure or reconfiguration, you must expect data loss.
+In the event of a complete hardware failure or reconfiguration, you must **expect data loss**.
 
 In these cases, the boot disks will be lost. This means that when the hypervisor comes back up, there will be corrupted VMs.
 
-You will be expected to wipe these VMs yourself. This is because we believe it is better to keep broken VM definitions so that you can more reliably restore these instances from a backup or snapshot. You will have to pay for broken VMs.
+You will be expected to **wipe these VMs yourself**. This is because we believe it is better to keep broken VM definitions so that you can more reliably restore these instances from a backup or snapshot. You will have to pay for broken VMs.
 
 Speaking of backups: You should take regular snapshots to be able to restore a failed VM in the event of a hardware failure of the underlying hypervisor.
 
+#### Use Server Groups and Anti-Affinity to Achieve Fault Tolerance
+
+If you are using Local SSD Storage, **you are strongly encouraged to create fault tolerance** against hypervisor failures.
+
+One thing you can do is to use [Server Groups](../instances-and-images/server-groups/) to distribute your VMs across multiple hypervisors.
+
 ## Using Local SSD Storage
 
-To use Local SSD Storage, simply create a VM with a specific Local SSD Storage Flavor. All Flavors that end with an "s" indicate Local SSD Storage. Configure the VM to boot without a volume. This is crucial if you want the VM to boot from a local disk instead of a remote volume.
+To use Local SSD Storage, simply create a VM with a specific Local SSD Storage Flavor. All Flavors that end with an "**s**" indicate Local SSD Storage. Configure the VM to boot without a volume. This is crucial if you want the VM to boot from a local disk instead of a remote volume.
 
-After you have created the VM, it will boot with a local disk from the /dev/sda1 block device. You can attach additional volumes to your VM. However, these volumes will come from the Ceph shared storage.
+After you have created the VM, it will boot with a local disk from the **/dev/sda1** block device. You can attach additional volumes to your VM. However, these volumes will come from the Ceph shared storage.
 
 Examples for Local SSD Storage Flavors:
 
@@ -104,21 +110,21 @@ Do not create a boot volume! If you were to create a boot volume, your VM would 
 
 To create a VM to use Local SSD Storage, follow these steps:
 
-Navigate to the Launch Instance dialogue box. In 'Details', set 'Instance Name'.
+Navigate to the Launch Instance dialogue box. In "**Details**", set "**Instance Name**".
 
 <center>
 <img src="screenshot-2024-02-09-13.59.00.png" alt="screenshot of instance details tab" width="75%" title="details tab">
 <br/><br/>
 </center>
 
-In 'Source', select your favourite cloud image. Leave the default to boot from image and not create a volume.
+In "**Source**", select your favourite cloud image. Leave the default to boot from image and not create a volume.
 
 <center>
 <img src="screenshot-2024-02-09-13.59.28.png" alt="screenshot of instance source tab" width="75%" title="source tab">
 <br/><br/>
 </center>
 
-In 'Flavor', select one of the Flavors ending in 's'.
+In "**Flavor**", select one of the Flavors ending in "**s**".
 <center>
 <img src="screenshot-2024-02-09-13.59.52.png" alt="screenshot of instance flavor tab" width="75%" title="flavor tab">
 <br/><br/>
@@ -173,6 +179,6 @@ The output should look like this:
 ```
 
 {{% alert title="Note" color="info" %}}
-volumes_attached' should be empty unless you're adding additional shared storage volumes.
+"**volumes_attached**" should be empty unless you're adding additional shared storage volumes.
 {{% /alert %}}
 

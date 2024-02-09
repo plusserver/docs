@@ -33,7 +33,6 @@ Local SSD Storage is ideal for volatile or temporary workloads such as caches. A
 Local SSD Storage shares the same lifecylce as the VM instance. If the VM is deleted or crashes the Local SSD storage data will be lost as well. What's more, your VMs cannot be resized or live-migrated to another hypervisor in case of a hypervisor maintenance. In the event of a hardware failure your Local SSD data could be completely lost. Even if there is no disk failure, there will be regular disk downtime.
 {{% /alert %}}
 
-
 See [reference](../../../reference/local-storage/) to learn how to use Local SSD Storage.
 
 ## Object Storage
