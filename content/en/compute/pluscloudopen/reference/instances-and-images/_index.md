@@ -1,5 +1,5 @@
 ---
-title: "Images and Instances"
+title: "Instances and Images"
 type: "docs"
 weight: 50
 date: 2023-02-24
@@ -13,7 +13,7 @@ When you want to work with Images and Instances (aka virtual machines) in the Ho
 The overview shows your current consumption of cloud ressources and the current limits.
 
 ## Instances
-The instances menu shows details about all your virtual machines and their current state. From here you can manage you virtual machines and create new ones. Managing your instances covers various aspects which are covered below. 
+The instances menu shows details about all your virtual machines and their current state. From here you can manage you virtual machines and create new ones. Managing your instances covers various aspects which are covered below.
 ### Instance Actions Menu
 The "Action" menu shows options, which might render your instance unavailable or have impact on its security in red colour:
 <img src="image2020-10-19_10-51-36.png" alt="screenshot of the instances action menu" width="60%" height="60%" title="Instances Action Menu">
@@ -32,9 +32,9 @@ Here you can manage metadata for your instance. There is a set of example metada
 #### Edit Security Groups
 Here you can manage the security groups for your instance. If your instance has more than one network interface changes will be applied to all of them. If you want to manage different security groups for different network interfaces please use "Edit Port Security Groups" from the menu.
 #### Edit Port Security Groups
-Security Groups can here be configured for different network interfaces (ports) separately. Furthermore you can edit port characteristics like "Enable Admin State" to forward packets over that port, "Binding VNIC Type" for the port (you would choose "Normal" most of the time for virtual machines) and "Port Security" to activate security features like "anti-spoofing" and allow the use of security groups for that port. 
+Security Groups can here be configured for different network interfaces (ports) separately. Furthermore you can edit port characteristics like "Enable Admin State" to forward packets over that port, "Binding VNIC Type" for the port (you would choose "Normal" most of the time for virtual machines) and "Port Security" to activate security features like "anti-spoofing" and allow the use of security groups for that port.
 #### Console
-Opens a virtual console to the login prompt of your instance. 
+Opens a virtual console to the login prompt of your instance.
 #### View Log
 Allows to review the console log messages of your instance
 #### Rescue Instance
@@ -58,4 +58,4 @@ Instances will be switched off immediately. This might lead to filesystem checks
 #### Rebuild Instance
 Rebuilding allows you to re-create an instance but changing characteristics of it (like using a different image). The UUID, volumes and ports of the instance will stay the same. Using it on instances with ceph volumes will not work, though.
 #### Delete instance
-The instance will be deleted. All used ressources will be given back to the pool. 
+The instance will be deleted. All used ressources will be given back to the pool.

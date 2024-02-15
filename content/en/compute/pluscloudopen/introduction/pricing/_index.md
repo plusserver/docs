@@ -1,5 +1,5 @@
 ---
-title: "PCO Prices"
+title: "Pricing"
 type: "docs"
 weight: 20
 date: 2023-06-26
@@ -7,20 +7,20 @@ date: 2023-06-26
 
 # Introduction
 
-This pricing table provides an overview of the server plans, load balancers, and storage options available, along with their respective costs. To calculate the hourly and monthly prices for each server plan, multiply the number of VCPUs and the amount of RAM (in GB) by their respective unit prices. As of April 2023, the unit prices are as follows:
+This pricing table provides an overview of the server plans, load balancers, and storage options available, along with their respective costs. To calculate the hourly and monthly prices for each server plan, multiply the number of vCPUs and the amount of RAM (in GB) by their respective unit prices. As of April 2023, the unit prices are as follows:
 
 * vCPU: €0.0205 per hour
-* RAM: €0.007 per GB per hour
+* vRAM: €0.007 per GB per hour
 * Storage: €0.09 per GB per month
 * Load balancer: €0.068 per hour
 
-To calculate the monthly cost for a server plan, multiply the hourly cost by the number of hours in a month (assuming 720 hours per month). For example, for the SCS-1V:0.5 plan with 1 VCPU and 0.5 GB RAM, the hourly cost would be ```(1*€0.0205) + (0.5*€0.007) = €0.024```, and the monthly cost would be ```€0.024 * 720 = €17.28```.
+To calculate the monthly cost for a server plan, multiply the hourly cost by the number of hours in a month (assuming 720 hours per month). For example, for the SCS-1V:0.5 plan with 1 vCPU and 0.5 GB RAM, the hourly cost would be ```(1*€0.0205) + (0.5*€0.007) = €0.024```, and the monthly cost would be ```€0.024 * 720 = €17.28```.
 
 The pricing information was last updated in April 2023 and is subject to change.
 
 ## Compute
 
-| Name       | VCPUs | RAM (GB) | hourly  | monthly |
+| Name       | vCPUs | RAM (GB) | hourly  | monthly |
 |------------|-------|----------|---------|---------|
 | SCS-1V:0.5 | 1     | 0.5      | €0.0240 | €17.28  |
 | SCS-1L:1   | 1     | 1        | €0.0275 | €19.80  |
@@ -51,8 +51,8 @@ Please note that the prices shown in the table are for plans with 0 Disk storage
 |---------------|-------|---------|
 | Block Storage | 1 GB  | €0.09   |
 
-{{% alert title="Object Storage on PCO Fair Use Policy" %}}
-Object Storage on PCO is based on Ceph RadosGW and is not subject to additional charges. The quota is limited to 20 GB / 20,000 objects.
+{{% alert title="Object Storage on pluscloud open Fair Use Policy" %}}
+Object Storage on pluscloud open is based on Ceph RadosGW and is not subject to additional charges. The quota is limited to 20 GB / 20,000 objects.
 {{% /alert %}}
 
 ## Network
