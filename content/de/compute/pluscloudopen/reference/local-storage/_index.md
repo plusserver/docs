@@ -1,147 +1,147 @@
 ---
-title: "Local SSD Storage"
+title: "Lokaler SSD-Speicher"
 type: "docs"
 weight: 60
 date: 2024-02-09
 description: >
-  Using Local SSD Storage
+  Lokalen SSD-Speicher verwenden
 ---
 
 
-## Overview
+## Übersicht
 
-{{% alert title="Note" color="info" %}}
-pluscloud open will soon offer the Local SSD Storage option.
+{{% alert title="Hinweis" color="info" %}}
+pluscloud open wird bald die Option Lokaler SSD-Speicher anbieten.
 {{% /alert %}}
 
-Standard shared storage based on Ceph has a balanced performance profile that is not suitable for all use cases. In particular, Etcd and transactional databases such as Postgres are known to have performance issues here.
+Standard Shared Storage auf Basis von Ceph hat ein ausgewogenes Leistungsprofil, das nicht für alle Anwendungsfälle geeignet ist. Insbesondere Etcd und transaktionale Datenbanken wie Postgres sind dafür bekannt, dass es hier zu Performance-Problemen kommt.
 
-pluscloud open offers Local SSD Storage as an option for storing data on instances. Local SSD Storage is non-shared storage that is physically attached to the instance and provides high input/output operations per second (IOPS) and low latency. It is ideal for applications that require high performance and low latency.
+pluscloud open bietet Local SSD Storage als Option für die Speicherung von Daten auf Instanzen an. Local SSD Storage ist ein nicht gemeinsam genutzter Speicher, der physisch mit der Instanz verbunden ist und hohe Input/Output-Operationen pro Sekunde (IOPS) und geringe Latenzzeiten bietet. Er ist ideal für Anwendungen, die eine hohe Leistung und eine geringe Latenzzeit erfordern.
 
-Local SSD Storage is ideal for volatile or temporary workloads such as caches. Also good candidates for Local SSD Storage are highly automated replicated databases or key-value stores such as Patroni or Etcd, which have automatic replication and failover built into the software stack.
+Lokaler SSD-Speicher ist ideal für flüchtige oder temporäre Arbeitslasten wie Caches. Ebenfalls gute Kandidaten für Local SSD Storage sind hochautomatisierte replizierte Datenbanken oder Key-Value-Stores wie Patroni oder Etcd, bei denen automatische Replikation und Failover in den Software-Stack integriert sind.
 
-{{% alert title="Note" color="warning" %}}
-Local SSD Storage shares the same lifecylce as the VM instance. If the VM is deleted or crashes the Local SSD Storage data will be lost as well. What's more, your VMs cannot be resized or live-migrated to another hypervisor in case of a hypervisor maintenance. In the event of a hardware failure your Local SSD data could be completely lost. Even if there is no disk failure, there will be regular disk downtime.
+{{% alert title="Hinweis" color="warning" %}}
+Der lokale SSD-Speicher hat die gleiche Lebensdauer wie die VM-Instanz. Wenn die VM gelöscht wird oder abstürzt, gehen auch die Daten des lokalen SSD-Speichers verloren. Darüber hinaus können Ihre VMs im Falle einer Hypervisor-Wartung weder in der Größe verändert noch live auf einen anderen Hypervisor migriert werden. Im Falle eines Hardwareausfalls können Ihre lokalen SSD-Daten vollständig verloren gehen. Selbst wenn es keinen Festplattenausfall gibt, kommt es zu regelmäßigen Ausfallzeiten.
 {{% /alert %}}
 
-### Comparison of the characteristics of Ceph volumes with those of Local SSD Storage
+### Vergleich der Eigenschaften von Ceph-Volumes mit denen von lokalem SSD-Speicher
 
-There are fundamental differences between Ceph volumes with those of Local SSD Storage.
+Es gibt grundlegende Unterschiede zwischen Ceph-Volumes und lokalem SSD-Speicher.
 
-As with shared storage, the underlying storage system provides redundancy and availability. Your application can rely on the 3x replicated highly available storage.
+Wie bei Shared Storage sorgt das zugrunde liegende Speichersystem für Redundanz und Verfügbarkeit. Ihre Anwendung kann sich auf den dreifach replizierten hochverfügbaren Speicher verlassen.
 
-As with Local SSD Storage, you can access the local disk in a raw fashion and achieve near 1:1 performance. However, your software stack is responsible for handling redundancy and availability.
+Wie bei lokalem SSD-Speicher können Sie auf die lokale Festplatte im Rohzustand zugreifen und nahezu 1:1-Leistung erzielen. Allerdings ist Ihr Software-Stack für die Handhabung der Redundanz und Verfügbarkeit verantwortlich.
 
-**Use cases for Local SSD Storage:**
+**Verwendungsfälle für lokalen SSD-Speicher:**
 
 * Kubernetes
-* Etcd Cluster with 3 or 5 instances
-* Postgres Patroni Cluster
+* Etcd-Cluster mit 3 oder 5 Instanzen
+* Postgres-Patroni-Cluster
 
-**Anti-patterns for Local SSD Storage:**
+**Anti-Patterns für lokalen SSD-Speicher:**
 
-* Traditional single server setup
-* VMs treated like pets
-* VMs without snapshots
+* Traditionelle Einzelserver-Einrichtung
+* VMs werden wie Haustiere behandelt
+* VMs ohne Snapshots
 
-The following table compares the characteristics of Ceph volumes with those of Local SSD Storage:
+In der folgenden Tabelle werden die Merkmale von Ceph-Volumes mit denen von Local SSD Storage verglichen:
 
-| Characteristics  | Ceph boot volume  | Local SSD Storage boot volume  |
+| Eigenschaften | Ceph-Boot-Volumen | Boot-Volumen des lokalen SSD-Speichers |
 |------------------|-------------------|--------------------------------|
-| Storage Provider  | Cinder           | Nova                           |
-| Throughput  |  <span style="color: red;">LOW</span>  | <span style="color: green;">HIGH</span>  |
-| Latency  | <span style="color: red;">HIGH</span>  | <span style="color: green;">LOW</span>  |
-| Live-migration  | <span style="color: green;">YES</span>  | <span style="color: red;">NO</span>  |
-| Availability  | <span style="color: green;">HIGH</span>  | <span style="color: red;">LOW</span>  |
-| Ephemeral  | NO  | YES  |
+| Speicheranbieter | Cinder | Nova |
+| Durchsatz | <span style="color: red;">Niedrig</span> | <span style="color: green;">Hoch</span> |
+| Latenzzeit | <span style="color: red;">HIGH</span> | <span style="color: green;">LOW</span> |
+| Live-Migration | <span style="color: green;">YES</span> | <span style="color: red;">NO</span> |
+| Verfügbarkeit | <span style="color: green;">HIGH</span> | <span style="color: red;">LOW</span> |
+| Ephemeral | NO | YES |
 
-### Availability
+### Verfügbarkeit
 
-There are two cases where VMs running on Local SSD Storage will experience downtime
+Es gibt zwei Fälle, in denen bei VMs, die auf lokalem SSD-Speicher laufen, Ausfallzeiten auftreten können
 
-#### Periodic reboots
+#### Regelmäßige Reboots
 
-Any Local SSD Storage hypervisor will need to be **rebooted periodically**.  Typically this will be **once a month**. You should therefore expect your VMs to be down on a regular basis.
+Jeder Hypervisor mit lokalem SSD-Speicher muss **periodisch** neu gebootet werden.  Normalerweise geschieht dies **einmal im Monat**. Sie sollten daher damit rechnen, dass Ihre VMs regelmäßig ausfallen.
 
-The average downtime is **approximately half an hour**, but can vary. All VMs will receive an ACPI shutdown signal prior to maintenance. VMs are given **one minute to shut down** properly.
+Die durchschnittliche Ausfallzeit beträgt **ca. eine halbe Stunde**, kann aber variieren. Alle VMs erhalten vor der Wartung ein ACPI-Shutdown-Signal. Die VMs haben **eine Minute Zeit, um ordnungsgemäß herunterzufahren**.
 
-After this time, they will simply shut down.
+Nach dieser Zeit werden sie einfach heruntergefahren.
 
-You should expect your VMs to **remain powered off** after the hypervisor reboots. We are currently planning a feature that will allow you to configure the VM to automatically restart if necessary.
+Sie sollten davon ausgehen, dass Ihre VMs nach dem Neustart des Hypervisors **ausgeschaltet bleiben**. Wir planen derzeit eine Funktion, mit der Sie die VM so konfigurieren können, dass sie bei Bedarf automatisch neu gestartet wird.
 
-There will be a **30 minute pause** between hypervisor reboots. This will give your software stack time to reconfigure.
+Zwischen den Neustarts des Hypervisors wird es eine **30-minütige Pause** geben. Dies gibt Ihrem Software-Stack Zeit, sich neu zu konfigurieren.
 
-However, all VMs on the same hypervisor will be affected. You will need to enable **anti-affinity** [Server Groups](../instances-and-images/server-groups/).
+Allerdings sind alle VMs auf demselben Hypervisor davon betroffen. Sie müssen **Anti-Affinität** [Servergruppen] (../instances-and-images/server-groups/) aktivieren.
 
-#### Hardware Failure
+#### Hardware-Ausfall
 
-In the event of a complete hardware failure or reconfiguration, you must **expect data loss**.
+Im Falle eines vollständigen Hardwareausfalls oder einer Neukonfiguration müssen Sie mit **Datenverlust** rechnen.
 
-In these cases, the boot disks will be lost. This means that when the hypervisor comes back up, there will be corrupted VMs.
+In diesen Fällen gehen die Boot-Disketten verloren. Das bedeutet, dass beim Wiederanlauf des Hypervisors beschädigte VMs vorhanden sind.
 
-You will be expected to **wipe these VMs yourself**. This is because we believe it is better to keep broken VM definitions so that you can more reliably restore these instances from a backup or snapshot. You will have to pay for broken VMs.
+Es wird von Ihnen erwartet, dass Sie diese VMs selbst **wischen**. Wir sind der Meinung, dass es besser ist, defekte VM-Definitionen aufzubewahren, damit Sie diese Instanzen zuverlässiger aus einer Sicherung oder einem Snapshot wiederherstellen können. Sie müssen für defekte VMs bezahlen.
 
-Speaking of backups: You should take regular snapshots to be able to restore a failed VM in the event of a hardware failure of the underlying hypervisor.
+Apropos Backups: Sie sollten regelmäßig Snapshots erstellen, um im Falle eines Hardwareausfalls des zugrunde liegenden Hypervisors eine ausgefallene VM wiederherstellen zu können.
 
-#### Use Server Groups and Anti-Affinity to Achieve Fault Tolerance
+#### Verwenden Sie Servergruppen und Anti-Affinität zur Erzielung von Fehlertoleranz
 
-If you are using Local SSD Storage, **you are strongly encouraged to create fault tolerance** against hypervisor failures.
+Wenn Sie lokalen SSD-Speicher verwenden, **sollten Sie unbedingt Fehlertoleranz** gegen Hypervisor-Ausfälle schaffen.
 
-One thing you can do is to use [Server Groups](../instances-and-images/server-groups/) to distribute your VMs across multiple hypervisors.
+Eine Möglichkeit ist die Verwendung von [Servergruppen](../instances-and-images/server-groups/), um Ihre VMs auf mehrere Hypervisoren zu verteilen.
 
-## Using Local SSD Storage
+## Lokalen SSD-Speicher verwenden
 
-To use Local SSD Storage, simply create a VM with a specific Local SSD Storage Flavor. All Flavors that end with an "**s**" indicate Local SSD Storage. Configure the VM to boot without a volume. This is crucial if you want the VM to boot from a local disk instead of a remote volume.
+Um lokalen SSD-Speicher zu verwenden, erstellen Sie einfach eine VM mit einem bestimmten Flavor für lokalen SSD-Speicher. Alle Flavors, die mit einem "**s**" enden, stehen für lokalen SSD-Speicher. Konfigurieren Sie die VM so, dass sie ohne Volume bootet. Dies ist wichtig, wenn Sie möchten, dass die VM von einem lokalen Datenträger und nicht von einem Remote-Volume bootet.
 
-After you have created the VM, it will boot with a local disk from the **/dev/sda1** block device. You can attach additional volumes to your VM. However, these volumes will come from the Ceph shared storage.
+Nachdem Sie die VM erstellt haben, bootet sie mit einer lokalen Festplatte vom Blockgerät **/dev/sda1**. Sie können zusätzliche Datenträger an Ihre VM anhängen. Diese Volumes stammen jedoch aus dem gemeinsam genutzten Ceph-Speicher.
 
-Examples for Local SSD Storage Flavors:
+Beispiele für lokale SSD-Speichervarianten:
 
-| Name           | VCPUs | RAM (MB)   | Disk (GB) |
+| Name | VCPUs | RAM (MB) | Festplatte (GB) |
 |----------------|-------|-------|------|
-| SCS-2V-4-20s   | 2     |  4096 |  20  |
-| SCS-4V-16-100s | 4     | 16384 | 100 |
+| SCS-2V-4-20s | 2 | 4096 | 20 |
+| SCS-4V-16-100s | 4 | 16384 | 100 |
 
-{{% alert title="Note" color="info" %}}
-Do not create a boot volume! If you were to create a boot volume, your VM would boot from a Cinder volume on shared storage.
+{{% alert title="Hinweis" color="info" %}}
+Erstellen Sie kein Boot-Volume! Wenn Sie ein Boot-Volume erstellen würden, würde Ihre VM von einem Cinder-Volume auf einem gemeinsamen Speicher booten.
 {{% /alert %}}
 
-### Creating a VM with Horizon
+### Erstellen einer VM mit Horizon
 
-To create a VM to use Local SSD Storage, follow these steps:
+Gehen Sie folgendermaßen vor, um eine VM zu erstellen, die lokalen SSD-Speicher verwendet:
 
-Navigate to the Launch Instance dialogue box. In "**Details**", set "**Instance Name**".
+Navigieren Sie zum Dialogfeld "Launch Instance" (Instanz starten). Stellen Sie unter "**Details**" "**Instanzname**" ein.
 
 <center>
 <img src="screenshot-2024-02-09-13.59.00.png" alt="screenshot of instance details tab" width="75%" title="details tab">
 <br/><br/>
 </center>
 
-In "**Source**", select your favourite cloud image. Leave the default to boot from image and not create a volume.
+Wählen Sie unter "**Quelle**" Ihr bevorzugtes Cloud-Image aus. Belassen Sie die Voreinstellung, von einem Image zu booten und kein Volume zu erstellen.
 
 <center>
 <img src="screenshot-2024-02-09-13.59.28.png" alt="screenshot of instance source tab" width="75%" title="source tab">
 <br/><br/>
 </center>
 
-In "**Flavor**", select one of the Flavors ending in "**s**".
+Wählen Sie unter "**Geschmack**" einen der Geschmacksrichtungen aus, die auf "**s**" enden.
 <center>
 <img src="screenshot-2024-02-09-13.59.52.png" alt="screenshot of instance flavor tab" width="75%" title="flavor tab">
 <br/><br/>
 </center>
 
-Configure the rest as you like. Finally, start the instance.
+Konfigurieren Sie den Rest nach Belieben. Zum Schluss starten Sie die Instanz.
 
 
-### Creating a VM with the CLI
+### Erstellen einer VM mit der CLI
 
-To create an identical VM using the Openstack CLI, use the following command:
+Um eine identische VM mit der Openstack CLI zu erstellen, verwenden Sie den folgenden Befehl:
 
 ```bash
 openstack server create --flavor SCS-2V-4-20s --image "Ubuntu 22.04" demo-cli
 ```
 
-The output should look like this:
+Die Ausgabe sollte wie folgt aussehen:
 
 ```
 
@@ -161,7 +161,7 @@ The output should look like this:
 | adminPass                   |                                                     |
 | config_drive                |                                                     |
 | created                     | 2024-02-09T13:21:50Z                                |
-| flavor                      | SCS-2V-4-20s                                        |
+| flavor                      | SCS-2V-4-20s                                        | 
 | hostId                      |                                                     |
 | id                          | abcdef08-bf2a-4375-bfe3-0f48755df3db                |
 | image                       | Ubuntu 22.04                                        |
@@ -178,7 +178,6 @@ The output should look like this:
 +-----------------------------+-----------------------------------------------------+
 ```
 
-{{% alert title="Note" color="info" %}}
-"**volumes_attached**" should be empty unless you're adding additional shared storage volumes.
+{{% alert title="Hinweis" color="info" %}}
+"**volumes_attached**" sollte leer sein, es sei denn, Sie fügen zusätzliche Shared Storage Volumes hinzu.
 {{% /alert %}}
-

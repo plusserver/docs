@@ -1,61 +1,63 @@
 ---
-title: "Instances and Images"
+title: "Instanzen und Images"
 type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Creating Instances from Images, Logging in and Grouping them
+  Erstellen von Instanzen aus Images, Einloggen und Gruppieren
 ---
-## Overview
-When you want to work with Images and Instances (aka virtual machines) in the Horizon web gui you choose "compute" from the menu.
+## Überblick
+Wenn Sie mit Images und Instanzen (auch virtuelle Maschinen genannt) in der Horizon Web-Gui arbeiten möchten, wählen Sie "Compute" aus dem Menü.
 <img src="image2020-10-19_10-42-35.png" alt="screenshot of the compute overview" width="50%" height="50%" title="Compute Overview">
 
-The overview shows your current consumption of cloud ressources and the current limits.
+Die Übersicht zeigt Ihren aktuellen Verbrauch an Cloud-Ressourcen und die aktuellen Limits.
 
-## Instances
-The instances menu shows details about all your virtual machines and their current state. From here you can manage you virtual machines and create new ones. Managing your instances covers various aspects which are covered below.
-### Instance Actions Menu
-The "Action" menu shows options, which might render your instance unavailable or have impact on its security in red colour:
+## Instanzen
+Das Instanzen-Menü zeigt Details über alle Ihre virtuellen Maschinen und deren aktuellen Status. Von hier aus können Sie Ihre virtuellen Maschinen verwalten und neue Maschinen erstellen. Die Verwaltung Ihrer Instanzen umfasst verschiedene Aspekte, die im Folgenden erläutert werden.
+
+### Menü "Instanz-Aktionen
+Das Menü "Aktionen" zeigt Optionen, die Ihre Instanz nicht verfügbar machen oder Auswirkungen auf ihre Sicherheit haben können, in roter Farbe an:
 <img src="image2020-10-19_10-51-36.png" alt="screenshot of the instances action menu" width="60%" height="60%" title="Instances Action Menu">
-#### Disassociate Floating IP
-Seperate a floating IP address, which is currently attached to your instance, from the instance. Depending on how you access that instance, it might become unreachable via network after this.
-#### Attach Interface
-Add an additional network interface to your instance. That option will open a requester, which will let you choose the network you want to connect the interface with. If you don't choose a static IP address there, the interface will fetch one via DHCP (as long as that has been enabled for the network). Please be aware, that the new interface might have to be added to the network configuration of your instance (if it doesn't happen automatically).
-#### Edit Instance
-Here you can change the name of your instance (and its description). Furthermore you can add or remove security groups. If you have different security groups on different network interfaces of your instance choose "Edit Port Security Groups" to edit them seperately.
-#### Attach Volume
-Volumes, which you have created in the "Volumes" menu, can here be attached to your instance. Be aware, that this only makes the volume available to your instance (e. g. as /dev/sdb in a Linux instance). You have to crate a filesystem on it, add it to /etc/fstab and mount it manually in order to use it.
-#### Detach Volume
-Volumes which are no longer needed or which should be mounted on another instance can here be detached from an instance. Volumes that are to be detached from an instance should be unmounted from the instance first and applications should no longer access them.
-#### Update Metadata
-Here you can manage metadata for your instance. There is a set of example metadata from the Glance metadata catalog already available on the left. If you want to use one of the keys just click on "+" to move it to the right. You can create your own metadata keys via the "custom" option.
-#### Edit Security Groups
-Here you can manage the security groups for your instance. If your instance has more than one network interface changes will be applied to all of them. If you want to manage different security groups for different network interfaces please use "Edit Port Security Groups" from the menu.
-#### Edit Port Security Groups
-Security Groups can here be configured for different network interfaces (ports) separately. Furthermore you can edit port characteristics like "Enable Admin State" to forward packets over that port, "Binding VNIC Type" for the port (you would choose "Normal" most of the time for virtual machines) and "Port Security" to activate security features like "anti-spoofing" and allow the use of security groups for that port.
-#### Console
-Opens a virtual console to the login prompt of your instance.
-#### View Log
-Allows to review the console log messages of your instance
-#### Rescue Instance
-Rescue mode is reserved for emergencies. This will shut down your instance and start a rescue instance (using the image you select) which mounts the root volume of your instance in order to let you recover data from it or repair the configuration. You can optionally set a password for the rescue instance.
-#### Pause Instance
-Pausing your instance means "freezing" it with all its ressources. It will no longer be available but can be resumed instantly.
-#### Suspend Instance
-Suspending the instance will shut down your instance with all its ressources. Resuming it will start it again.
-#### Shelve Instance
-Shelving an instance is similar to suspending it. The memory is not saved, though. You could use shelving for instances you don't need over the weekend but want to use again for the next work week.
-#### Resize Instance
-This dialogue allows you to change some "dimensions" of your instance (like Memory, CPUs and root disk size) by choosing a new flavor. Furthermore you can choose wether you want an unpartitioned disk or you want to partiton the disk yourself. The resizing might take some time.
-#### Lock Instance
-You can prevent accidental change and/or deletion of your instance by "locking" it. A small lock symbol will be displayed for locked instances in Horizon. Administrators of the platform can unlock instances, though.
-#### Soft Reboot Instance
-This will try to shut down all applications before rebooting the instance.
-#### Hard Reboot Instance
-The instance will be rebooted without giving applications time to shut down.
-#### Shut Off Instance
-Instances will be switched off immediately. This might lead to filesystem checks or database recovery operations when the instance is switched on again.
-#### Rebuild Instance
-Rebuilding allows you to re-create an instance but changing characteristics of it (like using a different image). The UUID, volumes and ports of the instance will stay the same. Using it on instances with ceph volumes will not work, though.
-#### Delete instance
-The instance will be deleted. All used ressources will be given back to the pool.
+
+#### Floating IPs trennen
+Trennen Sie eine Floating IP-Adresse, die derzeit mit Ihrer Instanz verbunden ist, von der Instanz. Je nachdem, wie Sie auf diese Instanz zugreifen, kann sie danach über das Netzwerk nicht mehr erreichbar sein.
+#### Schnittstelle anhängen
+Fügen Sie eine zusätzliche Netzwerkschnittstelle zu Ihrer Instanz hinzu. Mit dieser Option wird ein Requester geöffnet, in dem Sie das Netzwerk auswählen können, mit dem Sie die Schnittstelle verbinden möchten. Wenn Sie dort keine statische IP-Adresse auswählen, wird die Schnittstelle eine über DHCP beziehen (sofern dies für das Netzwerk aktiviert wurde). Bitte beachten Sie, dass die neue Schnittstelle eventuell zur Netzwerkkonfiguration Ihrer Instanz hinzugefügt werden muss (falls dies nicht automatisch geschieht).
+#### Instanz bearbeiten
+Hier können Sie den Namen Ihrer Instanz (und ihre Beschreibung) ändern. Außerdem können Sie Sicherheitsgruppen hinzufügen oder entfernen. Wenn Sie verschiedene Sicherheitsgruppen auf verschiedenen Netzwerkschnittstellen Ihrer Instanz haben, wählen Sie "Port-Sicherheitsgruppen bearbeiten", um diese separat zu bearbeiten.
+#### Volume anhängen
+Volumes, die Sie im Menü "Volumes" erstellt haben, können hier an Ihre Instanz angehängt werden. Beachten Sie, dass dadurch das Volume nur für Ihre Instanz verfügbar wird (z. B. als /dev/sdb in einer Linux-Instanz). Sie müssen ein Dateisystem darauf anlegen, es in /etc/fstab eintragen und es manuell mounten, um es zu benutzen.
+#### Volume abhängen
+Volumes, die nicht mehr benötigt werden oder die auf eine andere Instanz gemountet werden sollen, können hier von einer Instanz abgehängt werden. Volumes, die von einer Instanz abgehängt werden sollen, sollten zuerst von der Instanz ausgehängt (umount) werden und Anwendungen sollten nicht mehr auf sie zugreifen.
+#### Metadaten aktualisieren
+Hier können Sie die Metadaten für Ihre Instanz verwalten. Auf der linken Seite ist bereits ein Satz von Beispiel-Metadaten aus dem Glance-Metadatenkatalog verfügbar. Wenn Sie einen der Schlüssel verwenden möchten, klicken Sie einfach auf "+", um ihn nach rechts zu verschieben. Sie können Ihre eigenen Metadatenschlüssel über die Option "Benutzerdefiniert" erstellen.
+#### Sicherheitsgruppen bearbeiten
+Hier können Sie die Sicherheitsgruppen für Ihre Instanz verwalten. Wenn Ihre Instanz mehr als eine Netzwerkschnittstelle hat, werden Änderungen auf alle angewendet. Wenn Sie verschiedene Sicherheitsgruppen für verschiedene Netzwerkschnittstellen verwalten möchten, verwenden Sie bitte "Port-Sicherheitsgruppen bearbeiten" aus dem Menü.
+#### Port-Sicherheitsgruppen bearbeiten
+Sicherheitsgruppen können hier für verschiedene Netzwerkschnittstellen (Ports) separat konfiguriert werden. Darüber hinaus können Sie Port-Eigenschaften wie "Enable Admin State", um Pakete über diesen Port weiterzuleiten, "Binding VNIC Type" für den Port (für virtuelle Maschinen werden Sie in den meisten Fällen "Normal" wählen) und "Port Security" bearbeiten, um Sicherheitsfunktionen wie "Anti-Spoofing" zu aktivieren und die Verwendung von Sicherheitsgruppen für diesen Port zu erlauben.
+#### Konsole
+Öffnet eine virtuelle Konsole mit der Anmeldeaufforderung Ihrer Instanz.
+#### Log anzeigen
+Ermöglicht die Überprüfung der Konsolenprotokollmeldungen Ihrer Instanz
+#### Instanz retten
+Der Rettungsmodus ist für Notfälle reserviert. Damit wird Ihre Instanz heruntergefahren und eine Rettungsinstanz (mit dem von Ihnen ausgewählten Image) gestartet, die das Root-Volume Ihrer Instanz einbindet, damit Sie Daten davon wiederherstellen oder die Konfiguration reparieren können. Optional können Sie ein Passwort für die Rettungsinstanz festlegen.
+#### Instanz anhalten
+Wenn Sie Ihre Instanz pausieren, wird sie mit allen Ressourcen "eingefroren". Sie ist dann nicht mehr verfügbar, kann aber sofort wieder aufgenommen werden.
+#### Instanz aussetzen
+Wenn Sie die Instanz aussetzen, wird sie mit allen Ressourcen heruntergefahren. Wenn Sie sie wieder aufnehmen, wird sie wieder gestartet.
+#### Instanz auslagern
+Das Auslagern einer Instanz ist ähnlich wie das Suspendieren. Der Speicher wird jedoch nicht gesichert. Sie könnten "Shelving" für Instanzen verwenden, die Sie am Wochenende nicht brauchen, aber in der nächsten Arbeitswoche wieder benutzen wollen.
+#### Instanzgröße ändern
+In diesem Dialog können Sie einige "Dimensionen" Ihrer Instanz (wie Arbeitsspeicher, CPUs und Root-Disk-Größe) ändern, indem Sie einen neuen Flavor auswählen. Außerdem können Sie wählen, ob Sie eine unpartitionierte Festplatte wünschen oder ob Sie die Festplatte selbst partitionieren möchten. Die Größenänderung kann einige Zeit in Anspruch nehmen.
+#### Instanz sperren
+Sie können versehentliche Änderungen und/oder Löschungen Ihrer Instanz verhindern, indem Sie sie "sperren". Für gesperrte Instanzen wird in Horizon ein kleines Schlosssymbol angezeigt. Administratoren der Plattform können Instanzen jedoch wieder entsperren.
+#### Soft Reboot Instanz
+Es wird versucht, alle Anwendungen herunterzufahren, bevor die Instanz neu gestartet wird.
+#### Harter Neustart der Instanz
+Die Instanz wird neu gebootet, ohne den Anwendungen Zeit zum Herunterfahren zu geben.
+#### Instanz ausschalten
+Die Instanz wird sofort abgeschaltet. Dies kann zu Dateisystemprüfungen oder Datenbankwiederherstellungsvorgängen führen, wenn die Instanz wieder eingeschaltet wird.
+#### Instanz wiederherstellen
+Mit Rebuild können Sie eine Instanz neu erstellen, wobei Sie die Eigenschaften der Instanz ändern (z. B. ein anderes Image verwenden). Die UUID, Volumes und Ports der Instanz bleiben unverändert. Die Anwendung auf Instanzen mit Ceph-Volumes funktioniert allerdings nicht.
+#### Instanz löschen
+Die Instanz wird gelöscht. Alle verwendeten Ressourcen werden an den Pool zurückgegeben.
