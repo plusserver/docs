@@ -1,0 +1,1 @@
+../../mariadb/documentation/update.md

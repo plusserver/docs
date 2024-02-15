@@ -4,5 +4,5 @@ linkTitle: "Release Notes"
 type: "docs"
 weight: 40
 description: >
-   Information about the product’s lifecycle.
+   Changelog of PostgeSQL-as-a-Service.
 ---
