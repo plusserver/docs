@@ -2,8 +2,11 @@
 title: "Tutorials"
 linkTitle: "Tutorials"
 type: "docs"
-weight: 3
-date: 2023-02-21
+weight: 30
+date: "2024-02-06"
 description: >
-    Tutorials and guides for common use cases and configuration.
+    Guides for using plusserver s3 to the fullest
 ---
+Welcome to the tutorial for our plusserver S3 service. This guide is specifically designed for beginners who are engaging with S3 and the AWS CLI for the first time. You will be guided step by step through the initial processes of working with our plusserver S3 service.
+
+Our goal is to provide you with the tools and understanding necessary to effectively manage your S3 object storage.
