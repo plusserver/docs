@@ -4,7 +4,7 @@ linkTitle: "Release Notes"
 type: "docs"
 weight: 40
 description: >
-    Changelog of Platform-as-a-Service - Harbor.
+    Changelog of Private Registry - Harbor.
 ---
 
 # Changelog

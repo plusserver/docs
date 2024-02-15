@@ -4,5 +4,5 @@ linkTitle: "Documentation"
 type: "docs"
 weight: 20
 description: >
-    Documentation on working with various features of Platform-as-a-Service - Harbor.
+    Documentation on working with various features of Private Registry - Harbor.
 ---

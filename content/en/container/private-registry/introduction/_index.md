@@ -4,5 +4,5 @@ linkTitle: "Introduction"
 type: "docs"
 weight: 10
 description: >
-    Everything you need for a perfect start with your Platform-as-a-Service - Harbor.
+    Everything you need for a perfect start with your Private Registry - Harbor.
 ---
