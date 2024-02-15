@@ -2,11 +2,7 @@
 title: "Release Notes"
 linkTitle: "Release Notes"
 type: "docs"
-weight: 4
-date: 2023-02-21
+weight: 40
 description: >
-
+   Changelog of MySQL-as-a-Service.
 ---
-
-Here are the current release notes for the PSKE.
-
