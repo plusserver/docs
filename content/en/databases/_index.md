@@ -2,8 +2,8 @@
 title: "Databases"
 linkTitle: "Databases"
 type: "docs"
-weight: 40
+weight: 30
 menu:
   main:
-    weight: 40
+    weight: 30
 ---
