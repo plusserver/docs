@@ -1,6 +1,6 @@
 ---
-title: "Release Notes"
-linkTitle: "Release Notes"
+title: "Versionshinweise"
+linkTitle: "Versionshinweise"
 type: "docs"
 weight: 4
 date: 2023-10-31
@@ -8,6 +8,4 @@ description: >
 
 ---
 
-Here are the current release notes for the pluscloud open releases.
-
-
+Hier sind die aktuellen Release Notes für die pluscloud open Releases.
