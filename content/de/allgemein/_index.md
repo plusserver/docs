@@ -1,6 +1,6 @@
 ---
-title: "General"
-linkTitle: "General"
+title: "Allgemein"
+linkTitle: "Allgemein"
 type: "docs"
 weight: 1
 menu:
