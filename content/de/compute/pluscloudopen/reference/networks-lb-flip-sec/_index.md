@@ -1,161 +1,161 @@
 ---
-title: "Networks, Loadbalancers, Floating IPs and Security Groups"
+title: "Netzwerke, Loadbalancer, Floating IPs und Sicherheitsgruppen"
 type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Create networks, use Loadbalancers, Floating IPs and Security Groups 
+  Netzwerke erstellen, Loadbalancer, Floating IPs und Sicherheitsgruppen verwenden 
 ---
-## Networking
-For your convenience new projects in pluscloud open are created with a preconfigured network setup, which contains a private network and a router, which connects that private network to the internet. All networking configuration in Horizon is done in the "Network" menu.
+## Vernetzung
+Um Ihnen die Arbeit zu erleichtern, werden neue Projekte in pluscloud open mit einem vorkonfigurierten Netzwerk-Setup erstellt, das ein privates Netzwerk und einen Router enthält, der dieses private Netzwerk mit dem Internet verbindet. Die gesamte Netzwerkkonfiguration in Horizon wird über das Menü "Netzwerk" vorgenommen.
 
-![screenshot of the network menu](./image2020-10-16_8-54-52.png)
+![Screenshot des Netzwerkmenüs](./image2020-10-16_8-54-52.png)
 
-"**Network Topology**" gives you a diagram of your current network setup. "**Networks**" lists all currently configured networks in your project and allows you to manage existing, delete existing and create new networks. "**Routers**" lists all configured routers in your project and allow management, creation and deletion of routers. "**Security Groups**" are basically firewall rules which are used to allow or deny traffic to or from your infrastructure. "**Load Balancers**" lets you create, delete and manage loadbalancers, members, pools in your environment. "**Floating IPs" lets you manage, attach, detach, acquire public IP addresses for your instances.
+"**Netzwerktopologie**" zeigt Ihnen ein Diagramm Ihrer aktuellen Netzwerkumgebung. "**Netzwerke**" listet alle derzeit konfigurierten Netzwerke in Ihrem Projekt auf und ermöglicht es Ihnen, bestehende Netzwerke zu verwalten, zu löschen und neue Netzwerke zu erstellen. "**Router**" listet alle konfigurierten Router in Ihrem Projekt auf und ermöglicht die Verwaltung, Erstellung und Löschung von Routern. "**Sicherheitsgruppen**" sind im Grunde Firewall-Regeln, mit denen Sie den Datenverkehr zu oder von Ihrer Infrastruktur zulassen oder verweigern können. Mit "**Load Balancers**" können Sie Loadbalancer, Mitglieder und Pools in Ihrer Umgebung erstellen, löschen und verwalten. Mit "**Floating IPs**" können Sie öffentliche IP-Adressen für Ihre Instanzen verwalten, anhängen, abhängen und allozieren.
 
-### Network Topology
-In the network topology menu entry you can get an overview about the networking setup inside your project. The diagram shows your current setup and is updated with every change of the environment. 
+### Netzwerktopologie
+Im Menüpunkt "Netzwerktopologie" können Sie sich einen Überblick über das Netzwerk-Setup in Ihrem Projekt verschaffen. Das Diagramm zeigt Ihre aktuelle Konfiguration und wird bei jeder Änderung der Umgebung aktualisiert. 
 
-<img src="image2020-10-16_9-33-31.png" alt="screenshot of a network topology" width="30%" height="30%" title="Network Diagram">
+<img src="image2020-10-16_9-33-31.png" alt="Bildschirmfoto einer Netzwerktopologie" width="30%" height="30%" title="Netzwerkdiagramm">
 
-The above diagram shows two private networks which are connected to a public network ("provider network" in OpenStack language) with two routers. Hovering with your mouse over the elements of the diagram shows more information and shortcuts to other functions of the web gui.
+Das obige Diagramm zeigt zwei private Netzwerke, die über zwei Router mit einem öffentlichen Netzwerk ("Providernetzwerk" in der OpenStack-Sprache) verbunden sind. Wenn Sie mit der Maus über die Elemente des Diagramms fahren, werden weitere Informationen und Verknüpfungen zu anderen Funktionen der Web-GUI angezeigt.
 
-### Networks
-Under "Networks" you find the configured networks in your environment and you can manage, add or delete networks.
-![screenshot of the networks menu](./image2020-10-16_10-8-2.png)
+### Netzwerke
+Unter "Netzwerke" finden Sie die konfigurierten Netzwerke in Ihrer Umgebung und Sie können Netzwerke verwalten, hinzufügen oder löschen.
+![Screenshot des Netzwerkmenüs](./image2020-10-16_10-8-2.png)
 
-Each network needs an associated subnet - which is set up during network creation, too. The external network - "ext01" in case of pluscloud open - is configured by the provider and cannot be changed.
+Jedes Netzwerk benötigt ein zugehöriges Subnetz, das ebenfalls bei der Erstellung des Netzwerks eingerichtet wird. Das externe Netzwerk - "ext01" im Falle von pluscloud open - wird vom Provider konfiguriert und kann nicht geändert werden.
 
-#### Create networks
-Klicking on "Create network" brings up a dialogue to define a new network. 
+#### Netzwerke erstellen
+Mit einem Klick auf "Netzwerk erstellen" öffnet sich ein Dialog, um ein neues Netzwerk zu definieren. 
 
-![screenshot of the create network menu](./image2020-10-16_10-26-51.png) 
+![Bildschirmfoto des Menüs "Netzwerk erstellen"](./image2020-10-16_10-26-51.png) 
 
-You need to give the new network a name, decide if it should receive traffic (by klicking "Enable Admin State") and decide if you want to create a new subnet in the new network or use an existing one. The "Availability Zone Hints" currently refers to all of the respective pluscloud open environment as there is only one availability zone per pluscloud open environment.
+Sie müssen dem neuen Netzwerk einen Namen geben, entscheiden, ob es Datenverkehr empfangen soll (indem Sie auf "Enable Admin State" klicken) und entscheiden, ob Sie ein neues Subnetz im neuen Netzwerk erstellen oder ein bestehendes verwenden wollen. Die "Availability Zone Hints" beziehen sich derzeit auf die gesamte pluscloud open Umgebung, da es nur eine Availability Zone pro pluscloud open Umgebung gibt.
 
-If you chose "Create Subnet" you have to define the subnet as the next step. 
+Wenn Sie "Subnetz erstellen" gewählt haben, müssen Sie im nächsten Schritt das Subnetz definieren. 
 
-![screenshot of the subnet tab](./image2020-10-16_10-37-47.png)  
+![Screenshot der Registerkarte "Subnetz"](./image2020-10-16_10-37-47.png)  
 
-Here you create a subnet which is associated with the new network. You need a valid "Network Address" of a [RFC1918](https://www.rfc-editor.org/rfc/rfc1918) network in [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation. If you don't specify a "Gateway IP" the first IP address of the subnet will automatically become the gateway IP address. If you don't want a gateway in your network, klick on "Disable Gateway". 
+Hier erstellen Sie ein Subnetz, das mit dem neuen Netzwerk verbunden ist. Sie benötigen eine gültige "Netzwerkadresse" eines [RFC1918](https://www.rfc-editor.org/rfc/rfc1918) Netzwerks in [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) Notation. Wenn Sie keine "Gateway-IP" angeben, wird die erste IP-Adresse des Teilnetzes automatisch zur Gateway-IP-Adresse. Wenn Sie kein Gateway in Ihrem Netzwerk haben wollen, klicken Sie auf "Gateway deaktivieren". 
 
-A detailed configuration of the subnet is available in the "Subnet Details" menu.
+Eine detaillierte Konfiguration des Subnetzes finden Sie im Menü "Subnetzdetails".
 
-![screenshot of the subnet details menu](./image2020-10-16_10-39-43.png)
+![Screenshot des Subnetz-Details-Menüs](./image2020-10-16_10-39-43.png)
 
-Here you can define, whether [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) should be available in the subnet. If you want, you can further specify the subnet pool from where DHCP addresses should be allocated. Allocation pools should at least start with the .5 address because there could be other network services already running on those first addresses of the network.
-If you want to use specific nameservers for your network, you can define them in the "DNS Name Servers" field. Specific host routes to specific networks can be set in the "Host Routes" field, where you define the destination network in CIDR notation followed by the gateway IP address over which you can reach the destination network.
-Click on "Create" to let OpenStack provision the new network and subnetwork.
+Hier können Sie festlegen, ob [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) im Subnetz verfügbar sein soll. Wenn Sie möchten, können Sie außerdem den Subnetzpool angeben, aus dem DHCP-Adressen zugewiesen werden sollen. Zuteilungspools sollten mindestens mit der Adresse .5 beginnen, da auf diesen ersten Adressen des Netzes bereits andere Netzwerkdienste laufen könnten.
+Wenn Sie bestimmte Nameserver für Ihr Netzwerk verwenden möchten, können Sie diese im Feld "DNS-Nameserver" definieren. Spezifische Host-Routen zu bestimmten Netzwerken können Sie im Feld "Host-Routen" einstellen, wo Sie das Zielnetzwerk in CIDR-Notation definieren, gefolgt von der Gateway-IP-Adresse, über die Sie das Zielnetzwerk erreichen können.
+Klicken Sie auf "Erstellen", damit OpenStack das neue Netzwerk und Subnetz bereitstellt.
 
 ## Router
-Networks need to be connected by routers in order to be able to communicate. This is true for external networks as well as internal networks.
+Netzwerke müssen durch Router verbunden werden, um kommunizieren zu können. Dies gilt sowohl für externe Netzwerke als auch für interne Netzwerke.
 
-### Routers
-The "Routers" menu lists all configured routers, allows the management and deletion of those routers and the creation of new ones.
-![screenshot of the routers menu](./image2020-10-16_12-53-52.png)
+### Router
+Das Menü "Router" listet alle konfigurierten Router auf, erlaubt die Verwaltung und das Löschen dieser Router sowie das Anlegen neuer Router.
+![Screenshot des Router-Menüs](./image2020-10-16_12-53-52.png)
 
-### Create Router
-To create a new router click on "Create Router", give it a name, allow it to route packets by clicking on "Enable Admin State" and select an "External Network" from the list.
-![screenshot of the create routers menu](./image2020-10-16_13-26-30.png)
+### Router erstellen
+Um einen neuen Router zu erstellen, klicken Sie auf "Create Router", geben Sie ihm einen Namen, erlauben Sie ihm, Pakete zu routen, indem Sie auf "Enable Admin State" klicken und wählen Sie ein "External Network" aus der Liste.
+![Bildschirmfoto des Menüs "Router erstellen"](./image2020-10-16_13-26-30.png)
 
-### Add Interface
-Cicking on the name of an already existing router, you see the current interfaces and their configuration
+### Schnittstelle hinzufügen
+Wenn Sie auf den Namen eines bereits vorhandenen Routers klicken, sehen Sie die aktuellen Schnittstellen und deren Konfiguration
 
-![screenshot of the interfaces menu](./2023-03-24_14-44.png)
+![Bildschirmfoto des Schnittstellenmenüs](./2023-03-24_14-44.png)
 
-If you click on "Add Interface" you can choose which subnet you want the route to be connected to and which ip address the new router interface should get. 
+Wenn Sie auf "Schnittstelle hinzufügen" klicken, können Sie auswählen, mit welchem Subnetz die Route verbunden werden soll und welche IP-Adresse die neue Router-Schnittstelle erhalten soll. 
 
-![screenshot of the add interface menu](./image2020-10-16_13-30-17.png)
+![Bildschirmfoto des Menüs "Schnittstelle hinzufügen"](./image2020-10-16_13-30-17.png)
 
-### Add Static Route
+### Statische Route hinzufügen
 
-Clicking on the "Static Routes" tab, you can add static routes to your router
+Mit einem Klick auf den Reiter "Statische Routen" können Sie Ihrem Router statische Routen hinzufügen
 
-![screenshot of the add static route menu](./image2020-10-16_13-34-30.png)
+![Bildschirmfoto des Menüs "Statische Route hinzufügen"](./image2020-10-16_13-34-30.png)
 
-Add the destination network in CIDR notation and define a reachable IP address for the router to connect to the destination network.
+Fügen Sie das Zielnetz in CIDR-Notation hinzu und definieren Sie eine erreichbare IP-Adresse für den Router, um eine Verbindung zum Zielnetz herzustellen.
 
-## Security Groups
-A very important part of the network environment of your project are the security groups, which work as firewall rule sets to allow or disallow traffic to your instances. Only wanted traffic should allowed to reach your instances.
+## Sicherheitsgruppen
+Ein sehr wichtiger Teil der Netzwerkumgebung Ihres Projekts sind die Sicherheitsgruppen, die wie Firewall-Regelsätze funktionieren, um den Datenverkehr zu Ihren Instanzen zuzulassen oder zu verbieten. Nur erwünschter Datenverkehr sollte Ihre Instanzen erreichen können.
 
-As a default there is a "Default Security Group" active for instances which have no other security groups assigned. This includes a set of rules for incoming and outgoing traffic. This group is normally associated to new instances in order to allow ssh logins.
+Standardmäßig ist eine "Standard-Sicherheitsgruppe" für Instanzen aktiv, denen keine anderen Sicherheitsgruppen zugewiesen sind. Diese Gruppe enthält eine Reihe von Regeln für ein- und ausgehenden Datenverkehr. Diese Gruppe wird normalerweise neuen Instanzen zugewiesen, um SSH-Anmeldungen zu ermöglichen.
 
-![screenshot of the default security group menu](./image2020-10-16_14-17-36.png)
+![Screenshot des Standard-Menüs für Sicherheitsgruppen](./image2020-10-16_14-17-36.png)
 
-"Egress" is for outgoing traffic. Any traffic (including ICMP) is allowed for IPv4 and IPv6. "Ingress" or incoming traffic is allowed for ICMP as well as SSH (port 22). Rules, that have a "Remote Security Group" "default" defined are used to assure, that any source instance can reach any other destination instance in that "default" group via IPv4 and IPv6. 
-Remember, that security groups have to be assigned to each instance individually. These do not apply for all of your environment.
+"Egress" ist für ausgehenden Verkehr. Jeder Verkehr (einschließlich ICMP) ist für IPv4 und IPv6 erlaubt. "Ingress" oder eingehender Verkehr ist für ICMP sowie SSH (Port 22) erlaubt. Regeln, die eine "Remote Security Group" "default" definiert haben, werden verwendet, um sicherzustellen, dass jede Quellinstanz jede andere Zielinstanz in dieser "default" Gruppe über IPv4 und IPv6 erreichen kann. 
+Denken Sie daran, dass die Sicherheitsgruppen jeder Instanz einzeln zugewiesen werden müssen. Diese gelten nicht für Ihre gesamte Umgebung.
 
-### Create Security Group
+### Sicherheitsgruppe erstellen
 
-Clicking on "+Create Security Group" will create a new security group and lead you to a new menu, that allows you to add new security rules to your new security group. There is a set of pre-defined rules for various protocols you can define "Custom TCP/UDP/ICMP" rules for individual ports.
-You should use the description field (in order to have an easy overview of what each rule is intended to do), define the direction of traffic (egress/ingress) as well as the network port the rule should apply to. You can define a single port, some ports or a port range. 
-For ICMP traffic you define icmp type and code.
+Wenn Sie auf "+Sicherheitsgruppe erstellen" klicken, wird eine neue Sicherheitsgruppe erstellt und Sie gelangen zu einem neuen Menü, in dem Sie neue Sicherheitsregeln zu Ihrer neuen Sicherheitsgruppe hinzufügen können. Es gibt eine Reihe von vordefinierten Regeln für verschiedene Protokolle. Sie können "Custom TCP/UDP/ICMP"-Regeln für einzelne Ports definieren.
+Sie sollten das Beschreibungsfeld verwenden (um einen einfachen Überblick darüber zu erhalten, was jede Regel tun soll), die Richtung des Datenverkehrs (Ausgang/Eingang) sowie den Netzwerkport, für den die Regel gelten soll, definieren. Sie können einen einzelnen Port, mehrere Ports oder einen Portbereich definieren. 
+Für ICMP-Verkehr legen Sie icmp-Typ und -Code fest.
 
-![screenshot of the add rule menu](./image2020-10-16_15-11-48.png)
+![Bildschirmfoto des Menüs "Regel hinzufügen"](./image2020-10-16_15-11-48.png)
 
-Remote describes source or destination - depending whether it should become an ingress- or an egress-rule. You can here define an IP address (in CIDR notation) or another security group.
+Remote beschreibt Quelle oder Ziel - je nachdem, ob es eine Ingress- oder eine Egress-Regel werden soll. Sie können hier eine IP-Adresse (in CIDR-Notation) oder eine andere Sicherheitsgruppe definieren.
 
 ## Loadbalancer
 
-The "Load Balancers" menu allows you to define loadbalancing services. Clicking on "Load Balancers" shows a page listing all already defined loadbalancers. These can here be managed or deleted. And you can add new ones by clicking on "+Create Load Balancer".
-In order to create a new loadbalancer you have to define various parameters. You are guided through a few menus and as soon as you have entered enough information the button "Create Load Balancer" is activated and you can start the creation process. Asterisks indicate fields, which need to be filled in in order to create a loadbalancer.
+Das Menü "Load Balancers" ermöglicht es Ihnen, Loadbalancing-Dienste zu definieren. Ein Klick auf "Load Balancers" zeigt eine Seite mit allen bereits definierten Loadbalancern. Diese können hier verwaltet oder gelöscht werden. Und Sie können neue hinzufügen, indem Sie auf "+Loadbalancer erstellen" klicken.
+Um einen neuen Loadbalancer zu erstellen, müssen Sie verschiedene Parameter festlegen. Sie werden durch einige Menüs geführt und sobald Sie genügend Informationen eingegeben haben, wird die Schaltfläche "Load Balancer erstellen" aktiviert und Sie können den Erstellungsprozess starten. Sternchen kennzeichnen Felder, die ausgefüllt werden müssen, um einen Loadbalancer zu erstellen.
 
-![screenshot of the create load balancer menu](./image2020-10-16_16-0-5.png)
+![Screenshot des Menüs "Loadbalancer erstellen"](./image2020-10-16_16-0-5.png)
 
-"**Name**" and "**IP address**" are the first two bits of information you have to enter. Choose an IP address from your subnet. If you leave that field blank an IP address will be assigned from the subnet you choose (as long as DHCP is active, there).
+"**Name**" und "**IP-Adresse**" sind die ersten beiden Informationen, die Sie eingeben müssen. Wählen Sie eine IP-Adresse aus Ihrem Subnetz. Wenn Sie dieses Feld leer lassen, wird eine IP-Adresse aus dem von Ihnen gewählten Subnetz zugewiesen (sofern DHCP dort aktiv ist).
 
-"**Description**" is optional but should be used in order to store information about the why and what of this particular loadbalancer instance. You cannot choose a "**Flavor**". Pluscloud open is using the amphora flavor here. As already mentioned you have to choose a "**Subnet**" which the loadbalancer should be connected to. "**Admin State Up**" allows you to create the loadbalancer switched off. It needs to be switched to "**Admin State Up**" in order to balance traffic.
+"**Beschreibung**" ist optional, sollte aber verwendet werden, um Informationen über das Warum und Was dieser speziellen Loadbalancer-Instanz zu speichern. Sie können keinen "**Flavor**" wählen. Pluscloud open verwendet hier das Amphora Flavor. Wie bereits erwähnt, müssen Sie ein "**Subnet**" auswählen, mit dem der Loadbalancer verbunden werden soll. Mit "**Admin State Up**" kann man den Loadbalancer ausgeschaltet anlegen. Er muss auf "**Admin State Up**" geschaltet werden, um den Datenverkehr auszugleichen.
 
-The next menu "Listener Details" defines the listener for the new loadbalancer
+Das nächste Menü "Listener Details" definiert den Listener für den neuen Loadbalancer
 
-![screenshot of the listener menu](./image2020-10-16_16-12-24.png)
+![Bildschirmfoto des Listener-Menüs](./image2020-10-16_16-12-24.png)
 
-Each and every port on the new loadbalancer, that should receive traffic, will be configured seperately and assigned to the loadbalancer. You can define many listeners per loadbalancer as long as each one uses a different port. 
+Jeder einzelne Port des neuen Loadbalancers, der Datenverkehr empfangen soll, wird separat konfiguriert und dem Loadbalancer zugewiesen. Sie können mehrere Listener pro Loadbalancer definieren, solange jeder einen anderen Port verwendet. 
 
-"**Protocol**" defines the protocol that should be expected on the "**Port**". You can only choose "TERMINATED_HTTPS" as protocol, if you have activated and configured the key manager service (Barbican). The "**Port**" number should be between 1 and 65535.
+"**Protokoll**" definiert das Protokoll, das auf dem "**Port**" erwartet werden soll. Sie können "TERMINATED_HTTPS" nur dann als Protokoll wählen, wenn Sie den Schlüsselmanagerdienst (Barbican) aktiviert und konfiguriert haben. Die "**Port**"-Nummer sollte zwischen 1 und 65535 liegen.
 
-With the "**Client Date Timeout**" you configure how long TCP connections to clients should be allowed to be kept alive if the client is inactive. The "**TCP Inspect Timeout**" is the time in milliseconds the loadbalancer will wait for additional content. Timouts to the loadbalancer members are configured in the "**Member Connect Timeout**" field. You can limit the number of allowed connections on the respective listener in the "**Connection Limit**" field - "-1" means unlimited. If you want to insert HTTP headers you can choose one or both of the supported options at "**Insert Headers**".
+Mit dem "**Client Date Timeout**" konfigurieren Sie, wie lange TCP-Verbindungen zu Clients aufrechterhalten werden dürfen, wenn der Client inaktiv ist. Der "**TCP Inspect Timeout**" ist die Zeit in Millisekunden, die der Loadbalancer auf zusätzliche Inhalte wartet. Zeitüberschreitungen zu den Loadbalancer-Mitgliedern werden im Feld "**Member Connect Timeout**" konfiguriert. Im Feld "**Connection Limit**" können Sie die Anzahl der erlaubten Verbindungen auf den jeweiligen Listener begrenzen - "-1" bedeutet unbegrenzt. Wenn Sie HTTP-Header einfügen möchten, können Sie unter "**Header einfügen**" eine oder beide der unterstützten Optionen auswählen.
 
-As the next step you have to define the "**Pool Details**" for the new loadbalancer. A "Pool" is a group of member instances which should receive traffic via the loadbalancer.
+Als nächster Schritt müssen Sie die "**Pool Details**" für den neuen Loadbalancer definieren. Ein "Pool" ist eine Gruppe von Mitgliedsinstanzen, die den Verkehr über den Loadbalancer erhalten sollen.
 
-![screenshot of the pool details menu](./image2020-10-16_16-19-9.png)
+![Screenshot des Pool-Details-Menüs](./image2020-10-16_16-19-9.png)
 
-First you define the loadbalancing "**Algorithm**"
+Zuerst definieren Sie den Loadbalancing "**Algorithmus**"
   
-    * LEAST_CONNECTIONS: sends the next request to the instance with the smallest number of connections in the pool
-    * ROUND_ROBIN: sends reqeusts randomly to the next available instance in the pool
-    * SOURCE_IP: sends requests from the same source IP address always to the same instance in the pool
+    * LEAST_CONNECTIONS: sendet die nächste Anfrage an die Instanz mit der geringsten Anzahl von Verbindungen im Pool
+    * ROUND_ROBIN: sendet Anfragen nach dem Zufallsprinzip an die nächste verfügbare Instanz des Pools
+    * SOURCE_IP: sendet Anfragen von der gleichen Quell-IP-Adresse immer an die gleiche Instanz im Pool
 
-If your application needs "**Session Persistence**" you can choose the method here
+Wenn Ihre Anwendung "**Session Persistence**" benötigt, können Sie die Methode hier auswählen
 
-    * SOURCE_IP: The source IP address is used as a persistence characteristic
-    * HTTP_COOKIE: HTTP cookies, that are set from the compute instance in the pool are used as a persistence characteristic
-    * APP_COOKIE: Your application uses/creates a custom cookie which you have to fill in the "**Cookie Name**" field.
+    * SOURCE_IP: Die Quell-IP-Adresse wird als Persistenzmerkmal verwendet
+    * HTTP_COOKIE: HTTP-Cookies, die von der Compute-Instanz im Pool gesetzt werden, werden als Persistenzmerkmal verwendet
+    * APP_COOKIE: Ihre Anwendung verwendet/erzeugt ein benutzerdefiniertes Cookie, das Sie in das Feld "**Cookie Name**" eintragen müssen.
 
-The "**Pool Members**" for the new loadbalancer pool are defined in the next menu. You can choose from the instances in the list.
+Die "**Pool Members**" für den neuen Loadbalancer-Pool werden im nächsten Menü definiert. Sie können aus den Instanzen in der Liste wählen.
 
-![screenshot from the pool members menu](./image2020-10-16_16-31-8.png)
+![Screenshot aus dem Menü "Pool Members"](./image2020-10-16_16-31-8.png)
 
-The list "**Available Instances**" contains candidate instances for your pool. Click "Add" to add them to the pool. Click "Add external member" to add members that are not displayed in the list.
+Die Liste "**Verfügbare Instanzen**" enthält die für Ihren Pool in Frage kommenden Instanzen. Klicken Sie auf "Hinzufügen", um sie dem Pool hinzuzufügen. Klicken Sie auf "Externes Mitglied hinzufügen", um Mitglieder hinzuzufügen, die nicht in der Liste angezeigt werden.
 
-The "**IP Adress**" is the IP address of the network interface of the instance, that should receive the traffic from the loadbalancer. IPv4 and IPv6 addresses are allowed. The "**Subnet**" should be the subnet which contains the IP address of the member. The "**Port**" would be the TCP port on which the member should receive traffic from the loadbalancer. The "**Weight**" defines the relative number of requests the respective member should receive in relation to the other members. Allowed numbers are between 1 and 256. 
-If you click on the arrow you can define even more pool details like "**Monitor Address**" and "**Monitor Port**" - if you want to define a monitoring address that is seperate from the service (IP address and port) on your instance. Leave it unchanged in order to use member IP address and port for monitoring. 
-If you want to define a "**Backup**" or failover member in your new pool, which is only used, if all other members are not reachable, click on "Yes" here.
+Die "**IP-Adresse**" ist die IP-Adresse der Netzwerkschnittstelle der Instanz, die den Verkehr vom Loadbalancer empfangen soll. IPv4 und IPv6 Adressen sind erlaubt. Das "**Subnetz**" sollte das Subnetz sein, das die IP-Adresse des Mitglieds enthält. Der "**Port**" sollte der TCP-Port sein, auf dem das Mitglied den Verkehr vom Loadbalancer empfangen soll. Das "**Gewicht**" definiert die relative Anzahl der Anfragen, die das jeweilige Mitglied im Verhältnis zu den anderen Mitgliedern erhalten soll. Erlaubte Werte liegen zwischen 1 und 256. 
+Wenn Sie auf den Pfeil klicken, können Sie noch weitere Pool-Details wie "**Überwachungsadresse**" und "**Überwachungsport**" definieren - wenn Sie eine Überwachungsadresse definieren möchten, die vom Dienst (IP-Adresse und Port) auf Ihrer Instanz getrennt ist. Lassen Sie sie unverändert, um die IP-Adresse und den Port des Mitglieds für die Überwachung zu verwenden. 
+Wenn Sie ein "**Backup**" oder Failover-Member in Ihrem neuen Pool definieren wollen, das nur verwendet wird, wenn alle anderen Member nicht erreichbar sind, klicken Sie hier auf "Ja".
 
-The last step is the "**Monitor Details** menu. Monitoring is used to determine the state of the pool members. So called "health checks" are used for all members in the pool and determine whether the checked member will receive traffic from the loadbalancer. If the health check fails, the member will receive no traffic. Each pool can have its own health check, which will be used for all members in the pool.
+Der letzte Schritt ist das Menü "**Monitor Details**". Die Überwachung dient dazu, den Zustand der Poolmitglieder zu ermitteln. Sogenannte "Health Checks" werden für alle Mitglieder des Pools durchgeführt und bestimmen, ob das geprüfte Mitglied Verkehr vom Loadbalancer erhält. Schlägt die Gesundheitsprüfung fehl, erhält das Mitglied keinen Datenverkehr. Jeder Pool kann seine eigene Gesundheitsprüfung haben, die für alle Mitglieder des Pools verwendet wird.
 
-![screenshot of the monitor details menu](./image2020-10-16_16-41-51.png)
+![Screenshot des Monitor-Detail-Menüs](./image2020-10-16_16-41-51.png)
 
-You can choose a "**Type**" of monitor from the list of HTTP, HTTPS, PING, TCP, TLS-HELLO, UDP-CONNECT and SCTP. Depending on your choice you will have to enter different bits of information.
-The "**Delay (sec)**" determines the time between the health checks. It should be as big as "**Timeout**" or bigger. The "**Max Retries**" lets you choose how often the loadbalancer should try the health check before setting the state of the member to **inactive** (should be a number between 1 and 10). "**Max Retries Down**" is the number of allowed connection failures before the pool member will be declared "**faulty**" (again a number beteween 1 and 10). The "**Timeout**" describes the time a healtch check can take in order to succeed (should be a number bigger or equals 0 and smaller or equal to the "**Delay (sec)**").
-The "**HTTP Method**" can be one of the allowed HTTP methods (like GET, HEAD, etc.) and "**Expected Codes**" should be one HTTP code (or a list of them) which come back for a successful health check. 
-The "**URL Path**" can be used to define a custom path for your health checks. Remember that this is requested by the monitor every "**Delay (sec)**".
-If all the required information has been entered in the forms, the loadbalancer can be created. If you want the loadbalancer to be accessible from the public internet, you have to assign a floating IP address to it.
+Sie können einen "**Typ**" von Monitor aus der Liste von HTTP, HTTPS, PING, TCP, TLS-HELLO, UDP-CONNECT und SCTP auswählen. Je nach Wahl müssen Sie verschiedene Informationen eingeben.
+Die "**Verzögerung (sec)**" bestimmt die Zeit zwischen den Gesundheitsprüfungen. Sie sollte so groß wie "**Timeout**" oder größer sein. Mit "**Max Retries**" können Sie festlegen, wie oft der Loadbalancer die Gesundheitsprüfung versuchen soll, bevor er den Status des Mitglieds auf **inaktiv** setzt (sollte eine Zahl zwischen 1 und 10 sein). "**Max Retries Down**" ist die Anzahl der erlaubten Verbindungsabbrüche, bevor das Poolmitglied als "**faulty**" deklariert wird (wieder eine Zahl zwischen 1 und 10). Der "**Timeout**" beschreibt die Zeit, die ein Healtch-Check dauern kann, um erfolgreich zu sein (sollte eine Zahl größer oder gleich 0 und kleiner oder gleich dem "**Delay (sec)**" sein).
+Die "**HTTP-Methode**" kann eine der erlaubten HTTP-Methoden sein (wie GET, HEAD, etc.) und "**Erwartete Codes**" sollte ein HTTP-Code (oder eine Liste von ihnen) sein, der bei einer erfolgreichen Überprüfung zurückkommt. 
+Unter "**URL Path**" kann ein benutzerdefinierter Pfad für Ihre Gesundheitsprüfungen angegeben werden. Denken Sie daran, dass dieser vom Monitor alle "**Verzögerung (Sek)**" abgefragt wird.
+Wenn alle erforderlichen Informationen in die Formulare eingegeben wurden, kann der Loadbalancer erstellt werden. Wenn Sie möchten, dass der Loadbalancer vom öffentlichen Internet aus erreichbar ist, müssen Sie ihm eine Floating IP-Adresse zuweisen.
 
 ## Floating IPs
 
-The menu "**Floating IPs**" allows you to list and manage public IP addresses in your project. Floating IP addresses have to be allocated before they can be associated to a service. They can be disassociated from a service, too - in order to let it no longer be reachable from the internet. 
+Über das Menü "**Floating IPs**" können Sie öffentliche IP-Adressen in Ihrem Projekt auflisten und verwalten. Freie IP-Adressen müssen zugewiesen werden, bevor sie mit einem Dienst verknüpft werden können. Sie können auch von einem Dienst getrennt werden, damit dieser nicht mehr aus dem Internet erreichbar ist. 
 
-![screenshot of the allocate floating IP menu](./image2020-10-16_16-58-16.png)
+![Screenshot des Menüs "Floating IP zuweisen"](./image2020-10-16_16-58-16.png)
 
-You can associate floating IP addresses to instances and loadbalancers. Be aware of the services you want to be reachable from the internet and configure your security groups accordingly. Floating IP addresses are accounted and billed as long as they are reserved - whether they are associated to a service or not.
+Sie können Floating-IP-Adressen mit Instanzen und Loadbalancern verknüpfen. Achten Sie auf die Dienste, die aus dem Internet erreichbar sein sollen und konfigurieren Sie Ihre Sicherheitsgruppen entsprechend. Floating-IP-Adressen werden abgerechnet und in Rechnung gestellt, solange sie reserviert sind - unabhängig davon, ob sie einem Dienst zugeordnet sind oder nicht.
