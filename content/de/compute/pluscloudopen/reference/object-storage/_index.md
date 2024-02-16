@@ -1,45 +1,45 @@
 ---
-title: "Object Storage"
+title: "Objektstorage"
 type: "docs"
 weight: 60
 date: 2023-02-24
 description: >
-  Manage containers and objects
+  Verwalten von Containern und Objekten
 ---
 
-## Overview
+## Überblick
 
-Pluscloud open provides [object storage](https://en.wikipedia.org/wiki/Object_storage) compatible to Openstacks [Swift](https://wiki.openstack.org/wiki/Swift) and Amazons [S3](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) protocols.
-It is basically provided for "cloud native" use cases:
+Pluscloud open bietet [object storage](https://en.wikipedia.org/wiki/Object_storage) kompatibel zu Openstacks [Swift](https://wiki.openstack.org/wiki/Swift) und Amazons [S3](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) Protokollen.
+Er ist grundsätzlich für "cloud native" Anwendungsfälle vorgesehen:
 
-* as a backend for infrastructure as code scenarios (like backend storage for terraform state files), which can be used by a group of developers.
-* as a file/content repository for scale-out scenarios, where cloud instances, spawned from images, would load current content from object storage (instead of mounting an NFS volume, what would be considered as "bad design" in cloud contexts).
+* als Backend für Infrastruktur-als-Code-Szenarien (wie Backend-Speicher für Terraform-Statusdateien), die von einer Gruppe von Entwicklern genutzt werden können.
+* als Datei-/Inhalts-Repository für Scale-Out-Szenarien, bei denen Cloud-Instanzen, die aus Images erzeugt werden, aktuelle Inhalte aus dem Objektspeicher laden (anstatt ein NFS-Volume zu mounten, was in Cloud-Kontexten als "schlechtes Design" angesehen würde).
 
-## Managing Object Storage
+## Objektspeicher verwalten
 
-Object Storage is either managed via the web gui or with a CLI client. You find your object storage under "**Object Store**" and then "**Containers**" in your Horizon menu. "Containers" is in Swift what "buckets" is in S3.
+Der Objektspeicher wird entweder über die Web-GUI oder mit einem CLI-Client verwaltet. Sie finden Ihren Objektspeicher unter "**Objektspeicher**" und dann "**Container**" in Ihrem Horizon-Menü. "Containers" ist in Swift das, was "Buckets" in S3 ist.
 
-<img src="2023-04-05_10-33.png" alt="screenshot of the object store menu" width="70%" height="70%" title="Object Store">
+<img src="2023-04-05_10-33.png" alt="Bildschirmfoto des Objektspeicher-Menüs" width="70%" height="70%" title="Objektspeicher">
 
-You can even up- and download content into your containers/buckets. Just click on the little "upload" button and choose a file from your computer.
+Sie können sogar Inhalte in Ihre Container/Buckets hoch- und herunterladen. Klicken Sie einfach auf den kleinen "Upload"-Button und wählen Sie eine Datei von Ihrem Computer.
 
-![screenshot of the upload menu](./2023-04-05_15-52.png)
+![Bildschirmfoto des Upload-Menüs](./2023-04-05_15-52.png)
 
-then click on "**Upload File**". Objects can be downloaded with the "**Download**" button on the right. But there are other options in that menu.
+und klicken Sie dann auf "**Datei hochladen**". Objekte können mit der Schaltfläche "**Download**" auf der rechten Seite heruntergeladen werden. Es gibt aber auch noch andere Optionen in diesem Menü.
 
-<img src="2023-04-05_16-00.png" alt="screenshot of the obs manage menu" width="70%" height="70%" title="manage options">
+<img src="2023-04-05_16-00.png" alt="Screenshot des Menüs "obs verwalten" width="70%" height="70%" title="Optionen verwalten">
 
-"**View Details**" gives you some information about that object (like size, content type, etc.). With "**Edit**" you can change the content of that object. But there is no in place editing for object storage - the new content is uploaded with the old object name.
+"**Details anzeigen**" gibt Ihnen einige Informationen über das Objekt (wie Größe, Inhaltstyp usw.). Mit "**Bearbeiten**" können Sie den Inhalt des Objekts ändern. Es gibt jedoch keine Möglichkeit, den Inhalt des Objekts vor Ort zu bearbeiten - der neue Inhalt wird mit dem alten Objektnamen hochgeladen.
 
-Furthermore you can copy an object into another container/bucket by choosing "**Copy**". "**Delete**" obviously deletes the object.
+Außerdem können Sie ein Objekt in einen anderen Container/Bucket kopieren, indem Sie "**Kopieren**" wählen. Mit "**Löschen**" wird das Objekt natürlich gelöscht.
 
-You can create a folder in your container/bucket (instead of uploading an object) by clicking on "+Folder". Objects can be uploaded, copied, edited and deleted in these subfolders exactly as in other containers/buckets. But beware: Those subfolders are not like subfolders in a filesystem. The folder structure is only simulated by adding "/" to the folder name.
+Sie können einen Ordner in Ihrem Container/Bucket erstellen (anstatt ein Objekt hochzuladen), indem Sie auf "+Ordner" klicken. In diesen Unterordnern können Objekte hochgeladen, kopiert, bearbeitet und gelöscht werden, genau wie in anderen Containern/Buckets. Aber Achtung! Diese Unterordner funktionieren nicht wie Unterordner in einem Dateisystem. Die Ordnerstruktur wird nur durch das Anhängen von "/" an den Ordnernamen simuliert.
 
-### Using CLI clients
+### CLI-Clients verwenden
 
-There are serveral options to manage your object storage from the command line. As mentioned above, our object storage is compatible to Openstacks Swift and Amazons S3 protocol. Thus you should be able to use command line tools, which support the one or the other.
+Es gibt mehrere Möglichkeiten, Ihren Objektspeicher über die Kommandozeile zu verwalten. Wie bereits erwähnt, ist unser Objektspeicher kompatibel zu Openstacks Swift und Amazons S3-Protokoll. Sie sollten also in der Lage sein, Kommandozeilen-Tools zu verwenden, die das eine oder das andere unterstützen.
 
-Obviously the OpenStack client itself supports managing containers to a certain extend. If you have your OpenStack client configured correctly, you can use the ``openstack container`` commands to manage your object store containers/buckets:
+Natürlich unterstützt der OpenStack-Client selbst die Verwaltung von Containern bis zu einem gewissen Grad. Wenn Sie Ihren OpenStack-Client richtig konfiguriert haben, können Sie die ``openstack container``-Befehle verwenden, um Ihre Objektspeicher-Container/Buckets zu verwalten:
 
     /configuration # openstack container list
     +--------+
@@ -52,7 +52,7 @@ Obviously the OpenStack client itself supports managing containers to a certain 
     +----------------+---------------------------------------+
     | Field          | Value                                 |
     +----------------+---------------------------------------+
-    | account        | AUTH_d474d55f24a3a97e92cc39b7dd469c14 |
+    | Konto          | AUTH_d474d55f24a3a97e92cc39b7dd469c14 |
     | bytes_used     | 0                                     |
     | container      | first                                 |
     | object_count   | 0                                     |
@@ -60,78 +60,78 @@ Obviously the OpenStack client itself supports managing containers to a certain 
     | storage_policy | default-placement                     |
     +----------------+---------------------------------------+
 
-As the ``openstack container`` command seems not to allow uploads (yet?), you have to use the swift client to upload objects to your object storage:
+Da der Befehl ``openstack container`` anscheinend (noch?) keine Uploads erlaubt, müssen Sie den swift-Client verwenden, um Objekte in Ihren Objektspeicher hochzuladen:
 
     /configuration # swift upload --help
-    Usage: swift upload [--changed] [--skip-identical] [--segment-size <size>]
+    Verwendung: swift upload [--changed] [--skip-identical] [--segment-size <size>]
                         [--segment-container <container>] [--leave-segments]
                         [--object-threads <thread>] [--segment-threads <threads>]
-                        [--meta <name:value>] [--header <header>] [--use-slo]
+                        [--meta <Name:Wert>] [--header <header>] [--use-slo]
                         [--ignore-checksum] [--object-name <object-name>]
-                        <container> <file_or_directory> [<file_or_directory>] [...]
+                        <Container> <Datei_oder_Verzeichnis> [<Datei_oder_Verzeichnis>] [...]
 
-    Uploads specified files and directories to the given container.
+    Lädt die angegebenen Dateien und Verzeichnisse in den angegebenen Container hoch.
 
-    Positional arguments:
-      <container>           Name of container to upload to.
-      <file_or_directory>   Name of file or directory to upload. Specify multiple
-                            times for multiple uploads. If "-" is specified, reads
-                            content from standard input (--object-name is required
-                            in this case).
+    Positionale Argumente:
+      <container> Name des Containers, in den hochgeladen werden soll.
+      <Datei_oder_Verzeichnis> Name der hochzuladenden Datei oder des Verzeichnisses. Geben Sie mehrere
+                            für mehrfache Uploads. Wenn "-" angegeben wird, liest
+                            Inhalt von der Standardeingabe (--object-name ist in diesem Fall erforderlich
+                            in diesem Fall erforderlich).
 
-    Optional arguments:
-      -c, --changed         Only upload files that have changed since the last
-                            upload.
-      --skip-identical      Skip uploading files that are identical on both sides.
-      -S, --segment-size <size>
-                            Upload files in segments no larger than <size> (in
-                            Bytes) and then create a "manifest" file that will
-                            download all the segments as if it were the original
-                            file.
-      --segment-container <container>
-                            Upload the segments into the specified container. If
-                            not specified, the segments will be uploaded to a
-                            <container>_segments container to not pollute the
-                            main <container> listings.
-      --leave-segments      Indicates that you want the older segments of manifest
-                            objects left alone (in the case of overwrites).
+    Optionale Argumente:
+      -c, --changed Nur Dateien hochladen, die seit dem letzten Upload geändert wurden
+                            Upload geändert haben.
+      --skip-identical Überspringt das Hochladen von Dateien, die auf beiden Seiten identisch sind.
+      -S, --segment-size <Größe>
+                            Hochladen von Dateien in Segmenten, die nicht größer als <size> (in
+                            Bytes) und erstellt dann eine "Manifest"-Datei, die
+                            alle Segmente herunterlädt, als wäre es die Originaldatei
+                            Datei.
+      --Segment-Behälter <Behälter>
+                            Hochladen der Segmente in den angegebenen Container. Wenn
+                            nicht angegeben, werden die Segmente in einen
+                            <container>_segments Container hochgeladen, um nicht die
+                            Haupt-<container>-Listen nicht zu verschmutzen.
+      --leave-segments Gibt an, dass die älteren Segmente von Manifest
+                            Objekte in Ruhe gelassen werden sollen (im Falle von Überschreibungen).
       --object-threads <threads>
-                            Number of threads to use for uploading full objects.
-                            Default is 10.
+                            Anzahl der Threads, die für das Hochladen vollständiger Objekte verwendet werden sollen.
+                            Standard ist 10.
       --segment-threads <threads>
-                            Number of threads to use for uploading object segments.
-                            Default is 10.
-      -m, --meta <name:value>
-                            Sets a meta data item. This option may be repeated.
-                            Example: -m Color:Blue -m Size:Large
-      -H, --header <header:value>
-                            Adds a customized request header. This option may be
-                            repeated. Example: -H "content-type:text/plain"
-                            -H "Content-Length: 4000".
-      --use-slo             When used in conjunction with --segment-size it will
-                            create a Static Large Object instead of the default
+                            Anzahl der Threads, die für das Hochladen von Objektsegmenten verwendet werden sollen.
+                            Die Vorgabe ist 10.
+      -m, --meta <Name:Wert>
+                            Legt ein Metadatenelement fest. Diese Option kann wiederholt werden.
+                            Beispiel: -m Farbe:Blau -m Größe:Groß
+      -H, --header <Kopfzeile:Wert>
+                            Fügt einen benutzerdefinierten Anfrage-Header hinzu. Diese Option kann
+                            wiederholt werden. Beispiel: -H "content-type:text/plain"
+                            -H "Inhalt-Länge: 4000".
+      --use-slo Wird in Verbindung mit --segment-size verwendet, wird
+                            wird ein Static Large Object anstelle des standardmäßigen
                             Dynamic Large Object.
-      --object-name <object-name>
-                            Upload file and name object to <object-name> or upload
-                            dir and use <object-name> as object prefix instead of
-                            folder name.
-      --ignore-checksum     Turn off checksum validation for uploads.
+      --object-name <Objektname>
+                            Hochladen der Datei und Benennen des Objekts nach <Objektname> oder Hochladen
+                            Verzeichnis und verwenden Sie <Objektname> als Objektpräfix anstelle des
+                            Ordnernamen.
+      --ignore-checksum Schaltet die Prüfsummenüberprüfung für Uploads aus.
 
-There are several options for managing your object storage via the S3 protocol, as well. One is [s3cmd](https://s3tools.org/s3cmd), which is available for various platforms. The other one is [awscli](https://pypi.org/project/awscli/) - a "universal command line interface for Amazon Web Services", which we have already covered in our Tutorial "[OpenStack Object Storage as a Backend for Terraform Statefiles](https://docs.pco.get-cloud.io/docs/tutorials/tf-backend-s3/)".
+Es gibt auch mehrere Optionen für die Verwaltung Ihres Objektspeichers über das S3-Protokoll. Eine davon ist [s3cmd](https://s3tools.org/s3cmd), die für verschiedene Plattformen verfügbar ist. Die andere ist [awscli](https://pypi.org/project/awscli/) - eine "universelle Befehlszeilenschnittstelle für Amazon Web Services", die wir bereits in unserem Tutorial "[OpenStack Object Storage as a Backend for Terraform Statefiles](https://docs.pco.get-cloud.io/docs/tutorials/tf-backend-s3/)" behandelt haben.
 
-For s3cmd you need a configuration file ``.s3cfg`` which you can create in an assisted manner by executing ``s3cmd --configure``. As already mentioned, you can create your credentials for object storage access with ``openstack ec2 credentials create``, list them with ``openstack ec2 credentials list`` and see them with ``openstack ec2 credentials show <accesskey>``. You need to have them ready in order to configure s3cmd.
+Für s3cmd benötigen Sie eine Konfigurationsdatei ``.s3cfg``, die Sie mit Hilfe des Befehls ``s3cmd --configure`` erstellen können. Wie bereits erwähnt, können Sie Ihre Zugangsdaten für den Objektspeicherzugriff mit ``openstack ec2 credentials create`` erstellen, mit ``openstack ec2 credentials list`` auflisten und mit ``openstack ec2 credentials show <accesskey>`` einsehen. Sie müssen sie bereit haben, um s3cmd zu konfigurieren.
 
-After the configuration you should have an ``.s3cfg`` file similar to this:
+Nach der Konfiguration sollten Sie eine ``.s3cfg`` Datei ähnlich dieser haben:
 
     [default]
-    access_key = <youraccesskey>
-    secret_key = <yoursecretkey>
-    enable_multipart = True
+    access_key = <Ihr AccessKey>
+    secret_key = <Ihr SecretKey>
+    enable_multipart = Wahr
     multipart_chunk_size_mb = 50
-    use_https = True
+    use_https = Wahr
     host_base = https://prod1.api.pco.get-cloud.io:8080
     host_bucket = https://prod1.api.pco.get-cloud.io:8080
-    signurl_use_https = True
+    signurl_use_https = Wahr
     socket_timeout = 600
 
-If all is correct, executing ``s3cmd ls s3://`` should list your object store contents.
+Wenn alles korrekt ist, sollte die Ausführung von ``s3cmd ls s3://`` den Inhalt Ihres Objektspeichers auflisten.
