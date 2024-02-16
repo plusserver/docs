@@ -1,15 +1,15 @@
 ---
 #https://gohugo.io/content-management/page-bundles/
-title: "From zero to first login into a VM with Horizon"
+title: "Von Null bis zum ersten Login in eine VM mit Horizon"
 type: "docs"
 date: 2023-03-20
 description: >
-  Click your first VM in Horizon and log in
+  Bauen Sie sich Ihre erste VM in Horizon und melden Sie sich an
 ---
 
-## You get your credentials via E-Mail
+## Sie erhalten Ihre Anmeldedaten per E-Mail
 
-After ordering a cloud in one of our regions, you'll receive an e-mail similar to the following:
+Nachdem Sie eine Cloud in einer unserer Regionen bestellt haben, erhalten Sie eine E-Mail ähnlich der folgenden:
 
     Liebe Kundin, lieber Kunde,
     
@@ -22,107 +22,107 @@ After ordering a cloud in one of our regions, you'll receive an e-mail similar t
     Mit freundlichen Grüßen,
     Ihr pluscloudopen Team.
 
-This e-mail includes all information you need to connect to pluscloud open for the first time.
+Diese E-Mail enthält alle Informationen, die Sie benötigen, um sich zum ersten Mal mit pluscloud open zu verbinden.
 
-Clicking on ``https://prod1.api.pco.get-cloud.io/`` will open a new tab in your browser and take you to the login screen of pluscloud open.
+Wenn Sie auf ``https://prod1.api.pco.get-cloud.io/`` klicken, öffnet sich ein neuer Tab in Ihrem Browser und Sie gelangen zum Login-Bildschirm von pluscloud open.
 
-![screenshot of the login screen](2023-04-20_18-20.png)
+![Screenshot des Anmeldebildschirms](2023-04-20_18-20.png)
 
-Now you can make use of the information from the e-mail. You can acquire your "**Password**" by clicking on the "PWX_LINK". This will lead you to a webpage with another link, which you should click on to get the password for the user. We do that to work around anti-virus software, which follows links in your e-mails and would render a password link invalid. 
+Nun können Sie die Informationen aus der E-Mail nutzen. Sie können Ihr "**Passwort**" erhalten, indem Sie auf den "PWX_LINK" klicken. Dies führt Sie zu einer Webseite mit einem weiteren Link, den Sie anklicken sollten, um das Passwort für den Benutzer zu erhalten. Damit umgehen wir Antiviren-Software, die Links in Ihren E-Mails verfolgt und einen Passwort-Link ungültig machen würde. 
 
-Enter the "USERNAME" value from the e-mail in the "**User Name**" field, use the password from the "PWX_LINK" for the "**Password**" field and try the "DOMAIN_NAME" for the "**Domain**" field.
+Geben Sie den "USERNAME"-Wert aus der E-Mail in das Feld "**Benutzername**" ein, verwenden Sie das Passwort aus dem "PWX_LINK" für das Feld "**Passwort**" und versuchen Sie es mit dem "DOMAIN_NAME" für das Feld "**Domain**".
 
-Click on "**Sign In**" and you should be logged in to the web gui of pluscloud open.
+Klicken Sie auf "**Anmelden**" und Sie sollten in der Web-GUI von pluscloud angemeldet sein.
 
-![screenshot of the horizon start page](2023-04-20_18-36.png)
+![Screenshot der Horizon-Startseite](2023-04-20_18-36.png)
 
-## Your first Instance
+## Ihre erste Instanz
 
-In order to start you first instance on pluscloud open you should click on "**Instances**". That should bring you to the "Instances" menu
+Um Ihre erste Instanz auf pluscloud open zu starten, klicken Sie auf "**Instanzen**". Das sollte Sie zum Menü "Instanzen" bringen
 
-![screenshot of the empty instances menu](2023-04-24_10-36.png)
+![Screenshot des leeren Instanzen-Menüs](2023-04-24_10-36.png)
 
-As you can see, there are currently no instances deployed. To start your first instance, click on "**Launch Instance**" at the upper right corner. 
-That opens a pop-up, which will guide you through all required steps creating and starting a new instance.
+Wie Sie sehen können, sind derzeit noch keine Instanzen eingerichtet. Um Ihre erste Instanz zu starten, klicken Sie auf "**Instanz starten**" in der oberen rechten Ecke. 
+Daraufhin öffnet sich ein Pop-up, das Sie durch alle erforderlichen Schritte zum Erstellen und Starten einer neuen Instanz führt.
 
-![screenshot of the launch instance pop-up](./2023-04-24_13-24.png)
+![Screenshot des Popup-Fensters zum Starten der Instanz](./2023-04-24_13-24.png)
 
-Asterisks (*) mark required information, thus you need to give your fist instance a name. Enter it in the "**Instance Name**" field and click "Next".
+Sternchen (*) markieren erforderliche Informationen, daher müssen Sie Ihrer ersten Instanz einen Namen geben. Geben Sie ihn in das Feld "**Instanzname**" ein und klicken Sie auf "Weiter".
 
-You have to choose the "**Source**" image of your new instance from the list of images.
+Sie müssen das Bild "**Quelle**" Ihrer neuen Instanz aus der Liste der Bilder auswählen.
 
-![screenshot of the source menu](./2023-04-24_16-19.png)
+![Bildschirmfoto des Quellmenüs](./2023-04-24_16-19.png)
 
-Choose the "**Ubuntu 22.04**" image by clicking on the little "up" arrow at the end of the line. As soon as you have clicked, the image is now listed under "Allocated"
+Wählen Sie das Image "**Ubuntu 22.04**" aus, indem Sie auf den kleinen Pfeil nach oben am Ende der Zeile klicken. Sobald Sie geklickt haben, wird das Image nun unter "Allocated" aufgelistet
 
-![screenshot of the source menu with allocated Ubuntu image](./2023-04-24_16-22.png)
+![Screenshot des Quellmenüs mit zugeordnetem Ubuntu-Bild](./2023-04-24_16-22.png)
 
-Scroll down to the end of the list and click "Next" again.
+Scrollen Sie bis zum Ende der Liste und klicken Sie erneut auf "Weiter".
 
-![screenshot of the bottom of the source menu](./2023-04-24_16-24.png)
+![Screenshot vom Ende des Quellmenüs](./2023-04-24_16-24.png)
 
-You are now in the "**Flavor**" menu where you have to choose a flavor to size your new instance. Choose the "**SCS-1V:1:20**" flavor by clicking on the little "up" arrow at the end of the line.
+Sie befinden sich nun im Menü "**Flavor**", wo Sie einen Flavor für die Größe Ihrer neuen Instanz auswählen müssen. Wählen Sie die Variante "**SCS-1V:1:20**", indem Sie auf den kleinen Pfeil nach oben am Ende der Zeile klicken.
 
-![screenshot of the flavor menu](./2023-04-24_16-28.png)
+![Screenshot des Flavor-Menüs](./2023-04-24_16-28.png)
 
-Now the flavor you chose, should be listed under "Allocated"
+Der gewählte Flavor sollte nun unter "Allocated" aufgelistet sein
 
-![screenshot of the chosen flavor](./2023-04-24_16-31.png)
+![Bildschirmfoto der gewählten Geschmacksrichtung](./2023-04-24_16-31.png)
 
-As you can see, the "**Launch instance**" button has now been activated.
+Wie Sie sehen können, ist die Schaltfläche "**Instanz starten**" nun aktiviert worden.
 
-![screenshot of the bottom of the flavor menu](./2023-04-24_16-42.png)
+![Screenshot des unteren Teils des Flavor-Menüs](./2023-04-24_16-42.png)
 
-But before launching the instance please click on "**Key Pair**" first, which brings you to the key pair menu.
+Bevor Sie jedoch die Instanz starten, klicken Sie bitte zuerst auf "**Key Pair**", was Sie zum Schlüsselpaar-Menü bringt.
 
-![screenshot of the key pair menu](./2023-04-24_16-44.png)
+![Bildschirmfoto des Schlüsselpaar-Menüs](./2023-04-24_16-44.png)
 
-In order to login to the new instance via ssh after it has been launched, you need an ssh public/private keypair. Click on "Create Key Pair"
+Um sich nach dem Start der neuen Instanz über ssh anmelden zu können, benötigen Sie ein ssh-Schlüsselpaar (öffentlich/privat). Klicken Sie auf "Schlüsselpaar erstellen".
 
-![screenshot of the key pair generation](./2023-04-24_16-48.png)
+![Bildschirmfoto der Schlüsselpaar-Erzeugung](./2023-04-24_16-48.png)
 
-Name your new key by entering a name in "**Key Pair Name**" and choose "SSH Key" as the "**Key Type**" then click on "Create Keypair"
+Benennen Sie Ihren neuen Schlüssel, indem Sie einen Namen in "**Schlüsselpaar-Name**" eingeben und "SSH-Schlüssel" als "**Schlüsseltyp**" wählen, dann klicken Sie auf "Schlüsselpaar erstellen"
 
-![screenshot of the generated key](./2023-04-24_16-51.png)
+![Bildschirmfoto des erzeugten Schlüssels](./2023-04-24_16-51.png)
 
-A new field appears, which shows the "**Private Key**" of the newly generated key pair. Click on "**Copy Private Key to Clipboard**", then open your favourite text editor, paste the private key from the clipboard into it and save it to your local disk. On a Linux system you probably would open the Vi editor, paste the key into it and save the new file in your home directory. On a Windows system you would probably use Ultraedit and save the new file to you home directory, too.
+Es erscheint ein neues Feld, das den "**Privaten Schlüssel**" des neu erzeugten Schlüsselpaares anzeigt. Klicken Sie auf "**Privaten Schlüssel in die Zwischenablage kopieren**", öffnen Sie Ihren bevorzugten Texteditor, fügen Sie den privaten Schlüssel aus der Zwischenablage in diesen ein und speichern Sie ihn auf Ihrer lokalen Festplatte. Auf einem Linux-System würden Sie wahrscheinlich den Vi-Editor öffnen, den Schlüssel in diesen einfügen und die neue Datei in Ihrem Home-Verzeichnis speichern. Auf einem Windows-System würden Sie wahrscheinlich Ultraedit verwenden und die neue Datei ebenfalls in Ihrem Home-Verzeichnis speichern.
 
-After saving the private key to your disk, click on "Done". The new key should now be listed under "Allocated"
+Nachdem Sie den privaten Schlüssel auf Ihrer Festplatte gespeichert haben, klicken Sie auf "Done". Der neue Schlüssel sollte nun unter "Allocated" aufgelistet sein
 
-![screenshot of the key pair menu with the new key](./2023-04-24_16-52.png)
+![Bildschirmfoto des Schlüsselpaar-Menüs mit dem neuen Schlüssel](./2023-04-24_16-52.png)
 
-Now you should launch the instance by clicking on "**Launch Instance**". The "**Instances**" menu opens and shows the newly created instance.
+Starten Sie nun die Instanz, indem Sie auf "**Instanz starten**" klicken. Das Menü "**Instanzen**" öffnet sich und zeigt die neu erstellte Instanz an.
 
-![screenshot of the instance menu with the launched instance](./2023-04-24_16-53.png)
+![Bildschirmfoto des Instanzmenüs mit der gestarteten Instanz](./2023-04-24_16-53.png)
 
-As you want to log in to your new instance, you have to associate a floating IP address with it. You can do that by clicking on the little "down" arrow under the "**Actions**" menu.
+Da Sie sich bei Ihrer neuen Instanz anmelden möchten, müssen Sie ihr eine öffentliche IP-Adresse zuweisen. Klicken Sie dazu auf den kleinen Pfeil nach unten unter dem Menü "**Aktionen**".
 
-![screenshot of the instance menu with open actions menu](./2023-04-24_16-53_1.png)
+![Screenshot des Instanzmenüs mit geöffnetem Aktionsmenü](./2023-04-24_16-53_1.png)
 
-Choose "**Associate Floating IP**" which will open the respective dialogue
+Wählen Sie "**Associate Floating IP**", wodurch sich der entsprechende Dialog öffnet
 
-![screenshot of the associtate floating ip menu](./2023-04-24_16-54.png)
+![Bildschirmfoto des Menüs "Floating IP zuordnen"](./2023-04-24_16-54.png)
 
-As you have no floating IP addresses allocated so far, you have to click on the little "+" in the "**IP Adress**" field in order allocate one.
+Da Sie bisher noch keine freie IP-Adresse zugewiesen haben, müssen Sie auf das kleine "+" im Feld "**IP-Adresse**" klicken, um eine IP-Adresse zuzuweisen.
 
-![screenshot of the floating ip dialogue](./2023-04-24_16-54_1.png)
+![Screenshot des Floating-IP-Dialogs](./2023-04-24_16-54_1.png)
 
-Leave the "**Pool**" menu untouched and enter a "**Description**" in the respective field. Then click on "**Allocate IP**".
+Lassen Sie das Menü "**Pool**" unangetastet und geben Sie eine "**Beschreibung**" in das entsprechende Feld ein. Klicken Sie dann auf "**IP zuweisen**".
 
-![screenshot of the associate floating ip menu with allocated ip](./2023-04-24_16-55.png)
+![Screenshot des Menüs "Floating IP zuordnen" mit zugewiesener IP](./2023-04-24_16-55.png)
 
-As you have allocated a floating IP address - now you can click on "**Associate**" in order to associate it with your new instance.
+Da Sie eine Floating IP-Adresse alloziert haben, können Sie nun auf "**Zuordnen**" klicken, um sie mit Ihrer neuen Instanz zu verknüpfen.
 
-![screenshot of the instances menu with allocated floating ip address](./2023-04-24_16-55_1.png)
+![Screenshot des Instanzenmenüs mit zugewiesener freier IP-Adresse](./2023-04-24_16-55_1.png)
 
-Now the "**Instances**" menu should show your newly created instance with the just allocated, public IP address. Now you should be able to connect to that new instance by using the private ssh key we created before.
-On a Linux system, you would probably first adjust the permissions of the private key file you saved before
+Im Menü "**Instanzen**" sollte nun Ihre neu erstellte Instanz mit der soeben zugewiesenen, öffentlichen IP-Adresse angezeigt werden. Nun sollten Sie in der Lage sein, sich mit dieser neuen Instanz zu verbinden, indem Sie den privaten ssh-Schlüssel verwenden, den wir zuvor erstellt haben.
+Auf einem Linux-System würden Sie wahrscheinlich zuerst die Berechtigungen der privaten Schlüsseldatei anpassen, die Sie zuvor gespeichert haben
 
     $ chmod 0600 /var/tmp/id.rsa.priv
 
-Otherwise you would get an error message about `bad permissions`, when you try to use the key. Having adjusted the permissions, you should be able to log in
+Andernfalls würden Sie beim Versuch, den Schlüssel zu verwenden, eine Fehlermeldung über `schlechte Berechtigungen` erhalten. Nachdem Sie die Berechtigungen angepasst haben, sollten Sie in der Lage sein, sich einzuloggen
 
-    $ ssh -l ubuntu -i /var/tmp/id.rsa.priv 213.131.230.236
+ $ ssh -l ubuntu -i /var/tmp/id.rsa.priv 213.131.230.236
     Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-67-generic x86_64)
     
      * Documentation:  https://help.ubuntu.com
@@ -164,6 +164,6 @@ Otherwise you would get an error message about `bad permissions`, when you try t
     To run a command as administrator (user "root"), use "sudo <command>".
     See "man sudo_root" for details.
     
-    ubuntu@myfirst-ztvmvm:~$
+    ubuntu@myfirst-ztvmvm:~$   
 
-Congratulations. You have just created your first instance on pluscloud open and logged into it via ssh. 
+Herzlichen Glückwunsch! Sie haben gerade Ihre erste Instanz auf pluscloud open erstellt und sich über ssh angemeldet.
