@@ -4,5 +4,5 @@ linkTitle: "Tutorials"
 type: "docs"
 weight: 30
 description: >
-   Guides for using MariaDB-as-a-Service to the fullest.
+   Everything you need for a perfect start with your Private Registry - Harbor.
 ---

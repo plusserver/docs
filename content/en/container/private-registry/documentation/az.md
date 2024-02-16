@@ -1,0 +1,1 @@
+../../../databases/mariadb/documentation/az.md
