@@ -1,19 +1,19 @@
 ---
 #https://gohugo.io/content-management/page-bundles/
-title: "OpenStack Object Storage as a Backend for Terraform Statefiles"
+title: "OpenStack Object Storage als Backend für Terraform Statefiles"
 type: "docs"
 date: 2023-03-14
 description: >
-  Manage your Infrastructure as Code (IaC) with Hashicorp Terraform and use OpenStack Object Storage as a Backend
+  Verwalten Sie Ihre Infrastruktur "as Code" (IaC) mit Hashicorp Terraform und nutzen Sie OpenStack Object Storage als Backend
 ---
 
-## Get your S3 credentials
+## Erzeugen Sie sich Ihre S3-Zugangsdaten
 
-In order to get your s3 credentials you need your OpenStack client set up correctly. If that's the case, you can enter
+Um Ihre S3-Zugangsdaten zu erhalten, müssen Sie Ihren OpenStack-Client korrekt konfigurieren. Wenn das der Fall ist, können Sie folgenden Befehl eingeben
 
 ``$ openstack ec2 credentials create``
 
-The output of that command should be similar to this:
+Die Ausgabe dieses Befehls sollte in etwa so aussehen:
 
     +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
     | Field      | Value                                                                                                                                               |
@@ -26,26 +26,26 @@ The output of that command should be similar to this:
     | user_id    | poashohhe9eo8EeQuez3ochaeWaeBoiR                                                                                                                    |
     +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Obviously your credentials should be different (those above are fake). Relevant for S3-access are only the "access" and "secret" values. 
+Natürlich sollten Ihre Anmeldedaten anders sein (die oben gezeigten sind verfremdet). Für den S3-Zugang sind nur die Werte "access" und "secret" relevant. 
 
-## Create a bucket
+## Erstellen eines Buckets
 
-With your S3 credentials ready, you need to create a place to store your data in. In S3 terms, this place is called a "bucket". You can either create a bucket via the web ui (Horizon) or on the command line.
+Wenn Sie Ihre S3-Zugangsdaten bereit haben, müssen Sie einen Speicherort für Ihre Daten erstellen. In der S3-Sprache wird dieser Ort als "Bucket" bezeichnet. Sie können einen Bucket entweder über die Web-UI (Horizon) oder über die Befehlszeile erstellen.
 
-### Create a bucket via web ui
+### Einen Bucket über die Web-UI erstellen
 
-Logged in to the web ui (Horizon) you can navigate to "Object Store" in the left menu and then click on "Containers" (that's how buckets are called in Horizon) ![Screenshot of Container screen in Horizon](./container2.png). 
-Click on the "+Container" button then enter a name for your new container, choose a storage policy and choose, whether your new bucket should be accessable publicly or only private (most of the time you would choose private). Click on "Create" to create the new bucket 
+Wenn Sie in der Web-UI (Horizon) eingeloggt sind, können Sie im linken Menü zu "Object Store" navigieren und dann auf "Containers" (so werden die Buckets in Horizon genannt) klicken ![Screenshot des Container Menüs in Horizon](./container2.png). 
+Klicken Sie auf die Schaltfläche "+Container" und geben Sie einen Namen für Ihren neuen Container ein, wählen Sie eine Speicherrichtlinie und legen Sie fest, ob Ihr neuer Bucket öffentlich oder nur privat zugänglich sein soll (in den meisten Fällen werden Sie sich für privat entscheiden). Klicken Sie auf "Erstellen", um den neuen Bucket zu erstellen. 
 
-![Screenshot of the Container create dialog in Horizon](./container1.png). 
+![Screenshot des Container Erstellungsdialogs in Horizon](./container1.png). 
 
-It should immediately show up in the Container list 
+Er sollte sofort in der Container-Liste erscheinen 
 
-![Screenshot of the Container details screen in Horizon](./container3.png).
+![Screenshot des Container-Detailbildschirms in Horizon](./container3.png).
 
-### Create a bucket with aws cli
+### Erstellen eines Buckets mit aws cli
 
-To create a bucket in your object storage from the command line you can use the aws cli tool, which should be installed into a python virtual environment:
+Um einen Bucket in Ihrem Objektspeicher von der Kommandozeile aus zu erstellen, können Sie das Tool aws cli verwenden, das in einer virtuellen Python-Umgebung installiert sein sollte:
 
     $ → python3 -m venv awscli
     $ → . ./awscli/bin/activate
@@ -55,22 +55,22 @@ To create a bucket in your object storage from the command line you can use the 
     Collecting botocore==1.29.93
     [...]
     Installing collected packages: urllib3, jmespath, six, python-dateutil, botocore, colorama, docutils, s3transfer, pyasn1, rsa, PyYAML, awscli
-    Successfully installed PyYAML-5.4.1 awscli-1.27.93 botocore-1.29.93 colorama-0.4.4 docutils-0.16 jmespath-1.0.1 pyasn1-0.4.8 python-dateutil-2.8.2 rsa-4.7.2 s3transfer-0.6.0 six-1.16.0 urllib3-1.26.15
+    Successfully installed PyYAML-5.4.1 awscli-1.27.93 botocore-1.29.93 colorama-0.4.4 docutils-0.16 jmespath-1.0.1 pyasn1-0.4.8 python-dateutil-2.8.2 rsa-4.7.2 s3transfer-0.6.0 six-1.16.0 urllib3-1.26.15 
 
-Next aws cli wants to be configured:
+Als nächstes muß aws cli konfiguriert werden:
 
     (awscli) $ → aws configure --profile=prod1
     AWS Access Key ID [None]: 5aen4quuuQu8ci7aoceeyaek8oodohgh
-    AWS Secret Access Key [None]: iek1aechaequa8pheitahNgeizai3eig
+    AWS Secret Access Key [Keine]: iek1aechaequa8pheitahNgeizai3eig
     Default region name [None]: 
     Default output format [None]: 
-    (awscli) $ → 
+    (awscli) → $ 
 
-With the configuration in place, you can finally create your bucket via cli:
+Mit dieser Konfiguration können Sie nun Ihren Bucket über cli erstellen:
 
     (awscli) $ → aws --profile=prod1 --endpoint=https://prod1.api.pco.get-cloud.io:8080 s3api create-bucket --bucket mytfstate
 
-Hashicorp recommends to enable versioning for the bucket, thus keeping versioned copies of your terraform.tfstate file. You can enable versioning for your bucket like this:
+Hashicorp empfiehlt, die Versionierung für den Bucket zu aktivieren, um versionierte Kopien Ihrer terraform.tfstate-Datei zu erstellen. Sie können die Versionierung für Ihren Bucket wie folgt aktivieren:
 
     (awscli) $ → aws --profile=prod1 --endpoint=https://prod1.api.pco.get-cloud.io:8080 s3api put-bucket-versioning --bucket mytfstate --versioning-configuration 
     (awscli) $ → aws --profile=prod1 --endpoint=https://prod1.api.pco.get-cloud.io:8080 s3api get-bucket-versioning --bucket mytfstate 
@@ -79,22 +79,22 @@ Hashicorp recommends to enable versioning for the bucket, thus keeping versioned
     "MFADelete": "Disabled"
     }
 
-## Set Up Terraform to use your new bucket as a backend for its tfstate
+## Terraform so einrichten, dass es den neuen Bucket als Backend für seinen tfstate verwendet
 
-As we now have a bucket in the object store, we can configure terraform to use it as a backend for the terraform state.
-Please include this part of the backend configuration into your terraform code: 
+Da wir nun einen Bucket im Object Store haben, können wir Terraform so konfigurieren, dass es diesen als Backend für den Terraform-Status verwendet.
+Bitte fügen Sie diesen Teil der Backend-Konfiguration in Ihren terraform-Code ein: 
 
     terraform {
       required_providers {
         openstack = {
-        source = "terraform-provider-openstack/openstack"
+        Quelle = "terraform-provider-openstack/openstack"
         }
       }
       required_version = ">= 0.13"
       
       backend "s3" {
          bucket = "mytfstate"
-         key    = "terraform.tfstate"
+         key = "terraform.tfstate"
          region = "us-east-1" 
          endpoint = "prod1.api.pco.get-cloud.io:8080"
          skip_credentials_validation = true
@@ -103,12 +103,12 @@ Please include this part of the backend configuration into your terraform code:
       }
     
     }
-Now export your access-key and your secret-key as AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables respectively in order to prevent those being saved to your local disk.
+Exportieren Sie nun Ihren Zugangsschlüssel und Ihren geheimen Schlüssel als AWS_ACCESS_KEY_ID bzw. AWS_SECRET_ACCESS_KEY Umgebungsvariablen, um zu verhindern, dass diese auf Ihrer lokalen Festplatte gespeichert werden.
 
     export AWS_ACCESS_KEY_ID='5aen4quuuQu8ci7aoceeyaek8oodohgh'
     export AWS_SECRET_ACCESS_KEY='iek1aechaequa8pheitahNgeizai3eig'
 
-With your credentials exported, you can now initialize terraform like this:
+Mit den exportierten Anmeldeinformationen können Sie nun terraform wie folgt initialisieren:
 
     $ tform → terraform init
     
@@ -136,11 +136,9 @@ With your credentials exported, you can now initialize terraform like this:
     
     Terraform has been successfully initialized!
     
-    You may now begin working with Terraform. Try running "terraform plan" to see
-    any changes that are required for your infrastructure. All Terraform commands
-    should now work.
+    Sie können nun mit Terraform arbeiten. Versuchen Sie "terraform plan" auszuführen, um zu sehen, welche Änderungen für Ihre Infrastruktur erforderlich sind. Alle Terraform-Befehle
+    sollten jetzt funktionieren.
     
-    If you ever set or change modules or backend configuration for Terraform,
-    rerun this command to reinitialize your working directory. If you forget, other
-    commands will detect it and remind you to do so if necessary.
-
+    Wenn Sie jemals Module oder die Backend-Konfiguration für Terraform eingestellt oder geändert haben,
+    führen Sie diesen Befehl erneut aus, um Ihr Arbeitsverzeichnis neu zu initialisieren. Wenn Sie das vergessen, werden andere
+    Befehle dies erkennen und Sie daran erinnern, dies zu tun, falls nötig.
