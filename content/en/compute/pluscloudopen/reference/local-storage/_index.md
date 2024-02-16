@@ -182,3 +182,4 @@ The output should look like this:
 "**volumes_attached**" should be empty unless you're adding additional shared storage volumes.
 {{% /alert %}}
 
+w
