@@ -1,79 +1,79 @@
 ---
-title: "(Encrypted) Volumes, Snapshots and Backups"
+title: "(Verschlüsselte) Volumes, Snapshots und Backups"
 type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Creating (encrypted) volumes, make snapshots and create backups
+  Erstellen von (verschlüsselten) Volumes von Snapshots und Backups
 ---
 
 ## Volumes
 
-Volumes represent (Block)storage in OpenStack. Volumes are used as disks in instances. If not explicitly mentioned otherwise, volumes reside on a [ceph](https://ceph.io/en/) storage system and are attached to the instance via network using the [RADOS](https://docs.ceph.com/en/quincy/rbd/index.html) protocol.
-The "**Volumes**" menu allows you to manage volumes in your project. 
+Volumes repräsentieren (Block)Speicher in OpenStack. Volumes werden als Festplatten in Instanzen verwendet. Wenn nicht explizit anders erwähnt, befinden sich Volumes auf einem [ceph](https://ceph.io/en/)-Speichersystem und sind über das [RADOS](https://docs.ceph.com/en/quincy/rbd/index.html)-Protokoll über das Netzwerk an die Instanz angeschlossen.
+Über das Menü "**Volumes**" können Sie die Volumes in Ihrem Projekt verwalten. 
 
-<img src="image2020-10-22_15-21-57.png" alt="screenshot of the volumes menu" width="50%" height="50%" title="Volumes menu">
+<img src="image2020-10-22_15-21-57.png" alt="Bildschirmfoto des Menüs "Volumes"" width="50%" height="50%" title="Menü "Volumes">
 
-You can create new volumes, backups and snapshots as well as group your volumes (e. g. for snapshotting them at the same time). The list shows the volumes with their unique ID but you can change the name of your volumes, if you like. Furthermore you can see, whether the volume is currently attached to an instance (and where), the size of the volume and whether it is member of a volume group. The "**Actions**" button gives you access to the various management options you have for your volumes.
+Sie können neue Volumes, Backups und Snapshots erstellen sowie Ihre Volumes gruppieren (z. B. für gleichzeitige Snapshots). Die Liste zeigt die Volumes mit ihrer eindeutigen ID an, aber Sie können den Namen Ihrer Volumes ändern, wenn Sie möchten. Außerdem können Sie sehen, ob das Volume derzeit an eine Instanz angehängt ist (und wo), wie groß das Volume ist und ob es Mitglied einer Volume-Gruppe ist. Über die Schaltfläche "**Aktionen**" haben Sie Zugriff auf die verschiedenen Verwaltungsoptionen, die Sie für Ihre Volumes haben.
 
-With "**Edit Volume**" you can change the name of your volume and/or add a description for it. This can be helpful in making the purpose of the volume visible. Furthermore you can set the boot flag for a volume here. Using "**Manage Attachments**" you can attach a volume to an instance or detach it from it. Be aware, that after attaching a volume you most probably have to change some configuration bits on your instance (like put a filesystem on the new volume, edit /etc/fstab and mount it, etc.). Before detaching a volume from your instance, you should umount it.
+Mit "**Volume bearbeiten**" können Sie den Namen Ihres Volumes ändern und/oder eine Beschreibung für das Volume hinzufügen. Dies kann hilfreich sein, um den Zweck des Volumes sichtbar zu machen. Außerdem können Sie hier das Boot-Flag für ein Volume setzen. Mit "**Anhänge verwalten**" können Sie ein Volume an eine Instanz anhängen oder von ihr abkoppeln. Beachten Sie, dass Sie nach dem Anhängen eines Volumes höchstwahrscheinlich einige Konfigurationseinstellungen auf Ihrer Instanz ändern müssen (z.B. ein Dateisystem auf das neue Volume legen, /etc/fstab bearbeiten und es mounten, usw.). Bevor Sie ein Volume von Ihrer Instanz abhängen, sollten Sie es umounten.
 
-"**Create Snapshot**" allows you to snapshot the respective volume. You have to give it a name (and an optional description) first. Please be aware, that snapshotting a volume which is mounted and used can lead to data corruption. The safe way to take snapshots is to unmount the respective volume first. Snapshots are not backups.
+Mit "**Snapshot erstellen**" können Sie einen Snapshot des betreffenden Volumes erstellen. Zuvor müssen Sie ihm einen Namen (und optional eine Beschreibung) geben. Bitte beachten Sie, dass das Erstellen eines Snapshots von einem Datenträger, der bereits gemountet und verwendet wird, zu einer Beschädigung der Daten führen kann. Der sichere Weg, Snapshots zu erstellen, besteht darin, das betreffende Volume zuerst zu deaktivieren. Schnappschüsse sind keine Backups.
 
-Using "**Create Backup**" creates a backup of your volume. If you choose a snapshot of your volume, only the snapshot will be backed up. If your volume backup fits into your object store quota, you can choose an object store bucket and write the backup there.
+Mit "**Backup erstellen**" erstellen Sie ein Backup Ihres Volumes. Wenn Sie einen Snapshot Ihres Datenträgers auswählen, wird nur der Snapshot gesichert. Wenn Ihr Volume-Backup in Ihr Objektspeicher-Kontingent passt, können Sie einen Objektspeicher-Bucket auswählen und das Backup dorthin schreiben.
 
-You can convert a volume into an image which you can use to create an instance with "**Upload to Image**". You have to choose a disk format for the image (mostly "raw" or "qcow2"). If the volume is in use you can "force" the backup by clicking on "**Force**".
+Sie können ein Volume in ein Image konvertieren, das Sie mit "**In Image hochladen**" zur Erstellung einer Instanz verwenden können. Sie müssen ein Festplattenformat für das Image wählen (meist "raw" oder "qcow2"). Wenn der Datenträger in Gebrauch ist, können Sie die Sicherung durch Klicken auf "**Erzwingen**" erzwingen.
 
-With "**Update Metadata**" you can manage the volume metadata. You find pre-defined metadata definitions which you can use or you can define custom metadata with the "**Custom**" field. The max length for a single key is 255 characters.
+Mit "**Metadaten aktualisieren**" können Sie die Metadaten des Datenträgers verwalten. Sie finden vordefinierte Metadaten-Definitionen, die Sie verwenden können, oder Sie können mit dem Feld "**Benutzerdefiniert**" eigene Metadaten definieren. Die maximale Länge für einen einzelnen Schlüssel beträgt 255 Zeichen.
 
-### Accept Transfer
+### Übertragung akzeptieren
 
-When you are transferring volumes from one project to another you can accept a transfer with clicking on "Accept Transfer". Transfers are initiated from the command line with ``openstack volume transfer request``. With that the owner of a volume creates a transfer request and sends the transfer ID and a key to the receiver of the volume. The receiver clicks on "Accept Transfer" and enters the transfer ID and key to receive the volume.
+Wenn Sie Datenträger von einem Projekt in ein anderes übertragen, können Sie die Übertragung mit einem Klick auf "Übertragung übernehmen" akzeptieren. Übertragungen werden von der Kommandozeile aus mit ``openstack volume transfer request`` eingeleitet. Damit erstellt der Besitzer eines Datenträgers einen Transferauftrag und sendet die Transfer-ID und einen Schlüssel an den Empfänger des Datenträgers. Der Empfänger klickt auf "Accept Transfer" und gibt die Transfer-ID und den Schlüssel ein, um das Volume zu erhalten.
 
-### Create Volume
+### Volume erstellen
 
-In order to create a new volume you click on "+Create Volume" and then you are stepped through a few menus to define the new volume
+Um ein neues Volume zu erstellen, klicken Sie auf "+Volume erstellen" und dann werden Sie durch einige Menüs geführt, um das neue Volume zu definieren
 
-![screenshot of the create volume menu](image2020-10-22_15-37-55.png)
+![Screenshot des Menüs "Volume erstellen"](image2020-10-22_15-37-55.png)
 
-Apart from a name and an optional description you can choose a "**Volume Source**" e. g. an image, a snapshot or other volumes. Depending on your choice the input fields change (but those are selfexplaining). The chosen source determines the size of the new volume. You can assign the volume to a volume "**Group**", that you have defined beforehand.
+Neben einem Namen und einer optionalen Beschreibung können Sie eine "**Volumenquelle**" wählen, z. B. ein Image, einen Snapshot oder andere Volumes. Je nach Auswahl ändern sich die Eingabefelder (die aber selbsterklärend sind). Die gewählte Quelle bestimmt die Größe des neuen Volumes. Sie können das Volume einer zuvor definierten Volume-"**Gruppe**" zuordnen.
 
 ## Backups
 
-The "**Backups**" menu lists your current backups and lets you either delete them or use them for restore (e. g. by creating a new volume from the backup).
+Das Menü "**Backups**" listet Ihre aktuellen Backups auf und ermöglicht es Ihnen, diese entweder zu löschen oder für die Wiederherstellung zu verwenden (z. B. indem Sie ein neues Volume aus dem Backup erstellen).
 
-## Snapshots
+## Schnappschüsse
 
-Here you see a list of your current snapshots and you can manage them. This includes launching an instance from a snapshot with "**Launch as Instance**", changing a snapshots name or description, creating a backup from your snapshot with "**Create Backup**", delete the snapshot or change the metadata for your snapshot. 
-You can choose from a set of pre-defined metadata or you can add "**Custom**" metadata keys. Max key length is 255 characters.
+Hier sehen Sie eine Liste Ihrer aktuellen Snapshots und können diese verwalten. Dazu gehört das Starten einer Instanz aus einem Snapshot mit "**Als Instanz starten**", das Ändern des Namens oder der Beschreibung eines Snapshots, das Erstellen eines Backups aus Ihrem Snapshot mit "**Backup erstellen**", das Löschen des Snapshots oder das Ändern der Metadaten für Ihren Snapshot. 
+Sie können aus einer Reihe von vordefinierten Metadaten wählen oder "**Benutzerdefinierte**" Metadatenschlüssel hinzufügen. Die maximale Schlüssellänge beträgt 255 Zeichen.
 
-## Groups
+## Gruppen
 
-In volume groups you can form a group of volumes which you want to treat as one. It might be sensible to snapshot volumes, that hold various parts of an application, at the same time in order to assure data consistency. You can create new groups with "**Create Group**" or edit existing ones.
+In Datenträgergruppen können Sie eine Gruppe von Datenträgern bilden, die Sie als einen einzigen behandeln möchten. Es kann sinnvoll sein, Datenträger, die verschiedene Teile einer Anwendung enthalten, gleichzeitig in einem Snapshot zu erfassen, um die Datenkonsistenz zu gewährleisten. Sie können mit "**Gruppe erstellen**" neue Gruppen erstellen oder bestehende bearbeiten.
 
-## Group Snapshots
+## Gruppen-Snapshots
 
-Here you can manage your group snapshots.
+Hier können Sie Ihre Gruppen-Snapshots verwalten.
 
-## Crypted Volumes
+## Verschlüsselte Volumes
 
-Pluscloud open allows to create crypted volumes, which are based on "LUKS" ([Linux Unified Key Setup](https://gitlab.com/cryptsetup/cryptsetup)), which uses the Linux kernel module dm-crypt and should be ideal for crypting volumes for Linux instances. Keys are generated during creation of the volume and saved into the keystore on pluscloud open. Beware, that deleting crypted volumes not only deletes the volume but also the associated key. **A recovery of the data is not possible** after deletion. 
+Pluscloud open erlaubt es, verschlüsselte Volumes zu erstellen, die auf "LUKS" ([Linux Unified Key Setup](https://gitlab.com/cryptsetup/cryptsetup)) basieren, welches das Linux-Kernel-Modul dm-crypt verwendet und ideal für die Verschlüsselung von Volumes für Linux-Instanzen sein sollte. Die Schlüssel werden bei der Erstellung des Volumes generiert und im Keystore auf pluscloud open gespeichert. Beachten Sie, dass beim Löschen von verschlüsselten Volumes nicht nur das Volume, sondern auch der zugehörige Schlüssel gelöscht wird. **Eine Wiederherstellung der Daten ist nach der Löschung nicht möglich**. 
 
-Creating a crypted volume is pretty easy. You just choose "LUKS" as "**Type**" 
+Das Erstellen eines verschlüsselten Volumes ist recht einfach. Sie wählen einfach "LUKS" als "**Typ**" aus. 
 
-![screenshot of the create volume menu](2023-03-28_16-34.png)
+![Screenshot des Menüs "Volume erstellen"](2023-03-28_16-34.png)
 
-Depending on the size of the volume, it can take a little time to create it. You can use the volume as any other non-encrypted volume. The encryption is handled in the background. The volume listing should show your volume as encrypted:
+Je nach Größe des Datenträgers kann die Erstellung ein wenig Zeit in Anspruch nehmen. Sie können das Volume wie jedes andere nicht verschlüsselte Volume verwenden. Die Verschlüsselung wird im Hintergrund durchgeführt. In der Volume-Liste sollte Ihr Volume als verschlüsselt angezeigt werden:
 
-![screenshot of an encrypted volume](./2023-03-28_16-38.png)
+![Bildschirmfoto eines verschlüsselten Volumes](./2023-03-28_16-38.png)
 
-The web gui does not allow the creation of encrypted root volumes, which you need if you want all the volumes of your instance to be crypted.
+Die Web-GUI erlaubt nicht die Erstellung von verschlüsselten Root-Volumes, die Sie benötigen, wenn Sie alle Volumes Ihrer Instanz verschlüsseln wollen.
 
-### Crypted boot images
+### Verschlüsselte Boot-Images
 
-To crypt the root volume of an instance, you have to create a crypted volume first in order to use that as a root volume for a new instance. You create that volume from an image of the operating system you want for your new instance:
+Um das Root-Volume einer Instanz zu verschlüsseln, müssen Sie zunächst ein verschlüsseltes Volume erstellen, um dieses als Root-Volume für eine neue Instanz zu verwenden. Sie erstellen dieses Volume aus einem Image des Betriebssystems, das Sie für Ihre neue Instanz wünschen:
     
-    openstack volume create --type LUKS --image "imagename" --size <size in gb> <volume name>
+    openstack volume create --type LUKS --image "imagename" --size <Größe in gb> <volume name>
      
     openstack volume create --type LUKS --image "Ubuntu 20.04" --size 20 ubuntuencrypt
     +---------------------+--------------------------------------+
@@ -87,8 +87,8 @@ To crypt the root volume of an instance, you have to create a crypted volume fir
     | description         | None                                 |
     | encrypted           | True                                 |
     | id                  | cd4d8c9a-632a-4045-8b09-da57fcbc5848 |
-    | multiattach         | False                                |
-    | name                | ubuntuencrypt                        |
+    | multiattach         | False                                | 
+    | Name                | ubuntuencrypt                        |
     | properties          |                                      |
     | replication_status  | None                                 |
     | size                | 20                                   |
@@ -100,11 +100,11 @@ To crypt the root volume of an instance, you have to create a crypted volume fir
     | user_id             | 824e462845c14ccd84cb091944dfe74b     |
     +---------------------+--------------------------------------+
 
-The parameter "**--image**" allows you to create a volume directly from an image (either from the repository or uploaded by yourself).
+Mit dem Parameter "**--image**" können Sie ein Volume direkt aus einem Image erstellen (entweder aus dem Repository oder von Ihnen selbst hochgeladen).
 
-Now you can create an instance using the volume you just created. You have to add a flavor (name or ID) and you should not forget to add a ssh key name, which allows you to login to the instance afterwards. Aditionally you have to add an existing network, where the instance will be spawned in:
+Nun können Sie eine Instanz mit dem soeben erstellten Volume erstellen. Sie müssen einen Flavor (Name oder ID) hinzufügen und Sie sollten nicht vergessen, einen ssh-Schlüsselnamen hinzuzufügen, mit dem Sie sich anschließend bei der Instanz anmelden können. Zusätzlich müssen Sie ein bestehendes Netzwerk hinzufügen, in dem die Instanz erzeugt werden soll:
 
-    openstack server create --flavor <Flavor name or ID> --network <network name or ID> --key-name <keyname> --volume <volumename or ID> <instancename>
+    openstack server create --flavor <Flavor name oder ID> --network <network name oder ID> --key-name <keyname> --volume <volumename oder ID> <instancename>
  
     openstack server create --flavor 1C-1GB-20GB --network Test --key-name mhamm --volume cd4d8c9a-632a-4045-8b09-da57fcbc5848 bootencubuntu
     +-----------------------------+----------------------------------------------------+
@@ -139,8 +139,8 @@ Now you can create an instance using the volume you just created. You have to ad
     | volumes_attached            |                                                    |
     +-----------------------------+----------------------------------------------------+
 
-The instance is now using encrypted storage. Please keep in mind to delete the volume after deleting the instance as it is not deleted automatically.
+Die Instanz verwendet jetzt verschlüsselten Speicher. Bitte denken Sie daran, das Volume zu löschen, nachdem Sie die Instanz gelöscht haben, da es nicht automatisch gelöscht wird.
 
-### List secrets
+### Geheimnisse auflisten
 
-As mentioned earlier there is a key saved to the OpenStack keystore (Barbican) for each encrypted volume. You can list all keys saved for your project with ``openstack secret list``.
+Wie bereits erwähnt, ist für jedes verschlüsselte Volume ein Schlüssel im OpenStack Keystore (Barbican) gespeichert. Sie können alle für Ihr Projekt gespeicherten Schlüssel mit ``openstack secret list`` auflisten.
