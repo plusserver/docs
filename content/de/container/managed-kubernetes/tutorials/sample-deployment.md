@@ -9,7 +9,7 @@ date: 2023-10-21
 # Deployment
 
 ## NGINX Ingress Controller
-To simplify the installation of the Ingress Controller, we will use the package manager "HELM" at this point:
+Um die Installation des Ingress Controllers zu vereinfachen, werden wir an dieser Stelle den Paketmanager "HELM" verwenden:
 
 ```bash
 helm upgrade --install ingress-nginx ingress-nginx \
@@ -17,14 +17,14 @@ helm upgrade --install ingress-nginx ingress-nginx \
   --namespace ingress-nginx --create-namespace
 ```
 
-After a short waiting period, you can view the Public IP of the Ingress Controller under the created service:
+Nach einer kurzen Wartezeit können Sie die öffentliche IP des Ingress-Controllers unter dem erstellten Dienst anzeigen:
 
 ```bash
 kubectl --namespace ingress-nginx get services ingress-nginx-controller
 ```
 
-## NGINX Deployment
-In this example, we will use a simple NGINX deployment to serve a sample webpage. First, a PersistentVolumeClaim must be created to ensure that the webpage data persists across pod restarts:
+## NGINX-Bereitstellung
+In diesem Beispiel verwenden wir ein einfaches NGINX-Deployment, um eine Beispiel-Webseite bereitzustellen. Zunächst muss ein PersistentVolumeClaim erstellt werden, um sicherzustellen, dass die Daten der Webseite über Pod-Neustarts hinweg bestehen bleiben:
 
 ```yaml
 apiVersion: v1
@@ -39,7 +39,7 @@ spec:
       storage: 1Gi
 ```
 
-Now, you can create the actual NGINX deployment:
+Nun können Sie die eigentliche NGINX-Bereitstellung erstellen:
 
 ```yaml
 apiVersion: apps/v1
@@ -72,7 +72,7 @@ spec:
           claimName: nginx-data
 ```
 
-Subsequently, the NGINX deployment must be made available within the cluster via a service:
+Anschließend muss die NGINX-Bereitstellung innerhalb des Clusters über einen Dienst verfügbar gemacht werden:
 
 ```yaml
 apiVersion: v1
@@ -89,7 +89,7 @@ spec:
 ```
 
 ## Ingress
-To route incoming traffic from the Ingress Controller to the newly created deployment, an Ingress resource must be created:
+Um eingehenden Datenverkehr vom Ingress Controller an die neu erstellte Bereitstellung zu leiten, muss eine Ingress-Ressource erstellt werden:
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -110,15 +110,15 @@ spec:
               number: 80
 ```
 
-## Content
-As a final step, an `index.html` file must be created within the PersistentVolume so that the NGINX deployment doesn't display a "403 - Forbidden" error. For example:
+## Inhalt
+Als letzter Schritt muss eine "index.html"-Datei innerhalb des PersistentVolume erstellt werden, damit die NGINX-Bereitstellung keinen "403 - Forbidden"-Fehler anzeigt. Zum Beispiel:
 
 ```bash
 kubectl exec deployment/nginx-deployment -- /bin/sh -c 'echo "<h1>Powered by PSKE</h1>" > /usr/share/nginx/html/index.html'
 ```
 
-## Result
-Accessing the Public IP of the Ingress Controller should display the following webpage:
+## Ergebnis
+Beim Zugriff auf die öffentliche IP des Ingress Controllers sollte die folgende Webseite angezeigt werden:
 
 ```html
 <h1>Powered by PSKE</h1>

@@ -5,9 +5,9 @@ type: "docs"
 weight: 20
 date: 2024-01-19
 ---
-In this tabular list you will find important information about limits in Kubernetes and Compute Quotas, the latter can be increased via a support ticket.
+In dieser tabellarischen Auflistung finden Sie wichtige Informationen zu Limits in Kubernetes und Compute Quotas, letztere können über ein Support-Ticket erhöht werden.
 
-Resources marked with an * are theoretical limits in Kubernetes. We recommend not exceeding the limits with one deployment and instead implement the deployment across multiple clusters.
+Ressourcen, die mit einem * gekennzeichnet sind, sind theoretische Limits in Kubernetes. Wir empfehlen, die Limits nicht mit einem Deployment zu überschreiten und stattdessen das Deployment über mehrere Cluster zu implementieren.
 
 ### Cluster
 
@@ -29,7 +29,7 @@ Resources marked with an * are theoretical limits in Kubernetes. We recommend no
 | --- | --- |
 | Identities | 64.000 |
 
-All endpoints (Pods, Services, etc.) which are managed by Cilium will be assigned an identity.
+Allen Endpunkten (Pods, Services usw.), die von Cilium verwaltet werden, wird eine Identität zugewiesen.
 
 ### Compute Quotas
 | Resource | Limit |

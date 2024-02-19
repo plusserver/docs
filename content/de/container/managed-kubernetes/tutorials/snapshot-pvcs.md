@@ -6,13 +6,13 @@ weight: 20
 date: 2024-01-18
 ---
 
-### Volume Snapshots
+### Volume-Snapshots
 
-Volume Snapshots are a way to back up the contents of a volume at a specific point in time. They are represented in Kubernetes by the VolumeSnapshot resource type.
+Volume-Snapshots sind eine Möglichkeit, den Inhalt eines Volumes zu einem bestimmten Zeitpunkt zu sichern. Sie werden in Kubernetes durch den VolumeSnapshot-Ressourcentyp dargestellt.
 
-To create a snapshot of a volume, you must create a VolumeSnapshot resource type. In this resource type, you must specify the name of the volume that you want to back up. You can also optionally specify a name for the snapshot.
+Um einen Snapshot eines Volumes zu erstellen, müssen Sie einen VolumeSnapshot-Ressourcentyp erstellen. In diesem Ressourcentyp müssen Sie den Namen des Volumes angeben, das Sie sichern möchten. Optional können Sie auch einen Namen für den Snapshot angeben.
 
-Here is an example of a VolumeSnapshot resource type:
+Hier sehen Sie ein Beispiel für einen VolumeSnapshot-Ressourcentyp:
 
 ```yaml
 apiVersion: snapshot.storage.k8s.io/v1
@@ -24,15 +24,15 @@ spec:
     name: my-volume
 ```
 
-Once you have created a VolumeSnapshot resource type, the snapshot will be created. The snapshot will be stored in a Kubernetes directory called /var/lib/kubelet/pods/<POD_NAME>/volumes/<VOLUME_NAME>/snapshots/<SNAPSHOT_NAME>.
+Sobald Sie einen VolumeSnapshot-Ressourcentyp erstellt haben, wird der Snapshot erstellt. Der Snapshot wird in einem Kubernetes-Verzeichnis namens /var/lib/kubelet/pods/<POD_NAME>/volumes/<VOLUME_NAME>/snapshots/<SNAPSHOT_NAME> gespeichert.
 
-### Volume Snapshot Groups
+### Volume-Snapshot-Gruppen
 
-Volume Snapshot Groups (VSGs) are a way to group multiple Volume Snapshots into a single snapshot. VSGs are represented in Kubernetes by the VolumeSnapshotGroup resource type.
+Volume Snapshot Groups (VSGs) sind eine Möglichkeit, mehrere Volume Snapshots zu einem einzigen Snapshot zusammenzufassen. VSGs werden in Kubernetes durch den Ressourcentyp VolumeSnapshotGroup dargestellt.
 
-To create a VSG, you must create a VolumeSnapshotGroup resource type. In this resource type, you must specify the names of the volumes that you want to group in the VSG. You can also optionally specify a name for the VSG.
+Um eine VSG zu erstellen, müssen Sie einen VolumeSnapshotGroup-Ressourcentyp erstellen. In diesem Ressourcentyp müssen Sie die Namen der Volumes angeben, die Sie in der VSG gruppieren möchten. Optional können Sie auch einen Namen für die VSG angeben.
 
-Here is an example of a VolumeSnapshotGroup resource type:
+Im Folgenden finden Sie ein Beispiel für einen VolumeSnapshotGroup-Ressourcentyp:
 
 ```yaml
 apiVersion: snapshot.storage.k8s.io/v1
@@ -48,37 +48,37 @@ spec:
   - name: my-volume-snapshot-2
 ```
 
-Once you have created a VolumeSnapshotGroup resource type, the VSG will be created. The snapshot will be stored in a Kubernetes directory called /var/lib/kubelet/pods/<POD_NAME>/volumes/<VOLUME_NAME>/snapshots/<VSG_NAME>.
+Sobald Sie einen VolumeSnapshotGroup-Ressourcentyp erstellt haben, wird die VSG erstellt. Der Snapshot wird in einem Kubernetes-Verzeichnis namens /var/lib/kubelet/pods/<POD_NAME>/volumes/<VOLUME_NAME>/snapshots/<VSG_NAME> gespeichert.
 
-### Solutions for Volume Snapshots
+### Lösungen für Volume Snapshots
 
-There are a variety of solutions for Volume Snapshots in Kubernetes. One option is to use the native Kubernetes API. Another option is to use a third-party tool or service.
+Es gibt eine Vielzahl von Lösungen für Volume Snapshots in Kubernetes. Eine Möglichkeit ist die Verwendung der nativen Kubernetes-API. Eine andere Möglichkeit ist die Verwendung eines Tools oder Dienstes eines Drittanbieters.
 
-#### Native Kubernetes API
+#### Native Kubernetes-API
 
-The native Kubernetes API provides a simple way to create Volume Snapshots. However, it is not as flexible as a third-party tool or service.
+Die native Kubernetes-API bietet eine einfache Möglichkeit zur Erstellung von Volume Snapshots. Sie ist jedoch nicht so flexibel wie ein Drittanbieter-Tool oder -Dienst.
 
-#### Third-Party Tools and Services
+#### Tools und Dienste von Drittanbietern
 
-There are a number of third-party tools and services that support Volume Snapshots in Kubernetes. These tools and services often offer additional features and flexibility that the native Kubernetes API does not offer.
+Es gibt eine Reihe von Tools und Diensten von Drittanbietern, die Volume Snapshots in Kubernetes unterstützen. Diese Tools und Dienste bieten oft zusätzliche Funktionen und Flexibilität, die die native Kubernetes-API nicht bietet.
 
-Here are some examples of third-party tools and services that support Volume Snapshots in Kubernetes:
+Hier sind einige Beispiele für Tools und Dienste von Drittanbietern, die Volume Snapshots in Kubernetes unterstützen:
 
 - Portworx
 - Velero
 - NetApp Trident
 - Rook
 
-#### Examples of Using Volume Snapshots
+#### Beispiele für die Verwendung von Volume Snapshots
 
-Volume Snapshots can be used for a variety of purposes, including:
+Volume Snapshots können für eine Vielzahl von Zwecken verwendet werden, darunter:
 
-- Data backup: Volume Snapshots can be used to back up data in case of a failure or disaster.
-- Data migration: Volume Snapshots can be used to migrate data from one storage system to another.
-- Data recovery: Volume Snapshots can be used to recover data in case it is accidentally deleted or corrupted.
+- Datensicherung: Volume Snapshots können verwendet werden, um Daten im Falle eines Ausfalls oder einer Katastrophe zu sichern.
+- Datenmigration: Volume Snapshots können verwendet werden, um Daten von einem Speichersystem auf ein anderes zu migrieren.
+- Datenwiederherstellung: Volume Snapshots können verwendet werden, um Daten wiederherzustellen, falls sie versehentlich gelöscht oder beschädigt wurden.
 
-Here are some examples of using Volume Snapshots:
+Hier sind einige Beispiele für die Verwendung von Volume Snapshots:
 
-- A corporate application uses a persistent volume to store data. The application is regularly backed up with a snapshot. If the application fails, the snapshot is used to restore the application.
-- A cloud service provider offers a service that creates Volume Snapshots for its customers. Customers can use Volume Snapshots to back up and migrate data.
-- A research laboratory needs a way to store large amounts of data. The laboratory uses Volume Snapshots to back up data in the cloud. The data can then be accessed and used by other researchers in the cloud.
+- Eine Unternehmensanwendung verwendet ein persistentes Volume zum Speichern von Daten. Die Anwendung wird regelmäßig mit einem Snapshot gesichert. Wenn die Anwendung ausfällt, wird der Snapshot verwendet, um die Anwendung wiederherzustellen.
+- Ein Cloud-Service-Anbieter bietet einen Dienst an, der für seine Kunden Volume Snapshots erstellt. Die Kunden können Volume Snapshots zur Sicherung und Migration von Daten verwenden.
+- Ein Forschungslabor benötigt eine Möglichkeit, große Datenmengen zu speichern. Das Labor nutzt Volume Snapshots, um Daten in der Cloud zu sichern. Die Daten können dann von anderen Forschern in der Cloud abgerufen und verwendet werden.

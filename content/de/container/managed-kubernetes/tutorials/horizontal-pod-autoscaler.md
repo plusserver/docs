@@ -6,12 +6,13 @@ weight: 20
 date: 2023-02-21
 ---
 
-Here are the steps involved in provisioning a Kubernetes cluster and setting up Horizontal Pod Autoscaling (HPA) with some testing and cleanup steps:
+Im Folgenden werden die Schritte zur Bereitstellung eines Kubernetes-Clusters und zur Einrichtung der horizontalen Pod-Autoskalierung (HPA) mit einigen Test- und Bereinigungsschritten beschrieben:
 
-## 1) Provision a Cluster:
-   First, provision a Kubernetes cluster.
+## 1) Bereitstellen eines Clusters:
 
-## 2) Deploy the Application:
+Zuerst wird ein Kubernetes-Cluster bereitgestellt.
+
+## 2) Stellen Sie die Anwendung bereit:
 
 **deployment.yaml**
 ```yaml
@@ -41,9 +42,9 @@ spec:
             cpu: 200m
 ```
 
-Use `kubectl apply -f deployment.yaml` to create the deployment.
+Verwenden Sie `kubectl apply -f deployment.yaml`, um die Bereitstellung zu erstellen.
 
-## 3) Create a Service:
+## 3) Erstellen Sie einen Dienst:
 
 **service.yaml**
 ```yaml
@@ -60,9 +61,9 @@ spec:
     run: hpa-demo-deployment
 ```
 
-Use `kubectl apply -f service.yaml` to create the service.
+Verwenden Sie "kubectl apply -f service.yaml", um den Dienst zu erstellen.
 
-## 4) Configure HPA:
+## 4) Konfigurieren Sie HPA:
 
 **hpa.yaml**
 ```yaml
@@ -80,17 +81,17 @@ spec:
   targetCPUUtilizationPercentage: 50
 ```
 
-Use `kubectl apply -f hpa.yaml` to create the Horizontal Pod Autoscaler.
+Verwenden Sie `kubectl apply -f hpa.yaml`, um den Horizontal Pod Autoscaler zu erstellen.
 
-## 5) Testing:
-   You can test the HPA by simulating load using various methods. The provided example uses `kubectl run` to simulate load:
+## 5) Testen:
+   Sie können den HPA testen, indem Sie die Last mit verschiedenen Methoden simulieren. Das mitgelieferte Beispiel verwendet `kubectl run`, um die Last zu simulieren:
 
 ```bash
 kubectl run -i --tty load-simulation --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://hpa-demo-deployment; done"
 ```
 
-## 6) Monitoring:
-   Monitor the HPA using `kubectl` and other monitoring tools to observe how it reacts to changes in load.
+## 6) Überwachung:
+   Überwachen Sie die HPA mit `kubectl` und anderen Überwachungswerkzeugen, um zu beobachten, wie sie auf Änderungen der Last reagiert.
 
 ```bash
 # after 30 seconds
@@ -136,20 +137,20 @@ NAME                  REFERENCE                        TARGETS   MINPODS   MAXPO
 hpa-demo-deployment   Deployment/hpa-demo-deployment   47%/50%   1         10         6          30m
 ```
 
-## 7) Remove Load:
-   To remove the load simulator, you can delete the corresponding pod:
+## 7) Last entfernen:
+   Um den Lastsimulator zu entfernen, können Sie den entsprechenden Pod löschen:
 
 ```bash
 kubectl delete pod load-simulation
 ```
 
-## 8) Cleanup:
-   Finally, clean up the resources by deleting the Horizontal Pod Autoscaler, deployment, and service:
+## 8) Aufräumen:
+   Zum Schluss bereinigen Sie die Ressourcen, indem Sie den Horizontal Pod Autoscaler, das Deployment und den Service löschen:
 
 ```bash
-kubectl delete -f hpa.yaml
-kubectl delete -f deployment.yaml
-kubectl delete -f service.yaml
+kubectl löschen -f hpa.yaml
+kubectl löschen -f deployment.yaml
+kubectl löschen -f service.yaml
 ```
 
-These steps provide an example of how to set up and test HPA in a Kubernetes cluster and then clean up the resources when done.
+Diese Schritte sind ein Beispiel dafür, wie man HPA in einem Kubernetes-Cluster einrichtet und testet und anschließend die Ressourcen bereinigt.

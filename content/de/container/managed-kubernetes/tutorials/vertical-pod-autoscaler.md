@@ -6,33 +6,33 @@ weight: 20
 date: 2023-02-21
 ---
 
-The following example demonstrates the deployment of an application based on a publicly available image. This example illustrates how the VPA responds to changes in the application state.
+Das folgende Beispiel demonstriert die Bereitstellung einer Anwendung auf der Grundlage eines öffentlich verfügbaren Abbilds. Dieses Beispiel veranschaulicht, wie der VPA auf Änderungen des Anwendungsstatus reagiert.
 
-## 1) Provisioning a Cluster
-First, you should provision a Kubernetes cluster.
+## 1) Bereitstellung eines Clusters
+Zunächst sollten Sie einen Kubernetes-Cluster bereitstellen.
 
-## 2) Installing the VPA
-Unlike the HPA, the VPA needs to be installed separately. This can be done using the repository https://github.com/kubernetes/autoscaler.
+## 2) Installieren der VPA
+Anders als die HPA muss die VPA separat installiert werden. Dies kann mit Hilfe des Repositorys https://github.com/kubernetes/autoscaler durchgeführt werden.
 
-### Cloning the Repository
+### Klonen des Repositorys
 
 ```bash
 $ git clone https://github.com/kubernetes/autoscaler.git
 ```
 
-### Changing to the Right Directory
+### Zum richtigen Verzeichnis wechseln
 
 ```bash
 $ cd autoscaler/vertical-pod-autoscaler/
 ```
 
-### Installing the VPA
+### Installation des VPA
 
 ```bash
 $ ./hack/vpa-up.sh
 ```
 
-### Verifying the Installation
+### Überprüfen der Installation
 
 ```bash
 $ kubectl get pods -n kube-system
@@ -45,9 +45,9 @@ vpa-updater-7sm51h55c-a9smw                 1/1     Running   0          23s
 ...
 ```
 
-## 3) Deploying the Application
+## 3) Einsetzen der Anwendung
 
-### Rolling out the Deployment
+## Ausrollen der Bereitstellung
 
 ```yaml
 apiVersion: apps/v1
@@ -88,7 +88,7 @@ NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
 vpa-demo-deployment   1/1     1            1           6s
 ```
 
-### Creating a Service
+### Erstellen eines Dienstes
 
 ```yaml
 apiVersion: v1
@@ -113,7 +113,7 @@ vpa-demo-deployment   ClusterIP   10.122.166.51   <none>        80/TCP    5s
 kubernetes            ClusterIP   10.112.0.1      <none>        443/TCP   13d
 ```
 
-### Configuring the VPA
+### Konfiguration des VPA
 
 ```yaml
 apiVersion: autoscaling.k8s.io/v1
@@ -140,14 +140,15 @@ spec:
   updatePolicy:
     updateMode: "Auto"
 ```
+
 ```bash
 $ kubectl apply -f vpa.yaml
 verticalpodautoscaler.autoscaling.k8s.io/my-deployment-vpa created
 ```
 
-## 3) Testing
+## 3) Prüfung
 
-Status before testing:
+Status vor der Prüfung:
 
 ```bash
 $ kubectl -n default get pods
@@ -161,36 +162,36 @@ NAME                  REFERENCE                        TARGETS   MINPODS   MAXPO
 vpa-demo-deployment   Deployment/vpa-demo-deployment   0%/50%    1         10        1          20m
 ```
 
-### Generating Load
+### Last generieren
 
-The following command simulates load:
+Der folgende Befehl simuliert die Last:
 
 ```bash
 kubectl run -i --tty load-simulation --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://vpa-demo-deployment; done"
 ```
 
-### Behavior during Load
+### Verhalten beim Laden
 
-The behavior during the load is specific to the application and may vary.
+Das Verhalten während des Ladevorgangs ist anwendungsspezifisch und kann variieren.
 
-## 4) Removing Load
+## 4) Entfernen der Last
 
-To remove the load simulator, use the following command:
+Um den Lastsimulator zu entfernen, verwenden Sie den folgenden Befehl:
 
 ```bash
 $ kubectl delete pod load-simulation
 pod "load-simulation" deleted
 ```
 
-{{< alert title="Important!" >}}
-IMPORTANT! The default ramp-down time is 5 minutes. This means that reducing the load will not immediately result in a decrease in replicas for approximately 5 minutes (+- 15 seconds) as acknowledged by the VPA.
+{{< alert title="Wichtig!" >}}
+WICHTIG! Die Standard-Ramp-Down-Zeit beträgt 5 Minuten. Das bedeutet, dass eine Verringerung der Last erst nach ca. 5 Minuten (+- 15 Sekunden) zu einer Verringerung der Replikate führt, was vom VPA bestätigt wird.
 {{< /alert >}}
 
-Subsequently, the replicas will be removed as there is no longer any load.
+Danach werden die Replikate entfernt, da keine Last mehr vorhanden ist.
 
-## 5) Cleanup
+## 5) Aufräumen
 
-The following commands remove the service, deployment, and VPA:
+Mit den folgenden Befehlen werden der Dienst, die Bereitstellung und der VPA entfernt:
 
 ```bash
 $ kubectl delete -f vpa.yaml

@@ -6,23 +6,23 @@ weight: 4
 date: 2023-02-21
 ---
 
-With the default configuration of the Ingress Controller and OpenStack load balancer, all external web requests from the Kubernetes cluster come from the internal IP of the load balancer.
+Bei der Standardkonfiguration von Ingress Controller und OpenStack Load Balancer kommen alle externen Webanfragen aus dem Kubernetes-Cluster von der internen IP des Load Balancers.
 
-If the external IP is required within the Kubernetes cluster, the so-called proxy protocol must be activated.
+Wenn die externe IP innerhalb des Kubernetes-Clusters benötigt wird, muss das sogenannte Proxy-Protokoll aktiviert werden.
 
 {{% alert title="Warning" color="warning" %}}
-If the proxy protocol is activated, the Ingress can no longer be accessed from within the cluster!
+Wenn das Proxy-Protokoll aktiviert ist, kann der Ingress nicht mehr aus dem Cluster heraus erreicht werden!
 {{% /alert %}}
 
-### Example NGINX Ingress Controller
-The following lines must be added to the ConfigMap of the Ingress Controller:
+### Beispiel NGINX Ingress Controller
+Die folgenden Zeilen müssen in die ConfigMap des Ingress-Controllers eingefügt werden:
 
 ```yaml
 use-proxy-protocol: "true"
 use-forwarded-headers: "true"
 ```
 
-In addition, an annotation must be added to the associated load balancer service for the NGINX Ingress Controller:
+Darüber hinaus muss dem zugehörigen Load Balancer Service für den NGINX Ingress Controller eine Annotation hinzugefügt werden:
 
 ```yaml
 apiVersion: v1
@@ -32,4 +32,4 @@ metadata:
     loadbalancer.openstack.org/proxy-protocol: "true"
 ```
 
-Now applications within the Kubernetes cluster can view the external IP address of external web requests.
+Jetzt können Anwendungen innerhalb des Kubernetes-Clusters die externe IP-Adresse von externen Webanfragen anzeigen.

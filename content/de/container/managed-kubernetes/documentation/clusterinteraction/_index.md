@@ -1,6 +1,6 @@
 ---
-title: "PSKE - Cluster interaction"
-linkTitle: "Clusterinteraction"
+title: "PSKE - Clusterinteraktion"
+linkTitle: "Clusterinteraktion"
 type: "docs"
 weight: 20
 date: 2023-02-21

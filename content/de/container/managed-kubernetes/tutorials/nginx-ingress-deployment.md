@@ -6,25 +6,25 @@ weight: 20
 date: 2023-10-21
 ---
 
-# General
-This guide is intended to install an nginx Ingress Controller on Kubernetes.
+# Allgemein
+Diese Anleitung ist für die Installation eines nginx Ingress Controllers auf Kubernetes gedacht.
 
-## Provisioning
-### Load kubeconfig
-The first step is to load the kubeconfig for the respective cluster.
+## Bereitstellen
+### kubeconfig laden
+Der erste Schritt besteht darin, die kubeconfig für den jeweiligen Cluster zu laden.
 
 ```bash
-export KUBECONFIG=$path_to_kubeconfig
+export KUBECONFIG=$pfad_zur_kubeconfig
 ```
 
-### Install nginx Ingress Controller
-Now, you need to add the Helm repository or update it if it's already added.
+### nginx Ingress Controller installieren
+Nun müssen Sie das Helm-Repository hinzufügen oder es aktualisieren, falls es bereits hinzugefügt wurde.
 
 ```bash
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx && helm repo update
 ```
 
-Next, you need to create a `values.yaml` file with the following key/value pairs:
+Als nächstes müssen Sie eine Datei "values.yaml" mit den folgenden Schlüssel/Wert-Paaren erstellen:
 
 ```yaml
 rbac:
@@ -46,10 +46,10 @@ controller:
     #loadBalancerIP: <FloatingIP> # Here you can define an already reserved FloatingIP. When "openstack-internal-load-balancer" is true, this will define the private IPv4 address of the OpenStack LoadBalancer.
 ```
 
-### Load Balancer with Private IP Address
-You can use any available IP address from the node (1) network 10.250.0.0/16 of the respective PSKE cluster.
+### Load Balancer mit privater IP-Adresse
+Sie können jede verfügbare IP-Adresse aus dem Knoten (1) Netzwerk 10.250.0.0/16 des jeweiligen PSKE-Clusters verwenden.
 
-Now, install the nginx Ingress Controller using Helm and the key/value pairs from the `values.yaml`:
+Installieren Sie nun den nginx Ingress Controller mit Helm und den Schlüssel/Wert-Paaren aus der `values.yaml`:
 
 ```bash
 helm install ingress-nginx ingress-nginx/ingress-nginx \
@@ -59,7 +59,7 @@ helm install ingress-nginx ingress-nginx/ingress-nginx \
 --namespace ingress-nginx
 ```
 
-Now, you can perform IP whitelisting in an Ingress Resource. To do that, add the following annotation to the Ingress Resource:
+Jetzt können Sie IP-Whitelisting in einer Ingress-Ressource durchführen. Dazu fügen Sie der Ingress-Ressource die folgende Anmerkung hinzu:
 
 ```yaml
 ---
@@ -71,8 +71,8 @@ metadata:
     nginx.ingress.kubernetes.io/whitelist-source-range: "217.235.33.56/32,79.207.189.32/32"
 ```
 
-### Release Reserved FloatingIP
-The best way to release a reserved FloatingIP is to set "loadbalancer.openstack.org/keep-floatingip" to "false" in the Helm chart.
+### Reservierte FloatingIP freigeben
+Der beste Weg, eine reservierte FloatingIP freizugeben, ist, "loadbalancer.openstack.org/keep-floatingip" im Helm-Diagramm auf "false" zu setzen.
 
 ```bash
 helm upgrade ingress-nginx ingress-nginx/ingress-nginx \
@@ -82,7 +82,7 @@ helm upgrade ingress-nginx ingress-nginx/ingress-nginx \
 --set controller.service.annotations.'loadbalancer\.openstack\.org/keep-floatingip'=false
 ```
 
-Afterwards, you can delete the Helm chart:
+Danach können Sie die Helmkarte löschen:
 
 ```bash
 helm uninstall ingress-nginx \

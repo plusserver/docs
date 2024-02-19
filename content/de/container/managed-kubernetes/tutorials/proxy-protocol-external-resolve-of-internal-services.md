@@ -6,13 +6,13 @@ weight: 4
 date: 2024-01-18
 ---
 
-When using a Load Balancer with the Proxy Protocol in Kubernetes, there can be problems with accessing applications within the cluster from each other.
+Bei der Verwendung eines Load Balancers mit dem Proxy-Protokoll in Kubernetes kann es zu Problemen beim gegenseitigen Zugriff auf Anwendungen innerhalb des Clusters kommen.
 
-If you are using a load balancer with the Proxy Protocol in your Kubernetes cluster, you may encounter issues when trying to access another Ingress/Service from a pod within the cluster. The reason for this is that kube-proxy adds an iptables rule for the external IP address of the load balancer, redirecting traffic around the load balancer. This leads to an error when the pod establishing the connection does not speak the Proxy Protocol and, in this case, communicates directly with the Ingress controller.
+Wenn Sie einen Load Balancer mit dem Proxy-Protokoll in Ihrem Kubernetes-Cluster verwenden, können Probleme auftreten, wenn Sie versuchen, von einem Pod innerhalb des Clusters auf einen anderen Ingress/Service zuzugreifen. Der Grund dafür ist, dass kube-proxy eine iptables-Regel für die externe IP-Adresse des Load Balancers hinzufügt und den Verkehr um den Load Balancer herum umleitet. Dies führt zu einem Fehler, wenn der Pod, der die Verbindung herstellt, nicht das Proxy-Protokoll spricht und in diesem Fall direkt mit dem Ingress-Controller kommuniziert.
 
-### Solution
+### Lösung
 
-To resolve this issue, you must add an additional annotation to the Load Balancer service. This annotation sets a hostname for the Load Balancer.
+Um dieses Problem zu beheben, müssen Sie dem Load Balancer Service eine zusätzliche Annotation hinzufügen. Diese Anmerkung legt einen Hostnamen für den Load Balancer fest.
 
 ```yaml
 apiVersion: v1
@@ -25,19 +25,19 @@ spec:
   type: LoadBalancer
 ```
 
-Create an A record for the Load Balancer IP address in your domain. The kube-proxy uses this A record to send traffic to the Load Balancer.
+Erstellen Sie einen A-Eintrag für die IP-Adresse des Load Balancers in Ihrer Domain. Der kube-proxy verwendet diesen A-Eintrag, um den Datenverkehr an den Load Balancer zu senden.
 
-### Outlook
+### Ausblick
 
-This issue was fixed in the upstream Kubernetes project for v1.20, but was later reverted. There is an open issue that addresses the Load Balancer issue in v1.28. The improvement proposal is KEP-1866.
+Dieses Problem wurde im Upstream-Kubernetes-Projekt für v1.20 behoben, aber später rückgängig gemacht. Es gibt einen offenen Punkt, der das Load Balancer-Problem in v1.28 behandelt. Der Verbesserungsvorschlag lautet KEP-1866.
 
-### Explanation
+### Erläuterung
 
-The Proxy Protocol is a protocol used by Load Balancers and Ingress-Controller to identify the real client IP. The protocol adds additional information to the TCP header that identifies the client.
+Das Proxy-Protokoll ist ein Protokoll, das von Load Balancern und Ingress-Controllern verwendet wird, um die echte Client-IP zu identifizieren. Das Protokoll fügt dem TCP-Header zusätzliche Informationen zur Identifizierung des Clients hinzu.
 
-The Cert-Manager doesn't use the Proxy Protocol but want to generate a TLS certificate request. If traffic is sent directly to the Services, the Cert-Manager cant connect to its endpoint and perform the initial self-check.
+Der Cert-Manager verwendet das Proxy-Protokoll nicht, sondern möchte eine TLS-Zertifikatsanforderung generieren. Wenn der Datenverkehr direkt an die Dienste gesendet wird, kann der Cert-Manager keine Verbindung zu seinem Endpunkt herstellen und die anfängliche Selbstprüfung durchführen.
 
-### References
+### Referenzen
 
 Kubernetes issue with the Proxy Protocol: https://github.com/kubernetes/kubernetes/issues/66607
 Proxy Protocol specification: http://www.haproxy.org/download/1.8/doc/proxy-protocol.txt

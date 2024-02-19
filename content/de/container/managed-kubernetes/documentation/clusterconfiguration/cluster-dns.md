@@ -11,7 +11,6 @@ Standardmäßig skaliert CoreDNS bis zu einem Maximum von 5 Replikaten. Dies kan
 In Gardener gibt es zwei Optionen, um das Skalierungsverhalten zu definieren:
 
 1. Horizontal: Dieser Modus legt ein Minimum von 2 Replikaten und ein Maximum von 5 Replikaten für CoreDNS fest.
-
 2. Cluster-proportional: Dieser Modus legt ein Minimum von 2 Replikaten fest und fügt ein zusätzliches Replikat für jeweils 16 Knoten im Cluster hinzu.
 
 Die Standardeinstellung in den Clustern ist "horizontal".

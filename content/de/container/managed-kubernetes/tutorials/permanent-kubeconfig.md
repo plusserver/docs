@@ -8,17 +8,17 @@ description: ->
    Create a kubeconfig with unlimited lifetime
 ---
 
-# General
-By default you can only download kubeconfigs with a maximum lifetime of 24h from the gardener Dashboard. With this guide you'll be able to create your own permanent kubeconfig for your cluster.
+# Allgemein
+Standardmäßig können Sie nur kubeconfigs mit einer maximalen Lebensdauer von 24h aus dem gardener Dashboard herunterladen. Mit dieser Anleitung werden Sie in der Lage sein, Ihre eigene permanente kubeconfig für Ihren Cluster zu erstellen.
 
-## Step 1: Create a service account
-The service account name will be the user name in Kubeconfig. Here we are creating the service account in the kube-system as I am creating a clusterRole. If you want to create a config to give namespace level limited access, create the service account in the required namespace.
+## Schritt 1: Erstellen eines Servicekontos
+Der Name des Dienstkontos wird der Benutzername in Kubeconfig sein. Hier erstellen wir das Service-Konto im kube-System, da ich eine clusterRole erstelle. Wenn Sie eine Konfiguration erstellen möchten, um den Zugriff auf Namespace-Ebene einzuschränken, erstellen Sie das Dienstkonto im gewünschten Namespace.
 
-`kubectl -n kube-system create serviceaccount perm-cluster-admin`
+kubectl -n kube-system create serviceaccount perm-cluster-admin`
 
-## Step 2: Create a secret for the service account
-From Kubernetes Version 1.24, the secret for the service account has to be created separately with an annotation kubernetes.io/service-account.name and type kubernetes.io/service-account-token
-Hence we will create a yaml with a secret named perm-cluster-admin-secret with the according annotation and type.
+## Schritt 2: Erstellen Sie ein Geheimnis für das Dienstkonto
+Ab Kubernetes Version 1.24 muss das Geheimnis für das Servicekonto separat mit einer Annotation kubernetes.io/service-account.name und dem Typ kubernetes.io/service-account-token erstellt werden.
+Wir erstellen also ein yaml mit einem Geheimnis namens perm-cluster-admin-secret mit der entsprechenden Annotation und dem Typ.
 
 ```yaml
 apiVersion: v1
@@ -31,14 +31,14 @@ metadata:
 type: kubernetes.io/service-account-token
 ```
 
-And apply the created yaml with
+Und wenden Sie die erstellte yaml mit
 
 `kubectl apply -f perm-cluster-admin-secret.yaml`
 
-## Step 3: Create a cluster role
-Now continue with creating a clusterRole with limited privileges to cluster objects. You can add the required object access as per your requirements. Refer to the service account and clusterRole documentation for more information.
-If you want to create a namespace-scoped role, you can use namespaced roles instead of clusterroles.
-Create the following yaml to create the clusterRole:
+## Schritt 3: Erstellen einer Cluster-Rolle
+Fahren Sie nun mit der Erstellung einer clusterRole mit eingeschränkten Rechten für Clusterobjekte fort. Sie können den erforderlichen Objektzugriff entsprechend Ihren Anforderungen hinzufügen. Weitere Informationen finden Sie in der Dokumentation zum Dienstkonto und zur clusterRole.
+Wenn Sie eine Namespace-scoped Rolle erstellen möchten, können Sie anstelle von clusterroles auch namespaced roles verwenden.
+Erstellen Sie die folgende yaml-Datei, um die clusterRole zu erstellen:
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -63,9 +63,8 @@ rules:
 
 `kubectl apply -f perm-cluster-admin.yaml`
 
-
-## Step 4: Create cluster role binding
-The following YAML is a ClusterRoleBinding that binds the perm-cluster-admin service account with the perm-cluster-admin clusterRole.
+## Schritt 4: Cluster-Rollenbindung erstellen
+Das folgende YAML ist ein ClusterRoleBinding, das den perm-cluster-admin Service-Account mit der perm-cluster-admin clusterRole bindet.
 
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
@@ -82,14 +81,14 @@ subjects:
   namespace: kube-system
 ```
 
-Apply with:
+Anwenden mit:
 
 `kubectl apply -f perm-cluster-role-binding-admin.yaml`
 
-## Step 5: Get all Cluster Details & Secrets
+## Schritt 5: Alle Cluster-Details und Geheimnisse abrufen
 
-We will retrieve all the required kubeconfig details and save them in variables. Then, finally, we will substitute it directly with the Kubeconfig YAML.
-If you have used a different names for the ressources, replace them accordingly.
+Wir werden alle erforderlichen kubeconfig-Details abrufen und sie in Variablen speichern. Anschließend werden wir sie direkt durch die Kubeconfig-YAML ersetzen.
+Wenn Sie einen anderen Namen für die Ressourcen verwendet haben, ersetzen Sie diese entsprechend.
 
 ```bash
 SA_SECRET_TOKEN= kubectl -n kube-system get secret/devops-cluster-admin-secret -o=go-template='{{.data.token}}' | base64 --decode
@@ -101,7 +100,7 @@ CLUSTER_ENDPOINT= kubectl config view --raw -o=go-template='{{range .clusters}}{
 
 ## Step 6: Generate the kubeconfig with the variables
 
-Now fill in the variables of the kubeconfig.yaml accordingly:
+Füllen Sie nun die Variablen der kubeconfig.yaml entsprechend aus:
 
 ```yaml
 apiVersion: v1
@@ -123,8 +122,8 @@ users:
     token: ${SA_SECRET_TOKEN}
 ```
 
-## Step 7: Validate the generated Kubeconfig
+## Schritt 7: Validieren der generierten Kubeconfig
 
-To validate the Kubeconfig, execute it with the kubectl command to see if the cluster is getting authenticated.
+Um die Kubeconfig zu validieren, führen Sie sie mit dem Befehl kubectl aus, um zu sehen, ob der Cluster authentifiziert wird.
 
 `kubectl get pods --kubeconfig=kubeconfig.yaml`

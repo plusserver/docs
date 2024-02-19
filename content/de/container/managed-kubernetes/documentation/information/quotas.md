@@ -5,7 +5,7 @@ type: "docs"
 weight: 30
 date: 2023-02-21
 ---
-Quoten sind Betriebsgrenzen, die pro Projekt oder pro Benutzer in OpenStack und in Ihrem PSKE-Projekt festgelegt werden können. Sie werden verwendet, um die Menge an Ressourcen zu kontrollieren, die ein Projekt oder ein Benutzer verbrauchen kann. Quotas können für eine Vielzahl von Ressourcen festgelegt werden, einschließlich Rechenleistung, Speicher und Netzwerk.
+Quotas sind Betriebsgrenzen, die pro Projekt oder pro Benutzer in OpenStack und in Ihrem PSKE-Projekt festgelegt werden können. Sie werden verwendet, um die Menge an Ressourcen zu kontrollieren, die ein Projekt oder ein Benutzer verbrauchen kann. Quotas können für eine Vielzahl von Ressourcen festgelegt werden, einschließlich Rechenleistung, Speicher und Netzwerk.
 
 Die folgende Tabelle enthält die Standardquoten, die anfänglich für jedes Projekt festgelegt werden:
 
