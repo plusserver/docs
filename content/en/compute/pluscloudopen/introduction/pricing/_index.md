@@ -1,8 +1,10 @@
 ---
 title: "Pricing"
 type: "docs"
-weight: 20
+weight: 50
 date: 2023-06-26
+description: >
+  Pricing for Compute Flavors, Storage and Networking 
 ---
 
 # Introduction

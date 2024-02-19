@@ -5,7 +5,7 @@ type: "docs"
 date: 2023-10-31
 weight: 999
 description: >
-
+  Notes on changes and updates in SCS R5
 ---
 
 ## General notes for the SCS R5 Release on pluscloud open:
