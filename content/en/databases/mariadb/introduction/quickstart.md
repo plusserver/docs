@@ -27,13 +27,13 @@ You might want to [migrate](../../tutorials/database_import/) a database from an
 
 Enjoy our Database-as-a-Service. No admin worries—just connect and go. Focus on your app, we manage the rest.
 
-## Customizations
+## Customization
 
 ### Scaling
 
 There are two ways you can scale our DBaaS.
 
-- Vertical Scaling: First and foremost you can modify the *Node Size* of your DBaaS Instance. Every option available os discussed [here](../../documentation/nodesize/).
+- Vertical Scaling: First and foremost you can modify the *Node Size* of your DBaaS Instance. Every option available is discussed [here](../../documentation/nodesize/).
 
 - Horizonal Scaling: Second you can add [Read-Replicas](../../documentation/read_replicas/) to your DBaaS. If your application is capable to distribute read/write operations this feature can highly improve overall system responsiveness.
 

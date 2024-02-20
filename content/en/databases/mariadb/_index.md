@@ -2,5 +2,5 @@
 title: "MariaDB"
 linkTitle: "MariaDB"
 type: "docs"
-weight: 30
+weight: 10 
 ---

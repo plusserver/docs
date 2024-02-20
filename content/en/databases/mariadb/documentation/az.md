@@ -1,11 +1,11 @@
 ---
-title: "Regions and AZ's"
-linkTitle: "Regions and AZ's"
+title: "Regions and Availability Zones"
+linkTitle: "Regions and Availability Zones"
 type: "docs"
 ---
 
 
-### Regions and availability zones (AZ)
+### Regions and Availability Zones (AZ)
 
 PlusServer offers multiple regions and availability zones (AZs) to provide customers with high availability and disaster recovery options. Each AZ consists of one or more data centers designed to be independent of each other and provide redundancy in the event of outages or disasters. AZs within a region offer the advantage of low network latency between them. Customers can choose to deploy their resources in one or more AZs for high availability and disaster recovery.
 
@@ -46,4 +46,10 @@ The following table lists the regions and AZs offered by PlusServer:
 | DE-NORTH | DE-NORTH-1 | Hamburg, Germany |
 | | DE-NORTH-2 | Hamburg, Germany |
 | DE-WEST | DE-WEST-1 | Cologne, Germany |
-| | DE-WEST-2 | Düsseldorf, Germany
+| | DE-WEST-2 | Düsseldorf, Germany |
+
+### Locations and data centers
+
+<br>
+
+![plusserver Locations and data centers](/images/content/04-msl/locations_and_dcs.png)

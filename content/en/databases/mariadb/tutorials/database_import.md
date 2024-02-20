@@ -10,7 +10,7 @@ Importing a MySQL dump involves a few key steps to ensure the data is accurately
 
 - Access to a MySQL client (CLI).
 - Remote access to the DBaaS Instance.
-- Existing [User and Database](create_db_and_user/) on the DBaaS instance.  
+- Existing [User and Database](../create_db_and_user/) on the DBaaS instance.  
 - The MySQL dump file you wish to import.
 
 ### Locate Your MySQL Dump File
@@ -34,4 +34,6 @@ mysql -u db_username -p -h remote_database_host  remote_database_name
 SHOW TABLES;
 ```
 
-If you encounter errors during the import or need configuration adjustments (e.g. while importing a large dump), please [open a ticket](https://customerservice.plusserver.com/support/ticket-create).
+<br>
+
+>*If you encounter errors during the import or need configuration adjustments (e.g. while importing a large dump), please [open a ticket](https://customerservice.plusserver.com/support/ticket-create).*
