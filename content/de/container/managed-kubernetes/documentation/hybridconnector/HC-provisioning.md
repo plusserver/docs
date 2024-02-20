@@ -1,6 +1,6 @@
 ---
-title: "HC - Provisioning"
-linkTitle: "HC - Provisioning"
+title: "HC - Provisionierung"
+linkTitle: "HC - Provisionierung"
 type: "docs"
 weight: 20
 date: 2023-02-21

@@ -1,6 +1,6 @@
 ---
-title: "Permanent Kubeconfig"
-linkTitle: "Permanent Kubeconfig"
+title: "Permanente Kubeconfig"
+linkTitle: "Permanente Kubeconfig"
 type: "docs"
 weight: 20
 date: 2024-01-18

@@ -1,6 +1,6 @@
 ---
-title: "Proxy Protocol - Forward Source IP"
-linkTitle: "Proxy Protocol - Forward Source IP"
+title: "Proxy Protocol - Durchleiten der Source IP"
+linkTitle: "Proxy Protocol - Durchleiten der Source IP"
 type: "docs"
 weight: 4
 date: 2023-02-21

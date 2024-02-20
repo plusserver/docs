@@ -1,6 +1,6 @@
 ---
-title: "Simple deployment example"
-linkTitle: "Simple deployment example"
+title: "Einfaches Beispiel Deployment"
+linkTitle: "Einfaches Beispiel Deployment"
 type: "docs"
 weight: 20
 date: 2023-10-21

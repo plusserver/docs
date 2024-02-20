@@ -1,6 +1,6 @@
 ---
-title: "Proxy Protocol - External resolve of internal services"
-linkTitle: "Proxy Protocol - External resolve of internal services"
+title: "Proxy Protocol - Externe Auflösung von internen Services"
+linkTitle: "Proxy Protocol - Externe Auflösung von internen Services"
 type: "docs"
 weight: 4
 date: 2024-01-18

@@ -1,6 +1,6 @@
 ---
-title: "Setting up a Vertical Pod Autoscaler (VPA)"
-linkTitle: "Setting up a Vertical Pod Autoscaler (VPA)"
+title: "Konfiguration eines Vertical Pod Autoscaler (VPA)"
+linkTitle: "Konfiguration eines Vertical Pod Autoscaler (VPA)"
 type: "docs"
 weight: 20
 date: 2023-02-21
