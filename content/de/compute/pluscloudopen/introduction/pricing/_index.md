@@ -3,6 +3,8 @@ title: "Preisgestaltung"
 type: "docs"
 weightt: 20
 Datum: 2023-06-26
+description: >
+  Preise für pluscloud open Ressourcen
 ---
 
 # Einführung
