@@ -1,1 +1,1 @@
-../../mariadb/documentation/update.md
+../../generic/documentation/update.md

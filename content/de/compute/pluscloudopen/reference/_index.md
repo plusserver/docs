@@ -1,6 +1,6 @@
 ---
-title: "Dokumentation"
-linkTitle: "Dokumentation"
+title: "Referenz"
+linkTitle: "Referenz"
 type: "docs"
 weight: 2
 date: 2023-02-21

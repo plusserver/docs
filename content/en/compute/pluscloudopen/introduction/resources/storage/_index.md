@@ -3,8 +3,6 @@ title: "Storage"
 type: "docs"
 weight: 30
 date: 2023-03-10
-description: >
-  Storage options in pluscloud open
 ---
 
 # What are the pluscloud open storage options?

@@ -4,5 +4,7 @@ linkTitle: "Release Notes"
 type: "docs"
 weight: 40
 description: >
-   Changelog of MariaDB-as-a-Service.
+    Changelog Database-as-a-Service - MariaDB
 ---
+
+Release Notes *Database-as-a-Service - MariaDB*

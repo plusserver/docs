@@ -53,4 +53,4 @@ The parameters listed in the table represent the specific configuration settings
 
 <br>
 
-*We're working on a feature to let you directly change your DBaaS settings in our customer portal. Until then we thank you for your patience as we improve our services.*
+>*We're working on a feature to let you directly change your DBaaS settings in our customer portal. Until then we thank you for your patience as we improve our services.*

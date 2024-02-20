@@ -1,1 +1,1 @@
-../../mariadb/documentation/backup.md
+../../generic/documentation/backup.md

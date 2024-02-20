@@ -36,7 +36,7 @@ For most users, these compute resources are enough. If you start with the smalle
 
 The persistent disk size determines the capacity for storing your data. Every *Private Registry - Harbor* instance requires a minimum disk size of 50GB. You can increase the disk size in increments of 50GB, up to a maximum of 200GB. Increasing the storage size doesn't cause an interruption of the *Private Registry - Harbor*.
 
->The data disk size can only be increased. To reduce the disk size, you must create a new DBaaS instance and transfer the data manually.
+>The data disk size can only be increased. To reduce the disk size, you must create a new instance and transfer the data manually.
 
 ## General Information
 

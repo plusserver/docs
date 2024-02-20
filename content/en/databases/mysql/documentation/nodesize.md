@@ -1,1 +1,1 @@
-../../mariadb/documentation/nodesize.md
+../../generic/documentation/nodesize.md

@@ -3,8 +3,6 @@ title: "Netzwerk"
 type: "docs"
 weight: 30
 date: 2023-03-10
-description: >
-  IP-Adressen und Sicherheitsgruppen in der pluscloud open
 ---
 
 # Öffentliche IPs

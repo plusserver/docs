@@ -1,1 +1,1 @@
-../../mariadb/tutorials/retrieve_login_credentials.md
+../../generic/tutorials/retrieve_login_credentials.md

@@ -3,8 +3,6 @@ title: "Network"
 type: "docs"
 weight: 30
 date: 2023-03-10
-description: >
-  IP Adresses and Security Groups
 ---
 
 # Public IPs
