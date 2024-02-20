@@ -2,8 +2,8 @@
 title: "Storage & Backup"
 linkTitle: "Storage & Backup"
 type: "docs"
-weight: 30
+weight: 40
 menu:
   main:
-    weight: 30
+    weight: 40
 ---
