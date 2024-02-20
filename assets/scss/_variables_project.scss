@@ -6,12 +6,9 @@ Add styles or override variables from the theme here.
 
 /* https://www.docsy.dev/docs/adding-content/lookandfeel/ */
 
-.td-navbar {
-  background: #009bf4 !important;
-}
-
 $primary: #009bf4;
 $secondary: #adadad;
+$dark: #adadad;
 
 $enable-gradients: true;
 $enable-rounded: true;
@@ -20,3 +17,35 @@ $enable-shadows: true;
 $td-enable-google-fonts: true;
 $google_font_name: "Montserrat";
 $google_font_family: "Montserrat:300,300i,400,400i,800,800i";
+
+.td-navbar {
+  background: #009bf4 !important;
+}
+
+footer {
+  background: #adadad !important;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+blockquote {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+img {
+  margin-top: 1.2rem;
+  border: 1px solid #dee2e6;
+  margin-bottom: 2rem;
+}
