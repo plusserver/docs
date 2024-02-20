@@ -1,1 +1,1 @@
-../../mariadb/tutorials/database_import.md
+../../generic/tutorials/database_import.md

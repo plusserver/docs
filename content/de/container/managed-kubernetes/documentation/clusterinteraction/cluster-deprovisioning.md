@@ -1,6 +1,6 @@
 ---
 title: "PSKE - Cluster deprovisionierung"
-linkTitle: "Cluster deprovisionierung
+linkTitle: "Cluster deprovisionierung"
 type: "docs"
 weight: 30
 date: 2023-02-21

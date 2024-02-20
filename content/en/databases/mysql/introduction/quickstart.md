@@ -1,1 +1,1 @@
-../../mariadb/introduction/quickstart.md
+../../generic/introduction/quickstart.md

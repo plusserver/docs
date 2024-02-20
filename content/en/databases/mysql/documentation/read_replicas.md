@@ -1,1 +1,1 @@
-../../mariadb/documentation/read_replicas.md
+../../generic/documentation/read_replicas.md

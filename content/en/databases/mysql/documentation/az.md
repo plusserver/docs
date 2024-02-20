@@ -1,1 +1,1 @@
-../../mariadb/documentation/az.md
+../../generic/documentation/az.md

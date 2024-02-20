@@ -1,1 +1,1 @@
-../../mariadb/tutorials/ordering.md
+../../generic/tutorials/ordering.md

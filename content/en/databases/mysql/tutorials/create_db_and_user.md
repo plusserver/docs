@@ -1,1 +1,1 @@
-../../mariadb/tutorials/create_db_and_user.md
+../../generic/tutorials/create_db_and_user.md
