@@ -1,6 +1,6 @@
 ---
-title: "PSKE - Cluster Autoscaling"
-linkTitle: "Cluster Autoscaling"
+title: "PSKE - Cluster Autoskalierung"
+linkTitle: "Cluster Autoskalierung"
 type: "docs"
 weight: 20
 date: 2023-02-21

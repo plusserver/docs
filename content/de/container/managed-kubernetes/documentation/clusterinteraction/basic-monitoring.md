@@ -1,6 +1,6 @@
 ---
-title: "PSKE - Basic monitoring"
-linkTitle: "Basic monitoring"
+title: "PSKE - Einfaches Monitoring"
+linkTitle: "Einfaches Monitoring"
 type: "docs"
 weight: 40
 date: 2023-10-21

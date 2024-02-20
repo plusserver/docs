@@ -1,6 +1,6 @@
 ---
-title: "Quickstart"
-linkTitle: "Quickstart"
+title: "Schnellstart"
+linkTitle: "Schnellstart"
 type: "docs"
 weight: 10
 date: 2024-01-19

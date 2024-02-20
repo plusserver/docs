@@ -1,6 +1,6 @@
 ---
-title: "PSKE - Cluster Networking"
-linkTitle: "Cluster Networking"
+title: "PSKE - Cluster Netzwerk"
+linkTitle: "Cluster Netzwerk"
 type: "docs"
 weight: 20
 date: 2023-02-21
