@@ -1,0 +1,39 @@
+.td-navbar {
+    background: #009bf4 !important;
+  }
+  
+  footer {
+    background: #adadad !important;
+  }
+  
+  a {
+    color: #009bf4;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+  
+  th, td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  blockquote {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  img {
+    margin-top: 1.2rem;
+    border: 1px solid #dee2e6;
+    margin-bottom: 2rem;
+  }
+
+  .td-navbar .navbar-brand span:last-child {
+    display: none;
+  }
