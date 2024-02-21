@@ -1,80 +1,80 @@
 ---
-title: "Creating Instances"
+title: "Instanzen erstellen"
 type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Creating Instances with the Horizon GUI
+  Erstellen von Instanzen mit der Horizon GUI
 ---
-## Launch Instance
-Using the button "Launch Instance" you can create one or more new instances and start them. An guided dialogue helps you to go through all required steps. As soon as you have entered enough information for launching an instance the button "Create Instance" becomes available and you can start your new instance(s). Asterisks (*) mark required information.
+## Instanz starten
+Über die Schaltfläche "Launch Instance" können Sie eine oder mehrere neue Instanzen erstellen und starten. Ein geführter Dialog hilft Ihnen dabei, alle notwendigen Schritte zu durchlaufen. Sobald Sie genügend Informationen zum Starten einer Instanz eingegeben haben, wird die Schaltfläche "Instanz erstellen" verfügbar und Sie können Ihre neue(n) Instanz(en) starten. Sternchen (*) markieren erforderliche Informationen.
 
-Keep in mind that shell access to the new instance is only possible via ssh key authentication. Thus you either need to create a ssh keypair during instance creation or upload your keypair beforehand.
-Clicking on "**Launch Instance**" opens a dialogue, which will guide you through several steps, which have to be completed to launch an instance:
+Beachten Sie, dass der Shell-Zugriff auf die neue Instanz nur über eine ssh-Schlüsselauthentifizierung möglich ist. Daher müssen Sie entweder ein ssh-Schlüsselpaar während der Instanzerstellung erstellen oder Ihr Schlüsselpaar vorher hochladen.
+Wenn Sie auf "**Instanz starten**" klicken, öffnet sich ein Dialog, der Sie durch verschiedene Schritte führt, die zum Starten einer Instanz ausgeführt werden müssen:
 
-![screenshot of the launch instance menu](./2023-03-30_10-39.png)
+![Screenshot des Menüs zum Starten der Instanz](./2023-03-30_10-39.png)
 
-As usual Asterisks (*) mark required information and as soon as enough information has been entered, the "**Launch instance**" button will be activated.
+Wie üblich markieren Sternchen (*) die erforderlichen Informationen, und sobald Sie genügend Informationen eingegeben haben, wird die Schaltfläche "**Instanz starten**" aktiviert.
 
-You need to give your new instance a name in the "**Instance Name**" field. The description is optional. There is only one "**Availability Zone**" you can choose. You can use the "**Count**" field to spawn serveral instances of the same type at the same time.
+Im Feld "**Instanzname**" müssen Sie Ihrer neuen Instanz einen Namen geben. Die Beschreibung ist optional. Es gibt nur eine "**Verfügbarkeitszone**", die Sie auswählen können. Sie können das Feld "**Anzahl**" verwenden, um mehrere Instanzen desselben Typs gleichzeitig zu erzeugen.
 
-"Next" you should define the "**Source**" of your instance. Basically you choose, what image your instance should be based on.
+"Als nächstes sollten Sie die "**Quelle**" Ihrer Instanz definieren. Im Grunde genommen wählst du aus, auf welchem Bild deine Instanz basieren soll.
 
-<img src="2023-03-30_11-09.png" alt="screenshot of the source menu" width="50%" height="50%" title="Source Menu">
+<img src="2023-03-30_11-09.png" alt="Bildschirmfoto des Quellmenüs" width="50%" height="50%" title="Quellmenü">
 
-First you choose whether your new instance should be booted from an image (and you see a list of the items available to you under "**Available**"), from an instance snapshot, from a volume or from a volume snapshot. If you choose an existing volume, you can only boot one instance from it. If you choose an image or a snapshot, you can boot more than one instance from it. You choose the item you want by clicking on on the little "up" arrow on the right.
+Zunächst wählen Sie aus, ob Ihre neue Instanz von einem Image (unter "**Verfügbar**" sehen Sie eine Liste der verfügbaren Elemente), von einem Instanz-Snapshot, von einem Datenträger oder von einem Volume-Snapshot gebootet werden soll. Wenn Sie einen vorhandenen Datenträger auswählen, können Sie nur eine Instanz von diesem booten. Wenn Sie ein Image oder einen Snapshot wählen, können Sie mehr als eine Instanz davon booten. Sie wählen das gewünschte Element aus, indem Sie auf den kleinen Pfeil nach oben auf der rechten Seite klicken.
 
-Next you define the "**Volume Size**" of the root volume of your new instance. If you set no value here (or one which is too small), the size will automatically adjusted to the size of the image you choose.
+Als nächstes legen Sie die "**Volumengröße**" des Root-Volumes Ihrer neuen Instanz fest. Wenn Sie hier keinen Wert festlegen (oder einen zu kleinen), wird die Größe automatisch an die Größe des von Ihnen gewählten Bildes angepasst.
 
-The options on the right side ("**Create New Volume**" and "**Delete Volume on Instance Delete**") determine the lifecycle of the root volume of your instance. If you want, that your instance and its root volume are deleted when the instance is deleted, you should choose not to create a new volume (the option to delete the volume on instance delete will be deactivated). If you have chosen to create a volume, you can choose to have the volume deleted on instance deletion. If you don't choose this option, the root volume of the instance will "survive" the deletion of the instance (and consume storage and be billed).
+Die Optionen auf der rechten Seite ("**Neues Volume erstellen**" und "**Volume beim Löschen der Instanz löschen**") bestimmen den Lebenszyklus des Root-Volumes Ihrer Instanz. Wenn Sie möchten, dass Ihre Instanz und ihr Root-Volume gelöscht werden, wenn die Instanz gelöscht wird, sollten Sie wählen, kein neues Volume zu erstellen (die Option, das Volume beim Löschen der Instanz zu löschen, wird deaktiviert). Wenn Sie sich entschieden haben, ein Volume zu erstellen, können Sie festlegen, dass das Volume beim Löschen der Instanz gelöscht wird. Wenn Sie diese Option nicht wählen, wird das Root-Volume der Instanz die Löschung der Instanz "überleben" (und Speicherplatz verbrauchen und in Rechnung gestellt werden).
 
-Now - by clicking on "Next" - you have to choose the "**Flavor**" of your new instance. "Flavors" determine the "dimensions" of your new instance regarding the number of virtual CPUs, the amount of virtual memory and the size of the root disk.
+Nun müssen Sie - indem Sie auf "Weiter" klicken - den "**Flavor**" Ihrer neuen Instanz auswählen. "Flavors" bestimmen die "Dimensionen" Ihrer neuen Instanz hinsichtlich der Anzahl der virtuellen CPUs, der Menge des virtuellen Speichers und der Größe der Root-Disk.
 
-<img src="2023-03-31_09-52.png" alt="screenshot of the flavor menu" width="50%" height="50%" title="Flavor Menu">
+<img src="2023-03-31_09-52.png" alt="Bildschirmfoto des Flavor-Menüs" width="50%" height="50%" title="Flavor-Menü">
 
-Clicking on the little arrow on the left - in front of each flavor line - shows what impact the choice of that flavor has on your consumption. By clicking on the "up" arrow you choose to use the flavor for the instance creation. If the choice of a flavor would consume more resources than available in your quota, it is marked with a yellow "warning" exclamation mark.
+Wenn Sie auf den kleinen Pfeil auf der linken Seite - vor jeder Geschmacksrichtung - klicken, sehen Sie, welche Auswirkungen die Wahl dieser Geschmacksrichtung auf Ihren Konsum hat. Wenn du auf den Pfeil nach oben" klickst, wählst du die Geschmacksrichtung für die Instanzerstellung aus. Wenn die Wahl eines Flavors mehr Ressourcen verbrauchen würde, als in Ihrem Kontingent verfügbar sind, wird es mit einem gelben "Warn"-Ausrufezeichen markiert.
 
-Pluscloud open is in charge of the creation an management of the flavors.s
+Pluscloud open ist für die Erstellung und Verwaltung der Flavors zuständig.
 
-Next you need to choose the "**Networks**" you want your new instance to be connected to.
+Als nächstes müssen Sie die "**Netzwerke**" auswählen, mit denen Ihre neue Instanz verbunden werden soll.
 
 <img src="2023-03-31_10-04.png" alt="screenshot of the networks menu" width="50%" height="50%" title="Networks Menu">
 
-Depending on your network topology you would choose one or more networks from the networks listed under "**Available**".
+Je nach Ihrer Netzwerktopologie wählen Sie eines oder mehrere Netzwerke aus der Liste unter "**Verfügbar**" aus.
 
-"**Security Groups**" allow you to choose which security groups should be applied for your new instance.
+Unter "**Sicherheitsgruppen**" können Sie auswählen, welche Sicherheitsgruppen für Ihre neue Instanz angewendet werden sollen.
 
-<img src="2023-03-31_10-34.png" alt="screenshot of the security groups menu" width="50%" height="50%" title="Security Groups Menu">
+<img src="2023-03-31_10-34.png" alt="Bildschirmfoto des Menüs "Sicherheitsgruppen"" width="50%" height="50%" title="Menü "Sicherheitsgruppen">
 
-The "default" security group would allow for basic access to your instance. Additional security groups could (dis)allow traffic to and from specific networks or specific ports. If you remove the default security group, you will only be able to access your new instance via VNC console.
+Die "Standard"-Sicherheitsgruppe würde den grundlegenden Zugriff auf Ihre Instanz ermöglichen. Zusätzliche Sicherheitsgruppen können den Verkehr zu und von bestimmten Netzwerken oder bestimmten Ports (un)zulassen. Wenn Sie die Standard-Sicherheitsgruppe entfernen, können Sie nur über die VNC-Konsole auf Ihre neue Instanz zugreifen.
 
-The "**Key Pair**" menu allows you to generate a new ssh public/privatey key pair by clicking on "Create Key Pair" or to import a key pair you already have with "Import Key Pair" in order to be able to login to your new instance via secure shell (ssh).
+Das Menü "**Schlüsselpaar**" ermöglicht es Ihnen, ein neues ssh-Schlüsselpaar (öffentlich/privat) zu erzeugen, indem Sie auf "Schlüsselpaar erstellen" klicken, oder ein bereits vorhandenes Schlüsselpaar mit "Schlüsselpaar importieren" zu importieren, um sich über Secure Shell (ssh) bei Ihrer neuen Instanz anmelden zu können.
 
-<img src="2023-03-31_13-30.png" alt="screenshot of the key pair menu" width="50%" height="50%" title="Key Pair Menu">
+<img src="2023-03-31_13-30.png" alt="Bildschirmfoto des Schlüsselpaar-Menüs" width="50%" height="50%" title="Schlüsselpaar-Menü">
 
-If you create a key pair, you are presented with the _private_ key, which you should save to your local workstation and protect from eavesdropping through third parties. The public half of the key pair is saved in your OpenStack project. If you choose to import a "key pair" you actually only import the _public_ part of your key pair. The private key remains in your posession.
+Wenn Sie ein Schlüsselpaar erstellen, erhalten Sie den _privaten_ Schlüssel, den Sie auf Ihrer lokalen Arbeitsstation speichern und vor dem Abhören durch Dritte schützen sollten. Die öffentliche Hälfte des Schlüsselpaares wird in Ihrem OpenStack-Projekt gespeichert. Wenn Sie sich für den Import eines "Schlüsselpaares" entscheiden, importieren Sie eigentlich nur den _öffentlichen_ Teil Ihres Schlüsselpaares. Der private Schlüssel bleibt in Ihrem Besitz.
 
-You can also quickly create a new public/private key pair on the command line with ``ssh-keygen -t rsa -f cloud.key`` and then import the public key ``cloud.key.pub`` into your OpenStack project.
-If you are using Windows you would use PuttyGen to do the same - just be sure to choose ``openssh`` as the key format.
+Sie können auch schnell ein neues öffentliches/privates Schlüsselpaar auf der Kommandozeile mit ``ssh-keygen -t rsa -f cloud.key`` erzeugen und dann den öffentlichen Schlüssel ``cloud.key.pub`` in Ihr OpenStack-Projekt importieren.
+Wenn Sie Windows benutzen, würden Sie PuttyGen benutzen, um das gleiche zu tun - stellen Sie nur sicher, dass Sie ``openssh`` als Schlüsselformat wählen.
 
-"**Configuration**" is a menu, that allows you to upload and execute a script, that can be used to customize your instance after launch.
+"**Konfiguration**" ist ein Menü, das es Ihnen ermöglicht, ein Skript hochzuladen und auszuführen, mit dem Sie Ihre Instanz nach dem Start anpassen können.
 
-<img src="2023-03-31_13-47.png" alt="screenshot of the configuration menu" width="50%" height="50%" title="Configuration Menu">
+<img src="2023-03-31_13-47.png" alt="Bildschirmfoto des Konfigurationsmenüs" width="50%" height="50%" title="Konfigurationsmenü">
 
-As many cloud images use [cloud-init](https://cloudinit.readthedocs.io/en/latest/) for customization nowadays, this option might be used a little less common than usual.
-Another option here is "**Disk Partition**", which can be done "automatic" and "manual". "Automatic" basically creates one partition per volume. With "manual" you can create more partitions per volume.
+Da viele Cloud-Images heutzutage [cloud-init](https://cloudinit.readthedocs.io/en/latest/) zur Anpassung verwenden, wird diese Option vielleicht etwas seltener genutzt als sonst.
+Eine weitere Option hier ist "**Disk Partition**", die "automatisch" und "manuell" durchgeführt werden kann. Bei "Automatisch" wird grundsätzlich eine Partition pro Datenträger erstellt. Mit "manuell" können Sie mehrere Partitionen pro Volume erstellen.
 
-With ["**Server Groups**"](../server-groups/) you can assign your new instance to an existing server group in order to let your new instance be created either next to other instances in that server group or explicitly not next to other instances in that group (affinity - anti-affinity).
+Mit ["**Servergruppen**"](../server-groups/) können Sie Ihre neue Instanz einer bestehenden Servergruppe zuordnen, so dass Ihre neue Instanz entweder neben anderen Instanzen in dieser Servergruppe oder explizit nicht neben anderen Instanzen in dieser Gruppe erstellt wird (Affinität - Anti-Affinität).
 
-If you want to add some "**Scheduler Hints**" in order to affect the placement of your new instance you can either choose from the existing metadata catalog or create your own keys in the first line of the left side.
+Wenn Sie einige "**Scheduler-Hinweise**" hinzufügen möchten, um die Platzierung Ihrer neuen Instanz zu beeinflussen, können Sie entweder aus dem vorhandenen Metadatenkatalog wählen oder Ihre eigenen Schlüssel in der ersten Zeile der linken Seite erstellen.
 
-<img src="2023-03-31_14-17.png" alt="screenshot of the scheduler hints menu" width="50%" height="50%" title="Scheduler Hints Menu">
+<img src="2023-03-31_14-17.png" alt="Screenshot des Menüs "Scheduler-Hinweise"" width="50%" height="50%" title="Menü "Scheduler-Hinweise">
 
-Just click "+" on a key from left to move it to the right in order to assign it to the new instance. Additional information is displayed in the box at the bottom of the menu.
+Klicken Sie einfach auf ein "+" auf einer Taste von links, um sie nach rechts zu verschieben, um sie der neuen Instanz zuzuweisen. Zusätzliche Informationen werden in der Box am unteren Rand des Menüs angezeigt.
 
-Similar to this, you can add (more) metadata to your new instance in the "**Metadata**" menu.
+Auf ähnliche Weise können Sie im Menü "**Metadaten**" (weitere) Metadaten zu Ihrer neuen Instanz hinzufügen.
 
-<img src="2023-03-31_14-22.png" alt="screenshot of the metadata menu" width="50%" height="50%" title="Metadata Menu">
+<img src="2023-03-31_14-22.png" alt="Bildschirmfoto des Metadaten-Menüs" width="50%" height="50%" title="Metadaten-Menü">
 
-There is a catalog of already existing metadata available. But you can create your own keys in the "Custom" field, too.
-Just click "+" on the the wanted item on the left to move it to the right.
+Es steht ein Katalog mit bereits vorhandenen Metadaten zur Verfügung. Sie können aber auch Ihre eigenen Schlüssel im Feld "Benutzerdefiniert" erstellen.
+Klicken Sie einfach auf das "+" auf dem gewünschten Element auf der linken Seite, um es nach rechts zu verschieben.
