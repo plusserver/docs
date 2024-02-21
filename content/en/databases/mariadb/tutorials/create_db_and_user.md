@@ -7,7 +7,7 @@ weight: 10
 
 ## Connect to Database
 
-You can find instructions on how to retrieve the login credentials for your MySQL/MariaDB DBaaS instance [here](../../introduction/retrieve_login_credentials/).
+You can find instructions on how to retrieve the login credentials for your MySQL/MariaDB DBaaS instance [here](../retrieve_login_credentials/).
 
 Use the following command to connect to your MySQL/MariaDB database using the mysql-cli client. Enter your admin password as shown in the customer portal when prompted.
 
@@ -17,8 +17,8 @@ Use the following command to connect to your MySQL/MariaDB database using the my
 
 Replace:
 
-- *node-64130e880850ca3b9a420bb9.ps-xaas.io* with the hostname of your PostgreSQL DBaaS instance.
-- *kd123456* with your PostgreSQL DBaaS username.
+- *node-64130e880850ca3b9a420bb9.ps-xaas.io* with the hostname of your MySQL/MariaDB DBaaS instance.
+- *kd123456* with your MySQL/MariaDB DBaaS username.
 
 >If using an older MySQL client and facing connection issues, consider adding <code>--ssl</code> or <code>--ssl-mode=REQUIRED</code> to your connection command for secure connections.
 

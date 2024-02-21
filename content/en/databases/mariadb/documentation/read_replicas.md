@@ -5,7 +5,7 @@ type: "docs"
 ---
 
 
-## Overview
+## Read Replica
 
 Read Replicas enhance database scalability by distributing read operations across multiple DBaaS instances, effectively managing high read traffic without impacting the performance of the primary database. This approach is ideal for applications requiring fast read access, as it improves response times while preserving the primary database's ability to handle write operations efficiently.
 
@@ -27,8 +27,10 @@ Your application must be configured to distinguish between read and write operat
 
 - Read Operations: Connections for queries that only fetch data (SELECT) should be routed to the read replicas.
 
+<br><br>
+
 **If you are interested in utilizing our read replicas feature, please [open a ticket](https://customerservice.plusserver.com/support/ticket-create) in our customer portal.**
 
 <br>
 
-*We're working on a feature to let you directly create read-replicas in our customer portal. Until then we thank you for your patience as we improve our services.*
+>*We're working on a feature to let you directly create read-replicas in our customer portal. Until then we thank you for your patience as we improve our services.*

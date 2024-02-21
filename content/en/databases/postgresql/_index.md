@@ -2,5 +2,5 @@
 title: "PostgreSQL"
 linkTitle: "PostgreSQL"
 type: "docs"
-weight: 20
+weight: 30 
 ---

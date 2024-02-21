@@ -7,7 +7,7 @@ weight: 10
 
 ## Private Registry - Harbor
 
-Private Registry - Harbor is a fully automated container registry hosted in the cloud to streamline image management. This service model allows developers to focus on building and deploying containerized applications without the burden of managing the underlying infrastructure.
+*Private Registry - Harbor* is a fully automated container registry hosted in the cloud to streamline image management. This service model allows developers to focus on building and deploying containerized applications without the burden of managing the underlying infrastructure.
 
 ### Supported Harbor Versions
 
