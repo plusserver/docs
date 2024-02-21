@@ -1,5 +1,5 @@
 ---
-Titel: "Instanzen erstellen"
+title: "Instanzen erstellen"
 type: "docs"
 weight: 50
 date: 2023-02-24

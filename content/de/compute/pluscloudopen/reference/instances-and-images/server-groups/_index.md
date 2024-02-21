@@ -1,5 +1,5 @@
 ---
-Titel: "Server-Gruppen"
+title: "Server-Gruppen"
 type: "docs"
 weight: 60
 date: 2024-02-09
