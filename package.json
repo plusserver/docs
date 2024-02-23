@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "hugo-extended": "^0.123.0"
+    "hugo-extended": "^0.123.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.17",
