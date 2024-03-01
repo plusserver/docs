@@ -36,13 +36,14 @@ Für individuelle Anforderungen, [eröffnen Sie ein Support-Ticket](https://cust
 
 #### Datenspeicherung
 
-Starten Sie mit 50 GB und erweitern Sie in 50-GB-Schritten bis zu 200 GB. Eine Reduktion der Speichergröße ist nich möglich.
+Starten Sie mit 50 GB und erweitern Sie in 50-GB-Schritten bis zu 200 GB. Eine Reduktion der Speichergröße ist nicht möglich.
 
 ## Sicherheit
 
 ### Whitelisting und Verschlüsselung
 
-Beschränken Sie den Zugriff auf bekannte Quell-IP-Adressen. Die Kommunikation zur Web-GUI ist über HTTPS verschlüsselt.
+Beschränken Sie den Zugriff auf bekannte Quell-IP-Adressen. <br/>
+Die Kommunikation zur Web-GUI ist über HTTPS verschlüsselt.
 
 ### Softwareupdates
 
