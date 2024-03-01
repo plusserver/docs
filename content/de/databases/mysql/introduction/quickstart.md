@@ -33,7 +33,7 @@ Genießen Sie unseren Datenbank-as-a-Service. Keine Verwaltungssorgen - einfach 
 
 Es gibt zwei Möglichkeiten, unsere DBaaS zu skalieren.
 
-- Vertikale Skalierung: Zuallererst können Sie die *Knotengröße* Ihrer DBaaS-Instanz ändern. Alle verfügbaren Optionen werden [hier] erläutert (../../documentation/nodesize/).
+- Vertikale Skalierung: Zuallererst können Sie die *Knotengröße* Ihrer DBaaS-Instanz ändern. Alle verfügbaren Optionen werden [hier](../../documentation/nodesize/) erläutert.
 
 - Horizontale Skalierung: Zweitens können Sie [Read-Replicas](../../documentation/read_replicas/) zu Ihrer DBaaS hinzufügen. Wenn Ihre Anwendung in der Lage ist, Lese-/Schreiboperationen zu verteilen, kann diese Funktion die Reaktionsfähigkeit des Systems insgesamt stark verbessern.
 
