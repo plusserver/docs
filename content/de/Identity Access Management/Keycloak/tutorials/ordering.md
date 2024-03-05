@@ -13,7 +13,7 @@ Sie starten immer in unserem [Kundenportal](https://customerservice.plusserver.c
 
 Navigieren Sie zunächst zu IAM - Keycloak.
 
-![Auswahl IAM Keycloak](/images/content/04-msl/de/iam_keycloak/ordering/1-cloud_service_tbd_keycloak.png)
+![Auswahl IAM - Keycloak](/images/content/04-msl/de/iam_keycloak/ordering/1-cloud_service_tbd_keycloak.png)
 
 ### Wählen Sie den Servicetyp
 
@@ -25,7 +25,7 @@ Wählen Sie hier Keycloak aus.
 
 Wählen Sie nun die Größe der Node aus. Sie wissen noch nicht, welche Leistung Sie benötigen? Dann wählen Sie den kleinsten Knoten und skalieren Sie später, wenn nötig
 
-![Auswahl Nodesize](/images/content/04-msl/de/iam_keycloak/ordering/3-iam_keycloak-size.png)
+![Auswahl Nodesize](/images/content/04-msl/de/iam_keycloak/ordering/3-iam_keycloak-size2.png)
 
 ### Speichergröße auswählen
 

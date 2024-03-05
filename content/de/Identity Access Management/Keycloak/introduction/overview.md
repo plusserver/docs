@@ -5,13 +5,13 @@ type: "docs"
 weight: 10
 ---
 
-## IAM Keycloak
+## IAM - Keycloak
 
 *IAM - Keycloak* ist eine Open-Source-Lösung für Identity und Access Management (IAM), die auf die Entwicklung moderner Anwendungen und Services ausgerichtet ist. Es ermöglicht die Verwaltung von Benutzern, Rollen und Berechtigungen sowie die sichere Authentifizierung und Autorisierung von Anwendungen. Keycloak unterstützt außerdem verschiedene Authentifizierungsmethoden wie OpenID Connect, OAuth 2.0 und SAML 2.0, bietet die Anbindung an LDAP und Active Directory, Integration mit Sozialen Netzwerken.
 
 ### Unterstützte Komponenten und Versionen
 
-| IAM Keycloak Komponenten | Version |
+| IAM - Keycloak Komponenten | Version |
 |--------------------------|---------|
 | Keycloak                 | 23      |
 | PostgreSQL DB            | 15      |
@@ -24,7 +24,7 @@ weight: 10
 
 **Skalierbarkeit:**
 
-- Vertikales Skalieren durch Anpassen der Instanzgrößen.
+- Vertikales Skalieren durch Anpassen der Instanzgrößen. (geplant)
 
 **Multi-AZ-Bereitstellung:**
 
