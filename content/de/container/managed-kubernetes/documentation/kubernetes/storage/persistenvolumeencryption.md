@@ -8,9 +8,9 @@ date: 2023-10-22
 
 # PersistentVolume Encryption
 
-When creating PersistentVolumes (PV) or PersistentVolumeClaims (PVC), you can specify the StorageClass "encrypted" to have the volume created on OpenStack with LUKS encryption.
+Beim Erstellen von PersistentVolumes (PV) oder PersistentVolumeClaims (PVC) können Sie die StorageClass "encrypted" angeben, damit das Volume auf OpenStack mit LUKS-Verschlüsselung erstellt wird.
 
-The following example manifest creates a Pod with a volumeMount and an associated PVC that uses the StorageClass:
+Das folgende Beispielmanifest erstellt einen Pod mit einem volumeMount und einem zugehörigen PVC, der die StorageClass verwendet:
 
 ```yaml
 apiVersion: v1
@@ -43,4 +43,4 @@ spec:
   storageClassName: encrypted
 ```
 
-In this example, the "encrypted" StorageClass ensures that the volume created on OpenStack is encrypted with LUKS.
+In diesem Beispiel sorgt die StorageClass "encrypted" dafür, dass das auf OpenStack erstellte Volume mit LUKS verschlüsselt wird.
