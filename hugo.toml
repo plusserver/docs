@@ -118,8 +118,8 @@ disable = false
 privacyEnhanced = false
 
 [params]
-copyright = "plusserver gmbh"
-privacy_policy = "https://www.plusserver.com/en/privacy-policy"
+copyright = "plusserver gmbh | LOLOLOL"
+privacy_policy = "https://www.plusserver.com/{{ .LanguagePrefix }}/privacy-policy"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
