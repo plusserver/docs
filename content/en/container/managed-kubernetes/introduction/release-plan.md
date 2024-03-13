@@ -27,7 +27,7 @@ This allows you to prepare for important updates in good time and ensure that yo
 | November | - | - | - |
 | December | 10.12.2024 | Standardchange | Standard Change - Kubernetes Patch Version |
 
-## AutoUpdate behaivior
+## AutoUpdate behavior
 
 **AutoUpdates:**
 
