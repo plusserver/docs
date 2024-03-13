@@ -1,23 +1,23 @@
 ---
-title: "Release Plan"
-linkTitle: "Release Plan"
+title: "Release-Plan"
+linkTitle: "Release-Plan"
 type: "docs"
 weight: 30
 date: 2024-03-12
 ---
 
-Mit diesem Releaseplan möchten wir Ihnen mehr Transparenz und Planungssicherheit im Hinblick auf bevorstehende Updates und Änderungen unserer Produkte und Services bieten. Der Plan beinhaltet eine Tabelle mit Datum, Art des Changes und relevanten Informationen.
+Mit diesem Release-Plan möchten wir Ihnen mehr Transparenz und Planungssicherheit im Hinblick auf bevorstehende Updates und Änderungen unserer Produkte und Services bieten. Der Plan beinhaltet eine Tabelle mit Datum, Art des Changes und relevanten Informationen.
 
 So können Sie sich frühzeitig auf wichtige Updates vorbereiten und sicherstellen, dass Ihre Systeme und Prozesse reibungslos funktionieren. Zusätzlich finden Sie Informationen zum Verhalten von AutoUpdates bei Enforced Upgrades. So haben Sie die volle Kontrolle und können selbst entscheiden, wann und wie Updates durchgeführt werden.
 
-## Releaseplan 2024
+## Release-Plan 2024
 
 | Month | exact. Date | Change Type | Change Reason |
 | --- | --- | --- | --- |
-| January | - | - | - |
-| February | 05.02.2024 | Change to PSKE Version 1.9.0 | - |
+| Januar | - | - | - |
+| Februar | 05.02.2024 | Change | [Release Note 1.9.0](https://docs.plusserver.com/container/managed-kubernetes/releasenotes/notes/1-9-0/) |
 | März | - | - | - |
-| April | 09.02.2024 | Standardchange | Standard Change - Kubernetes Patch Version |
+| April | tbd | Standardchange | Standard Change - Kubernetes Patch Version |
 | Mai | - | - | - |
 | Juni | 11.06.2024 | Standardchange | Standard Change - Kubernetes Patch Version |
 | Juli | - | - | - |
@@ -27,7 +27,7 @@ So können Sie sich frühzeitig auf wichtige Updates vorbereiten und sicherstell
 | November | - | - | - |
 | Dezember | 10.12.2024 | Standardchange | Standard Change - Kubernetes Patch Version |
 
-## Verhalten bei Autoupdates
+## Verhalten bei AutoUpdates
 
 **AutoUpdates:**
 - Aktiviert:
