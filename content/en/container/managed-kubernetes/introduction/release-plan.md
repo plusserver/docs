@@ -10,14 +10,14 @@ With this release plan, we would like to offer you more transparency and plannin
 
 This allows you to prepare for important updates in good time and ensure that your systems and processes run smoothly. You will also find information on the behavior of AutoUpdates during enforced upgrades. This gives you full control and allows you to decide for yourself when and how updates are carried out.
 
-## Releaseplan 2024
+## Release Plan 2024
 
 | Month | exact. Date | Change Type | Change Reason |
 | --- | --- | --- | --- |
 | January | - | - | - |
 | February | 05.02.2024 | Change | [Release Note 1.9.0](https://docs.plusserver.com/container/managed-kubernetes/releasenotes/notes/1-9-0/) |
 | March | - | - | - |
-| April | tbd | Standardchange | Standard Change - Kubernetes Patch Version |
+| April | tbd | Change | - |
 | May | - | - | - |
 | June | 11.06.2024 | Standardchange | Standard Change - Kubernetes Patch Version |
 | July | - | - | - |
