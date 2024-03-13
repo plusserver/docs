@@ -12,7 +12,7 @@ So können Sie sich frühzeitig auf wichtige Updates vorbereiten und sicherstell
 
 ## Release-Plan 2024
 
-| Month | exact. Date | Change Type | Change Reason |
+| Month | Datum | Change-Typ | Info |
 | --- | --- | --- | --- |
 | Januar | - | - | - |
 | Februar | 05.02.2024 | Change | [Release Note 1.9.0](https://docs.plusserver.com/container/managed-kubernetes/releasenotes/notes/1-9-0/) |

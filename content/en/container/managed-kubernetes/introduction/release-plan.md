@@ -12,7 +12,7 @@ This allows you to prepare for important updates in good time and ensure that yo
 
 ## Release Plan 2024
 
-| Month | exact. Date | Change Type | Change Reason |
+| Month | Date | Change Type | Info |
 | --- | --- | --- | --- |
 | January | - | - | - |
 | February | 05.02.2024 | Change | [Release Note 1.9.0](https://docs.plusserver.com/container/managed-kubernetes/releasenotes/notes/1-9-0/) |
