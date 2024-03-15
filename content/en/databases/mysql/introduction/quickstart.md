@@ -1,6 +1,6 @@
 ---
-title: "Quickstartguide"
-linkTitle: "Quickstartguide"
+title: "Quickstart guide"
+linkTitle: "Quickstart guide"
 type: "docs"
 weight: 30
 ---
@@ -69,7 +69,7 @@ We monitor our DBaaS by keeping an eye on both the underlying compute and storag
 
 ### Regions and AZ
 
-For information on choosing regions and availability zones, check the [Regions and AZ's](../../documentation/az/) document.
+For information on choosing regions and availability zones, check the [Regions and AZ's](../../../general/plusserver-region-az/) document.
 
 ### SLA
 

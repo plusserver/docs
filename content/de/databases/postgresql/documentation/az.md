@@ -7,7 +7,7 @@ type: "docs"
 
 ## Einführung
 
-plusserver bietet mehrere Regionen und Availability Zones (AZs) an, um Kunden Hochverfügbarkeits- und Disaster-Recovery-Optionen zu bieten. Jede AZ besteht aus einem oder mehreren Rechenzentren, die so konzipiert sind, dass sie unabhängig voneinander sind und im Falle von Ausfällen oder Katastrophen Redundanz bieten. Kunden können wählen, ob sie ihre Ressourcen in einer oder mehreren AZs für Hochverfügbarkeit und Disaster Recovery einsetzen wollen.
+ bietet mehrere Regionen und Availability Zones (AZs) an, um Kunden Hochverfügbarkeits- und Disaster-Recovery-Optionen zu bieten. Jede AZ besteht aus einem oder mehreren Rechenzentren, die so konzipiert sind, dass sie unabhängig voneinander sind und im Falle von Ausfällen oder Katastrophen Redundanz bieten. Kunden können wählen, ob sie ihre Ressourcen in einer oder mehreren AZs für Hochverfügbarkeit und Disaster Recovery einsetzen wollen.
 
 ## Was ist eine Region?
 
@@ -39,7 +39,7 @@ Eine Availability Zone (AZ) ist ein Standort innerhalb einer Region, der aus ein
 
 ## plusserver Regionen und Availability Zonen Liste
 
-In der folgenden Tabelle sind die von plusserver angebotenen Regionen und AZs aufgeführt
+In der folgenden Tabelle sind die von  angebotenen Regionen und AZs aufgeführt
 
 | Region   | Availability Zone | Standort            |
 |----------|-------------------|---------------------|

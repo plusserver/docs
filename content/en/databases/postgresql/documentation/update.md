@@ -6,9 +6,9 @@ type: "docs"
 
 ## Patching Procedure
 
-Our services undergoe routine patching once every week. The patching process typically runs during the early morning hours. This regular maintenance ensures that the service instances remains up-to-date with the latest security enhancements and software updates.
+Our services are routinely patched once a week. The patching process typically runs during the early morning hours. This regular maintenance ensures instances remain up-to-date with the latest security enhancements and software updates.
 
-Occasionally, during the patching process, there may be brief periods when the service is temporarily unreachable. This can occur when our host systems require system updates to be applied.
+Occasionally, during the patching process, there may be brief periods when the service is temporarily unreachable. This situation may arise if our host systems need to undergo software updates.
 
 ## Customizing Your Patch Schedule
 
@@ -17,7 +17,7 @@ We understand that downtime may not always be convenient for your operations. Th
 Simply provide us with the following information:
 
 - **Day of the Week:** Specify the day of the week that works best for your business, such as "Sunday."
-- **Start Time:** Choose the preferred time for patching to occur, for example, 4:15 A.M.
+- **Start Time:** Select the preferred time for patching, for example, 4:15 a.m.
 
 <br><br>
 

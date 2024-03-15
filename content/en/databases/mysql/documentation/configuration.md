@@ -1,12 +1,12 @@
 ---
-title: "Konfiguration"
-linkTitle: "Konfiguration"
+title: "Configuration"
+linkTitle: "Configuration"
 type: "docs"
 ---
 
-Die in der Tabelle aufgeführten Parameter stellen die spezifischen Konfigurationseinstellungen dar, die wir an die MariaDB-Standardkonfiguration anpassen. Diese Parameter sind auf die Anforderungen unserer Plattform zugeschnitten und werden sorgfältig ausgewählt, um Leistung und Zuverlässigkeit zu optimieren.
+The parameters listed in the table represent the specific configuration settings that we customize from the default configuration provided by MySQL. These parameters are tailored to suit our platform's requirements and are carefully selected to optimize performance and reliability.
 
-> **Hinweis:** Die mit einem Sternchen (*) gekennzeichneten Parameter werden dynamisch auf Grundlage der verfügbaren Rechenressourcen berechnet, um eine nahtlose vertikale Skalierung zu ermöglichen.
+> **Note:** Parameters marked with an asterisk (*) are dynamically calculated based on available compute resources, allowing for seamless vertical scaling.
 
 | **Parameter**                       | **Type** | **Default**                                                                                               | **Modifiable** | **Restart Required** | **Min** | **Max**             | **Allowed Values**                                                                                                                                                                                                                                                                                                                                                   |
 |-------------------------------------|----------|-----------------------------------------------------------------------------------------------------------|----------------|---------------------|---------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -41,21 +41,21 @@ Die in der Tabelle aufgeführten Parameter stellen die spezifischen Konfiguratio
 | table_open_cache*                  | integer  | 2000                                                                                                      | True           | True                | 1       | 1048576             |                                                                                                                                                                                                                                                                                                                                                                      |
 | tls_version                        | string   | TLSv1.2<br>TLSv1.3                                                                                        | True           | True                |         |                     |                                                                                                                                                                                                                                                                                                                                                                      |
 
-### Erläuterung der Tabelle
+### Column Explanation
 
-- **Parameter:** In dieser Spalte werden die Konfigurationsparameter aufgeführt.
-- **Type:** Gibt den Datentyp des Konfigurationsparameters an (z. B. Integer, String).
-- **Default:** Zeigt den Standardwert für jeden Parameter an.
-- Modifiable:** Zeigt an, ob der Parameter modifiziert werden kann (`true`/`false`).
-- **Restart Required:** Gibt an, ob ein Neustart des Servers erforderlich ist, damit Änderungen wirksam werden (`true`/`false`).
-- **Min:** Zeigt den minimal zulässigen Wert für numerische Parameter an.
-- **Max:** Zeigt den maximal zulässigen Wert für numerische Parameter an.
-- **Allowed Values:** Zeigt die zulässigen Werte für String-Parameter an.
-
-<br>
-
-**Für gewünschte Konfigurationsänderungen oder falls Sie einen noch nicht aufgeführten Parameter benötigen, eröffnen Sie bitte ein [Ticket](https://customerservice.plusserver.com/support/ticket-create).**
+- **Parameter:** This column lists the configuration parameters.
+- **Type:** Indicates the data type of the configuration parameter (e.g., integer, string).
+- **Default:** Displays the default value for each parameter.
+- **Modifiable:** Indicates whether the parameter can be modified (`true`/`false`).
+- **Restart Required:** Specifies whether a server restart is required for changes to take effect (`true`/`false`).
+- **Min:** Shows the minimum permissible value for numeric parameters.
+- **Max:** Displays the maximum permissible value for numeric parameters.
+- **Allowed Values:** Lists the values allowed for string parameters.
 
 <br>
 
->*Wir arbeiten an einer Funktion, mit der Sie Ihre DBaaS-Einstellungen direkt in unserem Kundenportal ändern können. Bis dahin danken wir Ihnen für Ihre Geduld, während wir unsere Dienste verbessern.*
+**For custom DBaaS configurations including parameters not listed above, please submit a [support ticket](https://customerservice.plusserver.com/support/ticket-create) to our team.***
+
+<br>
+
+*Please note that we are actively working on implementing a feature in our customer portal that will allow you to modify your DBaas configuration directly. However, this feature is not yet available. We appreciate your patience and understanding as we continue to enhance our services.*

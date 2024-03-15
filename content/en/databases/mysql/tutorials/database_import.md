@@ -17,7 +17,7 @@ Importing a MySQL dump involves a few key steps to ensure the data is accurately
 
 Ensure the MySQL dump file is ready. This file typically has a `.sql` extension and contains SQL statements needed to recreate the database.
 
-### Import the Dump FIle
+### Import the Dump File
 
 Execute the following command to import the SQL dump. You will be prompted to enter the password for *db_username* after executing the command.
 

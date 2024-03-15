@@ -7,9 +7,9 @@ weight: 10
 
 ## Database as a Service - MariaDB
 
-Database-as-a-Service (DBaaS) ist eine Sammlung von vollständig automatisierten Microservices, die in der Cloud gehostet werden. Dieses Servicemodell ermöglicht es Anwendern, sich auf die Entwicklung und Optimierung ihrer Anwendungen zu konzentrieren, ohne sich um die Administration der zugrunde liegenden Systeme  kümmern zu müssen. PlusServer übernimmt die Verantwortung für die Überwachung der Infrastruktur und garantiert hohe Verfügbarkeit, Skalierbarkeit und Sicherheit für Ihre Datenbanken. Das Pay-as-you-go-Modell stellt sicher, dass Sie nur für die Ressourcen zahlen, die Sie auch nutzen, und verbessert so die Flexibilität und Kosteneffizienz.
+Database-as-a-Service (DBaaS) ist eine Sammlung von vollständig automatisierten Microservices, die in der Cloud gehostet werden. Dieses Servicemodell ermöglicht es Anwendern, sich auf die Entwicklung und Optimierung ihrer Anwendungen zu konzentrieren, ohne sich um die Administration der zugrunde liegenden Systeme  kümmern zu müssen. *plusserver* übernimmt die Verantwortung für die Überwachung der Infrastruktur und garantiert hohe Verfügbarkeit, Skalierbarkeit und Sicherheit für Ihre Datenbanken. Das Pay-as-you-go-Modell stellt sicher, dass Sie nur für die Ressourcen zahlen, die Sie auch nutzen, und verbessert so die Flexibilität und Kosteneffizienz.
 
-### Unterstützte MariaDB Versionen
+### Unterstützte MariaDB-Versionen
   
 | Datenbank | Version |
 |-------------|---------|
@@ -45,4 +45,4 @@ Database-as-a-Service (DBaaS) ist eine Sammlung von vollständig automatisierten
 
 **Multi-AZ-Bereitstellung:**
 
-- Konfigurierbar für Multi-AZ-Einsätze für mehr Verfügbarkeit.
+- Konfigurierbar für Multi-AZ-Einsätze (Availability Zones) für mehr Verfügbarkeit.
