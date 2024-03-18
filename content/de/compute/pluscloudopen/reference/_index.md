@@ -5,7 +5,7 @@ type: "docs"
 weight: 2
 date: 2023-02-21
 description: >
-  Dokumentation zur Arbeit mit verschiedenen Funktionen von pluscloud open
+  Erläuterungen zu verschiedenen Funktionen der pluscloud open
 ---
 
 In diesem Bereich unserer Dokumentation wollen wir Ihnen Wissen über die verschiedenen Aspekte der Selfservice-Features von pluscloud open vermitteln. Zu diesen Features gehören die Verwaltung verschiedener Netzwerk-Features (wie Subnetze, Loadbalancer, öffentliche und private IP-Adressen und Firewall-Regeln), Storage (wie Volumes und Snapshots) sowie virtuelle Maschinen.

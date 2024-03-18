@@ -1,10 +1,10 @@
 ---
 title: "Umgebungen"
 type: "docs"
-weight: 20
+weight: 10
 date: 2023-03-10
 description: >
-  Zugriff, URLs, OpenStack CLI Einrichtung, Terraform Provider, Ansible Collections
+  Öffentliche pluscloud open Umgebungen, UI/API-Endpunkte, OpenStack CLI Einrichtung, Terraform Provider, Ansible Collections
 ---
 
 # Was ist eine pluscloud open Umgebung?

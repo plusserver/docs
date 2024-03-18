@@ -4,7 +4,7 @@ type: "docs"
 weight: 30
 Datum: 2023-03-10
 description: >
-  Storage Optionen in der pluscloud open
+  Storage-Optionen in der pluscloud open
 ---
 
 # Welche Optionen bietet die pluscloud open für Storage?
