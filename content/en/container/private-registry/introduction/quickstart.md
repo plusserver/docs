@@ -1,6 +1,6 @@
 ---
-title: "Quickstartguide"
-linkTitle: "Quickstartguide"
+title: "Quickstart guide"
+linkTitle: "Quickstart guide"
 type: "docs"
 weight: 30
 ---
@@ -17,7 +17,7 @@ The order process is done and your *Private Registry - Harbor* instance is up an
 
 ### Use your Private Registry
 
-Enjoy your *Private Registry - Harbor*. No admin worries—just login to the Webinterface and go.
+Enjoy your *Private Registry - Harbor*. No admin worries—just login to the web interface and go.
 
 ## Customizations
 
@@ -60,8 +60,8 @@ We monitor your *Private Registry - Harbor* by keeping an eye on both the underl
 
 ### Regions and AZ
 
-For information on choosing regions and availability zones, check the [Regions and AZ's](../../documentation/az/) document.
+For information on choosing regions and availability zones, check the [Regions and AZ's](../../../general/plusserver-region-az/) document.
 
 ### SLA
 
-The infrastructure is fully redundant. We therefore guarantee an SLA of 99.95.
+The infrastructure is fully redundant. We therefore guarantee an SLA of 99.95 percent.

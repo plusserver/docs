@@ -7,7 +7,7 @@ weight: 10
 
 ## Database as a Service - PostgreSQL
 
-Database-as-a-Service (DBaaS) represents a suite of fully managed microservices hosted in the cloud, designed to streamline database management by automating administrative tasks. This service model enables users to concentrate on developing and optimizing their applications without the burden of managing underlying database infrastructure. PlusServer takes on the responsibility of overseeing the infrastructure, guaranteeing high availability, scalability, and security for your databases. The pay-as-you-go model ensures you only pay for the resources you use, improving flexibility and cost efficiency.
+Database-as-a-Service (DBaaS) represents a suite of fully managed microservices hosted in the cloud, designed to streamline database management by automating administrative tasks. This service model enables users to concentrate on developing and optimizing their applications without the burden of managing underlying database infrastructure. *plusserver* takes on the responsibility of overseeing the infrastructure, guaranteeing high availability, scalability, and security for your databases. The pay-as-you-go model ensures you only pay for the resources you use, improving flexibility and cost efficiency.
 
 ### Supported PostgreSQL Versions
 
@@ -20,7 +20,7 @@ Database-as-a-Service (DBaaS) represents a suite of fully managed microservices 
 
 **Fully Automated Service:**
 
-- Handles software installation, patching, backup and backup-restore.
+- *plusserver* handles software installation, patching, backup and backup-restore.
 
 **Scalability:**
 
@@ -45,4 +45,4 @@ Database-as-a-Service (DBaaS) represents a suite of fully managed microservices 
 
 **Multi-AZ Deployment:**
 
-- Configurable for Multi-AZ deployments for more availability.
+- Configurable for Multi-AZ (Availability Zones) deployments.

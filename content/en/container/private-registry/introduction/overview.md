@@ -19,7 +19,7 @@ weight: 10
 
 **Vulnerability Scanning:**
 
-- Integrated security scanner to ensure scure images before deployment.
+- Integrated security scanner to ensure secure images before deployment.
 
 **Content Trust:**
 
@@ -49,7 +49,7 @@ weight: 10
 
 **Fully Automated Service:**
 
-- Handles software installation and Software Updates.
+- Handles software installation and updates.
 
 **Scalability:**
 
@@ -65,4 +65,4 @@ weight: 10
 
 **Multi-AZ Deployment:**
 
-- Configurable for Multi-AZ deployments for more availability.
+- Configurable for Multi-AZ (Availability Zones) deployments.

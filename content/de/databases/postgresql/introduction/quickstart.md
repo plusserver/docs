@@ -9,7 +9,7 @@ weight: 30
 
 ### Bestellung
 
-Sie brauchen schnell eine Datenbank? Dann führen wir Sie durch den Bestellvorgang [hier](../../tutorials/ordering/).
+Sie brauchen schnell eine Datenbank? Dann führen wir Sie [hier](../../tutorials/ordering/) durch den Bestellvorgang.
 
 ### Anmeldedaten abrufen
 
@@ -33,7 +33,7 @@ Genießen Sie unseren Datenbank-as-a-Service. Keine Verwaltungssorgen - einfach 
 
 Es gibt zwei Möglichkeiten, unsere DBaaS zu skalieren.
 
-- Vertikale Skalierung: Zuallererst können Sie die *Knotengröße* Ihrer DBaaS-Instanz ändern. Alle verfügbaren Optionen werden [hier] erläutert (../../documentation/nodesize/).
+- Vertikale Skalierung: Zuallererst können Sie die *Knotengröße* Ihrer DBaaS-Instanz ändern. Alle verfügbaren Optionen werden [hier](../../documentation/nodesize/) erläutert.
 
 - Horizontale Skalierung: Zweitens können Sie [Read-Replicas](../../documentation/read_replicas/) zu Ihrer DBaaS hinzufügen. Wenn Ihre Anwendung in der Lage ist, Lese-/Schreiboperationen zu verteilen, kann diese Funktion die Reaktionsfähigkeit des Systems insgesamt stark verbessern.
 
@@ -53,7 +53,7 @@ Stellen Sie sicher, dass Sie nur bekannte Quell-IP-Adressen zulassen, die Ihre A
 
 Wir verlangen eine sichere, verschlüsselte Kommunikation zwischen dem Kunden/der Anwendung und unserem DBaaS. Selbst wenn jemand den Netzwerkverkehr abfängt, kann er die Daten nicht sehen.
 
-Wenn Sie Zertifizierungsfehler erhalten, stellen Sie sicher, dass die erforderlichen Let's Encry (Zwischen-)Zertifikate auf dem zugreifenden System verfügbar sind. [Let's Encrypt-Zertifikate](https://letsencrypt.org/certificates/)
+Wenn Sie Zertifizierungsfehler erhalten, stellen Sie sicher, dass die erforderlichen [Let's Encrypt-(Zwischen)-Zertifikate](https://letsencrypt.org/certificates/) auf dem zugreifenden System verfügbar sind.
 
 ### Sicherung und Wiederherstellung
 
@@ -73,4 +73,4 @@ Informationen zur Auswahl von Regionen und Verfügbarkeitszonen finden Sie im Do
 
 ### SLA
 
-Die Infrastruktur ist vollständig redundant. Wir garantieren daher ein SLA von 99,95.
+Die Infrastruktur ist vollständig redundant. Wir garantieren daher ein SLA von 99,95 Prozent.

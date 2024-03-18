@@ -1,6 +1,6 @@
 ---
-title: "Datenbank Import"
-linkTitle: "Datenbank Import"
+title: "Datenbank-Import"
+linkTitle: "Datenbank-Import"
 type: "docs"
 ---
 

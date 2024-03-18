@@ -106,7 +106,7 @@ The parameters listed in the table represent the specific configuration settings
 
 <br>
 
-**If you need to customize your DBaas configuration or you need to change a parameter that is not listet, please [open a ticket](https://customerservice.plusserver.com/support/ticket-create) with our support team.**
+**For custom DBaaS configurations including parameters not listed above, please submit a [support ticket](https://customerservice.plusserver.com/support/ticket-create) to our team.**
 
 <br>
 

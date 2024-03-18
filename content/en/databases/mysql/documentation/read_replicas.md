@@ -13,9 +13,9 @@ To establish a DBaaS Read Replica, the system utilizes a filesystem snapshot fro
 
 ## Limitations
 
-- Read Replicas are available for DBaas MariaDB, MySQL and PostrgeSQL.  
+- Read Replicas are available for DBaas MariaDB, MySQL and PostgreSQL.  
 - You can create a maximum of three additional read replicas per DBaaS.
-- Compute ressources and the data storage needs to be equal to the origin DBaaS.
+- Compute ressources and data storage size needs to be equal to the origin DBaaS.
 - It is not possible to convert a secondary server into a primary server to enable write access.
 - Cascading configurations, where a secondary server acts as a source for another secondary server, are not supported.
 

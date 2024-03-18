@@ -8,9 +8,9 @@ date: 2023-03-14
 
 
 
-### Customer portal
+### CloudHub
 
-You always start in our [customer portal](https://customerservice.plusserver.com)
+You always start in our [CloudHub.](https://customerservice.plusserver.com)
 
 ### Select Private Registry
 
@@ -26,7 +26,7 @@ Select Harbor here.
 
 ### Select the Nodesize
 
-Now select the size or performance. You do not yet know what performance you need? Then select the smallest node and scale up later if necessary
+Now select the size or performance. You do not yet know what performance you need? Then select the smallest node and scale up later if necessary.
 
 ![Selection Nodesize](/images/content/04-msl/en/private_registry/ordering/3-cloud_service_priv_reg-size.png)
 
@@ -38,7 +38,7 @@ You always start with at least 50GB memory for your data.
 
 ### Determine your trusted sources
 
-The service is accessible via a public IP. As this is freely available from the Internet and could potentially be "attacked" by anyone, we intially block all access to the service. The mere protection provided by an encrypted connection with a user name and password is not sufficient. It is therefore necessary to specify the trusted sources from which the DBaaS should be accessible
+The service is accessible via a public IP. As this is freely available from the Internet and could potentially be "attacked" by anyone, we intially block all access to the service. The mere protection provided by an encrypted connection with a user name and password is not sufficient. It is therefore necessary to specify the trusted sources from which the Private Registry should be accessible.
 You must enable access from one or more external addresses or address ranges here. Ideally, only the one IP from which the service is used is enabled here. In this example IP 123.123.123.123/32 and subnet 222.222.222.128/28 will be added to the trusted sources.
 
 ![Setting up external access](/images/content/04-msl/en/private_registry/ordering/5-selection-trusted-sources.png)
@@ -49,15 +49,15 @@ Here you can select the [region](../../documentation/az/) where the harbor insta
 
 ![Selecting the region](/images/content/04-msl/en/private_registry/ordering/6-selection_region.png)
 
-### Select billing profile
+### Select invoice profile
 
-Are you a new Plusserver customer and do not yet receive an invoice? Then select *New billing profile*. If you are already a customer, you can choose from existing billing profiles on which you will receive future invoices for the service instance.
+Are you a new *plusserver* customer and do not yet receive an invoice? Then select *New invoice profile*. If you are already a customer, you can choose from existing invoice profiles on which you will receive future invoices for the service instance.
 
 ![Select invoice profile](/images/content/04-msl/en/private_registry/ordering/7-selection-invoice-profile.png)
 
 ### Place the order
 
-Please check the data you have entered in the summary. Please read the terms and conditions and agreements and confirm them. Only then can you complete the order by clicking on ***order now***
+Please use the summary to check the data you have entered. Then read and agree to all provided documents. Only then can you complete the order by clicking on **Place Order now**.
 
 ![Order summary](/images/content/04-msl/en/private_registry/ordering/8-order-overview.png)
 
@@ -68,6 +68,6 @@ You will be redirected to [Order status](https://customerservice.plusserver.com/
 * new: Status directly after the order
 * processing: Status as soon as automatic provision has started
 * failed: Unfortunately something has gone wrong, please open a [ticket](https://customerservice.plusserver.com/support/ticket-create) here in the portal so that we can help you as quickly as possible.
-* DONE: Congratulations, your DBaaS instance is available
+* DONE: Congratulations, your Private Registry instance is available.
 
 ![Order successfully completed](/images/content/04-msl/en/private_registry/ordering/10-order_status.png)

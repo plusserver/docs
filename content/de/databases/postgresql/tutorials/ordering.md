@@ -9,7 +9,7 @@ weight: 20
 
 ### Kundenportal
 
-Sie starten immer in unserem [Kundenportal](https://customerservice.plusserver.com)
+Sie starten immer in unserem [Cloudhub.](https://customerservice.plusserver.com)
 
 ### Auswahl Datenbanken
 
@@ -25,7 +25,7 @@ Wählen Sie Ihre gewünschte DBaaS aus.
 
 ### Auswahl Nodesize
 
-Wählen Sie nun die Größe bzw. Leistungsfähigkeit aus. Sie wissen noch nicht welche Leistung Sie benötigen? Dann wählen Sie die kleinste Node und skallieren bei Bedarf später.
+Wählen Sie nun die Größe bzw. Leistungsfähigkeit aus. Sie wissen noch nicht welche Leistung Sie benötigen? Dann wählen Sie die kleinste Node und skalieren bei Bedarf später.
 
 ![Selection Nodesize](/images/content/04-msl/de/databases/ordering/3-selection-node-size.png)
 
@@ -37,7 +37,7 @@ Sie starten immer mit mindestens 50GB Speicher für Ihre Daten.
 
 ### Freischalten des Zugriffs
 
-Der Service ist über eine öffentliche IP erreichbar. Da diese frei aus dem Internet verfügbar ist und potentiell jedem "angegriffen" werden könnte, sperren wir intial jeglichen Zugriff auf den Service. Der reine Schutz durch eine verschlüsselte Verbindung mit Benutzername und Passwort ist nicht ausreichend. Deswegen muss dediziert angegeben werden, von welchen vertrauenswürdigen Quellen die DBaaS zugreifbar sein soll. Sie müssen hier den Zugriff von einer oder mehrer externen Adressen oder Adressbereichen freischalten. Idealerweise ist hier nur die eine IP freigegeben, von der der Service genutzt wird.
+Der Service ist über eine öffentliche IP erreichbar. Da diese frei aus dem Internet verfügbar ist und potentiell von jedem "angegriffen" werden könnte, sperren wir intial jeglichen Zugriff auf den Service. Der reine Schutz durch eine verschlüsselte Verbindung mit Benutzername und Passwort ist nicht ausreichend. Deswegen muss dediziert angegeben werden, von welchen vertrauenswürdigen Quellen auf die DBaaS zugegriffen werden kann. Sie müssen hier den Zugriff von einer oder mehreren externen Adressen oder Adressbereichen freischalten. Idealerweise ist hier nur die eine IP freigegeben, von der der Service genutzt wird.
 
 ![Externen Zugriff einrichten](/images/content/04-msl/de/databases/ordering/5-selection-trusted-sources.png)
 
@@ -45,19 +45,19 @@ Der Service ist über eine öffentliche IP erreichbar. Da diese frei aus dem Int
 
 Hier können Sie die [Region](../documentation/az/) auswählen, in der der Dienst bereitgestellt werden soll.
 
-[Auswahl der Region](/images/content/04-msl/de/databases/ordering/6-selection_region.png)
+![Auswahl der Region](/images/content/04-msl/de/databases/ordering/6-selection_region.png)
 
 ### Auswahl des Abrechnungsprofils
 
-Sie sind neuer Kunde bei Plusserver und bekommen noch keine Rechnung? Dann wählen Sie ***Neues Rechnungsprofil***. Sind Sie bereits Kunde: Dann können Sie aus bereits bestehenden Rechnungsprofilen wählen und bekommen den neuen DBaaS mit auf eine bestehende Rechnung, diese müssen Sie dann auswählen.
+Sie sind neuer Kunde bei *plusserver* und bekommen noch keine Rechnung? Dann wählen Sie ***Neues Rechnungsprofil***. Sind Sie bereits Kunde: Dann können Sie aus bereits bestehenden Rechnungsprofilen wählen und bekommen den neuen DBaaS mit auf eine bestehende Rechnung, die Sie im nächsten Schritt auswählen.
 
 ![Rechnungsprofil auswählen](/images/content/04-msl/de/databases/ordering/7-selection-invoice-profile.png)
 
 ### Bestellung aufgeben
 
-Prüfen Sie bitte über die Zusammenfassung Ihre eingegeben Daten. Lesen Sie bitte die Bestimmungen und Vereinbarungen und bestätigen diese. Erst danach können Sie die Bestellung mit dem Kopf ***jetzt kostenpflichtig bestellen*** abschließen.
+Prüfen Sie bitte über die Zusammenfassung Ihre eingegeben Daten. Lesen Sie bitte die Bestimmungen und Vereinbarungen und bestätigen diese. Erst danach können Sie die Bestellung mit dem Button ***jetzt kostenpflichtig bestellen*** abschließen.
 
-[Zusammenfassung der Bestellung](/images/content/04-msl/de/databases/ordering/8-order-overview.png)
+![Zusammenfassung der Bestellung](/images/content/04-msl/de/databases/ordering/8-order-overview.png)
 
 ### Bestellstatus verfolgen
 
