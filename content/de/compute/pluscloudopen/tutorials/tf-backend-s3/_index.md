@@ -4,7 +4,7 @@ title: "OpenStack Object Storage als Backend für Terraform Statefiles"
 type: "docs"
 date: 2023-03-14
 description: >
-  Verwalten Sie Ihre Infrastruktur "as Code" (IaC) mit Hashicorp Terraform und nutzen Sie OpenStack Object Storage als Backend
+  Verwalten Sie Ihre Infrastruktur "als Code" (IaC) mit Hashicorp Terraform und nutzen Sie OpenStack Object Storage als Backend
 ---
 
 ## Erzeugen Sie sich Ihre S3-Zugangsdaten
