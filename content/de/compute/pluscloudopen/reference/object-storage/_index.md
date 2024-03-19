@@ -1,5 +1,5 @@
 ---
-title: "Objektstorage"
+title: "Object Storage"
 type: "docs"
 weight: 60
 date: 2023-02-24

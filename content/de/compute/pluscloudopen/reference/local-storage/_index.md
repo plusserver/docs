@@ -1,10 +1,10 @@
 ---
-title: "Lokaler SSD-Speicher"
+title: "Lokaler SSD Storage"
 type: "docs"
 weight: 60
 date: 2024-02-09
 description: >
-  Lokalen SSD-Speicher verwenden
+  Local SSD Storage verwenden
 ---
 
 

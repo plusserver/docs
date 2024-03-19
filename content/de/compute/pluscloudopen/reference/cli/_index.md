@@ -4,7 +4,7 @@ type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Arbeiten mit dem OpenStack-Client auf dem CLI
+  Arbeiten mit dem OpenStackClient auf dem Command Line Interface (CLI)
 ---
 ## Openstack Client Beispiele
 

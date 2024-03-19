@@ -1,10 +1,10 @@
 ---
-title: "Netzwerke, Loadbalancer, Floating IPs und Sicherheitsgruppen"
+title: "Netzwerke, Load Balancer, Floating IPs und Sicherheitsgruppen"
 type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Netzwerke erstellen, Loadbalancer, Floating IPs und Sicherheitsgruppen verwenden 
+  Netzwerke erstellen, Load Balancer, Floating IPs und Sicherheitsgruppen verwenden 
 ---
 ## Vernetzung
 Um Ihnen die Arbeit zu erleichtern, werden neue Projekte in pluscloud open mit einem vorkonfigurierten Netzwerk-Setup erstellt, das ein privates Netzwerk und einen Router enthält, der dieses private Netzwerk mit dem Internet verbindet. Die gesamte Netzwerkkonfiguration in Horizon wird über das Menü "Netzwerk" vorgenommen.
