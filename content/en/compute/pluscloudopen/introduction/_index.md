@@ -5,6 +5,6 @@ type: "docs"
 weight: 1
 date: 2023-02-21
 description: >
-  Information about pluscloud open.
+  Everything you need for a perfect start with your pluscloud open 
 ---
-Here you have quick access to information regarding pluscloud open facts like Environments, Flavors and Images as well as prices.
+Here you have quick access to information about pluscloud open facts such as environments, flavors and images.

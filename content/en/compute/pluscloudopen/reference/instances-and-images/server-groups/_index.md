@@ -1,10 +1,10 @@
 ---
-title: "Server Groups"
+title: "Server groups"
 type: "docs"
 weight: 60
 date: 2024-02-09
 description: >
-  Using Server Groups to apply (Anti-)Affinity
+  Using server groups to apply (anti-)affinity
 ---
 
 ## Overview

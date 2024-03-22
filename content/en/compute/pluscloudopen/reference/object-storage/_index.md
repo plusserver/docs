@@ -4,7 +4,7 @@ type: "docs"
 weight: 60
 date: 2023-02-24
 description: >
-  Manage containers and objects
+  Managing containers and objects
 ---
 
 ## Overview

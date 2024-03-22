@@ -4,7 +4,7 @@ type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Working with the OpenStack client on the CLI
+  Working with OpenStackclient on the CLI
 ---
 ## Openstack Client Examples
 
