@@ -1,6 +1,6 @@
 ---
-title: "Persistent Volume Encryption"
-linkTitle: "Persistent Volume Encryption"
+title: "PersistentVolume Encryption"
+linkTitle: "PersistentVolume Encryption"
 type: "docs"
 weight: 20
 date: 2023-10-22

@@ -10,14 +10,15 @@ description: >
 
 With the HybridConnector, you can network-connect your existing environments hosted at plusserver with your Kubernetes cluster.
 
-Provisioning/Deprovisioning the HybridConnector
-To do this, open a ticket with the following information:
+## Provisioning/Deprovisioning the HybridConnector
+
+Open a support ticket in your CloudHub providing the following details:
 
 1. Name of the Kubernetes Cluster
    - You can find this in the Gardener Dashboard under Clusters.
 
-2. Name of the Existing Environment
-   - Domain Name
+2. Name of the existing environment
+   - Domain name
    - You can find this in the Gardener Dashboard under Secrets.
 
 3. Tenant Name

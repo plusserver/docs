@@ -1,6 +1,6 @@
 ---
-title: "PSKE - Cluster hibernation"
-linkTitle: "Cluster hibernation"
+title: "PSKE - Cluster-Hibernation"
+linkTitle: "Cluster-Hibernation"
 type: "docs"
 weight: 20
 date: 2023-02-21
@@ -20,7 +20,7 @@ Mit der Funktion "Hibernation" werden die folgenden PSKE-Cluster-Komponenten her
 
 Ausgenommen hiervon sind Floating IP-Adressen, Load Balancer und Persistent Volumes, für die weiterhin Gebühren anfallen.
 
-Da die Daten der Control Plane persistent gespeichert werden und wir weiterhin Rechenressourcen für den Cluster reservieren, wird die Stunde des Clusters weiterhin in Rechnung gestellt.
+Da die Daten der Control Plane persistent gespeichert werden und wir weiterhin Rechenressourcen für den Cluster reservieren, wird die Clusterstunde weiterhin in Rechnung gestellt.
 
 ## Wake-Up
 
@@ -62,7 +62,7 @@ Wenn Sie Ihren PSKE-Cluster automatisiert in den Ruhezustand versetzen wollen, k
 
 ![3](/images/content/02-pske/10-clusterinteraction/cluster-hibernation/3.png)
 
-Sie können eine oder mehrere Hibernation Schedule Tasks konfigurieren. Legen Sie dazu unter (1) einen neuen PSKE-Cluster an und scrollen Sie bis zum Ende der Seite. Konfigurieren Sie unter (2) die Wochentage, Start- und Endpunkte und auch ohne Startpunkt (Wake up at). Sie können auch zusätzliche Hibernation Schedule-Aufgaben erstellen (3) und die Erstellung des PSKE-Clusters mit (4) abschließen.
+Sie können eine oder mehrere Hibernation Schedule Tasks konfigurieren. Legen Sie dazu unter (1) einen neuen PSKE-Cluster an und scrollen Sie bis zum Ende der Seite. Konfigurieren Sie unter (2) die Wochentage, Start- und Endpunkte. Der Endpunkt für die Hibernation (Wake up at) kann auch frei gelassen werden. Sie können auch zusätzliche Hibernation Schedule-Aufgaben erstellen (3) und die Erstellung des PSKE-Clusters mit (4) abschließen.
 
 #### Vorhandener PSKE-Cluster
 
@@ -70,7 +70,7 @@ Wählen Sie den entsprechenden PSKE-Cluster unter (1) aus und klicken Sie auf de
 
 ![4](/images/content/02-pske/10-clusterinteraction/cluster-hibernation/4.png)
 
-![5](/images/content/02-pske/10-cluster-interaction/cluster-hibernation/5.png)
+![5](/images/content/02-pske/10-clusterinteraction/cluster-hibernation/5.png)
 
 Über (1) können Sie die Wochentage, Start- und Endzeitpunkte und auch ohne Startzeitpunkt (Wake up at) konfigurieren. Sie können auch zusätzliche Hibernation Schedule-Aufgaben erstellen (2) und die Erstellung von Hibernation Schedule-Aufgaben für den ausgewählten PSKE-Cluster mit (3) speichern.
 

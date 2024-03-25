@@ -8,7 +8,7 @@ date: 2023-02-21
 
 HPA (Horizontal Pod Autoscaler) is a form of automatic scaling where the number of pods in a Replication Controller, Deployment, Replica Set, or Stateful Set is adjusted based on various metrics such as RAM and CPU usage, time of day, or traffic on a load balancer. The scaling is horizontal, meaning it affects the number of instances rather than the resources assigned to an individual pod.
 
-HPA can make scaling decisions based on custom or externally provided metrics (e.g., via Prometheus) and operates automatically after initial configuration. You only need to set the MIN and MAX number of replicas.
+HPA can make scaling decisions based on custom or externally provided metrics (e.g., via Prometheus) and operates automatically after initial configuration. You only need to set the minimum and maximum number of replicas.
 
 After configuration, the Horizontal Pod Autoscaler Controller periodically checks the metrics and scales the pods up or down accordingly. By default, HPA checks the metrics every 15 seconds.
 
@@ -27,9 +27,9 @@ In detail, the process works as follows:
 1. HPA monitors the specified metrics in the configuration (typically every 15 seconds).
 2. Based on the collected metrics, HPA calculates the desired number of replicas required.
 3. HPA scales the pod up or down to the desired number of replicas if necessary.
-4. Since HPA continuously monitors, the process repeats from step 1.
+4. Since the HPA is constantly monitoring, the process is repeated from step 1.
 
-For more details on the algorithm, you can refer to this link: [Details zum Algorithmus](https://kubernetes.io/de/docs/tasks/run-application/horizontal-pod-autoscale/#details-zum-algorithmus).
+For more details on the algorithm, you can refer to this link: [Details zum Algorithmus](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/).
 
 ## Limitations of the Horizontal Pod Autoscaler
 
@@ -37,13 +37,13 @@ While HPA is a powerful tool, it's not ideal for every use case and may not solv
 
 - HPA works only with stateless applications capable of replication or Stateful Sets that allow for persistence.
 - HPA doesn't work with Daemon Sets.
-- If the limits for pod metrics are not efficiently set, it may frequently terminate pods or waste resources.
+- If the limits for pod metrics are not set efficiently, pods may be terminated frequently or resources may be wasted.
 - HPA cannot be used in conjunction with VPA (Vertical Pod Autoscaler) based on the same metrics.
 - HPA cannot scale if the total cluster capacity is exhausted until new nodes are added to the cluster.
 
 ## How to Use HPA?
 
-To use HPA, you need to create a Kubernetes resource of type HorizontalPodAutoscaler. In this resource, you specify the deployment or Replica Controller to scale, the minimum and maximum number of replicas, and the target resource utilization or custom metrics.
+To use HPA, you need to create a Kubernetes resource of the type HorizontalPodAutoscaler. In this resource, you specify the deployment or Replica Controller to scale, the minimum and maximum number of replicas, and the target resource utilization or custom metrics.
 
 Here's an example configuration for HPA scaling based on Kubernetes metrics:
 
@@ -96,17 +96,17 @@ spec:
 ## Testing
 There are several ways to test the Kubernetes Horizontal Pod Autoscaler (HPA), including using Prometheus metrics as a basis.
 
-1. Using a Load Testing Tool:
+1. Using a load testing tool:
    One way to test the HPA is to use a load testing tool like Apache JMeter or Gatling to generate load on an application. You can observe how the HPA responds by increasing or decreasing the number of replicas based on pod resource usage.
 
 2. Using the Kubernetes "kubectl" Command:
    You can use "kubectl" to manually increase or decrease the number of pod replicas and observe how the HPA reacts. For example, you can use "kubectl scale" to increase the number of replicas of a deployment or Replica Controller.
 
 3. Simulating High Load Using Prometheus:
-   If you're using HPA with Prometheus metrics, you can artificially increase this metric. By using Prometheus itself to simulate high load, you can create or modify a metric that rapidly increases or decreases. Then, you can observe how the HPA responds to the change.
+   If you use HPA with Prometheus metrics, you can artificially increase this metric. By using Prometheus itself to simulate high load, you can create or modify a metric that rapidly increases or decreases. Then, you can observe how the HPA responds to the change.
 
 ## Simultaneous Use of HPA and VPA
-HPA and VPA can conflict with each other, for example, if you use RAM as the base metric for scaling in both. This can lead to both trying to scale workloads vertically and horizontally simultaneously, resulting in unpredictable consequences. To avoid such conflicts, it is best practice for HPA and VPA to focus on different metrics.
+HPA and VPA can conflict with each other, for example, if you use RAM as the base metric for scaling in both. This can lead to both attempting to scale workloads vertically and horizontally at the same time, with unpredictable results. To avoid such conflicts, it is best practice for HPA and VPA to focus on different metrics.
 
 Typically, VPA is configured to scale based on CPU or RAM, and custom metrics are used for HPA.
 

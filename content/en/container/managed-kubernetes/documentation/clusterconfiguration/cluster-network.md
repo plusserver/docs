@@ -6,8 +6,6 @@ weight: 20
 date: 2023-02-21
 ---
 
-# Cluster Networking
-
 This document contains network related information for Shoot clusters.
 
 ## Defaults
@@ -24,7 +22,7 @@ spec:
 
 ## Pod / Service Network
 
-A Pod / Service network is imperative for any kind of cluster communication with Pods not started within the Node's host network.
+A Pod / Service network is imperative for any kind of cluster communication with Pods not started within the node's host network.
 More information about the Kubernetes network model can be found in the [Cluster Networking](https://kubernetes.io/docs/concepts/cluster-administration/networking/) topic.
 
 Gardener allows users to configure the Pod network's CIDR during Shoot creation:
@@ -70,7 +68,7 @@ Pod network: 100.96.0.0/20
 nodeCIDRMaskSize: /24
 -------------------------
 
-Number of podCIDRs: 16 --> max. Node count 
+Number of podCIDRs: 16 --> max. node count 
 Number of IPs per podCIDRs: 256
 ```
 

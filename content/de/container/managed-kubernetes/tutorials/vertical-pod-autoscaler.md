@@ -8,10 +8,10 @@ date: 2023-02-21
 
 Das folgende Beispiel demonstriert die Bereitstellung einer Anwendung auf der Grundlage eines öffentlich verfügbaren Abbilds. Dieses Beispiel veranschaulicht, wie der VPA auf Änderungen des Anwendungsstatus reagiert.
 
-## 1) Bereitstellung eines Clusters
+## 1. Bereitstellung eines Clusters
 Zunächst sollten Sie einen Kubernetes-Cluster bereitstellen.
 
-## 2) Installieren der VPA
+## 2. Installieren der VPA
 Anders als die HPA muss die VPA separat installiert werden. Dies kann mit Hilfe des Repositorys https://github.com/kubernetes/autoscaler durchgeführt werden.
 
 ### Klonen des Repositorys
@@ -184,7 +184,7 @@ pod "load-simulation" deleted
 ```
 
 {{< alert title="Wichtig!" >}}
-WICHTIG! Die Standard-Ramp-Down-Zeit beträgt 5 Minuten. Das bedeutet, dass eine Verringerung der Last erst nach ca. 5 Minuten (+- 15 Sekunden) zu einer Verringerung der Replikate führt, was vom VPA bestätigt wird.
+Die Standard-Ramp-Down-Zeit beträgt 5 Minuten. Das bedeutet, dass eine Verringerung der Last erst nach ca. 5 Minuten (+- 15 Sekunden) zu einer Verringerung der Replikate führt, was vom VPA bestätigt wird.
 {{< /alert >}}
 
 Danach werden die Replikate entfernt, da keine Last mehr vorhanden ist.

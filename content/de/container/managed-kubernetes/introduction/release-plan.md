@@ -12,12 +12,12 @@ So können Sie sich frühzeitig auf wichtige Updates vorbereiten und sicherstell
 
 ## Release-Plan 2024
 
-| Month | Datum | Change-Typ | Info |
+| Monat | Datum | Change-Typ | Info |
 | --- | --- | --- | --- |
 | Januar | - | - | - |
 | Februar | 05.02.2024 | Change | [Release Note 1.9.0](https://docs.plusserver.com/container/managed-kubernetes/releasenotes/notes/1-9-0/) |
 | März | - | - | - |
-| April | tbd | Change | - |
+| April | 02.04.2024 | Change | - |
 | Mai | - | - | - |
 | Juni | 11.06.2024 | Standardchange | Standard Change - Kubernetes Patch Version |
 | Juli | - | - | - |

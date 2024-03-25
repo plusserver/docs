@@ -1,6 +1,6 @@
 ---
-title: "PSKE - Cluster Provisionierung mit Terraform"
-linkTitle: "Cluster Provisionierung mit Terraform"
+title: "PSKE - Cluster-Provisionierung mit Terraform"
+linkTitle: "Cluster-Provisionierung mit Terraform"
 type: "docs"
 weight: 10
 date: 2023-10-20
@@ -8,7 +8,7 @@ date: 2023-10-20
 
 # Kubectl-Provider
 
-Der Terraform Kubectl Provider ermöglicht das Provisioning von Kubernetes-Clustern innerhalb der PSKE (Gardener) mit, wie bereits erwähnt, Terraform.
+Der Terraform Kubectl Provider ermöglicht das Provisioning von Kubernetes-Clustern innerhalb der PSKE (Gardener) mit Terraform.
 
 ## Benötigte Komponenten und Zugänge
 
@@ -18,11 +18,11 @@ Folgendes wird benötigt:
 - lokal installierter Terraform Client (https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 - der kubectl Terraform Provider, der später von Terraform selbständig installiert wird (https://github.com/gavinbunney/terraform-provider-kubectl)
 
-## Terraform Vorbereitung und Provider Einrichtung
+## Terraform-Vorbereitung und Provider-Einrichtung
 
-Erstellen Sie zunächst ein leeres Arbeitsverzeichnis für den Test oder klonen Sie dieses Repo und wechseln Sie in dessen Verzeichnis.
+Zunächst wird ein leeres Arbeitsverzeichnis für den Test erstellt oder das Repository geklont und in dessen Verzeichnis gewechselt.
 
-Je nachdem, ob Sie ein leeres Verzeichnis angelegt haben oder das Repository verwenden, erstellen Sie eine "versions.tf", die folgendes enthält:
+Je nachdem, ob ein leeres Verzeichnis angelegt wurde oder das Repository verwendet wird, wird eine "versions.tf" erstellt, die Folgendes enthält:
 
 ```terraform
 terraform {
@@ -65,11 +65,11 @@ provider "kubectl" {
 }
 ```
 
-Dadurch wird sichergestellt, dass der kubectl-Provider über die notwendige Konfiguration verfügt, um sich mit dem PSKE (Gardener) zu verbinden und die entsprechenden Aktionen auszuführen.
+Dadurch wird sichergestellt, dass der kubectl-Provider über die notwendige Konfiguration verfügt, um sich mit der PSKE zu verbinden und die entsprechenden Aktionen auszuführen.
 
 ## Definition des Kubernetes-Clusters
 
-Nachdem wir Terraform eingerichtet und den kubectl-Provider so konfiguriert haben, dass er mit dem PSKE kommunizieren kann, kommen wir zum eigentlichen Punkt der Provisionierung eines Kubernetes-Clusters.
+Nachdem wir Terraform eingerichtet und den kubectl-Provider so konfiguriert haben, dass er mit der PSKE kommunizieren kann, kommen wir zum eigentlichen Punkt der Provisionierung eines Kubernetes-Clusters.
 
 Zu diesem Zweck erstellen wir beispielsweise eine cluster.tf, die im Wesentlichen folgenden Inhalt haben muss:
 
@@ -81,13 +81,13 @@ YAML
 }
 ```
 
-NAMEDERRESOURCE ist nur für Terraform relevant und spiegelt nicht den Namen des eigentlichen Clusters wieder, aber offen gesagt ist es sinnvoll, sie zu benennen, damit sie später in einer wachsenden Konfiguration wieder zugewiesen werden können.
+NAMEOFRESOURCE ist nur für Terraform relevant und spiegelt nicht den Namen des eigentlichen Clusters wieder, aber es ist sinnvoll, sie zu benennen, damit sie später in einer wachsenden Konfiguration wieder zugewiesen werden können.
 
 Dies dient dazu, die gewünschte Konfiguration im YAML-Format an die Gardener-API zu übergeben, was Sie natürlich komplett von Hand schreiben können, aber auch das Dashboard für Sie erledigen lassen können.
 
 Dazu durchlaufen Sie im Wesentlichen den Prozess der Einrichtung eines Kubernetes-Clusters mit dem entsprechenden PSKE-Dashboard, konfigurieren den Cluster nach Ihren Wünschen mit allen erforderlichen Einstellungen, einschließlich der Anzahl und Größe der Worker Nodes, Wartungs- und Ruhephasenpläne usw. Starten Sie am Ende nicht die eigentliche Erstellung, sondern klicken Sie in der oberen Leiste neben "Übersicht" auf "YAML". Dort erhalten Sie dann die komplette Definition der gewünschten Konfiguration im YAML-Format.
 
-Kopieren Sie nun diese Konfiguration und fügen Sie sie in die cluster.tf anstelle von <HERE WE PUT THE ACTUAL CONFIG> ein, d.h. zwischen die beiden Zeilen mit YAML.
+Kopieren Sie nun diese Konfiguration und fügen Sie sie in die cluster.tf anstelle von `<HERE WE PUT THE ACTUAL CONFIG>` ein, d.h. zwischen die beiden Zeilen mit YAML.
 
 In meinem Beispiel würde das so aussehen, aber wie Sie aus den Metadaten ersehen können, muss dies für die Umgebung, in der es laufen soll, entsprechend angepasst werden. Daher ist es besser, einen eigenen Auszug zu verwenden.
 
@@ -457,7 +457,7 @@ Wenn hier keine Fehler angezeigt werden, hat das System mit der Erstellung des C
 
 Wenn Sie Änderungen am Kubernetes-Cluster vornehmen möchten, müssen Sie die Definition, die wir zuvor in "cluster.tf" vorgenommen haben, anpassen.
 
-Nehmen wir zum Beispiel an, dass wir die Anzahl der Worker Nodes anpassen wollen, zum Beispiel von
+Nehmen wir an, dass wir die Anzahl der Worker Nodes anpassen wollen, zum Beispiel von
 
 ```terrform
     workers:
@@ -467,7 +467,7 @@ Nehmen wir zum Beispiel an, dass wir die Anzahl der Worker Nodes anpassen wollen
         maxSurge: 1
 ```
 
-to
+zu
 
 ```terrform
     workers:
@@ -483,7 +483,7 @@ Es ist wichtig, daran zu denken, dass nur weil die Syntax korrekt ist, dies nich
 
 1. Gewünschte Ressourcen übersteigen die im Cluster verfügbaren. Es wird also mehr CPU, RAM, etc. benötigt. Der Plan wird in diesem Fall ausgeführt, aber Gardener wird irgendwann während der Ausführung einen Fehler produzieren, weil die Ressourcen erschöpft sind.
 
-2. Sie definieren etwas, das es nicht gibt, z.B. unter Maschine/Typ, wobei wir in unserem Beispiel den Typ "SCS-2V:4:100" gewählt haben. Wenn Sie hier einen Maschinentyp angeben, der in diesem Formular nicht vorgesehen ist, z.B. "SCS-1V:2:100", d.h. nur VCPU-Kern und 2GB RAM, dann wird bei "plan" alles als OK angezeigt, aber ein "apply" liefert einen Fehler:
+2. Sie definieren etwas, das es nicht gibt, z.B. unter Maschine/Typ, wobei wir in unserem Beispiel den Typ "SCS-2V:4:100" gewählt haben. Wenn Sie hier einen Maschinentyp angeben, der in diesem Formular nicht vorgesehen ist, z.B. "SCS-1V:2:100", d.h. 1 VCPU-Kern und 2GB RAM, dann wird bei "plan" alles als OK angezeigt, aber ein "apply" liefert einen Fehler:
 
 ```bash
 .workers[0].machine.type: Unsupported value: "SCS-1V:2:100": supported values: "SCS-16V:32:100", "SCS-16V:64:100", "SCS-2V:16:50", "SCS-2V:4:100", "SCS-2V:8:100", "SCS-4V:16:100", "SCS-4V:32:100", "SCS-4V:8:100", "SCS-8V:16:100", "SCS-8V:32:100", "SCS-8V:8:100"]

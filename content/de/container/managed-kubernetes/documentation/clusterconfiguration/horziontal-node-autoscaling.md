@@ -1,6 +1,6 @@
 ---
-title: "PSKE - Cluster Autoskalierung"
-linkTitle: "Cluster Autoskalierung"
+title: "PSKE - Cluster-Autoskalierung"
+linkTitle: "Cluster-Autoskalierung"
 type: "docs"
 weight: 20
 date: 2023-02-21
@@ -24,7 +24,7 @@ Um den Horizontal Node Autoscaler in einem Shoot Cluster zu installieren, müsse
 
 ## Simulation
 
-Derzeit verfügt der Shoot-Cluster über einen Arbeitsknoten:
+Derzeit verfügt der Shoot-Cluster über einen Workernode:
 
 ```bash
 kubectl describe node shoot--ldtivqit95-worker-jh07p-z1-7d897-cgrw6
@@ -110,4 +110,4 @@ Nach dem Löschen des Deployments wird der zusätzliche Worker Node durch den Cl
 
 ## Schlussfolgerung
 
-Der Horizontal Node Autoscaler funktioniert wie oben beschrieben. Damit der Cluster-Autoscaler wie vorgesehen funktioniert, ist es wichtig, dass Sie sich an die Best Practices halten. Der HNA ist in PSKE standardmäßig aktiviert und steht Ihnen zur Verfügung.
+Der Horizontal Node Autoscaler funktioniert wie oben beschrieben. Damit der Cluster-Autoscaler wie vorgesehen funktioniert, ist es wichtig, dass Sie sich an die Best Practices halten. Der HNA ist in der PSKE standardmäßig aktiviert und steht Ihnen zur Verfügung.

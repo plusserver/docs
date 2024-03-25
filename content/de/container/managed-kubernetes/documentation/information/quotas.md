@@ -7,7 +7,7 @@ date: 2023-02-21
 ---
 Quotas sind Betriebsgrenzen, die pro Projekt oder pro Benutzer in OpenStack und in Ihrem PSKE-Projekt festgelegt werden können. Sie werden verwendet, um die Menge an Ressourcen zu kontrollieren, die ein Projekt oder ein Benutzer verbrauchen kann. Quotas können für eine Vielzahl von Ressourcen festgelegt werden, einschließlich Rechenleistung, Speicher und Netzwerk.
 
-Die folgende Tabelle enthält die Standardquoten, die anfänglich für jedes Projekt festgelegt werden:
+Die folgende Tabelle enthält die Standardquotas, die anfänglich für jedes Projekt festgelegt werden:
 
 | Item                      |      Size |
 |---------------------------|----------:|
@@ -32,7 +32,7 @@ Die folgende Tabelle enthält die Standardquoten, die anfänglich für jedes Pro
 
 Quotas können über die OpenStack-CLI oder das OpenStack-Dashboard festgelegt werden.
 
-{{< alert color="warning" title="Warning">}} Wenn Sie nur einen Vertrag für den PSKE haben, kontaktieren Sie bitte unseren Support, um Ihre Quoten zu erhöhen. {{< /alert >}}
+{{< alert color="warning" title="Warnung">}} Wenn Sie nur einen Vertrag für die PSKE haben, kontaktieren Sie bitte unseren Support, um Ihre Quotas zu erhöhen. {{< /alert >}}
 
 Um Quotas über die CLI zu setzen, verwenden Sie den Befehl `openstack quota set`. Um zum Beispiel die maximale Anzahl der Instanzen auf 100 für das Projekt myproject zu setzen, würden Sie den folgenden Befehl verwenden:
 

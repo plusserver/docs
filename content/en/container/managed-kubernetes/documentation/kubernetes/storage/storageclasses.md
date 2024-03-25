@@ -8,7 +8,7 @@ date: 2023-10-22
 
 # StorageClasses
 
-plusserver provides the following StorageClasses for "plusserver Kubernetes Engine (PSKE) on pluscloud open":
+plusserver provides the following StorageClasses for  your PSKE:
 
 ```bash
 kubectl get storageclasses
@@ -23,7 +23,7 @@ csi-cinder-sc-retain             cinder.csi.openstack.org   Retain          Imme
 
 Each StorageClass uses a provisioner that determines which volume plugin is used to create PersistentVolumes. In this case, the "cinder.csi.openstack.org" provisioner is used.
 
-Please note that the "cinder.csi.openstack.org" provisioner supports only the "ReadWriteOnce" access mode, meaning that the PersistentVolume can be mounted in read/write mode by only one node at a time.
+Please note that the "cinder.csi.openstack.org" provisioner only supports the "ReadWriteOnce" access mode, i.e. the PersistentVolume can only be mounted in read/write mode by one node at a time.
 
 ## Reclaim Policy
 

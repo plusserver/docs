@@ -24,7 +24,7 @@ Sie können auf die Web-Konsole zugreifen, indem Sie auf die Detailseite des Clu
 
 ## Aufbau
 
-Die ShootSpec besteht aus den folgenden Abschnitten:
+Der ShootSpec besteht aus den folgenden Abschnitten:
 
 - Shoot: Der Hauptabschnitt enthält allgemeine Informationen über den Cluster, wie den Namen, die Region und die Cloud-Plattform.
 - Infrastruktur: Der Abschnitt "Infrastruktur" beschreibt die Infrastruktur des Clusters, z. B. die Art der Rechen-, Speicher- und Netzwerkressourcen.
@@ -33,7 +33,7 @@ Die ShootSpec besteht aus den folgenden Abschnitten:
 
 ## Beispiel
 
-Das folgende Beispiel zeigt eine Standard-ShootSpec für einen Kubernetes-Cluster in PSKE:
+Das folgende Beispiel zeigt eine Standard-ShootSpec für einen Kubernetes-Cluster in der PSKE:
 
 ```yaml
 kind: Shoot

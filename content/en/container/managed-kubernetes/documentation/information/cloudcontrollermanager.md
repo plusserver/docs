@@ -6,9 +6,9 @@ weight: 100
 date: 2023-02-21
 ---
 
-# Cloud Controller Manager and Service Annotations
+## Cloud Controller Manager and Service Annotations
 
-In every Kubernetes cluster created with PSKE, the corresponding Cloud Controller Manager (CCM) is automatically deployed, matching the Kubernetes version. For instance, in a Kubernetes cluster version 1.24.0, Cloud Controller Manager v1.24.0 is deployed. When you update a Kubernetes cluster, the Cloud Controller Manager is also updated to a supported version.
+In each Kubernetes cluster created with PSKE, the appropriate Cloud Controller Manager (CCM) will be automatically deployed to match the Kubernetes version. For instance, in a Kubernetes cluster version 1.24.0, Cloud Controller Manager v1.24.0 is deployed. When you update a Kubernetes cluster, the Cloud Controller Manager is also updated to a supported version.
 
 The primary responsibility of the Cloud Controller Manager is the configuration of the OpenStack LoadBalancer. This configuration is accomplished using annotations in the Service.
 
@@ -25,6 +25,6 @@ metadata:
   #loadBalancerIP: <FloatingIP> # Here you can define an already reserved FloatingIP. When "openstack-internal-load-balancer" is true, this will define the private IPv4 address of the OpenStack LoadBalancer.
 ```
 
-You can find additional supported Service annotations in the official GitHub project [kubernetes/cloud-provider-openstack](https://github.com/kubernetes/cloud-provider-openstack). 
+You can find additional supported service annotations in the official GitHub project [kubernetes/cloud-provider-openstack](https://github.com/kubernetes/cloud-provider-openstack). 
 
 Please select the appropriate release of the Cloud Controller Manager according to your deployed Kubernetes version.

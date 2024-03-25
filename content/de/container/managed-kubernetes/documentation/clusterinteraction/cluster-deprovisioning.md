@@ -1,6 +1,6 @@
 ---
-title: "PSKE - Cluster deprovisionierung"
-linkTitle: "Cluster deprovisionierung"
+title: "PSKE - Cluster-Deprovisionierung"
+linkTitle: "Cluster-Deprovisionierung"
 type: "docs"
 weight: 30
 date: 2023-02-21
@@ -20,9 +20,9 @@ Der Kubernetes-Cluster wird nun gelöscht. Sie können den Löschstatus (1) übe
 
 ![13](/images/content/02-pske/10-clusterinteraction/cluster-deprovisioning/13.png)
 
-## Deprovisionierung von HybridConnector und Löschen des Kubernetes-Clusters**
+## Deprovisionierung von HybridConnector und Löschen des Kubernetes-Clusters
 
-Bevor der Cluster über "Delete Cluster" (2) gelöscht werden kann, müssen Sie ein Ticket mit folgenden Informationen eröffnen:
+Bevor der Cluster über “Delete Cluster” (2) gelöscht werden kann, muss zunächst der HybridConnector deprovisioniert werden. Dazu eröffnen Sie einfach ein Ticket mit folgenden Informationen:
 
 - Vertragsnummer für pluscloud open
 - Name des Kubernetes-Clusters

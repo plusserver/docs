@@ -1,6 +1,6 @@
 ---
 title: "PSKE - Cluster interaction"
-linkTitle: "Clusterinteraction"
+linkTitle: "Cluster interaction"
 type: "docs"
 weight: 20
 date: 2023-02-21
@@ -8,8 +8,7 @@ description: >
 
 ---
 
-
-In general, there are 3 main ways to interact with a cluster in PSKE:
+There are 3 main ways to interact with a cluster in PSKE:
 
 - PSKE Dashboard
 - Gardenctl
