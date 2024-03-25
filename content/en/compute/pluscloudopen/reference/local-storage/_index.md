@@ -24,19 +24,19 @@ Local SSD Storage is ideal for volatile or temporary workloads such as caches. A
 Local SSD Storage shares the same lifecylce as the VM instance. If the VM is deleted or crashes the Local SSD Storage data will be lost as well. What's more, your VMs cannot be resized or live-migrated to another hypervisor in case of a hypervisor maintenance. In the event of a hardware failure your Local SSD data could be completely lost. Even if there is no disk failure, there will be regular disk downtime.
 {{% /alert %}}
 
-### Comparison of the characteristics of Ceph volumes with those of Local SSD Storage
+### Comparison of the characteristics of Ceph volumes with Local SSD Storage
 
-There are fundamental differences between Ceph volumes with those of Local SSD Storage.
+There are fundamental differences between Ceph volumes and those of Local SSD Storage.
 
-As with shared storage, the underlying storage system provides redundancy and availability. Your application can rely on the 3x replicated highly available storage.
+With shared storage, the underlying storage system ensures redundancy and availability. Your application can rely on the 3x replicated highly available storage.
 
-As with Local SSD Storage, you can access the local disk in a raw fashion and achieve near 1:1 performance. However, your software stack is responsible for handling redundancy and availability.
+With Local SSD Storage, you can access the local disk in its raw state and achieve almost 1:1 performance. However, your software stack is responsible for handling redundancy and availability.
 
 **Use cases for Local SSD Storage:**
 
 * Kubernetes
-* Etcd Cluster with 3 or 5 instances
-* Postgres Patroni Cluster
+* Etcd cluster with 3 or 5 instances
+* Postgres Patroni cluster
 
 **Anti-patterns for Local SSD Storage:**
 
@@ -48,20 +48,20 @@ The following table compares the characteristics of Ceph volumes with those of L
 
 | Characteristics  | Ceph boot volume  | Local SSD Storage boot volume  |
 |------------------|-------------------|--------------------------------|
-| Storage Provider  | Cinder           | Nova                           |
-| Throughput  |  <span style="color: red;">LOW</span>  | <span style="color: green;">HIGH</span>  |
-| Latency  | <span style="color: red;">HIGH</span>  | <span style="color: green;">LOW</span>  |
-| Live-migration  | <span style="color: green;">YES</span>  | <span style="color: red;">NO</span>  |
-| Availability  | <span style="color: green;">HIGH</span>  | <span style="color: red;">LOW</span>  |
-| Ephemeral  | NO  | YES  |
+| Storage provider  | Cinder           | Nova                           |
+| Throughput  |  <span style="color: red;">Low</span>  | <span style="color: green;">High</span>  |
+| Latency  | <span style="color: red;">High</span>  | <span style="color: green;">Low</span>  |
+| Live migration  | <span style="color: green;">Yes</span>  | <span style="color: red;">No</span>  |
+| Availability  | <span style="color: green;">High</span>  | <span style="color: red;">Low</span>  |
+| Ephemeral  | No  | Yes  |
 
 ### Availability
 
-There are two cases where VMs running on Local SSD Storage will experience downtime
+There are two cases where VMs running on Local SSD Storage will experience downtime:
 
 #### Periodic reboots
 
-Any Local SSD Storage hypervisor will need to be **rebooted periodically**.  Typically this will be **once a month**. You should therefore expect your VMs to be down on a regular basis.
+Any Local SSD Storage hypervisor will need to be **rebooted periodically**.  Typically, this will be **once a month**. Therefore you should expect your VMs to be down on a regular basis.
 
 The average downtime is **approximately half an hour**, but can vary. All VMs will receive an ACPI shutdown signal prior to maintenance. VMs are given **one minute to shut down** properly.
 
@@ -69,11 +69,11 @@ After this time, they will simply shut down.
 
 You should expect your VMs to **remain powered off** after the hypervisor reboots. We are currently planning a feature that will allow you to configure the VM to automatically restart if necessary.
 
-There will be a **30 minute pause** between hypervisor reboots. This will give your software stack time to reconfigure.
+There will be a **30-minute pause** between hypervisor reboots. This will give your software stack time to reconfigure.
 
-However, all VMs on the same hypervisor will be affected. You will need to enable **anti-affinity** [Server Groups](../instances-and-images/server-groups/).
+However, all VMs on the same hypervisor will be affected. You will need to enable **anti-affinity** [server groups](../instances-and-images/server-groups/).
 
-#### Hardware Failure
+#### Hardware failure
 
 In the event of a complete hardware failure or reconfiguration, you must **expect data loss**.
 
@@ -83,21 +83,21 @@ You will be expected to **wipe these VMs yourself**. This is because we believe 
 
 Speaking of backups: You should take regular snapshots to be able to restore a failed VM in the event of a hardware failure of the underlying hypervisor.
 
-#### Use Server Groups and Anti-Affinity to Achieve Fault Tolerance
+#### Server groups and anti-affinity to achieve fault tolerance
 
 If you are using Local SSD Storage, **you are strongly encouraged to create fault tolerance** against hypervisor failures.
 
-One thing you can do is to use [Server Groups](../instances-and-images/server-groups/) to distribute your VMs across multiple hypervisors.
+One thing you can do is to use [server groups](../instances-and-images/server-groups/) to distribute your VMs across multiple hypervisors.
 
 ## Using Local SSD Storage
 
-To use Local SSD Storage, simply create a VM with a specific Local SSD Storage Flavor. All Flavors that end with an "**s**" indicate Local SSD Storage. Configure the VM to boot without a volume. This is crucial if you want the VM to boot from a local disk instead of a remote volume.
+To use Local SSD Storage, simply create a VM with a specific Local SSD Storage Flavor. All flavors that end with an "**s**" indicate Local SSD Storage. Configure the VM to boot without a volume. This is crucial if you want the VM to boot from a local disk instead of a remote volume.
 
 After you have created the VM, it will boot with a local disk from the **/dev/sda1** block device. You can attach additional volumes to your VM. However, these volumes will come from the Ceph shared storage.
 
-Examples for Local SSD Storage Flavors:
+Examples of Local SSD Storage Flavors:
 
-| Name           | VCPUs | RAM (MB)   | Disk (GB) |
+| Name           | vCPUs | RAM (MB)   | Disk (GB) |
 |----------------|-------|-------|------|
 | SCS-2V-4-20s   | 2     |  4096 |  20  |
 | SCS-4V-16-100s | 4     | 16384 | 100 |
@@ -110,21 +110,21 @@ Do not create a boot volume! If you were to create a boot volume, your VM would 
 
 To create a VM to use Local SSD Storage, follow these steps:
 
-Navigate to the Launch Instance dialogue box. In "**Details**", set "**Instance Name**".
+Navigate to the "Launch Instance" dialog box: In "**Details**", set "**Instance Name**".
 
 <center>
 <img src="screenshot-2024-02-09-13.59.00.png" alt="screenshot of instance details tab" width="75%" title="details tab">
 <br/><br/>
 </center>
 
-In "**Source**", select your favourite cloud image. Leave the default to boot from image and not create a volume.
+In "**Source**", select your favorite cloud image. Leave the default to boot from image and not create a volume:
 
 <center>
 <img src="screenshot-2024-02-09-13.59.28.png" alt="screenshot of instance source tab" width="75%" title="source tab">
 <br/><br/>
 </center>
 
-In "**Flavor**", select one of the Flavors ending in "**s**".
+In "**Flavor**", select one of the flavors ending in "**s**":
 <center>
 <img src="screenshot-2024-02-09-13.59.52.png" alt="screenshot of instance flavor tab" width="75%" title="flavor tab">
 <br/><br/>
@@ -135,7 +135,7 @@ Configure the rest as you like. Finally, start the instance.
 
 ### Creating a VM with the CLI
 
-To create an identical VM using the Openstack CLI, use the following command:
+To create an identical VM using the OpenStack CLI, use the following command:
 
 ```bash
 openstack server create --flavor SCS-2V-4-20s --image "Ubuntu 22.04" demo-cli
@@ -181,5 +181,3 @@ The output should look like this:
 {{% alert title="Note" color="info" %}}
 "**volumes_attached**" should be empty unless you're adding additional shared storage volumes.
 {{% /alert %}}
-
-w
