@@ -8,6 +8,6 @@ description: >
   Changelog of pluscloud open
 ---
 
-Here are the current release notes for the pluscloud open releases.
+Here you can find the latest release notes for pluscloud open releases.
 
 
