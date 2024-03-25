@@ -17,7 +17,7 @@ This allows you to prepare for important updates in good time and ensure that yo
 | January | - | - | - |
 | February | 05.02.2024 | Change | [Release Note 1.9.0](https://docs.plusserver.com/container/managed-kubernetes/releasenotes/notes/1-9-0/) |
 | March | - | - | - |
-| April | 02.04.2024 | Change | - |
+| April | 02.04.2024 | Change | Release PSKE Version 1.10.1 |
 | May | - | - | - |
 | June | 11.06.2024 | Standardchange | Standard Change - Kubernetes Patch Version |
 | July | - | - | - |

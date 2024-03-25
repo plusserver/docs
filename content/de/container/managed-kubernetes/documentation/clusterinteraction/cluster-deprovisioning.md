@@ -20,7 +20,7 @@ Der Kubernetes-Cluster wird nun gelöscht. Sie können den Löschstatus (1) übe
 
 ![13](/images/content/02-pske/10-clusterinteraction/cluster-deprovisioning/13.png)
 
-## Deprovisionierung von HybridConnector und Löschen des Kubernetes-Clusters
+## Deprovisionierung des HybridConnectors und Löschen des Kubernetes-Clusters
 
 Bevor der Cluster über “Delete Cluster” (2) gelöscht werden kann, muss zunächst der HybridConnector deprovisioniert werden. Dazu eröffnen Sie einfach ein Ticket mit folgenden Informationen:
 
