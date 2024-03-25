@@ -4,14 +4,14 @@ type: "docs"
 weight: 30
 date: 2023-03-10
 description: >
-  Compute Flavors und Betriessystem Images in der pluscloud open
+  Compute Flavors und Betriessystem-Images in der pluscloud open
 ---
 
-# Compute Flavors
+## Compute Flavors
 
-pluscloud open verwendet den [SCS-Standard] (https://github.com/SovereignCloudStack/standards) für die Benennung von Instanztypen (Flavors). Dieser Standard verwendet eine Kombination aus Buchstaben und Zahlen, um die Spezifikationen der einzelnen Flavors zu beschreiben. Der erste Teil des Namens gibt die Anzahl der im Flavor verfügbaren virtuellen CPUs (VCPUs) an, während der zweite Teil die Menge des verfügbaren Arbeitsspeichers (RAM) beschreibt. Der dritte Teil, falls vorhanden, gibt den für die Instanz zugewiesenen Festplattenspeicher an. Bei Flavors mit zusätzlichem Festplattenspeicher wird auch die Größe der Festplatte im Namen angegeben. Allen Flavors, die diesem Standard folgen, wird ein "SCS-" vorangestellt.
+Die pluscloud open verwendet den [SCS-Standard](https://github.com/SovereignCloudStack/standards) für die Benennung von Instanztypen (Flavors). Dieser Standard verwendet eine Kombination aus Buchstaben und Zahlen, um die Spezifikationen der einzelnen Flavors zu beschreiben. Der erste Teil des Namens gibt die Anzahl der im Flavor verfügbaren virtuellen CPUs (VCPUs) an, während der zweite Teil die Menge des verfügbaren Arbeitsspeichers (RAM) beschreibt. Der dritte Teil gibt, falls vorhanden, den für die Instanz zugewiesenen Festplattenspeicher an. Bei Flavors mit zusätzlichem Festplattenspeicher wird auch die Größe der Festplatte im Namen angegeben. Allen Flavors, die diesem Standard folgen, wird ein "SCS-" vorangestellt.
 
-| Name           | VCPUs | RAM   | Festplatte |
+| Name           | vCPUs | RAM   | Festplatte |
 |----------------|-------|-------|------------|
 | SCS-1V:0.5     | 1     |   512 |          0 |
 | SCS-1V:0,5:20  | 1     |   512 |         20 |
@@ -61,13 +61,13 @@ pluscloud open verwendet den [SCS-Standard] (https://github.com/SovereignCloudSt
 | SCS-16V:64     | 16    | 65536 |          0 |
 | SCS-16V:64:100 | 16    | 65536 |        100 |
 
-# Images
+## Images
 
 {{% alert title="Hinweis" color="info" %}}
 Die Betriebssystem-Images werden regelmäßig aktualisiert, um den neuesten Stand der Sicherheitspatches bereitzustellen. Ältere Images sind entsprechend den Metadaten (siehe SCS Image Metadata) weiterhin verfügbar.
 {{% /alert %}}
 
-pluscloud open bietet eine Vielzahl von unveränderten Upstream-Betriebssystem-Images, die zum Booten von VMs verwendet werden können. Zu den verfügbaren Images gehören:
+Die pluscloud open bietet eine Vielzahl von unveränderten Upstream-Betriebssystem-Images, die zum Booten von VMs verwendet werden können. Zu den verfügbaren Images gehören:
 
 | Name                 |
 |----------------------|
@@ -81,10 +81,10 @@ pluscloud open bietet eine Vielzahl von unveränderten Upstream-Betriebssystem-I
 | Ubuntu Minimal 20.04 |
 | Ubuntu Minimal 22.04 |
 
-Es ist wichtig zu beachten, dass pluscloud open den [SCS-Standard](https://github.com/SovereignCloudStack/standards) für Image-Metadaten verwendet, um Metadaten zu den bereitgestellten OS-Images hinzuzufügen. Dies ermöglicht eine bessere Integration mit der OpenStack-Plattform und liefert zusätzliche Informationen über die Images, wie z. B. die Betriebssystemversion und Architektur.
+Es ist wichtig zu beachten, dass die pluscloud open den [SCS-Standard](https://github.com/SovereignCloudStack/standards) für Image-Metadaten verwendet, um Metadaten zu den bereitgestellten OS-Images hinzuzufügen. Dies ermöglicht eine bessere Integration mit der OpenStack-Plattform und liefert zusätzliche Informationen über die Images, wie z. B. die Betriebssystemversion und Architektur.
 
-Um diese Images zu nutzen, können Nutzer einfach das gewünschte Image aus dem pluscloud Open Image Repository auswählen und damit eine virtuelle Instanz starten. Auf die mit dem Image verbundenen Metadaten kann ebenfalls zugegriffen werden, um Informationen über das Image zu sammeln und sicherzustellen, dass es den Anforderungen entspricht.
+Um diese Images zu nutzen, können User einfach das gewünschte Image aus dem Image Repositiry der pluscloud open auswählen und damit eine virtuelle Instanz starten. Auf die mit dem Image verbundenen Metadaten kann ebenfalls zugegriffen werden, um Informationen über das Image zu sammeln und sicherzustellen, dass es den Anforderungen entspricht.
 
-## Cloud-Init
+### Cloud-init
 
-In allen von pluscloud open angebotenen Betriebssystem-Images ist standardmäßig [cloud-init](https://cloudinit.readthedocs.io/en/latest/) aktiviert, was eine einfache und effiziente Anpassung von virtuellen Instanzen in einer OpenStack-Umgebung ermöglicht. Mit cloud-init können Benutzer verschiedene Aufgaben während des Boot-Prozesses automatisieren, wie z. B. die Konfiguration von Netzwerkeinstellungen, die Erstellung von Benutzerkonten und die Installation von Softwarepaketen. Dies kann dazu beitragen, die Bereitstellung virtueller Maschinen zu rationalisieren und sicherzustellen, dass sie korrekt und konsistent konfiguriert sind. Um cloud-init mit einem offenen pluscloud-Image zu verwenden, können Benutzer einfach eine cloud-config-Datei oder ein Benutzerdaten-Skript beim Starten der Instanz bereitstellen. Das cloud-init-Tool liest dann diese Daten und führt die angegebenen Aktionen während des Startvorgangs aus.
+Bei allen in der pluscloud open angebotenen Betriebssystem-Images ist standardmäßig [cloud-init](https://cloudinit.readthedocs.io/en/latest/) aktiviert, was eine einfache und effiziente Anpassung von virtuellen Instanzen in einer OpenStack-Umgebung ermöglicht. Mit cloud-init können User verschiedene Aufgaben während des Boot-Prozesses automatisieren, wie z. B. die Konfiguration von Netzwerkeinstellungen, die Erstellung von Benutzerkonten und die Installation von Softwarepaketen. Dies kann dazu beitragen, die Bereitstellung virtueller Maschinen zu rationalisieren und sicherzustellen, dass sie korrekt und konsistent konfiguriert sind. Um cloud-init mit einem Image zu verwenden, können User einfach eine cloud-config-Datei oder ein Benutzerdaten-Skript beim Starten der Instanz bereitstellen. Das cloud-init-Tool liest dann diese Daten und führt die angegebenen Aktionen während des Startvorgangs aus.

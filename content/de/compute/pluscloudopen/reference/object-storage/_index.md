@@ -1,5 +1,5 @@
 ---
-title: "Objektstorage"
+title: "Object Storage"
 type: "docs"
 weight: 60
 date: 2023-02-24
@@ -9,15 +9,15 @@ description: >
 
 ## Überblick
 
-Pluscloud open bietet [object storage](https://en.wikipedia.org/wiki/Object_storage) kompatibel zu Openstacks [Swift](https://wiki.openstack.org/wiki/Swift) und Amazons [S3](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) Protokollen.
-Er ist grundsätzlich für "cloud native" Anwendungsfälle vorgesehen:
+Die pluscloud open bietet [object storage](https://en.wikipedia.org/wiki/Object_storage) kompatibel zu Openstacks [Swift](https://wiki.openstack.org/wiki/Swift) und Amazons [S3](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) Protokollen.
+Er ist grundsätzlich für Cloud-native Anwendungsfälle vorgesehen:
 
-* als Backend für Infrastruktur-als-Code-Szenarien (wie Backend-Speicher für Terraform-Statusdateien), die von einer Gruppe von Entwicklern genutzt werden können.
-* als Datei-/Inhalts-Repository für Scale-Out-Szenarien, bei denen Cloud-Instanzen, die aus Images erzeugt werden, aktuelle Inhalte aus dem Objektspeicher laden (anstatt ein NFS-Volume zu mounten, was in Cloud-Kontexten als "schlechtes Design" angesehen würde).
+* als Backend für Infrastructure-as-Code-Szenarien, die von einer Gruppe von EntwicklerInnen genutzt werden können (z. B. als Backend-Speicher für Terraform-Statusdateien).
+* als Datei-/Inhaltespeicher für Scale-Out-Szenarien, bei denen aus Images erzeugte Cloud-Instanzen aktuelle Inhalte aus dem Object Storage nachladen (anstatt ein NFS-Volume zu mounten, was in Cloud-Kontexten als "schlechtes Design" angesehen wird).
 
-## Objektspeicher verwalten
+## Object Storage verwalten
 
-Der Objektspeicher wird entweder über die Web-GUI oder mit einem CLI-Client verwaltet. Sie finden Ihren Objektspeicher unter "**Objektspeicher**" und dann "**Container**" in Ihrem Horizon-Menü. "Containers" ist in Swift das, was "Buckets" in S3 ist.
+Der Object Storage wird entweder über die Web-GUI oder mit einem Commandline-Client verwaltet. Sie finden Ihren Object Storage unter "**Object Storage**" und dann "**Container**" in Ihrem Horizon-Menü. "Containers" ist in Swift das, was "Buckets" in S3 ist.
 
 <img src="2023-04-05_10-33.png" alt="Bildschirmfoto des Objektspeicher-Menüs" width="70%" height="70%" title="Objektspeicher">
 
@@ -25,11 +25,11 @@ Sie können sogar Inhalte in Ihre Container/Buckets hoch- und herunterladen. Kli
 
 ![Bildschirmfoto des Upload-Menüs](./2023-04-05_15-52.png)
 
-und klicken Sie dann auf "**Datei hochladen**". Objekte können mit der Schaltfläche "**Download**" auf der rechten Seite heruntergeladen werden. Es gibt aber auch noch andere Optionen in diesem Menü.
+Klicken Sie dann auf "**Datei hochladen**". Objekte können mit der Schaltfläche "**Download**" auf der rechten Seite heruntergeladen werden. Es gibt aber auch noch andere Optionen in diesem Menü.
 
-<img src="2023-04-05_16-00.png" alt="Screenshot des Menüs "obs verwalten" width="70%" height="70%" title="Optionen verwalten">
+<img src="2023-04-05_16-00.png" alt="Screenshot des Menüs obs verwalten" width="70%" height="70%" title="Optionen verwalten">
 
-"**Details anzeigen**" gibt Ihnen einige Informationen über das Objekt (wie Größe, Inhaltstyp usw.). Mit "**Bearbeiten**" können Sie den Inhalt des Objekts ändern. Es gibt jedoch keine Möglichkeit, den Inhalt des Objekts vor Ort zu bearbeiten - der neue Inhalt wird mit dem alten Objektnamen hochgeladen.
+"**Details anzeigen**" gibt Ihnen einige Informationen über das Objekt (wie Größe, Inhaltstyp usw.). Mit "**Bearbeiten**" können Sie den Inhalt des Objekts ändern. Bei der Objektspeicherung findet jedoch keine In-Place-Bearbeitung statt - der neue Inhalt wird mit dem alten Objektnamen hochgeladen.
 
 Außerdem können Sie ein Objekt in einen anderen Container/Bucket kopieren, indem Sie "**Kopieren**" wählen. Mit "**Löschen**" wird das Objekt natürlich gelöscht.
 
@@ -37,9 +37,9 @@ Sie können einen Ordner in Ihrem Container/Bucket erstellen (anstatt ein Objekt
 
 ### CLI-Clients verwenden
 
-Es gibt mehrere Möglichkeiten, Ihren Objektspeicher über die Kommandozeile zu verwalten. Wie bereits erwähnt, ist unser Objektspeicher kompatibel zu Openstacks Swift und Amazons S3-Protokoll. Sie sollten also in der Lage sein, Kommandozeilen-Tools zu verwenden, die das eine oder das andere unterstützen.
+Es gibt mehrere Möglichkeiten, Ihren Object Storage über die Kommandozeile zu verwalten. Wie bereits erwähnt, ist unser Object Storage kompatibel zu OpenStacks Swift und Amazons S3-Protokoll. Sie sollten also in der Lage sein, Kommandozeilen-Tools zu verwenden, die das eine oder das andere unterstützen.
 
-Natürlich unterstützt der OpenStack-Client selbst die Verwaltung von Containern bis zu einem gewissen Grad. Wenn Sie Ihren OpenStack-Client richtig konfiguriert haben, können Sie die ``openstack container``-Befehle verwenden, um Ihre Objektspeicher-Container/Buckets zu verwalten:
+Natürlich unterstützt der OpenStackClient selbst die Verwaltung von Containern bis zu einem gewissen Grad. Wenn Sie Ihren OpenStackClient richtig konfiguriert haben, können Sie die ``openstack container``-Befehle verwenden, um Ihre Object-Storage-Container/-Buckets zu verwalten:
 
     /configuration # openstack container list
     +--------+
@@ -60,7 +60,7 @@ Natürlich unterstützt der OpenStack-Client selbst die Verwaltung von Container
     | storage_policy | default-placement                     |
     +----------------+---------------------------------------+
 
-Da der Befehl ``openstack container`` anscheinend (noch?) keine Uploads erlaubt, müssen Sie den swift-Client verwenden, um Objekte in Ihren Objektspeicher hochzuladen:
+Da der Befehl ``openstack container`` keine Uploads erlaubt, müssen Sie den swiftclient verwenden, um Objekte in Ihren Object Storage hochzuladen:
 
     /configuration # swift upload --help
     Verwendung: swift upload [--changed] [--skip-identical] [--segment-size <size>]
@@ -117,11 +117,11 @@ Da der Befehl ``openstack container`` anscheinend (noch?) keine Uploads erlaubt,
                             Ordnernamen.
       --ignore-checksum Schaltet die Prüfsummenüberprüfung für Uploads aus.
 
-Es gibt auch mehrere Optionen für die Verwaltung Ihres Objektspeichers über das S3-Protokoll. Eine davon ist [s3cmd](https://s3tools.org/s3cmd), die für verschiedene Plattformen verfügbar ist. Die andere ist [awscli](https://pypi.org/project/awscli/) - eine "universelle Befehlszeilenschnittstelle für Amazon Web Services", die wir bereits in unserem Tutorial "[OpenStack Object Storage as a Backend for Terraform Statefiles](https://docs.pco.get-cloud.io/docs/tutorials/tf-backend-s3/)" behandelt haben.
+Es gibt auch mehrere Optionen für die Verwaltung Ihres Object Storage über das S3-Protokoll. Eine davon ist [S3cmd](https://s3tools.org/s3cmd), das für verschiedene Plattformen verfügbar ist. Die andere ist [AWS CLI](https://pypi.org/project/awscli/) - eine universelle Befehlszeilenschnittstelle für Amazon Web Services, die wir bereits in unserem Tutorial "[OpenStack Object Storage as a Backend for Terraform Statefiles](https://docs.plusserver.com/de/compute/pluscloudopen/tutorials/tf-backend-s3/)" behandeln.
 
-Für s3cmd benötigen Sie eine Konfigurationsdatei ``.s3cfg``, die Sie mit Hilfe des Befehls ``s3cmd --configure`` erstellen können. Wie bereits erwähnt, können Sie Ihre Zugangsdaten für den Objektspeicherzugriff mit ``openstack ec2 credentials create`` erstellen, mit ``openstack ec2 credentials list`` auflisten und mit ``openstack ec2 credentials show <accesskey>`` einsehen. Sie müssen sie bereit haben, um s3cmd zu konfigurieren.
+Für s3cmd benötigen Sie eine Konfigurationsdatei ``.s3cfg``, die Sie mit Hilfe des Befehls ``s3cmd --configure`` erstellen können. Wie bereits erwähnt, können Sie Ihre Zugangsdaten für den Object-Storage-Zugriff mit ``openstack ec2 credentials create`` erstellen, mit ``openstack ec2 credentials list`` auflisten und mit ``openstack ec2 credentials show <accesskey>`` einsehen. Sie müssen diese für die Konfiguration von S3cmd bereithalten.
 
-Nach der Konfiguration sollten Sie eine ``.s3cfg`` Datei ähnlich dieser haben:
+Nach der Konfiguration sollten Sie eine ``.s3cfg`` Datei ähnlich der folgenden haben:
 
     [default]
     access_key = <Ihr AccessKey>
@@ -134,4 +134,4 @@ Nach der Konfiguration sollten Sie eine ``.s3cfg`` Datei ähnlich dieser haben:
     signurl_use_https = Wahr
     socket_timeout = 600
 
-Wenn alles korrekt ist, sollte die Ausführung von ``s3cmd ls s3://`` den Inhalt Ihres Objektspeichers auflisten.
+Wenn alles korrekt ist, sollte die Ausführung von ``s3cmd ls s3://`` den Inhalt Ihres Object Storage auflisten.
