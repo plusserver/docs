@@ -45,6 +45,7 @@ Wir bitten Sie, ab dem Zeitpunkt des Updates nur noch die neuen Flavors (mit Bin
 - Pressemitteilung zum Release von OpenStack 2023.1 (EN): https://www.openstack.org/software/antelope/
 
 Release Notes zu OpenStack 2023.1:
+- Overview: https://releases.openstack.org/antelope/index.html
 - Barbican: https://docs.openstack.org/releasenotes/barbican/2023.1.html
 - Cinder: https://docs.openstack.org/releasenotes/cinder/2023.1.html
 - Designate: https://docs.openstack.org/releasenotes/designate/2023.1.html
@@ -56,5 +57,4 @@ Release Notes zu OpenStack 2023.1:
 - Nova: https://docs.openstack.org/releasenotes/nova/2023.1.html
 - Octavia: https://docs.openstack.org/releasenotes/octavia/2023.1.html
 - Placement: https://docs.openstack.org/releasenotes/placement/2023.1.html
-- Overview: https://releases.openstack.org/antelope/index.html
  
