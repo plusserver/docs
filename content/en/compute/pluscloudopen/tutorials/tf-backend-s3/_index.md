@@ -7,9 +7,9 @@ description: >
   Manage your Infrastructure as Code (IaC) with Hashicorp Terraform and use OpenStack Object Storage as a Backend
 ---
 
-## Get your S3 credentials
+## Your S3 credentials
 
-In order to get your s3 credentials you need your OpenStack client set up correctly. If that's the case, you can enter
+To get your s3 credentials, you need your OpenStackClient set up correctly. If that's the case, you can enter:
 
 ``$ openstack ec2 credentials create``
 
@@ -26,26 +26,27 @@ The output of that command should be similar to this:
     | user_id    | poashohhe9eo8EeQuez3ochaeWaeBoiR                                                                                                                    |
     +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Obviously your credentials should be different (those above are fake). Relevant for S3-access are only the "access" and "secret" values. 
+Your credentials will, of course, look different (the ones shown above are distorted). For S3 access, only the "access" and "secret" values are relevant. 
 
 ## Create a bucket
 
-With your S3 credentials ready, you need to create a place to store your data in. In S3 terms, this place is called a "bucket". You can either create a bucket via the web ui (Horizon) or on the command line.
+With your S3 credentials ready, you need to create a place to store your data in. In S3 terms, this place is called a "bucket". You can either create a bucket via the web UI (Horizon) or on the command line.
 
-### Create a bucket via web ui
+### Create a bucket via web UI 
 
-Logged in to the web ui (Horizon) you can navigate to "Object Store" in the left menu and then click on "Containers" (that's how buckets are called in Horizon) ![Screenshot of Container screen in Horizon](./container2.png). 
-Click on the "+Container" button then enter a name for your new container, choose a storage policy and choose, whether your new bucket should be accessable publicly or only private (most of the time you would choose private). Click on "Create" to create the new bucket 
+If you are logged in to the web UI (Horizon), you can navigate to "Object Store" in the left menu and then click on "Containers" (that's what buckets are called in Horizon):
+![Screenshot of Container screen in Horizon](./container2.png) 
+Click the "+Container" button, then enter a name for your new container, select a storage policy and choose whether your new bucket should be public or private only (in most cases private). Click "Create" to create the new bucket: 
 
-![Screenshot of the Container create dialog in Horizon](./container1.png). 
+![Screenshot of the Container create dialog in Horizon](./container1.png) 
 
-It should immediately show up in the Container list 
+It should immediately show up in the "Containers" list:
 
-![Screenshot of the Container details screen in Horizon](./container3.png).
+![Screenshot of the Container details screen in Horizon](./container3.png)
 
-### Create a bucket with aws cli
+### Create a bucket with AWs CLI 
 
-To create a bucket in your object storage from the command line you can use the aws cli tool, which should be installed into a python virtual environment:
+To create a bucket in your Object Storage from the command line, you can use the AWS CLI tool, which should be installed in a Python virtual environment:
 
     $ → python3 -m venv awscli
     $ → . ./awscli/bin/activate
@@ -57,7 +58,7 @@ To create a bucket in your object storage from the command line you can use the 
     Installing collected packages: urllib3, jmespath, six, python-dateutil, botocore, colorama, docutils, s3transfer, pyasn1, rsa, PyYAML, awscli
     Successfully installed PyYAML-5.4.1 awscli-1.27.93 botocore-1.29.93 colorama-0.4.4 docutils-0.16 jmespath-1.0.1 pyasn1-0.4.8 python-dateutil-2.8.2 rsa-4.7.2 s3transfer-0.6.0 six-1.16.0 urllib3-1.26.15
 
-Next aws cli wants to be configured:
+Next, AWS CLI needs to be configured:
 
     (awscli) $ → aws configure --profile=prod1
     AWS Access Key ID [None]: 5aen4quuuQu8ci7aoceeyaek8oodohgh
@@ -66,11 +67,11 @@ Next aws cli wants to be configured:
     Default output format [None]: 
     (awscli) $ → 
 
-With the configuration in place, you can finally create your bucket via cli:
+With the configuration in place, you can finally create your bucket via CLI:
 
     (awscli) $ → aws --profile=prod1 --endpoint=https://prod1.api.pco.get-cloud.io:8080 s3api create-bucket --bucket mytfstate
 
-Hashicorp recommends to enable versioning for the bucket, thus keeping versioned copies of your terraform.tfstate file. You can enable versioning for your bucket like this:
+Hashicorp recommends enabling versioning for the bucket so that you can keep versioned copies of your terraform.tfstate file. You can enable versioning for your bucket like this:
 
     (awscli) $ → aws --profile=prod1 --endpoint=https://prod1.api.pco.get-cloud.io:8080 s3api put-bucket-versioning --bucket mytfstate --versioning-configuration 
     (awscli) $ → aws --profile=prod1 --endpoint=https://prod1.api.pco.get-cloud.io:8080 s3api get-bucket-versioning --bucket mytfstate 
@@ -79,10 +80,9 @@ Hashicorp recommends to enable versioning for the bucket, thus keeping versioned
     "MFADelete": "Disabled"
     }
 
-## Set Up Terraform to use your new bucket as a backend for its tfstate
+## Terraform setup: bucket as backend for tfstate
 
-As we now have a bucket in the object store, we can configure terraform to use it as a backend for the terraform state.
-Please include this part of the backend configuration into your terraform code: 
+As we now have a bucket in the Object Storage, we can configure terraform to use it as a backend for the Terraform state. Please include this part of the backend configuration into your Terraform code: 
 
     terraform {
       required_providers {
@@ -103,7 +103,8 @@ Please include this part of the backend configuration into your terraform code:
       }
     
     }
-Now export your access-key and your secret-key as AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables respectively in order to prevent those being saved to your local disk.
+
+Now export your access key and your secret key as environment variables (AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY) to prevent them from being stored on your local disk.
 
     export AWS_ACCESS_KEY_ID='5aen4quuuQu8ci7aoceeyaek8oodohgh'
     export AWS_SECRET_ACCESS_KEY='iek1aechaequa8pheitahNgeizai3eig'

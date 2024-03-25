@@ -8,6 +8,6 @@ description: >
   Documentation on working with various features of pluscloud open
 ---
 
-In this area of our documentation we want to provide some knowledge about the various aspects of the selfservice features of pluscloud open. These features include management of various network features (like subnetworks, loadbalancers, public and private IP addresses and firewall rules), storage (like volumes and snapshots) as well as virtual machines.
+In this section of our documentation, we want to provide some knowledge about the various aspects of the self-service features of pluscloud open. These features include the management of various networking features (such as subnets, loadbalancers, public and private IP addresses and firewall rules), storage (such as volumes and snapshots) and virtual machines.
 
-Most of these features can be consumed via the web frontend of pluscloud open (called [Horizon](https://docs.openstack.org/horizon/latest/)). Some of those features are only available via the [Openstack Client](https://docs.openstack.org/python-openstackclient/latest/index.html).
+Most of these features can be accessed through the web frontend of pluscloud open (called [Horizon](https://docs.openstack.org/horizon/latest/)). Some of these features are only available through the [OpenstackClient](https://docs.openstack.org/python-openstackclient/latest/index.html).
