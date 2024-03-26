@@ -37,3 +37,32 @@ img {
 .td-navbar .navbar-brand span:last-child {
     display: none;
 }
+
+.alert-warning {
+    border-color: #FF805A;
+}
+
+.alert-warning .alert-heading {
+    color: #FF805A;
+}
+
+.alert-info {
+    border-color: #00DC91;
+}
+
+.alert-info .info-heading {
+    color: #00DC91;
+}
+
+.alert-primary {
+    border-color: #009BF4;
+}
+
+.alert-primary .primary-heading {
+    color: #009BF4;
+}
+
+.pageinfo-primary {
+    border-color: #009bf4;
+}
+

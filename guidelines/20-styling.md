@@ -65,3 +65,21 @@ description: # optional
 - Use consistent link styles: Apply consistent styling to links, such as underlining or changing font color, to make them easy to identify and distinguish from regular text.
 
 By adhering to these styling and formatting guidelines, we can create a visually appealing and consistent documentation that effectively communicates information to our users, enhancing the overall user experience and project branding.
+
+## Infoboxes
+
+{{% alert title="Warning" color="warning" %}}
+This is a warning.
+{{% /alert %}}
+
+{{% alert title="Info" color="info" %}}
+This is a info.
+{{% /alert %}}
+
+{{% alert title="Primary" color="primary" %}}
+This is a primary.
+{{% /alert %}}
+
+{{% pageinfo color="primary" %}}
+This is placeholder content.
+{{% /pageinfo %}}
