@@ -10,7 +10,7 @@ plusserver bietet mehrere Regionen und Availability Zones (AZs) an, um Kunden Ho
 
 ## Was ist eine Region?
 
-Eine Region ist ein geografisches Gebiet, das aus mehreren isolierten und physisch getrennten, also redundanten AZs besteht. "Eine Region ist ein geografisches Gebiet, das aus mehreren isolierten und physisch getrennten, also redundanten AZs besteht. Die Entfernung zwischen den Regionen ist >=300km.
+Eine Region ist ein geografisches Gebiet, das aus mehreren isolierten und physisch getrennten, also redundanten AZs besteht. Die Entfernung zwischen den Regionen ist >=300km.
 
 ## Was ist eine Availability Zone (AZ)?
 
@@ -28,10 +28,10 @@ In der folgenden Tabelle sind die von plusserver angebotenen Regionen und AZs au
 
 | Region   | Availability Zone | Standort            |
 |----------|-------------------|---------------------|
-| DE-NORTH | DE-NORTH-1        | Hamburg, Germany    |
-|          | DE-NORTH-2        | Hamburg, Germany    |
-| DE-WEST  | DE-WEST-1         | Cologne, Germany    |
-|          | DE-WEST-2         | Dusseldorf, Germany |
+| DE-NORTH | DE-NORTH-1        | Hamburg, Deutschland    |
+|          | DE-NORTH-2        | Hamburg, Deutschland    |
+| DE-WEST  | DE-WEST-1         | Köln, Deutschland    |
+|          | DE-WEST-2         | Düsseldorf, Deutschland |
 
 ### Standorte und Rechenzentren
 
