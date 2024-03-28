@@ -37,7 +37,7 @@ Der VolumeBindingMode bestimmt, wann ein PersistentVolume erstellt und mit einem
 
 PersistentVolumes können nach Bedarf in ihrer Größe verändert werden. Benutzer können die Größe des zugehörigen PersistentVolumes durch Ändern des PersistentVolumeClaims erhöhen. Beachten Sie, dass diese Funktion nur die Volumenerweiterung und nicht die Volumenverkleinerung unterstützt.
 
-## StorageClass with ReclaimPolicy Delete
+## StorageClass mit ReclaimPolicy Delete
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -50,7 +50,7 @@ provisioner: cinder.csi.openstack.org
 reclaimPolicy: Delete
 ```
 
-## StorageClass with ReclaimPolicy Retain
+## StorageClass mit ReclaimPolicy Retain
 
 ```yaml
 apiVersion: storage.k8s.io/v1

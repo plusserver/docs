@@ -38,8 +38,9 @@ spec:
     services: ...
 ```
 
-> :warning: The `networking.pods` IP configuration is immutable and cannot be changed afterwards. 
-> Please consider the following paragraph to choose a configuration which will meet your demands.
+{{% alert title="Warning" color="warning" %}}
+The `networking.pods` IP configuration is immutable and cannot be changed afterwards. Please consider the following paragraph to choose a configuration which will meet your demands.
+{{% /alert %}}
 
 One of the network plugin's (CNI) tasks is to assign IP addresses to Pods started in the Pod network.
 Different network plugins come with different IP address management (IPAM) features, so we can't give any definite advice how IP ranges should be configured.
@@ -85,7 +86,9 @@ spec:
     nodeCIDRMaskSize: 24 (default)
 ```
 
-> :warning: The `nodeCIDRMaskSize` configuration is immutable and cannot be changed afterwards.
+{{% alert title="Warning" color="warning" %}}
+The `nodeCIDRMaskSize` configuration is immutable and cannot be changed afterwards.
+{{% /alert %}}
 
 _**Example 3**_
 ```

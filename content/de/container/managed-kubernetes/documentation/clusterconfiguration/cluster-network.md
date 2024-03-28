@@ -40,8 +40,10 @@ spec:
     services: ...
 ```
 
-> :warning: Die `networking.pods` IP-Konfiguration ist unveränderbar und kann nicht nachträglich geändert werden. 
-> Bitte beachten Sie den folgenden Abschnitt, um eine Konfiguration zu wählen, die Ihren Anforderungen entspricht.
+{{% alert title="Warning" color="warning" %}}
+Die `networking.pods` IP-Konfiguration ist unveränderbar und kann nicht nachträglich geändert werden. 
+Bitte beachten Sie den folgenden Abschnitt, um eine Konfiguration zu wählen, die Ihren Anforderungen entspricht.
+{{% /alert %}}
 
 Eine der Aufgaben des Netzwerk-Plugins (CNI) ist es, den im Pod-Netzwerk gestarteten Pods IP-Adressen zuzuweisen.
 Verschiedene Netzwerk-Plugins verfügen über unterschiedliche Funktionen zur Verwaltung von IP-Adressen (IPAM), so dass wir keine definitiven Empfehlungen geben können, wie IP-Bereiche konfiguriert werden sollten.
@@ -87,7 +89,9 @@ spec:
     nodeCIDRMaskSize: 24 (default)
 ```
 
-> :warning: Die Konfiguration "nodeCIDRMaskSize" ist unveränderlich und kann nicht nachträglich geändert werden.
+{{% alert title="Warning" color="warning" %}}
+Die Konfiguration "nodeCIDRMaskSize" ist unveränderlich und kann nicht nachträglich geändert werden.
+{{% /alert %}}
 
 _**Example 3**_
 ```
