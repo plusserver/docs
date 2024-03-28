@@ -28,10 +28,10 @@ In der folgenden Tabelle sind die von plusserver angebotenen Regionen und AZs au
 
 | Region   | Availability Zone | Standort            |
 |----------|-------------------|---------------------|
-| DE-NORTH | DE-NORTH-1        | Hamburg, Germany    |
-|          | DE-NORTH-2        | Hamburg, Germany    |
-| DE-WEST  | DE-WEST-1         | Cologne, Germany    |
-|          | DE-WEST-2         | Dusseldorf, Germany |
+| DE-NORTH | DE-NORTH-1        | Hamburg, Deutschland    |
+|          | DE-NORTH-2        | Hamburg, Deutschland    |
+| DE-WEST  | DE-WEST-1         | Köln, Deutschland    |
+|          | DE-WEST-2         | Düsseldorf, Deutschland |
 
 ### Standorte und Rechenzentren
 
