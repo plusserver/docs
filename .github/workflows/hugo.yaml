@@ -43,7 +43,7 @@ jobs:
         id: get-version
         run: echo "HUGO_VERSION=$(npm pkg get dependencies.hugo-extended 2>/dev/null | tr -d \"\^)" >> "$GITHUB_OUTPUT"
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: ${{ steps.get-version.outputs.HUGO_VERSION }}
           extended: true
