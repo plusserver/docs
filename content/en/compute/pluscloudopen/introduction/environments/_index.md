@@ -50,6 +50,7 @@ Most tools now prefer the clouds.yaml file, which can be split according to pref
 Authentication for the OpenStackClient is configured via files in YAML format. `clouds.yml`, `clouds-public.yml` and `secure.yml` are used to collect the credentials and authentication endpoints of one ore more OpenStack clouds (or pluscloud open Regions) you want to connect to.
 
 Most tools expect these files in certain directories
+
 1. Current working directory
 2. ${HOME}/.config/openstack/
 3. /etc/openstack/
@@ -63,7 +64,7 @@ Using `clouds.yml` and `clouds-public.yml`, you can specify more than one cloud 
 Another option is to download an OpenRC environment file from the Horizon web interface. While logged into Horizon you click on "`<your login name>`" in the upper right corner and choose "OpenStack RC File" from the dropdown menu.
 Then set the environment variables contained in the file as follows:
 
-```
+```bash
 source ./<Ihre openstack rc Datei>-openrc.sh
 Bitte geben Sie Ihr OpenStack-Passwort für das Projekt <IhrProjekt> als Benutzer <Ihr Anmeldename> ein
 ```

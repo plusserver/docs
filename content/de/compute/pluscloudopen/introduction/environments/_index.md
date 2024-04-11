@@ -50,6 +50,7 @@ Die meisten Tools präferieren mittlerweile die clouds.yaml, diese Datei kann je
 Die Dateien `clouds.yml`, `clouds-public.yml` und `secure.yml` werden verwendet, um die Anmeldedaten und Authentifizierungsendpunkte einer oder mehrerer OpenStack-Clouds (oder pluscloud open Umgebungen) zu sammeln, mit denen Sie sich verbinden möchten.
 
 Die meisten Tools erwarten diese Dateien in bestimmten Verzeichnisen
+
 1. Aktuelles Arbeitsverzeichnis
 2. ${HOME}/.config/openstack/
 3. /etc/openstack/
@@ -61,9 +62,9 @@ Die Verwendung von `clouds.yml` und `clouds-public.yml` ermöglicht es Ihnen, me
 #### RC File
 
 Eine weitere Möglichkeit besteht darin, eine OpenRC-Umgebungsdatei von der Horizon-Weboberfläche herunterzuladen. Wenn Sie in Horizon angemeldet sind, klicken Sie auf "`<Ihr Anmeldename>`" in der oberen rechten Ecke und wählen Sie "OpenStack RC File" aus dem Dropdown-Menü und laden es herunter.
-Danach setzen Sie die in der Datei enthaltenen Umgebungsvariablen wie folgt: 
+Danach setzen Sie die in der Datei enthaltenen Umgebungsvariablen wie folgt:
 
-```
+```bash
 source ./<Ihre openstack rc Datei>-openrc.sh
 Bitte geben Sie Ihr OpenStack-Passwort für das Projekt <IhrProjekt> als Benutzer <Ihr Anmeldename> ein
 ```
@@ -81,7 +82,6 @@ Ein Python-venv kann durch Ausführen von `python -m venv openstackclient` erste
 Die dritte Möglichkeit ist die Verwendung eines Docker-Containers, der alle benötigten OpenStack-Client-Bits enthält. Wir empfehlen, das openstackclient-Image von [OSISM](https://osism.tech/de) zu verwenden. Sie können diesen Container verwenden, wenn Sie eine lokale Docker- oder Podman-Installation auf Ihrer Workstation haben, indem Sie `docker pull quay.io/osism/openstackclient` bzw. `podman pull quay.io/osism/openstackclient` ausführen.
 
 Für Informationen zur Nutzung des OpenStackClients verweisen wir auf die [upstream documentation](https://docs.openstack.org/python-openstackclient/latest/index.html).
-
 
 ### Terraform Provider und Packer-Builder
 

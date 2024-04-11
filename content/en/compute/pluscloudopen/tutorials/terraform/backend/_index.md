@@ -40,7 +40,7 @@ $ openstack ec2 credentials create
 +------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
-Your login details will of course look different (the ones shown above are distorted). Only the values "access" and "secret" are relevant for S3 access. 
+Your login details will of course look different (the ones shown above are distorted). Only the values "access" and "secret" are relevant for S3 access.
 
 ### Creating a bucket
 
@@ -48,8 +48,8 @@ Once you have your S3 access data ready, you need to create a storage location f
 
 #### Horizon/UI
 
-If you are logged in to the web UI (Horizon), you can navigate to "Object Store" in the left menu and then click on "Containers" (this is what the buckets are called in Horizon): ![Screenshot of the container menu in Horizon](./container2.png). 
-Click on the "+Container" button and enter a name for your new container. Select a storage policy and specify whether your new bucket should be public or only privately accessible (in most cases private). Click on "Create" to create the new bucket. 
+If you are logged in to the web UI (Horizon), you can navigate to "Object Store" in the left menu and then click on "Containers" (this is what the buckets are called in Horizon): ![Screenshot of the container menu in Horizon](./container2.png).
+Click on the "+Container" button and enter a name for your new container. Select a storage policy and specify whether your new bucket should be public or only privately accessible (in most cases private). Click on "Create" to create the new bucket.
 
 ![Screenshot of the container creation dialog in Horizon](./container1.png)
 
@@ -60,7 +60,8 @@ The bucket should immediately appear in the container list:
 #### Openstack CLI
 
 ```bash
-$ openstack container create <bucketname>
+$ → openstack container create <bucketname>
+container <bucketname> created
 ```
 
 #### AWS CLI
@@ -111,11 +112,13 @@ Hashicorp recommends enabling versioning for the bucket to create versioned copi
 
 First, export your access key and your secret key as environment variables (AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY) to prevent them from being saved on your local hard disk.
 
-    export AWS_ACCESS_KEY_ID='5aen4quuuQu8ci7aoceeyaek8oodohgh'
-    export AWS_SECRET_ACCESS_KEY='iek1aechaequa8pheitahNgeizai3eig'
+```bash
+export AWS_ACCESS_KEY_ID='5aen4quuuQu8ci7aoceeyaek8oodohgh'
+export AWS_SECRET_ACCESS_KEY='iek1aechaequa8pheitahNgeizai3eig'
+```
 
 Since there is now a bucket in Object Storage and the access data can be used by Terraform, Terraform can be configured to use it as a backend for the Terraform status.
-Please add this part of the backend configuration to your terraform code: 
+Please add this part of the backend configuration to your terraform code:
 
 ```go
 terraform {
@@ -161,12 +164,15 @@ terraform {
 
 Now create a subdirectory in your working directory (called ``env`` here) and save different configurations of the backend in different files.
 
-    env
-    ├── backend_s3_dev.tfbackend
-    ├── backend_s3_stage.tfbackend
-    └── backend_s3_prod.tfbackend
+```bash
+env
+├── backend_s3_dev.tfbackend
+├── backend_s3_stage.tfbackend
+└── backend_s3_prod.tfbackend
+```
 
 backend_s3_dev.tfbackend:
+
 ```go
 key                         = "dev/terraform.tfstate"
 bucket                      = "mytfstate"
@@ -177,7 +183,9 @@ skip_credentials_validation = true
 skip_metadata_api_check     = true
 force_path_style            = true
 ```
+
 backend_s3_stage.tfbackend:
+
 ```go
 key                         = "stage/terraform.tfstate"
 bucket                      = "mytfstate"
