@@ -2,6 +2,7 @@
 #https://gohugo.io/content-management/page-bundles/
 title: "Von Null bis zum ersten Login in eine VM mit Horizon"
 type: "docs"
+weight: 1
 date: 2023-03-20
 description: >
   Bauen Sie sich Ihre erste VM in Horizon und melden Sie sich an

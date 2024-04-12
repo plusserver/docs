@@ -81,7 +81,9 @@ git clone https://github.com/plusserver/docs.git
 
 6. Once the `devcontainer` is up and running, you can start working on your project inside the container. You can open a `terminal` in VSCode by clicking on `Terminal -> New Terminal`. From there, you can use all the tools and utilities that are installed inside the container.
 
-7. When you're ready to `commit` and `push` your changes to the GitHub repo, simply use the Git CLI inside the container or the built-in Git extension in VSCode to commit and push your changes.
+7. To run a local development server simply run `hugo server` in a Terminal. Now you can open a browser on http://localhost:1313/ to have a live view of your changes.
+
+8. When you're ready to `commit` and `push` your changes to the GitHub repo, simply use the Git CLI inside the container or the built-in Git extension in VSCode to commit and push your changes.
 
 
 ### GitHub codespaces
