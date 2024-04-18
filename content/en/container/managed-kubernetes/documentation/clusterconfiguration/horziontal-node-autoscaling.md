@@ -6,12 +6,10 @@ weight: 20
 date: 2023-02-21
 ---
 
-# Cluster Autoscaler (Horizontal Node Autoscaler - HNA)
-
 The Cluster Autoscaler, also known as the Horizontal Node Autoscaler (HNA), is a tool that automatically adjusts the number of worker nodes in a Kubernetes cluster under the following conditions:
 
-- There are pods that cannot start due to insufficient resources.
-- There are worker nodes that have been underutilized for a specific period (default: 30 minutes), and pods can be distributed to other worker nodes.
+- Pods cannot start because of insufficient resources.
+- Worker nodes are underutilized for a period of time (30 minutes by default), and pods can be distributed to other worker nodes.
 
 ## Prerequisites
 

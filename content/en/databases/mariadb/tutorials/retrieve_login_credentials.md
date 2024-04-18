@@ -9,7 +9,7 @@ weight: 30
 
 ### Select contract
 
-First search for the appropriate [contract](https://customerservice.plusserver.com/billing/contracts)
+First search for the appropriate [contract](https://customerservice.plusserver.com/billing/contracts).
 The search terms *mariadb*, *mysql*, *postgresql* or *mansvc* will make the selection easier for you.
 
 ![Contracts](/images/content/04-msl/en/databases/get_credentials/1-contracts.png)

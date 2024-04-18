@@ -8,7 +8,7 @@ date: 2023-02-21
 
 # Cloud Controller Manager und Service-Annotations
 
-In jedem mit PSKE erstellten Kubernetes-Cluster wird automatisch der entsprechende Cloud Controller Manager (CCM) bereitgestellt, der der Kubernetes-Version entspricht. In einem Kubernetes-Cluster der Version 1.24.0 wird zum Beispiel der Cloud Controller Manager v1.24.0 bereitgestellt. Wenn Sie einen Kubernetes-Cluster aktualisieren, wird auch der Cloud Controller Manager auf eine unterstützte Version aktualisiert.Die Hauptaufgabe des Cloud Controller Managers ist die Konfiguration des OpenStack LoadBalancers. Diese Konfiguration wird mithilfe von Annotationen im Service durchgeführt.
+In jedem mit der PSKE erstellten Kubernetes-Cluster wird automatisch der entsprechende Cloud Controller Manager (CCM) bereitgestellt, der der Kubernetes-Version entspricht. In einem Kubernetes-Cluster der Version 1.24.0 wird zum Beispiel der Cloud Controller Manager v1.24.0 bereitgestellt. Wenn Sie einen Kubernetes-Cluster aktualisieren, wird auch der Cloud Controller Manager auf eine unterstützte Version aktualisiert. Die Hauptaufgabe des Cloud Controller Managers ist die Konfiguration des OpenStack LoadBalancers. Diese Konfiguration wird mithilfe von Annotationen im Service durchgeführt.
 
 Die folgenden Annotationen werden von Kunden häufig verwendet:
 

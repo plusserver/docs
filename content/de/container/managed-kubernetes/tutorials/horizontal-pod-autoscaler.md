@@ -8,11 +8,11 @@ date: 2023-02-21
 
 Im Folgenden werden die Schritte zur Bereitstellung eines Kubernetes-Clusters und zur Einrichtung der horizontalen Pod-Autoskalierung (HPA) mit einigen Test- und Bereinigungsschritten beschrieben:
 
-## 1) Bereitstellen eines Clusters:
+## 1. Bereitstellen eines Clusters
 
 Zuerst wird ein Kubernetes-Cluster bereitgestellt.
 
-## 2) Stellen Sie die Anwendung bereit:
+## 2. Stellen Sie die Anwendung bereit
 
 **deployment.yaml**
 ```yaml
@@ -44,7 +44,7 @@ spec:
 
 Verwenden Sie `kubectl apply -f deployment.yaml`, um die Bereitstellung zu erstellen.
 
-## 3) Erstellen Sie einen Dienst:
+## 3. Erstellen Sie einen Dienst:
 
 **service.yaml**
 ```yaml
@@ -63,7 +63,7 @@ spec:
 
 Verwenden Sie "kubectl apply -f service.yaml", um den Dienst zu erstellen.
 
-## 4) Konfigurieren Sie HPA:
+## 4. Konfigurieren Sie HPA
 
 **hpa.yaml**
 ```yaml
@@ -83,14 +83,14 @@ spec:
 
 Verwenden Sie `kubectl apply -f hpa.yaml`, um den Horizontal Pod Autoscaler zu erstellen.
 
-## 5) Testen:
+## 5. Testen
    Sie können den HPA testen, indem Sie die Last mit verschiedenen Methoden simulieren. Das mitgelieferte Beispiel verwendet `kubectl run`, um die Last zu simulieren:
 
 ```bash
 kubectl run -i --tty load-simulation --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://hpa-demo-deployment; done"
 ```
 
-## 6) Überwachung:
+## 6. Überwachung
    Überwachen Sie die HPA mit `kubectl` und anderen Überwachungswerkzeugen, um zu beobachten, wie sie auf Änderungen der Last reagiert.
 
 ```bash
@@ -137,14 +137,14 @@ NAME                  REFERENCE                        TARGETS   MINPODS   MAXPO
 hpa-demo-deployment   Deployment/hpa-demo-deployment   47%/50%   1         10         6          30m
 ```
 
-## 7) Last entfernen:
+## 7. Last entfernen
    Um den Lastsimulator zu entfernen, können Sie den entsprechenden Pod löschen:
 
 ```bash
 kubectl delete pod load-simulation
 ```
 
-## 8) Aufräumen:
+## 8. Aufräumen
    Zum Schluss bereinigen Sie die Ressourcen, indem Sie den Horizontal Pod Autoscaler, das Deployment und den Service löschen:
 
 ```bash

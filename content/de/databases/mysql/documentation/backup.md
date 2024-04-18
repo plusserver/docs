@@ -4,13 +4,13 @@ linkTitle: "Backup und Restore"
 type: "docs"
 ---
 
-Unser Database-as-a-Service (DBaaS) beinhalten Backup- und Restore Funktionen.
+Unsere Databases-as-a-Service (DBaaS) beinhalten Backup- und Restore Funktionen.
 
 ## Backup
 
 Backups werden automatisch jede Nacht durchgeführt. Wir verwenden Dateisystem-Snapshots für die Backups. Standardmäßig werden die Backups 7 Tage lang aufbewahrt. Alle Backups werden verschlüsselt, um die Sicherheit zu erhöhen und Ihre Daten zu schützen.
 
->*Sie können die von Plusserver erstellten Backups nicht direkt herunterladen. Wenn Sie eine manuelle Sicherung durchführen wollen, müssen Sie auf native DBMS-Tools wie ```pg_dump``` oder ```mysqldump``` zurückgreifen.*
+>*Sie können die von *plusserver* erstellten Backups nicht direkt herunterladen. Wenn Sie eine manuelle Sicherung durchführen wollen, müssen Sie auf native DBMS-Tools wie ```pg_dump``` oder ```mysqldump``` zurückgreifen.*
 
 ## Restore
 

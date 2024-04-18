@@ -1,6 +1,6 @@
 ---
-title: "PSKE - Cluster Provisionierung"
-linkTitle: "Cluster Provisionierung"
+title: "PSKE - Cluster-Provisionierung"
+linkTitle: "Cluster-Provisionierung"
 type: "docs"
 weight: 10
 date: 2023-02-21

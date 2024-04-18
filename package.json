@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "hugo-extended": "^0.123.0"
+    "hugo-extended": "^0.124.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0"
   }
 }

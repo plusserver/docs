@@ -8,7 +8,7 @@ date: 2023-10-22
 
 # StorageClasses
 
-plusserver provides the following StorageClasses for "plusserver Kubernetes Engine (PSKE) on pluscloud open":
+plusserver stellt die folgenden StorageClasses für "plusserver Kubernetes Engine (PSKE) auf pluscloud open" zur Verfügung:
 
 ```bash
 kubectl get storageclasses
@@ -17,27 +17,27 @@ csi-cinder-sc-delete (default)   cinder.csi.openstack.org   Delete          Imme
 csi-cinder-sc-retain             cinder.csi.openstack.org   Retain          Immediate           true
 ```
 
-- **csi-cinder-sc-delete** is the default StorageClass and is used if no explicit StorageClass is specified in the PersistentVolumeClaim.
+- **csi-cinder-sc-delete** ist die Standard StorageClass und wird verwendet, wenn im PersistentVolumeClaim keine explizite StorageClass angegeben ist.
 
 ## Provisioner
 
-Each StorageClass uses a provisioner that determines which volume plugin is used to create PersistentVolumes. In this case, the "cinder.csi.openstack.org" provisioner is used.
+Jede StorageClass verwendet einen Provisioner, der bestimmt, welches Volume-Plugin zur Erstellung von PersistentVolumes verwendet wird. In diesem Fall wird der "cinder.csi.openstack.org"-Provisioner verwendet.
 
-Please note that the "cinder.csi.openstack.org" provisioner supports only the "ReadWriteOnce" access mode, meaning that the PersistentVolume can be mounted in read/write mode by only one node at a time.
+Bitte beachten Sie, dass der "cinder.csi.openstack.org"-Provisioner nur den "ReadWriteOnce"-Zugriffsmodus unterstützt, was bedeutet, dass das PersistentVolume jeweils nur von einem Knoten im Lese-/Schreibmodus gemountet werden kann.
 
 ## Reclaim Policy
 
-PersistentVolumes created dynamically by a StorageClass use the reclaimPolicy specified in the StorageClass, which can be "Delete" or "Retain." With the "Delete" reclaimPolicy, the associated PersistentVolume is automatically deleted when the PersistentVolumeClaim is deleted. With the "Retain" reclaimPolicy, the PersistentVolume remains even after the PersistentVolumeClaim is deleted.
+PersistentVolumes, die dynamisch von einer StorageClass erstellt werden, verwenden die in der StorageClass angegebene reclaimPolicy, die "Delete" oder "Retain" sein kann. Mit der reclaimPolicy "Delete" wird das zugehörige PersistentVolume automatisch gelöscht, wenn der PersistentVolumeClaim gelöscht wird. Bei der reclaimPolicy "Retain" bleibt das PersistentVolume auch nach dem Löschen des PersistentVolumeClaims erhalten.
 
 ## Volume Binding Mode
 
-The VolumeBindingMode determines when a PersistentVolume is created and associated with a matching PersistentVolumeClaim, if present. In this case, the PersistentVolume is created immediately (Immediate) and associated with a corresponding PersistentVolumeClaim. It's a one-to-one mapping of PersistentVolumeClaims to PersistentVolumes.
+Der VolumeBindingMode bestimmt, wann ein PersistentVolume erstellt und mit einem passenden PersistentVolumeClaim verknüpft wird, falls vorhanden. In diesem Fall wird das PersistentVolume sofort erstellt (Immediate) und mit einem entsprechenden PersistentVolumeClaim verknüpft. Es handelt sich um eine Eins-zu-Eins-Zuordnung von PersistentVolumeClaims zu PersistentVolumes.
 
 ## Allow Volume Expansion
 
-PersistentVolumes can be resized as needed. Users can increase the size of the associated PersistentVolume by modifying the PersistentVolumeClaim. Note that this feature only supports volume expansion and not volume reduction.
+PersistentVolumes können nach Bedarf in ihrer Größe verändert werden. Benutzer können die Größe des zugehörigen PersistentVolumes durch Ändern des PersistentVolumeClaims erhöhen. Beachten Sie, dass diese Funktion nur die Volumenerweiterung und nicht die Volumenverkleinerung unterstützt.
 
-## StorageClass with ReclaimPolicy Delete
+## StorageClass mit ReclaimPolicy Delete
 
 ```yaml
 apiVersion: storage.k8s.io/v1
@@ -50,7 +50,7 @@ provisioner: cinder.csi.openstack.org
 reclaimPolicy: Delete
 ```
 
-## StorageClass with ReclaimPolicy Retain
+## StorageClass mit ReclaimPolicy Retain
 
 ```yaml
 apiVersion: storage.k8s.io/v1

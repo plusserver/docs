@@ -8,45 +8,44 @@ description: >
   Notes on changes and updates in SCS R5
 ---
 
-## General notes for the SCS R5 Release on pluscloud open:
+## General notes 
 
-- OpenStack 2023.1 (Antelope) is the OpenStack release that is used.
+- OpenStack 2023.1 (Antelope) is the OpenStack release that is used
 - Ceph Quincy is the Ceph release that is used (no change to SCS R4)
-- OVN and OVS are built from source and no longer installed via packages.
+- OVN and OVS are built from source and no longer installed via packages
 
-## Important Information:
+## Important Information
 
-With this update we have to rebuild the RabbitMQ Messaging Service and therefore it is necessary to set the API and GUI into a downtime for about three hours. Into that window it will not be possible to manage running workload or spawn new workload.
-Running workload will not be affected!
+This update requires us to rebuild the RabbitMQ messaging service. Therefore it is necessary to put the API and GUI into a downtime for about three hours. During this window, it will not be possible to manage running workload or spawn new workloads. Running workloads will not be affected!
 
-## New features and requirements overview:
+## Overview of new features and requirements
 
-### horizon
+### Horizon
 
-Add support to portforwardings in the Network Floating IPs dashboard. Find it in the menu under 'Network -> Floating IPs" in the dropdown menu of unassigned floating ips -> 'Configure floating IP port forwarding rules'
+Add support for port forwarding in the network floating IPs dashboard. This can be found under 'Network -> Floating IPs" in the dropdown menu of unassigned floating ips -> 'Configure floating IP port forwarding rules'.
 
-### nova
+### Nova
 
-The latest Compute API microversion supported for 2023.1 is v2.95.
+The latest compute API microversion supported for 2023.1 is v2.95.
 
-### keystone
+### Keystone
 
-with this version of keystone the old and deprecated role "_member_" will be removed and only the new role "member" can be used from now on inside the projects.
+With this version of Keystone, the old and deprecated "_member_" role is removed and only the new "member" role can be used in projects.
 
-As there are a lot of users which have the old role assigned we will switch the roles for all users to the new one so that none of the users of the platform have to take care about that. At the same time we will also switch the pco-expansion-api to version 0.2.1 which also uses the new "member" role.
+Since there are a lot of users who have the old role assigned, we will switch the roles for all users to the new one, so no one on the platform has to worry about it. At the same time, we will also upgrade the pco-expansion-api to version 0.2.1, which also uses the new "member" role.
 
-### flavors
+### Flavors
 
-as the new SCS flavor standard (which can be found here: https://docs.scs.community/standards/scs-0100-v2-flavor-naming/) has been released it is neccessary for all SCS providers to follow this and provide the compute flavors with the new names which will contain dashes instead of a colons. To keep the impact as small as possible we will add the new flavors for everybody and set the old flavors to private visibility only in the projects which are using them at the moment.
+Since the new SCS Flavor Naming Standard (https://docs.scs.community/standards/scs-0100-v2-flavor-naming/) has been released, it is neccessary for all SCS providers to follow it and provide the compute flavors with the new names, which will contain dashes instead of a colons. To minimize the impact, we will add the new flavors for everyone and set the old flavors to private visibility only in the projects that currently use them.
 
-We ask you to only use the new flavors (with dashes) starting from the point of time when the update has been rolled out. Existing workload will continue running with the old flavor names. For a better overview inside the projects it would make sense to recreate running workloads with the new flavors, so that the old ones can then be purged from the project's flavor list.
-more details
+We ask you to only use the new flavors (with dashes) from the time the update is rolled out. Existing workloads will continue to run with the old flavor names. For a better overview within the projects, it would make sense to recreate running workloads with the new flavors, so that the old ones can then be removed from the project's flavor list.
 
-### detailed changelogs for every component which includes also bugfixes etc. can be found here:
+### Detailed change logs for every component (incl. bug fixes)
 
-- OpenStack 2023.1 press announcement: https://www.openstack.org/software/antelope/
+- OpenStack 2023.1 press release: https://www.openstack.org/software/antelope/
 
 OpenStack 2023.1 release notes:
+- Overview: https://releases.openstack.org/antelope/index.html
 - Barbican: https://docs.openstack.org/releasenotes/barbican/2023.1.html
 - Cinder: https://docs.openstack.org/releasenotes/cinder/2023.1.html
 - Designate: https://docs.openstack.org/releasenotes/designate/2023.1.html
@@ -58,5 +57,4 @@ OpenStack 2023.1 release notes:
 - Nova: https://docs.openstack.org/releasenotes/nova/2023.1.html
 - Octavia: https://docs.openstack.org/releasenotes/octavia/2023.1.html
 - Placement: https://docs.openstack.org/releasenotes/placement/2023.1.html
-- Overview: https://releases.openstack.org/antelope/index.html
  

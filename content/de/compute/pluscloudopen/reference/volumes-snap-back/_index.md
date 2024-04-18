@@ -4,35 +4,35 @@ type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Erstellen von (verschlüsselten) Volumes von Snapshots und Backups
+  Erstellen von (verschlüsselten) Volumes, Snapshots und Backups
 ---
 
 ## Volumes
 
-Volumes repräsentieren (Block)Speicher in OpenStack. Volumes werden als Festplatten in Instanzen verwendet. Wenn nicht explizit anders erwähnt, befinden sich Volumes auf einem [ceph](https://ceph.io/en/)-Speichersystem und sind über das [RADOS](https://docs.ceph.com/en/quincy/rbd/index.html)-Protokoll über das Netzwerk an die Instanz angeschlossen.
+Volumes repräsentieren (Block) Storage in OpenStack. Volumes werden als Festplatten in Instanzen verwendet. Wenn nicht explizit anders erwähnt, befinden sich Volumes auf einem [Ceph](https://ceph.io/en/)-Speichersystem und sind über das [RADOS](https://docs.ceph.com/en/quincy/rbd/index.html)-Protokoll über das Netzwerk an die Instanz angeschlossen.
 Über das Menü "**Volumes**" können Sie die Volumes in Ihrem Projekt verwalten. 
 
-<img src="image2020-10-22_15-21-57.png" alt="Bildschirmfoto des Menüs "Volumes"" width="50%" height="50%" title="Menü "Volumes">
+<img src="image2020-10-22_15-21-57.png" alt="Bildschirmfoto des Menüs "Volumes" width="50%" height="50%" title="Menü "Volumes">
 
 Sie können neue Volumes, Backups und Snapshots erstellen sowie Ihre Volumes gruppieren (z. B. für gleichzeitige Snapshots). Die Liste zeigt die Volumes mit ihrer eindeutigen ID an, aber Sie können den Namen Ihrer Volumes ändern, wenn Sie möchten. Außerdem können Sie sehen, ob das Volume derzeit an eine Instanz angehängt ist (und wo), wie groß das Volume ist und ob es Mitglied einer Volume-Gruppe ist. Über die Schaltfläche "**Aktionen**" haben Sie Zugriff auf die verschiedenen Verwaltungsoptionen, die Sie für Ihre Volumes haben.
 
-Mit "**Volume bearbeiten**" können Sie den Namen Ihres Volumes ändern und/oder eine Beschreibung für das Volume hinzufügen. Dies kann hilfreich sein, um den Zweck des Volumes sichtbar zu machen. Außerdem können Sie hier das Boot-Flag für ein Volume setzen. Mit "**Anhänge verwalten**" können Sie ein Volume an eine Instanz anhängen oder von ihr abkoppeln. Beachten Sie, dass Sie nach dem Anhängen eines Volumes höchstwahrscheinlich einige Konfigurationseinstellungen auf Ihrer Instanz ändern müssen (z.B. ein Dateisystem auf das neue Volume legen, /etc/fstab bearbeiten und es mounten, usw.). Bevor Sie ein Volume von Ihrer Instanz abhängen, sollten Sie es umounten.
+Mit "**Volume bearbeiten**" können Sie den Namen Ihres Volumes ändern und/oder eine Beschreibung für das Volume hinzufügen. Dies kann hilfreich sein, um den Zweck des Volumes sichtbar zu machen. Außerdem können Sie hier das Boot-Flag für ein Volume setzen. Mit "**Anhänge verwalten**" können Sie ein Volume an eine Instanz anhängen oder von ihr abkoppeln. Beachten Sie, dass Sie nach dem Anhängen eines Volumes höchstwahrscheinlich einige Konfigurationseinstellungen auf Ihrer Instanz ändern müssen (z.B. ein Dateisystem auf das neue Volume legen, /etc/fstab bearbeiten und es mounten usw.). Bevor Sie ein Volume von Ihrer Instanz abhängen, sollten Sie es per `umount` trennen.
 
-Mit "**Snapshot erstellen**" können Sie einen Snapshot des betreffenden Volumes erstellen. Zuvor müssen Sie ihm einen Namen (und optional eine Beschreibung) geben. Bitte beachten Sie, dass das Erstellen eines Snapshots von einem Datenträger, der bereits gemountet und verwendet wird, zu einer Beschädigung der Daten führen kann. Der sichere Weg, Snapshots zu erstellen, besteht darin, das betreffende Volume zuerst zu deaktivieren. Schnappschüsse sind keine Backups.
+Mit "**Snapshot erstellen**" können Sie einen Snapshot des betreffenden Volumes erstellen. Zuvor müssen Sie ihm einen Namen (und optional eine Beschreibung) geben. Bitte beachten Sie, dass das Erstellen eines Snapshots von einem Datenträger, der bereits gemountet und verwendet wird, zu einer Beschädigung der Daten führen kann. Der sichere Weg, Snapshots zu erstellen, besteht darin, das betreffende Volume zuerst zu deaktivieren. Snapshots sind keine Backups.
 
-Mit "**Backup erstellen**" erstellen Sie ein Backup Ihres Volumes. Wenn Sie einen Snapshot Ihres Datenträgers auswählen, wird nur der Snapshot gesichert. Wenn Ihr Volume-Backup in Ihr Objektspeicher-Kontingent passt, können Sie einen Objektspeicher-Bucket auswählen und das Backup dorthin schreiben.
+Mit "**Backup erstellen**" erstellen Sie ein Backup Ihres Volumes. Wenn Sie einen Snapshot Ihres Datenträgers auswählen, wird nur der Snapshot gesichert. Wenn Ihr Volume-Backup in Ihr Object-Storage-Kontingent passt, können Sie ein Object-Storage-Bucket auswählen und das Backup dorthin schreiben.
 
-Sie können ein Volume in ein Image konvertieren, das Sie mit "**In Image hochladen**" zur Erstellung einer Instanz verwenden können. Sie müssen ein Festplattenformat für das Image wählen (meist "raw" oder "qcow2"). Wenn der Datenträger in Gebrauch ist, können Sie die Sicherung durch Klicken auf "**Erzwingen**" erzwingen.
+Sie können ein Volume in ein Image konvertieren, das Sie mit "**In Image hochladen**" zur Erstellung einer Instanz verwenden können. Sie müssen ein Festplattenformat für das Image wählen (meist "raw" oder "qcow2"). Wenn der Datenträger in Gebrauch ist, können Sie die Sicherung durch Klick auf "**Erzwingen**" erzwingen.
 
 Mit "**Metadaten aktualisieren**" können Sie die Metadaten des Datenträgers verwalten. Sie finden vordefinierte Metadaten-Definitionen, die Sie verwenden können, oder Sie können mit dem Feld "**Benutzerdefiniert**" eigene Metadaten definieren. Die maximale Länge für einen einzelnen Schlüssel beträgt 255 Zeichen.
 
 ### Übertragung akzeptieren
 
-Wenn Sie Datenträger von einem Projekt in ein anderes übertragen, können Sie die Übertragung mit einem Klick auf "Übertragung übernehmen" akzeptieren. Übertragungen werden von der Kommandozeile aus mit ``openstack volume transfer request`` eingeleitet. Damit erstellt der Besitzer eines Datenträgers einen Transferauftrag und sendet die Transfer-ID und einen Schlüssel an den Empfänger des Datenträgers. Der Empfänger klickt auf "Accept Transfer" und gibt die Transfer-ID und den Schlüssel ein, um das Volume zu erhalten.
+Wenn Sie Datenträger von einem Projekt in ein anderes übertragen, können Sie die Übertragung mit einem Klick auf "**Übertragung übernehmen**" akzeptieren. Übertragungen werden von der Kommandozeile aus mit ``openstack volume transfer request`` eingeleitet. Damit erstellt der Besitzer eines Datenträgers einen Transferauftrag und sendet die Transfer-ID und einen Schlüssel an den Empfänger des Datenträgers. Der Empfänger klickt auf "**Accept Transfer**" und gibt die Transfer-ID und den Schlüssel ein, um das Volume zu erhalten.
 
 ### Volume erstellen
 
-Um ein neues Volume zu erstellen, klicken Sie auf "+Volume erstellen" und dann werden Sie durch einige Menüs geführt, um das neue Volume zu definieren
+Um ein neues Volume zu erstellen, klicken Sie auf "**+Volume erstellen**" und dann werden Sie durch einige Menüs geführt, um das neue Volume zu definieren
 
 ![Screenshot des Menüs "Volume erstellen"](image2020-10-22_15-37-55.png)
 
@@ -42,14 +42,14 @@ Neben einem Namen und einer optionalen Beschreibung können Sie eine "**Volumenq
 
 Das Menü "**Backups**" listet Ihre aktuellen Backups auf und ermöglicht es Ihnen, diese entweder zu löschen oder für die Wiederherstellung zu verwenden (z. B. indem Sie ein neues Volume aus dem Backup erstellen).
 
-## Schnappschüsse
+## Snapshots
 
 Hier sehen Sie eine Liste Ihrer aktuellen Snapshots und können diese verwalten. Dazu gehört das Starten einer Instanz aus einem Snapshot mit "**Als Instanz starten**", das Ändern des Namens oder der Beschreibung eines Snapshots, das Erstellen eines Backups aus Ihrem Snapshot mit "**Backup erstellen**", das Löschen des Snapshots oder das Ändern der Metadaten für Ihren Snapshot. 
 Sie können aus einer Reihe von vordefinierten Metadaten wählen oder "**Benutzerdefinierte**" Metadatenschlüssel hinzufügen. Die maximale Schlüssellänge beträgt 255 Zeichen.
 
 ## Gruppen
 
-In Datenträgergruppen können Sie eine Gruppe von Datenträgern bilden, die Sie als einen einzigen behandeln möchten. Es kann sinnvoll sein, Datenträger, die verschiedene Teile einer Anwendung enthalten, gleichzeitig in einem Snapshot zu erfassen, um die Datenkonsistenz zu gewährleisten. Sie können mit "**Gruppe erstellen**" neue Gruppen erstellen oder bestehende bearbeiten.
+In Volume-Gruppen können Sie eine Gruppe von Volumes bilden, die Sie als einen einzigen behandeln möchten. Es kann sinnvoll sein, Volumes, die verschiedene Teile einer Anwendung enthalten, gleichzeitig in einem Snapshot zu erfassen, um die Datenkonsistenz zu gewährleisten. Sie können mit "**Gruppe erstellen**" neue Gruppen erstellen oder bestehende bearbeiten.
 
 ## Gruppen-Snapshots
 
@@ -57,7 +57,7 @@ Hier können Sie Ihre Gruppen-Snapshots verwalten.
 
 ## Verschlüsselte Volumes
 
-Pluscloud open erlaubt es, verschlüsselte Volumes zu erstellen, die auf "LUKS" ([Linux Unified Key Setup](https://gitlab.com/cryptsetup/cryptsetup)) basieren, welches das Linux-Kernel-Modul dm-crypt verwendet und ideal für die Verschlüsselung von Volumes für Linux-Instanzen sein sollte. Die Schlüssel werden bei der Erstellung des Volumes generiert und im Keystore auf pluscloud open gespeichert. Beachten Sie, dass beim Löschen von verschlüsselten Volumes nicht nur das Volume, sondern auch der zugehörige Schlüssel gelöscht wird. **Eine Wiederherstellung der Daten ist nach der Löschung nicht möglich**. 
+Die pluscloud open erlaubt es, verschlüsselte Volumes zu erstellen, die auf "LUKS" ([Linux Unified Key Setup](https://gitlab.com/cryptsetup/cryptsetup)) basieren, welches das Linux-Kernel-Modul dm-crypt verwendet und ideal für die Verschlüsselung von Volumes für Linux-Instanzen ist. Die Schlüssel werden bei der Erstellung des Volumes generiert und im Keystore der pluscloud open gespeichert. Beachten Sie, dass beim Löschen von verschlüsselten Volumes nicht nur das Volume, sondern auch der zugehörige Schlüssel gelöscht wird. **Eine Wiederherstellung der Daten ist nach der Löschung nicht möglich**. 
 
 Das Erstellen eines verschlüsselten Volumes ist recht einfach. Sie wählen einfach "LUKS" als "**Typ**" aus. 
 
@@ -102,7 +102,7 @@ Um das Root-Volume einer Instanz zu verschlüsseln, müssen Sie zunächst ein ve
 
 Mit dem Parameter "**--image**" können Sie ein Volume direkt aus einem Image erstellen (entweder aus dem Repository oder von Ihnen selbst hochgeladen).
 
-Nun können Sie eine Instanz mit dem soeben erstellten Volume erstellen. Sie müssen einen Flavor (Name oder ID) hinzufügen und Sie sollten nicht vergessen, einen ssh-Schlüsselnamen hinzuzufügen, mit dem Sie sich anschließend bei der Instanz anmelden können. Zusätzlich müssen Sie ein bestehendes Netzwerk hinzufügen, in dem die Instanz erzeugt werden soll:
+Nun können Sie eine Instanz mit dem soeben erstellten Volume erstellen. Sie müssen einen Flavor (Name oder ID) hinzufügen und Sie sollten nicht vergessen, einen SSH-Schlüsselnamen hinzuzufügen, mit dem Sie sich anschließend bei der Instanz anmelden können. Zusätzlich müssen Sie ein bestehendes Netzwerk hinzufügen, in dem die Instanz erzeugt werden soll:
 
     openstack server create --flavor <Flavor name oder ID> --network <network name oder ID> --key-name <keyname> --volume <volumename oder ID> <instancename>
  
@@ -141,6 +141,6 @@ Nun können Sie eine Instanz mit dem soeben erstellten Volume erstellen. Sie mü
 
 Die Instanz verwendet jetzt verschlüsselten Speicher. Bitte denken Sie daran, das Volume zu löschen, nachdem Sie die Instanz gelöscht haben, da es nicht automatisch gelöscht wird.
 
-### Geheimnisse auflisten
+### Secrets auflisten
 
 Wie bereits erwähnt, ist für jedes verschlüsselte Volume ein Schlüssel im OpenStack Keystore (Barbican) gespeichert. Sie können alle für Ihr Projekt gespeicherten Schlüssel mit ``openstack secret list`` auflisten.

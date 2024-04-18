@@ -54,7 +54,7 @@ Die in der Tabelle aufgeführten Parameter stellen die spezifischen Konfiguratio
 
 <br>
 
-**Wenn Sie Ihre DBaas-Konfiguration anpassen müssen oder einen nicht aufgeführten Parameter ändern müssen, wenden Sie sich bitte an unser Support-Team [eröffnen Sie ein Ticket](https://customerservice.plusserver.com/support/ticket-create).**
+**Für gewünschte Konfigurationsänderungen oder falls Sie einen noch nicht aufgeführten Parameter benötigen, eröffnen Sie bitte ein [Ticket](https://customerservice.plusserver.com/support/ticket-create).**
 
 <br>
 

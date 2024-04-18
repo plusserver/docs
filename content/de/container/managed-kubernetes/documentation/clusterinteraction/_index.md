@@ -8,8 +8,7 @@ description: >
 
 ---
 
-
-In general, there are 3 main ways to interact with a cluster in PSKE:
+Es gibt 3 Hauptmethoden, um mit einem Cluster in der PSKE zu interagieren:
 
 - PSKE Dashboard
 - Gardenctl

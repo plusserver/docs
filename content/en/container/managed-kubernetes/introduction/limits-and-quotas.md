@@ -5,15 +5,15 @@ type: "docs"
 weight: 20
 date: 2024-01-19
 ---
-In this tabular list you will find important information about limits in Kubernetes and Compute Quotas, the latter can be increased via a support ticket.
+These tables provide important information about limits in Kubernetes and compute quotas, the latter of which can be increased via a support ticket.
 
-Resources marked with an * are theoretical limits in Kubernetes. We recommend not exceeding the limits with one deployment and instead implement the deployment across multiple clusters.
+Resources marked with * are theoretical limits in Kubernetes. We recommend that you do not exceed the limits in a single deployment, and instead deploy across multiple clusters.
 
 ### Cluster
 
 | Resource | Limit |
 | --- | --- |
-| Nodes* | 5.000 | 
+| Nodes* | 5.000 |
 | Pods* | 110.000 |
 | Containers* | 300.000 |
 
@@ -21,7 +21,7 @@ Resources marked with an * are theoretical limits in Kubernetes. We recommend no
 | Resource | Limit |
 | --- | --- |
 | Pods*	| 110 |
-| Max. Volumes	| 128 |
+| Max. Volumes | 128 |
 
 ### Cilium (CNI)
 
@@ -29,7 +29,7 @@ Resources marked with an * are theoretical limits in Kubernetes. We recommend no
 | --- | --- |
 | Identities | 64.000 |
 
-All endpoints (Pods, Services, etc.) which are managed by Cilium will be assigned an identity.
+An identity is assigned to all endpoints (Pods, Services, etc.) managed by Cilium.
 
 ### Compute Quotas
 | Resource | Limit |

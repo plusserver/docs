@@ -1,10 +1,10 @@
 ---
-title: "Lokaler SSD-Speicher"
+title: "Lokaler SSD Storage"
 type: "docs"
 weight: 60
 date: 2024-02-09
 description: >
-  Lokalen SSD-Speicher verwenden
+  Local SSD Storage verwenden
 ---
 
 
@@ -24,46 +24,46 @@ Lokaler SSD-Speicher ist ideal für flüchtige oder temporäre Arbeitslasten wie
 Der lokale SSD-Speicher hat die gleiche Lebensdauer wie die VM-Instanz. Wenn die VM gelöscht wird oder abstürzt, gehen auch die Daten des lokalen SSD-Speichers verloren. Darüber hinaus können Ihre VMs im Falle einer Hypervisor-Wartung weder in der Größe verändert noch live auf einen anderen Hypervisor migriert werden. Im Falle eines Hardwareausfalls können Ihre lokalen SSD-Daten vollständig verloren gehen. Selbst wenn es keinen Festplattenausfall gibt, kommt es zu regelmäßigen Ausfallzeiten.
 {{% /alert %}}
 
-### Vergleich der Eigenschaften von Ceph-Volumes mit denen von lokalem SSD-Speicher
+### Vergleich der Eigenschaften von Ceph-Volumes Local SSD Storage
 
-Es gibt grundlegende Unterschiede zwischen Ceph-Volumes und lokalem SSD-Speicher.
+Es gibt grundlegende Unterschiede zwischen Ceph-Volumes und Local SSD Storage.
 
-Wie bei Shared Storage sorgt das zugrunde liegende Speichersystem für Redundanz und Verfügbarkeit. Ihre Anwendung kann sich auf den dreifach replizierten hochverfügbaren Speicher verlassen.
+Bei Shared Storage sorgt das zugrundeliegende Speichersystem für Redundanz und Verfügbarkeit. Ihre Anwendung kann sich auf den dreifach replizierten hochverfügbaren Speicher verlassen.
 
-Wie bei lokalem SSD-Speicher können Sie auf die lokale Festplatte im Rohzustand zugreifen und nahezu 1:1-Leistung erzielen. Allerdings ist Ihr Software-Stack für die Handhabung der Redundanz und Verfügbarkeit verantwortlich.
+Bei Local SSD Storage können Sie auf die lokale Festplatte im Rohzustand zugreifen und nahezu 1:1-Leistung erzielen. Allerdings ist Ihr Software-Stack für die Handhabung der Redundanz und Verfügbarkeit verantwortlich.
 
-**Verwendungsfälle für lokalen SSD-Speicher:**
+**Anwendungsfälle für Local SSD Storage:**
 
 * Kubernetes
 * Etcd-Cluster mit 3 oder 5 Instanzen
 * Postgres-Patroni-Cluster
 
-**Anti-Patterns für lokalen SSD-Speicher:**
+**Anti-Patterns für Local SSD Storage:**
 
 * Traditionelle Einzelserver-Einrichtung
-* VMs werden wie Haustiere behandelt
+* VMs werden ohne Configuration Management eingerichtet
 * VMs ohne Snapshots
 
 In der folgenden Tabelle werden die Merkmale von Ceph-Volumes mit denen von Local SSD Storage verglichen:
 
-| Eigenschaften | Ceph-Boot-Volumen | Boot-Volumen des lokalen SSD-Speichers |
+| Eigenschaften | Ceph-Boot-Volume | Boot-Volume von Local SSD Storage |
 |------------------|-------------------|--------------------------------|
 | Speicheranbieter | Cinder | Nova |
 | Durchsatz | <span style="color: red;">Niedrig</span> | <span style="color: green;">Hoch</span> |
-| Latenzzeit | <span style="color: red;">HIGH</span> | <span style="color: green;">LOW</span> |
-| Live-Migration | <span style="color: green;">YES</span> | <span style="color: red;">NO</span> |
-| Verfügbarkeit | <span style="color: green;">HIGH</span> | <span style="color: red;">LOW</span> |
-| Ephemeral | NO | YES |
+| Latenz | <span style="color: red;">Hoch</span> | <span style="color: green;">Niedrig</span> |
+| Live-Migration | <span style="color: green;">Möglich</span> | <span style="color: red;">Nicht Möglich</span> |
+| Verfügbarkeit | <span style="color: green;">Hoch</span> | <span style="color: red;">Niedrig</span> |
+| Flüchtiger Speicher | Nein | Ja |
 
 ### Verfügbarkeit
 
-Es gibt zwei Fälle, in denen bei VMs, die auf lokalem SSD-Speicher laufen, Ausfallzeiten auftreten können
+Es gibt zwei Fälle, in denen bei VMs, die auf Local SSD Storage laufen, Ausfallzeiten auftreten können
 
 #### Regelmäßige Reboots
 
-Jeder Hypervisor mit lokalem SSD-Speicher muss **periodisch** neu gebootet werden.  Normalerweise geschieht dies **einmal im Monat**. Sie sollten daher damit rechnen, dass Ihre VMs regelmäßig ausfallen.
+Jeder Hypervisor mit Local SSD Storage muss **periodisch** neu gebootet werden.  Normalerweise geschieht dies **einmal im Monat**. Sie sollten daher damit rechnen, dass Ihre VMs regelmäßig ausfallen.
 
-Die durchschnittliche Ausfallzeit beträgt **ca. eine halbe Stunde**, kann aber variieren. Alle VMs erhalten vor der Wartung ein ACPI-Shutdown-Signal. Die VMs haben **eine Minute Zeit, um ordnungsgemäß herunterzufahren**.
+Die durchschnittliche Ausfallzeit beträgt **ca. eine halbe Stunde**, kann aber variieren. Alle VMs erhalten vor der Wartung ein ACPI-Shutdown-Signal. Die VMs haben **eine Minute Zeit**, um ordnungsgemäß herunterzufahren.
 
 Nach dieser Zeit werden sie einfach heruntergefahren.
 
@@ -71,46 +71,47 @@ Sie sollten davon ausgehen, dass Ihre VMs nach dem Neustart des Hypervisors **au
 
 Zwischen den Neustarts des Hypervisors wird es eine **30-minütige Pause** geben. Dies gibt Ihrem Software-Stack Zeit, sich neu zu konfigurieren.
 
-Allerdings sind alle VMs auf demselben Hypervisor davon betroffen. Sie müssen **Anti-Affinität** [Servergruppen] (../instances-and-images/server-groups/) aktivieren.
+Allerdings sind alle VMs auf demselben Hypervisor davon betroffen. Sie müssen **Anti-Affinität** [Servergruppen](../instances-and-images/server-groups/) aktivieren.
 
 #### Hardware-Ausfall
 
 Im Falle eines vollständigen Hardwareausfalls oder einer Neukonfiguration müssen Sie mit **Datenverlust** rechnen.
 
-In diesen Fällen gehen die Boot-Disketten verloren. Das bedeutet, dass beim Wiederanlauf des Hypervisors beschädigte VMs vorhanden sind.
+In diesen Fällen gehen die Boot-Volumes verloren. Das bedeutet, dass beim Wiederanlauf des Hypervisors beschädigte VMs vorhanden sind.
 
-Es wird von Ihnen erwartet, dass Sie diese VMs selbst **wischen**. Wir sind der Meinung, dass es besser ist, defekte VM-Definitionen aufzubewahren, damit Sie diese Instanzen zuverlässiger aus einer Sicherung oder einem Snapshot wiederherstellen können. Sie müssen für defekte VMs bezahlen.
+Es wird von Ihnen erwartet, dass Sie diese VMs selbst löschen. Wir sind der Meinung, dass es besser ist, defekte VM-Definitionen aufzubewahren, damit Sie diese Instanzen zuverlässiger aus einer Sicherung oder einem Snapshot wiederherstellen können. Sie müssen für defekte VMs bezahlen.
 
-Apropos Backups: Sie sollten regelmäßig Snapshots erstellen, um im Falle eines Hardwareausfalls des zugrunde liegenden Hypervisors eine ausgefallene VM wiederherstellen zu können.
+Apropos Backups: Sie sollten regelmäßig Snapshots erstellen, um im Falle eines Hardwareausfalls des zugrundeliegenden Hypervisors eine ausgefallene VM wiederherstellen zu können.
 
-#### Verwenden Sie Servergruppen und Anti-Affinität zur Erzielung von Fehlertoleranz
+#### Server-Gruppen und Anti-Affinität zur Erzielung von Fehlertoleranz
 
-Wenn Sie lokalen SSD-Speicher verwenden, **sollten Sie unbedingt Fehlertoleranz** gegen Hypervisor-Ausfälle schaffen.
+Bei der Verwendung von Local SSD Storage ist es wichtig, Fehlertoleranz gegen Hypervisor-Ausfälle vorzusehen.
 
-Eine Möglichkeit ist die Verwendung von [Servergruppen](../instances-and-images/server-groups/), um Ihre VMs auf mehrere Hypervisoren zu verteilen.
+Eine Möglichkeit ist die Verwendung von [Server-Gruppen](../instances-and-images/server-groups/), um Ihre VMs auf mehrere Hypervisoren zu verteilen.
 
-## Lokalen SSD-Speicher verwenden
+## Local SSD Storage verwenden
 
-Um lokalen SSD-Speicher zu verwenden, erstellen Sie einfach eine VM mit einem bestimmten Flavor für lokalen SSD-Speicher. Alle Flavors, die mit einem "**s**" enden, stehen für lokalen SSD-Speicher. Konfigurieren Sie die VM so, dass sie ohne Volume bootet. Dies ist wichtig, wenn Sie möchten, dass die VM von einem lokalen Datenträger und nicht von einem Remote-Volume bootet.
+Um Local SSD Storage zu verwenden, erstellen Sie einfach eine VM mit einem bestimmten Flavor für Local SSD Storage. Alle Flavors, die mit einem "**s**" enden, stehen für Local SSD Storage. Konfigurieren Sie die VM so, dass sie ohne Volume bootet. Dies ist wichtig, wenn Sie möchten, dass die VM von einem lokalen Datenträger und nicht von einem Remote-Volume bootet.
 
 Nachdem Sie die VM erstellt haben, bootet sie mit einer lokalen Festplatte vom Blockgerät **/dev/sda1**. Sie können zusätzliche Datenträger an Ihre VM anhängen. Diese Volumes stammen jedoch aus dem gemeinsam genutzten Ceph-Speicher.
 
-Beispiele für lokale SSD-Speichervarianten:
+Beispiele für Varianten von Local SSD Storage:
 
-| Name | VCPUs | RAM (MB) | Festplatte (GB) |
+| Name | vCPUs | RAM (MB) | Festplatte (GB) |
 |----------------|-------|-------|------|
 | SCS-2V-4-20s | 2 | 4096 | 20 |
 | SCS-4V-16-100s | 4 | 16384 | 100 |
 
+
 {{% alert title="Hinweis" color="info" %}}
-Erstellen Sie kein Boot-Volume! Wenn Sie ein Boot-Volume erstellen würden, würde Ihre VM von einem Cinder-Volume auf einem gemeinsamen Speicher booten.
+Erstellen Sie kein Boot-Volume! Wenn Sie ein Boot-Volume erstellen würden, würde Ihre VM von einem Cinder-Volume auf dem Shared Storage booten.
 {{% /alert %}}
 
 ### Erstellen einer VM mit Horizon
 
-Gehen Sie folgendermaßen vor, um eine VM zu erstellen, die lokalen SSD-Speicher verwendet:
+Gehen Sie folgendermaßen vor, um eine VM zu erstellen, die Local SSD Storage verwendet:
 
-Navigieren Sie zum Dialogfeld "Launch Instance" (Instanz starten). Stellen Sie unter "**Details**" "**Instanzname**" ein.
+Navigieren Sie zum Dialogfeld "Launch Instance" (Instanz starten). Stellen Sie unter "**Details**" den "**Instanzname**" ein.
 
 <center>
 <img src="screenshot-2024-02-09-13.59.00.png" alt="screenshot of instance details tab" width="75%" title="details tab">
@@ -124,18 +125,18 @@ Wählen Sie unter "**Quelle**" Ihr bevorzugtes Cloud-Image aus. Belassen Sie die
 <br/><br/>
 </center>
 
-Wählen Sie unter "**Geschmack**" einen der Geschmacksrichtungen aus, die auf "**s**" enden.
+Wählen Sie unter "**Flavor**" einen der Flavor aus, die auf "**s**" enden.
 <center>
 <img src="screenshot-2024-02-09-13.59.52.png" alt="screenshot of instance flavor tab" width="75%" title="flavor tab">
 <br/><br/>
 </center>
 
-Konfigurieren Sie den Rest nach Belieben. Zum Schluss starten Sie die Instanz.
+Konfigurieren Sie die übrigen Einstellungen nach Belieben. Zum Schluss starten Sie die Instanz.
 
 
 ### Erstellen einer VM mit der CLI
 
-Um eine identische VM mit der Openstack CLI zu erstellen, verwenden Sie den folgenden Befehl:
+Um eine identische VM mit der OpenStack CLI zu erstellen, verwenden Sie den folgenden Befehl:
 
 ```bash
 openstack server create --flavor SCS-2V-4-20s --image "Ubuntu 22.04" demo-cli

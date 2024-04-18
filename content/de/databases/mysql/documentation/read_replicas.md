@@ -6,13 +6,13 @@ type: "docs"
 
 ## Read Replica
 
-Read Replicas steigern die Skalierbarkeit von Datenbanken, indem sie Leseanfragen auf mehrere Read-Only Datenbank Instanzen verteilen. Dies bietete eine effektivere Bewältigung hoher Lese Anfragen, ohne die Primäre Datenbank zu belasten. Dadurch sind schnellere Antwortzeiten und eine erhebliche Leistungssteigerung Ihrer Anwendung möglich.
+Read Replicas steigern die Skalierbarkeit von Datenbanken, indem sie Leseanfragen auf mehrere Read-Only-Datenbank-Instanzen verteilen. Dies bietete eine effektivere Bewältigung hoher Leseanfragen, ohne die primäre Datenbank zu belasten. Dadurch sind schnellere Antwortzeiten und eine erhebliche Leistungssteigerung Ihrer Anwendung möglich.
 
 Um eine DBaaS-Read einzurichten, verwendet das System einen Dateisystem-Snapshot der primären Datenbankinstanz, um die sekundäre Instanz zu initialisieren. Anschließend wird die systemeigene asynchrone Replikation der Datenbank-Engine verwendet, um sicherzustellen, dass die Read Replica bei allen Änderungen in der Quelldatenbankinstanz stets auf dem neuesten Stand bleibt.
 
 ## Beschränkungen
 
-- Read Replicas sind für DBaas MariaDB, MySQL und PostrgeSQL verfügbar.  
+- Read Replicas sind für die DBaaS MariaDB, MySQL und PostgreSQL verfügbar.  
 - Sie können maximal drei zusätzliche Read Replicas pro DBaaS erstellen.
 - Die Compute-Ressourcen und der Datenspeicher müssen mit dem ursprünglichen DBaaS übereinstimmen.
 - Es ist nicht möglich, einen sekundären Server in einen primären Server umzuwandeln, um Schreibzugriff zu ermöglichen.
@@ -22,7 +22,7 @@ Um eine DBaaS-Read einzurichten, verwendet das System einen Dateisystem-Snapshot
 
 Um Ihre Anwendung korrekt für den Einsatz von Read Replicas zu konfigurieren, ist es essenziell, Lese- von Schreiboperationen zu trennen.
 
-- Schreiboperationen: Verbindungen sollten ausschließlich an den Primäre Instanz gerichtet sein, auf dem Datenänderungen (INSERT, UPDATE, DELETE) erlaubt sind.
+- Schreiboperationen: Verbindungen sollten ausschließlich an die primäre Instanz gerichtet sein, auf der Datenänderungen (INSERT, UPDATE, DELETE) erlaubt sind.
 
 - Leseoperationen: Verbindungen für Abfragen, die nur Daten abrufen (SELECT), sollten zu den Lese-Replikaten geleitet werden.
 

@@ -41,7 +41,7 @@ Die in der Tabelle aufgeführten Parameter stellen die spezifischen Konfiguratio
 - **Parameter:** In dieser Spalte werden die Konfigurationsparameter aufgeführt.
 - **Type:** Gibt den Datentyp des Konfigurationsparameters an (z. B. Integer, String).
 - **Default:** Zeigt den Standardwert für jeden Parameter an.
-- Modifiable:** Zeigt an, ob der Parameter modifiziert werden kann (`true`/`false`).
+- **Modifiable:** Zeigt an, ob der Parameter modifiziert werden kann (`true`/`false`).
 - **Restart Required:** Gibt an, ob ein Neustart des Servers erforderlich ist, damit Änderungen wirksam werden (`true`/`false`).
 - **Min:** Zeigt den minimal zulässigen Wert für numerische Parameter an.
 - **Max:** Zeigt den maximal zulässigen Wert für numerische Parameter an.
@@ -49,7 +49,7 @@ Die in der Tabelle aufgeführten Parameter stellen die spezifischen Konfiguratio
 
 <br>
 
-**Wenn Sie Ihre DBaas-Konfiguration anpassen müssen oder einen nicht aufgeführten Parameter ändern müssen, wenden Sie sich bitte an unser Support-Team [eröffnen Sie ein Ticket](https://customerservice.plusserver.com/support/ticket-create).**
+**Für gewünschte Konfigurationsänderungen oder falls Sie einen noch nicht aufgeführten Parameter benötigen, eröffnen Sie bitte ein [Ticket](https://customerservice.plusserver.com/support/ticket-create).**
 
 <br>
 

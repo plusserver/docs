@@ -5,7 +5,7 @@ type: "docs"
 weight: 20
 date: 2024-01-18
 description: ->
-   Create a kubeconfig with unlimited lifetime
+
 ---
 
 # Allgemein
@@ -31,9 +31,7 @@ metadata:
 type: kubernetes.io/service-account-token
 ```
 
-Und wenden Sie die erstellte yaml mit
-
-`kubectl apply -f perm-cluster-admin-secret.yaml`
+Und wenden Sie die erstellte yaml mit `kubectl apply -f perm-cluster-admin-secret.yaml` an.
 
 ## Schritt 3: Erstellen einer Cluster-Rolle
 Fahren Sie nun mit der Erstellung einer clusterRole mit eingeschränkten Rechten für Clusterobjekte fort. Sie können den erforderlichen Objektzugriff entsprechend Ihren Anforderungen hinzufügen. Weitere Informationen finden Sie in der Dokumentation zum Dienstkonto und zur clusterRole.
