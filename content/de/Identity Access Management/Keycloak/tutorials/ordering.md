@@ -13,32 +13,32 @@ Sie starten immer in unserem [Kundenportal](https://customerservice.plusserver.c
 
 Navigieren Sie zunächst zu IAM - Keycloak.
 
-![Auswahl IAM - Keycloak](/images/content/04-msl/de/iam_keycloak/ordering/1-cloud_service_tbd_keycloak.png)
+![Auswahl IAM - Keycloak](/images/content/04-msl/de/iam_keycloak/ordering/1-cloud_service_keycloak.png)
 
 ### Wählen Sie den Servicetyp
 
 Wählen Sie hier Keycloak aus.
 
-![Auswahl Keycloak](/images/content/04-msl/de/iam_keycloak/ordering/2-tbd.png)
+![Auswahl Keycloak](/images/content/04-msl/de/iam_keycloak/ordering/2-select_keycloak_version.png)
 
-### Wählen Sie die Nodesize
+### Wählen Sie die Instanztyp und Instanzgröße
 
-Wählen Sie nun die Größe der Node aus. Sie wissen noch nicht, welche Leistung Sie benötigen? Dann wählen Sie den kleinsten Knoten und skalieren Sie später, wenn nötig
+Wählen Sie nun die Größe der Node aus. Sie wissen noch nicht, welche Leistung Sie benötigen? Dann wählen Sie den kleinsten Knoten und skalieren Sie später, wenn nötig (in Planung)
 
-![Auswahl Nodesize](/images/content/04-msl/de/iam_keycloak/ordering/3-iam_keycloak-size2.png)
+![Auswahl Nodesize](/images/content/04-msl/de/iam_keycloak/ordering/3-iam_keycloak-size.png)
 
 ### Speichergröße auswählen
 
 Sie beginnen immer mit mindestens 50 GB Speicherplatz für Ihre Daten.
 
-![Speichergröße wählen](/images/content/04-msl/de/iam_keycloak/ordering/4-iam_keycloak-storage.png)
+![Speichergröße wählen](/images/content/04-msl/de/iam_keycloak/ordering/4-select-storage-size.png)
 
 ### Freischalten des Zugriffs
 
 Der Service ist über eine öffentliche IP erreichbar. Da diese frei aus dem Internet verfügbar ist und potentiell jedem "angegriffen" werden könnte, sperren wir intial jeglichen Zugriff auf den Service. Der reine Schutz durch eine verschlüsselte Verbindung mit Benutzername und Passwort ist nicht ausreichend. Deswegen muss dediziert angegeben werden, von welchen vertrauenswürdigen Quellen die IAM - Keycloak Instanz zugreifbar sein soll
 Sie müssen hier den Zugriff von einer oder mehrer externen Adressen oder Adressbereichen freischalten. Idealerweise ist hier nur die eine IP freigegeben, von der der Service genutzt wird.
 
-![Externen Zugang einrichten](/images/content/04-msl/de/iam_keycloak-/ordering/5-selection-trusted-sources.png)
+![Externen Zugang einrichten](/images/content/04-msl/de/iam_keycloak/ordering/5-selection-trusted-sources.png)
 
 ### Wählen Sie die Region
 

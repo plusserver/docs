@@ -13,13 +13,17 @@ You always start in our [customer portal](https://customerservice.plusserver.com
 
 First navigate to *IAM - Keycloak*.
 
-![Selection IAM - Keycloak](/images/content/04-msl/en/iam_keycloak/ordering/1-cloud_service_tbd_keycloak.png)
+![Selection IAM - Keycloak](/images/content/04-msl/en/iam_keycloak/ordering/1-cloud_service_keycloak.png)
 
-### Selection Nodesize
+### Select Keycloak service type
 
-Now select the size or performance. You do not yet know what performance you need? Then select the smallest node and scale up later if necessary.
+[Selection IAM - Keycloak](/images/content/04-msl/en/iam_keycloak/ordering/2-select_keycloak_version.png)
 
-![Select Nodesize](/images/content/04-msl/en/iam_keycloak/ordering/3-iam_keycloak-size2.png)
+### Selection of Node Type and Node Size
+
+Now select the size and a type of node. You do not yet know what performance you need? Then select the smallest node and scale up later if necessary (planned).
+
+![Select Nodesize](/images/content/04-msl/en/iam_keycloak/ordering/3-iam_keycloak-size.png)
 
 ### Selection of the storage size
 
@@ -50,7 +54,7 @@ Are you a new Plusserver customer and do not yet receive an invoice? Then select
 
 Please check the data you have entered in the summary. Please read the terms and conditions and agreements and confirm them. Only then can you complete the order by clicking on ***order now***
 <br>
-![Order summary](/images/content/04-msl/de/iam_keycloak/ordering/8-order-overview.png)
+![Order summary](/images/content/04-msl/en/iam_keycloak/ordering/8-order-overview-keycloak.png)
 
 ### Track order status
 
