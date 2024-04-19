@@ -66,5 +66,5 @@ Direkt nach der Bestellung werden Sie auf den [Bestellstatus](https://customerse
 * new: Status direkt nach dem Auftrag
 * processing: Status sobald die automatische Bereitstellung angelaufen ist
 * failed: Es ist leider etwas schiefgegangen, bitte öffnen Sie ein [Ticket](https://customerservice.plusserver.com/support/ticket-create) hier im Portal, so dass wir Ihnen schnellstmöglich helfen können.
-* DONE: Herzlichen Glückwunsch, Ihr neuer Private Registry steht zur Verfügung.
+* DONE: Herzlichen Glückwunsch, Ihre neuer Private Registry steht zur Verfügung.
 ![Auftrag erfolgreich ausgeführt](/images/content/04-msl/de/private_registry/ordering/10-order_status.png)
