@@ -17,7 +17,7 @@ The order process is done and your IAM - Keycloak instance is up and running. Th
 
 ### Working with IAM - Keycloak
 
-Log in to the web interface to use the IAM - Keycloak service.
+Log in to the web interface to use the IAM - Keycloak service. Please see [Getting Started](../../tutorials/first_steps/#log-in-to-the-web-interface-to-use-the-iam---keycloak-service).
 
 ## Customization
 
@@ -59,7 +59,7 @@ We monitor our *IAM - Keycloak* instance by keeping an eye on both the underlyin
 
 ### Regions and AZ
 
-For information on choosing regions and availability zones, check the [Regions and AZ's](../../documentation/az/) document.
+For information on choosing regions and availability zones, check the [Regions and AZ's](../../../general/plusserver-region-az/) document.
 
 ### SLA
 

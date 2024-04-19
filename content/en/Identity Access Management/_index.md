@@ -1,6 +1,6 @@
 ---
-title: "Identity Access Management"
-linkTitle: "Identity Access Management"
+title: "Identity & Access Management"
+linkTitle: "Identity & Access Management"
 type: "docs"
 weight: 10
 menu:

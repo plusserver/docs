@@ -17,7 +17,7 @@ Nach Abschluss der Bestellung ist Ihre IAM - Keycloak bereit. Ihre Anmeldedaten 
 
 ### Nutzung der IAM - Keycloak
 
-Melden Sie sich im Webinterface an, um IAM - Keycloak zu nutzen.
+Melden Sie sich im Webinterface an, um IAM - Keycloak zu nutzen. Sehen Sie auch [Erste Schritte](../../tutorials/first_steps/#an-der-iam---keycloak-webui-anmelden).
 
 ## Anpassungen
 
@@ -55,7 +55,7 @@ Wir überwachen Ihre *IAM - Keycloak*, indem wir die zugrundeliegenden Rechen- u
 
 ### Regionen und AZ
 
-Informationen zur Auswahl von Regionen und Verfügbarkeitszonen finden Sie im Dokument [Regionen und AZs](../../documentation/az/).
+Informationen zur Auswahl von Regionen und Verfügbarkeitszonen finden Sie im Dokument [Regionen und AZs](../../../general/plusserver-region-az/).
 
 ### SLA
 
