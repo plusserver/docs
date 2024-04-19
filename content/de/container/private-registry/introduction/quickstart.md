@@ -48,11 +48,11 @@ Erfahren Sie mehr über die Patchroutine für unsere *Private Registry - Harbor*
 
 ### Überwachung
 
-Wir überwachen Ihre *Private Registry - Harbor*, indem wir die zugrundeliegenden Rechen- und Speicherressourcen im Auge behalten als auch anwendungsspezifische Monitoring Checks durchführen. Unser 24x7-Supportteam kümmert sich um alle auftretenden Probleme und gewährleistet einen kontinuierliche Verfügbarkeit.
+Wir überwachen Ihre *Private Registry - Harbor*, indem wir die zugrundeliegenden Rechen- und Speicherressourcen im Auge behalten als auch anwendungsspezifische Monitoring Checks durchführen. Unser 24x7-Supportteam kümmert sich um alle auftretenden Probleme und gewährleistet eine kontinuierliche Verfügbarkeit.
 
 ### Regionen und AZ
 
-Informationen zur Auswahl von Regionen und Verfügbarkeitszonen finden Sie im Dokument [Regionen und AZs](../../../allgemein/plusserver-region-az/).
+Informationen zur Auswahl von Regionen und Verfügbarkeitszonen finden Sie im Dokument [Regionen und AZ](../../../general/plusserver-region-az).
 
 ### SLA
 
