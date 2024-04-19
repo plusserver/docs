@@ -1,6 +1,6 @@
 ---
-title: "Login Details abrufen"
-linkTitle: "Login Details abrufen"
+title: "Login-Details abrufen"
+linkTitle: "Login-Details abrufen"
 type: "docs"
 weight: 30
 ---
@@ -10,7 +10,7 @@ weight: 30
 ### Vertrag auswählen
 
 Suchen Sie zunächst nach dem entsprechenden [Vertrag.](https://customerservice.plusserver.com/billing/contracts)
-Die Suchbegriffe *mariadb*, *mysql*, *postgresql* oder *mansvc* werden Ihnen die Auswahl erleichtern.
+Die Suchbegriffe **, *mysql*, *postgresql* oder *mansvc* werden Ihnen die Auswahl erleichtern.
 
 ![Verträge](/images/content/04-msl/de/databases/get_credentials/1-contracts.png)
 
@@ -22,6 +22,6 @@ Rufen Sie den Vertrag auf und lassen Sie sich die Anmeldedaten unten in den Vert
 
 ### Anmeldedaten
 
-Sie sehen dann die Zugangsdaten, die Sie benötigen, um sich mit der DBaaS zu verbinden.
+Sie sehen dann die Zugangsdaten, die Sie benötigen, um sich an der Harbor-Weboberfläche anzumelden.
 
 ![Zugangsdaten](/images/content/04-msl/de/databases/get_credentials/3-credentials-view.png)

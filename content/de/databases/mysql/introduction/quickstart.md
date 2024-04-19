@@ -1,6 +1,6 @@
 ---
-title: " Quickstartguide"
-linkTitle: " Quickstartguide"
+title: " Quickstart guide"
+linkTitle: " Quickstart guide"
 type: "docs"
 weight: 30
 ---
@@ -69,7 +69,7 @@ Wir überwachen unser DBaaS, indem wir sowohl die zugrunde liegenden Rechen- und
 
 ### Regionen und AZ
 
-Informationen zur Auswahl von Regionen und Verfügbarkeitszonen finden Sie im Dokument [Regionen und AZs](../../documentation/az/).
+Informationen zur Auswahl von Regionen und Verfügbarkeitszonen finden Sie im Dokument [Regionen und AZ](../../../general/plusserver-region-az).
 
 ### SLA
 
