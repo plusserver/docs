@@ -81,7 +81,7 @@ YAML
 
 NAMEOFRESOURCE is only relevant to Terraform and does not reflect the name of the actual cluster, but it makes sense to name it so that it can be reassigned later in a growing configuration.
 
-This is used to pass the desired configuration to the Gardener API in YAML format, which you can of course write entirely by hand, but you can also let the dashboard do it for you.
+This file is used to pass the desired configuration to the Gardener API in YAML format, which you can of course write entirely by hand, but you can also let the dashboard do it for you.
 
 To do so, you essentially go through the process of setting up a Kubernetes cluster using the PSKE dashboard, configuring the cluster the way you want it with all the settings you need, including the number and size of worker nodes, maintenance and hibernation schedules, and so on. When you're finished, don't actually start the creation, but click on "YAML" next to "Overview" in the bar at the top. There you will get the complete definition of the desired configuration in YAML format.
 
@@ -338,7 +338,7 @@ If you agree, you can use "terraform apply". Then you will be shown everything i
 terraform apply
 ```
 
-Which in my case would look like this:
+In our example it would look like this:
 
 ```bash
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:

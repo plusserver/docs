@@ -8,13 +8,13 @@ date: 2023-02-21
 
 ## Deprovisionierung eines Kubernetes-Clusters
 
-Um einen Kubernetes-Cluster zu löschen, navigieren Sie zu der Option "CLUSTERS" in der linken Menüleiste (1). Anschließend können Sie die Löschung des Kubernetes-Clusters durch Klicken auf die drei Punkte (2) (3) einleiten.
-
 ![11](/images/content/02-pske/10-clusterinteraction/cluster-deprovisioning/11.png)
 
-Bestätigen Sie das Löschen des Kubernetes-Clusters anhand seines Namens (1), und wählen Sie dann "Löschen" (2).
+Um einen Kubernetes-Cluster zu löschen, navigieren Sie zu der Option "CLUSTERS" in der linken Menüleiste (1). Anschließend können Sie die Löschung des Kubernetes-Clusters durch Klicken auf die drei Punkte (2) (3) einleiten.
 
 ![12](/images/content/02-pske/10-clusterinteraction/cluster-deprovisioning/12.png)
+
+Bestätigen Sie das Löschen des Kubernetes-Clusters mit der Eingabe (2) seines Namens (1), und wählen Sie dann "Löschen" (3).
 
 Der Kubernetes-Cluster wird nun gelöscht. Sie können den Löschstatus (1) überprüfen, um weitere Informationen zu erhalten (2). Alle Ressourcen werden entfernt, einschließlich der Controlplane Nodes, Worker Nodes, PersistentVolumes, Load Balancer und Floating IPs.
 

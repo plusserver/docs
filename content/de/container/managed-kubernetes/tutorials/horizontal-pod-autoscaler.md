@@ -1,6 +1,6 @@
 ---
-title: "Installation des Horizontal Pod Autoscaler (HPA)"
-linkTitle: "Installation des Horizontal Pod Autoscaler (HPA)"
+title: "Installation des Horizontal Pod Autoscalers (HPA)"
+linkTitle: "Installation des Horizontal Pod Autoscalers (HPA)"
 type: "docs"
 weight: 20
 date: 2023-02-21

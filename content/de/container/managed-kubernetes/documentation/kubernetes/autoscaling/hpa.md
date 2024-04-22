@@ -14,7 +14,7 @@ Nach der Konfiguration überprüft der Horizontal Pod Autoscaler Controller in r
 
 Zur Überwachung der Metriken stützt sich HPA auf eine andere Kubernetes-Ressource, den Metrics Server. Der Metrics Server liefert standardmäßige Metriken zur Ressourcennutzung, indem er Daten von "kubernetes.summary_api" sammelt, z. B. die CPU- und Speichernutzung für Knoten und Pods. Er kann auch auf benutzerdefinierte Metriken zugreifen (die von einer externen Quelle gesammelt werden), wie z. B. die Anzahl der aktiven Sitzungen auf einem Load Balancer oder die Backend-Last.
 
-So wird sichergestellt, dass eine Anwendung auch unter Last verfügbar bleibt und ihre Funktion erfüllen kann. Es stellt auch sicher, dass eine Anwendung nicht mehr Replikate betreibt, als gerade benötigt werden, und optimiert so die Ressourcennutzung und die Kosten in beide Richtungen." Die Skalierung ist jedoch durch die verfügbare Rechenleistung des Clusters begrenzt.
+So wird sichergestellt, dass eine Anwendung auch unter Last verfügbar bleibt und ihre Funktion erfüllen kann. Es stellt auch sicher, dass eine Anwendung nicht mehr Replikate betreibt, als gerade benötigt werden, und optimiert so die Ressourcennutzung und die Kosten in beide Richtungen. Die Skalierung ist jedoch durch die verfügbare Rechenleistung des Clusters begrenzt.
 
 ## Wie funktioniert der HPA?
 

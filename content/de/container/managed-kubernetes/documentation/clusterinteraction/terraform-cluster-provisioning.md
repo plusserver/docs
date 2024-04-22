@@ -55,9 +55,9 @@ Hier wird festgelegt, dass wir den Terraform-Anbieter "kubectl" verwenden wollen
 
 Dazu loggt man sich in das entsprechende PSKE-Dashboard ein, in diesem Fall https://dashboard.prod.gardener.get-cloud.io.
 
-Dort klickt man links auf "Members" und sucht dann den Service-Account des Projekts, in meinem konkreten Fall wäre das MA-24, der auch die Rolle "Service Account Manager" hat, und lädt von dort die kubeconfig-Datei herunter.
+Dort klickt man links auf “Members” und sucht dann den Service-Account des Projekts, in unserem Beispiel wäre das MA-24, der auch die Rolle “Service Account Manager” hat, und lädt von dort die kubeconfig-Datei herunter.
 
-Diese Datei muss dann in der zuvor erstellten versions.tf entsprechend referenziert werden. In diesem einfachen Beispiel würde das bei mir so aussehen:
+Diese Datei muss dann in der zuvor erstellten versions.tf entsprechend referenziert werden. In unserem einfachen Beispiel sähe das so aus:
 
 ```terraform
 provider "kubectl" {
@@ -81,7 +81,7 @@ YAML
 }
 ```
 
-NAMEOFRESOURCE ist nur für Terraform relevant und spiegelt nicht den Namen des eigentlichen Clusters wieder, aber es ist sinnvoll, sie zu benennen, damit sie später in einer wachsenden Konfiguration wieder zugewiesen werden können.
+NAMEOFRESOURCE ist nur für Terraform relevant und spiegelt nicht den Namen des eigentlichen Clusters wieder, aber es ist sinnvoll, die Ressource zu benennen, damit sie später in einer wachsenden Konfiguration wieder zugewiesen werden kann.
 
 Dies dient dazu, die gewünschte Konfiguration im YAML-Format an die Gardener-API zu übergeben, was Sie natürlich komplett von Hand schreiben können, aber auch das Dashboard für Sie erledigen lassen können.
 
@@ -89,7 +89,7 @@ Dazu durchlaufen Sie im Wesentlichen den Prozess der Einrichtung eines Kubernete
 
 Kopieren Sie nun diese Konfiguration und fügen Sie sie in die cluster.tf anstelle von `<HERE WE PUT THE ACTUAL CONFIG>` ein, d.h. zwischen die beiden Zeilen mit YAML.
 
-In meinem Beispiel würde das so aussehen, aber wie Sie aus den Metadaten ersehen können, muss dies für die Umgebung, in der es laufen soll, entsprechend angepasst werden. Daher ist es besser, einen eigenen Auszug zu verwenden.
+In unserem Beispiel würde das so aussehen, aber wie Sie aus den Metadaten ersehen können, muss dies für die Umgebung, in der es laufen soll, entsprechend angepasst werden. Daher ist es besser, einen eigenen Auszug zu verwenden.
 
 ```terraform
 resource "kubectl_manifest" "tf_test_shoot" {
@@ -180,7 +180,7 @@ Daher müssen Sie die folgende Anmerkung hinzufügen:
     confirmation.gardener.cloud/deletion: "true"
 ```
 
-Wichtig, achten Sie auf die Einrückung, es ist YAML!!!
+Bitte beachten Sie, dass die Einrückung bei YAML erforderlich ist.
 
 ## Erstellung des Kubernetes-Clusters
 
@@ -228,7 +228,7 @@ Als Nächstes erstellen Sie einen "Terraform-Plan", der sich die zuvor erstellte
 terraform plan
 ```
 
-In meinem Beispielfall sollte die Ausgabe etwa so aussehen:
+In unserem Beispielfall ist folgende Ausgabe zu erwarten:
 
 ```bash
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
@@ -332,15 +332,15 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
 ```
 
-Wenn alles soweit passt, dann sollte er sagen, dass er hier eine Ressource (den Kubernetes-Cluster) mit den vorher definierten Werten erstellen möchte.
+Wenn alles soweit passt, dann sollte Terraform melden, dass es eine Ressource (den Kubernetes-Cluster) mit den vorher definierten Werten erstellen möchte.
 
-Wenn Sie damit einverstanden sind, können Sie dies mit "terraform apply" tun. Es zeigt Ihnen dann alles an, was es tun würde, und verlangt von Ihnen, dass Sie "ja" sagen, damit es es tatsächlich tun kann. Sie können diese Abfrage vermeiden, indem Sie ein "-auto-approve" an den Befehl anhängen, aber Sie sollten sich wirklich sicher sein, dass Sie das auch wirklich wollen.
+Wenn Sie damit einverstanden sind, können Sie dies mit “terraform apply” bestätigen. Terraform zeigt Ihnen dann alles an, was es tun wird, und fordert die Eingabe von "yes" zur Bestätigung. Sie können diese Abfrage vermeiden, indem Sie ein "-auto-approve" an den Befehl anhängen, aber Sie sollten sich wirklich sicher sein, dass Sie das auch wirklich wollen.
 
 ```bash
 terraform apply
 ```
 
-In meinem Fall würde das folgendermaßen aussehen:
+In unserem Beispiel sähe das folgendermaßen aus:
 
 ```bash
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
@@ -479,7 +479,7 @@ zu
 
 Nachdem Sie die obige Änderung vorgenommen haben, können Sie mit "terraform plan" prüfen, ob die Syntax korrekt ist, und mit "terraform apply" die oben definierte Änderung durchführen lassen.
 
-Es ist wichtig, daran zu denken, dass nur weil die Syntax korrekt ist, dies nicht bedeutet, dass sie nicht während eines "apply" fehlschlagen kann. Dies kann mehrere Gründe haben, zum Beispiel:
+Beachten Sie bitte, dass trotz korrekter Syntax die gewünschte Änderung fehlschlagen kann. Dies kann mehrere Gründe haben, zum Beispiel:
 
 1. Gewünschte Ressourcen übersteigen die im Cluster verfügbaren. Es wird also mehr CPU, RAM, etc. benötigt. Der Plan wird in diesem Fall ausgeführt, aber Gardener wird irgendwann während der Ausführung einen Fehler produzieren, weil die Ressourcen erschöpft sind.
 
@@ -506,8 +506,8 @@ Wenn Sie dies getan haben, können Sie nun Terraform verwenden, um den zuvor ers
 terraform destroy
 ```
 
-In meinem Fall sieht es so aus:
-<>
+In unserem Beispielt sieht es dann so aus:
+
 ```bash
 kubectl_manifest.tf_test_shoot: Refreshing state... [id=/apis/core.gardener.cloud/v1beta1/namespaces/garden-ma-24/shoots/terraform-test]
 

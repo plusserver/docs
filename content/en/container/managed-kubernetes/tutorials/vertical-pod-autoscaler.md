@@ -183,7 +183,7 @@ pod "load-simulation" deleted
 ```
 
 {{< alert title="Important!" >}}
-IMPORTANT! The default ramp-down time is 5 minutes. This means that reducing the load will not immediately result in a decrease in replicas for approximately 5 minutes (+- 15 seconds) as acknowledged by the VPA.
+The default ramp-down time is 5 minutes. This means that reducing the load will not immediately result in a decrease in replicas for approximately 5 minutes (+- 15 seconds) as acknowledged by the VPA.
 {{< /alert >}}
 
 Subsequently, the replicas will be removed as there is no longer any load.

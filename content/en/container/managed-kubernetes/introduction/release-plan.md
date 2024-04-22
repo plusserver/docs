@@ -36,7 +36,7 @@ This allows you to prepare for important updates in good time and ensure that yo
   - *Time:* The exact time of the update within the maintenance window can be determined by the customer.
 - Deactivated:
   - *Update:* Updates are only carried out after the currently used version has expired.
-  - *Time:* The time of the update is usually 0 o'clock.
+  - *Time:* The update is usually performed at midnight.
 
 **Enforced Upgrades:**
 

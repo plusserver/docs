@@ -1,6 +1,6 @@
 ---
-title: "Einfaches Beispiel-Deployment"
-linkTitle: "Einfaches Beispiel-Deployment"
+title: "Einfaches Beispiel Deployment"
+linkTitle: "Einfaches Beispiel Deployment"
 type: "docs"
 weight: 20
 date: 2023-10-21
@@ -8,7 +8,7 @@ date: 2023-10-21
 
 # Deployment
 
-## NGINX Ingress Controller
+## nginx Ingress Controller
 Um die Installation des Ingress Controllers zu vereinfachen, werden wir an dieser Stelle den Paketmanager "HELM" verwenden:
 
 ```bash
@@ -23,8 +23,8 @@ Nach einer kurzen Wartezeit können Sie die öffentliche IP des Ingress-Controll
 kubectl --namespace ingress-nginx get services ingress-nginx-controller
 ```
 
-## NGINX-Bereitstellung
-In diesem Beispiel verwenden wir ein einfaches NGINX-Deployment, um eine Beispiel-Webseite bereitzustellen. Zunächst muss ein PersistentVolumeClaim erstellt werden, um sicherzustellen, dass die Daten der Webseite über Pod-Neustarts hinweg bestehen bleiben:
+## nginx-Bereitstellung
+In diesem Beispiel verwenden wir ein einfaches nginx-Deployment, um eine Beispiel-Webseite bereitzustellen. Zunächst muss ein PersistentVolumeClaim erstellt werden, um sicherzustellen, dass die Daten der Webseite über Pod-Neustarts hinweg bestehen bleiben:
 
 ```yaml
 apiVersion: v1
@@ -39,7 +39,7 @@ spec:
       storage: 1Gi
 ```
 
-Nun können Sie die eigentliche NGINX-Bereitstellung erstellen:
+Nun können Sie die eigentliche nginx-Bereitstellung erstellen:
 
 ```yaml
 apiVersion: apps/v1
@@ -72,7 +72,7 @@ spec:
           claimName: nginx-data
 ```
 
-Anschließend muss die NGINX-Bereitstellung innerhalb des Clusters über einen Dienst verfügbar gemacht werden:
+Anschließend muss die nginx-Bereitstellung innerhalb des Clusters über einen Dienst verfügbar gemacht werden:
 
 ```yaml
 apiVersion: v1
@@ -111,7 +111,7 @@ spec:
 ```
 
 ## Inhalt
-Als letzter Schritt muss eine "index.html"-Datei innerhalb des PersistentVolume erstellt werden, damit die NGINX-Bereitstellung keinen "403 - Forbidden"-Fehler anzeigt. Zum Beispiel:
+Als letzter Schritt muss eine "index.html"-Datei innerhalb des PersistentVolume erstellt werden, damit die nginx-Bereitstellung keinen "403 - Forbidden"-Fehler anzeigt. Zum Beispiel:
 
 ```bash
 kubectl exec deployment/nginx-deployment -- /bin/sh -c 'echo "<h1>Powered by PSKE</h1>" > /usr/share/nginx/html/index.html'

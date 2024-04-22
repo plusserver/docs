@@ -1,6 +1,6 @@
 ---
-title: "Deployment eines NGINX Ingress Controller"
-linkTitle: "Deployment eines NGINX Ingress Controller"
+title: "Deployment eines nginx Ingress Controller"
+linkTitle: "Deployment eines nginx Ingress Controller"
 type: "docs"
 weight: 20
 date: 2023-10-21

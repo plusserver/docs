@@ -25,4 +25,4 @@ metadata:
 
 Weitere unterstützte Service-Annotationen finden Sie im offiziellen GitHub-Projekt [kubernetes/cloud-provider-openstack](https://github.com/kubernetes/cloud-provider-openstack). 
 
-Bitte wählen Sie die entsprechende Version des Cloud Controller Managers entsprechend der von Ihnen eingesetzten Kubernetes-Version.
+Bitte wählen Sie die Version des Cloud Controller Managers entsprechend der verwendeten Kubernetes-Version.

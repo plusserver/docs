@@ -12,7 +12,7 @@ description: ->
 Standardmäßig können Sie nur kubeconfigs mit einer maximalen Lebensdauer von 24h aus dem gardener Dashboard herunterladen. Mit dieser Anleitung werden Sie in der Lage sein, Ihre eigene permanente kubeconfig für Ihren Cluster zu erstellen.
 
 ## Schritt 1: Erstellen eines Servicekontos
-Der Name des Dienstkontos wird der Benutzername in Kubeconfig sein. Hier erstellen wir das Service-Konto im kube-System, da ich eine clusterRole erstelle. Wenn Sie eine Konfiguration erstellen möchten, um den Zugriff auf Namespace-Ebene einzuschränken, erstellen Sie das Dienstkonto im gewünschten Namespace.
+Der Name des Dienstkontos wird der Benutzername in Kubeconfig sein. Hier erstellen wir das Servicekonto im kube-system-Namespace, um eine clusterRole zu definieren. Wenn Sie eine Konfiguration erstellen möchten, um den Zugriff auf Namespace-Ebene einzuschränken, erstellen Sie das Dienstkonto im gewünschten Namespace.
 
 kubectl -n kube-system create serviceaccount perm-cluster-admin`
 
