@@ -619,4 +619,5 @@ kubectl_manifest.tf_test_shoot: Destruction complete after 1s
 Destroy complete! Resources: 1 destroyed.
 ```
 
-Wenn er auch hier keine Fehler meldet und am Ende sagt, dass er 1 Ressource zerstört hat, dann können Sie wieder zum PSKE-Dashboard wechseln und den Löschvorgang beobachten.
+Wenn Terraform auch hier keine Fehler meldet und am Ende meldet, dass es 1 Ressource zerstört hat, dann können Sie wieder zum PSKE-Dashboard wechseln und den Löschvorgang beobachten.
+
