@@ -61,17 +61,34 @@ Es gibt zwei Fälle, in denen bei VMs, die auf Local SSD Storage laufen, Ausfall
 
 #### Regelmäßige Reboots
 
-Jeder Hypervisor mit Local SSD Storage muss **periodisch** neu gebootet werden.  Normalerweise geschieht dies **einmal im Monat**. Sie sollten daher damit rechnen, dass Ihre VMs regelmäßig ausfallen.
+Jeder Hypervisor mit Local SSD Storage muss periodisch neu gebootet werden.  Normalerweise geschieht dies **einmal im Monat**. Sie sollten daher damit rechnen, dass Ihre VMs regelmäßig ausfallen.
 
-Die durchschnittliche Ausfallzeit beträgt **ca. eine halbe Stunde**, kann aber variieren. Alle VMs erhalten vor der Wartung ein ACPI-Shutdown-Signal. Die VMs haben **eine Minute Zeit**, um ordnungsgemäß herunterzufahren.
+Geplante Wartungsfenster finden in der Regel einmal wöchentlich nach 22:00 Uhr lokaler Zeit statt. Der interne Index der Verfügbarkeitszone ist gleichzeitig der Index des Wochentages. Beispiel: prod1 = Montag, prod4 = Donnerstag.
+
+Ihre VM wird über ein bevorstehendes geplantes Ereignis über einen Metadatenschlüssel namens **ps_scheduled_downtime** informiert. Der Wert dieses Feldes ist ein Zeitstempel, zu dem Ihre VM heruntergefahren wird.
+
+Die durchschnittliche Ausfallzeit beträgt ca. eine Viertelstunde, kann aber variieren. Alle VMs erhalten vor der Wartung ein ACPI-Shutdown-Signal. Die VMs haben **eine Minute Zeit**, um ordnungsgemäß herunterzufahren.
 
 Nach dieser Zeit werden sie einfach heruntergefahren.
 
-Sie sollten davon ausgehen, dass Ihre VMs nach dem Neustart des Hypervisors **ausgeschaltet bleiben**. Wir planen derzeit eine Funktion, mit der Sie die VM so konfigurieren können, dass sie bei Bedarf automatisch neu gestartet wird.
+Sie sollten davon ausgehen, dass Ihre VMs nach dem Neustart des Hypervisors **ausgeschaltet bleiben**. Sie können dieses Verhalten jedoch ändern, indem Sie den Metadatenschlüssel **ps_restart_after_maint=true** setzen. In diesem Fall wird Ihre VM neu gestartet, nachdem der zugrundeliegende Hypervisor neu gebootet wurde.
 
-Zwischen den Neustarts des Hypervisors wird es eine **30-minütige Pause** geben. Dies gibt Ihrem Software-Stack Zeit, sich neu zu konfigurieren.
+Zwischen den Neustarts des Hypervisors wird es eine 30-minütige Pause geben. Dies gibt Ihrem Software-Stack Zeit, sich neu zu konfigurieren.
 
-Allerdings sind alle VMs auf demselben Hypervisor davon betroffen. Sie müssen **Anti-Affinität** [Servergruppen](../instances-and-images/server-groups/) aktivieren.
+Allerdings sind alle VMs auf demselben Hypervisor davon betroffen. Sie müssen Anti-Affinität [Servergruppen](../instances-and-images/server-groups/) aktivieren.
+
+CLI-Beispiel für die Abfrage von Informationen über geplante Ausfallzeiten aus einer VM heraus:
+
+```bash
+curl -s http://169.254.169.254/openstack/latest/meta_data.json | jq -r '.meta.ps_scheduled_downtime'
+Wed Jan 31 14:35:02 CET 2024
+```
+
+CLI-Beispiel zur Aktivierung des automatischen VM-Neustarts nach einem Hypervisor-Neustart:
+
+```bash
+ openstack server set --property "ps_restart_after_maint=true" 01234567-0123-0123-0123-0123456789ab
+```
 
 #### Hardware-Ausfall
 
@@ -162,7 +179,7 @@ Die Ausgabe sollte wie folgt aussehen:
 | adminPass                   |                                                     |
 | config_drive                |                                                     |
 | created                     | 2024-02-09T13:21:50Z                                |
-| flavor                      | SCS-2V-4-20s                                        | 
+| flavor                      | SCS-2V-4-20s                                        |
 | hostId                      |                                                     |
 | id                          | abcdef08-bf2a-4375-bfe3-0f48755df3db                |
 | image                       | Ubuntu 22.04                                        |

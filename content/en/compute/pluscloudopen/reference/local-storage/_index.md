@@ -61,17 +61,35 @@ There are two cases where VMs running on Local SSD Storage will experience downt
 
 #### Periodic reboots
 
-Any Local SSD Storage hypervisor will need to be **rebooted periodically**.  Typically, this will be **once a month**. Therefore you should expect your VMs to be down on a regular basis.
+Any Local SSD Storage hypervisor will need to be rebooted periodically.  Typically, this will be **once a month**. Therefore you should expect your VMs to be down on a regular basis.
 
-The average downtime is **approximately half an hour**, but can vary. All VMs will receive an ACPI shutdown signal prior to maintenance. VMs are given **one minute to shut down** properly.
+Scheduled maintenance windows usually take place once a week after 22:00 local time. The internal index of the availability zone is also the index of the day of the week. Example: prod1 = Monday, prod4 = Thursday.
+
+Your VM will be informed of an upcoming scheduled event via a metadata key called **ps_scheduled_downtime**. The value of this field is a timestamp at which your VM will be shut down.
+
+The average downtime is approximately a quarter of an hour, but can vary. All VMs will receive an ACPI shutdown signal prior to maintenance. VMs are given **one minute to shut down** properly.
 
 After this time, they will simply shut down.
 
-You should expect your VMs to **remain powered off** after the hypervisor reboots. We are currently planning a feature that will allow you to configure the VM to automatically restart if necessary.
+You should expect your VMs to **remain powered off** after the hypervisor reboots. However, you can change this behaviour by setting the metadata key **ps_restart_after_maint=true**. In this case,
+your VM will be restarted after the underlying Hypervisor has been rebooted.
 
-There will be a **30-minute pause** between hypervisor reboots. This will give your software stack time to reconfigure.
+There will be a 30-minute pause between hypervisor reboots. This will give your software stack time to reconfigure.
 
-However, all VMs on the same hypervisor will be affected. You will need to enable **anti-affinity** [server groups](../instances-and-images/server-groups/).
+However, all VMs on the same hypervisor will be affected. You will need to enable anti-affinity [server groups](../instances-and-images/server-groups/).
+
+CLI example for querying scheduled downtime information from within a VM:
+
+```bash
+curl -s http://169.254.169.254/openstack/latest/meta_data.json | jq -r '.meta.ps_scheduled_downtime'
+Wed Jan 31 14:35:02 CET 2024
+```
+
+CLI example to enable automatic VM restart after hypervisor reboot:
+
+```bash
+ openstack server set --property "ps_restart_after_maint=true"  01234567-0123-0123-0123-0123456789ab
+```
 
 #### Hardware failure
 
