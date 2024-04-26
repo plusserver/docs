@@ -75,7 +75,7 @@ Sie sollten davon ausgehen, dass Ihre VMs nach dem Neustart des Hypervisors **au
 
 Zwischen den Neustarts des Hypervisors wird es eine 30-minütige Pause geben. Dies gibt Ihrem Software-Stack Zeit, sich neu zu konfigurieren.
 
-Allerdings sind alle VMs auf demselben Hypervisor davon betroffen. Sie müssen Anti-Affinitä* [Servergruppen](../instances-and-images/server-groups/) aktivieren.
+Allerdings sind alle VMs auf demselben Hypervisor davon betroffen. Sie müssen Anti-Affinität [Servergruppen](../instances-and-images/server-groups/) aktivieren.
 
 CLI-Beispiel für die Abfrage von Informationen über geplante Ausfallzeiten aus einer VM heraus:
 
