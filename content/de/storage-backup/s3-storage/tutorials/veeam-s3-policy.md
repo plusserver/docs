@@ -8,16 +8,16 @@ date: "2024-02-07"
 
 In diesem Abschnitt erfahren Sie, wie Sie eine sichere IAM-Richtlinie erstellen können, um eine Verbindung zu Ihrem S3-Bucket herzustellen, in dem Backup-Daten für das Veeam Backup Object Repository gespeichert werden. Bitte folgen Sie den nachstehenden Anweisungen entsprechend Ihrem gewählten Ansatz: Verwendung von nicht-veränderlichen (Non-Immutable) oder veränderlichen (Immutable) Buckets.
 
-Sie können in ihrem S3-Account unter Groups → Gruppenname die richtlinie einer Gruppe verändern. 
+Sie können in ihrem S3-Account unter Groups → Gruppenname die Richtlinie einer Gruppe verändern.
 Wählen Sie hierbei die gewünschte Gruppe aus und klicken Sie auf S3 group policy.
-Hier wählen Sie nun Custom aus und kopieren einer der beiden Folgenden Policys.
+Wählen Sie nun "Custom" aus und kopieren Sie eine der beiden folgenden Policies.
 
 ### Non-Immutable Buckets
 
-Für die Verwendung von Non-Immutable Buckets verwenden Sie bitte die folgende JSON-Richtlinie zur Erstellung einer Gruppenpolicy. Diese Berechtigungen ermöglichen dem Veeam Backup Service den Zugriff auf das S3-Repository, um Daten in ein Objekt-Repository zu speichern oder daraus zu laden.
+Für die Verwendung von Non-Immutable Buckets verwenden Sie bitte die folgende JSON-Richtlinie zur Erstellung einer Gruppen-Policy. Diese Berechtigungen ermöglichen dem Veeam Backup Service den Zugriff auf das S3-Repository, um Daten in ein Object Repository zu speichern oder daraus zu laden.
 
 {{% alert title="Info" %}}
-Ab Veeam Backup & Replication 11a ist die Berechtigung **"ListAllMyBuckets"** nicht mehr erforderlich, wenn Sie den Bucket-Namen manuell im Schritt **"Bucket"** des Wizards für das neue Objekt-Repository eingeben.
+Ab Veeam Backup & Replication 11a ist die Berechtigung **"ListAllMyBuckets"** nicht mehr erforderlich, wenn Sie den Bucket-Namen manuell im Schritt **"Bucket"** des Wizards für das neue Object Repository eingeben.
 {{% /alert %}}
 
 ```json

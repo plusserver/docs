@@ -28,21 +28,21 @@ Die Mandantenmanagement-API organisiert die verfügbaren Funktionen in verschied
 
 - **Container:** Betrieb auf S3-Buckets oder Swift-Containern, einschließlich Funktionen wie Bucket-Erstellung, Konsistenzsteuerung, CORS-Konfiguration, Objektupdates und mehr.
 
-- **Deaktivierte Funktionen:** Anzeigen von Funktionen, die möglicherweise deaktiviert wurden.
+- **Disabled Functions:** Anzeigen von Funktionen, die möglicherweise deaktiviert wurden.
 
-- **Endpunkte:** Operationen zur Verwaltung von Endpunkten, die einem S3-Bucket ermöglichen, externe Services für Replikation, Benachrichtigungen oder Suchintegration zu verwenden.
+- **Endpoints:** Operationen zur Verwaltung von Endpunkten, die einem S3-Bucket ermöglichen, externe Services für Replikation, Benachrichtigungen oder Suchintegration zu verwenden.
 
 - **Groups:** Operationen zur Verwaltung lokaler Mandantengruppen und zum Abrufen von verbundenen Mandantengruppen aus einer externen Identitätsquelle.
 
-- **Identity-Source:** Operationen zum Konfigurieren einer externen Identitätsquelle und manuellen Synchronisieren von föderierten Gruppen- und Benutzerinformationen.
+- **Identity Source:** Operationen zum Konfigurieren einer externen Identitätsquelle und manuellen Synchronisieren von föderierten Gruppen- und Benutzerinformationen.
 
-- **Regionen:** Operationen zur Bestimmung, welche Regionen für das StorageGRID-System konfiguriert wurden.
+- **Regions:** Operationen zur Bestimmung, welche Regionen für das StorageGRID-System konfiguriert wurden.
 
-- **s3:** Betrieb zum Verwalten von S3-Zugriffsschlüsseln für Mandantenbenutzer.
+- **S3:** Betrieb zum Verwalten von S3-Zugriffsschlüsseln für Mandantenbenutzer.
 
-- **s3-Object-Lock:** Operationen auf globalen S3 Object Lock Einstellungen zur Unterstützung der Einhaltung gesetzlicher Vorschriften.
+- **S3-Object-Lock:** Operationen auf globalen S3 Object Lock Einstellungen zur Unterstützung der Einhaltung gesetzlicher Vorschriften.
 
-- **Benutzer:** Operationen zum Anzeigen und Verwalten von Mandantenbenutzern.
+- **Users:** Operationen zum Anzeigen und Verwalten von Mandantenbenutzern.
 
 Nutzen Sie die umfassenden Funktionen der Tenant-API, um Ihr Mandantenmanagement effizient zu steuern und anzupassen.
 

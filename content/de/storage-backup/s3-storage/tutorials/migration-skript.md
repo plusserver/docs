@@ -16,25 +16,24 @@ Vor der Durchführung dieser Dokumentation stellen Sie bitte sicher, dass die rc
 
 In diesem Schritt erfahren Sie, wie Sie das Migrationsskript auf einem Server verwenden, um die automatisierte Datenübertragung zwischen verschiedenen Cloud-Speicherdiensten durchzuführen.
 
-**Vorbereitung:**
+### Vorbereitung:
 
 **Skript herunterladen:** Laden Sie das Migrationsskript auf den Server herunter, auf dem Sie die Datenübertragung durchführen möchten.
 
 **Ausführbar machen:** Verleihen Sie dem Skript Ausführungsrechte, damit es ausgeführt werden kann. Verwenden Sie dazu den Befehl chmod u+x plusserver_transfer_skript.sh.
 
-Nutzung des Skripts:
-
+**Nutzung des Skripts:**
 Das Migrationsskript unterstützt verschiedene Parameter, die es Ihnen ermöglichen, die Datenübertragung nach Ihren Anforderungen anzupassen. Hier sind die Schritte, um das Skript zu verwenden:
 
 1. **Hilfe anzeigen:** Führen Sie den Befehl ./plusserver_transfer_skript.sh -h oder ./plusserver_transfer_skript.sh --help aus, um eine Übersicht über die unterstützten Parameter und deren Bedeutung zu erhalten.
 
 2. **CSV-Datei vorbereiten:** Erstellen Sie eine CSV-Datei mit den erforderlichen Informationen über Quell- und Ziel-Speicherprofile sowie die entsprechenden Bucket-Namen. Das Schema der CSV-Datei sollte wie folgt aussehen:
 
-```csv
-source_profile,source_bucket,dest_profile,dest_bucket
-old_s3,bucket1,new_s3,bucketA
-old_s3,bucket2,new_s3,bucketB
-```
+|source_profile|source_bucket|dest_profile|dest_bucket|
+|--------------|-------------|------------|-----------|
+|old_s3|bucket1|new_s3|bucketA|
+|old_s3|bucket2|new_s3|bucketB|
+
 (Beispiel für eine CSV-Datei mit Quell- und Zielkombinationen)
 Im Idealfall nennen Sie dieses buckets.csv. Sollten Sie einen anderen Namen wählen, so müssen Sie diesen via Parameter beim Skript angeben.
 

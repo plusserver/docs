@@ -18,7 +18,7 @@ Anschließend müssen Sie das Versioning mit folgendem Befehl aktivieren. Dies k
 ```bash
 aws s3api put-bucket-versioning --bucket <bucket-name> --versioning-configuration Status=Enabled --endpoint-url=https://<endpoint>
 ```
-Mit dem von Ihnen bereits eingerichteten Object Lock (von Teil 3 Schritt 2) ist das Versioning bereits aktiviert. Im folgenden Beispiel erfahren Sie, wie Sie Objekte hochladen, neue Versionen erstellen und auf frühere Versionen zugreifen können.
+Sofern Sie für ihr Bucket die Funktion Object-Lock verwenden, so ist die Funktion Versionierung automatisch aktiviert. Im folgenden Beispiel erfahren Sie, wie Sie Objekte hochladen, neue Versionen erstellen und auf frühere Versionen zugreifen können.
 
 ## Schritt 1: Hochladen eines Objekts
 
@@ -86,20 +86,20 @@ Wählen Sie die gewünschte Versions-ID aus der angezeigten Liste.
 
 Verwenden Sie die Versions-ID, um eine bestimmte Version des Objekts herunterzuladen:
 
-bash
-
+```bash
 aws s3 cp s3://<bucketname>/<ziel-dateipfad>?versionId=<versions-id> <lokaler-dateipfad> --endpoint-url=https://<endpoint>
+```
 
 * \<bucketname>: Der Name des Buckets.
 * \<ziel-dateipfad>: Der Speicherort und Name des Objekts im Bucket.
 * \<versions-id>: Die ausgewählte Versions-ID.
 * \<lokaler-dateipfad>: Der Pfad auf Ihrem Computer, unter dem die heruntergeladene Datei gespeichert werden soll.
 
-Durch die Kombination von Object Lock und automatischem Versioning haben Sie die Möglichkeit, auf frühere Zustände von Objekten zuzugreifen und Ihre Daten vor versehentlichen Änderungen zu schützen.
+Durch die Kombination von Object Lock und automatischem Versionierung haben Sie die Möglichkeit, auf frühere Zustände von Objekten zuzugreifen und Ihre Daten vor versehentlichen Änderungen zu schützen.
 
 ## Schritt 5: Löschen von Objekten mit Versionierung
 
-Beim PlusServer S3-Service kann das Löschen von Objekten je nach Versionierungseinstellungen etwas komplexer sein. Hier erläutern wir Ihnen, wie Sie Objekte mit Versionierung korrekt löschen können.
+Beim plusserver S3-Service kann das Löschen von Objekten je nach Versionierungseinstellungen etwas komplexer sein. Hier erläutern wir Ihnen, wie Sie Objekte mit Versionierung korrekt löschen können.
 
 ### Verwendung von Variablen
 
