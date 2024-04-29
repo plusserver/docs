@@ -1,5 +1,5 @@
 ---
-title: "Creating Buckets with AWS CLI - Alternatively with Object Lock Activation"
+title: "Creating Buckets with AWS CLI & Optional Object Lock Activation"
 linkTitle: "Creating Buckets"
 type: "docs"
 weight: 20
@@ -9,7 +9,7 @@ date: "2024-02-07"
 The AWS CLI allows you to interact comfortably with your plusserver S3 resources via the command line. Follow the steps below to create buckets and optionally activate Object Lock.
 
 {{% alert title="Info" %}}
-Note: Object Lock can only be activated during the initial bucket creation. It is technologically not possible to enable or disable Object Lock on an existing bucket afterward.
+Note: Object Lock can only be activated during the initial bucket creation. Due to technical limitations, it is not possible to enable or disable Object Lock on an existing bucket afterwards.
 
 **IMPORTANT:** If you need to enable or disable Object Lock for an already created bucket, you must create a new bucket with your Object Lock settings and then copy all object data from the old bucket to this new bucket.
 {{% /alert %}}
@@ -52,7 +52,7 @@ The "--object-lock-enabled-for-bucket" parameter automatically enables both Vers
 ```bash
 aws s3api create-bucket --bucket <bucketname> --object-lock-enabled-for-bucket --endpoint-url=https://<endpoint-url> --region <region> --create-bucket-configuration LocationConstraint=<region>
 ```
-Replace <bucketname> and <endpoint-url> accordingly. For example:
+Replace `<bucketname>` and `<endpoint-url>` accordingly. For example:
 ```bash
 aws s3api create-bucket --bucket mylockedbucket --object-lock-enabled-for-bucket --endpoint-url=https://s3.de-west-1.psmanaged.com --region de-west-1 --create-bucket-configuration LocationConstraint=de-west-1
 ```

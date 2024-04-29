@@ -55,7 +55,7 @@ Explanation of variables:
 ```bash
 aws s3api put-object-retention --bucket mylockedbucket --key folder/meinobjekt.pdf --version-id fe11c7b4-eeae-f76f-a6ff-1402ec8ef430 --retention '{"Mode": "GOVERNANCE", "RetainUntilDate": "2023-08-11T17:45:59Z"}' --endpoint-url=https://s3.de-west-1.psmanaged.com
 ```
-Combining Object Lock and Versioning allows you to apply different protection measures to various versions of the same object. Ensure you use the correct values for Object Lock, Versioning, and Retention according to your requirements and configuration.
+Combining Object Lock and Versioning allows you to apply different protection measures to various versions of the same object. Please make sure to use the correct values for Object Lock, Versioning, and Retention according to your requirements and configuration.
 
 {{% alert title="Info" %}}The example provided is a general guide. Exact options may vary depending on your configuration.
 {{% /alert %}}
@@ -116,7 +116,7 @@ aws s3api put-object-lock-configuration --bucket mylockedbucket --object-lock-co
 Executing this command sets a default Object Lock retention that will be applied to all newly uploaded objects in this bucket. Objects are automatically protected with the specified retention upon upload. In this example, objects would be protected with a Governance Object Lock for 1 day.
 
 {{% alert title="Info" %}}
-Ensure you adjust the values for \<bucket-name>, \<days>, and \<mode> according to your requirements. The default retention policy will be applied to all objects in the bucket that do not already have an individual retention.
+Please make sure to adjust the values for <bucket-name>, <days>, and <mode> according to your requirements. The default retention policy will be applied to all objects in the bucket that do not already have an individual retention.
 {{% /alert %}}
 ### Step 2: Retrieve the Bucket Rule for Object Lock Retention
 

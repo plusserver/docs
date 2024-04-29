@@ -13,7 +13,7 @@ The Tenant API allows you to perform various operations related to tenant manage
 
 ### How to access the documentation?
 
-You can access the complete API documentation at [https://s3-portal.psmanaged.com:9443/ui/apidocs.html#](https://s3-portal.psmanaged.com:9443/ui/apidocs.html#). There, you will find detailed information on available endpoints, authentication schemas, supported versions, and the various operations you can perform.
+You can access the complete API documentation at [https://s3-portal.psmanaged.com:9443/ui/apidocs.html#](https://s3-portal.psmanaged.com:9443/ui/apidocs.html#). There you will find detailed information on available endpoints, authentication schemas, supported versions, and the various operations you can perform.
 
 ### Available Functions
 
@@ -21,7 +21,7 @@ The Tenant API organizes the available functions into different sections:
 
 - **Account:** Operations on the current tenant account, including storing usage information.
 
-- **Auth:** Operations to authenticate the user session, with support for the owner token authentication schema.
+- **Auth:** Operations to authenticate the user session with support for the owner token authentication schema.
 
 - **Config:** Operations related to the product version and versions of the Tenant Management API. You can list the product version and main versions supported by this version.
 
