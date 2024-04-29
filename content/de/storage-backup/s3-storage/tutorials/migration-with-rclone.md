@@ -12,9 +12,9 @@ In diesem Abschnitt zeigen wir Ihnen, wie Sie Daten von unserer bisherigen S3-L�
 
 Um sicherzustellen, dass Sie umfassende Unterstützung für moderne S3-Funktionen erhalten, empfehlen wir dringend, stets die neueste Version von rclone zu verwenden. Bei der Installation über den Paketmanager gängiger Linux-Distributionen (wie Debian, Ubuntu, RHEL, CentOS) ist möglicherweise nicht immer die aktuellste Version verfügbar. Um den Inhalten dieses Leitfadens optimal zu folgen, empfehlen wir daher, rclone direkt von der [offiziellen Website](https://rclone.org/install/) herunterzuladen und zu installieren.
 
-### Schritt 2: Konfigurieren von rclone via Konfigurationsguide von rclone
+### Schritt 2: Konfigurieren von rclone via Configuration Guide von rclone
 
-Um mit Ihren Storagelösungen interagieren zu können, müssen diese - inklusive Zugangsdaten - für rclone hinterlegt werden. Die folgenden Schritte müssen für alle Storages (nicht Buckets), von oder zu denen migriert werden soll, wiederholt werden.
+Um mit Ihren Storage-Lösungen interagieren zu können, müssen diese - inklusive Zugangsdaten - für rclone hinterlegt werden. Die folgenden Schritte müssen für alle Storages (nicht Buckets), von oder zu denen migriert werden soll, wiederholt werden.
 
 Rclone bietet einen interaktiven Konfigurationsassistenten via `rclone config`.
 
@@ -37,7 +37,7 @@ Nachdem mit n + Enter das Anlegen eines neuen Remotes ausgewählt wurde, werden 
 
 Dieser Name wird später in Pfadangaben referenziert, also wählen Sie am besten einen kurzen, aber unmissverständlichen Namen für Ihre jeweiligen Remotes, z.B., `s3-old` und `s3-new`.
 
-Nun präsentiert rclone eine Vielzahl verschiedener Storagetypen, aus denen Sie wählen können. 
+Nun präsentiert rclone eine Vielzahl verschiedener Storage-Typen, aus denen Sie wählen können. 
 ```bash
 1 / 1Fichier
    \ (fichier)
@@ -62,7 +62,7 @@ Storage> _
 ```
 In diesem Fall tippen Sie s3 bzw. 5 und bestätigen dies mit Enter.
 
-Als nächstes geben Sie Ihren jeweiligen Provider an. Wählen Sie die für unsere S3-kompatiblen Systeme angebrachte Option Other bzw. 27 und bestätigen Sie mit Enter.
+Als Nächstes geben Sie Ihren jeweiligen Provider an. Wählen Sie die für unsere S3-kompatiblen Systeme angebrachte Option Other bzw. 27 und bestätigen Sie mit Enter.
 ```bash
 Option provider.
 Choose your S3 provider.
@@ -100,7 +100,7 @@ Press Enter for the default (false).
 env_auth> _
 ```
 
-Als nächstes fragt der Konfigurationsassistent die Region des Remotes ab. Bitte wählen Sie hier die Option 1.
+Als Nächstes fragt der Konfigurationsassisstent die Region des Remotes ab. Bitte wählen Sie hier die Option 1.
 ```bash
 Leave blank if you are using an S3 clone and you don't have a region.
 Choose a number from below, or type in your own value.
@@ -152,7 +152,7 @@ rclone [options] subcommand <parameters> <parameters...>
 ```
 Die Syntax der Pfade, die an den Befehl rclone übergeben werden, lautet wie folgt:
 {{% alert title="Info" %}}
-Unter Windows kann \ anstelle von / nur in lokalen Pfaden verwendet werden. Nicht-lokale Pfade müssen / verwenden. Weitere Informationen zu Windows-spezifischen Pfaden finden Sie hier.
+Unter Windows kann \ anstelle von / nur in lokalen Pfaden verwendet werden. Nicht-lokale Pfade müssen / verwenden. Weitere Informationen zu Windows-spezifischen Pfaden finden Sie [hier](https://rclone.org/local/#paths-on-windows).
 {{% /alert %}}
 
 ```bash
@@ -186,7 +186,7 @@ Für eine ausführlichere Dokumentation und zusätzliche Optionen empfehlen wir,
 | **`sync`** | Synchronisiert die Quelle mit dem Ziel, wobei nur das Ziel geändert wird. Überträgt keine Dateien, die in Quelle und Ziel identisch sind, sondern vergleicht anhand von Größe und Änderungszeit oder MD5SUM. Das Ziel wird so aktualisiert, dass es mit der Quelle übereinstimmt, einschließlich des Löschens von Dateien, falls erforderlich (außer bei doppelten Objekten). Wenn Sie die Dateien im Ziel nicht löschen wollen, verwenden Sie stattdessen den Befehl copy. |
 | **`old-s3:mybucket`** | Referenziert den Bucket mybucket im remote old-s3 und stellt hier die Quelle der Synchronisation dar. |
 | **`new-s3:mybucket`** | Referenziert den Bucket mybucket im remote new-s3 und stellt hier das Ziel der Synchronisation dar. |
-| **`--metadata`** | Metadaten sind Informationen über eine Datei, bei denen es sich nicht um den Inhalt der Datei handelt. Normalerweise bewahrt rclone nur die Änderungszeit und den Inhalt (MIME-Typ), wo dies möglich ist. Rclone unterstützt die Beibehaltung aller verfügbaren Metadaten von Dateien (nicht Verzeichnissen), wenn die Flagge --metadata oder -M verwendet wird. |
+| **`--metadata`** | Metadaten sind Informationen über eine Datei, bei denen es sich nicht um den Inhalt der Datei handelt. Normalerweise bewahrt rclone nur die Änderungszeit und den Inhalt (MIME-Typ), wo dies möglich ist. Rclone unterstützt die Beibehaltung aller verfügbaren Metadaten von Dateien (nicht Verzeichnissen), wenn die Flag --metadata oder -M verwendet wird. |
 | **`--checksum`** | Normalerweise prüft rclone die Änderungszeit und die Größe von Dateien, um festzustellen, ob sie gleich sind. Wenn Sie diese Flag setzen, prüft rclone durch Hashing und Größe, ob die Dateien gleich sind. Dieses Verfahren führt zu einer deutlich schnelleren Übertragung bei einer S3 → S3 Migration. |
-| **`--progress`** | Diese Flag veranlasst rclone, die Statistiken in einem statischen Block im Terminal zu aktualisieren, um einen Echtzeit-Überblick über die Übertragung zu erhalten. Alle Protokollmeldungen werden über dem statischen Block angezeigt. Logmeldungen schieben den statischen Block an den unteren Rand des Terminals, wo er verbleibt. |
+| **`--progress`** | Diese Flag veranlasst rclone, die Statistiken in einem statischen Block im Terminal zu aktualisieren, um einen Echtzeit-Überblick über die Übertragung zu erhalten. Alle Protokollmeldungen werden über dem statischen Block angezeigt. Log-Meldungen schieben den statischen Block an den unteren Rand des Terminals, wo er verbleibt. |
 | **`--no-update-modtime`** | Wenn Sie dieses Flag verwenden, aktualisiert rclone die Änderungszeiten der migrierten Objekte nicht. Dies ist nützlich, wenn Sie die ursprünglichen Änderungszeiten beibehalten möchten. |

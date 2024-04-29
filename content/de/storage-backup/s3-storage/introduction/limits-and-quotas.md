@@ -16,12 +16,12 @@ Beachten Sie bitte, dass diese Grenze nicht weiter erhöht werden kann.
 ### Weitere Limitierungen
 
 - Maximale Objektgröße: 5 TB
-- Minimale Part-Größe für multipart Upload: 5 MiB
-- Maximale Part-Größe für multipart Upload: 5 GiB
-- Maximale Anzahl an Teilen für multipart Uploads: 10.000
-- Bucket-Versionierung pro Objektversion: 10.000
-- Maximale Anzahl von S3-Zugriffsschlüsseln pro User: 100
-- Maximale Useranzahl oder Accesskeyanzahl im gesamten Cluster: unbegrenzt
+- Minimale Part-Größe für Multipart Upload: 5 MiB
+- Maximale Part-Größe für Multipart Upload: 5 GiB
+- Maximale Anzahl an Parts für Multipart Uploads: 10.000
+- Bucket-Versionierung pro Object Version: 10.000
+- Maximale Anzahl von S3 Access Keys pro User: 100
+- Maximale Anzahl von Users oder Access Keys im gesamten Cluster: unbegrenzt
 
 Diese Limitierungen sind so konzipiert, um die Leistung und Effizienz unseres Services zu gewährleisten und gleichzeitig eine hohe Flexibilität für Ihre Anwendungsfälle zu bieten. Bitte beachten Sie diese Limitierungen, wenn Sie Ihre Konfiguration planen.
 
@@ -33,14 +33,14 @@ Um eine sichere Trennung und Kontrolle der Datenzugriffe zu gewährleisten, kön
 
 Bitte beachten Sie jedoch, dass eine reine Trennung auf Bucket-Ebene in großem Umfang nicht uneingeschränkt umsetzbar ist, da pro Mandant ein festes Limit für Buckets besteht.
 
-### Performance Grundlagen
+### Performance-Grundlagen
 
 Für eine optimale Performance sollte ein Objekt immer über den passenden Endpunkt abgelegt und aufgerufen werden. Bei gespiegelten oder replizierten S3-Objekten können beide Seiten als Endpunkt verwendet werden.
-Generell sollte der Client- bzw. die Applikationsregion die S3 verwendet beachtet werden um den kürzesten Weg zum Endpunkt zu bestimmen.
+Generell sollte der Client- bzw. die Applikationsregion, die S3 verwendet, beachtet werden, um den kürzesten Weg zum Endpunkt zu bestimmen.
 
 Der S3-Standard nutzt das HTTPS-Protokoll, was zu architekturbedingten Protokoll-Latenzen führen kann. Dazu gehören auch die geografische Lage und die Qualität der Netzwerkverbindung, welche die Zugriffszeit beeinflussen kann.
 
-Es ist zu beachten, dass der S3 Service nicht für latenzkritische Workloads oder Anwendungen geeignet ist, die kontinuierlich angepasste Daten erfordern oder beispielsweise eine kontinuierliche Latenzempfindlichkeit von unter 25 Millisekunden benötigen. Die tatsächliche Latenz vom S3 Service, kann je nach Netzwerkbedingungen des Clients bzw. der Applikation stark variieren und sowohl niedriger als auch höher ausfallen. Es ist zu beachten, dass die plusserver aufgrund von verschiedenen Faktoren keine Latenz garantieren kann.
+Es ist zu beachten, dass der S3 Service nicht für latenzkritische Workloads oder Anwendungen geeignet ist, die kontinuierlich angepasste Daten erfordern oder beispielsweise eine kontinuierliche Latenzempfindlichkeit von unter 25 Millisekunden benötigen. Die tatsächliche Latenz des S3-Services kann je nach Netzwerkbedingung des Clients bzw. der Applikation stark variieren und sowohl niedriger als auch höher ausfallen. Es ist zu beachten, dass die plusserver aufgrund von verschiedenen Faktoren keine Latenz garantieren kann.
 Workloads wie Echtzeit-Datenbanken, virtuelle Maschinen, transaktionsbasierte Anwendungen und Anwendungen mit hohen I/O-Operationen sind für den Service generell nicht geeignet. Für solche Anforderungen stehen andere Storage Services zur Verfügung, wie beispielsweise der plusstorage Fileservice NFS/SMB.
 
 Der Zugriff auf den S3-Endpoint erfolgt über das Internet. In diesem Prozess können Engpässe auftreten, die die Performance beeinträchtigen können. Einige Beispiele für mögliche Ursachen sind:

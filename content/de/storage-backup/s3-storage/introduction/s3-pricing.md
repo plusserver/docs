@@ -25,6 +25,7 @@ In dieser Serviceklasse gelten folgende Speicherrichtlinien:
 - Objekte werden generell mit Erasure Coding gespeichert, um eine effiziente und langlebige Speicherung zu gewährleisten.
 - Für Objekte kleiner als 1 MB wird die Speicherung mit Replikation bevorzugt statt Erasure Coding.
 - Es wird eine minimale Abrechnungsgröße von 128 KB angewendet, was bedeutet, dass selbst kleinere Objekte mit dieser Größe in Rechnung gestellt werden.
+- Es wird eine minimale Abrechnungsgröße von 128 KB angewendet, was bedeutet, dass selbst kleinere Objekte mit dieser Größe in Rechnung gestellt werden.
 
 ### S3 Serviceklasse "Mirror" (<bucketname>-mirr)
 
@@ -57,8 +58,8 @@ Bei der Anlage von Buckets in unserem plusserver S3 Service sollten Sie beachten
 | -repl  | Replikation der Objekte, welche auf beide Rechenzentrum verteilt werden | Nur Georedundant | de-north-2 und de-west-1 | Doppeltes Backup, Kostengünstige Georedundanz |
 | Standard | Regionale Speicherung mit Erasure Coding und Replikation | Nur Site Redundant | de-north-2 oder de-west-1 | Produktions-Daten, Sichere Datenhaltung innerhalb einer Geolokation |
 
-Diese Tabelle gibt Ihnen einen Überblick über die Hauptunterschiede zwischen den Optionen für die Bucketanlage in unserem neuen S3.
+Diese Tabelle gibt Ihnen einen Überblick über die Hauptunterschiede zwischen den Optionen für die Erstellung von Buckets in unserem neuen S3.
 
 {{% alert title="Wichtig" %}}
-Die S3 Speicherklassen werden durch den Bucketnamen bestimmt. Da der S3 Standard kein "Bucket Rename" unterstützt, muss für eine Änderung der Speicherklasse ein neues Bucket angelegt werden und falls notwendig die Objektdaten des alten Buckets in das neue Bucket migriert werden.
+Die S3 Speicherklassen werden durch den Bucketnamen bestimmt. Da der S3 Standard kein “Bucket Rename” unterstützt, muss für eine Änderung der Speicherklasse ein neues Bucket angelegt werden und – falls notwendig – die Objektdaten des alten Buckets in das neue Bucket migriert werden.
 {{% /alert %}}

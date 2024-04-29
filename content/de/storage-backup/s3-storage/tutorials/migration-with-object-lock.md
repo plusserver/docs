@@ -6,7 +6,7 @@ weight: 140
 date: "2024-02-07"
 ---
 
-Diese Erweiterung unserer Dokumentation führt Sie durch die Verwendung der Migrationsskripte von plusserver für den nahtlosen Übergang von einem bestehenden S3 Service zu unserem plusserver S3 Service. Unser Skript berücksichtigt dabei wichtige Aspekte wie Versioning, Tags, Metadaten und insbesondere die essentiellen Object-Lock Informationen.
+Diese Erweiterung unserer Dokumentation führt Sie durch die Verwendung der Migrationsskripte von plusserver für den nahtlosen Übergang von einem bestehenden S3 Service zu unserem plusserver S3 Service. Unser Skript berücksichtigt dabei wichtige Aspekte wie Versioning, Tags, Metadaten und insbesondere die essentiellen Object-Lock-Informationen.
 
 {{% alert title="Hinweis" %}}
 Damit Sie diesen Prozess erfolgreich durchführen können, benötigen Sie zwei unverzichtbare Werkzeuge: Minio und jq. Diese müssen auf Ihrem System installiert sein, um sicherzustellen, dass Ihre Daten sicher und effizient migriert werden.
@@ -62,7 +62,7 @@ In diesem Fall sollten Sie entweder die abgelaufenen Object-Lock-Informationen o
 {{% alert title="Hinweis" %}}
 Die EXPIRED Warnung wird nur für Objekte angezeigt, welche den GOVERNANCE Status haben. COMPLIANCE wird leider nicht angezeigt. Diese müssen selbstständig oder in der Einzelview betrachtet werden.
 {{% /alert %}}
-### Schritt 3a: (Optional) Löschen von Object-Lock Informationen
+### Schritt 3a: (Optional) Löschen von Object-Lock-Informationen
 
 Wenn Sie die Object-Lock-Informationen eines bestimmten Objekts mit dem Minio-Client löschen möchten, können Sie das folgende Kommando verwenden:
 
@@ -198,10 +198,10 @@ Bitte ersetzen Sie sourceprofil, sourcebucket, destinationprofil und destination
 
 Nachdem Sie das Skript auf Ihr System kopiert und ausführbar gemacht haben, können Sie es mit den richtigen Parametern ausführen, um die Datenmigration zu starten.
 
-{{% alert title="Hinweis für die Object-Lock Konfiguration bei der Datenmigration innerhalb des gleichen S3s" %}} 
-Für eine fehlerfreie Übertragung der Object-Lock Konfiguration sind unterschiedliche Profile erforderlich. Wenn Sie beispielsweise das Profil **"plusserver"** sowohl als **Source- als auch als Destination-Profil** verwenden, jedoch unterschiedliche Source- und Destination-Buckets angeben, findet die Migration innerhalb desselben S3-Speichersystems statt. In diesem Fall werden jedoch die Object-Lock Informationen **nicht übertragen**.
+{{% alert title="Hinweis für die Object-Lock-Konfiguration bei der Datenmigration innerhalb des gleichen S3s" %}} 
+Für eine fehlerfreie Übertragung der Object-Lock-Konfiguration sind unterschiedliche Profile erforderlich. Wenn Sie beispielsweise das Profil **"plusserver"** sowohl als **Source- als auch als Destination-Profil** verwenden, jedoch unterschiedliche Source- und Destination-Buckets angeben, findet die Migration innerhalb desselben S3-Speichersystems statt. In diesem Fall werden jedoch die Object-Lock-Informationen **nicht übertragen**.
 
-Um sicherzustellen, dass die S3-Object-Lock Konfigurationen während der Migration korrekt übernommen werden, empfehlen wir die Verwendung des Profils **"plusserver"** als **Source-Profil** und des Profils **"plusserver2"** als **Destination-Profil**. Stellen Sie sicher, dass in beiden Profilen dieselben Informationen in der Konfigurationsdatei hinterlegt sind. Dadurch wird die Migration innerhalb desselben Clusters durchgeführt und gleichzeitig werden die S3-Object-Lock Einstellungen erfolgreich übertragen.
+Um sicherzustellen, dass die S3-Object-Lock-Konfigurationen während der Migration korrekt übernommen werden, empfehlen wir die Verwendung des Profils **"plusserver"** als **Source-Profil** und des Profils **"plusserver2"** als **Destination-Profil**. Stellen Sie sicher, dass in beiden Profilen dieselben Informationen in der Konfigurationsdatei hinterlegt sind. Dadurch wird die Migration innerhalb desselben Clusters durchgeführt und gleichzeitig werden die S3-Object-Lock-Einstellungen erfolgreich übertragen.
 {{% /alert %}}
 {{% alert title="Hinweis" %}}
 Bitte beachten Sie, dass wenn das Skript erneut ausgeführt wird, nur unbekannte Versionen von Objekten übertragen werden. Alle Details zu den erfolgreich übertragenen Versionen und Objekten finden Sie im `migration_log.txt`.

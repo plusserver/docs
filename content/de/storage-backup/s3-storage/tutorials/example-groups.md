@@ -1,5 +1,5 @@
 ---
-title: "Beispiel-Standard Gruppen für das S3 User Management"
+title: "Beispiel-Standardgruppen für das S3 User Management"
 linkTitle: "Beispiel-Standardgruppen"
 type: "docs"
 weight: 110
@@ -32,7 +32,7 @@ Diese Beispiel-Standardgruppen dienen als Ausgangspunkt und können an die Anfor
   ]
 }
 ```
-### Gruppe mit nur Leserechten für bestimmte Buckets
+### Gruppe mit Leserechten für bestimmte Buckets
 
 ```json
 

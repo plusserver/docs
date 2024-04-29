@@ -154,7 +154,7 @@ Erklärung der Variablen:
 ```bash
 aws s3api put-object --bucket mylockedbucket --key folder/meinobjekt.pdf --body /pfad/zu/meinobjekt.pdf --endpoint-url=https://s3.de-west
 ```
-###Schritt 4: Überprüfen der standardmäßigen Object Lock-Retention für das hochgeladene Objekt
+### Schritt 4: Überprüfen der standardmäßigen Object Lock-Retention für das hochgeladene Objekt
 
 Um zu überprüfen, ob das Objekt mit Object Lock und den festgelegten Retention-Richtlinien gesichert ist, verwenden Sie den folgenden Befehl:
 ```bash
@@ -195,7 +195,7 @@ aws s3api put-object --bucket mylockedbucket --key folder/meinobjekt.pdf --body 
 ```
 ### Schritt 2: Anzeige der Retention
 
-Überprüfen Sie die aktuelle Retentionszeit des hochgeladenen Objekts.
+Überprüfen Sie die aktuelle Retention des hochgeladenen Objekts.
 
 ```bash
 aws s3api get-object-retention --bucket <bucketname> --key <objekt-key> --endpoint-url=https://<endpoint-url>
@@ -225,7 +225,7 @@ aws s3api get-object-retention --bucket mylockedbucket --key folder/meinobjekt.p
 
 ### Schritt 3: Retention verlängern
 
-Verlängern Sie die Retentionszeit des hochgeladenen Objekts um eine weitere Stunde.
+Verlängern Sie die Retention des hochgeladenen Objekts um eine weitere Stunde.
 
 ```bash
 aws s3api put-object-retention --bucket <bucketname> --key <objekt-key> --retention '{"Mode": "GOVERNANCE", "RetainUntilDate": "<neues-datum>"}' --endpoint-url=<endpoint-url>
@@ -245,7 +245,7 @@ aws s3api put-object-retention --bucket mylockedbucket --key folder/meinobjekt.p
 ```
 ### Schritt 4: Anzeige der neuen Retention
 
-Überprüfen Sie die aktualisierte Retentionszeit des Objekts, um sicherzustellen, dass sie erfolgreich verlängert wurde.
+Überprüfen Sie die aktualisierte Retention des Objekts, um sicherzustellen, dass sie erfolgreich verlängert wurde.
 
 ```bash
 aws s3api get-object-retention --bucket <bucketname> --key <objekt-key> --endpoint-url=https://<endpoint-url>
