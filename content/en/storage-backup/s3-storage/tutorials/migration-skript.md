@@ -16,7 +16,7 @@ Before proceeding with this documentation, please ensure that the rclone configu
 
 In this step, you will learn how to use the migration script on a server to perform automated data transfers between different cloud storage services.
 
-**Preparation:**
+### Preparation:
 
 **Download the Script:** Download the migration script to the server where you intend to perform the data transfer.
 
@@ -30,11 +30,10 @@ The migration script supports various parameters that allow you to customize the
 
 2. **Prepare CSV File:** Create a CSV file with the necessary information about source and destination storage profiles and their corresponding bucket names. The schema of the CSV file should look like this:
 
-```csv
-source_profile,source_bucket,dest_profile,dest_bucket
-old_s3,bucket1,new_s3,bucketA
-old_s3,bucket2,new_s3,bucketB
-```
+|source_profile|source_bucket|dest_profile|dest_bucket|
+|--------------|-------------|------------|-----------|
+|old_s3|bucket1|new_s3|bucketA|
+|old_s3|bucket2|new_s3|bucketB|
 
 (Example of a CSV file with source and destination combinations)
 

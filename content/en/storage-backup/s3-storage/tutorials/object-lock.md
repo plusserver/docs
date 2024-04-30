@@ -9,7 +9,7 @@ date: "2024-02-07"
 Uploading objects to plusserver S3 with Object Lock enabled provides advanced security control. Here are the steps to upload objects with Object Lock to your buckets.
 
 {{% alert title="Note" %}}
-Ensure that the respective bucket has both versioning and Object Lock enabled to utilize this feature. See Part 3 Step 2.
+Ensure that the respective bucket has both versioning and Object Lock enabled to utilize this feature.
 {{% /alert %}}
 
 {{% alert title="Differences between Compliance and Governance Object Lock" color="warning" %}}
@@ -71,7 +71,7 @@ aws s3api put-object --bucket mylockedbucket --key folder/myobject.pdf --body /p
 ## Step 2: Uploading an Object with Compliance Mode
 
 Use the same command with "COMPLIANCE" to upload an object with Compliance mode:
-´´´bash
+```bash
 aws s3api put-object --bucket <bucketname> --key <destination-file-path> --body <local-file-path> --endpoint-url=https://<endpoint-url> --object-lock-mode COMPLIANCE --object-lock-retain-until-date <timestamp>
 ```
 * Replace \<bucketname>: Enter the name of the bucket where you want to upload the object.
