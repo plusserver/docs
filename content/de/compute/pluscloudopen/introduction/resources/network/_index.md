@@ -7,11 +7,11 @@ description: >
   IP-Adressen und Sicherheitsgruppen in der pluscloud open
 ---
 
-## Öffentliche IPs
+# Öffentliche IPs
 
 pluscloud open bietet zwei Arten von öffentlichen IP-Adressen, die verwendet werden können, um von externen Standorten aus auf Ihre virtuellen Maschinen (VM) zuzugreifen oder um Internetdienste zu nutzen.
 
-### Floating IP
+## Floating IP
 
 {{% alert title="Hinweis" color="info" %}}
 Es ist wichtig zu beachten, dass die Floating IP-Adresse auf der VM selbst nicht sichtbar ist, da die Adressumsetzung auf der Netzwerkschicht erfolgt, bevor die Datenpakete die VM erreichen.
@@ -23,7 +23,7 @@ Dies sind öffentliche IPv4-Adressen, die Ihren VMs in der pluscloud open zugewi
 
 Die pluscloud open stellt auch eine öffentliche IP-Adresse zur Verfügung, die von allen VMs verwendet werden kann, die an einen Router angeschlossen sind, um auf das Internet zuzugreifen. Dies ist nützlich für Fälle, in denen Sie keinen externen Zugriff auf Ihre VMs benötigen, diesen aber den Zugang zum Internet ermöglichen wollen. Der gesamte Datenverkehr der an den Router angeschlossenen VMs wird über Source Network Address Translation (SNAT) derselben öffentlichen IP-Adresse zugewiesen, sofern den VMs keine Floating IP zugewiesen wurde. Wenn einer VM eine Floating IP zugewiesen ist, verwendet sie die Floating IP-Adresse für den externen Zugriff anstelle der Router-IP-Adresse.
 
-## Sicherheitsgruppen
+# Sicherheitsgruppen
 
 Die pluscloud open bietet Sicherheitsgruppen an, um Kunden die Möglichkeit zu geben, Firewall-Regeln für ihre virtuellen Maschinen (VMs) zu definieren. Diese Regeln können für jede VM angepasst und auf der Grundlage verschiedener Protokolle, Ports und Kommunikationsrichtungen konfiguriert werden.
 

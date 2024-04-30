@@ -12,7 +12,7 @@ description: >
 Volumes repräsentieren (Block) Storage in OpenStack. Volumes werden als Festplatten in Instanzen verwendet. Wenn nicht explizit anders erwähnt, befinden sich Volumes auf einem [Ceph](https://ceph.io/en/)-Speichersystem und sind über das [RADOS](https://docs.ceph.com/en/quincy/rbd/index.html)-Protokoll über das Netzwerk an die Instanz angeschlossen.
 Über das Menü "**Volumes**" können Sie die Volumes in Ihrem Projekt verwalten. 
 
-<img src="image2020-10-22_15-21-57.png" alt="Bildschirmfoto des Menüs "Volumes" width="50%" height="50%" title="Menü "Volumes">
+<img src="image2020-10-22_15-21-57.png" alt="Bildschirmfoto des Menüs Volumes" width="50%" height="50%" title="Menü Volumes">
 
 Sie können neue Volumes, Backups und Snapshots erstellen sowie Ihre Volumes gruppieren (z. B. für gleichzeitige Snapshots). Die Liste zeigt die Volumes mit ihrer eindeutigen ID an, aber Sie können den Namen Ihrer Volumes ändern, wenn Sie möchten. Außerdem können Sie sehen, ob das Volume derzeit an eine Instanz angehängt ist (und wo), wie groß das Volume ist und ob es Mitglied einer Volume-Gruppe ist. Über die Schaltfläche "**Aktionen**" haben Sie Zugriff auf die verschiedenen Verwaltungsoptionen, die Sie für Ihre Volumes haben.
 

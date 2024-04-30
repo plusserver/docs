@@ -4,10 +4,10 @@ type: "docs"
 weight: 30
 date: 2023-03-10
 description: >
-  Compute Flavors und Betriessystem-Images in der pluscloud open
+  Compute Flavors und Betriebssystem-Images in der pluscloud open
 ---
 
-## Compute Flavors
+# Compute Flavors
 
 Die pluscloud open verwendet den [SCS-Standard](https://github.com/SovereignCloudStack/standards) für die Benennung von Instanztypen (Flavors). Dieser Standard verwendet eine Kombination aus Buchstaben und Zahlen, um die Spezifikationen der einzelnen Flavors zu beschreiben. Der erste Teil des Namens gibt die Anzahl der im Flavor verfügbaren virtuellen CPUs (VCPUs) an, während der zweite Teil die Menge des verfügbaren Arbeitsspeichers (RAM) beschreibt. Der dritte Teil gibt, falls vorhanden, den für die Instanz zugewiesenen Festplattenspeicher an. Bei Flavors mit zusätzlichem Festplattenspeicher wird auch die Größe der Festplatte im Namen angegeben. Allen Flavors, die diesem Standard folgen, wird ein "SCS-" vorangestellt.
 
@@ -61,7 +61,7 @@ Die pluscloud open verwendet den [SCS-Standard](https://github.com/SovereignClou
 | SCS-16V:64     | 16    | 65536 |          0 |
 | SCS-16V:64:100 | 16    | 65536 |        100 |
 
-## Images
+# Images
 
 {{% alert title="Hinweis" color="info" %}}
 Die Betriebssystem-Images werden regelmäßig aktualisiert, um den neuesten Stand der Sicherheitspatches bereitzustellen. Ältere Images sind entsprechend den Metadaten (siehe SCS Image Metadata) weiterhin verfügbar.
@@ -85,6 +85,6 @@ Es ist wichtig zu beachten, dass die pluscloud open den [SCS-Standard](https://g
 
 Um diese Images zu nutzen, können User einfach das gewünschte Image aus dem Image Repositiry der pluscloud open auswählen und damit eine virtuelle Instanz starten. Auf die mit dem Image verbundenen Metadaten kann ebenfalls zugegriffen werden, um Informationen über das Image zu sammeln und sicherzustellen, dass es den Anforderungen entspricht.
 
-### Cloud-init
+## Cloud-init
 
 Bei allen in der pluscloud open angebotenen Betriebssystem-Images ist standardmäßig [cloud-init](https://cloudinit.readthedocs.io/en/latest/) aktiviert, was eine einfache und effiziente Anpassung von virtuellen Instanzen in einer OpenStack-Umgebung ermöglicht. Mit cloud-init können User verschiedene Aufgaben während des Boot-Prozesses automatisieren, wie z. B. die Konfiguration von Netzwerkeinstellungen, die Erstellung von Benutzerkonten und die Installation von Softwarepaketen. Dies kann dazu beitragen, die Bereitstellung virtueller Maschinen zu rationalisieren und sicherzustellen, dass sie korrekt und konsistent konfiguriert sind. Um cloud-init mit einem Image zu verwenden, können User einfach eine cloud-config-Datei oder ein Benutzerdaten-Skript beim Starten der Instanz bereitstellen. Das cloud-init-Tool liest dann diese Daten und führt die angegebenen Aktionen während des Startvorgangs aus.
