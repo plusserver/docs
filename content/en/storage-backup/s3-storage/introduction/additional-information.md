@@ -14,6 +14,6 @@ For detailed insights into the functionality and configuration options of our S3
 
 ### Additional Documentation
 
-If you seek specific information about plusserver S3, detailed insights can be found in the [StorageGrid Documentation]([https://docs.netapp.com/en-us/storagegrid/](https://docs.netapp.com/us-en/storagegrid-117/index.html). This resource provides comprehensive information on features, configuration options, and best practices for using plusserver S3 within your S3 infrastructure.
+If you seek specific information about plusserver S3, detailed insights can be found in the [StorageGrid Documentation](https://docs.netapp.com/us-en/storagegrid-117/index.html). This resource provides comprehensive information on features, configuration options, and best practices for using plusserver S3 within your S3 infrastructure.
 
 For further inquiries or additional information about our S3 solution, our customer service is at your disposal.
