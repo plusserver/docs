@@ -6,7 +6,7 @@ weight: 10
 date: "2024-02-07"
 ---
 
-In this section, we will guide you on how to install the AWS Command Line Interface (CLI) to interact with your plusserver S3 account. Please note that the AWS CLI is used here as an example for getting started, and any alternative S3 client can also be used to access your S3 resources.
+In this section, we will show you how to install the AWS Command Line Interface (CLI) to interact with your plusserver S3 account. Please note that the AWS CLI is used here as an example for getting started, and any alternative S3 client can also be used to access your S3 resources.
 
 ### Step 1: Checking System Requirements
 

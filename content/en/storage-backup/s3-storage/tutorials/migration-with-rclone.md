@@ -153,9 +153,10 @@ Basic syntax of rclone:
 rclone [options] subcommand <parameters> <parameters...>
 ```
 The syntax for the paths passed to the rclone command is as follows:
+
 {{% alert title="Info" %}}
 On Windows, you can use \ instead of / only in local paths. Non-local paths must use /.
-For more information on Windows-specific paths, refer to here.
+For more information on Windows-specific paths, refer to [here](https://rclone.org/local/#paths-on-windows).
 {{% /alert %}}
 
 ```bash
