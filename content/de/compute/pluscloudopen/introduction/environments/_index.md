@@ -83,11 +83,11 @@ Die dritte Möglichkeit ist die Verwendung eines Docker-Containers, der alle ben
 
 Für Informationen zur Nutzung des OpenStackClients verweisen wir auf die [upstream documentation](https://docs.openstack.org/python-openstackclient/latest/index.html).
 
-### Terraform Provider und Packer-Builder
+### Terraform-Provider und Packer-Builder
 
-Der Terraform Provider für OpenStack ist auf der Terraform Registry Website unter <https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs> zu finden.
+Der Terraform-Provider für OpenStack ist auf der Terraform-Registry Website unter <https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs> zu finden.
 
-Dieser Provider ermöglicht es Usern, mit vielen OpenStack-Ressourcen zu interagieren. Mit dem Terraform-Provider für OpenStack können Benutzer pluscloud open Ressourcen über Terraform-Konfigurationsdateien erstellen, ändern und löschen, was ein effektives Infrastrukturmanagement ermöglicht.
+Dieser Provider ermöglicht es Usern, mit vielen OpenStack-Ressourcen zu interagieren. Mit dem Terraform-Provider für OpenStack können User pluscloud-open-Ressourcen über Terraform-Konfigurationsdateien erstellen, ändern und löschen, was ein effektives Infrastrukturmanagement ermöglicht.
 
 Darüber hinaus gibt es einen [OpenStack Builder für Packer](https://developer.hashicorp.com/packer/plugins/builders/openstack), mit dem User benutzerdefinierte Images auf OpenStack erstellen können.
 

@@ -39,7 +39,7 @@ Unter [Dokumentation](../../../reference/local-storage/) erfahren Sie mehr darü
 
 ### Object Storage
 
-Der Object Storage auf pluscloud open ist eine vielseitige Speicherlösung, die für moderate Daten- und Dateispeicheranforderungen entwickelt wurde. Sie basiert auf der Ceph RadosGW Technologie und ist für die nahtlose Integration in Cloud-native Workflows und Infrastructure as Code (IaC) Prozesse innerhalb der pluscloud open Umgebung konzipiert.
+Der Object Storage der pluscloud open ist eine vielseitige Speicherlösung, die für moderate Daten- und Dateispeicheranforderungen entwickelt wurde. Sie basiert auf Ceph RADOS Gateway und ist für die nahtlose Integration in Cloud-native Workflows und IaC-Prozesse (Infrastructure as Code) innerhalb der pluscloud-open-Umgebung konzipiert.
 
 Die wichtigsten Merkmale von Object Storage in der pluscloud open sind:
 

@@ -32,7 +32,7 @@ Wenn Sie Datenträger von einem Projekt in ein anderes übertragen, können Sie 
 
 ### Volume erstellen
 
-Um ein neues Volume zu erstellen, klicken Sie auf "**+Volume erstellen**" und dann werden Sie durch einige Menüs geführt, um das neue Volume zu definieren
+Um ein neues Volume zu erstellen, klicken Sie auf "**+Volume erstellen**". Sie werden dann durch einige Menüs geführt, um das neue Volume zu definieren
 
 ![Screenshot des Menüs "Volume erstellen"](image2020-10-22_15-37-55.png)
 

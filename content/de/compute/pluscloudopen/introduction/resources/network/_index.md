@@ -9,7 +9,7 @@ description: >
 
 # Öffentliche IPs
 
-pluscloud open bietet zwei Arten von öffentlichen IP-Adressen, die verwendet werden können, um von externen Standorten aus auf Ihre virtuellen Maschinen (VM) zuzugreifen oder um Internetdienste zu nutzen.
+Die pluscloud open bietet zwei Arten von öffentlichen IP-Adressen, die verwendet werden können, um von externen Standorten aus auf Ihre virtuellen Maschinen (VM) zuzugreifen oder um Internetdienste zu nutzen.
 
 ## Floating IP
 
