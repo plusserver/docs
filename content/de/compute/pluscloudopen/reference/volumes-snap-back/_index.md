@@ -34,7 +34,7 @@ Wenn Sie Datenträger von einem Projekt in ein anderes übertragen, können Sie 
 
 Um ein neues Volume zu erstellen, klicken Sie auf "**+Volume erstellen**". Sie werden dann durch einige Menüs geführt, um das neue Volume zu definieren
 
-![Screenshot des Menüs "Volume erstellen"](image2020-10-22_15-37-55.png)
+![Screenshot des Menüs "Volume erstellen"](volume-erstellen.png)
 
 Neben einem Namen und einer optionalen Beschreibung können Sie eine "**Volumenquelle**" wählen, z. B. ein Image, einen Snapshot oder andere Volumes. Je nach Auswahl ändern sich die Eingabefelder (die aber selbsterklärend sind). Die gewählte Quelle bestimmt die Größe des neuen Volumes. Sie können das Volume einer zuvor definierten Volume-"**Gruppe**" zuordnen.
 
@@ -61,7 +61,7 @@ Die pluscloud open erlaubt es, verschlüsselte Volumes zu erstellen, die auf "LU
 
 Das Erstellen eines verschlüsselten Volumes ist recht einfach. Sie wählen einfach "LUKS" als "**Typ**" aus. 
 
-![Screenshot des Menüs "Volume erstellen"](2023-03-28_16-34.png)
+![Screenshot des Menüs "Volume erstellen"](volume-luks-erstellen.png)
 
 Je nach Größe des Datenträgers kann die Erstellung ein wenig Zeit in Anspruch nehmen. Sie können das Volume wie jedes andere nicht verschlüsselte Volume verwenden. Die Verschlüsselung wird im Hintergrund durchgeführt. In der Volume-Liste sollte Ihr Volume als verschlüsselt angezeigt werden:
 
