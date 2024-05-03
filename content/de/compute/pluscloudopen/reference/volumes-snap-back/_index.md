@@ -12,7 +12,7 @@ description: >
 Volumes repräsentieren (Block) Storage in OpenStack. Volumes werden als Festplatten in Instanzen verwendet. Wenn nicht explizit anders erwähnt, befinden sich Volumes auf einem [Ceph](https://ceph.io/en/)-Speichersystem und sind über das [RADOS](https://docs.ceph.com/en/quincy/rbd/index.html)-Protokoll über das Netzwerk an die Instanz angeschlossen.
 Über das Menü "**Volumes**" können Sie die Volumes in Ihrem Projekt verwalten. 
 
-<img src="image2020-10-22_15-21-57.png" alt="Bildschirmfoto des Menüs "Volumes" width="50%" height="50%" title="Menü "Volumes">
+<img src="image2020-10-22_15-21-57.png" alt="Bildschirmfoto des Menüs Volumes" width="50%" height="50%" title="Menü Volumes">
 
 Sie können neue Volumes, Backups und Snapshots erstellen sowie Ihre Volumes gruppieren (z. B. für gleichzeitige Snapshots). Die Liste zeigt die Volumes mit ihrer eindeutigen ID an, aber Sie können den Namen Ihrer Volumes ändern, wenn Sie möchten. Außerdem können Sie sehen, ob das Volume derzeit an eine Instanz angehängt ist (und wo), wie groß das Volume ist und ob es Mitglied einer Volume-Gruppe ist. Über die Schaltfläche "**Aktionen**" haben Sie Zugriff auf die verschiedenen Verwaltungsoptionen, die Sie für Ihre Volumes haben.
 
@@ -32,9 +32,9 @@ Wenn Sie Datenträger von einem Projekt in ein anderes übertragen, können Sie 
 
 ### Volume erstellen
 
-Um ein neues Volume zu erstellen, klicken Sie auf "**+Volume erstellen**" und dann werden Sie durch einige Menüs geführt, um das neue Volume zu definieren
+Um ein neues Volume zu erstellen, klicken Sie auf "**+Volume erstellen**". Sie werden dann durch einige Menüs geführt, um das neue Volume zu definieren
 
-![Screenshot des Menüs "Volume erstellen"](image2020-10-22_15-37-55.png)
+![Screenshot des Menüs "Volume erstellen"](volume-erstellen.png)
 
 Neben einem Namen und einer optionalen Beschreibung können Sie eine "**Volumenquelle**" wählen, z. B. ein Image, einen Snapshot oder andere Volumes. Je nach Auswahl ändern sich die Eingabefelder (die aber selbsterklärend sind). Die gewählte Quelle bestimmt die Größe des neuen Volumes. Sie können das Volume einer zuvor definierten Volume-"**Gruppe**" zuordnen.
 
@@ -61,7 +61,7 @@ Die pluscloud open erlaubt es, verschlüsselte Volumes zu erstellen, die auf "LU
 
 Das Erstellen eines verschlüsselten Volumes ist recht einfach. Sie wählen einfach "LUKS" als "**Typ**" aus. 
 
-![Screenshot des Menüs "Volume erstellen"](2023-03-28_16-34.png)
+![Screenshot des Menüs "Volume erstellen"](volume-luks-erstellen.png)
 
 Je nach Größe des Datenträgers kann die Erstellung ein wenig Zeit in Anspruch nehmen. Sie können das Volume wie jedes andere nicht verschlüsselte Volume verwenden. Die Verschlüsselung wird im Hintergrund durchgeführt. In der Volume-Liste sollte Ihr Volume als verschlüsselt angezeigt werden:
 

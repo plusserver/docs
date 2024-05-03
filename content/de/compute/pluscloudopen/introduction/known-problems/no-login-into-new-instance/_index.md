@@ -4,7 +4,7 @@ title: "Anmeldung bei neu gestarteter Instanz nicht möglich"
 type: "docs"
 date: 2023-02-24
 description: >
-  Sie haben eine neue Instanz gestartet, können sich aber nicht mit Ihrem mit PuTTY-generierten SSH-Schlüssel anmelden.
+  Sie haben eine neue Instanz gestartet, können sich aber nicht mit Ihrem PuTTY-generierten SSH-Schlüssel anmelden.
 ---
 
 Sie haben gerade eine neue Instanz gestartet, können sich aber nicht per SSH anmelden, obwohl Sie ein SSH-Schlüsselpaar - dass Sie mit PuTTY oder PuTTYgen erzeugt haben - in OpenStack eingerichtet und bereitgestellt haben. 

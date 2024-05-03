@@ -15,7 +15,7 @@ Wenn nicht anders angegeben, ist Speicherplatz in einer pluscloud-open-Umgebung 
 
 ### Block Storage
 
-pluscloud open bietet Shared Block Storage auf Basis von Ceph. Er bietet eine kostengünstige Allzweck-Speicherlösung für Anwendungen, die persistenten Speicher benötigen. Der Ceph Block Storage wird außerdem synchron auf drei Knoten repliziert, was ihn sehr zuverlässig macht. Für latenzempfindliche Anwendungen ist dieser Speichertyp jedoch möglicherweise nicht ideal geeignet.
+Die pluscloud open bietet Shared Block Storage auf Basis von Ceph. Er bietet eine kostengünstige Allzweck-Speicherlösung für Anwendungen, die persistenten Speicher benötigen. Der Ceph Block Storage wird außerdem synchron auf drei Knoten repliziert, was ihn sehr zuverlässig macht. Für latenzempfindliche Anwendungen ist dieser Speichertyp jedoch möglicherweise nicht ideal geeignet.
 
 Zusätzlich zu den grundlegenden Block-Storage-Funktionen bietet pluscloud open auch die Möglichkeit, Snapshots und Backups von Volumes zu erstellen, was die Verwaltung und Wiederherstellung von Daten erleichtert. Snapshots ermöglichen Point-in-Time-Backups von Volumes, während Backups vollständige Kopien der Volumes liefern, die für Disaster Recovery oder andere Zwecke verwendet werden können.
 
@@ -39,7 +39,7 @@ Unter [Dokumentation](../../../reference/local-storage/) erfahren Sie mehr darü
 
 ### Object Storage
 
-Der Object Storage auf pluscloud open ist eine vielseitige Speicherlösung, die für moderate Daten- und Dateispeicheranforderungen entwickelt wurde. Sie basiert auf der Ceph RadosGW Technologie und ist für die nahtlose Integration in Cloud-native Workflows und Infrastructure as Code (IaC) Prozesse innerhalb der pluscloud open Umgebung konzipiert.
+Der Object Storage der pluscloud open ist eine vielseitige Speicherlösung, die für moderate Daten- und Dateispeicheranforderungen entwickelt wurde. Sie basiert auf Ceph RADOS Gateway und ist für die nahtlose Integration in Cloud-native Workflows und IaC-Prozesse (Infrastructure as Code) innerhalb der pluscloud-open-Umgebung konzipiert.
 
 Die wichtigsten Merkmale von Object Storage in der pluscloud open sind:
 
