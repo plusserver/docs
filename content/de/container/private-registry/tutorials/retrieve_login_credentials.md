@@ -10,7 +10,7 @@ weight: 30
 ### Vertrag auswählen
 
 Suchen Sie zunächst nach dem entsprechenden [Vertrag.](https://customerservice.plusserver.com/billing/contracts)
-Die Suchbegriffe **, *mysql*, *postgresql* oder *mansvc* werden Ihnen die Auswahl erleichtern.
+Die Suchbegriffe *mysql*, *postgresql*, *harbor* oder *mansvc* werden Ihnen die Auswahl erleichtern.
 
 ![Verträge](/images/content/04-msl/de/databases/get_credentials/1-contracts.png)
 

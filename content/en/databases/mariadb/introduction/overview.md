@@ -41,7 +41,7 @@ Database-as-a-Service (DBaaS) represents a suite of fully automated microservice
 
 **Automatic Software Upgrades:**
 
-- DBaaS instances receive automatic updates to stay current.
+- DBaaS instances receive automatic updates to keep them up to date.Ideally, only the one IP from which the service is used is enabled here.
 
 **Multi-AZ Deployment:**
 

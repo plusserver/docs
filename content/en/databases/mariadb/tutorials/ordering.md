@@ -29,16 +29,16 @@ Now select the size or performance. You do not yet know what performance you nee
 
 ![Select Nodesize](/images/content/04-msl/en/databases/ordering/3-selection-node-size.png)
 
-### Select of the storage size
+### Select the storage size
 
-You always start with at least 50GB memory for your data. 
+You always start with at least 50GB memory for your data.
 
 ![Select storage size](/images/content/04-msl/en/databases/ordering/4-select-storage-size.png)
 
 ### Enabling access
 
 The service is accessible via a public IP. As this is freely available from the Internet and could potentially be "attacked" by anyone, we intially block all access to the service. The mere protection provided by an encrypted connection with a user name and password is not sufficient. It is therefore necessary to specify the trusted sources from which the DBaaS should be accessible.
-You must enable access from one or more external addresses or address ranges. Ideally, only the one IP from which the service uses is enabled here. In this example IP 123.123.123.123/32 and subnet 222.222.222.128/28 will be added to the trusted sources.
+You must enable access from one or more external addresses or address ranges. Ideally, only the one IP from which the service is used is enabled here. In this example IP 123.123.123.123/32 and subnet 222.222.222.128/28 will be added to the trusted sources.
 
 ![Setting up external access](/images/content/04-msl/en/databases/ordering/5-selection-trusted-sources.png)
 
@@ -48,9 +48,9 @@ Here you can select the [region](https://docs.xaas.get-cloud.io/docs/01-dbaas/02
 
 ![Select the region](/images/content/04-msl/en/databases/ordering/6-selection_region.png)
 
-### Select of the invoice profile
+### Select the invoice profile
 
-Are you a new Plusserver customer and do not yet receive an invoice? Then select *New invoice profile*. If you are already a customer, you can choose from existing invoice profiles and will receive the new DBaaS on an existing invoice, which you select in the next step.
+Are you a new plusserver customer and do not yet receive an invoice? Then select *New invoice profile*. If you are already a customer, you can choose from existing invoice profiles and will receive the new DBaaS on an existing invoice, which you select in the next step.
 
 ![Select invoice profile](/images/content/04-msl/en/databases/ordering/7-selection-invoice-profile.png)
 

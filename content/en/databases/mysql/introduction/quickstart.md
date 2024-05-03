@@ -39,7 +39,7 @@ There are two ways you can scale our DBaaS.
 
 ### Configuration
 
-Everything about the Database Configuration you can find [here](../../documentation/configuration/).
+Find out about database configuration [here](../../documentation/configuration/).
 
 ## General Information
 
@@ -53,7 +53,7 @@ Make sure to only allow known Source IP Addresses that your applications use. Th
 
 We require secure, encrypted communication from the client/application to our DBaaS. This way, even if someone intercepts the network traffic, they can't see the data.
 
-If your are getting certification eror make sure the required Let's Encry  (intermediate) certificates are available on the accessing system. [Let's Encrypt certificates](https://letsencrypt.org/certificates/)
+If you get a certification error, make sure that the required Let's Encrypt (intermediate) certificates are available on the accessing system.[Let's Encrypt certificates](https://letsencrypt.org/certificates/)
 
 ### Backup and Restore
 
@@ -61,7 +61,7 @@ Get all details about the backup and restore automations in our [Backup and Rest
 
 ### Updates
 
-Learn about the the Patchroutine for our DBaaS in the [Updates](../../documentation/update/) document.
+Learn about the the patch routine for our DBaaS in the [Updates](../../documentation/update/) document.
 
 ### Monitoring
 
