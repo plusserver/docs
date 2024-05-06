@@ -49,6 +49,12 @@ controller:
 ### Load Balancer with Private IP Address
 You can use any available IP address from the node (1) network 10.250.0.0/16 of the respective PSKE cluster.
 
+{{< alert title="Important!" >}}
+You may want to use the latest version of the Ingress-nginx chart. In order to do so, you can just delete the version flag from the example below.
+ 
+Ensure that the software versions and IP addresses are up to date and correctly represent the environment.
+{{< /alert >}}
+
 Now, install the nginx Ingress Controller using Helm and the key/value pairs from the `values.yaml`:
 
 ```bash
