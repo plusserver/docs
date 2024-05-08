@@ -20,6 +20,6 @@ Go to the contract and display the login data at the bottom of the contract deta
 
 ### Login details
 
-You will then see the access data you need to connect to your IAM - Keycloak Instance.
+You will then see the access data you need to connect to your Keycloak-as-a-Service instance.
 
 ![Access data](/images/content/04-msl/en/iam_keycloak/get_credentials/3-credentials-view.png)

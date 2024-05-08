@@ -4,7 +4,7 @@ linkTitle: "Backup and Restore"
 type: "docs"
 ---
 
-IAM - Keycloak-as-a-Service includes automated backup and restore functionality.
+Keycloak-as-a-Service-as-a-Service includes automated backup and restore functionality.
 
 ## Backup Procedure
 
@@ -14,7 +14,7 @@ Backups are conducted automatically every night. We utilize filesystem snapshots
 
 ## Restore Procedure
 
-In the event of a restore, the process requires creating a new IAM - Keycloak instance with the same [Node and Storage Size](../nodesize/) as the original. Data can only be restored to this new instance, necessitating configuration changes to any applications to point to the new  IAM - Keycloak instance.
+In the event of a restore, the process requires creating a new Keycloak-as-a-Service instance with the same [Node and Storage Size](../nodesize/) as the original. Data can only be restored to this new instance, necessitating configuration changes to any applications to point to the new  Keycloak-as-a-Service instance.
 
 <br>
 

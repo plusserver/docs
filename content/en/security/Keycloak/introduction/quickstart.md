@@ -9,15 +9,15 @@ weight: 30
 
 ### Ordering
 
-Do you need an IAM - Keycloak instance quickly? Then we will guide you through the ordering process [here](../../tutorials/ordering/).
+Do you need an Keycloak-as-a-Service instance quickly? Then we will guide you through the ordering process [here](../../tutorials/ordering/).
 
 ### Retrieve Login Credentials
 
-The order process is done and your IAM - Keycloak instance is up and running. The first thing you should do is getting your [Login Details](../../tutorials/retrieve_login_credentials/).
+The order process is done and your Keycloak-as-a-Service instance is up and running. The first thing you should do is getting your [Login Details](../../tutorials/retrieve_login_credentials/).
 
-### Working with IAM - Keycloak
+### Working with Keycloak-as-a-Service
 
-Log in to the web interface to use the IAM - Keycloak service. Please see [Getting Started](../../tutorials/first_steps/#log-in-to-the-web-interface-to-use-the-iam---keycloak-service).
+Log in to the web interface to use the Keycloak-as-a-Service service. Please see [Getting Started](../../tutorials/first_steps/#log-in-to-the-web-interface-to-use-the-iam---keycloak-service).
 
 ## Customization
 
@@ -41,7 +41,7 @@ Make sure to only allow known Source IP Addresses that your applications use. Th
 
 ### Encryption
 
-We require secure, encrypted communication from the client/application to our IAM - Keycloak instance. This way, even if someone intercepts the network traffic, they can't see the data.
+We require secure, encrypted communication from the client/application to our Keycloak-as-a-Service instance. This way, even if someone intercepts the network traffic, they can't see the data.
 
 If your are getting certification eror make sure the required Let's Encrypt (intermediate) certificates are available on the accessing system. [Let's Encrypt certificates](https://letsencrypt.org/certificates/)
 
@@ -51,11 +51,11 @@ Get all details about the backup and restore automations in our [Backup and Rest
 
 ### Updates
 
-Learn about the the Patchroutine for our IAM - Keycloak instance in the [Updates](../../documentation/update/) document.
+Learn about the the Patchroutine for our Keycloak-as-a-Service instance in the [Updates](../../documentation/update/) document.
 
 ### Monitoring
 
-We monitor our *IAM - Keycloak* instance by keeping an eye on both the underlying compute and storage resources, as well as performing service-specific checks. Our 24x7 support team handles any incidents that arise, ensuring continuous and reliable service.
+We monitor our *Keycloak-as-a-Service* instance by keeping an eye on both the underlying compute and storage resources, as well as performing service-specific checks. Our 24x7 support team handles any incidents that arise, ensuring continuous and reliable service.
 
 ### Regions and AZ
 

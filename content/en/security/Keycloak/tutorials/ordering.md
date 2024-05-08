@@ -9,23 +9,23 @@ weight: 20
 
 You always start in our [customer portal](https://customerservice.plusserver.com)
 
-### Select IAM - Keycloak
+### Select Keycloak-as-a-Service
 
-First navigate to *IAM - Keycloak*.
+First navigate to *Keycloak-as-a-Service*.
 
-![Selection IAM - Keycloak](/images/content/04-msl/en/iam_keycloak/ordering/1-cloud_service_keycloak.png)
+![Select Keycloak-as-a-Service](/images/content/04-msl/en/iam_keycloak/ordering/1-cloud_service_keycloak.png)
 
 ### Select Keycloak service type
 
-[Selection IAM - Keycloak](/images/content/04-msl/en/iam_keycloak/ordering/2-select_keycloak_version.png)
+![Select Keycloak-as-a-Service](/images/content/04-msl/en/iam_keycloak/ordering/2-select_keycloak_version.png)
 
-### Selection of Node Type and Node Size
+### Select Node Type and Node Size
 
 Now select the size and a type of node. You do not yet know what performance you need? Then select the smallest node and scale up later if necessary (planned).
 
 ![Select Nodesize](/images/content/04-msl/en/iam_keycloak/ordering/3-iam_keycloak-size.png)
 
-### Selection of the storage size
+### Select the storage size
 
 You always start with at least 50GB memory for your data. 
 
@@ -33,20 +33,20 @@ You always start with at least 50GB memory for your data.
 
 ### Enabling access
 
-The service is accessible via a public IP. As this is freely available from the Internet and could potentially be "attacked" by anyone, we intially block all access to the service. The mere protection provided by an encrypted connection with a user name and password is not sufficient. It is therefore necessary to specify the trusted sources from which the IAM - Keycloak instance should be accessible
+The service is accessible via a public IP. As this is freely available from the Internet and could potentially be "attacked" by anyone, we intially block all access to the service. The mere protection provided by an encrypted connection with a user name and password is not sufficient. It is therefore necessary to specify the trusted sources from which the Keycloak-as-a-Service instance should be accessible
 You must enable access from one or more external addresses or address ranges here. Ideally, only the one IP from which the service is used is enabled here. In this example IP 123.123.123.123/32 and subnet 222.222.222.128/28 will be added to the trusted sources.
 
 ![Setting up external access](/images/content/04-msl/en/iam_keycloak/ordering/5-selection-trusted-sources.png)
 
-### Selecting the region
+### Select the region
 
 Here you can select the [region](https://docs.xaas.get-cloud.io/docs/01-dbaas/02-faq/#Regions) in which the service is to be provided. 
 
 ![Selecting the region](/images/content/04-msl/en/iam_keycloak/ordering/6-selection_region.png)
 
-### Selection of the billing profile
+### Select the billing profile
 
-Are you a new Plusserver customer and do not yet receive an invoice? Then select *New billing profile*. If you are already a customer, you can choose from existing billing profiles and will receive the new IAM - Keycloak billing data on an existing invoice, which you must then select.
+Are you a new Plusserver customer and do not yet receive an invoice? Then select *New billing profile*. If you are already a customer, you can choose from existing billing profiles and will receive the new Keycloak-as-a-Service billing data on an existing invoice, which you must then select.
 
 ![Select invoice profile](/images/content/04-msl/en/iam_keycloak/ordering/7-selection-invoice-profile.png)
 
@@ -63,6 +63,6 @@ You will be redirected to [Order status](https://customerservice.plusserver.com/
 * new: Status directly after the order
 * processing: Status as soon as automatic provision has started
 * failed: Unfortunately something has gone wrong, please open a [ticket](https://customerservice.plusserver.com/support/ticket-create) here in the portal so that we can help you as quickly as possible.
-* DONE: Congratulations, your IAM - Keycloak instance is available
+* DONE: Congratulations, your Keycloak-as-a-Service instance is available
 
 ![Order successfully completed](/images/content/04-msl/en/iam_keycloak/ordering/10-order_status.png)

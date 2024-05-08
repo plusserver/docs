@@ -4,7 +4,7 @@ linkTitle: "Release Notes"
 type: "docs"
 weight: 40
 description: >
-  Release Notes zu den IAM - Keycloak Releases
+  Release Notes zu den Keycloak-as-a-Service Releases
 ---
 
-Hier sind die aktuellen Release Notes für die IAM - Keycloak Releases.
+Hier sind die aktuellen Release Notes für die Keycloak-as-a-Service Releases.

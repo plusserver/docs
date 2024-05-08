@@ -9,11 +9,11 @@ weight: 20
 
 Sie starten immer in unserem [Kundenportal](https://customerservice.plusserver.com)
 
-### IAM - Keycloak auswählen
+### Keycloak-as-a-Service auswählen
 
-Navigieren Sie zunächst zu IAM - Keycloak.
+Navigieren Sie zunächst zu Keycloak-as-a-Service.
 
-![Auswahl IAM - Keycloak](/images/content/04-msl/de/iam_keycloak/ordering/1-cloud_service_keycloak.png)
+![Auswahl Keycloak-as-a-Service](/images/content/04-msl/de/iam_keycloak/ordering/1-cloud_service_keycloak.png)
 
 ### Wählen Sie den Servicetyp
 
@@ -35,7 +35,7 @@ Sie beginnen immer mit mindestens 50 GB Speicherplatz für Ihre Daten.
 
 ### Freischalten des Zugriffs
 
-Der Service ist über eine öffentliche IP erreichbar. Da diese frei aus dem Internet verfügbar ist und potentiell jedem "angegriffen" werden könnte, sperren wir intial jeglichen Zugriff auf den Service. Der reine Schutz durch eine verschlüsselte Verbindung mit Benutzername und Passwort ist nicht ausreichend. Deswegen muss dediziert angegeben werden, von welchen vertrauenswürdigen Quellen die IAM - Keycloak Instanz zugreifbar sein soll
+Der Service ist über eine öffentliche IP erreichbar. Da diese frei aus dem Internet verfügbar ist und potentiell jedem "angegriffen" werden könnte, sperren wir intial jeglichen Zugriff auf den Service. Der reine Schutz durch eine verschlüsselte Verbindung mit Benutzername und Passwort ist nicht ausreichend. Deswegen muss dediziert angegeben werden, von welchen vertrauenswürdigen Quellen die Keycloak-as-a-Service Instanz zugreifbar sein soll
 Sie müssen hier den Zugriff von einer oder mehrer externen Adressen oder Adressbereichen freischalten. Idealerweise ist hier nur die eine IP freigegeben, von der der Service genutzt wird.
 
 ![Externen Zugang einrichten](/images/content/04-msl/de/iam_keycloak/ordering/5-selection-trusted-sources.png)
@@ -67,5 +67,5 @@ Direkt nach der Bestellung werden Sie auf den [Bestellstatus](https://customerse
 * new: Status direkt nach dem Auftrag
 * processing: Status sobald die automatische Bereitstellung angelaufen ist
 * failed: Es ist leider etwas schiefgegangen, bitte öffnen Sie ein [Ticket](https://customerservice.plusserver.com/support/ticket-create) hier im Portal, so dass wir Ihnen schnellstmöglich helfen können.
-* DONE: Herzlichen Glückwunsch, Ihre neu IAM - Keycloak Instanz steht zur Verfügung
+* DONE: Herzlichen Glückwunsch, Ihre neu Keycloak-as-a-Service Instanz steht zur Verfügung
 ![Auftrag erfolgreich ausgeführt](/images/content/04-msl/de/iam_keycloak/ordering/10-order_status.png)

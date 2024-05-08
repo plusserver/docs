@@ -5,9 +5,9 @@ type: "docs"
 weight: 30
 ---
 
-### An der IAM - Keycloak WebUI anmelden
+### An der Keycloak-as-a-Service WebUI anmelden
 
-Mit Ihren Admin-User [Zugangsdaten](/de/identity-access-management/keycloak/tutorials/retrieve_login_credentials/#anmeldedaten) können Sie sich an der WebUI Ihres *IAM - Keycloak* Instanz anmelden. Die Verbindung ist SSL/TLS gesichert, rufen Sie im Adressenfeld Ihres Internetg-Browsers **https://*<DNS-Name_Ihres_IAM-Keycloak_Servers>*/** auf, z.b.: *https://node-65e84464310368a571551616.ps-xaas.io*
+Mit Ihren Admin-User [Zugangsdaten](/de/identity-access-management/keycloak/tutorials/retrieve_login_credentials/#anmeldedaten) können Sie sich an der WebUI Ihres *Keycloak-as-a-Service* Instanz anmelden. Die Verbindung ist SSL/TLS gesichert, rufen Sie im Adressenfeld Ihres Internetg-Browsers **https://*<DNS-Name_Ihres_IAM-Keycloak_Servers>*/** auf, z.b.: *https://node-65e84464310368a571551616.ps-xaas.io*
 
 ![WebUI](/images/content/04-msl/de/iam_keycloak/web_ui/01_connect_webui.png)
 

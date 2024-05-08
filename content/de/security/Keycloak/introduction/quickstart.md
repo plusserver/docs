@@ -13,11 +13,11 @@ Folgen Sie  [hier](../../tutorials/ordering/) dem Bestellvorgang.
 
 ### Anmeldedaten
 
-Nach Abschluss der Bestellung ist Ihre IAM - Keycloak bereit. Ihre Anmeldedaten können Sie [hier](../../tutorials/retrieve_login_credentials/) einsehen.
+Nach Abschluss der Bestellung ist Ihre Keycloak-as-a-Service bereit. Ihre Anmeldedaten können Sie [hier](../../tutorials/retrieve_login_credentials/) einsehen.
 
-### Nutzung der IAM - Keycloak
+### Nutzung der Keycloak-as-a-Service
 
-Melden Sie sich im Webinterface an, um IAM - Keycloak zu nutzen. Sehen Sie auch [Erste Schritte](../../tutorials/first_steps/#an-der-iam---keycloak-webui-anmelden).
+Melden Sie sich im Webinterface an, um Keycloak-as-a-Service zu nutzen. Sehen Sie auch [Erste Schritte](../../tutorials/first_steps/#an-der-iam---keycloak-webui-anmelden).
 
 ## Anpassungen
 
@@ -47,11 +47,11 @@ Die Kommunikation zur Web-GUI ist über HTTPS verschlüsselt.
 
 ### Softwareupdates
 
-Erfahren Sie mehr über die Patchroutine für unsere *IAM - Keycloak* im Dokument [Updates](../../documentation/update/).
+Erfahren Sie mehr über die Patchroutine für unsere *Keycloak-as-a-Service* im Dokument [Updates](../../documentation/update/).
 
 ### Überwachung
 
-Wir überwachen Ihre *IAM - Keycloak*, indem wir die zugrundeliegenden Rechen- und Speicherressourcen im Auge behalten als auch anwendungsspezifische Monitoring Checks durchführen. Unser 24x7-Supportteam kümmert sich um alle auftretenden Probleme und gewährleistet einen kontinuierlichen Verfügbarkeit.
+Wir überwachen Ihre *Keycloak-as-a-Service*, indem wir die zugrundeliegenden Rechen- und Speicherressourcen im Auge behalten als auch anwendungsspezifische Monitoring Checks durchführen. Unser 24x7-Supportteam kümmert sich um alle auftretenden Probleme und gewährleistet einen kontinuierlichen Verfügbarkeit.
 
 ### Regionen und AZ
 
