@@ -1,13 +1,14 @@
 
 ---
-title: "Reservation and release of LoadBalancer IPs"
-linkTitle: "Reservation and release of LoadBalancer IPs"
+title: "Reservation and release of Loadbalancer IPs"
+linkTitle: "Reservation and release of Loadbalancer IPs"
 type: "docs"
 weight: 20
 date: 2023-04-17
 ---
-Reverting floating IP addresses of LoadBalancers is useful if they should not change.
-This is realised by annotations in the service manifest and thus the load balancer is configured.
+
+Reserve floating IP addresses for the Loadbalancer is useful if you do not want them to change.
+This is realized through annotations in the service manifest, which is used to configure the load balancer.
 
 ## Reservation of FloatingIPs
 
@@ -47,5 +48,4 @@ spec:
 
 ## Release of FloatingIPs which are no longer known
 
-A ticket must currently be opened for this by e-mail or our hotline.
-We will then check which IPs are actually still in use and which are no longer in use.
+If you don't know which floating IPs you are currently using, you may open a support ticket in your customer panel.

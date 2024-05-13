@@ -506,7 +506,7 @@ Wenn Sie dies getan haben, können Sie nun Terraform verwenden, um den zuvor ers
 terraform destroy
 ```
 
-In unserem Beispielt sieht es dann so aus:
+In unserem Beispiel sieht es dann so aus:
 
 ```bash
 kubectl_manifest.tf_test_shoot: Refreshing state... [id=/apis/core.gardener.cloud/v1beta1/namespaces/garden-ma-24/shoots/terraform-test]
