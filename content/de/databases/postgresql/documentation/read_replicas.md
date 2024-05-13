@@ -6,7 +6,7 @@ type: "docs"
 
 ## Read Replica
 
-Read Replicas steigern die Skalierbarkeit von Datenbanken, indem sie Leseanfragen auf mehrere Read-Only-Datenbank-Instanzen verteilen. Dies bietete eine effektivere Bewältigung hoher Leseanfragen, ohne die primäre Datenbank zu belasten. Dadurch sind schnellere Antwortzeiten und eine erhebliche Leistungssteigerung Ihrer Anwendung möglich.
+Read Replicas steigern die Skalierbarkeit von Datenbanken, indem sie Leseanfragen auf mehrere Read-Only-Datenbank-Instanzen verteilen. Dies bietet eine effektivere Bewältigung hoher Leseanfragen, ohne die primäre Datenbank zu belasten. Dadurch sind schnellere Antwortzeiten und eine erhebliche Leistungssteigerung Ihrer Anwendung möglich.
 
 Um eine DBaaS-Read einzurichten, verwendet das System einen Dateisystem-Snapshot der primären Datenbankinstanz, um die sekundäre Instanz zu initialisieren. Anschließend wird die systemeigene asynchrone Replikation der Datenbank-Engine verwendet, um sicherzustellen, dass die Read Replica bei allen Änderungen in der Quelldatenbankinstanz stets auf dem neuesten Stand bleibt.
 

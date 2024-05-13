@@ -10,7 +10,7 @@ Our Database-as-a-Service (DBaaS) includes automated backup and restore function
 
 Backups are conducted automatically every night. We utilize filesystem snapshots for the backups. By default, backups are retained for 7 days. All backups are encrypted to provide enhanced security and protect your data.
 
-> *You cannot download the backups created by Plusserver directly. If you need to perform a manual backup you need to rely on native DBMS tools like ```pg_dump``` or ```mysqldump```.*
+> *You cannot directly download the backups created by plusserver. If you need to perform a manual backup you need to rely on native DBMS tools like ```pg_dump``` or ```mysqldump```.*
 
 ## Restore Procedure
 
