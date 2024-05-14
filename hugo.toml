@@ -225,7 +225,7 @@ icon = "fa-solid fa-phone"
 desc = "plusserver gmbh Contact"
 [[params.links.developer]]
 name = "Imprint"
-url = "https://www.plusserver.com/en/imprint/"
+url = "https://www.plusserver.com/impressum/"
 icon = "fa-solid fa-gavel"
 desc = "plusserver gmbh Legal notice"
 
