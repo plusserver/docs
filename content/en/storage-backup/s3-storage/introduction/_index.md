@@ -5,7 +5,7 @@ type: "docs"
 weight: 10
 date: 2024-02-06
 description: >
-    Everything you need for a perfect start with your plusserver s3
+    Everything you need for a perfect start with your S3 Storage
 
 ---
 

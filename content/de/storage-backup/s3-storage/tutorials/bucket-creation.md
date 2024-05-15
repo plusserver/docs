@@ -73,7 +73,7 @@ Beispielausgabe:
 {{% alert title="Info" %}}
 Bei deaktivierter Versionierung erhalten Sie keine Ausgabe!
 
-Sollten Sie ausschließlich das Bucket Feature "Versionierung" wünschen, so können Sie diese nachträglich aktivieren. Siehe hierzu [Versionierung in S3](https://docs.plusserver.com/de/storage-backup/s3-storage/tutorials/versioning-in-s3-copy/).
+Sollten Sie ausschließlich das Bucket Feature "Versionierung" wünschen, so können Sie diese nachträglich aktivieren. Siehe hierzu [Versionierung in S3](../versioning-in-s3).
 {{% /alert %}}
 Um die Object Lock-Einstellungen zu überprüfen, verwenden Sie den Befehl aws s3api get-object-lock-configuration:
 ```bash
