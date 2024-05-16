@@ -12,7 +12,7 @@ In this section, we will guide you on how to migrate data from our existing S3 s
 
 To ensure comprehensive support for modern S3 features, we strongly recommend always using the latest version of rclone. If you install it using the package manager of common Linux distributions (such as Debian, Ubuntu, RHEL, CentOS), the latest version may not always be available. To follow the content of this guide optimally, we recommend downloading and installing rclone directly from the [official website](https://rclone.org/install/).
 
-Example youtube Video with configuration + migration: [Youtube-Video](https://www.youtube.com/watch?v=de5WQ8oGEfs)
+Example youtube Video with configuration + migration: [![](https://i.ytimg.com/vi/de5WQ8oGEfs/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBMgPyh_MA8=&rs=AOn4CLAZX6zx_jZM0mikGg7X_qOywXdJPQ)](https://youtu.be/de5WQ8oGEfs?si=agUt4q7ZQKAS3gkh)
 
 ### Step 2: Configuring rclone via rclone Configuration Guide
 
