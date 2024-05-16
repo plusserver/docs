@@ -12,7 +12,7 @@ In diesem Abschnitt zeigen wir Ihnen, wie Sie Daten von unserer bisherigen S3-L�
 
 Um sicherzustellen, dass Sie umfassende Unterstützung für moderne S3-Funktionen erhalten, empfehlen wir dringend, stets die neueste Version von rclone zu verwenden. Bei der Installation über den Paketmanager gängiger Linux-Distributionen (wie Debian, Ubuntu, RHEL, CentOS) ist möglicherweise nicht immer die aktuellste Version verfügbar. Um den Inhalten dieses Leitfadens optimal zu folgen, empfehlen wir daher, rclone direkt von der [offiziellen Website](https://rclone.org/install/) herunterzuladen und zu installieren.
 
-Beispielyoutube Video mit Konfiguration + Durchführung Migration: ![Youtube-Video](https://www.youtube.com/watch?v=de5WQ8oGEfs)
+Beispielyoutube Video mit Konfiguration + Durchführung Migration: [Youtube-Video](https://www.youtube.com/watch?v=de5WQ8oGEfs)
 
 ### Schritt 2: Konfigurieren von rclone via Configuration Guide von rclone
 
