@@ -45,7 +45,7 @@ Meta Temp-Url-Key: Ohphach4Phih3OhpieP7ohBajooth5va
 [...]
 ```
 
-#### Creating the temporary URL:
+#### Creating the temporary URL
 
 you need to request the temporary URL and define a time, the URL should be valid:
 ```bash
@@ -96,7 +96,7 @@ with the swift command line client you can set the credential like this:
 $ swift --os-auth-url https://prod1.api.pco.get-cloud.io:5000/v3 --os-auth-type v3applicationcredential --os-application-credential-id be171a346dd1461fa322adfa916e3410 --os-application-credential-secret ezKSI0ArxwlV_tpjTwTnigyemRV6fBcLiySJffnndRbJBy4D65JADHUMh3og9ErhLw2q35xzP4h-nE83SdWijQ post -m "Temp-Url-Key:${URL_KEY}"
 ```
 
-### creating the temporary URL with application credential:
+### creating the temporary URL with application credential
 ```bash
 $ swift --os-auth-url https://prod1.api.pco.get-cloud.io:5000/v3 --os-auth-type v3applicationcredential --os-application-credential-id be171a346dd1461fa322adfa916e3410 --os-application-credential-secret ezKSI0ArxwlV_tpjTwTnigyemRV6fBcLiySJffnndRbJBy4D65JADHUMh3og9ErhLw2q35xzP4h-nE83SdWijQ tempurl GET 600 /v1/AUTH_mieshie0roo5euGh5Waecier1pheuTaf/tmpurltest/hello.txt $URL_KEY --digest sha1
 
