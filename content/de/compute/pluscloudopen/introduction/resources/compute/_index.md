@@ -4,12 +4,12 @@ type: "docs"
 weight: 30
 date: 2023-03-10
 description: >
-  Compute Flavors und Betriessystem-Images in der pluscloud open
+  Compute Flavors und Betriebssystem-Images in der pluscloud open
 ---
 
 ## Compute Flavors
 
-Die pluscloud open verwendet den [SCS-Standard](https://github.com/SovereignCloudStack/standards) für die Benennung von Instanztypen (Flavors). Dieser Standard verwendet eine Kombination aus Buchstaben und Zahlen, um die Spezifikationen der einzelnen Flavors zu beschreiben. Der erste Teil des Namens gibt die Anzahl der im Flavor verfügbaren virtuellen CPUs (VCPUs) an, während der zweite Teil die Menge des verfügbaren Arbeitsspeichers (RAM) beschreibt. Der dritte Teil gibt, falls vorhanden, den für die Instanz zugewiesenen Festplattenspeicher an. Bei Flavors mit zusätzlichem Festplattenspeicher wird auch die Größe der Festplatte im Namen angegeben. Allen Flavors, die diesem Standard folgen, wird ein "SCS-" vorangestellt.
+Die pluscloud open verwendet den [SCS-Standard](https://github.com/SovereignCloudStack/standards) für die Benennung von Instanztypen (Flavors). Dieser Standard verwendet eine Kombination aus Buchstaben und Zahlen, um die Spezifikationen der einzelnen Flavors zu beschreiben. Der erste Teil des Namens gibt die Anzahl der im Flavor verfügbaren virtuellen CPUs (VCPUs) an, während der zweite Teil die Menge des verfügbaren Arbeitsspeichers (RAM) beschreibt. Der dritte Teil gibt, falls vorhanden, den der Instanz zugewiesenen Festplattenspeicher an. Bei Flavors mit zusätzlichem Festplattenspeicher wird auch die Größe der Festplatte im Namen angegeben. Allen Flavors, die diesem Standard folgen, wird ein "SCS-" vorangestellt.
 
 | Name           | vCPUs | RAM   | Festplatte |
 |----------------|-------|-------|------------|
