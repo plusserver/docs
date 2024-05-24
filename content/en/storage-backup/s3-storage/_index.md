@@ -1,6 +1,6 @@
 ---
-title: "plusserver S3 Storage"
-linkTitle: "plusserver S3 Storage"
+title: "S3 Storage"
+linkTitle: "S3 Storage"
 type: "docs"
 weight: 20
 date: "2024-02-07"
