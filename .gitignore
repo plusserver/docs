@@ -4,6 +4,7 @@
 /node_modules/
 .hugo_build.lock
 docs.code-workspace
+ms-docs.code-workspace
 
 .DS_Store
 
