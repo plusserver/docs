@@ -4,5 +4,5 @@ linkTitle: "Introduction"
 type: "docs"
 weight: 10
 description: >
-    Everything you need for a perfect start with your Keycloak-as-a-Service.
+    Everything you need for a perfect start with your Keycloak as a Service.
 ---

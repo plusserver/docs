@@ -10,7 +10,7 @@ Die Serviceinstanzen werden routinemäßig einmal pro Woche aktualisiert. Der Pa
 
 Gelegentlich kann es vorkommen, dass bei der Installation der Updates der Service vorübergehend nicht erreichbar ist. Dies kann vorkommen, wenn unsere Hostsysteme Systemaktualisierungen benötigen.
 
-## Anpassen der Patch Schedule
+## Anpassen des Patch-Zeitplans
 
 Wir wissen, dass Ausfallzeiten für Ihren Betrieb nicht immer günstig sind. Deshalb bieten wir Ihnen die Flexibilität, Ihren eigenen Patch-Zeitplan zu definieren.
 
