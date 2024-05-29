@@ -1,8 +1,8 @@
 baseURL = 'https://docs.plusserver.com/'
-languageCode = 'en-us'
 
 # Language settings
 contentDir = "content/en"
+languageCode = 'en-GB'
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 # Useful when translating.
@@ -62,18 +62,20 @@ includeFields = ''
 [languages]
 [languages.en]
 title = "plusserver Documentation"
-languageName = "🇬🇧 English"
+languageName = "🇬🇧 EN"
+languageCode = 'en-GB'
 weight = 1
 [languages.en.params]
 description = "The technical documentation for all plusserver products"
 time_format_default = "02.01.2006"
 time_format_blog = "02.01.2006"
 [languages.de]
-title = "plusserver Documentation"
-languageName = "🇩🇪 Deutsch"
+title = "plusserver Dokumentation"
+languageName = "🇩🇪 DE"
+languageCode = 'de-DE'
 contentDir = "content/de"
 [languages.de.params]
-description = "The technical documentation for all plusserver products"
+description = "Die technische Dokumentation zu allen plusserver-Produkten"
 time_format_default = "02.01.2006"
 time_format_blog = "02.01.2006"
 
