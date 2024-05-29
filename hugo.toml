@@ -62,7 +62,7 @@ includeFields = ''
 [languages]
 [languages.en]
 title = "plusserver Documentation"
-languageName = "🇪🇺 English"
+languageName = "🇬🇧 English"
 weight = 1
 [languages.en.params]
 description = "The technical documentation for all plusserver products"
