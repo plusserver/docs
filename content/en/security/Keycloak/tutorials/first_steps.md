@@ -5,9 +5,9 @@ type: "docs"
 weight: 30
 ---
 
-### Log in to the web interface to use the Keycloak-as-a-Service service
+### Log in to the web interface to use the Keycloak as a Service
 
-You can log in to the web interface of your *Keycloak-as-a-Service* instance with [admin user credentials](/en/identity-access-management/keycloak/tutorials/retrieve_login_credentials/#login-details). The connection is SSL/TLS secured, just call **https://*<DNS-Name_of_IAM-Keycloak_Server>*/** in the address field of your Internet browser, e.g.: *https://node-65e84464310368a571551616.ps-xaas.io*
+You can log in to the web interface of your *Keycloak as a Service* instance with [admin user credentials](/en/identity-access-management/keycloak/tutorials/retrieve_login_credentials/#login-details). The connection is SSL/TLS secured, just call **https://*<DNS-Name_of_IAM-Keycloak_Server>*/** in the address field of your Internet browser, e.g.: *https://node-65e84464310368a571551616.ps-xaas.io*
 
 ![WebUI](/images/content/04-msl/en/iam_keycloak/web_ui/01_connect_webui.png)
 
@@ -38,4 +38,4 @@ Here you can change the settings of the realm, create users and groups or config
 
 ### Further documentation
 
-You can find more information and up-to-date [documentation](https://www.keycloak.org/docs/latest/server_admin/index.html) on the project's official website [Keycloak Projekts](https://www.keycloak.org/).
+You can find more information and up-to-date [documentation](https://www.keycloak.org/docs/latest/server_admin/index.html) on the [Keycloak project’s official website](https://www.keycloak.org/).
