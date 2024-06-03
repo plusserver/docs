@@ -8,7 +8,7 @@ date: 2024-05-27
 
 ## Prerequesites
 
-In order to use the RWX feature in our PSKE, the 'plusNFS' product is required.
+In order to use the RWX feature in our PSKE, the 'plusNFS' product is required. To order "plusNFS", please contact our Sales-Team.
 
 ## Egress IP of an Cluster
 
