@@ -6,9 +6,13 @@ weight: 4
 date: 2024-05-27
 ---
 
+## Voraussetzung
+
+Damit das Feature RWX in der PSKE genutzt werden kann ist das Produkt 'plusNFS' notwendig.
+
 ## Egress IP eines Clusters herausfinden
 
-Nach der Bestellung von plusnfs (v2) werden sie nach der/den IP Addresse/n gefragt, welche Zugriff auf das NFS haben sollen. Diese ermittel sie wie folgt:
+Nach der Bestellung von plusNFS werden sie nach der/den IP Addresse/n gefragt, welche Zugriff auf das NFS haben sollen. Diese wird wie folgt ermittelt:
 
 ```bash
 k run debug-pod -ti --rm --restart=Never --image=ghcr.io/r3m1n0x/kimage -- curl ifconfig.me
@@ -70,7 +74,7 @@ spec:
 kubectl apply -f pvc.yaml
 ```
 
-### Step 3: Erstellen eines Deployments das RWX nutzt
+### Step 3: Erstellen eines Deployments, welches RWX nutzt
 
 ```yaml
 # deployment.yaml

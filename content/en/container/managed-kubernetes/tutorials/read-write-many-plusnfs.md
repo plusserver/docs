@@ -6,15 +6,19 @@ weight: 4
 date: 2024-05-27
 ---
 
+## Prerequesites
+
+In order to use the RWX feature in our PSKE, the 'plusNFS' product is required.
+
 ## Egress IP of an Cluster
 
-After configuring plusnfs (v2), you will be asked for the IP address(es) that should have access to the NFS. This is determined as follows:
+After configuring 'plusNFS', you will be asked for the IP address(es) that should have access to the NFS. This is determined as follows:
 
 ```bash
 k run debug-pod -ti --rm --restart=Never --image=ghcr.io/r3m1n0x/kimage -- curl ifconfig.me
 ```
 
-## Install of the nfs-subdir-external-provisioner
+## Installation of the nfs-subdir-external-provisioner
 
 The installation of the nfs-subdir-external-provisioner is very simple:
 
