@@ -1,6 +1,6 @@
 ---
-title: "Permanente Kubeconfig"
-linkTitle: "Permanente Kubeconfig"
+title: "Permanente kubeconfig"
+linkTitle: "Permanente kubeconfig"
 type: "docs"
 weight: 20
 date: 2024-05-30
@@ -10,7 +10,7 @@ date: 2024-05-30
 Standardmäßig können Sie nur kubeconfigs mit einer maximalen Lebensdauer von 24h aus dem gardener Dashboard herunterladen. Mit dieser Anleitung werden Sie in der Lage sein, Ihre eigene permanente kubeconfig für Ihren Cluster zu erstellen.
 
 ## Schritt 1: Erstellen eines Servicekontos
-Der Name des Dienstkontos wird der Benutzername in Kubeconfig sein. Hier erstellen wir das Servicekonto im kube-system-Namespace, um eine clusterRole zu definieren. Wenn Sie eine Konfiguration erstellen möchten, um den Zugriff auf Namespace-Ebene einzuschränken, erstellen Sie das Dienstkonto im gewünschten Namespace.
+Der Name des Dienstkontos wird der Benutzername in kubeconfig sein. Hier erstellen wir das Servicekonto im kube-system-Namespace, um eine clusterRole zu definieren. Wenn Sie eine Konfiguration erstellen möchten, um den Zugriff auf Namespace-Ebene einzuschränken, erstellen Sie das Dienstkonto im gewünschten Namespace.
 
 `kubectl -n kube-system create serviceaccount perm-cluster-admin`
 
@@ -38,7 +38,7 @@ Und wenden Sie die erstellte yaml mit `kubectl apply -f secret.yaml` an.
 
 ## Schritt 4: Alle Cluster-Details und Geheimnisse abrufen
 
-Wir werden alle erforderlichen kubeconfig-Details abrufen und sie in Variablen speichern. Anschließend werden wir sie direkt durch die Kubeconfig-YAML ersetzen.
+Wir werden alle erforderlichen kubeconfig-Details abrufen und sie in Variablen speichern. Anschließend werden wir sie direkt durch die kubeconfig-YAML ersetzen.
 Wenn Sie einen anderen Namen für die Ressourcen verwendet haben, ersetzen Sie diese entsprechend.
 
 ```bash
@@ -47,7 +47,7 @@ token=$(kubectl -n kube-system get secret/perm-cluster-admin-token -o jsonpath='
 server=`cat $KUBECONFIG | yq '.clusters[0].cluster.server'`
 ```
 
-## Step 5: Generieren der Kubeconfig mit den Variablen
+## Step 5: Generieren der kubeconfig mit den Variablen
 
 Füllen Sie nun die Variablen der kubeconfig.yaml entsprechend aus:
 
@@ -72,8 +72,8 @@ users:
     token: ${token}
 ```
 
-## Schritt 6: Validieren der generierten Kubeconfig
+## Schritt 6: Validieren der generierten kubeconfig
 
-Um die Kubeconfig zu validieren, führen Sie sie mit dem Befehl kubectl aus, um zu sehen, ob der Cluster authentifiziert wird.
+Um die kubeconfig zu validieren, führen Sie sie mit dem Befehl kubectl aus, um zu sehen, ob der Cluster authentifiziert wird.
 
 `kubectl get pods --kubeconfig=kubeconfig.yaml`

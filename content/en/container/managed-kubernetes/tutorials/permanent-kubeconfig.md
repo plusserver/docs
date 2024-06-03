@@ -1,6 +1,6 @@
 ---
-title: "Permanent Kubeconfig"
-linkTitle: "Permanent Kubeconfig"
+title: "Permanent kubeconfig"
+linkTitle: "Permanent kubeconfig"
 type: "docs"
 weight: 20
 date: 2024-05-30
@@ -12,7 +12,7 @@ description: >
 By default you can only download kubeconfigs with a maximum lifetime of 24h from the Gardener Dashboard. With this guide you'll be able to create your own permanent kubeconfig for your cluster.
 
 ## Step 1: Create a service account
-The service account name will be the user name in Kubeconfig. Here we are creating the service account in the kube-system as I am creating a clusterRole. If you want to create a config to give namespace level limited access, create the service account in the required namespace.
+The service account name will be the user name in kubeconfig. Here we are creating the service account in the kube-system as I am creating a clusterRole. If you want to create a config to give namespace level limited access, create the service account in the required namespace.
 
 `kubectl -n kube-system create serviceaccount perm-cluster-admin`
 
@@ -74,8 +74,8 @@ users:
     token: ${token}
 ```
 
-## Step 6: Validate the generated Kubeconfig
+## Step 6: Validate the generated kubeconfig
 
-To validate the Kubeconfig, execute it with the kubectl command to see if the cluster is getting authenticated.
+To validate the kubeconfig, execute it with the kubectl command to see if the cluster is getting authenticated.
 
 `kubectl get pods --kubeconfig=kubeconfig.yaml`
