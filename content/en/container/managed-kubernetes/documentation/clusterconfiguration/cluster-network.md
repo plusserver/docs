@@ -52,7 +52,8 @@ Pods get their IP address from this smaller node subnet in a default IPAM setup.
 Thus, it must be guaranteed that enough of these subnets can be created for the maximum amount of nodes you expect in the cluster.
 
 _**Example 1**_
-```
+
+```text
 Pod network: 100.96.0.0/16
 nodeCIDRMaskSize: /24
 -------------------------
@@ -64,7 +65,8 @@ Number of IPs per podCIDRs: 256
 With the configuration above a Shoot cluster can at most have **256 nodes** which are ready to run workload in the Pod network.
 
 _**Example 2**_
-```
+
+```text
 Pod network: 100.96.0.0/20
 nodeCIDRMaskSize: /24
 -------------------------
@@ -91,7 +93,8 @@ The `nodeCIDRMaskSize` configuration is immutable and cannot be changed afterwar
 {{% /alert %}}
 
 _**Example 3**_
-```
+
+```text
 Pod network: 100.96.0.0/20
 nodeCIDRMaskSize: /25
 -------------------------

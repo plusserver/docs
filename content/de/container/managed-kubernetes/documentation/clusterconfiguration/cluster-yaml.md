@@ -8,6 +8,7 @@ date: 2023-10-24
 
 {{% alert title="Warnung" color="warning" %}}
 Fehlkonfigurationen im ShootSpec können Fehler verursachen oder den Cluster sogar funktionsunfähig machen.
+Einige Konfigurationsoptionen können nur bei der Erstellung eines Clusters bearbeitet werden.
 {{% /alert %}}
 
 ## Einführung
