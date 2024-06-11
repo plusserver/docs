@@ -49,11 +49,15 @@ The following table compares the characteristics of Ceph volumes with those of L
 | Characteristics  | Ceph boot volume  | Local SSD Storage boot volume  |
 |------------------|-------------------|--------------------------------|
 | Storage provider  | Cinder           | Nova                           |
-| Throughput  |  <span style="color: red;">Low</span>  | <span style="color: green;">High</span>  |
+| Throughput  |  <span style="color: red;">Medium(*)</span>  | <span style="color: green;">High</span>  |
 | Latency  | <span style="color: red;">High</span>  | <span style="color: green;">Low</span>  |
 | Live migration  | <span style="color: green;">Yes</span>  | <span style="color: red;">No</span>  |
 | Availability  | <span style="color: green;">High</span>  | <span style="color: red;">Low</span>  |
 | Ephemeral  | No  | Yes  |
+
+(*) Depends on the size of the ceph cluster (the number of OSDs and their nature).
+    It is possible to create ceph clusters with that achieve hundreds of MB/s bandwidth;
+    IO latency however can never come close to local SSDs.
 
 ### Availability
 
