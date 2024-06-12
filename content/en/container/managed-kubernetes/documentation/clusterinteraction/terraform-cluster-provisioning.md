@@ -477,6 +477,20 @@ to
 
 After you have made the above change, you can use "terraform plan" to see if the syntax is correct and "terraform apply" to apply the change.
 
+### Changes to an already existing cluster
+
+If you wish to make changes to an already existing cluster via Terraform, you can just follow these steps:
+
+1. Go into the Gardener dashboard and click on the cluster you want to import. Get the manifest by clicking YAML at the top of the page and save it.
+Keep in mind, that you may have to remove any unnecessary value key pair from the yaml like creationTimestamp, resourceVersion and the whole status section at the bottom.
+
+2. Fill in the according names and IDs and execute the following import command:
+`terraform import kubectl_manifest.<cluster-name> core.gardener.cloud/v1beta1//Shoot//<cluster-name>//garden-<id>`
+
+3. Then just proceed to execute `terraform init`, `terraform plan` and `terraform apply` and Terraform will apply your changes.
+
+
+
 It's important to remember that just because the syntax is correct doesn't mean it can't fail during an "apply". This can happen for a number of reasons such as:
 
 1. Desired resources exceed what is available in the cluster. So more CPU, RAM, etc. is required. The plan will be executed here, but Gardener will produce an error at some point during execution because the resources have been exhausted.
