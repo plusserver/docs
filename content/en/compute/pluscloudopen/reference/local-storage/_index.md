@@ -11,7 +11,7 @@ description: >
 ## Overview
 
 {{% alert title="Note" color="info" %}}
-pluscloud open will soon offer the Local SSD Storage option.
+Available July 2024
 {{% /alert %}}
 
 Standard shared storage based on Ceph has a balanced performance profile that is not suitable for all use cases. In particular, Etcd and transactional databases such as Postgres are known to have performance issues here.
@@ -48,12 +48,11 @@ The following table compares the characteristics of Ceph volumes with those of L
 
 | Characteristics  | Ceph boot volume  | Local SSD Storage boot volume  |
 |------------------|-------------------|--------------------------------|
-| Storage provider  | Cinder           | Nova                           |
-| Throughput  |  <span style="color: red;">Low</span>  | <span style="color: green;">High</span>  |
-| Latency  | <span style="color: red;">High</span>  | <span style="color: green;">Low</span>  |
-| Live migration  | <span style="color: green;">Yes</span>  | <span style="color: red;">No</span>  |
-| Availability  | <span style="color: green;">High</span>  | <span style="color: red;">Low</span>  |
-| Ephemeral  | No  | Yes  |
+| Storage provider | Cinder            | Nova                           |
+| Throughput       | Standard          | Enhanced                       |
+| Latency          | Standard          | Reduced                        |
+| Live migration   | Yes               | No                             |
+| Availability     | Triple copies     | Local RAID                     |
 
 ### Availability
 

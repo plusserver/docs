@@ -11,7 +11,7 @@ description: >
 ## Übersicht
 
 {{% alert title="Hinweis" color="info" %}}
-pluscloud open wird bald die Option Local SSD Storage anbieten.
+Verfügbar ab Juli 2024
 {{% /alert %}}
 
 Standard Shared Storage auf Basis von Ceph hat ein ausgewogenes Leistungsprofil, das nicht für alle Anwendungsfälle geeignet ist. Insbesondere Etcd und transaktionale Datenbanken wie Postgres sind dafür bekannt, dass es hier zu Performance-Problemen kommt.
@@ -46,14 +46,13 @@ Bei Local SSD Storage können Sie auf die lokale Festplatte im Rohzustand zugrei
 
 In der folgenden Tabelle werden die Merkmale von Ceph-Volumes mit denen von Local SSD Storage verglichen:
 
-| Eigenschaften | Ceph-Boot-Volume | Boot-Volume von Local SSD Storage |
-|------------------|-------------------|--------------------------------|
-| Speicheranbieter | Cinder | Nova |
-| Durchsatz | <span style="color: red;">Niedrig</span> | <span style="color: green;">Hoch</span> |
-| Latenz | <span style="color: red;">Hoch</span> | <span style="color: green;">Niedrig</span> |
-| Live-Migration | <span style="color: green;">Möglich</span> | <span style="color: red;">Nicht Möglich</span> |
-| Verfügbarkeit | <span style="color: green;">Hoch</span> | <span style="color: red;">Niedrig</span> |
-| Flüchtiger Speicher | Nein | Ja |
+| Eigenschaften    | Ceph-Boot-Volume     | Boot-Volume von Local SSD Storage |
+|------------------|----------------------|-----------------------------------|
+| Speicheranbieter | Cinder               | Nova                              |
+| Durchsatz        | Standard             | Verbessert                        |
+| Latenz           | Standard             | Reduziert                         |
+| Live-Migration   | Ja                   | Nein                              |
+| Verfügbarkeit    | Dreifach-Replikation | Lokales RAID                      |
 
 ### Verfügbarkeit
 
