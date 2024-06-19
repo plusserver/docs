@@ -13,8 +13,12 @@ AWS S3 bietet standardmäßig eine Begrenzung von 100 Buckets pro Mandant. Bei B
 Im Vergleich dazu bietet unser plusserver S3-Service standardmäßig eine Limitierung von 1.000 Buckets pro Mandant. 
 Beachten Sie bitte, dass diese Grenze nicht weiter erhöht werden kann.
 
-### Weitere Limitierungen
+### Generelle Features und Beschränkungen
 
+- Maximal 200 (GET/HEAD) RPOs und 200 (PUT/POST/DELETE) RPOs pro Tenant
+- Bis zu 100 Millionen Objekte pro Bucket
+- Bis zu 5 TiB Objektgröße
+- 1MB Mindestobjektgröße empfohlen (1.000.000 Bytes = 1MB)
 - Maximale Objektgröße: 5 TB
 - Minimale Part-Größe für Multipart Upload: 5 MiB
 - Maximale Part-Größe für Multipart Upload: 5 GiB
@@ -22,6 +26,22 @@ Beachten Sie bitte, dass diese Grenze nicht weiter erhöht werden kann.
 - Bucket-Versionierung pro Object Version: 10.000
 - Maximale Anzahl von S3 Access Keys pro User: 100
 - Maximale Anzahl von Users oder Access Keys im gesamten Cluster: unbegrenzt
+- AWS S3 API kompatibel
+- Zu Objekten können Metadaten als Key-Value Paare gespeichert werden (via S3 API)
+- Object Lock Support
+- Versionierung Support
+
+**Bucket-Namen Features und Beschränkungen:**
+- Ein Bucketname muss zwischen 3 (min) bis 63 (max) Zeichen lang sein. Der Suffix (-mirr / -repl) ist
+davon abzuziehen
+- in Bucketname darf nur Kleinbuchstaben, Nummern, Punkte (.) und Bindestriche enthalten
+- Ein Bucketname darf nicht das Format einer IP Adresse enthalten (z.B. 192.168.1.42)
+- Sollte ein Bucketname mit dem suffix -mirr oder -repl enden, wird eine andere Serviceklasse,
+Ablegungsart und Abrechnung verwendet
+- Ein Bucketname muss über den gesamten plusserver S3 Service eindeutig sein
+- Ein Bucketname der schon von einem Kunden verwendet wird kann nicht verwendet werden, bis
+dieser Bucket vom Besitzer gelöscht wird
+
 
 Diese Limitierungen sind so konzipiert, um die Leistung und Effizienz unseres Services zu gewährleisten und gleichzeitig eine hohe Flexibilität für Ihre Anwendungsfälle zu bieten. Bitte beachten Sie diese Limitierungen, wenn Sie Ihre Konfiguration planen.
 
