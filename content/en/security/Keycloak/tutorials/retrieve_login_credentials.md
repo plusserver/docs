@@ -7,7 +7,7 @@ weight: 30
 
 ### Select contract
 
-First search for the appropriate [contract](https://customerservice.plusserver.com/billing/contracts)
+First search for the appropriate [contract](https://customerservice.plusserver.com/billing/contracts) in your customer portal (CloudHub).
 The search terms *mansvc* or *keycloak* will make the selection easier for you.
 
 ![Contracts](/images/content/04-msl/en/iam_keycloak/get_credentials/1-contracts.png)
@@ -20,6 +20,6 @@ Go to the contract and display the login data at the bottom of the contract deta
 
 ### Login details
 
-You will then see the access data you need to connect to your Keycloak-as-a-Service instance.
+You will then see the access data you need to connect to your Keycloak as a Service instance.
 
 ![Access data](/images/content/04-msl/en/iam_keycloak/get_credentials/3-credentials-view.png)

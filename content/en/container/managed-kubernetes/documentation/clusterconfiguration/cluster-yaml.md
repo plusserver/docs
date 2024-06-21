@@ -8,6 +8,7 @@ date: 2023-10-24
 
 {{% alert title="Warning" color="warning" %}}
 Misconfigurations in the Shoot Spec can cause errors or even make the cluster inoperable.
+Some configuration options can only be edited when a cluster is created.
 {{% /alert %}}
 
 ## Introduction

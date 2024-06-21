@@ -19,7 +19,7 @@ So können Sie sich frühzeitig auf wichtige Updates vorbereiten und sicherstell
 | März | - | - | - |
 | April | 02.04.2024 | Change | [Release PSKE Version 1.10.1](https://docs.plusserver.com/container/managed-kubernetes/releasenotes/notes/1-10-1/) |
 | Mai | 21.05.20224 | Change | [Release PSKE Version 1.10.2](https://status.plusserver.com/) |
-| Juni | 11.06.2024 | Standardchange | Standard Change - Kubernetes Patch Version |
+| Juni | - | - | - |
 | Juli | - | - | - |
 | August| 13.08.2024 | Standardchange | Standard Change - Kubernetes Patch Version |
 | September | - | - | - |

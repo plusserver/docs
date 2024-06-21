@@ -3,7 +3,7 @@ title: "Dokumentation"
 linkTitle: "Dokumentation"
 type: "docs"
 weight: 20
-description: "Erläuterungen zu verschiedenen Funktionen des plusserver S3"
+description: "Erläuterungen zu verschiedenen Funktionen des S3 Storage"
 date: 2024-02-06
 ---
 
