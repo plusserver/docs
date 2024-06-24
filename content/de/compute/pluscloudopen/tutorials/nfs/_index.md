@@ -21,7 +21,7 @@ Um auf Ihrer pluscloudopen Instanz ein NFS-Volume mounten zu können, muss dort 
 sudo apt-get install nfs-common
 ```
 
- installiert werden.
+installiert werden.
 
 ## Mountpoint anlegen
 
@@ -97,14 +97,14 @@ root@nfsv2-consumer:~# cat /proc/mounts | grep nfs
 64.128.241.6:/sn100100 /nfs nfs4 rw,relatime,vers=4.2,rsize=65536,wsize=65536,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=192.168.0.126,local_lock=none,addr=64.128.241.6 0 0
 ```
 
-Möchten diesen Optionen noch welche hinzugefügt oder diese angepasst werden, dann sollten sie wie folgt der `/etc/fstab` hinzugefügt werden:
+Sollen diesen Optionen noch welche hinzugefügt oder diese angepasst werden, dann können sie wie folgt der `/etc/fstab` hinzugefügt werden:
 
 ```bash
 root@nfsv2-consumer:~# cat /etc/fstab | grep nfs
 64.128.241.6:/sn100100 /nfs nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
 ```
 
-Eine Übersicht über die verfügbaren Optionen für NFS gibt die Manual Page zu NFS, die mit 
+Eine Übersicht über die verfügbaren Optionen für NFS gibt es in der Manual Page zu NFS, die mit 
 
 ```bash
 man nfs
