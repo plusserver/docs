@@ -43,7 +43,7 @@ LABEL=cloudimg-rootfs / ext4 discard,errors=remount-ro 0 1
 LABEL=UEFI /boot/efi vfat umask=0077 0 1
 ```
 
-Der Datei sollte eine weitere Zeile hinzugefügt werden, indem sie z. B. mit dem Editor `nano` geöffnet wird und die folgende Zeile angefügt wird. Die Informationen, die nach der Einrichtung durch Plusserver erhalten wurden, sowie der oben angelegte Mountpoint sollten verwendet werden:
+Der Datei sollte eine weitere Zeile hinzugefügt werden, indem sie (z. B. mit dem Editor `nano`) geöffnet wird und die folgende Zeile angefügt wird. Die Informationen, die nach der Einrichtung durch Plusserver erhalten wurden, sowie der oben angelegte Mountpoint sollten verwendet werden:
 
 ```bash
 64.128.241.6:/sn100100 /nfs nfs defaults 0 0
