@@ -15,6 +15,7 @@ Database-as-a-Service (DBaaS) represents a suite of fully managed microservices 
 |------------|---------|
 | PostgreSQL | 14      |
 | PostgreSQL | 15      |
+| PostgreSQL | 16      |
 
 ### Key Features  
 

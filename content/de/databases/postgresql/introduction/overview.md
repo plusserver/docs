@@ -15,6 +15,7 @@ Database-as-a-Service (DBaaS) ist eine Sammlung von vollständig automatisierten
 |------------|---------|
 | PostgreSQL | 14      |
 | PostgreSQL | 15      |
+| PostgreSQL | 16      |
 
 ## Key Features
 
