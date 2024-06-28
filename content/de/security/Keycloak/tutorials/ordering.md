@@ -56,8 +56,6 @@ Sie sind ein neuer plusserver-Kunde und haben noch keine Rechnung erhalten? Dann
 
 Bitte überprüfen Sie Ihre eingegebenen Daten mit Hilfe der Zusammenfassung. Anschließend werden Sie gebeten, den Allgemeinen Geschäftsbedingungen und Vereinbarungen zuzustimmen. Erst dann können Sie die Bestellung abschließen, indem Sie auf ***Jetzt kostenpflichtig bestellen*** klicken.
 
-<br>
-
 ![Zusammenfassung der Bestellung](/images/content/04-msl/de/iam_keycloak/ordering/8-order-overview.png)
 
 ### Bestellstatus verfolgen
