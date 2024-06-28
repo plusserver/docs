@@ -116,7 +116,7 @@ Einige Standards werden durch plusserver bereits vorkonfiguriert ausgeliefert.
 
 Damit Kommunikation zwischen VMs und dem Internet möglich wird, sind ein paar Firewall-Regeln, Anwendungsportprofile und NAT-Regeln notwendig.
 
-### Anwendungsportprofile verwalten
+### Anwendungsportprofile
 
 Wir empfehlen Ihnen, zuerst die Anwendungsportprofile zu setzen.
 Die Anwendungsportprofile werden benötigt, um Ports für Anwendungen in einer Entität zusammenzufassen.
@@ -145,7 +145,7 @@ Folgende Parameter können Sie in einem Anwendungsprofil konfigurieren:
 | Protokoll             | Auswahl des Protokolles: {{< abbr "TCP" "Transport Control Protocol" >}} oder {{< abbr "UDP" "User Datagram Protocol" >}} |
 | Port                  | Auswahl des Ports oder der Ports als kommaseparierte Liste von Portnummern                                                |
 
-### NAT Regeln Konfiguration
+### NAT Regeln
 
 Wir empfehlen Ihnen, als nächstes die {{< abbr "NAT" "Network Address Translation" >}}-Regeln zu setzen.
 Diese {{< abbr "NAT" "Network Address Translation" >}}-Regeln spezifizieren, wie zwischen internen, meist in der Regel privaten IP-Adressen aus dem RFC1918 Adressbereich und den öffentlichen IP-Adressen übersetzt werden soll.
@@ -225,4 +225,69 @@ Die nachfolgenden Parameter können Sie optional zusätzlich konfigurieren:
 | Priorität            | Wenn eine Adresse über mehrere NAT-Regeln verfügt, wird die Regel mit der höchsten Priorität angewendet. Ein niedrigerer Wert bedeutet eine höhere Priorität für diese Regel.
 | Firewall-Übereinstimmung | Legt fest, wie die Firewall während der NAT eine Adressübereinstimmung ermittelt, wenn die Firewallphase nicht übersprungen wird. Im Folgenden sind gültige Werte aufgeführt: *Interne Adressübereinstimmung* Gibt an, dass die Firewall auf die interne Adresse einer NAT-Regel angewendet wird. Für SNAT ist die interne Adresse die ursprüngliche Quelladresse, bevor NAT durchgeführt wird. Für DNAT ist die interne Adresse die übersetzte Zieladresse, nachdem NAT durchgeführt wurde; *Externe Adressübereinstimmung*	Gibt an, dass die Firewall auf die externe Adresse einer NAT-Regel angewendet wird. Für SNAT ist die externe Adresse die übersetzte Quelladresse, nachdem NAT durchgeführt wurde. Für DNAT ist die externe Adresse die ursprüngliche Zieladresse, bevor NAT durchgeführt wird *Bypass* Firewallphase wird übersprungen.|
 | Interne IP             | Hier verwenden Sie die Ihnen zugeordneten öffentlichen IP-Adressen oder Subnetze.|
-| Anwendung	             | hier wird ein Anwendungsprofil gewählt, welches die Ports festlegt.|
+| Anwendung              | hier wird ein Anwendungsprofil gewählt, welches die Ports festlegt.|
+
+### Gateway Firewall
+
+Das Edge Gateway bietet auch einen Firewall-Dienst, welcher den Datenverkehr zwischen außerhalb und innerhalb eines OrgVDCs einschränken kann.
+Diese Firewall kann nicht zwischen Netzwerksegmenten innerhalb eines OrgVDCs eingesetzt werden, da dieser interne Datenverkehr nicht über den Service Router, an dem die Firewall-Regeln evaluiert wird, geleitet wird.
+
+{{% alert title="Hinweis" color="info" %}}
+**Prioritäten bei Firewall-Regeln**  
+Wenn eine Adresse über mehrere Firewall-Regeln verfügt, wird die Regel mit der höchsten Priorität angewendet.
+Ein niedrigerer Wert bedeutet eine höhere Priorität für diese Regel.
+{{% /alert %}}
+
+{{< screenshot src="img/edgegw-fw-overview.png" title="Firewall Ansicht" >}}
+Die Firewall können Sie über die entsprechende Schaltfläche im seitlichen Menü auswählen.
+{{< /screenshot >}}
+
+Die Regeln können Sie mit den Buttons `NACH OBEN VERSCHIEBEN` und `NACH UNTEN VERSCHIEBEN` verschieben, um die passende Reihenfolge festzulegen. 
+Alternativ können Sie aber auch mit `VERSCHIEBEN NACH` die Regeln an eine definierte Stelle verschieben.
+
+Die Firewall-Regeln werden von oben nach unten abgearbeitet und die erste zutreffende Regel wird angewandt.
+Die letzte Regel ist immmer enthalten und sorgt für das verwerfen der Netzwerkkommunikation, sofern diese nicht ausdrücklich durch eine vorherige Regel zugelassen wurde.
+
+{{< screenshot src="img/edgegw-fw-edit-rules.png" title="Firewall Regeln" >}}
+Die Firewall-Regeln können Sie mit Klick auf die Schaltfläche `Regeln bearbeiten` editieren.
+{{< /screenshot >}}
+
+#### Firewallregeln erstellen
+
+[//]: # (TODO: Screenshot missing)
+
+Hier können Sie neue Regel erstellen mit `NEUE OBEN`, welches eine neue Regel am Anfang der Liste erstellt,
+oder indem Sie eine Vorhandene Regel Auswählen und dann `NEUE DADRÜBER` auswählen, welches eine neue Regel über der Ausgewählten erstellt.
+
+Die nachfolgenden Parameter sollten Sie konfigurieren:
+
+| Parameter             | Beschreibung                                                                                                              |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------|
+| Name                  | Frei wählbarer Name für die Regel                                                                                         |
+| Kategorie             | Art der Regel (Nicht editierbar)                                                                                          |
+| Zustand               | Definiert ob die Regel aktiv oder inaktiv ist. Inaktive Regeln werden ignoriert.                                          |
+| Anwendung             | Auswahl welches Anwenungsprofil angewendet werden soll (Sammlung von Ports für eine Anwendung)                            |
+| Quelle                | Ursprung der Datenkommunikation (Beispiel: DNAT - jede Quelle / SNAT - internes Netzwerk)                                 |
+| Ziel                  | Adressat der Datenkommunikation (Beispiel: DNAT - internes Netzwerk / SNAT - Belibiges Zeil)                              |
+| Aktion                | Bestimmt ob die Datenkommunikation zugelassen, verworfen oder mit entsprechender Information zurückgewiesen wird          |
+| Protokoll             | Auswahl des für die Regel benutzen Kommunikationsprotokolls                                                               |
+| Protokollierung       | Über diese Option kann das im Edge-Gateway integrierte Logging des gesamten Traffics zu dieser Regel aktiviert werden.    |
+
+Mit `Speichern` übernehmen Sie die konfigurierten Regeln.
+
+{{% alert title="Hinweis" color="info" %}}
+**PSMANAGED-Regeln**  
+Bitte lassen Sie die PSMANAGED-Regeln (`plusserver_default_out`) unbedingt bestehen.
+Diese haben einen direkten Einfluss auf die gebuchten Services.
+Wenn diese nicht existieren, wird das Management/die Funktion seitens plusserver eingeschränkt.
+{{% /alert %}}
+
+### Loadbalancer
+
+Beim Loadbalancer handelt es sich um eine kostenpflichtige Zusatzoption.
+Daher wird in dieser Anleitung kein Loadbalancing behandelt.
+
+### IPSec VPN
+
+Ein Edge Gateway bietet begrenzte Möglichkeiten der Einrichtung eines VPNs mit IPSec.
+Dies ist nicht für alle Setups erforderlich und wird daher in dieser Anleitung nicht weiter beschrieben.
