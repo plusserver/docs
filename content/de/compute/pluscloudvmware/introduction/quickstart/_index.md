@@ -530,3 +530,113 @@ Es werden Sicherheitslimits eingestellt, die jederzeit erhöht werden können.
 Die Limits sollen sicherstellen, dass die Ressourcenbelegung nicht explosionsartig steigt und Kosten verursachen, wie es beispielsweise durch fehlerhafte Automationsskripte passieren könnte.
 
 Die Limits werden mindestens einmal je 24 Stunden überprüft und angepasst.
+
+## Backup
+
+Optional können Sie für kostenpflichtige Backups ihrer VMs das integrierte Selfservice Backup-Portal auf Basis von Veeam im vCloud Director nutzen.
+
+### Datensicherung mit Veeam
+
+Die Backups können Sie mit der Rolle `Organisationsadministrator` selbst verwalten.
+Die Anmeldung erfolgt über den vCloud Director.
+Eine gesonderte Anmeldung am Backup-Portal ist nicht notwendig.
+
+{{< screenshot src="img/veeam-menu.png" title="Menüeintrag für Backup Portal" >}}
+Das Selfservice-Backupportal ist im Portal des vCloud Directors verlinkt und über den Menüpunkt `Datensicherung mit Veeam` erreichbar.
+{{< /screenshot >}}
+
+### Backup Portal
+
+{{< screenshot src="img/veeam-dashboard.png" title="Dashboard des Backup-Portals" >}}
+Im Dashboard sind die Statistiken zu den Backups einzusehen, insbesondere zu VMs, Backupjobs und Backupstorage.
+Es gibt jeweils eine Ansicht für die letzten 24 Stunden bzw. die letzten 7 Tage (Hier: Die letzten 24 Stunden).
+{{< /screenshot >}}
+
+{{< screenshot src="img/veeam-overview-protected.png" title="Protected-Widget des Backup-Portals" >}}
+Das Protected-Widget zeigt Informationen zur Anzahl der erfolgreich erfolgten Backups von vApps und VMs sowie die Gesamtgröße aller erfolgreich gesicherten VMs für den gewählten Zeitraum.
+{{< /screenshot >}}
+
+{{< screenshot src="img/veeam-overview-jobs.png" title="Jobs-Widget des Backup-Portals" >}}
+Das Jobs-Widget gibt Auskunft über die Anzahl an angelegten Backupjobs, die maximale Dauer und die durchschnittliche Datensicherungsgeschwindigkeit.
+{{< /screenshot >}}
+
+{{< screenshot src="img/veeam-overview-backup-storage.png" title="Backup-Storage-Widget des Backup-Portals" >}}
+Das Backup-Storage-Widget gibt Auskunft über die zugewiesene Quota und die benutzte Datenmenge.
+{{< /screenshot >}}
+Der Status signalisiert folgende Füllgrade:
+
+* Grün: Mehr als 10 % Backupstorage ist noch verfügbar
+* Gelb: Weniger als 10 % Backupstorage ist noch verfügbar
+* Rot: Es ist kein Speicher mehr frei
+
+### Backup Jobs
+
+Backup Jobs steuern das Erstellen, Rotieren und Aufbewahren von Datensicherungskopien.
+
+{{< screenshot src="img/veeam-jobs.png" title="Job-Tab des Backup-Portals" >}}
+Im Job-Tab können Sie Backupjobs anlegen, editieren, löschen, aktivieren und deaktivieren.
+Außerdem können Sie sich detaillierte Informationen zu den einzelnen Jobs anzeigen lassen.
+{{< /screenshot >}}
+
+{{< screenshot src="img/veeam-jobs-create.png" title="Erstellung Backup Job: Schaltfläche" >}}
+Die Anlage eines neuen Backup Jobs starten Sie auf der Job-Seite mit Klick auf die Schaltfläche `Neu`.
+{{< /screenshot >}}
+
+{{< screenshot src="img/veeam-jobs-create-jobsettings.png" title="Erstellung Backup Job: Einstellungen" >}}
+Der Wizard fordert einen Namen für den anzulegenden Backupjob. Außerdem definieren Sie die Anzahl der Wiederherstellungspunkte (Hier: 14).
+Sie können an dieser Stelle auch komplexere Retention Policies einrichten.
+{{< /screenshot >}}
+
+--
+
+{{< screenshot src="img/veeam-jobs-create-vmsettings.png" title="Erstellung Backup Job: OrgVDC auswählen" >}}
+Fügen Sie dem Job ein oder mehrere VMs oder vApps hinzu, indem Sie über `Neu` neue Objekte in den Job aufnehmen.
+{{< /screenshot >}}
+
+{{< screenshot src="img/veeam-jobs-create-orgvdc-select.png" title="Erstellung Backup Job: OrgVDC auswählen" >}}
+Wählen Sie das gewünschte OrgVDC aus.
+Auf diese Weise umfasst der Job alle vApps und VMs innerhalb des gewählten OrgVDCs, einschließlich künftiger neuer Objekte.
+{{< /screenshot >}}
+
+Außerdem definieren Sie, in welcher Reihenfolge die Objekte gesichert werden sollen (Up/Down-Pfeile).
+Auch können einzelne VMs einer vApp vom Backup ausgeschlossen werden.
+
+{{< screenshot src="img/veeam-jobs-create-guestprocessing.png" title="Erstellung Backup Job: Gastintegration" >}}
+Bei den Einstellungen zur Gastintegration (`Guest Processing`) können Sie optional Integrationsoptionen für das Gast-Betriebssystem aktivieren.
+Beachten Sie, dass hierfür Vorbereitungsarbeiten an der VM vorzunehmen sind, um diese Integrationen nutzen zu können.
+Für diese Schnellstart-Aleitung werden wir auf diese Optionen verzichten.
+{{< /screenshot >}}
+
+{{< screenshot src="img/veeam-jobs-create-guestprocessing.png" title="Erstellung Backup Job: Gastintegration" >}}
+Bei den Einstellungen zur Gastintegration (`Guest Processing`) können Sie optional Integrationsoptionen für das Gast-Betriebssystem aktivieren.
+Beachten Sie, dass hierfür Vorbereitungsarbeiten an der VM vorzunehmen sind, um diese Integrationen nutzen zu können.
+Für diese Schnellstart-Aleitung werden wir auf diese Optionen verzichten.
+{{< /screenshot >}}
+
+{{< screenshot src="img/veeam-jobs-create-email-notifications.png" title="Erstellung Backup Job: Email Notofications" >}}
+Unter Email Notifications können Sie eine E-Mail-Adresse hinterlegen, an die bestimmte Status-E-Mails eines Jobs geschickt werden.
+{{< /screenshot >}}
+
+Die Jobs werden automatisch in einem Backupzeitfenster von 22:00 Uhr bis 8:00 Uhr geplant.
+
+{{< screenshot src="img/veeam-jobs-start.png" title="Backup Job: Start/Stop/Retry" >}}
+Um einen Job manuell zu starten, zu stoppen oder zu wiederholen, markieren Sie diesen und wählen die gewünschte Aktion aus.
+{{< /screenshot >}}
+
+{{< screenshot src="img/veeam-jobs-disable.png" title="Backup Job: Disable/Enable/Edit" >}}
+Um einen Job zu editieren, auszusetzen oder wieder zu reaktivieren, können Sie die entsprechende Aktion über das Dropdownmenu `Job` auswählen.
+{{< /screenshot >}}
+
+### Restore einer VM
+
+{{< screenshot src="img/veeam-restore-vm.png" title="VM Restore: VM auswählen" >}}
+Im Reiter VMs suchen Sie die VM heraus, die Sie wiederherstellen möchten.
+Dazu können Sie auch das Suchfeld nutzen. Dann wählen Sie `Restore VM`.
+
+Nun bieten sich zwei Optionen an: `Keep` oder `Overwrite`.
+Während Overwrite die VM überschreibt, erzeugt Keep eine weitere VM mit dem Suffix `_restored`.
+{{< /screenshot >}}
+
+{{< screenshot src="img/veeam-restore-vm.png" title="VM Restore: Recovery Point auswählen" >}}
+Anschließend suchen Sie den passenden Wiederherstellungspunkt aus und bestätigen den Restore-Auftrag.
+{{< /screenshot >}}
