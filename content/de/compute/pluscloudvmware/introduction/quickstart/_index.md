@@ -640,3 +640,21 @@ Während Overwrite die VM überschreibt, erzeugt Keep eine weitere VM mit dem Su
 {{< screenshot src="img/veeam-restore-vm.png" title="VM Restore: Recovery Point auswählen" >}}
 Anschließend suchen Sie den passenden Wiederherstellungspunkt aus und bestätigen den Restore-Auftrag.
 {{< /screenshot >}}
+
+## Herstellerdokumentation
+
+* Tenant Portal Guide:  
+  <https://docs.vmware.com/en/VMware-Cloud-Director/10.5/VMware-Cloud-Director-Tenant-Guide/GUID-74C9E10D-9197-43B0-B469-126FFBCB5121.html>
+* API Documentation:  
+  <https://developer.broadcom.com/xapis/vmware-cloud-director-api/37.3/>
+* SDKs:
+  * Golang:  
+    <https://github.com/vmware/go-vcloud-director>
+  * TypeScript / Python:  
+    <https://github.com/vmware/vcd-api-tools>
+* IaC:
+  * Terraform:  
+    <https://github.com/vmware/terraform-provider-vcd>
+* Backup
+  * Veeam-Dokumentation:  
+    <https://helpcenter.veeam.com/archive/backup/95u4/em/em_managing_vms_in_vcd_org.html>
