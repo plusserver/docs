@@ -512,3 +512,21 @@ Kann der VM Scheduler die Regel nicht einhalten, wird eine Fehlermeldung ausgege
 Es ist möglich, dass VMs nicht gestartet werden können.
 
 Wenn der Haken `Erforderlich` deaktiviert ist, wird der Scheduler berechtigt die VMs auch gemeinsam auf einem Systemen zu starten, wenn es nicht möglich ist, alle VMs auf verschiedene Hardware zu verteilen.
+
+## Speicherrichtlinien
+
+Speicherrichtlinien definieren verschiedene Speicherklassen, welche sich hinsichtlich Leistungsparameter und Preis unterscheiden.
+
+{{< screenshot src="img/storage-policy.png" title="Speicherrichtlinien" >}}
+Unter dem Menüpunkt Speicherrichtlinien ist einsehbar, wie viel von welcher Storageklasse zur Verfügung steht und was belegt ist.
+In der Spalte Standard sehen Sie, welche Storageklasse beim Erstellen einer VM als Standard ausgewählt wird.
+{{< /screenshot >}}
+
+### Speicherlimits
+
+Grundsätzlich steht Storage unbegrenzt zur Verfügung, wobei die Größe einer einzelnen Festplatte limitiert ist.
+Es werden Sicherheitslimits eingestellt, die jederzeit erhöht werden können.
+
+Die Limits sollen sicherstellen, dass die Ressourcenbelegung nicht explosionsartig steigt und Kosten verursachen, wie es beispielsweise durch fehlerhafte Automationsskripte passieren könnte.
+
+Die Limits werden mindestens einmal je 24 Stunden überprüft und angepasst.
