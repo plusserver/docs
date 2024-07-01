@@ -2,7 +2,7 @@
 title: "Umgebungen"
 linkTitle: "Umgebungen"
 type: "docs"
-weight: 20
+weight: 30
 date: 2024-06-27
 description: >
   Informationen zu Umgebungen der pluscloud VMware
