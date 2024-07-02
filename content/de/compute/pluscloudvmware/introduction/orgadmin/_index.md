@@ -64,3 +64,68 @@ Eine Rolle beinhaltet immer eine Sammlung von Rechten für einen Benutzer oder e
 {{< screenshot src="img/roles-create-dialog.png" title="Rolle anlegen" >}}
 Die Rechte können pro Menüpunkt individuell zusammengestellt werden.
 {{< /screenshot >}}
+
+## Instanzen freigeben
+
+Mit der Konfiguration von Usern auf der Rolle vApp User ist es möglich, auch den Zugang auf einzelne vApps oder VMs zu begrenzen.
+
+{{< screenshot src="img/vmpermission-create-user.png" title="Nutzer anlegen" >}}
+Erstellen Sie einen Nutzer, mit dem die VM geteilt werden soll oder stellen Sie sicher, dass dieser Nutzer bereits existiert.
+{{< /screenshot >}}
+
+{{< screenshot src="img/vmpermission-select-orgvdc.png" title="OrgVDC auswählen" >}}
+Wählen Sie das gewünschte OrgVDC aus.
+{{< /screenshot >}}
+
+{{< screenshot src="img/vmpermission-select-vm.png" title="VM auswählen" >}}
+Wählen Sie die gewünschte VM aus.
+{{< /screenshot >}}
+
+{{< screenshot src="img/vmpermission-share-vm.png" title="OrgVDC auswählen" >}}
+Navigieren Sie in der VM Detailansicht über das seitliche Menü zur Seite `Gemeinsame Nutzung` und klicken Sie dort auf `Bearbeiten`.
+{{< /screenshot >}}
+
+{{< screenshot src="img/vmpermission-share-dialog.png" title="Freigabe konfigurieren" >}}
+Wählen Sie das gewünschte OrgVDC aus.
+{{< /screenshot >}}
+
+Dieses Vorgehen funktioniert analog für das Teilen mit einer Gruppe und für das Teilen einer vApp.
+
+## Gast-Anpassung
+
+Unter dem Menüpunkt Administration und Gast-Anpassung lässt sich global für die Organisation ein Domänenbeitritt für Windows VMs konfigurieren, sodass die Konfiguration nicht pro VM erforderlich ist.
+
+{{< screenshot src="img/guestcustomization-overview.png" title="Gast-Anpassung einsehen" >}}
+Wählen Sie den Menüpunkt `Gast-Anpassung` im Administrationsbereich aus und klicken Sie auf `Bearbeiten`.
+{{< /screenshot >}}
+
+{{< screenshot src="img/guestcustomization-dialog.png" title="Gast-Anpassung bearbeiten" >}}
+In dem sich öffnenden Dialog lassen sich die nötigen Zugangsdaten für einen Domänenbeitritt eintragen.
+{{< /screenshot >}}
+
+## Richtlinien
+
+Als Organisationsadministrator können Sie einige Richtlinien und Vorgaben für die Organisation einstellen.
+Diese haben Einfluss auf Verhalten und Kapazität Ihrer gesamten Organisation.
+
+{{< screenshot src="img/policies.png" title="Richtlinien einsehen und konfigurieren" >}}
+Unter dem Menüpunkt Richtlinien im Bereich Administration können Sie einige Voreinstellungen bzw. Limits für Ihre Organisation konfigurieren.
+{{< /screenshot >}}
+
+Die nachfolgenden Parameter können bearbeitet werden:
+
+* vApp-Leases
+  * Maximale Laufzeit-Leases: Voreinstellung, nach wie vielen Stunden oder Tagen eine vApp ausläuft und die Laufzeitablaufaktion ausgeführt wird. Die automatische Ausführung der Laufzeitablaufaktion bei Fristerreichnung bewirkt, dass die vApp (inkl. VMs) nicht mehr erreichbar ist. Der Standard-Wert in der Voreinstellung ist `Läuft nie ab`
+  * Laufzeitablaufaktion: Bestimmt, was nach Ablauf des Leases mit der vApp passiert. Anhalten oder Stoppen sind mögliche Parameter. Hinweis: Nur für laufende virtuelle Server fallen Computekosten an.
+  * Maximaler Speicher-Lease: Definiert die Frist, nach der der belegte vApp-Speicher (Festplatten) von ausgeschalteten vApps bereinigt wird. Dies kann durch Verschieben oder endgültiges Löschen passieren. Standard ist: Läuft nie ab
+  * Speicher bereinigen: Mögliche Optionen sind: Speicher verschieben oder löschen
+* vApp-Vorlage-Lease
+  * Maximaler Speicher-Lease: Standard ist: Läuft nie ab. Es können aber auch Stunden oder Tage definiert werden, in denen eine vApp-Vorlage abläuft und die Laufzeitablaufaktion ausgeführt wird.
+  * Speicher bereinigen: Mögliche Optionen sind: Speicher verschieben oder löschen
+* Standardkontingente
+  * Kontingent aller VMs: Mögliches Limit für zu erstellende VMs
+  * Kontingent ausgeführter VMs: Mögliches Limit für laufende VMs
+* Kennwortrichtlinien
+  * Kontosperrung: Kontosperrung aktivieren oder deaktivieren zum Schutz des Kontos bei unzulässigen Zugriffen
+  * Ungültige Anmeldungen vor der Sperrung: Definiert die Anzahl der fehlgeschlagenen Logins bevor der Benutzer gesperrt wird
+  * Kontosperrungsintervall: Definiert, wie lange das Konto gesperrt bleibt, bis ein Login wieder möglich ist
