@@ -10,7 +10,7 @@ description: >
 
 ## Was ist eine pluscloud VMware Umgebung?
 
-Jede pluscloud VMware Umgebung ist eine eigenständige Instanz einer VMware vCloud Foundation (VCF).
+Jede pluscloud VMware Umgebung ist eine eigenständige Instanz einer VMware vCloud Foundation ({{< abbr "VCF" "VMware vCloud Foundation" >}}).
 Somit ist jede Umgebung unabhängig von anderen Umgebungen und bildet eine eigenständige Verwaltungsdomäne, welche jeweils mit den benötigten Verwaltungssystemen ausgestattet ist.
 
 Jede pluscloud VMware Umgebung ist exakt einer Availability Zone zugeordnet.

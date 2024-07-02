@@ -39,19 +39,19 @@ Zusätzlich ist es hilfreich, Ihre weiteren öffentlichen IP-Adressen griffberei
 ### Datacenter
 
 In der pluscloud VMware wird ein Mandant als so genannte `Organisation` abgebildet.
-Eine solche `Organisation` verwaltet die Nutzerzugänge und Berechtigungen und beinhaltet ein oder mehrere Virtuelle Datacenter (OrgVDCs), welche die Rechenressourcen für die virtualisierten Workloads bereitstellen.
+Eine solche `Organisation` verwaltet die Nutzerzugänge und Berechtigungen und beinhaltet ein oder mehrere Virtuelle Datacenter ({{< abbr "OrgVDC" "Organization Virtual Datacenter" >}}s), welche die Rechenressourcen für die virtualisierten Workloads bereitstellen.
 
 {{< screenshot src="img/vdc-overview.png" title="OrgVDC Übersicht" >}}
-Nach dem Login in die pluscloud sehen Sie eine Übersicht über die virtuellen Datacenter Ihrer Organisation ({{< abbr "OrgVDC" "Organization Virtual Datacenter" >}}s)
+Nach dem Login in die pluscloud sehen Sie eine Übersicht über die ({{< abbr "OrgVDC" "Organization Virtual Datacenter" >}}s) Ihrer Organisation.
 {{< /screenshot >}}
 
 {{< screenshot src="img/vdc-management.png" title="OrgVDC Verwaltung"  >}}
-Mit einem Klick auf den im obigen Screenshot grün markierten Bereich gelangen Sie in das virtuelle Datacenter und können dieses administrieren
+Mit einem Klick auf den im obigen Screenshot grün markierten Bereich gelangen Sie in das {{< abbr "OrgVDC" "Organization Virtual Datacenter" >}} und können dieses administrieren
 {{< /screenshot >}}
 
 ## OrgVDC Netzwerke
 
-OrgVDC Netzwerke sind virtuelle {{< abbr "LAN" "Local Area Network" >}}s, 
+{{< abbr "OrgVDC" "Organization Virtual Datacenter" >}} Netzwerke sind virtuelle Netzwerksegmente, 
 welche innerhalb eines {{< abbr "OrgVDC" "Organization Virtual Datacenter" >}} bereitgestellt werden.
 Sie dienen zur Verbindung zwischen verschiedenen Komponenten eines {{< abbr "OrgVDC" "Organization Virtual Datacenter" >}}s.
 
@@ -67,7 +67,8 @@ Wenn Sie unter Netzwerk auf den Menüpunkt Netzwerke im linken Navigationsmenü 
 {{< /screenshot >}}
 
 {{< screenshot src="img/network-default-network.png" title="Default Netzwerk" >}}
-Ihr Organisationsnetzwerk sollte bei Netzwerktyp den Status `Weitergeleitet` aufweisen. Die erste Adresse des verwendeten Subnetzes ist hierbei an das Edge-Gateway gebunden.
+Ihr Organisationsnetzwerk sollte bei Netzwerktyp den Status `Weitergeleitet` aufweisen.
+Die erste Adresse des verwendeten Subnetzes ist hierbei an das Edge-Gateway gebunden.
 {{< /screenshot >}}
 
 {{< screenshot src="img/network-new.png" title="Neues Netzwerk anlegen" >}}
@@ -75,7 +76,7 @@ Ein fehlendes oder zusätzliches Organisationsnetzwerk sowie weitere Netze könn
 {{< /screenshot >}}
 
 {{< screenshot src="img/network-new-area.png" title="Bereich des Netzwerks auswählen">}}
-Hier wählen Sie den Gültikkeitsbereich eines Netzwerks aus. 
+Hier wählen Sie den Gültikkeitsbereich eines Netzwerks aus.
 In diesem beispiel handelt es sich um das aktuell angewählte {{< abbr "OrgVDC" "Organization Virtual Datacenter" >}}
 {{< /screenshot >}}
 
@@ -88,16 +89,16 @@ Im Wizard für weitergeleitete Netzwerke sind folgende Parameter relevant:
 
 | Parameter           | Beschreibung                 |
 |---------------------|------------------------------|
-| Bereich             | Auswahl, ob das Netzwerk Konnektivität nur für VMs im aktuellen VDC bereitstellt oder in der Datencentergruppe teilnehmenden VDCs. |
+| Bereich             | Auswahl, ob das Netzwerk Konnektivität nur für {{< abbr "VM" "Virtuelle Maschine" >}}s im aktuellen {{< abbr "OrgVDC" "Organization Virtual Datacenter" >}} bereitstellt oder in der Datencentergruppe teilnehmenden {{< abbr "OrgVDC" "Organization Virtual Datacenter" >}}s. |
 | Typ                 | Unterscheidet, ob ein Netz weitergeleitet oder isoliert ist. Nur weitergeleitete Netzwerke bieten eine Konnektivität nach außen und eine Anbindung an das Edge-Gateway. |
 | Edge-Gateway        | Unter diesem Punkt kann die Verbindung zum bereits bestehenden Edge-Gateway hergestellt werden. Als Schnittstellentyp ist im Normalfall `Intern` auszuwählen. |
-| Gast-VLAN zulassen  | Ermöglicht die Erstellung von VLANs mit eigenen Sub-Interfaces. Diese Option wird im Regelfall nicht benötigt und wird nicht empfohlen. |
+| Gast-VLAN zulassen  | Ermöglicht die Erstellung von {{< abbr "VLAN" "Virtual Local Area Network" >}}s mit eigenen Sub-Interfaces. Diese Option wird im Regelfall nicht benötigt und wird nicht empfohlen. |
 | Distributed Routing | Aktiviert Distributed Routing |
-| Name                | Frei definierbarer Name für das zu erstellende Netzwerk. Dient als Referenz, um VMs mit dem Netzwerk zu verbinden. |
+| Name                | Frei definierbarer Name für das zu erstellende Netzwerk. Dient als Referenz, um {{< abbr "VM" "Virtuelle Maschine" >}}s mit dem Netzwerk zu verbinden. |
 | Beschreibung        | Optionaler Freitext, um weitere Informationen zu hinterlegen (z. B. Zweck und Verwendung des Netzwerks). |
 | Dual Stack Modus    | Ermöglicht, dass das Netzwerk sowohl ein IPv4-Subnetz als auch ein IPv6-Subnetz hat. |
-| Gateway CIDR        | Angabe der internen IP-Adressen des Gateways, gefolgt von der Angabe des Subnetzes in CIDR Notation (IP/Netmask). |
-| Gemeinsame Nutzung mit anderen vDCs in der Organisation | Option, um Netzwerke über mehrere virtuelle pluscloud DCs gemeinschaftlich zu nutzen. Im Regelfall deaktiviert.|
+| Gateway {{< abbr "CIDR" "Classless Inter-Domain Routing" >}}        | Angabe der internen IP-Adressen des Gateways, gefolgt von der Angabe des Subnetzes in {{< abbr "CIDR" "Classless Inter-Domain Routing" >}} Notation (IP/Netmask). |
+| Gemeinsame Nutzung mit anderen {{< abbr "OrgVDC" "Organization Virtual Datacenter" >}}s in der Organisation | Option, um Netzwerke über mehrere virtuelle pluscloud DCs gemeinschaftlich zu nutzen. Im Regelfall deaktiviert.|
 | Statischer IP Pool | Pool von IP Adressen zur automatischen Zuteilung an Netzwerkkomponenten (wie VMs oder vApp Gateways), die mit dem Netzwerk verbunden sind. |
 | Primary und Secondary DNS | Die IP-Adressen der zu verwendenden DNS Server. Üblicherweise das Edge-Gateway. |
 | DNS Suffix |  Falls ein spezifischer DNS Suffix benötigt wird, kann dieser hier eingetragen werden und wird automatisch bei den angeschlossenen VMs verwendet. Dieser Suffix wird bei der Namensauflösung als Standard-Suchdomäne verwendet. |
@@ -106,9 +107,9 @@ Im Wizard für weitergeleitete Netzwerke sind folgende Parameter relevant:
 
 Jedem OrgVDC wird automatisch eine Edge Gateway zugewiesen.
 Dieses stellt für Ihre Umgebung den Zugang zum Internet zur Verfügung.
-Des weiteren bietet es diverse Dienste an, z. B. Gateway Firewall, NAT, DNS, IPAM und IPsec VPN.
+Des weiteren bietet es diverse Dienste an, z. B. Gateway Firewall, {{< abbr "NAT" "Network Adress Translation" >}}, {{< abbr "DNS" "Domain Name System" >}}, {{< abbr "IPAM" "Internet Protocol Adress Management" >}} und IPsec {{< abbr "VPN" "Virtual Private Network" >}}.
 Virtuelle Maschinen haben standardmäßig keine Verbindung zur Außenwelt.
-Diese muss erst über passende NAT- und Firewall-Regeln im Edge-Gateway freigeschaltet werden.
+Diese muss erst über passende {{< abbr "NAT" "Network Adress Translation" >}}- und Firewall-Regeln im Edge-Gateway freigeschaltet werden.
 
 {{< screenshot src="img/edgegw-selection.png" title="Edge Gateway Auswahl">}}
 Die Konfiguration der Edge Gateways Verbindungen erfolgt über den Menüpunkt Edges im linken Menü.
@@ -120,7 +121,7 @@ In diesem  stehen Ihnen die einzelnen Parameter zur Konfiguration des Edge-Gatew
 Einige Standards werden durch plusserver bereits vorkonfiguriert ausgeliefert.
 {{< /screenshot >}}
 
-Damit Kommunikation zwischen VMs und dem Internet möglich wird, sind ein paar Firewall-Regeln, Anwendungsportprofile und NAT-Regeln notwendig.
+Damit Kommunikation zwischen VMs und dem Internet möglich wird, sind ein paar Firewall-Regeln, Anwendungsportprofile und {{< abbr "NAT" "Network Adress Translation" >}}-Regeln notwendig.
 
 ### Anwendungsportprofile
 
@@ -162,7 +163,7 @@ Dazu muss der Reiter {{< abbr "NAT" "Network Address Translation" >}} in der Edg
 
 {{% alert title="Hinweis" color="info" %}}
 **Prioritäten bei NAT-Regeln**  
-Wenn eine Adresse über mehrere NAT-Regeln verfügt, wird die Regel mit der höchsten Priorität angewendet. Ein niedrigerer Wert bedeutet eine höhere Priorität für diese Regel.  Die Regeln können Sie mit den Buttons `NACH OBEN VERSCHIEBEN` und `NACH UNTEN VERSCHIEBEN` verschieben, um die passende Reihenfolge festzulegen. Alternativ können Sie aber auch mit `VERSCHIEBEN NACH` die Regeln an eine definierte Stelle verschieben.
+Wenn eine Adresse über mehrere {{< abbr "NAT" "Network Adress Translation" >}}-Regeln verfügt, wird die Regel mit der höchsten Priorität angewendet. Ein niedrigerer Wert bedeutet eine höhere Priorität für diese Regel.  Die Regeln können Sie mit den Buttons `NACH OBEN VERSCHIEBEN` und `NACH UNTEN VERSCHIEBEN` verschieben, um die passende Reihenfolge festzulegen. Alternativ können Sie aber auch mit `VERSCHIEBEN NACH` die Regeln an eine definierte Stelle verschieben.
 {{% /alert %}}
 
 {{< screenshot src="img/nat-new.png" title="Neue NAT Regel erstellen" >}}
@@ -226,10 +227,10 @@ Die nachfolgenden Parameter können Sie optional zusätzlich konfigurieren:
 
 | Parameter            | Beschreibung                             |
 |----------------------|------------------------------------------|
-| Zustand              | Wenn dieser Schalter aktiviert ist, wird das NAT Zustandsbehaftet konfiguriert. Dies ermöglicht es bei ausgehenden TCP Anfragen die zugehörigen Antworten zu empfangen. |
+| Zustand              | Wenn dieser Schalter aktiviert ist, wird das {{< abbr "NAT" "Network Adress Translation" >}} Zustandsbehaftet konfiguriert. Dies ermöglicht es bei ausgehenden TCP Anfragen die zugehörigen Antworten zu empfangen. |
 | Protokollierung      | Über diese Option kann das im Edge-Gateway integrierte Logging des gesamten Traffics zu dieser Regel aktiviert werden. Diese Protokollierung können Sie nicht selbstständig einsehen. Wir empfehlen diese Option deaktiviert zu lassen, sofern Sie nicht von uns dazu aufgefordert werden, eine andere Einstellung vorzunehmen. |
-| Priorität            | Wenn eine Adresse über mehrere NAT-Regeln verfügt, wird die Regel mit der höchsten Priorität angewendet. Ein niedrigerer Wert bedeutet eine höhere Priorität für diese Regel.
-| Firewall-Übereinstimmung | Legt fest, wie die Firewall während der NAT eine Adressübereinstimmung ermittelt, wenn die Firewallphase nicht übersprungen wird. Im Folgenden sind gültige Werte aufgeführt: *Interne Adressübereinstimmung* Gibt an, dass die Firewall auf die interne Adresse einer NAT-Regel angewendet wird. Für SNAT ist die interne Adresse die ursprüngliche Quelladresse, bevor NAT durchgeführt wird. Für DNAT ist die interne Adresse die übersetzte Zieladresse, nachdem NAT durchgeführt wurde; *Externe Adressübereinstimmung*	Gibt an, dass die Firewall auf die externe Adresse einer NAT-Regel angewendet wird. Für SNAT ist die externe Adresse die übersetzte Quelladresse, nachdem NAT durchgeführt wurde. Für DNAT ist die externe Adresse die ursprüngliche Zieladresse, bevor NAT durchgeführt wird *Bypass* Firewallphase wird übersprungen.|
+| Priorität            | Wenn eine Adresse über mehrere {{< abbr "NAT" "Network Adress Translation" >}}-Regeln verfügt, wird die Regel mit der höchsten Priorität angewendet. Ein niedrigerer Wert bedeutet eine höhere Priorität für diese Regel. |
+| Firewall-Übereinstimmung | Legt fest, wie die Firewall während der {{< abbr "NAT" "Network Adress Translation" >}} eine Adressübereinstimmung ermittelt, wenn die Firewallphase nicht übersprungen wird. Im Folgenden sind gültige Werte aufgeführt: *Interne Adressübereinstimmung* Gibt an, dass die Firewall auf die interne Adresse einer NAT-Regel angewendet wird. Für SNAT ist die interne Adresse die ursprüngliche Quelladresse, bevor NAT durchgeführt wird. Für DNAT ist die interne Adresse die übersetzte Zieladresse, nachdem NAT durchgeführt wurde; *Externe Adressübereinstimmung*	Gibt an, dass die Firewall auf die externe Adresse einer NAT-Regel angewendet wird. Für SNAT ist die externe Adresse die übersetzte Quelladresse, nachdem {{< abbr "NAT" "Network Adress Translation" >}} durchgeführt wurde. Für DNAT ist die externe Adresse die ursprüngliche Zieladresse, bevor NAT durchgeführt wird *Bypass* Firewallphase wird übersprungen.|
 | Interne IP             | Hier verwenden Sie die Ihnen zugeordneten öffentlichen IP-Adressen oder Subnetze.|
 | Anwendung              | hier wird ein Anwendungsprofil gewählt, welches die Ports festlegt.|
 
@@ -248,7 +249,7 @@ Ein niedrigerer Wert bedeutet eine höhere Priorität für diese Regel.
 Die Firewall können Sie über die entsprechende Schaltfläche im seitlichen Menü auswählen.
 {{< /screenshot >}}
 
-Die Regeln können Sie mit den Buttons `NACH OBEN VERSCHIEBEN` und `NACH UNTEN VERSCHIEBEN` verschieben, um die passende Reihenfolge festzulegen. 
+Die Regeln können Sie mit den Buttons `NACH OBEN VERSCHIEBEN` und `NACH UNTEN VERSCHIEBEN` verschieben, um die passende Reihenfolge festzulegen.
 Alternativ können Sie aber auch mit `VERSCHIEBEN NACH` die Regeln an eine definierte Stelle verschieben.
 
 Die Firewall-Regeln werden von oben nach unten abgearbeitet und die erste zutreffende Regel wird angewandt.
