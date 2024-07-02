@@ -17,7 +17,7 @@ Jede pluscloud VMware Umgebung ist exakt einer Availability Zone zugeordnet.
 
 ## Allgemein verfügbare Umgebungen der pluscloud VMware
 
-Näheres zu Regionen und Availability Zones ist auf der Seite 
+Näheres zu Regionen und Availability Zones ist auf der Seite
 [{{< pagetitle "/general/plusserver-region-az" >}}]({{< ref "/general/plusserver-region-az" >}}) zu finden.
 
 Die nachfolgenden Umgebungen stehen allgemein Kunden zur Verfügung.
