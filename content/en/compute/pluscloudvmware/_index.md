@@ -8,10 +8,11 @@ description: >
   Everything you need for getting started with your pluscloud VMware
 ---
 
-{{% alert title="Note" color="info" %}}
+{{% pageinfo color="info" %}}
 **Work in progress**  
+
 We are still working on the english version of the pluscloud VMware documentation.  
 In the meantime, please refer to the german version of this document.
 
 You find the german version of this document by using the language selector in the top menu bar.
-{{% /alert %}}
+{{% /pageinfo %}}
