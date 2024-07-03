@@ -10,7 +10,7 @@ description: >
 
 ## What is a pluscloud VMware environment?
 
-Each pluscloud VMware environment is an independent instance of the VMware vCloud Foundation ({{< abbr "VCF" "VMware vCloud Foundation" >}}git) stack.
+Each pluscloud VMware environment is an independent instance of the VMware vCloud Foundation ({{< abbr "VCF" "VMware vCloud Foundation" >}}) stack.
 This means that each environment is a self-sufficient stack with its own management systems that support the workload of that environment.
 
 Each pluscloud VMware environment is associated with exactly one Availability Zone.
