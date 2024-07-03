@@ -67,7 +67,7 @@ Die Rechte können pro Menüpunkt individuell zusammengestellt werden.
 
 ## Instanzen freigeben
 
-Mit der Konfiguration von Usern auf der Rolle vApp User ist es möglich, auch den Zugang auf einzelne vApps oder VMs zu begrenzen.
+Mit der Konfiguration von Usern auf der Rolle `vApp User` ist es möglich, auch den Zugang auf einzelne vApps oder VMs zu begrenzen.
 
 {{< screenshot src="img/vmpermission-create-user.png" title="Nutzer anlegen" >}}
 Erstellen Sie einen Nutzer, mit dem die {{< abbr "VM" "Virtuelle Maschine" >}} geteilt werden soll oder stellen Sie sicher, dass dieser Nutzer bereits existiert.
@@ -116,16 +116,16 @@ Die nachfolgenden Parameter können bearbeitet werden:
 
 * vApp-Leases
   * Maximale Laufzeit-Leases: Voreinstellung, nach wie vielen Stunden oder Tagen eine vApp ausläuft und die Laufzeitablaufaktion ausgeführt wird. Die automatische Ausführung der Laufzeitablaufaktion bei Fristerreichnung bewirkt, dass die vApp (inkl. {{< abbr "VM" "Virtuelle Maschine" >}}s) nicht mehr erreichbar ist. Der Standard-Wert in der Voreinstellung ist `Läuft nie ab`
-  * Laufzeitablaufaktion: Bestimmt, was nach Ablauf des Leases mit der vApp passiert. Anhalten oder Stoppen sind mögliche Parameter. Hinweis: Nur für laufende {{< abbr "VM" "Virtuelle Maschine" >}}s fallen Computekosten an.
-  * Maximaler Speicher-Lease: Definiert die Frist, nach der der belegte vApp-Speicher (Festplatten) von ausgeschalteten vApps bereinigt wird. Dies kann durch Verschieben oder endgültiges Löschen passieren. Standard ist: Läuft nie ab
-  * Speicher bereinigen: Mögliche Optionen sind: Speicher verschieben oder löschen
+  * Laufzeitablaufaktion: Bestimmt, was nach Ablauf des Leases mit der vApp passiert. `Anhalten` oder `Stoppen` sind mögliche Parameter. Hinweis: Nur für laufende {{< abbr "VM" "Virtuelle Maschine" >}}s fallen Computekosten an.
+  * Maximaler Speicher-Lease: Definiert die Frist, nach der der belegte vApp-Speicher (Festplatten) von ausgeschalteten vApps bereinigt wird. Dies kann durch Verschieben oder endgültiges Löschen passieren. Standard ist: `Läuft nie ab`
+  * Speicher bereinigen: Mögliche Optionen sind: `Speicher verschieben` oder `löschen`
 * vApp-Vorlage-Lease
-  * Maximaler Speicher-Lease: Standard ist: Läuft nie ab. Es können aber auch Stunden oder Tage definiert werden, in denen eine vApp-Vorlage abläuft und die Laufzeitablaufaktion ausgeführt wird.
-  * Speicher bereinigen: Mögliche Optionen sind: Speicher verschieben oder löschen
+  * Maximaler Speicher-Lease: Standard ist: `Läuft nie ab`. Es können aber auch Stunden oder Tage definiert werden, in denen eine vApp-Vorlage abläuft und die Laufzeitablaufaktion ausgeführt wird.
+  * Speicher bereinigen: Mögliche Optionen sind: `Speicher verschieben` oder `löschen`
 * Standardkontingente
   * Kontingent aller {{< abbr "VM" "Virtuelle Maschine" >}}s: Mögliches Limit für zu erstellende {{< abbr "VM" "Virtuelle Maschine" >}}s
   * Kontingent ausgeführter {{< abbr "VM" "Virtuelle Maschine" >}}s: Mögliches Limit für laufende {{< abbr "VM" "Virtuelle Maschine" >}}s
 * Kennwortrichtlinien
   * Kontosperrung: Kontosperrung aktivieren oder deaktivieren zum Schutz des Kontos bei unzulässigen Zugriffen
   * Ungültige Anmeldungen vor der Sperrung: Definiert die Anzahl der fehlgeschlagenen Logins bevor der Benutzer gesperrt wird
-  * Kontosperrungsintervall: Definiert, wie lange das Konto gesperrt bleibt, bis ein Login wieder möglich ist
+  * Kontosperrungsintervall: Definiert, wie lange das Konto gesperrt bleibt, bis ein Login wieder möglich ist. Die Entsperrung des Kontos erfolgt automatisch durch das System.

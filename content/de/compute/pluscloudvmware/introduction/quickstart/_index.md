@@ -32,9 +32,10 @@ Mit diesen Daten kommen Sie direkt in das pluscloud vCloud Director Portal.
 Es wird aus Sicherheitsgründen empfohlen, das Administrator-Kennwort beim ersten Login zu ändern.
 {{% /alert %}}
 
-{{< screenshot src="img/portal-ip-overview.png" title="IP-Übersicht im Kundenportal" >}}
-Zusätzlich ist es hilfreich, Ihre weiteren öffentlichen IP-Adressen griffbereit zu haben. Diese können Sie auch im plusserver-Kundenportal einsehen.
-{{< /screenshot >}}
+#### Öffentliche IP Adresse
+
+Zusätzlich ist es hilfreich, Ihre weiteren öffentlichen IP-Adressen griffbereit zu haben.
+Diese können Sie auch in den Konfigurationsdialogen einsehen, wenn diese relevant sind.
 
 ### Datacenter
 

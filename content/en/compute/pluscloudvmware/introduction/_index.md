@@ -12,8 +12,8 @@ Here you have quick access to information about pluscloud VMware including envir
 {{% pageinfo color="info" %}}
 **Work in progress**  
 
-We are still working on the english version of the pluscloud VMware documentation.  
-In the meantime, please refer to the german version of this document.
+We are still working on the English version of the pluscloud VMware documentation.  
+In the meantime, please refer to the German version of this document.
 
-You find the german version of this document by using the language selector in the top menu bar.
+You find the German version of this document by using the language selector in the top menu bar.
 {{% /pageinfo %}}
