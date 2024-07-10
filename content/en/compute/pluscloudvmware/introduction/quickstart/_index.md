@@ -147,6 +147,7 @@ You can add more ports to an application by using the `Add Port Profile` button.
 {{< /screenshot >}}
 
 #### Parameters for an application profile
+
 You can configure the following parameters in an application profile:
 
 | Parameter | Description |
@@ -207,7 +208,7 @@ You can optionally configure the following parameters:
 |----------------------|------------------------------------------|
 | State | If this switch is activated, the NAT is configured statefully. This makes it possible to receive the corresponding responses for outgoing TCP requests. |
 | Logging | This option can be used to activate the logging of all traffic for this rule that is integrated in the edge gateway. You cannot view this logging yourself. We recommend that you leave this option disabled unless we instruct you to change your setting. |
-| Priority | If an address has multiple NAT rules, the rule with the highest priority is applied. A lower value means a higher priority for that rule.
+| Priority | If an address has multiple NAT rules, the rule with the highest priority is applied. A lower value means a higher priority for that rule. |
 | Firewall Matching | Specifies how the firewall determines an address match during NAT if the firewall phase is not skipped. Valid values ​​are as follows: *Internal Address Matching* Specifies that the firewall is applied to the internal address of a NAT rule. For SNAT, the internal address is the original source address before NAT is performed; For DNAT, the internal address is the translated destination address after NAT is performed; *External Address Matching* Specifies that the firewall is applied to the external address of a NAT rule. For SNAT, the external address is the translated source address after NAT is performed. For DNAT, the external address is the original destination address before NAT is performed *Bypass* Firewall phase is skipped.|
 | Internal IP | Here you use the public IP addresses or subnets assigned to you.|
 | Application | here an application profile is selected which defines the ports.|
@@ -452,6 +453,7 @@ You can configure the following parameters for new VMs.
 The set sizes for RAM and CPU can be adjusted at any time afterwards using the Edit button.
 The size of a data storage device (memory) can only be increased afterwards, not reduced.
 Depending on the configuration and operating system, this usually requires temporarily switching off the VM.
+
 ### VM guest login
 
 To successfully log in to a VM, you need the correct access data. If you installed the VM from a boot image, you should have created the corresponding access data during the installation. For the templates in the `selfservice` catalog, the standard of the respective operating system is used as the administration user. For Windows, this is `Administrator` and for Linux, usually `root`.
