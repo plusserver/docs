@@ -345,7 +345,7 @@ Everything else can be done afterwards or at the VM level.
 
 In the vApp overview, you can add a network using the Actions menu item.
 
-{< /screenshot >}}
+{{< /screenshot >}}
 
 [//]: # (TODO: Section missing: vApp Network Wizard)
 
@@ -525,7 +525,7 @@ Affinity rules and anti-affinity rules can be created under the item `New`.
 {{< screenshot src="img/affinityrule-new-affinity.png" title="Create affinity rule" >}}
 With an affinity rule, you specify that a selection of VMs should or must be placed together on the same physical hardware.
 This can, for example, help to minimize network latency between two VMs or increase data throughput between the VMs.
-{< /screenshot >}}
+{{< /screenshot >}}
 If you activate the `Required` checkbox, the rule is strictly adhered to.
 If the VM Scheduler cannot adhere to the rule, an error message is displayed.
 It is possible that VMs cannot be started.
@@ -671,7 +671,7 @@ Now you have two options: `Keep` or `Overwrite`.
 While Overwrite overwrites the VM, Keep creates another VM with the suffix `_restored`.
 {{< /screenshot >}}
 
-{{< screenshot src="img/veeam-restore-vm.png" title="VM Restore: Select recovery point" >}}
+{{< screenshot src="img/veeam-restore-vm-restorepoint.png" title="VM Restore: Select recovery point" >}}
 Then select the appropriate recovery point and confirm the restore job.
 {{< /screenshot >}}
 

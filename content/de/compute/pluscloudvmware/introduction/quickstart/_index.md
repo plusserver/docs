@@ -639,7 +639,7 @@ Nun bieten sich zwei Optionen an: `Keep` oder `Overwrite`.
 Während Overwrite die VM überschreibt, erzeugt Keep eine weitere VM mit dem Suffix `_restored`.
 {{< /screenshot >}}
 
-{{< screenshot src="img/veeam-restore-vm.png" title="VM Restore: Recovery Point auswählen" >}}
+{{< screenshot src="img/veeam-restore-vm-restorepoint.png" title="VM Restore: Recovery Point auswählen" >}}
 Anschließend suchen Sie den passenden Wiederherstellungspunkt aus und bestätigen den Restore-Auftrag.
 {{< /screenshot >}}
 
