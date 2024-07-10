@@ -235,6 +235,7 @@ desc = "plusserver gmbh Legal notice"
 
 
 theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
+timeout = "120s"
 
 [module]
 proxy = "direct"
