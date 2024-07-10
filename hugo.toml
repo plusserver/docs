@@ -1,5 +1,5 @@
 baseURL = 'https://docs.plusserver.com/'
-timeout = "1s"
+timeout = "120s"
 
 # Language settings
 contentDir = "content/en"
