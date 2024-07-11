@@ -659,4 +659,4 @@ Anschließend suchen Sie den passenden Wiederherstellungspunkt aus und bestätig
     <https://github.com/vmware/terraform-provider-vcd>
 * Backup
   * Veeam-Dokumentation:  
-    <https://helpcenter.veeam.com/archive/backup/95u4/em/em_managing_vms_in_vcd_org.html>
+    <https://helpcenter.veeam.com/docs/backup/em/vcd_working_with_portal.html?ver=120>
