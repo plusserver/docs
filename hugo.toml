@@ -90,34 +90,6 @@ section = ["HTML", "RSS"]
 
 
 #
-# Content taxonomy configuration
-#
-
-# Comment out to enable taxonomies in Docsy
-# disableKinds = ["taxonomy", "taxonomyTerm"]
-
-# You can add your own taxonomies
-[taxonomies]
-tag = "tags"
-category = "categories"
-
-[params.taxonomy]
-# set taxonomyCloud = [] to hide taxonomy clouds
-taxonomyCloud = ["tags", "categories"]
-# If used, must have same length as taxonomyCloud
-taxonomyCloudTitle = ["Tag Cloud", "Categories"]
-# set taxonomyPageHeader = [] to hide taxonomies on the page headers
-taxonomyPageHeader = ["tags", "categories"]
-
-
-
-# Configure how URLs look like per section.
-[permalinks]
-blog = "/:section/:year/:month/:day/:slug/"
-
-
-
-#
 # Image processing configuration.
 #
 
@@ -134,29 +106,23 @@ includeFields = ''
 
 
 
+# Privacy settings for embedded templates. Will probably not affect docsy templates.
 # https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
-[privacy.disqus]
-disable = false
-[privacy.googleAnalytics]
-anonymizeIP = false
-disable = false
-respectDoNotTrack = false
-useSessionStorage = false
-[privacy.instagram]
-disable = false
-simple = false
-[privacy.twitter]
-disable = false
-enableDNT = false
-simple = false
-[privacy.vimeo]
-disable = false
-enableDNT = false
-simple = false
-[privacy.youtube]
-disable = false
-privacyEnhanced = false
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true
+
+
 
 #
 # Configure site parameters
@@ -229,15 +195,15 @@ desc = "Development takes place here!"
 
 # German links showing up on the right side of the footer
 [[languages.en.params.links.developer]]
-name = "Contact"
+name = "Kontakt"
 url = "https://www.plusserver.com/en/support/"
 icon = "fa-solid fa-phone"
-desc = "plusserver gmbh Contact"
+desc = "plusserver gmbh Kontakt"
 [[languages.en.params.links.developer]]
-name = "Imprint"
+name = "Impressum"
 url = "https://www.plusserver.com/impressum/"
 icon = "fa-solid fa-gavel"
-desc = "plusserver gmbh Legal notice"
+desc = "plusserver gmbh Impressum"
 
 # English links showing up on the left side of the footer
 [[languages.de.params.links.user]]
