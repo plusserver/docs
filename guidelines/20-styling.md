@@ -7,6 +7,7 @@ The purpose of these styling and formatting guidelines is to establish consisten
 ## Structure Guidelines
 
 Every project-structure follows the following rules:
+
 - Use the default folder structure:
   - 01-introduction
   - 02-reference
@@ -18,7 +19,7 @@ Every project-structure follows the following rules:
 
 Every Document must contain the following header:
 
-```
+```markdown
 ---
 title: "TITLE"
 linkTitle: "Link Title"
