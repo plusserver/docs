@@ -1,6 +1,6 @@
 ---
-title: "Netzwerk"
-linkTitle: "Netzwerk"
+title: "Network"
+linkTitle: "Network"
 type: "docs"
 weight: 10
 date: 2024-07-01

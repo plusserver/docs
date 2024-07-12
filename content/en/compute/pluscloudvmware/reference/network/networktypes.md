@@ -1,6 +1,6 @@
 ---
-title: "Netzwerktypen"
-linkTitle: "Netzwerktypen"
+title: "Network types"
+linkTitle: "Network types"
 type: "docs"
 weight: 10
 date: 2024-07-01
@@ -18,8 +18,8 @@ A connection can be created between these networks using a gateway:
 
 ```mermaid
 flowchart LR
-  ext[external networks] <--> org[org networks] <--> app[vApp networks]
-⧏CODE⧐
+  ext[external networks] <-->|EdgeGateway| org[org networks] <-->|vApp Gateway| app[vApp networks]
+```
 
 ## External networks
 

@@ -15,7 +15,6 @@ This allows you, for example, to integrate a hardware appliance or a hardware se
 We recommend that you use this option restrictively.
 We recommend that you use connectivity at {{< abbr "ISO" "International Organization for Standardization" >}} {{< abbr "OSI" "Open Systems Interconnection model" >}} layer 3 (network layer / {{< abbr "IP" "Internet Protocol">}} level) as a priority.
 
-
 {{% alert title="Notice" color="info" %}}
 **No Self-Service possible**  
 VLAN bridging can currently only be set up by plusserver employees.  
