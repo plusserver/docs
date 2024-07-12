@@ -1,4 +1,5 @@
 baseURL = 'https://docs.plusserver.com/'
+timeout = "120s"
 
 # Language settings
 contentDir = "content/en"
@@ -235,6 +236,7 @@ desc = "plusserver gmbh Legal notice"
 
 
 theme = ["github.com/google/docsy", "github.com/google/docsy/dependencies"]
+
 
 [module]
 proxy = "direct"

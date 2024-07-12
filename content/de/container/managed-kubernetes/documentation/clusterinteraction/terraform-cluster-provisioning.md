@@ -479,6 +479,20 @@ zu
 
 Nachdem Sie die obige Änderung vorgenommen haben, können Sie mit "terraform plan" prüfen, ob die Syntax korrekt ist, und mit "terraform apply" die oben definierte Änderung durchführen lassen.
 
+### Änderungen an einem bereits bestehenden Cluster
+
+Wenn Sie Änderungen an einem bereits bestehenden Cluster über Terraform vornehmen möchten, können Sie einfach die folgenden Schritte ausführen:
+
+1. Gehen Sie in das Gardener Dashboard und klicken Sie auf den Cluster, den Sie importieren möchten. Holen Sie sich das Manifest, indem Sie oben auf der Seite auf YAML klicken und speichern Sie es.
+Denken Sie daran, dass Sie eventuell unnötige Wertepaare aus der YAML-Datei entfernen müssen, wie z.B. creationTimestamp, resourceVersion und den gesamten Statusbereich am Ende.
+
+2. Ergänzen Sie die entsprechenden Namen und IDs und führen Sie den folgenden Importbefehl aus:
+`terraform import kubectl_manifest.<cluster-name> core.gardener.cloud/v1beta1//Shoot//<cluster-name>//garden-<id>`
+
+3. Dann führen Sie einfach `terraform init`, `terraform plan` und `terraform apply` aus und Terraform wird Ihre definierten Änderungen durchführen.
+
+
+
 Beachten Sie bitte, dass trotz korrekter Syntax die gewünschte Änderung fehlschlagen kann. Dies kann mehrere Gründe haben, zum Beispiel:
 
 1. Gewünschte Ressourcen übersteigen die im Cluster verfügbaren. Es wird also mehr CPU, RAM, etc. benötigt. Der Plan wird in diesem Fall ausgeführt, aber Gardener wird irgendwann während der Ausführung einen Fehler produzieren, weil die Ressourcen erschöpft sind.

@@ -40,7 +40,7 @@ You must enable access from one or more external addresses or address ranges. Id
 
 ### Select the region
 
-Here you can select the [region](https://docs.xaas.get-cloud.io/docs/01-dbaas/02-faq/#Regions) in which the service is to be provided. 
+Here you can select the [region](/en/general/plusserver-region-az/) in which the service is to be provided. 
 
 ![Selecting the region](/images/content/04-msl/en/iam_keycloak/ordering/6-selection_region.png)
 

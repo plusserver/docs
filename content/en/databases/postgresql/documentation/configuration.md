@@ -40,69 +40,75 @@ The parameters listed in the table represent the specific configuration settings
 - **Max:** Displays the maximum permissible value for numeric parameters.
 - **Allowed Values:** Lists the values allowed for string parameters.
 
-<br>
+### Verfügbare PostgreSQL Extension PostgreSQL 14
 
-### Available PostgreSQL Extension
+| **Name**                        | **Version** | **Comment**                                                                                             |
+|---------------------------------|-------------|---------------------------------------------------------------------|
+| [btree_gin](https://www.postgresql.org/docs/14/btree-gin.html) | 1.3 | support for indexing common datatypes in GIN |
+| [btree_gist](https://www.postgresql.org/docs/14/btree-gist.html) | 1.6  | support for indexing common datatypes in GiST |
+| [citext](https://www.postgresql.org/docs/14/citext.html) | 1.6 | data type for case-insensitive character strings |
+| [cube](https://www.postgresql.org/docs/14/cube.html) | 1.5 | data type for multidimensional cubes |
+| [dict_int](https://www.postgresql.org/docs/14/dict-int.html) | 1.0 | text search dictionary template for integers |
+| [fuzzystrmatch](https://www.postgresql.org/docs/14/fuzzystrmatch.html) | 1.1 | determine similarities and distance between strings |
+| [hstore](https://www.postgresql.org/docs/14/hstore.html) | 1.8 | data type for storing sets of (key, value) pairs |
+| [intarray](https://www.postgresql.org/docs/14/intarray.html) | 1.5 | functions, operators, and index support for 1-D arrays of integers |
+| [isn](https://www.postgresql.org/docs/14/isn.html) | 1.2 | data types for international product numbering standards |
+| [lo](https://www.postgresql.org/docs/14/lo.html) | 1.1 | Large Object maintenance |
+| [ltree](https://www.postgresql.org/docs/14/ltree.html) | 1.2 | data type for hierarchical tree-like structures |
+| [pgcrypto](https://www.postgresql.org/docs/14/pgcrypto.html) | 1.3 | cryptographic functions |
+| [seg](https://www.postgresql.org/docs/14/seg.html) | 1.4 | data type for representing line segments or floating-point intervals |
+| [tablefunc](https://www.postgresql.org/docs/14/tablefunc.html) | 1.0 | functions that manipulate whole tables, including crosstab |
+| [tcn](https://www.postgresql.org/docs/14/tcn.html) | 1.0 | Triggered change notifications |
+| [tsm_system_rows](https://www.postgresql.org/docs/14/tsm-system-rows.html) | 1.0 | TABLESAMPLE method which accepts number of rows as a limit |
+| [tsm_system_time](https://www.postgresql.org/docs/14/tsm-system-time.html) | 1.0 | TABLESAMPLE method which accepts time in milliseconds as a limit |
+| [uuid-ossp](https://www.postgresql.org/docs/14/uuid-ossp.html) | 1.1 | generate universally unique identifiers (UUIDs) |
 
-| **Name**                        | **Default Version** | **Installed Version** | **Comment**                                                                                                            |
-|---------------------------------|---------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------|
-| address_standardizer            | 3.4.0               |                       | Used to parse an address into constituent elements. Generally used to support geocoding address normalization step.   |
-| address_standardizer_data_us    | 3.4.0               |                       | Address Standardizer US dataset example                                                                                |
-| adminpack                       | 2.1                 |                       | Administrative functions for PostgreSQL                                                                                |
-| amcheck                         | 1.3                 |                       | Functions for verifying relation integrity                                                                             |
-| autoinc                         | 1.0                 |                       | Functions for autoincrementing fields                                                                                  |
-| bloom                           | 1.0                 |                       | Bloom access method - signature file based index                                                                       |
-| btree_gin                       | 1.3                 |                       | Support for indexing common datatypes in GIN                                                                           |
-| btree_gist                      | 1.7                 |                       | Support for indexing common datatypes in GiST                                                                          |
-| citext                          | 1.6                 |                       | Data type for case-insensitive character strings                                                                       |
-| cube                            | 1.5                 |                       | Data type for multidimensional cubes                                                                                   |
-| dblink                          | 1.2                 |                       | Connect to other PostgreSQL databases from within a database                                                           |
-| dict_int                        | 1.0                 |                       | Text search dictionary template for integers                                                                           |
-| dict_xsyn                       | 1.0                 |                       | Text search dictionary template for extended synonym processing                                                        |
-| earthdistance                   | 1.1                 |                       | Calculate great-circle distances on the surface of the Earth                                                           |
-| file_fdw                        | 1.0                 |                       | Foreign-data wrapper for flat file access                                                                              |
-| fuzzystrmatch                   | 1.1                 |                       | Determine similarities and distance between strings                                                                    |
-| hstore                          | 1.8                 |                       | Data type for storing sets of (key, value) pairs                                                                       |
-| insert_username                 | 1.0                 |                       | Functions for tracking who changed a table                                                                             |
-| intagg                          | 1.1                 |                       | Integer aggregator and enumerator (obsolete)                                                                           |
-| intarray                        | 1.5                 |                       | Functions, operators, and index support for 1-D arrays of integers                                                     |
-| isn                             | 1.2                 |                       | Data types for international product numbering standards                                                               |
-| lo                              | 1.1                 |                       | Large Object maintenance                                                                                               |
-| ltree                           | 1.2                 |                       | Data type for hierarchical tree-like structures                                                                        |
-| moddatetime                     | 1.0                 |                       | Functions for tracking last modification time                                                                          |
-| old_snapshot                    | 1.0                 |                       | Utilities in support of old_snapshot_threshold                                                                         |
-| orafce                          | 4.7                 |                       | Functions and operators that emulate a subset of functions and packages from the Oracle RDBMS                          |
-| pageinspect                     | 1.11                |                       | Inspect the contents of database pages at a low level                                                                  |
-| pg_buffercache                  | 1.3                 |                       | Examine the shared buffer cache                                                                                        |
-| pg_freespacemap                 | 1.2                 |                       | Examine the free space map (FSM)                                                                                       |
-| pg_prewarm                      | 1.2                 |                       | Prewarm relation data                                                                                                  |
-| pg_stat_statements              | 1.10                |                       | Track planning and execution statistics of all SQL statements executed                                                 |
-| pg_surgery                      | 1.0                 |                       | Extension to perform surgery on a damaged relation                                                                     |
-| pg_trgm                         | 1.6                 |                       | Text similarity measurement and index searching based on trigrams                                                      |
-| pg_visibility                   | 1.2                 |                       | Examine the visibility map (VM) and page-level visibility info                                                         |
-| pg_walinspect                   | 1.0                 |                       | Functions to inspect contents of PostgreSQL Write-Ahead Log                                                            |
-| pgaudit                         | 1.7                 |                       | Provides auditing functionality                                                                                        |
-| pgautofailover                  | 2.0                 |                       | pg_auto_failover                                                                                                       |
-| pgcrypto                        | 1.3                 |                       | Cryptographic functions                                                                                                |
-| pgrowlocks                      | 1.2                 |                       | Show row-level locking information                                                                                     |
-| pgstattuple                     | 1.5                 |                       | Show tuple-level statistics                                                                                            |
-| pljava                          | 1.6.6               |                       | PL/Java procedural language [PL/Java](https://tada.github.io/pljava/)                                                  |
-| plpgsql                         | 1.0                 | 1.0                   | PL/pgSQL procedural language                                                                                           |
-| postgis                         | 3.4.0               | 3.4.0                 | PostGIS geometry and geography spatial types and functions                                                             |
-| postgis_raster                  | 3.4.0               |                       | PostGIS raster types and functions                                                                                     |
-| postgis_tiger_geocoder          | 3.4.0               |                       | PostGIS tiger geocoder and reverse geocoder                                                                            |
-| postgis_topology                | 3.4.0               |                       | PostGIS topology spatial types and functions                                                                           |
-| postgres_fdw                    | 1.1                 |                       | Foreign-data wrapper for remote PostgreSQL servers                                                                     |
-| refint                          | 1.0                 |                       | Functions for implementing referential integrity (obsolete)                                                            |
-| seg                             | 1.4                 |                       | Data type for representing line segments or floating-point intervals                                                   |
-| sslinfo                         | 1.2                 |                       | Information about SSL certificates                                                                                     |
-| tablefunc                       | 1.0                 |                       | Functions that manipulate whole tables, including crosstab                                                             |
-| tcn                             | 1.0                 |                       | Triggered change notifications                                                                                         |
-| tsm_system_rows                 | 1.0                 |                       | TABLESAMPLE method which accepts number of rows as a limit                                                             |
-| tsm_system_time                 | 1.0                 |                       | TABLESAMPLE method which accepts time in milliseconds as a limit                                                       |
-| unaccent                        | 1.1                 |                       | Text search dictionary that removes accents                                                                            |
-| uuid-ossp                       | 1.1                 |                       | Generate universally unique identifiers (UUIDs)                                                                        |
-| xml2                            | 1.1                 |                       | XPath querying and XSLT                                                                                                |
+### Verfügbare PostgreSQL Extension PostgreSQL 15
+
+| **Name**                        | **Version** | **Comment**                                                                                             |
+|---------------------------------|-------------|---------------------------------------------------------------------|
+| [btree_gin](https://www.postgresql.org/docs/15/btree-gin.html) | 1.3 | support for indexing common datatypes in GIN |
+| [btree_gist](https://www.postgresql.org/docs/15/btree-gist.html) | 1.7  | support for indexing common datatypes in GiST |
+| [citext](https://www.postgresql.org/docs/15/citext.html) | 1.6 | data type for case-insensitive character strings |
+| [cube](https://www.postgresql.org/docs/15/cube.html) | 1.5 | data type for multidimensional cubes |
+| [dict_int](https://www.postgresql.org/docs/15/dict-int.html) | 1.0 | text search dictionary template for integers |
+| [fuzzystrmatch](https://www.postgresql.org/docs/15/fuzzystrmatch.html) | 1.1 | determine similarities and distance between strings |
+| [hstore](https://www.postgresql.org/docs/15/hstore.html) | 1.8 | data type for storing sets of (key, value) pairs |
+| [intarray](https://www.postgresql.org/docs/15/intarray.html) | 1.5 | functions, operators, and index support for 1-D arrays of integers |
+| [isn](https://www.postgresql.org/docs/15/isn.html) | 1.2 | data types for international product numbering standards |
+| [lo](https://www.postgresql.org/docs/15/lo.html) | 1.1 | Large Object maintenance |
+| [ltree](https://www.postgresql.org/docs/15/ltree.html) | 1.2 | data type for hierarchical tree-like structures |
+| [pgcrypto](https://www.postgresql.org/docs/15/pgcrypto.html) | 1.3 | cryptographic functions |
+| [seg](https://www.postgresql.org/docs/15/seg.html) | 1.4 | data type for representing line segments or floating-point intervals |
+| [tablefunc](https://www.postgresql.org/docs/15/tablefunc.html) | 1.0 | functions that manipulate whole tables, including crosstab |
+| [tcn](https://www.postgresql.org/docs/15/tcn.html) | 1.0 | Triggered change notifications |
+| [tsm_system_rows](https://www.postgresql.org/docs/15/tsm-system-rows.html) | 1.0 | TABLESAMPLE method which accepts number of rows as a limit |
+| [tsm_system_time](https://www.postgresql.org/docs/15/tsm-system-time.html) | 1.0 | TABLESAMPLE method which accepts time in milliseconds as a limit |
+| [uuid-ossp](https://www.postgresql.org/docs/15/uuid-ossp.html) | 1.1 | generate universally unique identifiers (UUIDs) |
+
+
+### Verfügbare PostgreSQL Extension PostgreSQL 16
+
+| **Name**                        | **Version** | **Comment**                                                                                             |
+|---------------------------------|-------------|---------------------------------------------------------------------|
+| [btree_gin](https://www.postgresql.org/docs/16/btree-gin.html) | 1.3 | support for indexing common datatypes in GIN |
+| [btree_gist](https://www.postgresql.org/docs/16/btree-gist.html) | 1.7  | support for indexing common datatypes in GiST |
+| [citext](https://www.postgresql.org/docs/16/citext.html) | 1.6 | data type for case-insensitive character strings |
+| [cube](https://www.postgresql.org/docs/16/cube.html) | 1.5 | data type for multidimensional cubes |
+| [dict_int](https://www.postgresql.org/docs/16/dict-int.html) | 1.0 | text search dictionary template for integers |
+| [fuzzystrmatch](https://www.postgresql.org/docs/16/fuzzystrmatch.html) | 1.1 | determine similarities and distance between strings |
+| [hstore](https://www.postgresql.org/docs/16/hstore.html) | 1.8 | data type for storing sets of (key, value) pairs |
+| [intarray](https://www.postgresql.org/docs/16/intarray.html) | 1.5 | functions, operators, and index support for 1-D arrays of integers |
+| [isn](https://www.postgresql.org/docs/16/isn.html) | 1.2 | data types for international product numbering standards |
+| [lo](https://www.postgresql.org/docs/16/lo.html) | 1.1 | Large Object maintenance |
+| [ltree](https://www.postgresql.org/docs/16/ltree.html) | 1.2 | data type for hierarchical tree-like structures |
+| [pgcrypto](https://www.postgresql.org/docs/16/pgcrypto.html) | 1.3 | cryptographic functions |
+| [seg](https://www.postgresql.org/docs/16/seg.html) | 1.4 | data type for representing line segments or floating-point intervals |
+| [tablefunc](https://www.postgresql.org/docs/16/tablefunc.html) | 1.0 | functions that manipulate whole tables, including crosstab |
+| [tcn](https://www.postgresql.org/docs/16/tcn.html) | 1.0 | Triggered change notifications |
+| [tsm_system_rows](https://www.postgresql.org/docs/16/tsm-system-rows.html) | 1.0 | TABLESAMPLE method which accepts number of rows as a limit |
+| [tsm_system_time](https://www.postgresql.org/docs/16/tsm-system-time.html) | 1.0 | TABLESAMPLE method which accepts time in milliseconds as a limit |
+| [uuid-ossp](https://www.postgresql.org/docs/16/uuid-ossp.html) | 1.1 | generate universally unique identifiers (UUIDs) |
 
 <br>
 
