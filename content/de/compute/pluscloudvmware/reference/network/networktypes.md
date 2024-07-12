@@ -18,7 +18,7 @@ Zwischen diesen Netzwerken kann mittels Gateway eine Verbindung geschaffen werde
 
 ```mermaid
 flowchart LR
-  ext[Externe Netzwerke] <-->|Edge Gateway| org[Org Netzwerke] <-->|vApp Gateway| app[vApp Netzwerke]
+  ext[Externe Netzwerke] <--> org[Org Netzwerke] <--> app[vApp Netzwerke]
 ```
 
 ## Externe Netzwerke
