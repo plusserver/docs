@@ -2,7 +2,7 @@
 title: "Quickstart"
 linkTitle: "Quickstart"
 type: "docs"
-weight: 1
+weight: 2
 date: 2024-02-09
 description: >
   Die ersten Schritte mit ihrer neuen Virtual Cloud Firewall - pluscloud open

@@ -1,6 +1,6 @@
 ---
-title: "Introduction"
-linkTitle: "Introduction"
+title: "Einführung"
+linkTitle: "Einführung"
 type: "docs"
 weight: 1
 date: 2024-02-09

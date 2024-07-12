@@ -1,11 +1,11 @@
 ---
-title: "Introduction"
-linkTitle: "Introduction"
+title: "Grundlagen"
+linkTitle: "Grundlagen"
 type: "docs"
-weight: 2
+weight: 1
 date: 2024-02-09
 description: >
-  Alles für einen perfekten Start mit Ihrer Virtual Cloud Firewall - pluscloud open
+  Grundlegende Informationen über die Nutzung der Virtual Cloud Firewall - pluscloud open
 ---
 
 ## Bereitstellung
