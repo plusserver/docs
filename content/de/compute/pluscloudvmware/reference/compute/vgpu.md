@@ -1,17 +1,17 @@
 ---
-title: "pluscloud NVIDIA vGPU "
+title: "Nvidia vGPU "
 type: "docs"
-weight: 1
+weight: 30
 date: 2024-07-12
 description: >
-  Using pluscloud NVIDIA vGPU
+  Erläuterungen zu virtuellen Grafikkarten von Nvidia in der pluscloud VMware
 ---
 
 Dieses Dokument soll Ihnen helfen, vGPU-virtuelle Maschinen zu erstellen, die es ermöglichen, grafikintensive Workloads effizient auszuführen.
 
 {{% alert title="Hinweis" color="info" %}}
 **Dieses Produkt ist nur in High-Perfomance VDCs verfügbar**  
-pluscloud NVIDIA vGPU ist nur in Hochleistungsumgebungen verfügbar. Fragen Sie unser Support- oder Vertriebsteam nach weiteren Informationen.
+Nvidia vGPU ist nur in Hochleistungsumgebungen verfügbar. Fragen Sie unser Support- oder Vertriebsteam nach weiteren Informationen.
 {{% /alert %}}
 
 ## vGPU aktivierte VM
