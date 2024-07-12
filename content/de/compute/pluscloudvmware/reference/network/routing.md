@@ -31,13 +31,13 @@ flowchart LR
 
 Bei den Core Routern handelt es sich um hochperformante physikalische Routersysteme welche an jedem plusserver RZ-Standort
 (vgl. [{{< pagetitle "/general/plusserver-region-az" >}}]({{< ref "/general/plusserver-region-az" >}})) redundant vorhanden sind.
-Sie stellen die Verbindung zwischen den Rechenzentren und dem Internet her, wofür diverese Peerings mit Kommunikationsdienstleistern bestehen.
+Sie stellen die Verbindung zwischen den Rechenzentren und dem Internet her, wofür diverse Peerings mit Kommunikationsdienstleistern bestehen.
 
 Die Core Router gehören nicht exklusiv zur pluscloud VMware sondern sind Teil der Netzwerkinfrastruktur von plusserver.
 
 ## Edge Gateway
 
-Ein Edge Gateway dient zur Verbindung zwischen Org Netzen und Externen Netzen (vgl. [{{< pagetitle "networktypes" >}}]({{< ref "networktypes" >}})).
+Ein Edge Gateway dient zur Verbindung zwischen Org Netzwerken und Externen Netzwerken (vgl. [{{< pagetitle "networktypes" >}}]({{< ref "networktypes" >}})).
 
 Je OrgVDC wird ein Edge Gateway provisioniert.
 Dieses besteht aus einem Service Router und einem Distributed Router.
@@ -45,7 +45,7 @@ Dieses besteht aus einem Service Router und einem Distributed Router.
 ### Service Router
 
 Der Service Router beinhaltet alle nicht verteilten Dienste des Edge Gateways.
-Hierzu gehören insbesondere auch
+Hierzu gehören insbesondere:
 
 * die Gateway Firewall
 * die NAT-Engine für SNAT und DNAT
@@ -68,7 +68,7 @@ Aus diesem Grund können Sie die Gateway Firewall nicht einsetzen, um verschiede
 
 ## vApp Gateway
 
-Ein vApp Gateway dient zur Verbindung zwischen vApp Netzen und Org Netzen (vgl. [{{< pagetitle "networktypes" >}}]({{< ref "networktypes" >}})).
+Ein vApp Gateway dient zur Verbindung zwischen vApp Netzwerken und Org Netzwerken (vgl. [{{< pagetitle "networktypes" >}}]({{< ref "networktypes" >}})).
 
 Es kommt nur dann zum Einsatz, wenn ein vApp Netz geroutet mit einem Org Netz verbunden wird.
 Bei einem direkt verbundenen vApp Netz wird kein Gateway als Routinginstanz benötigt, da das Netzsegment unverändert durchgereicht wird.

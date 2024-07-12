@@ -8,4 +8,4 @@ description: >
   Erläuterungen zum virtuellen Netzwerk der pluscloud VMware
 ---
 
-Das Netzwerk innerhalb der pluscloud VMware ist vollständig virtualisiert und basiert auf dem Produkt VMware NSX-T.
+Das Netzwerk innerhalb der pluscloud VMware ist vollständig virtualisiert und basiert auf dem Produkt "VMware NSX-T".

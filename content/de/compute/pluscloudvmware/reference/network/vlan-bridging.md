@@ -9,11 +9,11 @@ description: >
 ---
 
 Bei der pluscloud VMware besteht die Möglichkeit ein {{< abbr "VLAN" "Virtual Local Area Network" >}} in Form eines virtuellen Netzwerksegments einzubinden.
-Dies Ermöglicht es, ein Hardware-System in die virtuelle Infrastruktur zu integrieren.
-Auf diese Weise können Sie beispielsweise eine Hardware-Appliance oder einen Hardware-Server in eine sonst virtuelle Infrastruktur einbinden und diese nach und nach migrieren oder parallel betreiben.
+Dies ermöglicht es, ein Hardware-System in die virtuelle Infrastruktur zu integrieren.
+Auf diese Weise können Sie beispielsweise eine Hardware-Appliance oder einen Hardware-Server in eine virtuelle Infrastruktur einbinden und diese nach und nach migrieren oder parallel betreiben.
 
 Wir empfehlen, diese Option restriktiv einzusetzen.
-Verwenden Sie bevorzugt eine Konnektivität auf {{< abbr "ISO" "International Organization for Standardization" >}} {{< abbr "OSI" "Open Systems Interconnection model" >}} Schicht 3 (Vermittlungsschicht / {{< abbr "IP" "Internet Protocol">}}-Ebene) anzustreben.
+Verwenden Sie bevorzugt eine Konnektivität auf {{< abbr "ISO" "International Organization for Standardization" >}} {{< abbr "OSI" "Open Systems Interconnection model" >}} Schicht 3 (Vermittlungsschicht / {{< abbr "IP" "Internet Protocol">}}-Ebene).
 
 {{% alert title="Hinweis" color="info" %}}
 **Kein Self-Service möglich**  
@@ -56,10 +56,10 @@ flowchart LR
     br1 <--> is1 <-->|vNIC| vm1
 ```
 
-Eine Hardware-Appliance im Colocation-Bereich des Rechenzetrums wird über einen Switchport mit der Shared Switching Infrastruktur verbunden.
+Eine Hardware-Appliance im Colocation-Bereich des Rechenzentrums wird über einen Switchport mit der Shared Switching Infrastruktur verbunden.
 Für diese Verbindung wird ein {{< abbr "VLAN" "Virtual Local Area Network" >}} konfiguriert, welches hier beispielsweise die {{< abbr "VLAN" "Virtual Local Area Network" >}}-{{< abbr "ID" "Identifikationsnummer" >}} 101 erhält.
 
-Die Shared Switching Infrastruktur ist mit so genannten Edge Nodes verbunden, welche Teil der pluscloud VMware sind.
+Die Shared Switching Infrastruktur ist mit sogenannten Edge Nodes verbunden, welche Teil der pluscloud VMware sind.
 Es handelt sich um dedizierte Server, welche die Kommunikation zwischen der Cloudinfrastruktur und den Systemen außerhalb der Cloud handhaben.
 Auf diesen Servern wird kein Kundenworkload ausgeführt.
 Stattdessen werden hier neben Routing-Instanzen und Gateways auch {{< abbr "VLAN" "Virtual Local Area Network" >}}-Bridges betrieben.

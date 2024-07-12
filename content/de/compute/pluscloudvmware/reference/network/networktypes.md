@@ -24,9 +24,10 @@ flowchart LR
 ## Externe Netzwerke
 
 Ein Externes Netzwerk stellt eine Verbindung von der Cloudumgebung in die Außenwelt dar.
-Dies kann beispielsweise eine Internetanbindung sein, aber auch ein externes Netzwerksegment, welches eingebunden werden soll oder eine VPN-Verbindung.
+Dies kann beispielsweise eine Internetanbindung, ein externes Netzwerksegment, welches eingebunden werden soll, oder eine VPN-Verbindung sein.
 
-Die Anbindung zwischen eines Externen Netzwerk wird über ESXi Portgruppen umgesetzt und kann nur von einem Cloud Provider umgesetzt werden. Eine Einrichtung im Self-Service ist hier nicht möglich.
+Die Anbindung eines Externen Netzwerk an die Cloudumgebung wird über ESXi Portgruppen umgesetzt und kann nur von einem Cloud Provider umgesetzt werden.
+Eine Einrichtung im Self-Service ist hier nicht möglich.
 
 ## Org Netzwerke
 
@@ -39,7 +40,7 @@ Es gibt drei Arten, ein Org Netzwerk an ein Externes Netzwerk anzubinden:
 * Indirekt mit einem Externen Netzwerk Verbunden, was mit Hilfe von NAT oder Routing umgesetzt wird.
 * Isoliert, das heißt nicht mit einem Externen Netzwerk verbunden
 
-Die Verbindung zwischen einem Org Netzwerk und einem Externen Netzwerk wird mit einem so genannten Edge Gateway umgesetzt.
+Die Verbindung zwischen einem Org Netzwerk und einem Externen Netzwerk wird mit einem sogenannten Edge Gateway umgesetzt
 
 ## vApp Netzwerke
 
@@ -53,4 +54,4 @@ Auch hier gibt es drei Arten, ein vApp Netzwerk an ein Org Netzwerk anzubinden:
 * Indirekt mit einem Org Netzwerk Verbunden, was mit Hilfe von NAT oder Routing umgesetzt wird.
 * Isoliert, das heißt nicht mit einem Org Netzwerk verbunden
 
-Die Verbindung zwischen einem Org Netzwerk und einem Externen Netzwerk wird mit einem so genannten vApp Gateway umgesetzt.
+Die Verbindung zwischen einem Org Netzwerk und einem Externen Netzwerk wird mit einem sogenannten vApp Gateway umgesetzt.
