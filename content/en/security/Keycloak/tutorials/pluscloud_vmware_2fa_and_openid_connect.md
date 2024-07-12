@@ -4,6 +4,7 @@ linkTitle: "Pluscloud VMware 2FA with Keycloak + OpenID Connect"
 type: "docs"
 weight: 40
 ---
+### Schritt 1: Preparation
 
 * First you need to [book your Keycloak instance](/en/security/keycloak/tutorials/ordering/)
 * and log in to the web interface with your [Admin user access data](/en/security/keycloak/tutorials/retrieve_login_credentials/).
@@ -92,7 +93,6 @@ Then press **"Create"**.
 Select the **"Credentials"** tab and click on **"Set password"**.
 
 Define a password:
-
 ![create user 3](/images/content/04-msl/en/iam_keycloak/pluscloud_vmware_2fa_tutorial/keycloak_set_password_17.png)
 
 Confirm with **"Save"**.
