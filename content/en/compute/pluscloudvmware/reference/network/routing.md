@@ -5,7 +5,7 @@ type: "docs"
 weight: 30
 date: 2024-07-01
 description: >
-  Explanations of routing within the pluscloud VMware and its implications
+  Explanations of routing within pluscloud VMware and its implications
 ---
 
 Pluscloud VMware has various systems that take over routing tasks:

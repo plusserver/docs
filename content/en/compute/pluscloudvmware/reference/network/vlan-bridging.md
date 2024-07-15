@@ -5,7 +5,7 @@ type: "docs"
 weight: 40
 date: 2024-07-10
 description: >
-  Integration of hardware systems into the pluscloud VMware using VLAN bridging
+  Integration of hardware systems into pluscloud VMware using VLAN bridging
 ---
 
 With the pluscloud VMware, it is possible to integrate a {{< abbr "VLAN" "Virtual Local Area Network" >}} in the form of a virtual network segment.
