@@ -9,7 +9,7 @@ description: >
 
 ## Überblick
 
-In diesem Tutorial erfahren Sie, wie Sie einen Snapshot von einer laufenden VM erzeugen, die VM löschen und sie danach aus dem Snapshot wiederhertellen. Vor und nach der Durchführung sollten Sie ein paar Tests zum Zustand der VM berücksichtigen. 
+In diesem Tutorial erfahren Sie, wie Sie einen Snapshot von einer laufenden VM erzeugen, die VM löschen und sie danach aus dem Snapshot wiederhertellen. Vor und nach der Durchführung sollten Sie ein paar Tests zum Zustand der VM berücksichtigen.
 
 Hinweis: VMs bekommen nach dem Hochfahren automatisch eine neue IP-Adresse zugewiesen, wenn diese nicht vorher statisch zugewiesen worden ist. Die Floating IPs werden bei der Durchführeung von der VM getrennt, bleiben aber weiterhin dem Projekt zugeordnet und können nach der Wiederherstellung wieder der VM zugewiesen werden.  
 
@@ -38,15 +38,15 @@ Nachdem der Snapshot erzeugt worden ist, sollte er im Menü **Schattenkopien** s
 
 ![Screenshot der Snapshotübersicht](snapshots-list.png)
 
----
+
 **Auf der Kommandozeile**
 
 ``openstack server image create <instance name> --name <snapshot name>``
----
+
 
 ## VM löschen
 
-Da Sie nun erfolgreich einen Snapshot Ihrer VM erzeugt haben, können Sie diese nun ausschalten... 
+Da Sie nun erfolgreich einen Snapshot Ihrer VM erzeugt haben, können Sie diese nun ausschalten...
 
 ![Screenshot des "Instanz ausschalten" Dialogs](shut-off-instance.png)
 
@@ -66,11 +66,11 @@ Dabei gehen Sie - wie beim Erstellen einer Instanz - durch das "Instanz starten"
 
 Insbesondere sollten Sie als "Bootquelle" den Snapshot Ihrer VM auswählen.
 
----
+
 **Auf der Kommandozeile**
 
 ``openstack server create --image <snapshot-image-id> --flavor <flavor-id> --network <network-id> <new instance name>``
----
+
 
 ## Nachbereitende Tests
 
@@ -82,4 +82,3 @@ Bitte überprüfen Sie, ob die Konfiguration Ihrer VM - besonders in den folgend
 * Applikationsstatus
 
 ![Screenshot der Instanz Console](screenshot-console-2.png)
-

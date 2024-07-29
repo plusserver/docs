@@ -37,13 +37,13 @@ In the opening dialogue enter a name for the snapshot and afterwards click "Crea
 
 After the snapshot has been created, it should show up under the **Snapshots** tab:
 
+
 ![screenshot of the snapshots list](snapshots-list.png)
 
----
 **In the CLI**
 
 ``openstack server image create <instance name> --name <snapshot name>``
----
+
 
 ## VM deletion
 
@@ -67,11 +67,11 @@ You have to go through the "Launch Instance" menu again and provide the neccessa
 
 Use the snapshot you previously created as source for the new instance.
 
----
+
 **In the CLI**
 
 ``openstack server create --image <snapshot-image-id> --flavor <flavor-id> --network <network-id> <new instance name>``
----
+
 
 ## Post-Checks from the User
 
