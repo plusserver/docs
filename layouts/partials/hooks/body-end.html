@@ -29,27 +29,45 @@
                 return;
             }
 
+            // Check paths
             const currentURL = new URL (window.location.href || document.URL);
             const pathFound = (' ' + currentURL.pathname).slice(1);
             const pathShould = ('/' + language + '/' + currentURL.pathname.replace(/^.+?[/]/, ''));
             if ( pathFound != pathShould ) {
-                console.log("Redirecting to", pathShould, "from", pathFound)
-                window.location.replace(pathShould)
+                // We want to redirect as this is the first page load within the session
+
+                // Check if target exists
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', pathShould, true);
+                xhr.onreadystatechange = () => {
+                    if (xhr.readyState === 4){
+                        if (xhr.status >= 200 && xhr.status <= 399) {  
+                            // Redirect to correct language version
+                            console.log("Redirecting to", pathShould, "from", pathFound)
+                            window.location.replace(pathShould);
+                        }  else {
+                            // The page does not exist in the desired language. Stay here.
+                            console.log(pathShould, "not found. Staying at", pathFound);
+                        }
+                    }
+                };
+                xhr.send();
             }
         })
-
+        
+        // Check the language selection
         const browserStorageKey = "psdocs_language"
         let storedLanguage = window.sessionStorage.getItem(browserStorageKey)
         if (storedLanguage == null) {
-            console.log("First call in session. Determining language...")
+            // Determine and store language on first call of a session.
             storedLanguage = getUserLanguage();
-            console.log("Detected", storedLanguage, "as prefered language.")
             window.sessionStorage.setItem(browserStorageKey, storedLanguage);
             redirectTo(storedLanguage);
         }
-        //window.location.replace("/de");
+
     })
 
+    // This finally calls the script.
     languageSelector();
 
 </script>
