@@ -1,0 +1,55 @@
+<script>
+    languageSelector = (() => {
+
+        // Supported documentation languages as configured in hugo.toml
+        const languageCodes = [ {{ range .AllTranslations }}"{{.Lang}}",{{ end }} ];
+
+        // Find user preferred languages, use first preference or fall back to english
+        const getUserLanguage = (() => {
+            const preferedLang = navigator.language || navigator.userLanguage;
+            const browserLangs = navigator.languages;
+
+            const contryCode = preferedLang.substr(0,2)
+            if ( languageCodes.includes(contryCode) ) {
+                // use browser prefered language if supported
+                return contryCode;
+            } else if ( browserLangs.some( e => languageCodes.includes(e)) ) {
+                // use first matching user preferedlanguage if supported
+                return browserLangs.find( e => languageCodes.includes(e) );
+            }
+            // fall back to english
+            return "en"
+        })
+
+        // Redirect the user to the specified language
+        const redirectTo = ((language) => {
+            // Only do something, if the language is supported.
+            if ( ! languageCodes.includes(language) ) {
+                console.log("Language code", language, "is not supported. Use one of", languageCodes)
+                return;
+            }
+
+            const currentURL = new URL (window.location.href || document.URL);
+            const pathFound = (' ' + currentURL.pathname).slice(1);
+            const pathShould = ('/' + language + '/' + currentURL.pathname.replace(/^.+?[/]/, ''));
+            if ( pathFound != pathShould ) {
+                console.log("Redirecting to", pathShould, "from", pathFound)
+                window.location.replace(pathShould)
+            }
+        })
+
+        const browserStorageKey = "psdocs_language"
+        let storedLanguage = window.sessionStorage.getItem(browserStorageKey)
+        if (storedLanguage == null) {
+            console.log("First call in session. Determining language...")
+            storedLanguage = getUserLanguage();
+            console.log("Detected", storedLanguage, "as prefered language.")
+            window.sessionStorage.setItem(browserStorageKey, storedLanguage);
+            redirectTo(storedLanguage);
+        }
+        //window.location.replace("/de");
+    })
+
+    languageSelector();
+
+</script>
