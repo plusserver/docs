@@ -38,6 +38,12 @@ Nachdem der Snapshot erzeugt worden ist, sollte er im Menü **Schattenkopien** s
 
 ![Screenshot der Snapshotübersicht](snapshots-list.png)
 
+---
+**Auf der Kommandozeile**
+
+``openstack server image create <instance name> --name <snapshot name>``
+---
+
 ## VM löschen
 
 Da Sie nun erfolgreich einen Snapshot Ihrer VM erzeugt haben, können Sie diese nun ausschalten... 
@@ -59,6 +65,12 @@ Dabei gehen Sie - wie beim Erstellen einer Instanz - durch das "Instanz starten"
 ![Screenshot des Instanz starten Dialogs](launch-instance-menu.png)
 
 Insbesondere sollten Sie als "Bootquelle" den Snapshot Ihrer VM auswählen.
+
+---
+**Auf der Kommandozeile**
+
+``openstack server create --image <snapshot-image-id> --flavor <flavor-id> --network <network-id> <new instance name>``
+---
 
 ## Nachbereitende Tests
 
