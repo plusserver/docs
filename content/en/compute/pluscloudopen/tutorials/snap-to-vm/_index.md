@@ -59,6 +59,8 @@ You have to go through the "Launch Instance" menu again and provide the neccessa
 
 ![screenshot of the launch instance menu](launch-instance-menu.png)
 
+Use the snapshot you previously created as source for the new instance.
+
 ## Post-Checks from the User
 
 Please check, whether all properties of your VM have been rebuild regarding the items below:
