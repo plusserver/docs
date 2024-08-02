@@ -45,13 +45,13 @@ This consists of a service router and a distributed router.
 ### Service router
 
 The service router contains all non-distributed services of the edge gateway.
-This includes in particular
+This includes:
 
-* the gateway firewall
-* the NAT engine for SNAT and DNAT
-* the DHCP server
-* the VPN gateway
-* the IPAM for managing IP addresses
+* a gateway firewall
+* a NAT engine for SNAT and DNAT
+* a DHCP server
+* a VPN gateway
+* IPAM for managing IP addresses
 
 ### Distributed Router
 

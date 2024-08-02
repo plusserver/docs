@@ -47,11 +47,11 @@ Dieses besteht aus einem Service Router und einem Distributed Router.
 Der Service Router beinhaltet alle nicht verteilten Dienste des Edge Gateways.
 Hierzu gehören insbesondere:
 
-* die Gateway Firewall
-* die NAT-Engine für SNAT und DNAT
-* der DHCP Server
-* das VPN Gateway
-* das IPAM für die Verwaltung von IP Adressen
+* eine Gateway Firewall
+* eine NAT-Engine für SNAT und DNAT
+* eine DHCP Server
+* eine VPN Gateway
+* eine IPAM für die Verwaltung von IP Adressen
 
 ### Distributed Router
 

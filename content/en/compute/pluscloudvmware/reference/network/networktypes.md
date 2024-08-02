@@ -8,7 +8,7 @@ description: >
    Available network types within pluscloud VMware
 ---
 
-There are various types of networks which can be connected using gateways. 
+There are various types of networks which can be connected using gateways.
 
 ```mermaid
 flowchart LR
