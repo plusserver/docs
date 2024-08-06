@@ -73,3 +73,7 @@ img {
 .entry a:hover {
     text-decoration: underline;
 }
+
+#td-section-nav li.td-sidebar-nav__section-title:has(.ul-2) {
+    margin-bottom: 0.75em;
+}
