@@ -15,16 +15,6 @@ Do you need a database quickly? Then we will guide you through the ordering proc
 
 The order process is done and your DBaaS is up and running. The first thing you should do is getting your [Login Details](../../tutorials/retrieve_login_credentials/).
 
-<!---
-### Create a new Database and User
-
-Use your PostgreSQL-Client to [create your first Database and User](../../tutorials/create_db_and_user/).
-
-### Import your Database
-
-You might want to [migrate](../../tutorials/database_import/) a database from an exisiting project.
--->
-
 ### Use the DBaas in your application
 
 Enjoy our Database-as-a-Service. No admin worries—just connect and go. Focus on your app, we manage the rest.

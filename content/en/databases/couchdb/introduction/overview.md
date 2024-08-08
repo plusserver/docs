@@ -24,9 +24,7 @@ Database-as-a-Service (DBaaS) represents a suite of fully managed microservices 
 **Scalability:**
 
 - Vertical scaling by adjusting instance sizes.
-<!-->
-- Horizontal scaling by adding read replicas.
--->
+
 **Automatic Backups:**
 
 - Daily automatic backups with a default retention period of 7 days.
