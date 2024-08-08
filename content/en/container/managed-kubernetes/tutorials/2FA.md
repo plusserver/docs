@@ -49,7 +49,7 @@ There go to “browser”. This is conveniently the default flow for the clients
 
 # Step 5
 
-Install the kubectl plugin oidc-login:
+Install the kubectl plugin oidc-login. We highly recommend the krew installation tool, which also makes other plugins easily available.
 ```
 kubectl krew install oidc-login
 ```
@@ -177,9 +177,12 @@ NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 service/kubernetes   ClusterIP   100.64.0.1   <none>        443/TCP   86m
 ```
 
-Note:
-After a successful login, kubectl uses a token for authentication so that you don’t have to provide user and password for every new kubectl command. How long the token is valid can be configured. If you want to log in again earlier, reset plugin oidc-login:
+> **Note:** After a successful login, kubectl uses a token for authentication so that you don’t have to provide user and password for every new kubectl command. How long the token is valid can be configured. If you want to log in again earlier, reset plugin oidc-login:
 
     Delete directory ~/.kube/cache/oidc-login.
     Delete the browser cache.
 
+
+# Further security measures for your cluster
+
+In addition to using 2FA we recommend you regularly rotate your Gardener token you use in order log in to the dashboard. To do so just open your Gardener dashboard and navigate to "Members" on the left hand side menu bar. Then under "Service Accounts" identify the account you want to reset the roles of. To rotate the token simply press "Reset Service Account" (the rotating arrow symbol) of the according account.
