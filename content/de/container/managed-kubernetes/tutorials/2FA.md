@@ -50,7 +50,7 @@ Gehen Sie dort auf "Browser". Dies ist praktischerweise der Standardablauf für 
 
 # Schritt 5
 
-Installieren Sie das kubectl plugin "oidc-login":
+Installieren Sie das kubectl plugin "oidc-login". Wir empfehlen das krew-Installationstool, das auch die Installation anderer Plugins leicht macht.
 ```
 kubectl krew install oidc-login
 ```
@@ -179,9 +179,14 @@ Opening in existing browser session.
 NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 service/kubernetes   ClusterIP   100.64.0.1   <none>        443/TCP   86m
 ```
-Anmerkung:
-Nach erfolgreicher Anmeldung verwendet kubectl ein Token zur Authentifizierung, so dass Sie nicht bei jedem neuen kubectl-Befehl Benutzer und Passwort angeben müssen. Wie lange der Token gültig ist, kann konfiguriert werden. Wenn Sie sich früher wieder anmelden wollen, setzen Sie das Plugin oidc-login zurück:
+
+> **Note:** Nach erfolgreicher Anmeldung verwendet kubectl ein Token zur Authentifizierung, so dass Sie nicht bei jedem neuen kubectl-Befehl Benutzer und Passwort angeben müssen. Wie lange der Token gültig ist, kann konfiguriert werden. Wenn Sie sich früher wieder anmelden wollen, setzen Sie das Plugin oidc-login zurück:
 
     Delete directory ~/.kube/cache/oidc-login.
     Delete the browser cache.
+
+
+# Weitere Sicherheitsmaßnahmen für Ihren Cluster
+
+Zusätzlich zur Verwendung von 2FA empfehlen wir Ihnen, Ihr Gardener-Token, das Sie für die Anmeldung im Dashboard verwenden, regelmäßig zu wechseln. Öffnen Sie dazu einfach Ihr Gardener-Dashboard und navigieren Sie zu "Member" in der linken Menüleiste. Wählen Sie dann unter "Serviceaccounts" das Konto aus, dessen token Sie zurücksetzen möchten. Um den Token zu rotieren, drücken Sie einfach auf "Reset Service Account" (das rotierende Pfeilsymbol) des entsprechenden Accounts.
 
