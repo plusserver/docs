@@ -40,7 +40,7 @@ The parameters listed in the table represent the specific configuration settings
 - **Max:** Displays the maximum permissible value for numeric parameters.
 - **Allowed Values:** Lists the values allowed for string parameters.
 
-### Verfügbare PostgreSQL Extension PostgreSQL 14
+### Available PostgreSQL Extension PostgreSQL 14
 
 | **Name**                        | **Version** | **Comment**                                                                                             |
 |---------------------------------|-------------|---------------------------------------------------------------------|
@@ -63,7 +63,7 @@ The parameters listed in the table represent the specific configuration settings
 | [tsm_system_time](https://www.postgresql.org/docs/14/tsm-system-time.html) | 1.0 | TABLESAMPLE method which accepts time in milliseconds as a limit |
 | [uuid-ossp](https://www.postgresql.org/docs/14/uuid-ossp.html) | 1.1 | generate universally unique identifiers (UUIDs) |
 
-### Verfügbare PostgreSQL Extension PostgreSQL 15
+### Available PostgreSQL Extension PostgreSQL 15
 
 | **Name**                        | **Version** | **Comment**                                                                                             |
 |---------------------------------|-------------|---------------------------------------------------------------------|
@@ -86,8 +86,7 @@ The parameters listed in the table represent the specific configuration settings
 | [tsm_system_time](https://www.postgresql.org/docs/15/tsm-system-time.html) | 1.0 | TABLESAMPLE method which accepts time in milliseconds as a limit |
 | [uuid-ossp](https://www.postgresql.org/docs/15/uuid-ossp.html) | 1.1 | generate universally unique identifiers (UUIDs) |
 
-
-### Verfügbare PostgreSQL Extension PostgreSQL 16
+### Available PostgreSQL Extension PostgreSQL 16
 
 | **Name**                        | **Version** | **Comment**                                                                                             |
 |---------------------------------|-------------|---------------------------------------------------------------------|
@@ -110,10 +109,6 @@ The parameters listed in the table represent the specific configuration settings
 | [tsm_system_time](https://www.postgresql.org/docs/16/tsm-system-time.html) | 1.0 | TABLESAMPLE method which accepts time in milliseconds as a limit |
 | [uuid-ossp](https://www.postgresql.org/docs/16/uuid-ossp.html) | 1.1 | generate universally unique identifiers (UUIDs) |
 
-<br>
-
 **For custom DBaaS configurations including parameters not listed above, please submit a [support ticket](https://customerservice.plusserver.com/support/ticket-create) to our team.**
-
-<br>
 
 >*We're working on a feature to let you directly modify configuration parameters in our customer portal. Until then we thank you for your patience as we improve our services.*

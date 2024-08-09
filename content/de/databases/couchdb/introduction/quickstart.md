@@ -15,6 +15,14 @@ Sie brauchen schnell eine Datenbank? Dann führen wir Sie [hier](../../tutorials
 
 Der Bestellvorgang ist abgeschlossen und Ihr DBaaS ist einsatzbereit. Das erste, was Sie tun sollten, ist Ihre [Anmeldedaten](../../tutorials/retrieve_login_credentials/) abzurufen.
 
+### Erstellen Sie eine neue Datenbank und einen neuen Benutzer
+
+Verwenden Sie Ihren MySQL-Client, um [Ihre erste Datenbank und Ihren ersten Benutzer anzulegen](../../tutorials/create_db_and_user/).
+
+### Importieren Sie Ihre Datenbank
+
+Vielleicht möchten Sie eine Datenbank aus einem bestehenden Projekt [migrieren](../../tutorials/database_import/).  
+
 ### Verwenden Sie die DBaas in Ihrer Anwendung
 
 Genießen Sie unseren Datenbank-as-a-Service. Keine Verwaltungssorgen - einfach anschließen und loslegen. Konzentrieren Sie sich auf Ihre Anwendung, wir kümmern uns um den Rest.
@@ -26,6 +34,8 @@ Genießen Sie unseren Datenbank-as-a-Service. Keine Verwaltungssorgen - einfach 
 Es gibt zwei Möglichkeiten, unsere DBaaS zu skalieren.
 
 - Vertikale Skalierung: Zuallererst können Sie die *Knotengröße* Ihrer DBaaS-Instanz ändern. Alle verfügbaren Optionen werden [hier](../../documentation/nodesize/) erläutert.
+
+- Horizontale Skalierung: Zweitens können Sie [Read-Replicas](../../documentation/read_replicas/) zu Ihrer DBaaS hinzufügen. Wenn Ihre Anwendung in der Lage ist, Lese-/Schreiboperationen zu verteilen, kann diese Funktion die Reaktionsfähigkeit des Systems insgesamt stark verbessern.
 
 ### Konfiguration
 
