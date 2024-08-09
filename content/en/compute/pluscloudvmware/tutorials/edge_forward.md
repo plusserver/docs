@@ -5,8 +5,10 @@ type: "docs"
 weight: 10
 date: 2024-08-07
 description: >
-   Configuring a VMware Edge Gateway to Forward All Traffic to a Firewall VM
+   Configuring a VMware Edge Gateway to forward all traffic to a firewall VM
 ---
+
+One way to filter the traffic in your private cloud, is routing all traffic to a firewall who does it. This firewall can be deployed as a VM.
 
 To configure a VMware Edge Gateway so that all traffic is forwarded to a firewall in a VM (essentially putting the Edge Gateway in "pass-through" mode), you need to follow some specific steps. This involves configuring network rules and potentially disabling the Edge Gateway firewall functionality. Here are the general steps you can follow:
 
