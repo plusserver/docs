@@ -8,6 +8,8 @@ description: >
     Konfigurieren eines VMware Edge Gateways zum Weiterleiten des gesamten Datenverkehrs an eine Firewall-VM
 ---
 
+Eine Möglichkeit, den Datenverkehr in Ihrer privaten Cloud zu filtern, besteht darin, den gesamten Datenverkehr an eine Firewall weiterzuleiten, die dies übernimmt. Diese Firewall kann als VM bereitgestellt werden.
+
 Um ein VMware Edge Gateway so zu konfigurieren, dass der gesamte Datenverkehr an eine Firewall in einer VM weitergeleitet wird (also das Edge Gateway im Prinzip "auf Durchzug" gestellt wird), müssen Sie einige spezifische Schritte befolgen. Dies umfasst die Konfiguration von Netzwerkregeln und eventuell das Deaktivieren der Edge Gateway Firewall-Funktionalität. Hier sind die allgemeinen Schritte, die Sie befolgen können:
 
 ## Schritt 1: Konfigurieren Sie die Edge Gateway-Firewall
