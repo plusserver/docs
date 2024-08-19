@@ -22,7 +22,7 @@ In the pluscloud open, the integrated object storage is ideal for these status f
 
 To be able to use the object storage, we need a container or bucket in the s3 language, the s3 endpoint and the access data.
 
-### Zugangsdaten
+### Credentials
 
 To get your S3 credentials, you need to [configure your OpenStackClient correctly](/en/compute/pluscloudopen/introduction/environments/#credentials-for-cli-tools). Once this is done, you can enter the following command:
 
