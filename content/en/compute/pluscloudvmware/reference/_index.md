@@ -8,4 +8,4 @@ description: >
   Documentation on working with various features of pluscloud VMware
 ---
 
-In this section of our documentation, we want to provide some knowledge about the various aspects of features of pluscloud v.
+In this section of our documentation, we want to provide some knowledge about the various aspects of features of pluscloud VMware.
