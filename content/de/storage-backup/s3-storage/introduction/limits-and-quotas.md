@@ -6,14 +6,14 @@ weight: 30
 date: "2024-02-06"
 ---
 
-### Anzahl der Buckets
+## Anzahl der Buckets
 
 AWS S3 bietet standardmäßig eine Begrenzung von 100 Buckets pro Mandant. Bei Bedarf kann diese Begrenzung durch eine spezielle Freischaltung von Amazon in AWS auf bis zu 1.000 Buckets erhöht werden.
 
 Im Vergleich dazu bietet unser plusserver S3-Service standardmäßig eine Limitierung von 1.000 Buckets pro Mandant. 
 Beachten Sie bitte, dass diese Grenze nicht weiter erhöht werden kann.
 
-### Generelle Features und Beschränkungen
+## Generelle Features und Beschränkungen
 
 - Maximal 200 (GET/HEAD) RPOs und 200 (PUT/POST/DELETE) RPOs pro Tenant
 - Bis zu 100 Millionen Objekte pro Bucket
@@ -31,7 +31,8 @@ Beachten Sie bitte, dass diese Grenze nicht weiter erhöht werden kann.
 - Object Lock Support
 - Versionierung Support
 
-**Bucket-Namen Features und Beschränkungen:**
+### Bucket-Namen Features und Beschränkungen
+
 - Ein Bucketname muss zwischen 3 (min) bis 63 (max) Zeichen lang sein. Der Suffix (-mirr / -repl) ist
 davon abzuziehen
 - in Bucketname darf nur Kleinbuchstaben, Nummern, Punkte (.) und Bindestriche enthalten

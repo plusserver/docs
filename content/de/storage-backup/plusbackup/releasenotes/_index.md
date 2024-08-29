@@ -7,4 +7,3 @@ weight: 30
 date: 2024-02-06
 ---
 
-Befindet sich in der Entwicklung.

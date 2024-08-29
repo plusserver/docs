@@ -6,13 +6,13 @@ weight: 30
 date: "2024-02-06"
 ---
 
-### Number of Buckets
+## Number of Buckets
 
 AWS S3 provides a default limit of 100 buckets per tenant. This limit can be increased to up to 1,000 buckets through a special activation by Amazon in AWS if needed.
 
 In comparison, our PlusServer S3 service has a default limitation of 1,000 buckets per tenant. Please note that this limit cannot be further increased.
 
-### General features and restrictions
+## General features and restrictions
 
 - Maximum of 200 (GET/HEAD) RPOs and 200 (PUT/POST/DELETE) RPOs per tenant
 - Up to 100 million objects per bucket
@@ -30,7 +30,8 @@ In comparison, our PlusServer S3 service has a default limitation of 1,000 bucke
 - Object lock support
 - Versioning support
 
-**Bucket-Namen Features und Beschränkungen:**
+### Bucket-Namen Features und Beschränkungen:
+
 - A bucket name must be between 3 (min) and 63 (max) characters long. The suffix (-mirr / -repl) must be deducted from this
 - a bucket name may only contain lowercase letters, numbers, dots (.) and hyphens
 - A bucket name must not contain the format of an IP address (e.g. 192.168.1.42)
