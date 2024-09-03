@@ -48,6 +48,7 @@ Starting from Veeam Backup & Replication 11a, the **"ListAllMyBuckets"** permiss
 }
 ```
 **Replace "yourbucketname" with the actual name of your bucket. Note that the "ListAllMyBuckets" permission is not required from Veeam Backup & Replication 11a onward if you manually specify the bucket name in the wizard.**
+
 ### Immutable Buckets
 
 For the use of immutable buckets, please use the following JSON policy to create an IAM policy. These permissions allow the Veeam Backup Service to access the S3 repository to store or retrieve data from an object repository.
