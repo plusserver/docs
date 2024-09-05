@@ -59,10 +59,10 @@ Die folgende Tabelle zeigt die Liste aller öffentlichen Compute Flavors:
 
 Als zertifizierter Souvereing Cloud Stack implementieren wir die neuesten Compute Flavor Spezifikationen.
 Teil des Lifecycle-Managements ist es auch, alte Compute Flavors zu verwerfen. Die Eigenschaft 'os:deprecation' wird verwendet, um anzuzeigen, wann ein
-Compute Flavor als veraltet eingestuft wirdi. Dies signalisierti, dass er in der Zukunft entfernt wird oder eingestellt werden kann.
+Compute Flavor als veraltet eingestuft wird. Dies signalisiert, dass er in der Zukunft entfernt wird oder eingestellt werden kann.
 Sie können auch einen Hinweis im Beschreibungsfeld finden.
 
-Die folgende Tabelle zeigt die veralteten Compute Flavors und das Datum ihrer Abschaffung.
+Die folgende Tabelle zeigt die veralteten Compute Flavors und deren Abschaltdatum.
 
 
 {{% alert title="Hinweis" color="warning" %}}
