@@ -7,11 +7,11 @@ description: >
   Compute Flavors und Betriebssystem-Images in der pluscloud open
 ---
 
-Um eine VM zu erstellen, müssen Sie ihre Größe und das Betriebssystem angeben, das sie ausführen soll. Ersteres wird durch ein [Compute Flavor](../../../reference/instances-and-images/flavors/) und letzteres durch das [Boot Image](#images) angegeben.
+Um eine VM zu erstellen, müssen Sie die Größe und das Betriebssystem angeben. Ersteres wird durch ein [Compute Flavor](../../../reference/instances-and-images/flavors/) und letzteres durch das [Boot Image](#images) angegeben.
 
 ## Compute Flavors
 
-[Compute Flavor](../../../reference/instances-and-images/flavors/) sind vordefinierte Konfigurationen, die die Menge an CPU-, RAM- und Speicherressourcen bestimmen, die einer virtuellen Maschine zugewiesen werden. Jeder Flavor bietet eine andere Kombination dieser Ressourcen, so dass der Benutzer die passende Konfiguration je nach den Leistungsanforderungen seiner Anwendung auswählen kann.
+[Compute Flavor](../../../reference/instances-and-images/flavors/) sind vordefinierte Konfigurationen, die die Menge an CPU-, RAM- und Speicherressourcen bestimmen, die einer virtuellen Maschine zugewiesen werden. Jedes Flavor bietet eine andere Kombination dieser Ressourcen, so dass der Benutzer die passende Konfiguration je nach den Leistungsanforderungen seiner Anwendung auswählen kann.
 
 pluscloud open verwendet den [SCS-Standard](https://github.com/SovereignCloudStack/standards) für die Benennung von Flavors. Dieser Standard verwendet eine Kombination aus Buchstaben und Zahlen, um die Spezifikationen der einzelnen Flavors zu beschreiben. Der erste Teil des Namens gibt die Anzahl der im Flavor verfügbaren virtuellen CPUs (vCPUs) an, während der zweite Teil die Menge des verfügbaren Arbeitsspeichers (RAM) beschreibt. Der dritte Teil, falls vorhanden, gibt die Menge an Festplattenspeicher an, die der Instanz zugewiesen wurde. Bei Flavors mit zusätzlichem Festplattenspeicher wird auch die Größe der Festplatte im Namen angegeben. Allen Flavors, die diesem Standard folgen, wird ein „SCS-“ vorangestellt.
 

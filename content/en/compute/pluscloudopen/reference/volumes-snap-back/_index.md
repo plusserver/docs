@@ -1,16 +1,16 @@
 ---
-title: "(Encrypted) volumes, snapshots and backups"
+title: "Volumes, snapshots and backups"
 type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Creating (encrypted) volumes, snapshots and backups
+  Creating and managing volumes, snapshots and backups
 ---
 
 ## Volumes
 
 Volumes represent (Block) Storage in OpenStack. Volumes are used as disks in instances. If not explicitly mentioned otherwise, volumes reside on a [Ceph](https://ceph.io/en/) storage system and are attached to the instance via network using the [RADOS](https://docs.ceph.com/en/quincy/rbd/index.html) protocol.
-The "**Volumes**" menu allows you to manage volumes in your project. 
+The "**Volumes**" menu allows you to manage volumes in your project.
 
 <img src="image2020-10-22_15-21-57.png" alt="screenshot of the volumes menu" width="50%" height="50%" title="Volumes menu">
 
@@ -38,6 +38,40 @@ To create a new volume you click on "+Create Volume" and then you will be taken 
 
 In addition to a name and an optional description, you can choose a "**Volume Source**", e. g. an image, a snapshot or other volumes. Depending on your choice, the input fields change (but they are self-explanatory). The chosen source determines the size of the new volume. You can assign the volume to previously defined volume "**Group**".
 
+### Volume Types
+
+{{% alert title="New" color="info" %}}
+Coming soon! See [Release Notes](../../releasenotes/)
+{{% /alert %}}
+
+Volume types help you choose the right storage for your workloads based on your needs. You can select between normal or encrypted storage for data security or premium storage that offers higher IOPS and throughput for performance-intensive applications. By offering these options, you can tailor your storage to match the demands of your specific workloads, ensuring that critical applications run smoothly while balancing performance, cost, and security within your cloud environment.
+
+Overview of current supported Volume Types:
+| Volume Type          | Encrypted | Read IOPS | Write IOPS | Read MB/s | Write MB/s |
+|----------------------|---------- |-----------|------------|-----------|------------|
+| ceph-standard        | No        | 2500      | 2500       | 256      | 256         |
+| ceph-premium         | No        | 5000      | 5000       | 512      | 512         |
+| ceph-standard-luks   | Yes       | 2500      | 2500       | 256      | 256         |
+| ceph-premium-luks    | Yes       | 5000      | 5000       | 512      | 512         |
+
+Overview of deprecated Volume Types:
+| Volume Type          | Encrypted | Read IOPS | Write IOPS | Read MB/s | Write MB/s |
+|----------------------|---------- |-----------|------------|-----------|------------|
+| \_\_DEFAULT\_\_      | No        | 2500      | 2500       | 256      | 256         |
+| LUKS                 | Yes       | 2500      | 2500       | 256      | 256         |
+
+{{% alert title="Note" color="info" %}}
+Actual throughput is the product of IOPS and I/O size. For example, with 2500 IOPS and a block size of 4K, you can achieve 10 MB/s. With a block size of 102400 bytes you will get 256 MB/s.
+{{% /alert %}}
+
+#### Change Volume Types
+
+You can change the Volume Type for an existing Volume at a later date. However, it must be in
+"available" state. This means that it must not be attached to a VM at the time.
+
+If you want to migrate to and from Encrypted Volumes, you must allow migration. Depending on the
+size of the Volume, this may take some time.
+
 ## Backups
 
 The "**Backups**" menu lists your current backups and allows you to either delete them or use them for recovery (e. g. by creating a new volume from the backup).
@@ -56,7 +90,7 @@ Here you can manage your group snapshots.
 
 ## Encrypted volumes
 
-Pluscloud open allows you to create encrypted volumes, which are based on "LUKS" ([Linux Unified Key Setup](https://gitlab.com/cryptsetup/cryptsetup)), which uses the Linux kernel module dm-crypt and is ideal for encrypting volumes for Linux instances. Keys are generated during the creation of the volume and saved into the keystore on pluscloud open. Be aware that deleting encrypted volumes not only deletes the volume but also the associated key. **Recovery of the data will not be possible** after deletion. 
+Pluscloud open allows you to create encrypted volumes, which are based on "LUKS" ([Linux Unified Key Setup](https://gitlab.com/cryptsetup/cryptsetup)), which uses the Linux kernel module dm-crypt and is ideal for encrypting volumes for Linux instances. Keys are generated during the creation of the volume and saved into the keystore on pluscloud open. Be aware that deleting encrypted volumes not only deletes the volume but also the associated key. **Recovery of the data will not be possible** after deletion.
 
 Creating an encrypted volume is pretty easy. You just choose "LUKS" as "**Type**":
 
@@ -71,9 +105,9 @@ The web GUI does not allow the creation of encrypted root volumes, which you nee
 ### Encrypted boot images
 
 To encrypt the root volume of an instance, you must first create an encrypted volume first to use that as a root volume for a new instance. You create this volume from an image of the operating system you want to use for your new instance:
-    
+
     openstack volume create --type LUKS --image "imagename" --size <size in gb> <volume name>
-     
+
     openstack volume create --type LUKS --image "Ubuntu 20.04" --size 20 ubuntuencrypt
     +---------------------+--------------------------------------+
     | Field               | Value                                |
@@ -104,7 +138,7 @@ The parameter "**--image**" allows you to create a volume directly from an image
 Now you can create an instance using the volume you just created. You need to add a flavor (name or ID) and you should not forget to add an SSH key name that will allow you to log in to the instance. You also need to add an existing network, where the instance will be spawned:
 
     openstack server create --flavor <Flavor name or ID> --network <network name or ID> --key-name <keyname> --volume <volumename or ID> <instancename>
- 
+
     openstack server create --flavor 1C-1GB-20GB --network Test --key-name mhamm --volume cd4d8c9a-632a-4045-8b09-da57fcbc5848 bootencubuntu
     +-----------------------------+----------------------------------------------------+
     | Field                       | Value                                              |
