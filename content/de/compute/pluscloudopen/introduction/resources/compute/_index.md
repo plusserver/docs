@@ -2,64 +2,18 @@
 title: "Compute"
 type: "docs"
 weight: 30
-date: 2023-03-10
+date: 2023-09-05
 description: >
   Compute Flavors und Betriebssystem-Images in der pluscloud open
 ---
 
+Um eine VM zu erstellen, müssen Sie ihre Größe und das Betriebssystem angeben, das sie ausführen soll. Ersteres wird durch ein [Compute Flavor](../../../reference/instances-and-images/flavors/) und letzteres durch das [Boot Image](#images) angegeben.
+
 ## Compute Flavors
 
-Die pluscloud open verwendet den [SCS-Standard](https://github.com/SovereignCloudStack/standards) für die Benennung von Instanztypen (Flavors). Dieser Standard verwendet eine Kombination aus Buchstaben und Zahlen, um die Spezifikationen der einzelnen Flavors zu beschreiben. Der erste Teil des Namens gibt die Anzahl der im Flavor verfügbaren virtuellen CPUs (VCPUs) an, während der zweite Teil die Menge des verfügbaren Arbeitsspeichers (RAM) beschreibt. Der dritte Teil gibt, falls vorhanden, den der Instanz zugewiesenen Festplattenspeicher an. Bei Flavors mit zusätzlichem Festplattenspeicher wird auch die Größe der Festplatte im Namen angegeben. Allen Flavors, die diesem Standard folgen, wird ein "SCS-" vorangestellt.
+[Compute Flavor](../../../reference/instances-and-images/flavors/) sind vordefinierte Konfigurationen, die die Menge an CPU-, RAM- und Speicherressourcen bestimmen, die einer virtuellen Maschine zugewiesen werden. Jeder Flavor bietet eine andere Kombination dieser Ressourcen, so dass der Benutzer die passende Konfiguration je nach den Leistungsanforderungen seiner Anwendung auswählen kann.
 
-| Name           | vCPUs | RAM   | Festplatte |
-|----------------|-------|-------|------------|
-| SCS-1V:0.5     | 1     |   512 |          0 |
-| SCS-1V:0,5:20  | 1     |   512 |         20 |
-| SCS-1L:1       | 1     |  1024 |          0 |
-| SCS-1V:1       | 1     |  1024 |          0 |
-| SCS-1L:1:5     | 1     |  1024 |          5 |
-| SCS-1V:1:10    | 1     |  1024 |         10 |
-| SCS-1V:1:20    | 1     |  1024 |         20 |
-| SCS-1V:2       | 1     |  2048 |          0 |
-| SCS-1V:2:5     | 1     |  2048 |          5 |
-| SCS-1V:4       | 1     |  4096 |          0 |
-| SCS-1V:4:10    | 1     |  4096 |         10 |
-| SCS-1V:8       | 1     |  8192 |          0 |
-| SCS-1V:8:20    | 1     |  8192 |         20 |
-| SCS-2V:2       | 2     |  2048 |          0 |
-| SCS-2V:2:20    | 2     |  2048 |         20 |
-| SCS-2V:4       | 2     |  4096 |          0 |
-| SCS-2V:4:10    | 2     |  4096 |         10 |
-| SCS-2V:4:20    | 2     |  4096 |         20 |
-| SCS-2V:4:50    | 2     |  4096 |         50 |
-| SCS-2V:4:100   | 2     |  4096 |        100 |
-| SCS-2V:8       | 2     |  8192 |          0 |
-| SCS-2V:8:20    | 2     |  8192 |         20 |
-| SCS-2V:8:100   | 2     |  8192 |        100 |
-| SCS-2V:16      | 2     | 16384 |          0 |
-| SCS-2V:16:50   | 2     | 16384 |         50 |
-| SCS-4V:8       | 4     |  8192 |          0 |
-| SCS-4V:8:20    | 4     |  8192 |         20 |
-| SCS-4V:8:50    | 4     |  8192 |         50 |
-| SCS-4V:8:100   | 4     |  8192 |        100 |
-| SCS-4V:16      | 4     | 16384 |          0 |
-| SCS-4V:16:50   | 4     | 16384 |         50 |
-| SCS-4V:16:100  | 4     | 16384 |        100 |
-| SCS-4V:32      | 4     | 32768 |          0 |
-| SCS-4V:32:50   | 4     | 32768 |         50 |
-| SCS-4V:32:100  | 4     | 32768 |        100 |
-| SCS-8V:8       | 8     |  8192 |          0 |
-| SCS-8V:8:100   | 8     |  8192 |        100 |
-| SCS-8V:16      | 8     | 16384 |          0 |
-| SCS-8V:16:50   | 8     | 16384 |         50 |
-| SCS-8V:16:100  | 8     | 16384 |        100 |
-| SCS-8V:32      | 8     | 32768 |          0 |
-| SCS-8V:32:50   | 8     | 32768 |         50 |
-| SCS-8V:32:100  | 8     | 32768 |        100 |
-| SCS-16V:32     | 16    | 32768 |          0 |
-| SCS-16V:32:100 | 16    | 32768 |        100 |
-| SCS-16V:64     | 16    | 65536 |          0 |
-| SCS-16V:64:100 | 16    | 65536 |        100 |
+pluscloud open verwendet den [SCS-Standard](https://github.com/SovereignCloudStack/standards) für die Benennung von Flavors. Dieser Standard verwendet eine Kombination aus Buchstaben und Zahlen, um die Spezifikationen der einzelnen Flavors zu beschreiben. Der erste Teil des Namens gibt die Anzahl der im Flavor verfügbaren virtuellen CPUs (vCPUs) an, während der zweite Teil die Menge des verfügbaren Arbeitsspeichers (RAM) beschreibt. Der dritte Teil, falls vorhanden, gibt die Menge an Festplattenspeicher an, die der Instanz zugewiesen wurde. Bei Flavors mit zusätzlichem Festplattenspeicher wird auch die Größe der Festplatte im Namen angegeben. Allen Flavors, die diesem Standard folgen, wird ein „SCS-“ vorangestellt.
 
 ## Images
 
@@ -73,13 +27,17 @@ Die pluscloud open bietet eine Vielzahl von unveränderten Upstream-Betriebssyst
 |----------------------|
 | AlmaLinux 8          |
 | AlmaLinux 9          |
-| Debian 10            |
+| CirrOS 0.6.1         |
 | Debian 11            |
-| Ubuntu 18.04         |
+| Debian 12            |
+| Flatcar Container Linux 3815.2.0 |
+| Flatcar Container Linux 3815.2.5 |
 | Ubuntu 20.04         |
 | Ubuntu 22.04         |
+| Ubuntu 24.04         |
 | Ubuntu Minimal 20.04 |
 | Ubuntu Minimal 22.04 |
+| Ubuntu Minimal 24.04 |
 
 Es ist wichtig zu beachten, dass die pluscloud open den [SCS-Standard](https://github.com/SovereignCloudStack/standards) für Image-Metadaten verwendet, um Metadaten zu den bereitgestellten OS-Images hinzuzufügen. Dies ermöglicht eine bessere Integration mit der OpenStack-Plattform und liefert zusätzliche Informationen über die Images, wie z. B. die Betriebssystemversion und Architektur.
 
