@@ -32,7 +32,6 @@ pygmentsUseClassic = false
 pygmentsStyle = "tango"
 
 
-
 #
 # Language configuration
 #
@@ -64,7 +63,6 @@ time_format_blog = "02.01.2006"
 privacy_policy = "https://www.plusserver.com/datenschutzerklaerung/"
 
 
-
 #
 # Markdown rendering settings
 #
@@ -79,14 +77,13 @@ unsafe = true
 # Select Code highlighting style. See https://xyproto.github.io/splash/docs/all.html for a list of all available styles
 style = "github"
 # Uncomment if you want your chosen highlight style used for code blocks without a specified language
-guessSyntax = "true"
+guessSyntax = true
 
 # Everything below this are Site Params
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
 section = ["HTML", "RSS"]
 #section = ["HTML", "print", "RSS"]
-
 
 
 #
@@ -96,7 +93,7 @@ section = ["HTML", "RSS"]
 [imaging]
 resampleFilter = "CatmullRom" # https://gohugo.io/content-management/image-processing/#resampling-filter
 quality = 75
-anchor = "smart"
+anchor = "Smart"
 
 [imaging.exif]
 disableDate = false
@@ -105,23 +102,21 @@ excludeFields = ''
 includeFields = ''
 
 
-
 # Privacy settings for embedded templates. Will probably not affect docsy templates.
 # https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
-  [privacy.disqus]
-    disable = true
-  [privacy.googleAnalytics]
-    disable = true
-  [privacy.instagram]
-    disable = true
-  [privacy.twitter]
-    disable = true
-  [privacy.vimeo]
-    disable = true
-  [privacy.youtube]
-    disable = true
-
+[privacy.disqus]
+disable = true
+[privacy.googleAnalytics]
+disable = true
+[privacy.instagram]
+disable = true
+[privacy.twitter]
+disable = true
+[privacy.vimeo]
+disable = true
+[privacy.youtube]
+disable = true
 
 
 #
@@ -178,10 +173,9 @@ ul_show = 2
 enable = true
 
 
-
 [params.links]
 
-# German links showing up on the left side of the footer
+# English links showing up on the left side of the footer
 [[languages.en.params.links.user]]
 name = "plusserver"
 url = "https://www.plusserver.com/en/"
@@ -193,19 +187,19 @@ url = "https://github.com/plusserver"
 icon = "fab fa-github"
 desc = "Development takes place here!"
 
-# German links showing up on the right side of the footer
+# English links showing up on the right side of the footer
 [[languages.en.params.links.developer]]
-name = "Kontakt"
-url = "https://www.plusserver.com/en/support/"
+name = "Contact"
+url = "https://www.plusserver.com/de/support/"
 icon = "fa-solid fa-phone"
-desc = "plusserver gmbh Kontakt"
+desc = "plusserver gmbh Contact"
 [[languages.en.params.links.developer]]
-name = "Impressum"
+name = "Imprint"
 url = "https://www.plusserver.com/impressum/"
 icon = "fa-solid fa-gavel"
-desc = "plusserver gmbh Impressum"
+desc = "plusserver gmbh Legal notice"
 
-# English links showing up on the left side of the footer
+# German links showing up on the left side of the footer
 [[languages.de.params.links.user]]
 name = "plusserver"
 url = "https://www.plusserver.com/"
@@ -216,19 +210,17 @@ name = "GitHub"
 url = "https://github.com/plusserver"
 icon = "fab fa-github"
 desc = "Development takes place here!"
-
-# English links showing up on the right side of the footer
+# German links showing up on the right side of the footer
 [[languages.de.params.links.developer]]
-name = "Contact"
-url = "https://www.plusserver.com/de/support/"
+name = "Kontakt"
+url = "https://www.plusserver.com/en/support/"
 icon = "fa-solid fa-phone"
-desc = "plusserver gmbh Contact"
+desc = "plusserver gmbh Kontakt"
 [[languages.de.params.links.developer]]
-name = "Imprint"
+name = "Impressum"
 url = "https://www.plusserver.com/impressum/"
 icon = "fa-solid fa-gavel"
-desc = "plusserver gmbh Legal notice"
-
+desc = "plusserver gmbh Impressum"
 
 
 #
