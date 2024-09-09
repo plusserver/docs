@@ -3,7 +3,7 @@
 title: "Compute Flavor"
 type: "docs"
 weight: 60
-date: 2024-09-05
+date: 2024-09-06
 description: >
  Liste der verfügbaren Compute Flavors
 ---
@@ -12,7 +12,7 @@ description: >
 ## Überblick
 
 Compute Flavors sind vordefinierte Konfigurationen, die die Menge der CPU-, RAM- und Speicher-Ressourcen bestimmen,
-die einer virtuellen Maschine zugewiesen werden. Jeder Flavor bietet eine andere Kombination dieser Ressourcen,
+die einer virtuellen Maschine zugewiesen werden. Jedes Flavor bietet eine andere Kombination dieser Ressourcen,
 die es dem Benutzer ermöglicht, je nach den Leistungsanforderungen seiner Anwendungen die passende zu wählen.
 
 pluscloud open verwendet den [SCS-Standard](https://github.com/SovereignCloudStack/standards) für die Benennung von Flavors.
@@ -24,7 +24,7 @@ Allen Flavors, die diesem Standard folgen, ist ein „SCS-“ vorangestellt.
 
 
 {{% alert title="Hinweis" color="info" %}}
-Reguläre Compute Flavors mit Festplatten werden nun zugunsten von Diskless Flavors veraltet,
+Reguläre Compute Flavors mit Festplatten werden nun zugunsten von Diskless Flavors ersetzt,
 um Verwechslungen mit Local SSD Storage (gekennzeichnet durch ein „s“ nach der Festplattengröße) zu vermeiden.
 {{% /alert %}}
 
@@ -60,7 +60,7 @@ Die folgende Tabelle zeigt die Liste aller öffentlichen Compute Flavors:
 Als zertifizierter Souvereing Cloud Stack implementieren wir die neuesten Compute Flavor Spezifikationen.
 Teil des Lifecycle-Managements ist es auch, alte Compute Flavors zu verwerfen. Die Eigenschaft 'os:deprecation' wird verwendet, um anzuzeigen, wann ein
 Compute Flavor als veraltet eingestuft wird. Dies signalisiert, dass er in der Zukunft entfernt wird oder eingestellt werden kann.
-Sie können auch einen Hinweis im Beschreibungsfeld finden.
+Sie können auch in der Beschreibung einen Hinweis finden.
 
 Die folgende Tabelle zeigt die veralteten Compute Flavors und deren Abschaltdatum.
 
