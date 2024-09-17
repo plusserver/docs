@@ -71,18 +71,18 @@ And we decide, that it is time to resize the instance to a flavor with more vCPU
 
     (openstack-client) debian@test:~$ openstack server resize --flavor SCS-2V-4 zuklein
     (openstack-client) debian@test:~$ openstack server list |grep zuklein
-    | 433ee1e1-5928-4453-8e09-fd3ec0ccd618 | zuklein                                                    | RESIZE | mynetwork=10.8.0.178                | N/A (booted from volume)  | SCS-2V-4          |
+    | 433ee1e1-5928-4453-8e09-fd3ec0ccd618 | zuklein | RESIZE | mynetwork=10.8.0.178 | N/A (booted from volume) | SCS-2V-4 |
 
 As you see, the command comes back without an error and the instance changes its status to 'RESIZE'. As soon as the resizing process has finished, that status will change again to 'VERIFY_RESIZE':
 
     (openstack-client) debian@test:~$ openstack server list |grep zuklein
-    | 433ee1e1-5928-4453-8e09-fd3ec0ccd618 | zuklein                                                    | VERIFY_RESIZE | mynetwork=10.8.0.178                | N/A (booted from volume)  | SCS-2V-4          |
+    | 433ee1e1-5928-4453-8e09-fd3ec0ccd618 | zuklein | VERIFY_RESIZE | mynetwork=10.8.0.178 | N/A (booted from volume) | SCS-2V-4 |
 
 If the resize worked without an error, you can confirm the resize
 
     (openstack-client) debian@test:~$ openstack server resize confirm zuklein
     (openstack-client) debian@test:~$ openstack server list |grep zuklein
-    | 433ee1e1-5928-4453-8e09-fd3ec0ccd618 | zuklein                                                    | ACTIVE | mynetwork=10.8.0.178                | N/A (booted from volume)  | SCS-2V-4          |
+    | 433ee1e1-5928-4453-8e09-fd3ec0ccd618 | zuklein | ACTIVE | mynetwork=10.8.0.178 | N/A (booted from volume) | SCS-2V-4 |
 
 and the instance status will switch to 'ACTIVE' again. If there is an error, you can switch back to the previous flavor with
 
