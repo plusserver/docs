@@ -13,8 +13,8 @@ weight: 10
 
 | Keycloak-as-a-Service-Komponenten | Version |
 |--------------------------|---------|
-| Keycloak                 | 23      |
-| PostgreSQL DB            | 15      |
+| Keycloak                 | 25      |
+| PostgreSQL DB            | 16      |
 
 ## Key Features
 
@@ -32,14 +32,14 @@ weight: 10
 
 **Admin Webinterface:**
 
-Bietet eine benutzerfreundliche Weboberfläche für 
+Bietet eine benutzerfreundliche Weboberfläche für
 
-* Aktivierung und Deaktivierung verschiedener Funktionen
-* Konfiguration von Identitätsbrokerdiensten und Benutzerföderationen
-* Erstellung und Verwaltung von Anwendungen und Diensten
-* Verwaltung von Benutzern, Gruppen und deren Berechtigungen
-* Definition fein abgestufter Autorisierungsrichtlinien
-* Monitoring von Sitzungen
+- Aktivierung und Deaktivierung verschiedener Funktionen
+- Konfiguration von Identitätsbrokerdiensten und Benutzerföderationen
+- Erstellung und Verwaltung von Anwendungen und Diensten
+- Verwaltung von Benutzern, Gruppen und deren Berechtigungen
+- Definition fein abgestufter Autorisierungsrichtlinien
+- Monitoring von Sitzungen
 
 **RESTful API:**
 
