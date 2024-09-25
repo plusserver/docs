@@ -1,6 +1,6 @@
 ---
-title: "Read-Write-Many-Volumes (RWX via plusnfs)"
-linkTitle: "Read-Write-Many-Volumes (RWX via plusnfs)"
+title: "Read-Write-Many-Volumes (RWX via plusstorage NFS (v2))"
+linkTitle: "Read-Write-Many-Volumes (RWX via plusstorage NFS (v2))"
 type: "docs"
 weight: 4
 date: 2024-05-27
@@ -8,11 +8,11 @@ date: 2024-05-27
 
 ## Prerequesites
 
-In order to use the RWX feature in our PSKE, the 'plusNFS' product is required. To order "plusNFS", please contact our Sales-Team.
+In order to use the RWX feature in our PSKE, the 'plusstorage NFS (v2)' product is required. To order "plusstorage NFS (v2)", please contact our Sales-Team.
 
 ## Egress IP of an Cluster
 
-After configuring 'plusNFS', you will be asked for the IP address(es) that should have access to the NFS. This is determined as follows:
+After configuring 'plusstorage NFS (v2)', you will be asked for the IP address(es) that should have access to the NFS. This is determined as follows:
 
 ```bash
 k run debug-pod -ti --rm --restart=Never --image=ghcr.io/r3m1n0x/kimage -- curl ifconfig.me
