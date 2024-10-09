@@ -14,6 +14,7 @@ Database-as-a-Service (DBaaS) ist eine Sammlung von vollständig automatisierten
 | Database  | Version |
 |-----------|---------|
 | MySQL     | 8.0     |
+| MySQL     | 8.4     |
 
 ## Key Features
 

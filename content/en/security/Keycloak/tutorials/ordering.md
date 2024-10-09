@@ -27,7 +27,7 @@ Now select the size and a type of node. You do not yet know what performance you
 
 ### Select the storage size
 
-You always start with at least 50GB memory for your data. 
+You always start with at least 50GB memory for your data.
 
 ![Select storage size](/images/content/04-msl/en/iam_keycloak/ordering/4-iam_keycloak-storage.png)
 
@@ -40,7 +40,7 @@ You must enable access from one or more external addresses or address ranges. Id
 
 ### Select the region
 
-Here you can select the [region](https://docs.xaas.get-cloud.io/docs/01-dbaas/02-faq/#Regions) in which the service is to be provided. 
+Here you can select the [region](/en/general/plusserver-region-az/) in which the service is to be provided.
 
 ![Selecting the region](/images/content/04-msl/en/iam_keycloak/ordering/6-selection_region.png)
 
@@ -53,7 +53,7 @@ Are you a new plusserver customer and do not yet receive an invoice? Then select
 ### Place the order
 
 Please check the data you have entered in the summary. Please read the terms and conditions and agreements and confirm them. Only then can you complete the order by clicking on ***Place Order Now***
-<br>
+
 ![Order summary](/images/content/04-msl/en/iam_keycloak/ordering/8-order-overview-keycloak.png)
 
 ### Track order status

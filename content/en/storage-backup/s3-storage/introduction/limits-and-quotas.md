@@ -6,21 +6,40 @@ weight: 30
 date: "2024-02-06"
 ---
 
-### Number of Buckets
+## Number of Buckets
 
 AWS S3 provides a default limit of 100 buckets per tenant. This limit can be increased to up to 1,000 buckets through a special activation by Amazon in AWS if needed.
 
 In comparison, our PlusServer S3 service has a default limitation of 1,000 buckets per tenant. Please note that this limit cannot be further increased.
 
-### Additional Limitations
+## General features and restrictions
 
-- Maximum Object Size: 5 TB
-- Minimum Part Size for Multipart Upload: 5 MiB
-- Maximum Part Size for Multipart Upload: 5 GiB
-- Maximum Number of Parts for Multipart Uploads: 10,000
-- Bucket Versioning per Object Version: 10,000
-- Maximum Number of S3 Access Keys per User: 100
-- Maximum Number of Users or Access Keys in the Entire Cluster: Unlimited
+- Maximum of 200 (GET/HEAD) RPOs and 200 (PUT/POST/DELETE) RPOs per tenant
+- Up to 100 million objects per bucket
+- Up to 5 TiB object size
+- 1MB minimum object size recommended (1,000,000 bytes = 1MB)
+- Maximum object size: 5 TB
+- Minimum part size for multipart upload: 5 MiB
+- Maximum part size for multipart upload: 5 GiB
+- Maximum number of parts for multipart uploads: 10,000
+- Bucket versioning per object version: 10,000
+- Maximum number of S3 access keys per user: 100
+- Maximum number of users or access keys in the entire cluster: unlimited
+- AWS S3 API compatible
+- Metadata can be stored for objects as key-value pairs (via S3 API)
+- Object lock support
+- Versioning support
+
+### Bucket-Namen Features und Beschränkungen:
+
+- A bucket name must be between 3 (min) and 63 (max) characters long. The suffix (-mirr / -repl) must be deducted from this
+- a bucket name may only contain lowercase letters, numbers, dots (.) and hyphens
+- A bucket name must not contain the format of an IP address (e.g. 192.168.1.42)
+- If a bucket name ends with the suffix -mirr or -repl, a different class of service is used,
+storage type and billing is used
+- A bucket name must be unique across the entire plusserver S3 service
+- A bucket name that is already in use by a customer cannot be used until
+this bucket is deleted by the owner
 
 These limitations are designed to ensure the performance and efficiency of our service while providing high flexibility for your use cases. Please consider these limitations when planning your configuration.
 

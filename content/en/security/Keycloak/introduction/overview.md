@@ -13,8 +13,8 @@ weight: 10
 
 | Keycloak as a Service Components | Version |
 |---------------------------|---------|
-| Keycloak                  | 23      |
-| PostgreSQL DB             | 15      |
+| Keycloak                  | 25      |
+| PostgreSQL DB             | 16      |
 
 ## Key Features
 
@@ -42,17 +42,16 @@ weight: 10
 
 - Monitors Keycloak components and applications and responds to errors.
 
-
 **Administartion web interface:**
 
 Provides a user-friendly web interface for
 
-* Activation and deactivation of various functions
-* Configuration of identity broker services and user federations
-* Creation and management of applications, services and clients
-* Management of users, groups and their permissions
-* Definition of fine-grained authorization policies
-* Monitoring of sessions
+- Activation and deactivation of various functions
+- Configuration of identity broker services and user federations
+- Creation and management of applications, services and clients
+- Management of users, groups and their permissions
+- Definition of fine-grained authorization policies
+- Monitoring of sessions
 
 **RESTful API:**
 

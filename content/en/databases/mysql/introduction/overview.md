@@ -14,6 +14,7 @@ Database-as-a-Service (DBaaS) represents a suite of fully managed microservices 
 | Database  | Version |
 |-----------|---------|
 | MySQL     | 8.0     |
+| MySQL     | 8.4     |
 
 ### Key Features  
 
