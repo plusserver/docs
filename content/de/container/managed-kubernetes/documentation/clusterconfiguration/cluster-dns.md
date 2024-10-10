@@ -56,5 +56,5 @@ Um NodeLocalDNS zu aktivieren, fügen Sie die folgende Konfiguration in den Absc
 ```yaml
 systemComponents:
   nodeLocalDNS:
-    aktiviert: true
+    enabled: true
 ```
