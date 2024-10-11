@@ -5,7 +5,9 @@ type: "docs"
 weight: 40
 ---
 
-> Hinweis: Im folgenden werden zwei Demo-Instanzen (Nodes) von der Harbor Private Registry verwendet. Für die Replikation von 2 Harbor Private Registry Instanzen, benötigt man zuvor die beiden Registrys mit den entsprechenden Zugängen.
+### Hinweis
+
+Im folgenden werden zwei Demo-Instanzen (Nodes) von der Harbor Private Registry verwendet. Für die Replikation von 2 Harbor Private Registry Instanzen, benötigt man zuvor die beiden Registrys mit den entsprechenden Zugängen.
 
 Für dieses Bespiel gehen wir von folgenden Instanzen aus:
 
