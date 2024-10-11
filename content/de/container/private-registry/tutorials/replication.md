@@ -14,10 +14,6 @@ Für dieses Bespiel gehen wir von folgenden Instanzen aus:
 node-6479baa42aa93122c93cb3bc.ps-xaas.io
 node-67077b8f576fd34a91ee556c.ps-xaas.io
 
-### Firewall-Einrichtung
-
-Zwischen diesen Instanzen ist eine Firewall-Freischaltung einzurichten. Hierzu muss ein Ticket beim Support aufgemacht werden, damit diese Freigaben via TPS gesetzt werden. Wichtig ist hier zu erwähnen, das bei einem Change die komplette vorherige Firewall-Konfiguration mit übergeben werden muss, falls diese nach der Änderung bestehen bleiben soll. Ansonsten wird diese nur mit dem neuen Wert überschrieben.
-
 ### Allgemein
 
 Zur Einrichtung der Replikation unter Harbor hat man zwei Methoden zur Wahl: Pull und Push.
