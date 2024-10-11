@@ -28,6 +28,7 @@ Please note:
 * Only the specified vRAM range is supported.
 * You can also set values outside the specified range.  
   In this case, however, it may happen that a VM does not start or no longer starts correctly after a restart.
+* The allocated vRAM of a VM also consumes corresponding storage space.
 
 ## Setting up vRAM for VMs
 
