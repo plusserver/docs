@@ -43,11 +43,11 @@ systemComponents:
       mode: cluster-proportional
 ```
 
-Nehmen Sie einfach die entsprechenden Änderungen an der YAML-Konfiguration vor, speichern Sie sie und das Skalierungsverhalten von CoreDNS wird im Gardener-Cluster entsprechend aktualisiert.
+Bitte nehmen Sie die entsprechenden Änderungen an der YAML-Konfiguration vor, speichern Sie diese und das Skalierungsverhalten von CoreDNS wird im Gardener-Cluster entsprechend aktualisiert.
 
 ## NodeLocalDNS
 
-NodeLocalDNS ist eine Funktion, die es CoreDNS ermöglicht, auf jedem Knoten im Cluster zu laufen. Dies kann sich vorteilhaft auf die Leistung auswirken, da es die Latenzzeit von DNS-Abfragen verringert.
+NodeLocalDNS ist eine Funktion, die es CoreDNS ermöglicht, auf jedem Node im Cluster zu laufen. Dies kann sich vorteilhaft auf die Leistung auswirken, da es die Latenzzeit von DNS-Abfragen verringert.
 
 ![nodeLocalDNS](https://github.com/gardener/gardener/blob/master/docs/usage/images/node-local-dns.png)
 
