@@ -37,11 +37,11 @@ Zunächst muss man einen sogenannten Robot-Account einrichten auf der gegenüber
 
 Hierzu meldet man sich bei dem Harbor Web-Interface der "Ziel-Instanz" mit dem entsprechenden Admin-Zugang an.
 
-!!!INSERT BILD HARBOR LOGIN!!!
+![Screenshot des Harbor Logins](./images/harborlogin.png)
 
 Dazu geht man auf das entsprechende Projekt (neu Anlegen parallel zur Ursprungs-Instanz falls noch nicht vorhanden) unter "Projects" und wählt dort dann den Reiter "Robot Accounts" aus.
 
-!!!INSERT BILD LIBRARY NEW ROBOT!!!
+![Screenshot des Harbor Logins](./images/add-robot-account.jpg)
 
 Hier wählt man "+ New Robot Account", gibt dem Konto einen Namen, eine kurze Beschreibung und ein Ablaufdatum. Wenn das Konto dauerhaft aktiv sein soll, würde man hier "Never" auswählen. Bei Permissions wählt man unter Repository "Push" und "Pull".
 
@@ -57,8 +57,8 @@ Dort geht man dann auf "Registries" und klickt auf "+ New Endpoint".
 
 Hier gibt es eine ganze Reihe an Providern, aber für unseren Fall, wo es um die Replikation zwischen zwei Harbor Instanzen geht, wird hier als Provider "harbor" ausgewählt.
 
-!!!INSERT BILD NEW REGISTRY ENDPOINT!!!
-
+![Screenshot des Harbor Logins](./images/replication-endpoint2.png
+)
 Dann gibt man dem Endpoint noch einen Namen, z.b. den eigentlich Node Namen der Ziel-Instanz, in unserem Fall die "node-67077b8f576fd34a91ee556c.ps-xaas.io" und gibt optional noch eine kurze Beschreibung ein. Bei Endpoint URL gibt man dann für unser Beispiel "<https://node-67077b8f576fd34a91ee556c.ps-xaas.io>" an und bei Access ID und Secret die Daten des zuvor auf der anderen Node angelegten Robot-Accounts.
 
 Dann klickt man auf "Test Connection" und wenn die Firewallfreischaltung erfolgt und alle Eingaben korrekt durchgeführt wurden, dann ist dieser Test erfolgreich und man kann mit "OK" das Fenster wieder schließen.
@@ -69,13 +69,13 @@ Nun sind alle Voraussetzungen erfüllt die eigentliche Replikation einzurichten.
 
 Dazu geht man in dem Menü links auf "Administration -> Replications"
 
-!!!INSERT BILD REPLICATION!!!
+![Screenshot des Harbor Logins](./images/replication-rule1.png)
 
 Dort geht man auf "New Replication Rule", gibt der Regel unter "Name" einen sinnvollen Namen, der einem direkt zeigt, um was es sich hierbei genau handelt. In diesem Beispiel ist der Name nur "rule", was für den produktiven Einsatz absolut nicht geeignet ist.
 
 Unter "Description" beschreibt man am besten nochmal kurz und bündig, für was diese Replikation gedacht ist und bei "Replication mode" wählt man die entsprechende Methode (siehe oben). In diesem Beispiel ist es "Push-based", also eine ausgehende Replikation zu der anderen Node.
 
-!!!INSERT BILD NEW REPLICATION RULE!!!
+![Screenshot des Harbor Logins](./images/replication-rule2.png)
 
 Unter "Source resource filter" kann man gezielt definieren was alles repliziert werden soll. Dies kann man wie folgt:
 
@@ -106,7 +106,7 @@ Wenn man die Regel direkt aktiv haben möchte, setzt man einen Haken bei "Enable
 
 Nun kann man entweder warten, bis der Zeitplan ausgeführt wird und dann unter "Replications" die angelegte Replikation anhaken und unten unter "Executions" die Ausführung überprüfen oder, wenn man die Replizierung direkt ausführen will,  ebenfalls selbige auswählen und oben rechts neben "New Replication Rule" auf "Replicate" klicken. Dessen Ausführung kann man dann ebenfalls unter "Executions" beobachten.
 
-!!!INSERT BILD REPLICATION STATUS!!!
+![Screenshot des Harbor Logins](./images/replication-list.png)
 
 Ist die Replizierung erfolgreich verlaufen, sieht man nun auf der Ziel-Seite die replizierten Objekte.
 
