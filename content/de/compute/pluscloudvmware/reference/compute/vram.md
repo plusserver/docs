@@ -28,6 +28,7 @@ Bitte beachten Sie hierbei:
 * Unterstützt wird nur der angegebene vRAM-Bereich.
 * Sie können auch Werte außerhalb des angegebenen Bereichs einstellen.  
   In diesem Fall kann es allerdings vorkommen das eine VM nicht startet oder nach einem Neustart nicht mehr korrekt startet.
+* Der zugewiesene vRAM einer VM belegt auch entsprechenden Speicherplatz auf dem Storage.
 
 ## Einrichtung von vRAM bei VMs
 
