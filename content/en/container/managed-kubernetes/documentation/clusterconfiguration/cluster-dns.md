@@ -50,7 +50,7 @@ Simply make the appropriate changes to the YAML configuration, save it, and the 
 
 NodeLocalDNS is a feature that allows CoreDNS to run on each node in the cluster. This can be beneficial for performance as it reduces the latency of DNS queries.
 
-![nodeLocalDNS](https://github.com/gardener/gardener/blob/master/docs/usage/images/node-local-dns.png)
+![nodeLocalDNS](https://raw.githubusercontent.com/gardener/gardener/master/docs/usage/images/node-local-dns.png)
 
 To enable NodeLocalDNS, add the following configuration to the `systemComponents:` section:
 
