@@ -4,7 +4,7 @@ type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Creating networks, using load balancers, floating IPs and security groups 
+  Creating networks, using load balancers, floating IPs and security groups
 ---
 ## Networking
 For your convenience, new projects in pluscloud open are created with a preconfigured network setup that includes a private network and a router, which connects this private network to the internet. All network configuration in Horizon is done from the "Network" menu.
@@ -14,13 +14,42 @@ For your convenience, new projects in pluscloud open are created with a preconfi
 "**Network Topology**" provides a diagram of your current network setup. "**Networks**" lists all currently configured networks in your project and allows you to manage, delete or create networks. "**Routers**" lists all configured routers in your project and allows for management, creation and deletion of routers. "**Security Groups**" are basically firewall rules which are used to allow or deny traffic to or from your infrastructure. "**Load Balancers**" allows you to create, delete and manage load balancers, members, pools in your environment. "**Floating IPs**" allows you to manage, attach, detach, acquire public IP addresses for your instances.
 
 ### Network topology
-In the network topology menu entry, you can get an overview about the networking setup inside your project. The diagram shows your current setup and is updated with every change in the environment. 
+In the network topology menu entry, you can get an overview about the networking setup inside your project. The diagram shows your current setup and is updated with every change in the environment.
 
 <img src="image2020-10-16_9-33-31.png" alt="screenshot of a network topology" width="30%" height="30%" title="Network Diagram">
 
 The above diagram shows two private networks that are connected to a public network ("provider network" in OpenStack terms) using two routers. Hovering with your mouse over the elements of the diagram provides more information and quick access to other functions of the web GUI.
 
-### Networks
+### Network Policies
+
+#### Overview
+
+In OpenStack, network bandwidth policies are implemented to manage and control the data transfer rates of virtual network interfaces within the cloud environment. These policies are crucial for ensuring fair usage, preventing network congestion, and maintaining optimal performance across multiple tenants and workloads.
+
+By default, all newly created networks are assigned a bandwidth limit of 1 Gbit/s. This default policy ensures that the network performance is optimized for general workloads while preventing any single tenant or instance from monopolizing network resources.
+
+For customers with higher performance needs, pluscloud open provides alternative bandwidth policies with increased limits. These policies allow for greater data throughput, which may be necessary for more demanding applications, such as data-intensive analytics, media streaming, or high-performance computing.
+
+Here is an overview:
+| Policy Name                | Throughput | Use case                                                                                                                                                                              |
+|----------------------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| standard-throughput-policy | 1 Gbit/s   | Suitable for standard workloads that do not require high data transfer rates, offering a balanced mix of performance and cost-efficiency.                                             |
+| high-throughput-policy     | 2 Gbit/s   | Ideal for moderate workloads that require higher network performance, such as real-time data processing or applications with increased traffic demands.                               |
+| premium-throughput-policy  | 4 Gbit/s   | Designed for performance-critical applications, such as large-scale distributed systems, high-definition video streaming, or workloads with significant data throughput requirements. |
+
+{{% alert title="Note" color="info" %}}
+At the moment, customers can benefit from higher bandwidth policies (2 Gbit/s and 4 Gbit/s) without incurring additional costs. However, this may change in the future. Pricing adjustments are expected, particularly if a customer removes an existing policy. We recommend reviewing future communications for updates on pricing.
+{{% /alert %}}
+
+#### Policy Application
+
+Network policies are automatically applied at the time of network creation. The default 1 Gbit/s limit is assigned unless explicitly configured for a different bandwidth limit. Customers can change the policy using the Openstack CLI interface:
+
+```
+openstack network set --qos-policy high-throughput-policy your-network
+```
+
+### Managing Networks
 The "Networks" section displays the networks configured in your environment and allows you to manage, add or delete them:
 ![screenshot of the networks menu](./image2020-10-16_10-8-2.png)
 
@@ -29,15 +58,15 @@ Each network needs an associated subnet, which is also set up when the network i
 #### Create networks
 Clicking on "Create network" brings up a dialog to define a new network:
 
-![screenshot of the create network menu](./image2020-10-16_10-26-51.png) 
+![screenshot of the create network menu](./image2020-10-16_10-26-51.png)
 
 You need to give the new network a name, decide if it should receive traffic (by clicking "Enable Admin State"), and decide if you want to create a new subnet in the new network or use an existing one. The "Availability Zone Hints" currently refer to all of the respective pluscloud open environments as there is only one availability zone per pluscloud open environment.
 
-If you select "Create Subnet", the next step is to define the subnet: 
+If you select "Create Subnet", the next step is to define the subnet:
 
-![screenshot of the subnet tab](./image2020-10-16_10-37-47.png)  
+![screenshot of the subnet tab](./image2020-10-16_10-37-47.png)
 
-Here you create a subnet which is associated with the new network. You need a valid "Network Address" of a [RFC1918](https://www.rfc-editor.org/rfc/rfc1918) network in [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation. If you don't specify a "Gateway IP", the first IP address of the subnet will automatically become the gateway IP address. If you don't want a gateway on your network, click on "Disable Gateway". 
+Here you create a subnet which is associated with the new network. You need a valid "Network Address" of a [RFC1918](https://www.rfc-editor.org/rfc/rfc1918) network in [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation. If you don't specify a "Gateway IP", the first IP address of the subnet will automatically become the gateway IP address. If you don't want a gateway on your network, click on "Disable Gateway".
 
 A detailed configuration of the subnet is available in the "Subnet Details" menu.
 
@@ -61,7 +90,7 @@ Cicking on the name of an already existing router, you see the current interface
 
 ![screenshot of the interfaces menu](./2023-03-24_14-44.png)
 
-When you click "Add Interface", you can choose which subnet you want the route to connect to and which ip address the new router interface should have: 
+When you click "Add Interface", you can choose which subnet you want the route to connect to and which ip address the new router interface should have:
 
 ![screenshot of the add interface menu](./image2020-10-16_13-30-17.png)
 
@@ -85,7 +114,7 @@ As a default, there is a "Default Security Group" active for instances that have
 ### Create security group
 
 Clicking "+Create Security Group" will create a new security group and lead you to a new menu that enables you to add new security rules to your new security group. There is a set of predefined rules for various protocols. You can define "Custom TCP/UDP/ICMP" rules for individual ports.
-You should use the description field (in order to have an easy overview of what each rule is intended to do), define the direction of traffic (egress/ingress) as well as the network port the rule should apply to. You can define a single port, some ports or a port range. 
+You should use the description field (in order to have an easy overview of what each rule is intended to do), define the direction of traffic (egress/ingress) as well as the network port the rule should apply to. You can define a single port, some ports or a port range.
 For ICMP traffic, you define ICMP type and code.
 
 ![screenshot of the add rule menu](./image2020-10-16_15-11-48.png)
@@ -106,7 +135,7 @@ The next menu "Listener Details" defines the listener for the new load balancer:
 
 ![screenshot of the listener menu](./image2020-10-16_16-12-24.png)
 
-Each and every port on the new load balancer that should receive traffic will be configured seperately and assigned to the load balancer. You can define multiple listeners per load balancer as long as each listener uses a different port. 
+Each and every port on the new load balancer that should receive traffic will be configured seperately and assigned to the load balancer. You can define multiple listeners per load balancer as long as each listener uses a different port.
 
 "**Protocol**" defines the protocol that should be expected on the "**Port**". You can only choose "TERMINATED_HTTPS" as the protocol if you have activated and configured the key manager service (Barbican). The "**Port**" number should be between 1 and 65535.
 
@@ -117,7 +146,7 @@ The next step is to define the "**Pool Details**" for the new load balancer. A "
 ![screenshot of the pool details menu](./image2020-10-16_16-19-9.png)
 
 First you define the load balancing "**Algorithm**":
-  
+
     * LEAST_CONNECTIONS: sends the next request to the instance with the smallest number of connections in the pool
     * ROUND_ROBIN: sends reqeusts randomly to the next available instance in the pool
     * SOURCE_IP: sends requests from the same source IP address always to the same instance in the pool
