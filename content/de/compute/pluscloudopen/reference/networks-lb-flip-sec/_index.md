@@ -5,7 +5,7 @@ weight: 50
 date: 2023-02-24
 description: >
   Netzwerke erstellen, Load Balancer, Floating IPs und Sicherheitsgruppen verwenden
-
+---
 ## Vernetzung
 Um Ihnen die Arbeit zu erleichtern, werden neue Projekte in der pluscloud open mit einem vorkonfigurierten Netzwerk-Setup erstellt, welches ein privates Netzwerk und einen Router enthält, der dieses private Netzwerk mit dem Internet verbindet. Die gesamte Netzwerkkonfiguration in Horizon wird über das Menü "Netzwerk" vorgenommen.
 
@@ -20,7 +20,7 @@ Im Menüpunkt "Netzwerktopologie" können Sie sich einen Überblick über das Ne
 
 Das obige Diagramm zeigt zwei private Netzwerke, die über zwei Router mit einem öffentlichen Netzwerk ("Providernetzwerk" in der OpenStack-Sprache) verbunden sind. Wenn Sie mit der Maus über die Elemente des Diagramms fahren, werden weitere Informationen und Verknüpfungen zu anderen Funktionen der Web-GUI angezeigt.
 
-### Netzwerk Policies
+### Netzwerk-Policies
 
 #### Überblick
 
@@ -34,17 +34,17 @@ Hier ist eine Übersicht:
 
 | Name der Policy            | Durchsatz | Anwendungsfall                                                                                                                                                              |
 |----------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| standard-throughput-policy | 1 Gbit/s  | Geeignet für Standard-Workloads, die keine hohen Datenübertragungsraten erfordern, und bietet eine ausgewogene Mischung aus Leistung und Kosteneffizienz.                   |
+| standard-throughput-policy | 1 Gbit/s  | Geeignet für Standard-Arbeitslasten, die keine hohen Datenübertragungsraten erfordern, und bietet eine ausgewogene Mischung aus Leistung und Kosteneffizienz.                   |
 | high-throughput-policy     | 2 Gbit/s  | Ideal für moderate Arbeitslasten, die eine höhere Netzwerkleistung erfordern, wie z. B. Echtzeit-Datenverarbeitung oder Anwendungen mit erhöhten Verkehrsanforderungen.     |
-| premium-throughput-policy  | 4 Gbit/s  | Konzipiert für leistungskritische Anwendungen, z. B. große verteilte Systeme, High-Definition-Video-Streaming oder Workloads mit hohen Anforderungen an den Datendurchsatz. |
+| premium-throughput-policy  | 4 Gbit/s  | Konzipiert für leistungskritische Anwendungen, z. B. große verteilte Systeme, High-Definition-Video-Streaming oder Arbeitslasten mit hohen Anforderungen an den Datendurchsatz. |
 
 {{% alert title="Hinweis" color="info" %}}
-Derzeit können Kunden von den Policies für höhere Bandbreiten (2 Gbit/s und 4 Gbit/s) profitieren, ohne dass ihnen zusätzliche Kosten entstehen. Dies kann sich jedoch in Zukunft ändern. Preisanpassungen sind zu erwarten. Wir empfehlen, künftige Mitteilungen auf Aktualisierungen der Preise zu überprüfen.
+Derzeit können Kunden von den Policies für höhere Bandbreiten (2 Gbit/s und 4 Gbit/s) profitieren, ohne dass ihnen zusätzliche Kosten entstehen. Dies kann sich jedoch in Zukunft ändern. Preisanpassungen sind zu erwarten, insbesondere wenn die Policy entfernt wird. Wir empfehlen, künftige Mitteilungen auf Aktualisierungen der Preise zu überprüfen.
 {{% /alert %}}
 
 #### Anwendung von Policies
 
-Netzwerk Policies werden zum Zeitpunkt der Netzwerkerstellung automatisch angewendet. Die Standardgrenze von 1 Gbit/s wird zugewiesen, sofern nicht ausdrücklich eine andere Bandbreitengrenze konfiguriert wurde. Kunden können die Policy über die Openstack-CLI-Schnittstelle ändern:
+Netzwerk-Policies werden zum Zeitpunkt der Netzwerkerstellung automatisch angewendet. Die Standardgrenze von 1 Gbit/s wird zugewiesen, sofern nicht ausdrücklich eine andere Bandbreitengrenze konfiguriert wurde. Kunden können die Policy über die Openstack-CLI-Schnittstelle ändern:
 
 ```
 openstack network set --qos-policy high-throughput-policy your-network

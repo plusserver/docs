@@ -49,6 +49,10 @@ Network policies are automatically applied at the time of network creation. The 
 openstack network set --qos-policy high-throughput-policy your-network
 ```
 
+{{% alert title="Note" color="info" %}}
+Policies can only be changed with the Openstack CLI and not with the GUI.
+{{% /alert %}}
+
 ### Managing Networks
 The "Networks" section displays the networks configured in your environment and allows you to manage, add or delete them:
 ![screenshot of the networks menu](./image2020-10-16_10-8-2.png)
