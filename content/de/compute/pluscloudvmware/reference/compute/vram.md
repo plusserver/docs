@@ -29,7 +29,7 @@ Bitte beachten Sie hierbei:
 * Sie können auch Werte außerhalb des angegebenen Bereichs einstellen.  
   In diesem Fall kann es allerdings vorkommen das eine VM nicht startet oder nach einem Neustart nicht mehr korrekt startet.
 * Der zugewiesene vRAM einer VM belegt auch entsprechenden Speicherplatz auf dem Storage.
-  Einer der Gründe hierfür ist das SWAP-File, das angelegt wird, wenn der ESXi-Host nicht genügend physische RAM-Ressourcen zur Verfügung hat, wodurch zusätzlicher Speicherplatz auf dem Storage genutzt wird.
+  Dies liegt daran, dass im Falle, dass ein ESXi-Host nicht mehr über genügend physischen RAM verfügt, für jede VM eine entsprechend große Swap-Datei in der Größe des konfigurierten RAMs erforderlich ist.
 
 ## Einrichtung von vRAM bei VMs
 
