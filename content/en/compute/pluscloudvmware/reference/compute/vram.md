@@ -29,7 +29,7 @@ Please note:
 * You can also set values outside the specified range.  
   In this case, however, it may happen that a VM does not start or no longer starts correctly after a restart.
 * The allocated vRAM of a VM also consumes corresponding storage space.
-  One of the reasons for this is the SWAP file, which is created when the ESXi host lacks sufficient physical RAM resources, resulting in additional storage space being used.
+  This is because in the event that an ESXi no longer has enough physical RAM available, a correspondingly large swap file is required for each VM in the size of its configured RAM.
 
 ## Setting up vRAM for VMs
 
