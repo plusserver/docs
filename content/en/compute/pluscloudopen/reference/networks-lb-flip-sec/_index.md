@@ -37,8 +37,8 @@ Here is an overview:
 | high-throughput-policy     | 2 Gbit/s   | Ideal for moderate workloads that require higher network performance, such as real-time data processing or applications with increased traffic demands.                               |
 | premium-throughput-policy  | 4 Gbit/s   | Designed for performance-critical applications, such as large-scale distributed systems, high-definition video streaming, or workloads with significant data throughput requirements. |
 
-{{% alert title="Note" color="info" %}}
-At the moment, customers can benefit from higher bandwidth policies (2 Gbit/s and 4 Gbit/s) without incurring additional costs. However, this may change in the future. Pricing adjustments are expected, particularly if a customer removes an existing policy. We recommend reviewing future communications for updates on pricing.
+{{% alert title="Note" color="warning" %}}
+There will be additional costs for the use of all other policies except ‘standard-throughput-policy’. The same applies if the ‘standard-throughput-policy’ policy is removed.
 {{% /alert %}}
 
 #### Policy Application
