@@ -56,3 +56,7 @@ Provides a user-friendly web interface for
 **RESTful API:**
 
 - Provides a comprehensive RESTful API that allows automation and integration with other tools and systems.
+
+**Custom Themes:**
+
+- Add your own custom themes. Just provides us with your theme files and we will upload them to your Keycloak-as-a-Service instance.
