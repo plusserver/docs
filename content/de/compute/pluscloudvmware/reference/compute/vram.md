@@ -29,7 +29,7 @@ Bitte beachten Sie hierbei:
 * Sie können auch Werte außerhalb des angegebenen Bereichs einstellen.  
   In diesem Fall kann es allerdings vorkommen das eine VM nicht startet oder nach einem Neustart nicht mehr korrekt startet.
 * Der zugewiesene vRAM einer VM belegt auch entsprechenden Speicherplatz auf dem Storage.
-  Denn für den Fall, dass ein ESXi-Host nicht mehr über genügend physikalischen Arbeitsspeicher verfügt, ist für jede VM eine Swap-Datei in der Größe des konfigurierten Arbeitsspeichers erforderlich.
+  Dies liegt daran, dass im Falle, dass ein ESXi-Host nicht mehr über genügend physischen RAM verfügt, für jede VM eine entsprechend große Swap-Datei in der Größe des konfigurierten RAMs erforderlich ist.
 
 ## Einrichtung von vRAM bei VMs
 
