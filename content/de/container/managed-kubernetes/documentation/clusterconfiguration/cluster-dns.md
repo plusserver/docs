@@ -6,6 +6,8 @@ weight: 20
 date: 2023-07-12
 ---
 
+## CoreDNS Replikation
+
 Standardmäßig skaliert CoreDNS bis zu einem Maximum von 5 Replikaten. Dies kann bei größeren Clustern zu einem Problem werden, da sie möglicherweise nicht in der Lage sind, das hohe Volumen an Anfragen zu bewältigen.
 
 In Gardener gibt es zwei Optionen, um das Skalierungsverhalten zu definieren:
@@ -41,4 +43,18 @@ systemComponents:
       mode: cluster-proportional
 ```
 
-Nehmen Sie einfach die entsprechenden Änderungen an der YAML-Konfiguration vor, speichern Sie sie und das Skalierungsverhalten von CoreDNS wird im Gardener-Cluster entsprechend aktualisiert.
+Bitte nehmen Sie die entsprechenden Änderungen an der YAML-Konfiguration vor, speichern Sie diese und das Skalierungsverhalten von CoreDNS wird im Gardener-Cluster entsprechend aktualisiert.
+
+## NodeLocalDNS
+
+NodeLocalDNS ist eine Funktion, die es CoreDNS ermöglicht, auf jedem Node im Cluster zu laufen. Dies kann sich vorteilhaft auf die Leistung auswirken, da es die Latenzzeit von DNS-Abfragen verringert.
+
+![nodeLocalDNS](https://raw.githubusercontent.com/gardener/gardener/master/docs/usage/images/node-local-dns.png)
+
+Um NodeLocalDNS zu aktivieren, fügen Sie die folgende Konfiguration in den Abschnitt `systemComponents:` ein:
+
+```yaml
+systemComponents:
+  nodeLocalDNS:
+    enabled: true
+```
