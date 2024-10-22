@@ -11,8 +11,8 @@ In the following, two demo instances (nodes) of the Harbor Private Registry are 
 
 For this example, we assume the following instances:
 
-node-6479baa42aa93122c93cb3bc.ps-xaas.io
-node-67077b8f576fd34a91ee556c.ps-xaas.io
+- node-6479baa42aa93122c93cb3bc.ps-xaas.io
+- node-67077b8f576fd34a91ee556c.ps-xaas.io
 
 ### General
 
@@ -23,9 +23,7 @@ There are two methods for setting up replication under Harbor: pull and push.
 
 Which of these methods you choose depends on the network design and the actual purpose of the replication.
 
-In this example, we assume “push-based” and an already existing (and not empty) repository on a site from which data is to be “pushed”.
-
-In this specific example, a push from node-6479baa42aa93122c93cb3bc.ps-xaas.io to node-67077b8f576fd34a91ee556c.ps-xaas.io.
+In this example, we assume “push-based” and an already existing (and not empty) repository on a site from which data is to be “pushed”, from node-6479baa42aa93122c93cb3bc.ps-xaas.io to node-67077b8f576fd34a91ee556c.ps-xaas.io.
 
 ### Setting up a robot account
 
@@ -53,8 +51,8 @@ Then go to “Registries” and click on “+ New Endpoint”.
 
 There is a whole range of providers here, but for our case, which involves replication between two Harbor instances, “harbor” is selected as the provider.
 
-![Screenshot of the endpoint creation](./images/replication-endpoint2.png
-)
+![Screenshot of the endpoint creation](./images/replication-endpoint2.png)
+
 Then give the endpoint a name, e.g. the actual node name of the target instance, in our case “node-67077b8f576fd34a91ee556c.ps-xaas.io” and optionally enter a short description. For our example, enter “<https://node-67077b8f576fd34a91ee556c.ps-xaas.io>” for Endpoint URL and the data of the robot account previously created on the other node for Access ID and Secret.
 
 Then click on “Test Connection” and if the firewall is activated and all entries have been made correctly, then this test is successful and you can close the window again with “OK”.
