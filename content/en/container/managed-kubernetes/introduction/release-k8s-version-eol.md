@@ -18,7 +18,8 @@ PSKE always supports the latest 3 versions of Kubernetes (supported by SAP Garde
 |---|---|---|
 | 1.23.17 | 01.03.2024 | **No longer available in the PSKE from 01.03.2024** |
 | 1.24.16 | 26.04.2024 | **Plan to migrate your applications to 1.25.15 or 1.26.14 by 26.04.2024** |
-| 1.25.15 | 28.11.2024 | **Plan to migrate your applications  to 1.26.14 or 1.27.11 by 28.11.2024** |
+| 1.25.15 | 28.11.2024 | **Plan to migrate your applications  to 1.26.15 or 1.27.16 by 28.11.2024** |
+| 1.26.15 | 05.01.2025 | **Plan to migrate your applications  to 1.27.16 or 1.28.13 by 05.01.2025** |
 
 Please ensure you update your clusters to the Kubernetes versions we support by this date.
 
