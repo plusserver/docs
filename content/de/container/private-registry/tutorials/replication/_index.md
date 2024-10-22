@@ -11,8 +11,8 @@ Im folgenden werden zwei Demo-Instanzen (Nodes) von der Harbor Private Registry 
 
 Für dieses Bespiel gehen wir von folgenden Instanzen aus:
 
-node-6479baa42aa93122c93cb3bc.ps-xaas.io
-node-67077b8f576fd34a91ee556c.ps-xaas.io
+- node-6479baa42aa93122c93cb3bc.ps-xaas.io
+- node-67077b8f576fd34a91ee556c.ps-xaas.io
 
 ### Allgemein
 
@@ -23,9 +23,7 @@ Zur Einrichtung der Replikation unter Harbor hat man zwei Methoden zur Wahl: Pul
 
 Was man von diesen Methoden man wählt, ist Abhänging vom Netzwerk-Design und dem eigentlichen Zweck der Replikation.
 
-In diesem Beispiel gehen wir von "Push-based" und einem Bereits existierenden (und nicht leeren) Repository auf einer Seite aus, von der "gepusht" werden soll.
-
-In diesem konkreten Beispiel also ein Push von node-6479baa42aa93122c93cb3bc.ps-xaas.io nach node-67077b8f576fd34a91ee556c.ps-xaas.io.
+In diesem Beispiel gehen wir von "Push-based" und einem Bereits existierenden (und nicht leeren) Repository auf einer Seite aus, von der "gepusht" werden soll, also ein Push von node-6479baa42aa93122c93cb3bc.ps-xaas.io nach node-67077b8f576fd34a91ee556c.ps-xaas.io.
 
 ### Einrichtung eines Robot Accounts
 
@@ -53,8 +51,8 @@ Dort geht man dann auf "Registries" und klickt auf "+ New Endpoint".
 
 Hier gibt es eine ganze Reihe an Providern, aber für unseren Fall, wo es um die Replikation zwischen zwei Harbor Instanzen geht, wird hier als Provider "harbor" ausgewählt.
 
-![Screenshot der Endpunkt Erstellung](./images/replication-endpoint2.png
-)
+![Screenshot der Endpunkt Erstellung](./images/replication-endpoint2.png)
+
 Dann gibt man dem Endpoint noch einen Namen, z.b. den eigentlich Node Namen der Ziel-Instanz, in unserem Fall die "node-67077b8f576fd34a91ee556c.ps-xaas.io" und gibt optional noch eine kurze Beschreibung ein. Bei Endpoint URL gibt man dann für unser Beispiel "<https://node-67077b8f576fd34a91ee556c.ps-xaas.io>" an und bei Access ID und Secret die Daten des zuvor auf der anderen Node angelegten Robot-Accounts.
 
 Dann klickt man auf "Test Connection" und wenn die Firewallfreischaltung erfolgt und alle Eingaben korrekt durchgeführt wurden, dann ist dieser Test erfolgreich und man kann mit "OK" das Fenster wieder schließen.
