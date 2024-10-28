@@ -11,7 +11,7 @@ der PSKE zuzugreifen. Wir stellen verschiedene Optionen vor, damit Sie die bestm
 
 ## Site-to-Site-VPN (Hybrid Connector kurz HC)
 Diese Lösung ist gut geeignet, wenn ein VMware Cloud Endpoint, einen Database Service zur Verfügung stellt und ein PSKE Kubernetes-Cluster 
-über eine VPN-Verbindung sicher auf diesen Service zugreifen soll. Die Provisionierung wird im Artikel [{{< pagetitle "/container/managed-kubernetes/documentation/hybridconnector/hc-provisioning" >}}]({{< ref "/container/managed-kubernetes/documentation/hybridconnector/hc-provisioning" >}}) näher beschrieben.
+über eine VPN-Verbindung sicher auf diesen Service zugreifen soll. Die Provisionierung wird im Artikel [{{< pagetitle "HC - Provisionierung" >}}]({{< ref "/container/managed-kubernetes/documentation/hybridconnector/hc-provisioning" >}}) näher beschrieben.
 
 ## Remote-Access-VPN (Virtual Cloud Firewall kurz vCFW)
 Diese Lösung wird hauptsächlich verwendet, wenn Einzelpersonen auf Services zugreifen, die über einen PSKE Kubernetes-Cluster bereitgestellt und
