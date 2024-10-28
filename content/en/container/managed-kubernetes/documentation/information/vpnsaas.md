@@ -7,10 +7,11 @@ date: 2023-10-16
 ---
 
 This introduction is intended to help you choose the right VPNaaS solution for your specific use case in order to securely access your Kubernetes cluster within PSKE. 
-the PSKE. We present different options to help you find the best possible solution to securely connect and manage your clusters.
+We present different options to help you find the best possible solution to securely connect and manage your clusters.
 
 ## Site-to-Site-VPN (Hybrid Connector kurz HC)
-This solution is ideal if a cloud endpoint, e.g. a VMware cloud that provides one or more services such as a database service, etc., and a PSKE Kubernetes cluster is to access this service via a VPN connection in order to consume it securely. and a PSKE Kubernetes cluster is to access this service via a VPN connection in order to be able to consume it securely.
+This solution is well suited if a VMware Cloud Endpoint provides a database service and a PSKE Kubernetes cluster is to access this service securely via a VPN connection. 
+Provisioning is described in more detail in article [{{< pagetitle "HC - Provisioning>}}]({{< ref /container/managed-kubernetes/documentation/hybridconnector/hc-provisioning/" >}}).
 
 ## Remote-Access-VPN (Virtual Cloud Firewall kurz vCFW)
 This solution is mainly used when individuals access services that are to be provided via a Kubernetes PSKE cluster and securely consumed via a VPN connection.
