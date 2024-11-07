@@ -49,8 +49,6 @@ Bitte nehmen Sie die entsprechenden Änderungen an der YAML-Konfiguration vor, s
 
 NodeLocalDNS ist eine Funktion, die es CoreDNS ermöglicht, auf jedem Node im Cluster zu laufen. Dies kann sich vorteilhaft auf die Leistung auswirken, da es die Latenzzeit von DNS-Abfragen verringert.
 
-![nodeLocalDNS](https://raw.githubusercontent.com/gardener/gardener/master/docs/usage/images/node-local-dns.png)
-
 Um NodeLocalDNS zu aktivieren, fügen Sie die folgende Konfiguration in den Abschnitt `systemComponents:` ein:
 
 ```yaml
