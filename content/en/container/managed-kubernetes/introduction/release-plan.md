@@ -26,7 +26,7 @@ This allows you to prepare for important updates in good time and ensure that yo
 | September | 30.09.2024 | Change | [Launch of PSKE Version 1.14.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-14-0/) |           
 | October | - | - | - |
 | November | - | - | - |
-| December | 10.12.2024 | Standardchange | Standard Change - Kubernetes Patch Version |
+| December | 02.12.2024 | Change | [Launch of PSKE Version 1.16.0](https://status.plusserver.com/incidents/4lhlgb6lgdl7) |
 
 ## AutoUpdate behavior
 
