@@ -23,10 +23,10 @@ This allows you to prepare for important updates in good time and ensure that yo
 | July | 29.07.2024 | Change | [Launch of PSKE Version 1.12.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-12-0/) |
 | August| 13.08.2024 | Change | [Launch of PSKE Version 1.13.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-13-0/) |
 | September | 03.09.2024 | Change | [Launch of PSKE Version 1.13.1](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-13-1/) |
-| September | 30.09.2024 | Change | [Launch of PSKE Version 1.14.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-14-0/) |           
+| September | 30.09.2024 | Change | [Launch of PSKE Version 1.14.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-14-0/) |
 | October | - | - | - |
 | November | - | - | - |
-| December | 10.12.2024 | Standardchange | Standard Change - Kubernetes Patch Version |
+| December | 02.12.2024 | Change | [Launch of PSKE Version 1.16.0](https://status.plusserver.com/incidents/4lhlgb6lgdl7) |
 
 ## AutoUpdate behavior
 
@@ -45,6 +45,7 @@ This allows you to prepare for important updates in good time and ensure that yo
 - *Timing:* Enforced upgrades are performed as soon as possible after the new version is available.
 
 **Summarizing:**
+
 | AutoUpdates | Enforced Upgrade | Time of Update |
 | --- | --- | --- |
 | Enabled | Yes | Within the next Maintenance Windows |
