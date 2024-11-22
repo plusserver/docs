@@ -52,6 +52,15 @@ The following table shows the list of all public Compute Flavors:
 | SCS-2V-4-20s | 4096 | 2 | 20 |
 | SCS-4V-16-100s | 16384 | 4 | 100 |
 
+Note on the 'Disk (GB)' column:
+
+The flavors with a disk size of '0' do not use a local root disk, instead a (cinder-) volume of self-selected size must be defined here,
+which the instance then will use as the root disk device.
+PSKE nodes, for example, have always used their own cinder boot volumes, which is why the previous specification of the disk size in the flavor only led to confusion,
+as this was simply ignored by the PSKE nodes.
+
+The flavors with a defined root disk offer a real root disk, which is then also located locally on the same hypervisor as the instance. This can also be recognized by the
+letter 's' at the end of the flavor name.
 
 ## Deprecated Compute Flavors
 
