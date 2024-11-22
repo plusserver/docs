@@ -55,9 +55,19 @@ Die folgende Tabelle zeigt die Liste aller öffentlichen Compute Flavors:
 | SCS-2V-4-20s | 4096 | 2 | 20 |
 | SCS-4V-16-100s | 16384 | 4 | 100 |
 
+Hinweis zu der 'Disk (GB)' Spalte:
+
+Die flavor mit einer disk Grösse von '0' verwenden keine lokale root disk, stattdessen muss hier ein (cinder-) volume mit einer beliebigen Grösse definiert werden,
+welches die Instanz dann als root disk device verwendet.
+PSKE nodes beispielsweise verwenden seit je her ein eigenes cinder boot volume, weswegen die bisherige angabe der disk Grösse im flavor nur zu Verwirrungen führte,
+da diese bei den PSKE Nodes einfach ignoriert wurde.
+
+Die flavor mit root disk bieten eine echte root disk, welche dann auch lokal auf dem gleichen Hypervisor wie die Instanz liegt. Erkennbar ist dies auch an der
+Kennzeichnung 's' am Ende des Flavor Namen.
+
 ## Veraltete Compute Flavors
 
-Als zertifizierter Souvereing Cloud Stack implementieren wir die neuesten Compute Flavor Spezifikationen.
+Als zertifizierter Sovereign Cloud Stack implementieren wir die neuesten Compute Flavor Spezifikationen.
 Teil des Lifecycle-Managements ist es auch, alte Compute Flavors zu verwerfen. Die Eigenschaft 'os:deprecation' wird verwendet, um anzuzeigen, wann ein
 Compute Flavor als veraltet eingestuft wird. Dies signalisiert, dass er in der Zukunft entfernt wird oder eingestellt werden kann.
 Sie können auch in der Beschreibung einen Hinweis finden.
