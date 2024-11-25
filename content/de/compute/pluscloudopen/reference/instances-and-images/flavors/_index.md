@@ -34,36 +34,34 @@ Die folgende Tabelle zeigt die Liste aller öffentlichen Compute Flavors:
 
 | Name           | RAM (MB) | vCPUs | Disk (GB) |
 |----------------|----------|-------|-----------|
-| SCS-1V-0.5 | 512 | 1 | 0 |
-| SCS-1V-1 | 1024 | 1 | 0 |
-| SCS-1L-1 | 1024 | 1 | 0 |
-| SCS-1V-2 | 2048 | 1 | 0 |
-| SCS-1V-4 | 4096 | 1 | 0 |
-| SCS-1V-8 | 8192 | 1 | 0 |
-| SCS-2V-2 | 2048 | 2 | 0 |
-| SCS-2V-4 | 4096 | 2 | 0 |
-| SCS-2V-8 | 8192 | 2 | 0 |
-| SCS-2V-16 | 16384 | 2 | 0 |
-| SCS-4V-8 | 8192 | 4 | 0 |
-| SCS-4V-16 | 16384 | 4 | 0 |
-| SCS-4V-32 | 32768 | 4 | 0 |
-| SCS-8V-8 | 8192 | 8 | 0 |
-| SCS-8V-16 | 16384 | 8 | 0 |
-| SCS-8V-32 | 32768 | 8 | 0 |
-| SCS-16V-32 | 32768 | 16 | 0 |
-| SCS-16V-64 | 65536 | 16 | 0 |
+| SCS-1V-0.5 | 512 | 1 | * |
+| SCS-1V-1 | 1024 | 1 | * |
+| SCS-1L-1 | 1024 | 1 | * |
+| SCS-1V-2 | 2048 | 1 | * |
+| SCS-1V-4 | 4096 | 1 | * |
+| SCS-1V-8 | 8192 | 1 | * |
+| SCS-2V-2 | 2048 | 2 | * |
+| SCS-2V-4 | 4096 | 2 | * |
+| SCS-2V-8 | 8192 | 2 | * |
+| SCS-2V-16 | 16384 | 2 | * |
+| SCS-4V-8 | 8192 | 4 | * |
+| SCS-4V-16 | 16384 | 4 | * |
+| SCS-4V-32 | 32768 | 4 | * |
+| SCS-8V-8 | 8192 | 8 | * |
+| SCS-8V-16 | 16384 | 8 | * |
+| SCS-8V-32 | 32768 | 8 | * |
+| SCS-16V-32 | 32768 | 16 | * |
+| SCS-16V-64 | 65536 | 16 | * |
 | SCS-2V-4-20s | 4096 | 2 | 20 |
 | SCS-4V-16-100s | 16384 | 4 | 100 |
 
-Hinweis zu der 'Disk (GB)' Spalte:
+* Hinweis zu der 'Disk (GB)' Spalte:
 
 Die flavor mit einer disk Grösse von '0' verwenden keine lokale root disk, stattdessen muss hier ein (cinder-) volume mit einer beliebigen Grösse definiert werden,
 welches die Instanz dann als root disk device verwendet.
-PSKE nodes beispielsweise verwenden seit je her ein eigenes cinder boot volume, weswegen die bisherige angabe der disk Grösse im flavor nur zu Verwirrungen führte,
-da diese bei den PSKE Nodes einfach ignoriert wurde.
 
 Die flavor mit root disk bieten eine echte root disk, welche dann auch lokal auf dem gleichen Hypervisor wie die Instanz liegt. Erkennbar ist dies auch an der
-Kennzeichnung 's' am Ende des Flavor Namen.
+Kennzeichnung 's' am Ende des Flavor Namen. Weitere Details dazu finden sich hier https://docs.plusserver.com/de/compute/pluscloudopen/reference/local-storage/
 
 ## Veraltete Compute Flavors
 
