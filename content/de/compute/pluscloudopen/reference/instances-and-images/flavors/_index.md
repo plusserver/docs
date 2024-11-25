@@ -55,7 +55,7 @@ Die folgende Tabelle zeigt die Liste aller öffentlichen Compute Flavors:
 | SCS-2V-4-20s | 4096 | 2 | 20 |
 | SCS-4V-16-100s | 16384 | 4 | 100 |
 
-* Hinweis zu der 'Disk (GB)' Spalte:
+\* Hinweis zu der 'Disk (GB)' Spalte:
 
 Die flavor mit einer disk Grösse von '0' verwenden keine lokale root disk, stattdessen muss hier ein (cinder-) volume mit einer beliebigen Grösse definiert werden,
 welches die Instanz dann als root disk device verwendet.

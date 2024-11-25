@@ -52,7 +52,7 @@ The following table shows the list of all public Compute Flavors:
 | SCS-2V-4-20s | 4096 | 2 | 20 |
 | SCS-4V-16-100s | 16384 | 4 | 100 |
 
-* Note on the 'Disk (GB)' column:
+\* Note on the 'Disk (GB)' column:
 
 The flavors without a disk size do not use a local root disk, they use instead a (cinder-) volume of self-selected size which the instance then will use as the root disk device.
 
