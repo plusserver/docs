@@ -13,14 +13,14 @@ Jede pluscloud-open-Umgebung ist als "shared nothing" Infrastruktur konzipiert, 
 
 ## Umgebungen der pluscloud open
 
-| Umgebung | Region   | Availability Zone | Horizon/UI Endpunkt                   | Keystone Endpunkt                           | Lebenszyklus |
-|----------|----------|-------------------|---------------------------------------|---------------------------------------------|--------------|
-| prod1    | DE-WEST  | DE-WEST-1         | <https://prod1.api.pco.get-cloud.io>  | <https://prod1.api.pco.get-cloud.io:5000>   | Aktiv        |
-| prod2    | DE-NORTH | DE-NORTH-1        | <https://prod2.api.pco.get-cloud.io>  | <https://prod2.api.pco.get-cloud.io:5000>   | Aktiv        |
-| prod3    | DE-NORTH | DE-NORTH-2        | <https://prod3.api.pco.get-cloud.io>  | <https://prod3.api.pco.get-cloud.io:5000>   | Aktiv        |
-| prod4    | DE-WEST  | DE-WEST-2         | <https://prod4.api.pco.get-cloud.io>  | <https://prod4.api.pco.get-cloud.io:5000>   | Aktiv        |
-| scs1     | DE-WEST  | DE-WEST-2         | <https://ui.gx-scs.sovereignit.cloud> | <https://api.gx-scs.sovereignit.cloud:5000> | Abgekündigt  |
-| scs2     | DE-WEST  | DE-WEST-1         | <https://scs2.api.pco.get-cloud.io>   | <https://scs2.api.pco.get-cloud.io:5000>    | Aktiv        |
+| Region   | Availability Zone | Interner Name | Horizon/UI Endpunkt                   | Keystone Endpunkt                           | Lebenszyklus |
+|----------|-------------------|---------------|---------------------------------------|---------------------------------------------|--------------|
+| DE-WEST  | DE-WEST-1         | prod1         | <https://prod1.api.pco.get-cloud.io>  | <https://prod1.api.pco.get-cloud.io:5000>   | Aktiv        |
+| DE-NORTH | DE-NORTH-1        | prod2         | <https://prod2.api.pco.get-cloud.io>  | <https://prod2.api.pco.get-cloud.io:5000>   | Aktiv        |
+| DE-NORTH | DE-NORTH-2        | prod3         | <https://prod3.api.pco.get-cloud.io>  | <https://prod3.api.pco.get-cloud.io:5000>   | Aktiv        |
+| DE-WEST  | DE-WEST-2         | prod4         | <https://prod4.api.pco.get-cloud.io>  | <https://prod4.api.pco.get-cloud.io:5000>   | Aktiv        |
+| DE-WEST  | DE-WEST-2         | scs1          | <https://ui.gx-scs.sovereignit.cloud> | <https://api.gx-scs.sovereignit.cloud:5000> | Abgekündigt  |
+| DE-WEST  | DE-WEST-1         | scs2          | <https://scs2.api.pco.get-cloud.io>   | <https://scs2.api.pco.get-cloud.io:5000>    | Aktiv        |
 
 {{% alert title="Hinweis" color="info" %}}
 scs1 (Abgekündigt) und scs2 sind Entwicklungsumgebungen, die ausschließlich im Kontext von [Sovereign Cloud Stack](https://scs.community) & [Gaia-X](https://gaia-x.eu) bereitgestellt wird.
