@@ -1,0 +1,50 @@
+---
+title: "Organization Administration"
+linkTitle: "Organization Administration"
+type: "docs"
+weight: 10
+date: 2024-11-26
+description: >
+  This document is intended to help you get started quickly with pluscloud v and the associated organization-administration
+---
+
+## Organization administration
+
+The Administration menu item takes you to the overview for users, groups and account settings. Here you can add further users to your organization and manage their rights (roles).
+Our support is of course also available for this and other topics.
+
+{{< screenshot src="img/help.png" title="Help menu" >}} You can find extensive help in technical portal details at VMware Online using the question mark in the top right corner. {{< /screenshot >}}
+
+### Roles, users and groups
+
+The sub-items Users, Groups and Roles can be found under the Access control menu item.
+You can create additional users to log into the vCloud Director via Users and the New button.
+{{< screenshot src="img/users.png" title="User" >}}
+The following parameters can be configured:
+{{< screenshot src="img/parameters.png" title="Parameters" >}}
+Username: Username for the login
+
+    Password: Password for the login
+
+    Confirm password: Confirmation of the password
+
+    State: Activate or deactivate user account after creation
+
+    Available roles: Determine user rights via a predefined role
+
+    Full name: Name of the user (optional)
+
+    Email address: Email address of the user (optional)
+
+    Phone number: Phone number of the user (optional)
+    
+User groups should generally be set up under Groups. This tab has no function in the current release.
+
+Predefined roles can already be found under Roles. A role always contains a collection of rights for a user. You can use the New button to create additional customised roles that can then be used for new users:
+{{< screenshot src="img/parameters.png" title="roles" >}}
+
+#### Limitation to individual instances
+
+By configuring users in the **vApp User** role, it is also possible to restrict access to individual vApps and thus indirectly to VMs:
+{{< screenshot src="img/details.png" title="" >}}
+{{< screenshot src="img/owner.png" title="" >}}
