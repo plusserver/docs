@@ -44,10 +44,12 @@ openstack flavor list --long --column Name --column Properties | grep "aggregate
 
 Flavors with the following properties are **stopped** during maintenance work:
 
-* aggregate_instance_extra_specs:localdisk='true'
-* aggregate_instance_extra_specs:gpu='true'
-* aggregate_instance_extra_specs:nvidia_gen2='true'
-* ops.maintenance_action = 'stop'
+* 'ops.maintenance_action': 'stop'
+* 'aggregate_instance_extra_specs:localdisk': 'true'
+* 'aggregate_instance_extra_specs:nvidia_gen1': 'true'
+* 'aggregate_instance_extra_specs:nvidia_gen2': 'true'
+* 'aggregate_instance_extra_specs:nvidia_gen3': 'true'
+* 'pci_passthrough:alias': 'l40:1'
 
 Flavors with the following properties are migrated **live** during maintenance work:
 
