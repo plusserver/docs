@@ -31,27 +31,33 @@ The following table shows the list of all public Compute Flavors:
 
 | Name           | RAM (MB) | vCPUs | Disk (GB) |
 |----------------|----------|-------|-----------|
-| SCS-1V-0.5 | 512 | 1 | 0 |
-| SCS-1V-1 | 1024 | 1 | 0 |
-| SCS-1L-1 | 1024 | 1 | 0 |
-| SCS-1V-2 | 2048 | 1 | 0 |
-| SCS-1V-4 | 4096 | 1 | 0 |
-| SCS-1V-8 | 8192 | 1 | 0 |
-| SCS-2V-2 | 2048 | 2 | 0 |
-| SCS-2V-4 | 4096 | 2 | 0 |
-| SCS-2V-8 | 8192 | 2 | 0 |
-| SCS-2V-16 | 16384 | 2 | 0 |
-| SCS-4V-8 | 8192 | 4 | 0 |
-| SCS-4V-16 | 16384 | 4 | 0 |
-| SCS-4V-32 | 32768 | 4 | 0 |
-| SCS-8V-8 | 8192 | 8 | 0 |
-| SCS-8V-16 | 16384 | 8 | 0 |
-| SCS-8V-32 | 32768 | 8 | 0 |
-| SCS-16V-32 | 32768 | 16 | 0 |
-| SCS-16V-64 | 65536 | 16 | 0 |
+| SCS-1V-0.5 | 512 | 1 | * |
+| SCS-1V-1 | 1024 | 1 | * |
+| SCS-1L-1 | 1024 | 1 | * |
+| SCS-1V-2 | 2048 | 1 | * |
+| SCS-1V-4 | 4096 | 1 | * |
+| SCS-1V-8 | 8192 | 1 | * |
+| SCS-2V-2 | 2048 | 2 | * |
+| SCS-2V-4 | 4096 | 2 | * |
+| SCS-2V-8 | 8192 | 2 | * |
+| SCS-2V-16 | 16384 | 2 | * |
+| SCS-4V-8 | 8192 | 4 | * |
+| SCS-4V-16 | 16384 | 4 | * |
+| SCS-4V-32 | 32768 | 4 | * |
+| SCS-8V-8 | 8192 | 8 | * |
+| SCS-8V-16 | 16384 | 8 | * |
+| SCS-8V-32 | 32768 | 8 | * |
+| SCS-16V-32 | 32768 | 16 | * |
+| SCS-16V-64 | 65536 | 16 | * |
 | SCS-2V-4-20s | 4096 | 2 | 20 |
 | SCS-4V-16-100s | 16384 | 4 | 100 |
 
+\* Note on the 'Disk (GB)' column:
+
+The flavors without a disk size do not use a local root disk, they use instead a (cinder-) volume of self-selected size which the instance then will use as the root disk device.
+
+The flavors with a defined root disk offer a real root disk, which is then also located locally on the same hypervisor as the instance. This can also be recognized by the
+letter 's' at the end of the flavor name. Additional details can be found here https://docs.plusserver.com/en/compute/pluscloudopen/reference/local-storage/
 
 ## Deprecated Compute Flavors
 
