@@ -66,7 +66,7 @@ All other [Server Group Policies](../instances-and-images/server-groups/#Availab
 
 ## Metadata Overview
 
-| Metadaten-Feld            | Type                | Default | Wer setzt es | Info                                                                                             |
+| Metadaten-Feld            | Type                | Default | Who set this | Info                                                                                             |
 | ------------------------- | ------------------- | ------- | ------------ | ------------------------------------------------------------------------------------------------ |
 | ps_automatic_maintenance  | datetime (ISO8601)  | none    | Plusserver   | Shows when general maintenance work is being carried out on the underlying hypervisor.           |
 | ps_scheduled_shutdown     | datetime (ISO8601)  | none    | Plusserver   | Informs at what time a VM is stopped for maintenance work.                                       |
