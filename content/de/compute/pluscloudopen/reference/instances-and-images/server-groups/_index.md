@@ -26,11 +26,11 @@ Servergruppen bieten einen Mechanismus zur Angabe der Lokalität von Servern im 
 
 * soft-affinity
   
-  Versucht, Instanzen, die zur Servergruppe gehören, auf denselben Host zu beschränken. Wenn es nicht möglich ist, alle Instanzen auf einem Host einzuplanen, werden sie zusammen auf so wenigen Hosts wie möglich eingeplant.
+  Versucht, Instanzen, die zur Servergruppe gehören, auf denselben Host zu beschränken. Wenn es nicht möglich ist, alle Instanzen auf einem Host einzuplanen, werden sie zusammen auf so wenigen Hosts wie möglich platziert.
 
 * soft-anti-affinity
 
-  Versucht, die zur Servergruppe gehörenden Instanzen auf getrennte Hosts zu beschränken. Wenn es nicht möglich ist, alle Instanzen auf separaten Hosts einzuplanen, werden sie auf so vielen separaten Hosts wie möglich eingeplant.
+  Versucht, die zur Servergruppe gehörenden Instanzen auf getrennte Hosts zu beschränken. Wenn es nicht möglich ist, alle Instanzen auf separaten Hosts einzuplanen, werden sie auf so vielen separaten Hosts wie möglich platziert.
 
 ### Einschränkungen
 

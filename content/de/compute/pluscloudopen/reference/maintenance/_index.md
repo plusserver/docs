@@ -33,7 +33,7 @@ Sie sollten davon ausgehen, dass Ihre VMs nach dem Neustart des Hypervisors ausg
 
 ### Flavor basiert
 
-Man erkennt die Ausnahmen daran das im Flavor, das sie beim erstellen ihrer VM wählen in dem Feld **_Properties_** bestimmte Key-Value Paare gesetzt sind.
+Man erkennt die Ausnahmen daran das im Flavor, welches sie beim erstellen ihrer VM wählen, in dem Feld **_Properties_** bestimmte Key-Value Paare gesetzt sind.
 
 Beispiel für [Local Disk Flavor](../local-storage)
 ```bash
@@ -58,7 +58,7 @@ Flavors mit den folgenden Properties werden während einer Wartungsarbeit **live
 
 Für die [Server Gruppen](../instances-and-images/server-groups/) gibt es nur eine Ausnahme und das ist die 'harte' Affinität. Wir müssen die VMs hier herunterfahren da es keinen sicheren Weg gibt diese Live zu migrieren.
 
-Um die Migration solcher Affinitäts Gruppen durchzuführen müsste der Verteilungs Mechanismus von Openstack (nova-scheduler) temporär für die VM abgeschalten werden. Wenn dieser Scheduler abgeschaltet ist kann nicht mehr garantiert werden das die VM aus dieser Gruppe überhaupt auf den Ziel Hypervisor lauffähig ist. So fehlen Überprüfungen für CPU und Ram Ressourcen, Verfügbarer Storage, Netzwerk und vieles mehr, es wäre also eine Aktion auf gut Glück.
+Um die Migration solcher Affinitäts Gruppen durchzuführen müsste der Verteilungs Mechanismus von Openstack (nova-scheduler) temporär für die VM abgeschalten werden. Wenn dieser Scheduler abgeschaltet ist, kann nicht mehr garantiert werden das die VM aus dieser Gruppe überhaupt auf den Ziel Hypervisor lauffähig ist. So fehlen Überprüfungen für CPU und Ram Ressourcen, Verfügbarer Storage, Netzwerk und vieles mehr, es wäre also eine Aktion auf gut Glück.
 
 Alle anderen [Server Gruppen Policies](../instances-and-images/server-groups/#Verfügbare%20Policies) können Live migriert werden.
 
