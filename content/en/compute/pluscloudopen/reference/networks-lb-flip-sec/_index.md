@@ -133,7 +133,14 @@ The "Load Balancers" menu allows you to define load balancing services. Clicking
 
 "**Name**" and "**IP address**" are the first two pieces of information you have to enter. Select an IP address from your subnet. If you leave that field empty, an IP address will be allocated from the subnet you select (as long as DHCP is active there).
 
-"**Description**" is optional, but should be used to store information about why and what this particular load balancer instance is for. You cannot choose a "**Flavor**". pluscloud open is using the Amphora flavor here. As already mentioned, you have to choose a "**Subnet**" to which the loadbalancer should be connected. "**Admin State Up**" allows you to create the load balancer turned off. It needs to be switched to "**Admin State Up**" in order to balance traffic.
+"**Description**" is optional, but should be used to store information about why and what this particular load balancer instance is for. You can optionally select a "**Flavor**" to better fit the Load Balancer to your needs. If you do not select a "**Flavor**", you will get a Load Balancer of the APP-BASIC performance class.
+
+| Flavor Name | Use case                                                                                                                                |
+|-------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| APP-BASIC   | Suitable for standard workloads, offering a balanced mix of performance and cost-efficiency.                                            |
+| APP-PREMIUM | Designed for performance-intensive applications, such as large distributed systems or workloads with high data throughput requirements. |
+
+As already mentioned, you have to choose a "**Subnet**" to which the loadbalancer should be connected. "**Admin State Up**" allows you to create the load balancer turned off. It needs to be switched to "**Admin State Up**" in order to balance traffic.
 
 The next menu "Listener Details" defines the listener for the new load balancer:
 
@@ -174,6 +181,15 @@ The last step is the "**Monitor Details**" menu. Monitoring is used to determine
 ![screenshot of the monitor details menu](./image2020-10-16_16-41-51.png)
 
 You can choose a "**Type**" of monitor from the list of HTTP, HTTPS, PING, TCP, TLS-HELLO, UDP-CONNECT and SCTP. Depending on your choice, you will have to enter different bits of information. "**Delay (sec)**" determines the time between the health checks. It should be as big as "**Timeout**" or bigger. The "**Max Retries**" allows you to choose how many times the load balancer should retry the health check before setting the state of the member to **inactive** (should be a number between 1 and 10). "**Max Retries Down**" is the number of connection failures allowed before the pool member is declared "**faulty**" (again a number beteween 1 and 10). "**Timeout**" describes the amount of time a healtch check can take to succeed (should be a number bigger or equal 0 and less or equal to the "**Delay (sec)**"). "**HTTP Method**" can be one of the allowed HTTP methods (like GET, HEAD, etc.) and "**Expected Codes**" should be one HTTP code (or a list of them) that is returned for a successful health check. "**URL Path**" can be used to define a custom path for your health checks. Remember that this is requested by the monitor every "**Delay (sec)**". Once all the required information has been entered into the forms, the load balancer can be created. If you want the load balancer to be accessible from the public internet, you have to assign a floating IP address to it.
+
+### Provider
+
+In pluscloud open, various Layer 7 Load Balancer flavors (Provider: amphora) are available. Additionally, we offer a Layer 4 Load Balancer (Provider: ovn), which can only be created via CLI/API.
+
+Example for creating a Load Balancer with the OVN provider:
+```bash
+openstack loadbalancer create --name my-l4-lb --vip-ubnet-id <SUBNET-ID> --provider ovn
+```
 
 ## Floating IPs
 
