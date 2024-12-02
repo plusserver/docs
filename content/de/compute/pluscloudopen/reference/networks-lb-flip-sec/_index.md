@@ -135,8 +135,14 @@ Um einen neuen Loadbalancer zu erstellen, müssen Sie verschiedene Parameter fes
 
 "**Name**" und "**IP-Adresse**" sind die ersten beiden Informationen, die Sie eingeben müssen. Wählen Sie eine IP-Adresse aus Ihrem Subnetz. Wenn Sie dieses Feld leer lassen, wird eine IP-Adresse aus dem von Ihnen gewählten Subnetz zugewiesen (sofern DHCP dort aktiv ist).
 
-"**Beschreibung**" ist optional, sollte aber verwendet werden, um Informationen über das "Warum" und "Was" dieser speziellen Load-Balancer-Instanz zu speichern. Sie können keinen "**Flavor**" wählen. Die pluscloud open verwendet hier das Amphora Flavor. Wie bereits erwähnt, müssen Sie ein "**Subnet**" auswählen, mit dem der Load Balancer verbunden werden soll. Mit "**Admin State Up**" kann man den Load-Balancer ausgeschaltet anlegen. Er muss auf "**Admin State Up**" geschaltet werden, um den Datenverkehr auszugleichen.
+"**Beschreibung**" ist optional, sollte aber verwendet werden, um Informationen über das "Warum" und "Was" dieser speziellen Load-Balancer-Instanz zu speichern. Sie können optional ein "**Flavor**" wählen, um den Load Balancer besser an Ihre Bedürfnisse anzupassen. Sofern Sie kein "**Flavor**" auswählen, erhalten Sie einen Load Balancer der Performanceklasse APP-BASIC.
 
+| Flavor Name | Anwendungsfall                                                                                                                                |
+|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| APP-BASIC   | Geeignet für Standard-Arbeitslasten und bietet eine ausgewogene Mischung aus Leistung und Kosteneffizienz.                                    |
+| APP-PREMIUM | Konzipiert für leistungsintensive Anwendungen, z. B. große verteilte Systeme oder Arbeitslasten mit hohen Anforderungen an den Datendurchsatz |
+
+Wie bereits erwähnt, müssen Sie ein "**Subnet**" auswählen, mit dem der Load Balancer verbunden werden soll. Mit "**Admin State Up**" kann man den Load-Balancer ausgeschaltet anlegen. Er muss auf "**Admin State Up**" geschaltet werden, um den Datenverkehr auszugleichen.
 
 Das nächste Menü "Listener Details" definiert den Listener für den neuen Load Balancer:
 
@@ -183,6 +189,15 @@ Die "**Verzögerung (sec)**" bestimmt die Zeit zwischen den Health Checks. Sie s
 Die "**HTTP-Methode**" kann eine der erlaubten HTTP-Methoden sein (wie GET, HEAD, etc.) und "**Erwartete Codes**" sollte ein HTTP-Code (oder eine Liste dieser) sein, der bei einer erfolgreichen Überprüfung zurückgegeben wird.
 Unter "**URL Path**" kann ein benutzerdefinierter Pfad für Ihre Health Checks angegeben werden. Denken Sie daran, dass dieser vom Monitor alle "**Verzögerung (Sek)**" abgefragt wird.
 Wenn alle erforderlichen Informationen in die Formulare eingegeben wurden, kann der Load Balancer erstellt werden. Wenn Sie möchten, dass der Load Balancer vom öffentlichen Internet aus erreichbar ist, müssen Sie ihm eine Floating IP-Adresse zuweisen.
+
+### Provider
+
+In der pluscloud open stehen Ihnen verschiedene Layer 7 Load Balancer Flavor (Provider: amphora) zur Verfügung. Zudem bieten wir Ihenen einen Layer 4 Load Balancer (Provider: ovn) an, welcher jedoch nur über die CLI/API erstellbar ist.
+
+Beispiel zum erstellen eines Load Balancer mit dem Provider OVN:
+```bash
+openstack loadbalancer create --name my-l4-lb --vip-ubnet-id <SUBNET-ID> --provider ovn
+```
 
 ## Floating IPs
 
