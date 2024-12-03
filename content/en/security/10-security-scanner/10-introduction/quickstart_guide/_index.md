@@ -1,5 +1,6 @@
 ---
 title: "Security Scanner - Quickstart Guide"
+linkTitle: "Security Scanner - Quickstart Guide"
 date: 2024-11-20
 weight: 1
 description: "Quick start guide for the Security Scanner"

@@ -9,27 +9,6 @@ type: docs
 
 # Security Scanner - Scan von internen IP-Adressen mit dem Gateway
 
-## Inhalt
-* Einleitung
-* (1) Gateway installieren
-    * (1.1) Gateway Image herunterladen
-    * (1.2) Image in den Katalog der vAPP-Vorlagen Ihrer PlusCloud hochladen
-    * (1.3) Neue virtuelle Maschine anlegen
-    * (1.4) Hostnamen der VM angeben und Template auswählen
-    * (1.5) Netzwerk & IP-Adresse einstellen
-    * (1.6) Firewall einstellen
-    * (1.7) Mit der VM-Konsole verbinden
-    * (1.8) Network configuration auswählen
-    * (1.9) Informationen der Netzwerkkonfiguration einstellen
-    * (1.10) Netzwerkverbindung zum Security Scanner testen
-    * (1.11) Gateway configuration auswählen
-    * (1.12) Set web password auswählen & Passwort vergeben
-* (2) Gateway konfigurieren
-    * (2.1) Neues Gateway erstellen
-    * (2.2) Token kopieren
-    * (2.3) Web-UI des Gateways öffnen
-    * (2.4) Status des Gateways überprüfen
-
 ## Einleitung
 
 Da nicht alle IP-Adressen Ihrer Infrastruktur von extern geprüft werden können, haben Sie die Möglichkeit ein Gateway einzurichten. Mithilfe dessen können auch isolierte Netzwerke (z. B. RfC-1918) auf Schwachstellen hin überprüft werden.

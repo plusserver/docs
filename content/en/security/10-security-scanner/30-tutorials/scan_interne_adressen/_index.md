@@ -1,5 +1,6 @@
 ---
 title: "Security Scanner - Scanning Internal IP Addresses with the Gateway"
+linkTitle: "Security Scanner - Scanning Internal IP Addresses with the Gateway"
 date: 2024-11-20
 weight: 1
 description: "Guide for scanning internal IP addresses with the Gateway"
@@ -7,27 +8,6 @@ type: docs
 ---
 
 # Security Scanner - Scanning Internal IP Addresses with the Gateway
-
-## Contents
-* Introduction
-* (1) Installing Gateway
-    * (1.1) Download Gateway Image
-    * (1.2) Upload Image to the vAPP Template Catalog of your PlusCloud
-    * (1.3) Create New Virtual Machine
-    * (1.4) Specify VM Hostname and Select Template
-    * (1.5) Configure Network & IP Address
-    * (1.6) Configure Firewall
-    * (1.7) Connect to VM Console
-    * (1.8) Select Network Configuration
-    * (1.9) Set Network Configuration Information
-    * (1.10) Test Network Connection to Security Scanner
-    * (1.11) Select Gateway Configuration
-    * (1.12) Select Set Web Password & Assign Password
-* (2) Configure Gateway
-    * (2.1) Create New Gateway
-    * (2.2) Copy Token
-    * (2.3) Open Gateway Web UI
-    * (2.4) Check Gateway Status
 
 ## Introduction
 
