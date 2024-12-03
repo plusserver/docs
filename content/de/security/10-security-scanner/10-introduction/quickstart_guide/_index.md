@@ -1,9 +1,10 @@
 ---
 title: "Security Scanner - Quickstart Guide"
+linkTitle: "Security Scanner - Quickstart Guide"
 date: 2024-11-20
+type: docs
 weight: 1
 description: "Schnelleinstieg in den Security Scanner"
-type: docs
 ---
 
 # Security Scanner - Quickstart-Guide

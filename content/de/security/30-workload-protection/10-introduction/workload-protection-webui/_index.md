@@ -1,5 +1,6 @@
 ---
 title: "Workload Protection Webui"
+linkTitle: "Workload Protection Webui"
 date: 2024-11-28T17:47:33+01:00
 type: docs
 weight: 10

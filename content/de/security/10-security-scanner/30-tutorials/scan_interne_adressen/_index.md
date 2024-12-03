@@ -1,7 +1,8 @@
 ---
 title: "Security Scanner - Scan von internen IP-Adressen mit dem Gateway"
+linkTitle: "Security Scanner - Scan von internen IP-Adressen mit dem Gateway"
 date: 2024-11-20
-weight: 1
+weight: 10
 description: "Anleitung zum Scannen interner IP-Adressen mit dem Gateway"
 type: docs
 ---

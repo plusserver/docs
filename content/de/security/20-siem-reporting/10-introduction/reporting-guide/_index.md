@@ -1,7 +1,8 @@
 ---
 title: "Reporting Guide"
+linkTitle: "Reporting Guide"
 date: 2024-11-26
-draft: false
+type: docs
 description: "Anleitung zur Verwendung der Reporting Dashboards"
 type: docs
 ---
