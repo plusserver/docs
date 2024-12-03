@@ -26,7 +26,7 @@ So können Sie sich frühzeitig auf wichtige Updates vorbereiten und sicherstell
 | September | 30.09.2024 | Change | [Launch PSKE Version 1.14.0](https://docs.plusserver.com/de/container/managed-kubernetes/releasenotes/notes/1-14-0/) |
 | Oktober | - | - | - |
 | November | - | - | - |
-| Dezember | 02.12.2024 | Change | [Launch PSKE Version 1.16.0](https://status.plusserver.com/incidents/4lhlgb6lgdl7) |
+| Dezember | 02.12.2024 | Change | [Launch PSKE Version 1.16.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-16-0/) |
 
 ## Verhalten bei AutoUpdates
 
