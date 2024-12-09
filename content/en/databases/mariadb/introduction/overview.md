@@ -15,6 +15,7 @@ Database-as-a-Service (DBaaS) represents a suite of fully automated microservice
 |-----------|---------|
 | MariaDB   | 10.6    |
 | MariaDB   | 10.11   |
+| MariaDB   | 11.4    |
 
 ### Key Features  
 

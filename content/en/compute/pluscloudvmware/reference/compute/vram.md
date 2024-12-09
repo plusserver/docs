@@ -28,6 +28,8 @@ Please note:
 * Only the specified vRAM range is supported.
 * You can also set values outside the specified range.  
   In this case, however, it may happen that a VM does not start or no longer starts correctly after a restart.
+* The allocated vRAM of a VM also consumes corresponding storage space.
+  This is because in the event that an ESXi no longer has enough physical RAM available, a correspondingly large swap file is required for each VM in the size of its configured RAM.
 
 ## Setting up vRAM for VMs
 

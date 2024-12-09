@@ -1,5 +1,5 @@
 ---
-title: "SCS R&"
+title: "SCS R6"
 linkTitle: "SCS R6"
 type: "docs"
 date: 2024-03-25
@@ -8,7 +8,7 @@ description: >
   Notes on changes and updates in SCS R6
 ---
 
-## General notes 
+## General notes
 
 - OpenStack 2023.2 (Bobcat) is the OpenStack release that is used
 - Ceph Quincy is the Ceph release that is used. Version 17.2.7 is included.
@@ -62,4 +62,4 @@ OpenStack 2023.2 release notes:
 - Neutron: https://docs.openstack.org/releasenotes/neutron/2023.2.html
 - Nova: https://docs.openstack.org/releasenotes/nova/2023.2.html
 - Octavia: https://docs.openstack.org/releasenotes/octavia/2023.2.html
-- Placement: https://docs.openstack.org/releasenotes/placement/2023.2.html 
+- Placement: https://docs.openstack.org/releasenotes/placement/2023.2.html

@@ -56,7 +56,7 @@ Weitere Informationen zur Verwendung von cloud-init finden Sie in den Beispielen
 
 In diesem Beispiel deployen wir eine bestimmte Anzahl an Servern die mit ein Load Balancer Erreichbar gemacht werden.
 
-[SOURCE](https://cloudinit.readthedocs.io/en/latest/reference/examples.html)
+[SOURCE](https://github.com/pluscloudopen/terraform-pco/tree/main/loadbalancer-webservice)
 
 ### Variablen
 

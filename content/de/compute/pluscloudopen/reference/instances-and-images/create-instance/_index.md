@@ -28,7 +28,7 @@ Als nächstes legen Sie die "**Volumengröße**" des Root-Volumes Ihrer neuen In
 
 Die Optionen auf der rechten Seite ("**Neues Volume erstellen**" und "**Volume beim Löschen der Instanz löschen**") bestimmen den Lebenszyklus des Root-Volumes Ihrer Instanz. Wenn Sie möchten, dass Ihre Instanz und ihr Root-Volume gelöscht werden, wenn die Instanz gelöscht wird, wählen Sie, dass kein neues Volume erstellt werden soll (die Option, das Volume zu löschen, wenn die Instanz gelöscht wird, wird deaktiviert). Wenn Sie sich entschieden haben, ein Volume zu erstellen, können Sie festlegen, dass das Volume beim Löschen der Instanz gelöscht wird. Wenn Sie diese Option nicht wählen, wird das Root-Volume der Instanz die Löschung der Instanz "überleben" (und Speicherplatz verbrauchen und in Rechnung gestellt werden).
 
-Nun müssen Sie - indem Sie auf "**Weiter**" klicken - den "**Flavor**" Ihrer neuen Instanz auswählen. Flavors bestimmen die Dimensionen Ihrer neuen Instanz hinsichtlich der Anzahl der virtuellen CPUs, der Menge des virtuellen Speichers und der Größe der Root-Disk.
+Nun müssen Sie - indem Sie auf "**Weiter**" klicken - den [**Flavor**](../flavors/) Ihrer neuen Instanz auswählen. [**Flavors**](../flavors/) bestimmen die Dimensionen Ihrer neuen Instanz hinsichtlich der Anzahl der virtuellen CPUs, der Menge des virtuellen Speichers und der Größe der Root-Disk.
 
 <img src="2023-03-31_09-52.png" alt="Bildschirmfoto des Flavor-Menüs" width="50%" height="50%" title="Flavor-Menü">
 
