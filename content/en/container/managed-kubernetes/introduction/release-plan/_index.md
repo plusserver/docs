@@ -27,6 +27,7 @@ This allows you to prepare for important updates in good time and ensure that yo
 | October | - | - | - |
 | November | - | - | - |
 | December | 02.12.2024 | Change | [Launch of PSKE Version 1.16.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-16-0/) |
+| December | 19.12.2024 | Change | [Launch of PSKE Version 1.17.0](https://status.plusserver.com/incidents/w8s3wqf2w01j) |
 
 ## AutoUpdate behavior
 
