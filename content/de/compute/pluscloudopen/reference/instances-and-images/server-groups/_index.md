@@ -7,15 +7,39 @@ description: >
   Verwendung von Server-Gruppen zur Anwendung von (Anti-)Affinität
 ---
 
-## Überblick
+### Überblick
 
-Mit Server-Gruppen können Sie eine Reihe von VMs festlegen, die auf demselben Hypervisor (Affinität) oder auf verschiedenen Hypervisoren (Anti-Affinität) laufen müssen. Im Allgemeinen ist Anti-Affinität gut für Fehlertoleranz und Lastausgleich, während Affinität nützlich ist, wenn Sie Netzwerkeffekte zwischen Ihren VMs minimieren möchten.
+Servergruppen bieten einen Mechanismus zur Angabe der Lokalität von Servern im Verhältnis zu anderen Servern. Sie ermöglichen es Ihnen, anzugeben, ob Server auf demselben Host (Affinität) oder auf verschiedenen Hosts (Anti-Affinität) laufen sollen. Affinität ist von Vorteil, wenn Sie die Netzwerklatenz minimieren möchten, während Anti-Affinität die Fehlertoleranz und Lastverteilung verbessern kann.
 
-Beim Einsatz von [Local SSD Storage](../../local-storage/) wird die Verwendung von Server-Gruppen dringend empfohlen, um Fehlertoleranz bei Ausfall eines Hypervisors zu erreichen.
+### Verfügbare Richtlinien
 
-Mit "**Server Groups**" können Sie Ihre neue Instanz einer bestehenden Server-Gruppe zuordnen, sodass Ihre neue Instanz entweder neben anderen Instanzen in dieser Server-Gruppe angelegt wird oder explizit nicht neben anderen Instanzen in dieser Gruppe (Affinität - Anti-Affinität).
+* affinity
+
+  Schränkt Instanzen, die zur Servergruppe gehören, auf denselben Host ein und schlägt fehl, wenn die Instanz nicht auf diesem Host platziert werden kann.
+  {{% alert title="Einschränkungen bei Wartungsarbeiten" color="warning" %}}
+  Bitte beachten Sie, dass wir jeden Hypervisor (Host, auf dem Ihre VM läuft) einmal im Monat neu starten, um Updates zu installieren. Da wir nicht garantieren können, dass die gesamte Affinity-Gruppe auf einen anderen Hypervisor migriert werden kann, verbleiben alle VMs innerhalb der Gruppe auf dem Hypervisor, der gerade aktualisiert wird. Folglich werden alle VMs in dieser Gruppe für die Dauer des Neustarts ausgeschaltet. Weitere Informationen zu unseren regelmäßigen Wartungsarbeiten finden Sie [hier](../../../Einführung/Umgebungen/#Wartung).
+  {{% /alert %}}
+
+* anti-affinity
+  
+  Schränkt Instanzen, die zu einer Servergruppe gehören, auf verschiedene Hosts ein.
+
+* soft-affinity
+  
+  Versucht, Instanzen, die zur Servergruppe gehören, auf denselben Host zu beschränken. Wenn es nicht möglich ist, alle Instanzen auf einem Host einzuplanen, werden sie zusammen auf so wenigen Hosts wie möglich platziert.
+
+* soft-anti-affinity
+
+  Versucht, die zur Servergruppe gehörenden Instanzen auf getrennte Hosts zu beschränken. Wenn es nicht möglich ist, alle Instanzen auf separaten Hosts einzuplanen, werden sie auf so vielen separaten Hosts wie möglich platziert.
+
+### Einschränkungen
+
+* Server Gruppen können der VM nur beim erstellen des Servers zugeordnet werden.
+* VMs können nur einzeln von Server Gruppen entfernt werden wenn man die VM *löscht*.
+
+### Anwendungsfälle
+
+* Bei der Verwendung von [Local SSD Storage](../../local-storage/) wird dringend empfohlen, Servergruppen mit einer **Affinitätsrichtlinie** zu verwenden, um Fehlertoleranz gegenüber einem Hypervisor-Ausfall oder Hypervisor-Wartungsarbeiten zu erreichen.
 
 <img src="2023-03-31_13-54.png" alt="Bildschirmfoto des Server-Gruppenmenüs" width="50%" height="50%" title="Server-Gruppenmenü">
 <br/><br/>
-
-Server-Gruppen können Affinitäts-, Anti-Affinitäts-, Soft-Affinitäts- und Soft-Anti-Affinitäts-Richtlinien haben. Die Affinitätsrichtlinie schlägt fehl (und die Instanz wird nicht erstellt), wenn die neue Instanz nicht neben einer bestehenden Instanz dieser Server-Gruppe platziert werden kann. Die Soft-Affinitätsrichtlinie platziert die neue Instanz nicht neben einer vorhandenen Instanz dieser Server-Gruppe, wenn dies nicht möglich ist (die neue Instanz wird aber trotzdem erstellt).

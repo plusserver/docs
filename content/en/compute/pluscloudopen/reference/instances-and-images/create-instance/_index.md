@@ -7,6 +7,7 @@ description: >
   Creating instances using the Horizon GUI
 ---
 ## Launch instance
+
 Using the button "Launch Instance" you can create one or more new instances and start them. A guided dialog helps you to go through all required steps. As soon as you have entered enough information for launching an instance, the button "Create Instance" becomes available and you can start your new instance(s). Asterisks (*) mark required information.
 
 Keep in mind that shell access to the new instance is only possible via SSH key authentication. Thus you either need to create an SSH keypair during instance creation or upload your keypair beforehand. Clicking on "**Launch Instance**" opens a dialog, which will guide you through several steps that have to be completed to launch an instance:
@@ -25,7 +26,7 @@ Next, you define the "**Volume Size**" of the root volume of your new instance. 
 
 The options on the right side ("**Create New Volume**" and "**Delete Volume on Instance Deletion**") determine the lifecycle of the root volume of your instance. If you want your instance and its root volume to be deleted when the instance is deleted, you should choose not to create a new volume (the option to delete the volume on instance deletion will be disabled). If you have chosen to create a volume, you can choose to have the volume deleted on instance deletion. If you don't choose this option, the root volume of the instance will "survive" the deletion of the instance (and consume storage and be billed).
 
-Now - by clicking on "Next" - you have to choose the "**Flavor**" of your new instance. "Flavors" determine the "dimensions" of your new instance regarding the number of virtual CPUs, the amount of virtual memory and the size of the root disk.
+Now - by clicking on "Next" - you have to choose the [**Flavor**](../flavors/) of your new instance. [**Flavors**](../flavors/) determine the "dimensions" of your new instance regarding the number of virtual CPUs, the amount of virtual memory and the size of the root disk.
 
 <img src="2023-03-31_09-52.png" alt="screenshot of the flavor menu" width="50%" height="50%" title="Flavor Menu">
 

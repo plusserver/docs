@@ -1,16 +1,16 @@
 ---
-title: "(Verschlüsselte) Volumes, Snapshots und Backups"
+title: "Volumes, Snapshots und Backups"
 type: "docs"
 weight: 50
 date: 2023-02-24
 description: >
-  Erstellen von (verschlüsselten) Volumes, Snapshots und Backups
+  Erstellen und Verwalten von Volumes, Snapshots und Backups
 ---
 
 ## Volumes
 
 Volumes repräsentieren (Block) Storage in OpenStack. Volumes werden als Festplatten in Instanzen verwendet. Wenn nicht explizit anders erwähnt, befinden sich Volumes auf einem [Ceph](https://ceph.io/en/)-Speichersystem und sind über das [RADOS](https://docs.ceph.com/en/quincy/rbd/index.html)-Protokoll über das Netzwerk an die Instanz angeschlossen.
-Über das Menü "**Volumes**" können Sie die Volumes in Ihrem Projekt verwalten. 
+Über das Menü "**Volumes**" können Sie die Volumes in Ihrem Projekt verwalten.
 
 <img src="image2020-10-22_15-21-57.png" alt="Bildschirmfoto des Menüs Volumes" width="50%" height="50%" title="Menü Volumes">
 
@@ -38,13 +38,49 @@ Um ein neues Volume zu erstellen, klicken Sie auf "**+Volume erstellen**". Sie w
 
 Neben einem Namen und einer optionalen Beschreibung können Sie eine "**Volumenquelle**" wählen, z. B. ein Image, einen Snapshot oder andere Volumes. Je nach Auswahl ändern sich die Eingabefelder (die aber selbsterklärend sind). Die gewählte Quelle bestimmt die Größe des neuen Volumes. Sie können das Volume einer zuvor definierten Volume-"**Gruppe**" zuordnen.
 
+### Volume-Typen
+
+{{% alert title="Neu" color="info" %}}
+Demnächst verfügbar! Siehe [Release Notes](../../releasenotes/)
+{{% /alert %}}
+
+Volume-Typen helfen Ihnen bei der Auswahl des richtigen Speichers für Ihre Workloads je nach Bedarf. Sie können zwischen normalem oder verschlüsseltem Speicher für die Datensicherheit oder Premium-Speicher wählen, der höhere IOPS und Durchsatz für leistungsintensive Anwendungen bietet. Mit diesen Optionen können Sie Ihren Speicher an die Anforderungen Ihrer spezifischen Workloads anpassen und sicherstellen, dass kritische Anwendungen reibungslos laufen, während Sie gleichzeitig ein Gleichgewicht zwischen Leistung, Kosten und Sicherheit in Ihrer Cloud-Umgebung schaffen.
+
+Übersicht der aktuell unterstützten Volume-Typen:
+| Volume-Typ | Verschlüsselt | Lesen IOPS | Schreiben IOPS | Lesen MB/s | Schreiben MB/s |
+|----------------------|---------- |-----------|------------|-----------|------------|
+| ceph-standard | Nein | 2500 | 2500 | 256 | 256 |
+| ceph-premium | Nein | 5000 | 5000 | 512 | 512 |
+| ceph-standard-luks | Ja | 2500 | 2500 | 256 | 256 |
+| ceph-premium-luks | Ja | 5000 | 5000 | 512 | 512 |
+
+Übersicht der veralteten Volume-Typen:
+| Volume-Typ | Verschlüsselt | Lesen IOPS | Schreiben IOPS | Lesen MB/s | Schreiben MB/s |
+|----------------------|---------- |-----------|------------|-----------|------------|
+| Nein | 2500 | 2500 | 256 | 256 |
+| LUKS | Ja | 2500 | 2500 | 256 | 256 |
+
+{{% alert title="Hinweis" color="info" %}}
+Der tatsächliche Durchsatz ist das Produkt aus IOPS und E/A-Größe. Bei 2500 IOPS und einer Blockgröße von 4K können Sie zum Beispiel 10 MB/s erreichen. Bei einer Blockgröße von 102400 Bytes erhalten Sie 256 MB/s.
+{{% /alert %}}
+
+#### Volume-Typen ändern
+
+Sie können den Volume-Typ für ein vorhandenes Volume nachträglich ändern. Es muss sich jedoch im
+Zustand „verfügbar“ sein. Das bedeutet, dass es zu diesem Zeitpunkt nicht mit einer VM verbunden sein darf.
+
+Wenn Sie zu und von verschlüsselten Volumes migrieren möchten, müssen Sie die Migration zulassen. Abhängig von der
+Größe des Volumes kann dies einige Zeit in Anspruch nehmen.
+
+Übersetzt mit DeepL.com (kostenlose Version)
+
 ## Backups
 
 Das Menü "**Backups**" listet Ihre aktuellen Backups auf und ermöglicht es Ihnen, diese entweder zu löschen oder für die Wiederherstellung zu verwenden (z. B. indem Sie ein neues Volume aus dem Backup erstellen).
 
 ## Snapshots
 
-Hier sehen Sie eine Liste Ihrer aktuellen Snapshots und können diese verwalten. Dazu gehört das Starten einer Instanz aus einem Snapshot mit "**Als Instanz starten**", das Ändern des Namens oder der Beschreibung eines Snapshots, das Erstellen eines Backups aus Ihrem Snapshot mit "**Backup erstellen**", das Löschen des Snapshots oder das Ändern der Metadaten für Ihren Snapshot. 
+Hier sehen Sie eine Liste Ihrer aktuellen Snapshots und können diese verwalten. Dazu gehört das Starten einer Instanz aus einem Snapshot mit "**Als Instanz starten**", das Ändern des Namens oder der Beschreibung eines Snapshots, das Erstellen eines Backups aus Ihrem Snapshot mit "**Backup erstellen**", das Löschen des Snapshots oder das Ändern der Metadaten für Ihren Snapshot.
 Sie können aus einer Reihe von vordefinierten Metadaten wählen oder "**Benutzerdefinierte**" Metadatenschlüssel hinzufügen. Die maximale Schlüssellänge beträgt 255 Zeichen.
 
 ## Gruppen
@@ -57,9 +93,9 @@ Hier können Sie Ihre Gruppen-Snapshots verwalten.
 
 ## Verschlüsselte Volumes
 
-Die pluscloud open erlaubt es, verschlüsselte Volumes zu erstellen, die auf "LUKS" ([Linux Unified Key Setup](https://gitlab.com/cryptsetup/cryptsetup)) basieren, welches das Linux-Kernel-Modul dm-crypt verwendet und ideal für die Verschlüsselung von Volumes für Linux-Instanzen ist. Die Schlüssel werden bei der Erstellung des Volumes generiert und im Keystore der pluscloud open gespeichert. Beachten Sie, dass beim Löschen von verschlüsselten Volumes nicht nur das Volume, sondern auch der zugehörige Schlüssel gelöscht wird. **Eine Wiederherstellung der Daten ist nach der Löschung nicht möglich**. 
+Die pluscloud open erlaubt es, verschlüsselte Volumes zu erstellen, die auf "LUKS" ([Linux Unified Key Setup](https://gitlab.com/cryptsetup/cryptsetup)) basieren, welches das Linux-Kernel-Modul dm-crypt verwendet und ideal für die Verschlüsselung von Volumes für Linux-Instanzen ist. Die Schlüssel werden bei der Erstellung des Volumes generiert und im Keystore der pluscloud open gespeichert. Beachten Sie, dass beim Löschen von verschlüsselten Volumes nicht nur das Volume, sondern auch der zugehörige Schlüssel gelöscht wird. **Eine Wiederherstellung der Daten ist nach der Löschung nicht möglich**.
 
-Das Erstellen eines verschlüsselten Volumes ist recht einfach. Sie wählen einfach "LUKS" als "**Typ**" aus. 
+Das Erstellen eines verschlüsselten Volumes ist recht einfach. Sie wählen einfach "LUKS" als "**Typ**" aus.
 
 ![Screenshot des Menüs "Volume erstellen"](volume-luks-erstellen.png)
 
@@ -72,9 +108,9 @@ Die Web-GUI erlaubt nicht die Erstellung von verschlüsselten Root-Volumes, die 
 ### Verschlüsselte Boot-Images
 
 Um das Root-Volume einer Instanz zu verschlüsseln, müssen Sie zunächst ein verschlüsseltes Volume erstellen, um dieses als Root-Volume für eine neue Instanz zu verwenden. Sie erstellen dieses Volume aus einem Image des Betriebssystems, das Sie für Ihre neue Instanz wünschen:
-    
+
     openstack volume create --type LUKS --image "imagename" --size <Größe in gb> <volume name>
-     
+
     openstack volume create --type LUKS --image "Ubuntu 20.04" --size 20 ubuntuencrypt
     +---------------------+--------------------------------------+
     | Field               | Value                                |
@@ -87,7 +123,7 @@ Um das Root-Volume einer Instanz zu verschlüsseln, müssen Sie zunächst ein ve
     | description         | None                                 |
     | encrypted           | True                                 |
     | id                  | cd4d8c9a-632a-4045-8b09-da57fcbc5848 |
-    | multiattach         | False                                | 
+    | multiattach         | False                                |
     | Name                | ubuntuencrypt                        |
     | properties          |                                      |
     | replication_status  | None                                 |
@@ -105,7 +141,7 @@ Mit dem Parameter "**--image**" können Sie ein Volume direkt aus einem Image er
 Nun können Sie eine Instanz mit dem soeben erstellten Volume erstellen. Sie müssen einen Flavor (Name oder ID) hinzufügen und Sie sollten nicht vergessen, einen SSH-Schlüsselnamen hinzuzufügen, mit dem Sie sich anschließend bei der Instanz anmelden können. Zusätzlich müssen Sie ein bestehendes Netzwerk hinzufügen, in dem die Instanz erzeugt werden soll:
 
     openstack server create --flavor <Flavor name oder ID> --network <network name oder ID> --key-name <keyname> --volume <volumename oder ID> <instancename>
- 
+
     openstack server create --flavor 1C-1GB-20GB --network Test --key-name mhamm --volume cd4d8c9a-632a-4045-8b09-da57fcbc5848 bootencubuntu
     +-----------------------------+----------------------------------------------------+
     | Field                       | Value                                              |

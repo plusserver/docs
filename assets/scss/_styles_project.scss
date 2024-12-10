@@ -66,3 +66,14 @@ img {
     border-color: #009bf4;
 }
 
+.entry a {
+    text-decoration: none;
+}
+
+.entry a:hover {
+    text-decoration: underline;
+}
+
+#td-section-nav li.td-sidebar-nav__section-title:has(.ul-2) {
+    margin-bottom: 0.75em;
+}
