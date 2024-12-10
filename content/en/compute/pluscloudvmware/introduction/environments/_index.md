@@ -29,7 +29,7 @@ Environments dedicated to a single customer will not be listed publicly.
 | de-3  (*) | DE-WEST  | DE-WEST-1         | <https://de-3.vcd.get-cloud.io/>      |
 | de-31 (*) | DE-WEST  | DE-WEST-1         | <https://de-31.vcd.get-cloud.io/>     |
 | de-4  (*) | DE-WEST  | DE-WEST-2         | <https://de-4.vcd.get-cloud.io/>      |
-| de-5      | DE-NORTH | DE-NORTH-1        | <https://de-5.vcd.get-cloud.io/>      |
+| de-5  (*) | DE-NORTH | DE-NORTH-1        | <https://de-5.vcd.get-cloud.io/>      |
 | de-6      | DE-NORTH | DE-NORTH-2        | <https://de-6.vcd.get-cloud.io/>      |
 | de-7      | DE-WEST  | DE-WEST-1         | <https://de-7.vcd.get-cloud.io/>      |
 | de-9      | DE-WEST  | DE-WEST-2         | <https://de-9.vcd.get-cloud.io/>      |
