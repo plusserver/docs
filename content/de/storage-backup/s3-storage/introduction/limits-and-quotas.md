@@ -31,7 +31,7 @@ Beachten Sie bitte, dass diese Grenze nicht weiter erhöht werden kann.
 - Object Lock Support
 - Versionierung Support
 
-### Bucket-Namen Features und Beschränkungen
+## Bucket-Namen Features und Beschränkungen
 
 - Ein Bucketname muss zwischen 3 (min) bis 63 (max) Zeichen lang sein. Der Suffix (-mirr / -repl) ist
 davon abzuziehen
