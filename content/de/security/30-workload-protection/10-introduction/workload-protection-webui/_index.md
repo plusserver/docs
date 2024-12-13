@@ -18,8 +18,7 @@ Die Administrationsoberfläche ist unter dem folgenden Link zu finden: <https://
 
 Nach der Einrichtung Ihres Kundenaccounts, werden Sie eine Bestätigungsmail bekommen. Dort sind Sie in der Lage das Passwort einzurichten.
 
-Mehr Infos zum "Berechtigung Management" sind in der Herstellerdokumentation unter "Users & Roles" zu finden(Siehe Screenshot): <https://sc1.checkpoint.com/documents/CloudGuard_Dome9/Documentation/Settings/Users-Roles.htm?tocpath=Settings%20%7C_____4>
-Hinweis: Es besteht die Möglichkeit Zwei-Faktor-Authentisierung zu nutzen. Die Dokumentation dazu finden Sie gerne hier: <https://sc1.checkpoint.com/documents/CloudGuard_Dome9/Documentation/Integrations/Single-Sign-On/SSO.htm?tocpath=Single%20Sign-On%20%7C_____0>
+Mehr Infos zum "Berechtigung Management" sind in der Herstellerdokumentation unter "Users & Roles" zu finden: <https://sc1.checkpoint.com/documents/CloudGuard_Dome9/Documentation/Settings/Users-Roles.htm?tocpath=Settings%20%7C_____4>
 
 ![Users and Roles Management](./cloudguard-users-roles.png)
 

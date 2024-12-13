@@ -17,7 +17,7 @@ The administration interface can be found at the following link: <https://secure
 
 After setting up your customer account, you will receive a confirmation email. There you will be able to set up the password.
 
-More information about "Permission Management" can be found in the manufacturer's documentation under "Users & Roles" (See Screenshot): <https://sc1.checkpoint.com/documents/CloudGuard_Dome9/Documentation/Settings/Users-Roles.htm?tocpath=Settings%20%7C_____4>
+More information about "Permission Management" can be found in the manufacturer's documentation under "Users & Roles" <https://sc1.checkpoint.com/documents/CloudGuard_Dome9/Documentation/Settings/Users-Roles.htm?tocpath=Settings%20%7C_____4>
 
 ![Users and Roles Management](./cloudguard-users-roles.png)
 

@@ -1,6 +1,6 @@
 ---
-title: "Security Scanner - Quickstart Guide"
-linkTitle: "Security Scanner - Quickstart Guide"
+title: "Security Scanner - Schnelleinstieg"
+linkTitle: "Security Scanner - Schnelleinstieg"
 date: 2024-11-20
 type: docs
 weight: 1

@@ -1,6 +1,6 @@
 ---
-title: "Reporting Guide"
-linkTitle: "Reporting Guide"
+title: "Anleitung zum Reporting"
+linkTitle: "Anleitung zum Reporting"
 date: 2024-11-26
 type: docs
 description: "Anleitung zur Verwendung der Reporting Dashboards"
