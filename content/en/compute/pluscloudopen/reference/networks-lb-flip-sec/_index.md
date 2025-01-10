@@ -77,7 +77,7 @@ A detailed configuration of the subnet is available in the "Subnet Details" menu
 ![screenshot of the subnet details menu](./image2020-10-16_10-39-43.png)
 
 Here you can define, whether [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) should be available in the subnet. If desired, you can additionally specify the subnet pool from which DHCP addresses should be allocated. Allocation pools should at least start with the address .5 because as other network services could already be running on these first addresses of the network.
-If you want to use specific nameservers for your network, define them in the "DNS Name Servers" field. Specific host routes to specific networks can be set in the "Host Routes" field, where you define the destination network in CIDR notation followed by the gateway IP address over which you can reach the destination network.
+If you want to use specific nameservers for your network, define them in the "DNS Name Servers" field. If nothing is entered there, all instances that are started in this network will be assigned the plusserver anycast DNS resolvers 62.138.222.111 and 62.138.222.222 for DNS requests. Specific host routes to specific networks can be set in the "Host Routes" field, where you define the destination network in CIDR notation followed by the gateway IP address over which you can reach the destination network.
 Click on "Create" to let OpenStack provision the new network and subnetwork.
 
 ### Routers
