@@ -78,7 +78,7 @@ Eine detaillierte Konfiguration des Subnetzes finden Sie im Menü "Subnetzdetail
 ![Screenshot des Subnetz-Details-Menüs](./image2020-10-16_10-39-43.png)
 
 Hier können Sie festlegen, ob [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) im Subnetz verfügbar sein soll. Wenn Sie möchten, können Sie außerdem den Subnetzpool angeben, aus dem DHCP-Adressen zugewiesen werden sollen. Zuteilungspools sollten mindestens mit der Adresse .5 beginnen, da auf diesen ersten Adressen des Netzes bereits andere Netzwerkdienste laufen könnten.
-Wenn Sie bestimmte Nameserver für Ihr Netzwerk verwenden möchten, können Sie diese im Feld "DNS-Nameserver" definieren. Spezifische Host-Routen zu bestimmten Netzwerken können Sie im Feld "Host-Routen" einstellen, wo Sie das Zielnetzwerk in CIDR-Notation definieren, gefolgt von der Gateway-IP-Adresse, über die Sie das Zielnetzwerk erreichen können.
+Wenn Sie bestimmte Nameserver für Ihr Netzwerk verwenden möchten, können Sie diese im Feld "DNS-Nameserver" definieren. Wenn dort nichts eingetragen wird, werden alle Instanzen, die in dem Netz gestartet werden die plusserver Anycast DNS Resolver 62.138.222.111 und 62.138.222.222 zugewiesen bekommen für DNS Anfragen. Spezifische Host-Routen zu bestimmten Netzwerken können Sie im Feld "Host-Routen" einstellen, wo Sie das Zielnetzwerk in CIDR-Notation definieren, gefolgt von der Gateway-IP-Adresse, über die Sie das Zielnetzwerk erreichen können.
 Klicken Sie auf "Erstellen", damit OpenStack das neue Netzwerk und Subnetz bereitstellt.
 
 ### Router
