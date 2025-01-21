@@ -10,6 +10,13 @@ With this release plan, we would like to offer you more transparency and plannin
 
 This allows you to prepare for important updates in good time and ensure that your systems and processes run smoothly. You will also find information on the behavior of AutoUpdates during enforced upgrades. This gives you full control and allows you to decide for yourself when and how updates are carried out.
 
+## Release-Plan 2025
+
+| Monat | Datum | Change-Typ | Info |
+| --- | --- | --- | --- |
+| Januar | 30.01.2025 | Change | [Launch PSKE Version 1.18.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-18-0/) |
+| Februar | - | - | - |
+
 ## Release Plan 2024
 
 | Month | Date | Change Type | Info |
