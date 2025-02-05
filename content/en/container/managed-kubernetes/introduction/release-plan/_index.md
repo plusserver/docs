@@ -15,7 +15,7 @@ This allows you to prepare for important updates in good time and ensure that yo
 | Monat | Datum | Change-Typ | Info |
 | --- | --- | --- | --- |
 | Januar | - | - | - |
-| Februar | 06.02.2025 | Change | [Launch PSKE Version 1.18.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-18-0/) |
+| Februar | 19.02.2025 | Change | [Launch PSKE Version 1.18.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-18-0/) |
 | März | - | - | - |
 
 ## Release Plan 2024
