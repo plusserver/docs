@@ -14,8 +14,8 @@ So können Sie sich frühzeitig auf wichtige Updates vorbereiten und sicherstell
 
 | Monat | Datum | Change-Typ | Info |
 | --- | --- | --- | --- |
-| Januar | 30.01.2025 | Change | [Launch PSKE Version 1.18.0](https://status.plusserver.com/incidents/xl3ty35hnjxj) |
-| Februar | - | - | - |
+| Januar | - | - |  |
+| Februar | 19.02.2025 | Change | [Launch PSKE Version 1.18.0](https://status.plusserver.com/incidents/xl3ty35hnjxj) |
 
 ## Release-Plan 2024
 
