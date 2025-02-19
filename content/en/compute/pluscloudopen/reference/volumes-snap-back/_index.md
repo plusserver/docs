@@ -92,6 +92,8 @@ Here you can manage your group snapshots.
 
 Pluscloud open allows you to create encrypted volumes, which are based on "LUKS" ([Linux Unified Key Setup](https://gitlab.com/cryptsetup/cryptsetup)), which uses the Linux kernel module dm-crypt and is ideal for encrypting volumes for Linux instances. Keys are generated during the creation of the volume and saved into the keystore on pluscloud open. Be aware that deleting encrypted volumes not only deletes the volume but also the associated key. **Recovery of the data will not be possible** after deletion.
 
+The encryption cipher is "**aes-xts-plain64**" with a **256bit** key. Custom keys are not supported.
+
 Creating an encrypted volume is pretty easy. You just choose "LUKS" as "**Type**":
 
 ![screenshot of the create volume menu](2023-03-28_16-34.png)

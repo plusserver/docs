@@ -95,6 +95,8 @@ Hier können Sie Ihre Gruppen-Snapshots verwalten.
 
 Die pluscloud open erlaubt es, verschlüsselte Volumes zu erstellen, die auf "LUKS" ([Linux Unified Key Setup](https://gitlab.com/cryptsetup/cryptsetup)) basieren, welches das Linux-Kernel-Modul dm-crypt verwendet und ideal für die Verschlüsselung von Volumes für Linux-Instanzen ist. Die Schlüssel werden bei der Erstellung des Volumes generiert und im Keystore der pluscloud open gespeichert. Beachten Sie, dass beim Löschen von verschlüsselten Volumes nicht nur das Volume, sondern auch der zugehörige Schlüssel gelöscht wird. **Eine Wiederherstellung der Daten ist nach der Löschung nicht möglich**.
 
+Der Verschlüsselungscipher ist "**aes-xts-plain64**" mit einem **256-Bit**-Schlüssel. Benutzerdefinierte Schlüssel werden nicht unterstützt.
+
 Das Erstellen eines verschlüsselten Volumes ist recht einfach. Sie wählen einfach "LUKS" als "**Typ**" aus.
 
 ![Screenshot des Menüs "Volume erstellen"](volume-luks-erstellen.png)
