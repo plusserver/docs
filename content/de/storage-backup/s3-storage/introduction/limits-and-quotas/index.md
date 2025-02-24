@@ -75,7 +75,7 @@ Eine optimale Konfiguration und die Auswahl des richtigen Endpunkts tragen dazu 
 
 ## Geeignete und ungeeignete Workloads für den S3 Standard
 
-### Geeignete Workloads für S3:
+### Geeignete Workloads für S3
 
 - Statische Webseiten: Hosting von statischen Webseiten, wie HTML, CSS und JavaScript, da S3 eine effiziente Bereitstellung von Webinhalten ermöglicht.
 - Datenarchivierung: Speichern von Archivdaten und Backups, da S3 eine kostengünstige und dauerhafte Speicherung bietet.
@@ -83,7 +83,7 @@ Eine optimale Konfiguration und die Auswahl des richtigen Endpunkts tragen dazu 
 - Content-Delivery-Network (CDN): Verwendung von S3 als Speicherort für Content, der über ein CDN verteilt wird, um Inhalte schnell und effizient weltweit bereitzustellen.
 - Media- und Dateispeicher: Hosting von Multimedia-Dateien wie Bilder, Videos und Audiodateien für den schnellen und zuverlässigen Abruf.
 
-### Ungeeignete Workloads für S3:
+### Ungeeignete Workloads für S3
 
 - Echtzeit-Datenbanken: S3 ist objektbasiert und eignet sich nicht gut für Anwendungen, die Echtzeit-Datenbankzugriffe erfordern.
 - Anwendungen mit hoher Latenzempfindlichkeit: Anwendungen, die extrem niedrige Latenzzeiten (<25ms) erfordern, können von der grundlegenden Latenz von S3 beeinträchtigt werden.
