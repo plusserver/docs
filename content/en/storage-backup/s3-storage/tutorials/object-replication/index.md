@@ -64,7 +64,7 @@ files=$(aws s3 ls s3://$source_bucket/ --recursive | awk '{print $4}')
 for file in $files; do
   # Check if the current object has Object Lock
   object_lock_config=$(aws s3api get-object-retention --bucket $source_bucket --key $file 2>/dev/null)
-   
+
   if [ -n "$object_lock_config" ]; then
     # Set Object Lock configuration on the synchronized object in dest_bucket
     retention_config=$(echo "$object_lock_config" | jq -r '.Retention')
@@ -74,7 +74,7 @@ for file in $files; do
     echo "Object $file synchronized"
   fi
 done
-````
+```
 
 You can then execute the script, for example:
 

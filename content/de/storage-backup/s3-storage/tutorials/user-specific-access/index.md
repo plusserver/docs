@@ -12,11 +12,11 @@ In diesem Abschnitt erfahren Sie, wie Sie einen S3-Bucket so konfigurieren könn
 
 Um eine Policy dieser Art anlegen zu können, benötigen Sie eine Reihe an Informationen:
 
-| Variable | Erklärung | Beispielwert |
-|--------------|-------------------------------------------------------------------|------------------------------|
-| ACCOUNT_ID   | Die Account ID, die Sie bereits verwendet haben, um sich auf dem S3 User Portal anzumelden. Diese können Sie auch auf dem Dashboard einsehen (siehe Bild). | 700001145864652591 |
-| BUCKET_NAME  | Der Name der Buckets, dessen Zugriff durch diese Policy reguliert wird. | beispielbucket |
-| USERNAME     | Der Nutzername des jeweiligen Nutzers, für den eine granulare Zugriffsrichtlinie angelegt werden soll. | mmustermann |
+| Variable    | Erklärung                                                                                                                                                  | Beispielwert       |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| ACCOUNT_ID  | Die Account ID, die Sie bereits verwendet haben, um sich auf dem S3 User Portal anzumelden. Diese können Sie auch auf dem Dashboard einsehen (siehe Bild). | 700001145864652591 |
+| BUCKET_NAME | Der Name der Buckets, dessen Zugriff durch diese Policy reguliert wird.                                                                                    | beispielbucket     |
+| USERNAME    | Der Nutzername des jeweiligen Nutzers, für den eine granulare Zugriffsrichtlinie angelegt werden soll.                                                     | mmustermann        |
 
 {{< img src="images/image-1.png" alt="ACCOUNTID" >}}
 
@@ -25,6 +25,7 @@ Um eine Policy dieser Art anlegen zu können, benötigen Sie eine Reihe an Infor
 Policies lassen sich in der Regel durch .json Objekte definieren. In diesem Fall legen Sie eine `user-policy.json` an und ersetzen Sie die entsprechenden Variablen durch die im letzten Schritt gesammelten Informationen.
 
 **user-policy.json:**
+
 ```json
 {
   "Version": "2012-10-17",
@@ -102,9 +103,9 @@ aws s3api put-bucket-policy --bucket <bucketname> --policy file://user-policy.js
 
 Erklärung der Variablen:
 
-* \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen * \möchten.
-* \<policy-name>: Der Name der von Ihnen angelegten Policy-Datei.
-* \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+- \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen \* \möchten.
+- \<policy-name>: Der Name der von Ihnen angelegten Policy-Datei.
+- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -122,11 +123,13 @@ aws s3api get-bucket-policy --bucket <bucketname> --endpoint-url=https://<endpoi
 
 Erklärung der Variablen:
 
-* \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen möchten.
-* \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+- \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen möchten.
+- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
+
 ```bash
 aws s3api get-bucket-policy --bucket shop-thumbnails --endpoint-url=https://s3.de-west-1.psmanaged.com
 ```
+
 Nach dem Ausführen dieses Befehls sollte die Ausgabe mit der von Ihnen festgelegten Policy abgeglichen werden und im Idealfall identisch sein.

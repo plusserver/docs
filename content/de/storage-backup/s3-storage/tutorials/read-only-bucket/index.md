@@ -51,9 +51,10 @@ Erstellen Sie zunächst eine JSON-Datei, die die Bucket-Policy für den "Read On
   ]
 }
 ```
+
 Erklärung der Variablen in der JSON-Policy:
 
-* \<bucketname>: Der Name des Buckets, für den Sie die Policy erstellen möchten.
+- \<bucketname>: Der Name des Buckets, für den Sie die Policy erstellen möchten.
 
 ### Schritt 2: Aktivieren des "Bucket Policy" für "Read Only"
 
@@ -65,9 +66,9 @@ aws s3api put-bucket-policy --bucket <bucketname> --policy file://readonly-polic
 
 Erklärung der Variablen:
 
-* \<bucketname>: Der Name des Buckets, den Sie auf "Read Only" setzen möchten.
-* file://readonly-policy.json: Der Pfad zur JSON-Policy-Datei auf Ihrem lokalen System.
-* \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+- \<bucketname>: Der Name des Buckets, den Sie auf "Read Only" setzen möchten.
+- file://readonly-policy.json: Der Pfad zur JSON-Policy-Datei auf Ihrem lokalen System.
+- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -85,14 +86,15 @@ aws s3api get-bucket-policy --bucket <bucketname> --endpoint-url=https://<endpoi
 
 Erklärung der Variablen:
 
-* \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen * \möchten.
-* \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+- \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen \* \möchten.
+- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
 ```bash
 aws s3api get-bucket-policy --bucket myreadonlybucket --endpoint-url=https://s3.de-west-1.psmanaged.com
 ```
+
 Wenn Sie das Tool **'jq'** auf Ihrem Server installiert haben, können Sie die Ausgabe weiterhin formatiert anzeigen lassen, indem Sie **'| jq '.Policy | fromjson''** anhängen:
 
 ```bash
@@ -112,4 +114,5 @@ Um sicherzustellen, dass das Bucket tatsächlich im Read-Only-Modus ist und kein
 ```bash
 aws s3api put-object --bucket <bucketname> --key testfile.txt --body /path/to/local/file.txt --endpoint-url=https://<endpoint-url>
 ```
+
 Hier sollten Sie nun eine Meldung mit **"Access Denied"** bekommen.

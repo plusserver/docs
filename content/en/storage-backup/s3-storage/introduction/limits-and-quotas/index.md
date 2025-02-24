@@ -36,10 +36,10 @@ In comparison, our PlusServer S3 service has a default limitation of 1,000 bucke
 - a bucket name may only contain lowercase letters, numbers, dots (.) and hyphens
 - A bucket name must not contain the format of an IP address (e.g. 192.168.1.42)
 - If a bucket name ends with the suffix -mirr or -repl, a different class of service is used,
-storage type and billing is used
+  storage type and billing is used
 - A bucket name must be unique across the entire plusserver S3 service
 - A bucket name that is already in use by a customer cannot be used until
-this bucket is deleted by the owner
+  this bucket is deleted by the owner
 
 These limitations are designed to ensure the performance and efficiency of our service while providing high flexibility for your use cases. Please consider these limitations when planning your configuration.
 

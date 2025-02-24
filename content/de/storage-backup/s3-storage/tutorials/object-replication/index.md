@@ -16,9 +16,9 @@ aws s3 sync s3://<quelle-bucket> s3://<ziel-bucket> --endpoint-url=https://<endp
 
 Erklärung der Variablen:
 
-* \<quelle-bucket>: Der Name des Quell-Buckets.
-* \<ziel-bucket>: Der Name des Ziel-Buckets.
-* \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+- \<quelle-bucket>: Der Name des Quell-Buckets.
+- \<ziel-bucket>: Der Name des Ziel-Buckets.
+- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -32,7 +32,7 @@ Damit die Replizierung zwischen den Buckets aktuell bleibt, können Sie den `aws
 
 ### Schritt 3: Beispiel für die automatische Aktualisierung
 
-Sie können einen Cron-Job einrichten, um den aws s3 sync-Befehl in regelmäßigen Abständen auszuführen. 
+Sie können einen Cron-Job einrichten, um den aws s3 sync-Befehl in regelmäßigen Abständen auszuführen.
 Hier ist eine Beispiel-Crontab, wie Sie den Befehl stündlich ausführen können:
 
 ```bash
@@ -64,7 +64,7 @@ files=$(aws s3 ls s3://$source_bucket/ --recursive | awk '{print $4}')
 for file in $files; do
   # Prüfen, ob das aktuelle Objekt Object Lock hat
   object_lock_config=$(aws s3api get-object-retention --bucket $source_bucket --key $file 2>/dev/null)
-   
+
   if [ -n "$object_lock_config" ]; then
     # Object Lock-Konfiguration auf das synchronisierte Objekt im dest_bucket setzen
     retention_config=$(echo "$object_lock_config" | jq -r '.Retention')

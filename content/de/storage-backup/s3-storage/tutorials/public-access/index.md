@@ -15,12 +15,13 @@ Laden Sie das Objekt in Ihren S3-Bucket hoch.
 ```bash
 aws s3api put-object --bucket <bucketname> --key <objekt-key> --body <lokaler-dateipfad> --endpoint-url=https://<endpoint-url>
 ```
+
 Erklärung der Variablen:
 
-* \<bucketname>: Der Name des Buckets, in den Sie das Objekt hochladen möchten.
-* \<objekt-key>: Der gewünschte Speicherort und Name des Objekts im Bucket.
-* \<lokaler-dateipfad>: Der Pfad und Name der lokalen Datei, die hochgeladen werden soll.
-* \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+- \<bucketname>: Der Name des Buckets, in den Sie das Objekt hochladen möchten.
+- \<objekt-key>: Der gewünschte Speicherort und Name des Objekts im Bucket.
+- \<lokaler-dateipfad>: Der Pfad und Name der lokalen Datei, die hochgeladen werden soll.
+- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -38,9 +39,9 @@ aws s3 presign s3://<bucketname>/<objekt-key> --endpoint-url=https://<endpoint-u
 
 Erklärung der Variablen:
 
-* \<bucketname>: Der Name des Buckets, in dem sich das Objekt befindet.
-* \<objekt-key>: Der Pfad und Name des Objekts im Bucket.
-* \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+- \<bucketname>: Der Name des Buckets, in dem sich das Objekt befindet.
+- \<objekt-key>: Der Pfad und Name des Objekts im Bucket.
+- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -55,10 +56,10 @@ Um die Gültigkeitsdauer eines presign-Links zu ändern, können Sie die **\--ex
 
 ```bash
 aws s3 presign s3://<bucketname>/<objekt-key> --expires-in 259200 --endpoint-url=https://<endpoint-url>
-````
+```
 
 Erklärung:
 
-* \--expires-in 259200: Setzt die Gültigkeitsdauer auf 3 Tage (3 Tage * 24 Stunden/Tag * 60 Minuten/Stunde * 60 Sekunden/Minute).
+- \--expires-in 259200: Setzt die Gültigkeitsdauer auf 3 Tage (3 Tage _ 24 Stunden/Tag _ 60 Minuten/Stunde \* 60 Sekunden/Minute).
 
 Der Standardwert beträgt 3600 Sekunden, und das Maximum beträgt 604800 Sekunden.

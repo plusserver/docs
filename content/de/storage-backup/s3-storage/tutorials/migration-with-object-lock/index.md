@@ -47,7 +47,7 @@ Um sicherzustellen, dass das Migrationsskript reibungslos funktioniert, ist es w
 
 ```bash
 mc retention info --recursive ALIAS/BUCKET --versions | grep "EXPIRED"
-````
+```
 
 Ersetzen Sie `ALIAS` durch Ihren **Alias** und `BUCKET` durch den **Bucket-Namen**, den Sie überprüfen möchten.
 
@@ -62,6 +62,7 @@ In diesem Fall sollten Sie entweder die abgelaufenen Object-Lock-Informationen o
 {{% alert title="Hinweis" %}}
 Die EXPIRED Warnung wird nur für Objekte angezeigt, welche den GOVERNANCE Status haben. COMPLIANCE wird leider nicht angezeigt. Diese müssen selbstständig oder in der Einzelview betrachtet werden.
 {{% /alert %}}
+
 ### Schritt 3a: (Optional) Löschen von Object-Lock-Informationen
 
 Wenn Sie die Object-Lock-Informationen eines bestimmten Objekts mit dem Minio-Client löschen möchten, können Sie das folgende Kommando verwenden:
@@ -69,12 +70,13 @@ Wenn Sie die Object-Lock-Informationen eines bestimmten Objekts mit dem Minio-Cl
 ```bash
 mc retention clear ALIAS/BUCKET/PATH --version-id VERSIONID
 ```
+
 Hierbei ersetzen Sie:
 
-* **ALIAS** durch Ihren Alias für den S3-Service.
-* **BUCKET** durch den Namen des Buckets, in dem sich das Objekt befindet.
-* **PATH** durch den Pfad zum Objekt im Bucket.
-* **VERSIONID** durch die ID der Version des Objekts, dessen Object-Lock-Informationen Sie löschen möchten.
+- **ALIAS** durch Ihren Alias für den S3-Service.
+- **BUCKET** durch den Namen des Buckets, in dem sich das Objekt befindet.
+- **PATH** durch den Pfad zum Objekt im Bucket.
+- **VERSIONID** durch die ID der Version des Objekts, dessen Object-Lock-Informationen Sie löschen möchten.
 
 Durch die Ausführung dieses Befehls werden die Object-Lock-Informationen für das angegebene Objekt und die angegebene Version gelöscht. Stellen Sie sicher, dass Sie die entsprechenden Berechtigungen und Autorisierungen für diese Aktion haben, da das Löschen von Object-Lock-Informationen in Ihrem S3-Service möglicherweise eingeschränkt ist.
 
@@ -83,6 +85,7 @@ Durch die Ausführung dieses Befehls werden die Object-Lock-Informationen für d
 Laden Sie das Migrationsskript auf Ihr System herunter. Dieses Skript wird verwendet, um Daten von Ihrem Quellprofil und Quellbucket zu Ihrem Zielprofil und Zielbucket zu migrieren.
 
 **migration_skript.sh**
+
 ```bash
 
 #!/bin/bash
@@ -187,18 +190,20 @@ check_application_availablility
 # Starte die Migration
 migrate_bucket
 ```
+
 **Skript ausführbar machen:** Stellen Sie sicher, dass das heruntergeladene Skript ausführbar ist. Verwenden Sie dazu den Befehl `chmod +x SCRIPT_NAME`, wobei `SCRIPT_NAME` der Name des Skripts ist.
 
 Führen Sie das Skript wie folgt aus:
+
 ```bash
 ./SCRIPT_NAME sourceprofil sourcebucket destinationprofil destinationbucket
 ```
-Bitte ersetzen Sie sourceprofil, sourcebucket, destinationprofil und destinationbucket durch die entsprechenden Profil- und Bucket-Namen, die Sie für Ihre Migration verwenden möchten.
 
+Bitte ersetzen Sie sourceprofil, sourcebucket, destinationprofil und destinationbucket durch die entsprechenden Profil- und Bucket-Namen, die Sie für Ihre Migration verwenden möchten.
 
 Nachdem Sie das Skript auf Ihr System kopiert und ausführbar gemacht haben, können Sie es mit den richtigen Parametern ausführen, um die Datenmigration zu starten.
 
-{{% alert title="Hinweis für die Object-Lock-Konfiguration bei der Datenmigration innerhalb des gleichen S3s" %}} 
+{{% alert title="Hinweis für die Object-Lock-Konfiguration bei der Datenmigration innerhalb des gleichen S3s" %}}
 Für eine fehlerfreie Übertragung der Object-Lock-Konfiguration sind unterschiedliche Profile erforderlich. Wenn Sie beispielsweise das Profil **"plusserver"** sowohl als **Source- als auch als Destination-Profil** verwenden, jedoch unterschiedliche Source- und Destination-Buckets angeben, findet die Migration innerhalb desselben S3-Speichersystems statt. In diesem Fall werden jedoch die Object-Lock-Informationen **nicht übertragen**.
 
 Um sicherzustellen, dass die S3-Object-Lock-Konfigurationen während der Migration korrekt übernommen werden, empfehlen wir die Verwendung des Profils **"plusserver"** als **Source-Profil** und des Profils **"plusserver2"** als **Destination-Profil**. Stellen Sie sicher, dass in beiden Profilen dieselben Informationen in der Konfigurationsdatei hinterlegt sind. Dadurch wird die Migration innerhalb desselben Clusters durchgeführt und gleichzeitig werden die S3-Object-Lock-Einstellungen erfolgreich übertragen.

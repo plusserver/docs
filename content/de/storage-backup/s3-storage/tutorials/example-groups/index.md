@@ -13,6 +13,7 @@ Diese Beispiel-Standardgruppen dienen als Ausgangspunkt und können an die Anfor
 {{% /alert %}}
 
 ### Gruppe mit Zugriff auf bestimmte Buckets
+
 ```json
 {
   "Version": "2012-10-17",
@@ -32,6 +33,7 @@ Diese Beispiel-Standardgruppen dienen als Ausgangspunkt und können an die Anfor
   ]
 }
 ```
+
 ### Gruppe mit Leserechten für bestimmte Buckets
 
 ```json
@@ -53,6 +55,7 @@ Diese Beispiel-Standardgruppen dienen als Ausgangspunkt und können an die Anfor
   ]
 }
 ```
+
 ### Gruppe mit Zugriff auf bestimmte Ordner in Buckets
 
 ```json
