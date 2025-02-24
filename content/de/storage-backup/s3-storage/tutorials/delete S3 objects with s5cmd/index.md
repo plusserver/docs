@@ -11,7 +11,7 @@ Voraussetzung für das Tutorial: die AWS Standard Credentials des Clients müsse
 {{< img src="images/image-1.png" alt="Credentials" >}}
 {{% /alert %}}
 
-Bitte laden sie sich das aktuelle s5cmd release: https://github.com/peak/s5cmd/releases/latest
+Bitte laden sie sich das aktuelle s5cmd release: <https://github.com/peak/s5cmd/releases/latest>
 
 ```
 wget  https://github.com/peak/s5cmd/releases/download/v2.2.2/s5cmd_2.2.2_Linux-64bit.tar.gz

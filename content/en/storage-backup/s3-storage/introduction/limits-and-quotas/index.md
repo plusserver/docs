@@ -30,7 +30,7 @@ In comparison, our PlusServer S3 service has a default limitation of 1,000 bucke
 - Object lock support
 - Versioning support
 
-### Bucket-Namen Features und Beschränkungen:
+### Bucket-Namen Features und Beschränkungen
 
 - A bucket name must be between 3 (min) and 63 (max) characters long. The suffix (-mirr / -repl) must be deducted from this
 - a bucket name may only contain lowercase letters, numbers, dots (.) and hyphens
@@ -73,7 +73,7 @@ Optimal configuration and selecting the right endpoint contribute to ensuring sm
 
 ## Suitable and Unsuitable Workloads for S3 Standard
 
-### Suitable Workloads for S3:
+### Suitable Workloads for S3
 
 - Static Websites: Hosting static websites, such as HTML, CSS, and JavaScript, as S3 enables efficient content delivery for web content.
 - Data Archiving: Storing archive data and backups, as S3 offers cost-effective and permanent storage.
@@ -81,7 +81,7 @@ Optimal configuration and selecting the right endpoint contribute to ensuring sm
 - Content Delivery Network (CDN): Using S3 as a storage location for content distributed via a CDN to provide content quickly and efficiently worldwide.
 - Media and File Storage: Hosting multimedia files such as images, videos, and audio files for fast and reliable retrieval.
 
-### Unsuitable Workloads for S3:
+### Unsuitable Workloads for S3
 
 - Real-time Databases: S3 is object-based and not well-suited for applications that require real-time database access.
 - Applications with High Latency Sensitivity: Applications requiring extremely low latency (<25ms) may be affected by the fundamental latency of S3.

@@ -135,6 +135,7 @@ endpoint> _
 ```
 
 Here is an overview of the service endpoint migration from our old S3 service to the new S3 service:
+
 | Region | Old S3 Service | New S3 Service |
 |-------------------------|----------------------------------------------|----------------------------------------------|
 | de-north-2 (Hamburg) | [https://de-2.s3.psmanaged.com](https://de-2.s3.psmanaged.com) | [https://s3.de-north-2.psmanaged.com](https://s3.de-north-2.psmanaged.com) |

@@ -200,7 +200,7 @@ After the backup is completed, you can see the last backup with timecode in both
 
 {{< img src="images/image-42.png" alt="Screenshot: Backup status done" >}}
 
-## Restore:
+## Restore
 
 A restore can be initiated from the client (with the Veeam agent) or from the plusbackup portal.
 
