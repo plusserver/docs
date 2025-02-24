@@ -66,7 +66,8 @@ The AWS CLI uses "http://s3.amazonaws.com" as the default endpoint. You can chan
 **Example Configuration**
 
 File: config
-```bash
+
+````bash
 [profile plusservers3]
 region = de-west-1
 endpoint_url = https://s3.de-west-1.psmanaged.com
@@ -76,6 +77,7 @@ File: credentials
 [plusservers3]
 aws_access_key_id = <accesskey>
 aws_secret_access_key = <secretkey>
-```
+````
+
 Other S3 CLIs also have configuration files that can be adjusted accordingly.
 {{% /alert %}}

@@ -39,11 +39,12 @@ No remotes found, make a new one?
     n/s/q>
 ```
 
-Nachdem mit n + Enter das Anlegen eines neuen Remotes ausgewählt wurde, werden Sie gebeten, ihm einen Namen zu geben. 
+Nachdem mit n + Enter das Anlegen eines neuen Remotes ausgewählt wurde, werden Sie gebeten, ihm einen Namen zu geben.
 
 Dieser Name wird später in Pfadangaben referenziert, also wählen Sie am besten einen kurzen, aber unmissverständlichen Namen für Ihre jeweiligen Remotes, z.B., `s3-old` und `s3-new`.
 
-Nun präsentiert rclone eine Vielzahl verschiedener Storage-Typen, aus denen Sie wählen können. 
+Nun präsentiert rclone eine Vielzahl verschiedener Storage-Typen, aus denen Sie wählen können.
+
 ```bash
 1 / 1Fichier
    \ (fichier)
@@ -57,18 +58,20 @@ Nun präsentiert rclone eine Vielzahl verschiedener Storage-Typen, aus denen Sie
    \ (s3)
  6 / Backblaze B2
    \ (b2)
- 
+
     .
     .
     .
- 
+
 51 / seafile
    \ (seafile)
 Storage> _
 ```
+
 In diesem Fall tippen Sie s3 bzw. 5 und bestätigen dies mit Enter.
 
 Als Nächstes geben Sie Ihren jeweiligen Provider an. Wählen Sie die für unsere S3-kompatiblen Systeme angebrachte Option Other bzw. 27 und bestätigen Sie mit Enter.
+
 ```bash
 Option provider.
 Choose your S3 provider.
@@ -80,11 +83,11 @@ Press Enter for the default (exit).
    \ (Alibaba)
  3 / Arvan Cloud Object Storage (AOS)
    \ (ArvanCloud)
- 
+
     .
     .
     .
- 
+
 26 / Qiniu Object Storage (Kodo)
    \ (Qiniu)
 27 / Any other S3 compatible provider
@@ -93,6 +96,7 @@ provider> _
 ```
 
 Der Konfigurationsassistent fragt ab, ob Sie Ihre Zugangsdaten manuell eingeben möchten oder diese aus den Umgebungsvariablen bzw. dem IAM beziehen möchten. Wählen Sie die 1 für manuelle Eingabe.
+
 ```bash
 Option env_auth.
 Get AWS credentials from runtime (environment variables or EC2/ECS meta data if no env vars).
@@ -107,6 +111,7 @@ env_auth> _
 ```
 
 Als Nächstes fragt der Konfigurationsassisstent die Region des Remotes ab. Bitte wählen Sie hier die Option 1.
+
 ```bash
 Leave blank if you are using an S3 clone and you don't have a region.
 Choose a number from below, or type in your own value.
@@ -119,6 +124,7 @@ Press Enter to leave empty.
    \ (other-v2-signature)
 region> _
 ```
+
 Nun müssen noch die dementsprechenden Endpoints angegeben werden:
 
 ```bash
@@ -128,13 +134,14 @@ Required when using an S3 clone.
 Enter a value. Press Enter to leave empty.
 endpoint> _
 ```
+
 Hier finden Sie eine Übersicht der Service-Endpoint-Migration von unserem alten S3-Service auf den neuen S3-Service:
 
-| Region                  | Alter S3 Service                             | Neuer S3 Service                            |
-|-------------------------|---------------------------------------------|--------------------------------------------|
-| de-north-2 (Hamburg)    | [https://de-2.s3.psmanaged.com](https://de-2.s3.psmanaged.com)   | [https://s3.de-north-2.psmanaged.com](https://s3.de-north-2.psmanaged.com) |
-| de-west-1 (Köln)        | (nicht verfügbar)                           | [https://s3.de-west-1.psmanaged.com](https://s3.de-west-1.psmanaged.com) |
-| de-west-2 (Düsseldorf)  | [https://de-4.s3.psmanaged.com](https://de-4.s3.psmanaged.com)   | (In Planung)                               |
+| Region                 | Alter S3 Service                                               | Neuer S3 Service                                                           |
+| ---------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| de-north-2 (Hamburg)   | [https://de-2.s3.psmanaged.com](https://de-2.s3.psmanaged.com) | [https://s3.de-north-2.psmanaged.com](https://s3.de-north-2.psmanaged.com) |
+| de-west-1 (Köln)       | (nicht verfügbar)                                              | [https://s3.de-west-1.psmanaged.com](https://s3.de-west-1.psmanaged.com)   |
+| de-west-2 (Düsseldorf) | [https://de-4.s3.psmanaged.com](https://de-4.s3.psmanaged.com) | (In Planung)                                                               |
 
 Für detaillierte Informationen zu den neuen Service-Endpoints empfehlen wir Ihnen, die aktualisierte [Dokumentation](/storage-backup/s3-storage/introduction/s3-regions/) aufzurufen.
 
@@ -151,11 +158,13 @@ location_constraint>
 ```
 
 ### Schritt 3: Verwendung von rclone
+
 Grundlegender Syntax von rclone:
 
 ```bash
 rclone [options] subcommand <parameters> <parameters...>
 ```
+
 Die Syntax der Pfade, die an den Befehl rclone übergeben werden, lautet wie folgt:
 {{% alert title="Info" %}}
 Unter Windows kann \ anstelle von / nur in lokalen Pfaden verwendet werden. Nicht-lokale Pfade müssen / verwenden. Weitere Informationen zu Windows-spezifischen Pfaden finden Sie [hier](https://rclone.org/local/#paths-on-windows).
@@ -164,10 +173,13 @@ Unter Windows kann \ anstelle von / nur in lokalen Pfaden verwendet werden. Nich
 ```bash
 /path/to/dir
 ```
+
 Dies bezieht sich auf das lokale Dateisystem.
+
 ```bash
 remote:path/to/dir
 ```
+
 Dies bezieht sich auf ein Verzeichnis `path/to/dir` auf `remote:`, wie in der Konfigurationsdatei definiert (konfiguriert mit rclone config).
 
 **Daraus ergeben sich folgende Anwendungsbeispiele:**
@@ -179,6 +191,7 @@ rclone sync old-s3:mybucket new-s3:mybucket --metadata --checksum --progress --n
 ```
 
 Migrieren von Buckets MIT VERSIONIERUNG
+
 ```bash
 rclone sync old-s3:mybucket new-s3:mybucket --metadata --checksum --progress --s3-versions
 ```
@@ -187,12 +200,12 @@ rclone sync old-s3:mybucket new-s3:mybucket --metadata --checksum --progress --s
 
 Für eine ausführlichere Dokumentation und zusätzliche Optionen empfehlen wir, die rclone-Dokumentation aufzurufen. Hier erhalten Sie einen Abriss der aktuellen Dokumentation.
 
-| Parameter | Erklärung |
-| --- | --- |
-| **`sync`** | Synchronisiert die Quelle mit dem Ziel, wobei nur das Ziel geändert wird. Überträgt keine Dateien, die in Quelle und Ziel identisch sind, sondern vergleicht anhand von Größe und Änderungszeit oder MD5SUM. Das Ziel wird so aktualisiert, dass es mit der Quelle übereinstimmt, einschließlich des Löschens von Dateien, falls erforderlich (außer bei doppelten Objekten). Wenn Sie die Dateien im Ziel nicht löschen wollen, verwenden Sie stattdessen den Befehl copy. |
-| **`old-s3:mybucket`** | Referenziert den Bucket mybucket im remote old-s3 und stellt hier die Quelle der Synchronisation dar. |
-| **`new-s3:mybucket`** | Referenziert den Bucket mybucket im remote new-s3 und stellt hier das Ziel der Synchronisation dar. |
-| **`--metadata`** | Metadaten sind Informationen über eine Datei, bei denen es sich nicht um den Inhalt der Datei handelt. Normalerweise bewahrt rclone nur die Änderungszeit und den Inhalt (MIME-Typ), wo dies möglich ist. Rclone unterstützt die Beibehaltung aller verfügbaren Metadaten von Dateien (nicht Verzeichnissen), wenn die Flag --metadata oder -M verwendet wird. |
-| **`--checksum`** | Normalerweise prüft rclone die Änderungszeit und die Größe von Dateien, um festzustellen, ob sie gleich sind. Wenn Sie diese Flag setzen, prüft rclone durch Hashing und Größe, ob die Dateien gleich sind. Dieses Verfahren führt zu einer deutlich schnelleren Übertragung bei einer S3 → S3 Migration. |
-| **`--progress`** | Diese Flag veranlasst rclone, die Statistiken in einem statischen Block im Terminal zu aktualisieren, um einen Echtzeit-Überblick über die Übertragung zu erhalten. Alle Protokollmeldungen werden über dem statischen Block angezeigt. Log-Meldungen schieben den statischen Block an den unteren Rand des Terminals, wo er verbleibt. |
-| **`--no-update-modtime`** | Wenn Sie dieses Flag verwenden, aktualisiert rclone die Änderungszeiten der migrierten Objekte nicht. Dies ist nützlich, wenn Sie die ursprünglichen Änderungszeiten beibehalten möchten. |
+| Parameter                 | Erklärung                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`sync`**                | Synchronisiert die Quelle mit dem Ziel, wobei nur das Ziel geändert wird. Überträgt keine Dateien, die in Quelle und Ziel identisch sind, sondern vergleicht anhand von Größe und Änderungszeit oder MD5SUM. Das Ziel wird so aktualisiert, dass es mit der Quelle übereinstimmt, einschließlich des Löschens von Dateien, falls erforderlich (außer bei doppelten Objekten). Wenn Sie die Dateien im Ziel nicht löschen wollen, verwenden Sie stattdessen den Befehl copy. |
+| **`old-s3:mybucket`**     | Referenziert den Bucket mybucket im remote old-s3 und stellt hier die Quelle der Synchronisation dar.                                                                                                                                                                                                                                                                                                                                                                       |
+| **`new-s3:mybucket`**     | Referenziert den Bucket mybucket im remote new-s3 und stellt hier das Ziel der Synchronisation dar.                                                                                                                                                                                                                                                                                                                                                                         |
+| **`--metadata`**          | Metadaten sind Informationen über eine Datei, bei denen es sich nicht um den Inhalt der Datei handelt. Normalerweise bewahrt rclone nur die Änderungszeit und den Inhalt (MIME-Typ), wo dies möglich ist. Rclone unterstützt die Beibehaltung aller verfügbaren Metadaten von Dateien (nicht Verzeichnissen), wenn die Flag --metadata oder -M verwendet wird.                                                                                                              |
+| **`--checksum`**          | Normalerweise prüft rclone die Änderungszeit und die Größe von Dateien, um festzustellen, ob sie gleich sind. Wenn Sie diese Flag setzen, prüft rclone durch Hashing und Größe, ob die Dateien gleich sind. Dieses Verfahren führt zu einer deutlich schnelleren Übertragung bei einer S3 → S3 Migration.                                                                                                                                                                   |
+| **`--progress`**          | Diese Flag veranlasst rclone, die Statistiken in einem statischen Block im Terminal zu aktualisieren, um einen Echtzeit-Überblick über die Übertragung zu erhalten. Alle Protokollmeldungen werden über dem statischen Block angezeigt. Log-Meldungen schieben den statischen Block an den unteren Rand des Terminals, wo er verbleibt.                                                                                                                                     |
+| **`--no-update-modtime`** | Wenn Sie dieses Flag verwenden, aktualisiert rclone die Änderungszeiten der migrierten Objekte nicht. Dies ist nützlich, wenn Sie die ursprünglichen Änderungszeiten beibehalten möchten.                                                                                                                                                                                                                                                                                   |

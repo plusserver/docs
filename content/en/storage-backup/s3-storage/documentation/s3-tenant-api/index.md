@@ -5,6 +5,7 @@ type: "docs"
 weight: 150
 date: "2024-02-07"
 ---
+
 The plusserver S3 service's Tenant API provides a comprehensive interface for various functions to effectively control and manage tenant management. Here is an overview of the key aspects of the API and how you can use it.
 
 ### What is the Tenant API?
@@ -58,6 +59,7 @@ Before starting the S3 Usage query, you can access the API documentation through
 To access S3 Usage data, you need an authorization token. You can obtain the token through a POST request to the following URL: [https://s3-portal.psmanaged.com:9443/api/v3/authorize](https://s3-portal.psmanaged.com:9443/api/v3/authorize)
 
 Use the following JSON body in your request, replacing `<accountId>`, `<username>`, and `<password>` with your corresponding information:
+
 ```json
 {
   "accountId": "Your_Account_ID",
@@ -124,6 +126,5 @@ Run this script to retrieve your S3 Usage data and save it as a JSON file.
 {{% alert title="Info" %}}
 Please note that you need to use your own login credentials and account IDs to make the API requests.
 {{% /alert %}}
-
 
 ---

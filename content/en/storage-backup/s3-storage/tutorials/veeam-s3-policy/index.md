@@ -47,6 +47,7 @@ Starting from Veeam Backup & Replication 11a, the **"ListAllMyBuckets"** permiss
     ]
 }
 ```
+
 **Replace "yourbucketname" with the actual name of your bucket. Note that the "ListAllMyBuckets" permission is not required from Veeam Backup & Replication 11a onward if you manually specify the bucket name in the wizard.**
 
 ### Immutable Buckets

@@ -28,6 +28,7 @@ For the installation and setup of the Minio client and setting up an alias, you 
    chmod +x $HOME/minio-binaries/mc
    export PATH=$PATH:$HOME/minio-binaries/
 ```
+
 Verify the installation by running the command mc --help. If the Minio client is installed correctly, you will see the help guide.
 
 ### Step 2: Set Up an Alias
@@ -70,10 +71,10 @@ mc retention clear ALIAS/BUCKET/PATH --version-id VERSIONID
 
 Replace:
 
-* **ALIAS** with your alias for the S3 service.
-* **BUCKET** with the name of the bucket where the object is located.
-* **PATH** with the path to the object in the bucket.
-* **VERSIONID** with the ID of the version of the object whose Object-Lock information you want to delete.
+- **ALIAS** with your alias for the S3 service.
+- **BUCKET** with the name of the bucket where the object is located.
+- **PATH** with the path to the object in the bucket.
+- **VERSIONID** with the ID of the version of the object whose Object-Lock information you want to delete.
 
 By executing this command, the Object-Lock information for the specified object and version will be deleted. Ensure you have the appropriate permissions and authorizations for this action, as deleting Object-Lock information in your S3 service may be restricted.
 
@@ -194,11 +195,10 @@ Run the script as follows:
 ```bash
 ./SCRIPT_NAME sourceprofile sourcebucket destinationprofile destinationbucket
 ```
+
 Please replace **sourceprofile, sourcebucket, destinationprofile, and destinationbucket** with the corresponding profile and bucket names you want to use for your migration.
 
-
 After copying the script to your system and making it executable, you can execute it with the correct parameters to start the data migration.
-
 
 {{% alert title="Note for Object-Lock Configuration during Data Migration within the Same S3" %}}
 

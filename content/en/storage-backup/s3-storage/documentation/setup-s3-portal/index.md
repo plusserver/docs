@@ -5,12 +5,15 @@ type: "docs"
 weight: 10
 date: "2024-02-07"
 ---
+
 In this section, we will guide you on creating a default group and assigning permissions for the plusserver S3 web interface. This allows users in this group to access all buckets.
 
 Note that the security recommendation is to create a new user to replace the root user. The root user should only be used in emergencies.
 
 ### Step 1: Logging in to the plusserver S3 Web Interface
+
 {{< img src="images/image-1.png" alt="LoginScreen" >}}
+
 1. Open your web browser and visit the following website: [https://s3-portal.psmanaged.com:9443/](https://s3-portal.psmanaged.com:9443/)
 
 2. Use the provided user credentials (you can find them in the plusserver customer portal: [https://customerservice.plusserver.com/](https://customerservice.plusserver.com/) under "Contracts and Billing" → Select S3 contract → Access data → "Show credentials") to log in. The username is "root," and use the password you are familiar with. You will also find the Account ID here.
@@ -18,16 +21,13 @@ Note that the security recommendation is to create a new user to replace the roo
 ### Step 2: Creating a Default Group
 
 1. After successful login, click on "Access Management" on the left and select "Groups."
-   
 2. Choose the option "Create Group" to create a new group.
-   
 3. Enter a display name and a unique name for the group.
-{{< img src="images/image-2.png" alt="GroupCreation" >}}
+   {{< img src="images/image-2.png" alt="GroupCreation" >}}
 
 ### Step 3: Setting Permissions for the Group
 
 1. In the group settings, you can set the permissions for the users in this group. Please note that these permissions are specific to the plusserver S3 web interface.
-   
 2. Assign the group the necessary permissions to access the desired actions and resources. Here, you can adjust the permissions based on your requirements.
 
 {{% alert title="Warning" color="warning" %}}
@@ -35,7 +35,6 @@ Please be cautious when setting permissions and ensure that users only receive t
 {{% /alert %}}
 
 {{< img src="images/image-3.png" alt="TenantRights" >}}
-
 
 ### Step 4: Applying Group Permissions for the S3 Interface
 
@@ -52,28 +51,19 @@ The example policy for ransomware mitigation can serve as a starting point. Reme
 
 {{< img src="images/image-4.png" alt="GroupPolicy" >}}
 
-
 ### Step 5: Creating Another User
 
 1. Select "Users" on the left under "Access Management." Click on "Create user."
-   
 2. Enter the full name of the user in the respective field.
-   
 3. Assign a desired username that will be used for login later.
-   
 4. Set a secure password for the user.
-   
 5. Leave the "Deny access" option set to "No" (This option allows denying access to a user later if necessary.)
-   
 6. Click on "Continue" to proceed.
-{{< img src="images/image-5.png" alt="CreateUser" >}}
-   
+   {{< img src="images/image-5.png" alt="CreateUser" >}}
 7. On the next input screen, you can select the group you created earlier.
-   
 8. By assigning this group, the user automatically receives the permissions you defined for this group. Click "Create user" to complete.
 
 {{< img src="images/image-6.png" alt="AddAnotherUser" >}}
-
 
 ### Step 6: Logging in as the User
 

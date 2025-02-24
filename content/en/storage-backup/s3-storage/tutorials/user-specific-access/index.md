@@ -12,11 +12,11 @@ In this section, you will learn how to configure an S3 bucket to grant access to
 
 To create a policy of this kind, you need a set of information:
 
-| Variable     | Explanation                                                         | Example Value               |
-|--------------|-------------------------------------------------------------------|------------------------------|
-| ACCOUNT_ID   | The account ID you used to sign in to the S3 User Portal. You can find this on the dashboard (see Screenshot). | 700001145864652591          |
-| BUCKET_NAME  | The name of the bucket whose access is regulated by this policy.   | examplebucket               |
-| USERNAME     | The username of the specific user for whom a granular access policy will be created. | mmustermann                 |
+| Variable    | Explanation                                                                                                    | Example Value      |
+| ----------- | -------------------------------------------------------------------------------------------------------------- | ------------------ |
+| ACCOUNT_ID  | The account ID you used to sign in to the S3 User Portal. You can find this on the dashboard (see Screenshot). | 700001145864652591 |
+| BUCKET_NAME | The name of the bucket whose access is regulated by this policy.                                               | examplebucket      |
+| USERNAME    | The username of the specific user for whom a granular access policy will be created.                           | mmustermann        |
 
 {{< img src="images/image-1.png" alt="ACCOUNTID" >}}
 
@@ -25,6 +25,7 @@ To create a policy of this kind, you need a set of information:
 Policies are typically defined using .json objects. In this case, create a `user-policy.json` file and replace the corresponding variables with the information collected in the last step.
 
 **user-policy.json:**
+
 ```json
 {
   "Version": "2012-10-17",
@@ -57,6 +58,7 @@ Policies are typically defined using .json objects. In this case, create a `user
   ]
 }
 ```
+
 In this specific example, the policy would be as follows:
 
 **user-policy.json**
@@ -93,6 +95,7 @@ In this specific example, the policy would be as follows:
   ]
 }
 ```
+
 ### Step 3: Set the Bucket Policy
 
 ```bash
@@ -101,9 +104,9 @@ aws s3api put-bucket-policy --bucket <bucketname> --policy file://user-policy.js
 
 Explanation of variables:
 
-* \<bucketname>: The name of the bucket whose policy you want to check.
-* \<policy-name>: The name of the policy file you created.
-* \<endpoint-url>: The corresponding endpoint for your plusserver S3-service.
+- \<bucketname>: The name of the bucket whose policy you want to check.
+- \<policy-name>: The name of the policy file you created.
+- \<endpoint-url>: The corresponding endpoint for your plusserver S3-service.
 
 **Example:**
 
@@ -121,12 +124,13 @@ aws s3api get-bucket-policy --bucket <bucketname> --endpoint-url=https://<endpoi
 
 Explanation of variables:
 
-* \<bucketname>: The name of the bucket whose policy you want to check.
-* \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+- \<bucketname>: The name of the bucket whose policy you want to check.
+- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
 ```bash
 aws s3api get-bucket-policy --bucket shop-thumbnails --endpoint-url=https://s3.de-west-1.psmanaged.com
 ```
+
 After running this command, the output should match the policy you defined and ideally be identical.

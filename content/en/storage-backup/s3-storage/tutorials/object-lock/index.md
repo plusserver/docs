@@ -58,61 +58,73 @@ Use the command `aws s3api put-object` to upload an object with Object Lock in G
 ```bash
 aws s3api put-object --bucket <bucketname> --key <destination-file-path> --body <local-file-path> --endpoint-url=https://<endpoint-url> --object-lock-mode GOVERNANCE --object-lock-retain-until-date <timestamp>
 ```
-* Replace \<bucketname>: Enter the name of the bucket where you want to upload the object.
-* Replace \<destination-file-path>: Specify the path and name under which the uploaded object will be stored in the bucket.
-* Replace \<local-file-path>: Specify the path and name of the local file to be uploaded.
-* Replace \<endpoint-url>: Provide the corresponding endpoint for your plusserver S3.
-* Replace \<timestamp>: Specify the date and time until which the object should be locked in Governance mode. Format YYYY-MM-DDTHH:MM:SSZ (Y = year, M = month, D = day, H = hour, M = minute, S = second)
+
+- Replace \<bucketname>: Enter the name of the bucket where you want to upload the object.
+- Replace \<destination-file-path>: Specify the path and name under which the uploaded object will be stored in the bucket.
+- Replace \<local-file-path>: Specify the path and name of the local file to be uploaded.
+- Replace \<endpoint-url>: Provide the corresponding endpoint for your plusserver S3.
+- Replace \<timestamp>: Specify the date and time until which the object should be locked in Governance mode. Format YYYY-MM-DDTHH:MM:SSZ (Y = year, M = month, D = day, H = hour, M = minute, S = second)
 
 **Example**
+
 ```bash
 aws s3api put-object --bucket mylockedbucket --key folder/myobject.pdf --body /path/to/myobject.pdf --endpoint-url=https://s3.de-west-1.psmanaged.com --object-lock-mode GOVERNANCE --object-lock-retain-until-date "2023-08-11T14:35:59Z"
 ```
+
 ## Step 2: Uploading an Object with Compliance Mode
 
 Use the same command with "COMPLIANCE" to upload an object with Compliance mode:
+
 ```bash
 aws s3api put-object --bucket <bucketname> --key <destination-file-path> --body <local-file-path> --endpoint-url=https://<endpoint-url> --object-lock-mode COMPLIANCE --object-lock-retain-until-date <timestamp>
 ```
-* Replace \<bucketname>: Enter the name of the bucket where you want to upload the object.
-* Replace \<destination-file-path>: Specify the path and name under which the uploaded object will be stored in the bucket.
-* Replace \<local-file-path>: Specify the path and name of the local file to be uploaded.
-* Replace \<endpoint-url>: Provide the corresponding endpoint for your plusserver S3.
-* Replace \<timestamp>: Specify the date and time until which the object should be locked in Governance mode. Format YYYY-MM-DDTHH:MM:SSZ (Y = year, M = month, D = day, H = hour, M = minute, S = second)
+
+- Replace \<bucketname>: Enter the name of the bucket where you want to upload the object.
+- Replace \<destination-file-path>: Specify the path and name under which the uploaded object will be stored in the bucket.
+- Replace \<local-file-path>: Specify the path and name of the local file to be uploaded.
+- Replace \<endpoint-url>: Provide the corresponding endpoint for your plusserver S3.
+- Replace \<timestamp>: Specify the date and time until which the object should be locked in Governance mode. Format YYYY-MM-DDTHH:MM:SSZ (Y = year, M = month, D = day, H = hour, M = minute, S = second)
 
 **Example:**
+
 ```bash
 aws s3api put-object --bucket mylockedbucket --key folder/myobject.pdf --body /path/to/myobject.pdf --endpoint-url=https://s3.de-west-1.psmanaged.com --object-lock-mode COMPLIANCE --object-lock-retain-until-date "2023-08-11T14:35:59Z"
 ```
+
 ## Step 3: Viewing and Verifying Locked Objects
 
 Use the command aws s3api get-object-retention to view information about the Object Lock retention of an object:
+
 ```bash
 aws s3api get-object-retention --bucket <bucketname> --key <destination-file-path> --endpoint-url=https://<endpoint>
-````
-* Replace \<bucketname>: Enter the name of your bucket.
-* Replace \<destination-file-path>: Specify the path and name of the locked object.
-* Replace \<endpoint>: Provide the endpoint for your plusserver S3 service.
+```
+
+- Replace \<bucketname>: Enter the name of your bucket.
+- Replace \<destination-file-path>: Specify the path and name of the locked object.
+- Replace \<endpoint>: Provide the endpoint for your plusserver S3 service.
 
 Example outputs for Compliance and Governance modes:
 
 **Compliance Mode:**
+
 ```json
 {
-    "Retention": 
+    "Retention":
     {
         "Mode": "COMPLIANCE",
         "RetainUntilDate": "2023-08-11T15:45:59+00:00"
     }
 }
 ```
+
 **Governance Mode:**
+
 ```json
 {
-    "Retention": 
+    "Retention":
     {
         "Mode": "GOVERNANCE",
         "RetainUntilDate": "2023
     }
-}   
+}
 ```
