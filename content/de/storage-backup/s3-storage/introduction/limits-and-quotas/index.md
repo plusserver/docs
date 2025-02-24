@@ -10,7 +10,7 @@ date: "2024-02-06"
 
 AWS S3 bietet standardmäßig eine Begrenzung von 100 Buckets pro Mandant. Bei Bedarf kann diese Begrenzung durch eine spezielle Freischaltung von Amazon in AWS auf bis zu 1.000 Buckets erhöht werden.
 
-Im Vergleich dazu bietet unser plusserver S3-Service standardmäßig eine Limitierung von 1.000 Buckets pro Mandant. 
+Im Vergleich dazu bietet unser plusserver S3-Service standardmäßig eine Limitierung von 1.000 Buckets pro Mandant.
 Beachten Sie bitte, dass diese Grenze nicht weiter erhöht werden kann.
 
 ## Generelle Features und Beschränkungen
@@ -34,15 +34,14 @@ Beachten Sie bitte, dass diese Grenze nicht weiter erhöht werden kann.
 ## Bucket-Namen Features und Beschränkungen
 
 - Ein Bucketname muss zwischen 3 (min) bis 63 (max) Zeichen lang sein. Der Suffix (-mirr / -repl) ist
-davon abzuziehen
+  davon abzuziehen
 - in Bucketname darf nur Kleinbuchstaben, Nummern, Punkte (.) und Bindestriche enthalten
 - Ein Bucketname darf nicht das Format einer IP Adresse enthalten (z.B. 192.168.1.42)
 - Sollte ein Bucketname mit dem suffix -mirr oder -repl enden, wird eine andere Serviceklasse,
-Ablegungsart und Abrechnung verwendet
+  Ablegungsart und Abrechnung verwendet
 - Ein Bucketname muss über den gesamten plusserver S3 Service eindeutig sein
 - Ein Bucketname der schon von einem Kunden verwendet wird kann nicht verwendet werden, bis
-dieser Bucket vom Besitzer gelöscht wird
-
+  dieser Bucket vom Besitzer gelöscht wird
 
 Diese Limitierungen sind so konzipiert, um die Leistung und Effizienz unseres Services zu gewährleisten und gleichzeitig eine hohe Flexibilität für Ihre Anwendungsfälle zu bieten. Bitte beachten Sie diese Limitierungen, wenn Sie Ihre Konfiguration planen.
 

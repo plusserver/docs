@@ -5,29 +5,28 @@ type: "docs"
 weight: 10
 date: "2024-02-06"
 ---
-In diesem Abschnitt zeigen wir Ihnen, wie Sie eine Standardgruppe erstellen und Berechtigungen für die plusserver S3-Weboberfläche zuweisen können. Dies ermöglicht es den Benutzern in dieser Gruppe, auf alle Buckets zuzugreifen. 
+
+In diesem Abschnitt zeigen wir Ihnen, wie Sie eine Standardgruppe erstellen und Berechtigungen für die plusserver S3-Weboberfläche zuweisen können. Dies ermöglicht es den Benutzern in dieser Gruppe, auf alle Buckets zuzugreifen.
 
 Beachten Sie, dass die Sicherheitsempfehlung ist, dass Sie einen neuen Benutzer anlegen, der den Root-Benutzer ersetzt. Der Root-User sollte nur im Notfall benutzt werden.
 
 ### Schritt 1: Anmeldung auf der plusserver S3-Weboberfläche
+
 {{< img src="images/image-1.png" alt="LoginScreen" >}}
+
 1. Öffnen Sie Ihren Webbrowser und besuchen Sie die folgende Webseite: [https://s3-portal.psmanaged.com:9443/](https://s3-portal.psmanaged.com:9443/)
-   
 2. Verwenden Sie die Ihnen bereitgestellten Benutzerdaten (diese können sie im plusserver Kundenportal: [https://customerservice.plusserver.com/](https://customerservice.plusserver.com/) unter “Verträge und Abrechnung” → "S3 Vertrag auswählen" → "Zugangsdaten" → “Anmeldeinformationen anzeigen” finden), um sich anzumelden. Der Benutzername lautet "root". Bitte verwenden Sie das Ihnen bekannte Passwort. Hier finden Sie zudem die Account ID.
 
 ### Schritt 2: Erstellen einer Standardgruppe
 
 1. Nach erfolgreicher Anmeldung klicken Sie auf der linken Seite unter "Access Management" auf "Groups".
-   
 2. Wählen Sie die Option "Create Group", um eine neue Gruppe zu erstellen.
-   
 3. Geben Sie einen Anzeigenamen und einen eindeutigen Namen für die Gruppe ein.
-{{< img src="images/image-2.png" alt="GroupCreation" >}}
+   {{< img src="images/image-2.png" alt="GroupCreation" >}}
 
 ### Schritt 3: Festlegen von Rechten für die Gruppe
 
 1. In den Gruppeneinstellungen können Sie die Berechtigungen für die Benutzer in dieser Gruppe festlegen. Bitte beachten Sie, dass diese Berechtigungen speziell für die plusserver S3-Weboberfläche gelten.
-   
 2. Weisen Sie der Gruppe die erforderlichen Berechtigungen zu, um auf die gewünschten Aktionen und Ressourcen zugreifen zu können. Hier können Sie die Berechtigungen auf Basis Ihrer Anforderungen anpassen.
 
 {{% alert title="Warnung" color="warning"%}}
@@ -54,20 +53,13 @@ Die Beispiel-Policy für Ransomware-Abwehr kann als Startpunkt dienen. Denken Si
 ### Schritt 5: Erstellen eines weiteren Users
 
 1. Wählen Sie auf der linken Seite unter "Access Management" die Option "Users". Klicken Sie hier auf "Create user".
-   
 2. Geben Sie den vollen Namen des Benutzers in das entsprechende Feld ein.
-   
 3. Vergeben Sie einen gewünschten Benutzernamen, der später zur Anmeldung verwendet wird.
-   
 4. Setzen Sie ein sicheres Passwort für den Benutzer.
-   
 5. Lassen Sie die Option "Deny access" auf "No" eingestellt. (Diese Option ermöglicht es, den Zugriff eines Benutzers später zu verweigern, falls nötig.)
-   
 6. Klicken Sie auf "Continue", um fortzufahren.
-{{< img src="images/image-5.png" alt="CreateUser" >}}
-   
+   {{< img src="images/image-5.png" alt="CreateUser" >}}
 7. Auf der nächsten Eingabe-Maske können Sie die Gruppe auswählen, die Sie zuvor erstellt haben.
-   
 8. Durch die Zuweisung dieser Gruppe erhält der Benutzer automatisch die zuvor definierten Berechtigungen, die Sie für diese Gruppe festgelegt haben. Klicken Sie zum Abschließen auf "Create user".
 
 {{< img src="images/image-6.png" alt="AddAnotherUser" >}}

@@ -17,10 +17,13 @@ Note: Object Lock can only be activated during the initial bucket creation. Due 
 ### Step 1: Create a Bucket
 
 To create a bucket, use the following command:
+
 ```bash
 aws s3api create-bucket --bucket <bucketname> --endpoint-url=https://<endpoint-url> --region <region> --create-bucket-configuration LocationConstraint=<region>
 ```
+
 Replace <bucketname> with the desired name for your bucket and <endpoint-url> with the corresponding endpoint. For example:
+
 ```bash
 aws s3api create-bucket --bucket mynewbucket --endpoint-url=https://s3.de-west-1.psmanaged.com --region de-west-1 --create-bucket-configuration LocationConstraint=de-west-1
 ```
@@ -28,13 +31,17 @@ aws s3api create-bucket --bucket mynewbucket --endpoint-url=https://s3.de-west-1
 {{% alert title="Info" %}}
 Every S3 bucket name must be unique and can exist only once globally in the plusserver S3 service – not only per customer but throughout the entire plusserver S3 environment.
 If the chosen name is already in use by any customer, you will receive the following error messages:
+
 ```bash
 An error occurred (BucketAlreadyOwnedByYou) when calling the CreateBucket operation: Your previous request to create the named bucket succeeded and you already own it.
 ```
+
 or
+
 ```bash
 An error occurred (BucketAlreadyExists) when calling the CreateBucket operation: The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.
 ```
+
 {{% /alert %}}
 {{% alert title="Info" %}}
 Note that when using de-west-1, objects are stored in the data center in Cologne, and when using de-north-2, objects are stored in Hamburg.
@@ -49,48 +56,61 @@ IMPORTANT: For optimal performance, an object should always be stored and access
 If you want to use Object Lock, you need to activate both Versioning and Object Lock. Use the following command:
 
 The "--object-lock-enabled-for-bucket" parameter automatically enables both Versioning and Object Lock.
+
 ```bash
 aws s3api create-bucket --bucket <bucketname> --object-lock-enabled-for-bucket --endpoint-url=https://<endpoint-url> --region <region> --create-bucket-configuration LocationConstraint=<region>
 ```
+
 Replace `<bucketname>` and `<endpoint-url>` accordingly. For example:
+
 ```bash
 aws s3api create-bucket --bucket mylockedbucket --object-lock-enabled-for-bucket --endpoint-url=https://s3.de-west-1.psmanaged.com --region de-west-1 --create-bucket-configuration LocationConstraint=de-west-1
 ```
+
 ### Step 3: Check Bucket Settings
 
 Use the command aws s3api get-bucket-versioning to display the versioning settings of a bucket:
+
 ```bash
 aws s3api get-bucket-versioning --bucket <bucketname> --endpoint-url=https://<endpoint-url>
 ```
+
 This command indicates whether versioning is enabled for the specified bucket.
 
 Example output:
+
 ```bash
 {
     "Status": "Enabled"
 }
 ```
+
 {{% alert title="Info" %}}
 When versioning is disabled, you will not receive any output!
 
 If you only wish to enable "Versioning" for the bucket, you can do so later. See [Versioning in S3](../versioning-in-s3) for details.
 {{% /alert %}}
 To check the Object Lock settings, use the command aws s3api get-object-lock-configuration:
+
 ```bash
 aws s3api get-object-lock-configuration --bucket <bucketname> --endpoint-url=https://<endpoint-url>
 ```
+
 This command provides information about whether Object Lock is enabled for the specified bucket.
 
 Example output for an enabled Object Lock:
+
 ```bash
 {
-    "ObjectLockConfiguration": 
+    "ObjectLockConfiguration":
     {
         "ObjectLockEnabled": "Enabled"
     }
 }
 ```
+
 Example output for a disabled Object Lock:
+
 ```bash
 An error occurred (ObjectLockConfigurationNotFoundError) when calling the GetObjectLockConfiguration operation: Object Lock configuration does not exist for this bucket
 ```

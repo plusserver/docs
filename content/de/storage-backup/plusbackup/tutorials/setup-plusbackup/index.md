@@ -17,10 +17,10 @@ Hier mit Usernamen und Password anmelden
 2. In der linken Menü-Leiste auf "Managed Computers" klicken
 
 {{< img src="images/image-2.png" alt="Screenshot: Managed Computers ausgewählt" >}}
-Hier kann man alle Managed Workloads sehen, die man verwaltet und über  "Download Management Agent" eine weitere Workload hinzufügen
+Hier kann man alle Managed Workloads sehen, die man verwaltet und über "Download Management Agent" eine weitere Workload hinzufügen
 
-3. Hierbei wählt man das Betriebssystem des Computers an (Windows / Linux / Mac)    
-{{< img src="images/image-3.png" alt="Screenshot: Betriebssystem auswählen" >}}
+3. Hierbei wählt man das Betriebssystem des Computers an (Windows / Linux / Mac)  
+   {{< img src="images/image-3.png" alt="Screenshot: Betriebssystem auswählen" >}}
 
 - ein Wizard öffnet sich
 
@@ -40,9 +40,9 @@ Auf dem zukünftig zu sichernden System wird dieser nun installiert
 {{% alert title="Warning" color="warning" %}}
 Wichtig plusbackup verwendet folgende Ports die auf dem Client und in der Infrastruktur freigeschaltet werden müssen (Firewall, Edge Gateway, ...):
 
-Veeam Agent (Windows) 9395+, 6183+  - siehe [Link](https://helpcenter.veeam.com/docs/agentforwindows/userguide/ports.html?ver=60)
+Veeam Agent (Windows) 9395+, 6183+ - siehe [Link](https://helpcenter.veeam.com/docs/agentforwindows/userguide/ports.html?ver=60)
 
-Veeam Agent (Linux) 10002,100006, 2500-3300, 10808 - siehe [Link](https://helpcenter.veeam.com/docs/agentforlinux/userguide/used_ports.html?ver=60) 
+Veeam Agent (Linux) 10002,100006, 2500-3300, 10808 - siehe [Link](https://helpcenter.veeam.com/docs/agentforlinux/userguide/used_ports.html?ver=60)
 
 Veeam Agent (Mac) 10006,10101, 2500-3300 - siehe [Link](https://helpcenter.veeam.com/docs/agentformac/userguide/used_ports.html?ver=20 "Optionaler Linktitel")
 
@@ -58,9 +58,9 @@ Sollte in der zu backupenden Instanz keine MTU Size angegeben worden sein, ist d
 
 ## Schritt 2: Einrichten von Plusbackup
 
-Als Beispiel für das Einrichten von Plusbackup verwenden wir hier einen Windows Laptop. 
+Als Beispiel für das Einrichten von Plusbackup verwenden wir hier einen Windows Laptop.
 Die Installtion benötigt Admin bzw. Root Rechte auf dem System.
-Gehen Sie wie folgt vor (siehe Screenshots): 
+Gehen Sie wie folgt vor (siehe Screenshots):
 
 1. {{< img src="images/image-8.png" alt="Screenshot: Installationsfenster" >}}
 
@@ -70,7 +70,7 @@ Gehen Sie wie folgt vor (siehe Screenshots):
 
 4. {{< img src="images/image-11.png" alt="Screenshot: Veeam Service Provider Console Management agent installiert" >}}
 
-5. Nach der Installation sollte der Agent gestartet werden und wird dann sich mit dem plusserver Cloud Gateway über Port 6180 verbunden (dieser muss natürlich erreichbar sein, bzw. auf der Firewall oder ähnlichem Freigeschaltet sein). 
+5. Nach der Installation sollte der Agent gestartet werden und wird dann sich mit dem plusserver Cloud Gateway über Port 6180 verbunden (dieser muss natürlich erreichbar sein, bzw. auf der Firewall oder ähnlichem Freigeschaltet sein).
 6. Nach einigen Minuten sollte die Connectivität hergestellt sein, dem Computer System kann man hierbei auch noch ein Tag vergeben, welches dann in der HTML GUI auftaucht.
 
 {{< img src="images/image-12.png" alt="Screenshot: Veeam Management Agent Settings Wizardfenster" >}}
@@ -88,6 +88,7 @@ Gehen Sie wie folgt vor (siehe Screenshots):
 8. Über den Button "Install Backup Agent" kann man auf dem Ausgewählten Computer System den Backup Agenten installieren.
 
 {{< img src="images/image-16.png" alt="Screenshot: Button Install Backup Agent" >}}
+
 - Bei der Installation des Backup Agenten kann man diesen auch schon einer **Backuppolicy** hinzufügen oder eine neue Backuppolicy erstellen. Da dies aber auch später geht ist dies nicht von Nöten und man kann auch "No Policy" auswählen.
 
 {{< img src="images/image-17.png" alt="Screenshot: Install Backup Agent Wizardfenster" >}}
@@ -97,7 +98,6 @@ Gehen Sie wie folgt vor (siehe Screenshots):
 9. Danach wird der Backup Agent installiert, dies dauert mehrere Minuten
 
 {{< img src="images/image-19.png" alt="Screenshot: Backup Agent wird installiert" >}}
-
 
 ## Schritt 3: Backup Job/Backup Policy erstellen
 
@@ -141,7 +141,7 @@ Server Features: Parallel disk processing, Retention based on Restore Points, Co
 
 Nur den hinteren Teil des plusbackup Accounts verwenden (der ganze User ist nur in der WEB Gui nötig)
 
-Also z.B. Account ist 
+Also z.B. Account ist
 123456\kd123456
 Hier dann nur kd123456 eingeben
 
@@ -163,7 +163,6 @@ Hier dann nur kd123456 eingeben
 
 {{< img src="images/image-33.png" alt="Screenshot: Wizardfenster Advanced Setting" >}}
 
-
 {{% alert title="Hinweis" %}}
 WICHTIG - unter Advanced Settings → Storage soll die Optimierung "Local target" (large blocks) ausgewählt sein.
 
@@ -181,7 +180,7 @@ Da die plusserver alle Backups als redundante S3 Kopie georedundant aufhebt. Die
 Im Schedule Bereich kann der Zeitpunkt des Backupjob eingestellt und Konfiguriert werden
 
 {{< img src="images/image-37.png" alt="Screenshot: Zeitplan für Backup cache einstellen" >}}
-    
+
 Das Backup wird entweder mit dem Wizard gestartet oder der Job muss danach enabled und gestartet werden:
 
 {{< img src="images/image-38.png" alt="Screenshot: Backupjob manuell starten" >}}
@@ -203,6 +202,7 @@ Nachdem der Backup abgeschlossen ist kann man das letzte Backup mit Timecode sow
 Eine Wiederherstellung kann vom Client (mit dem Veeam Agenten) oder vom plusbackup Portal iniitiiert werden.
 
 **A - Agenten Wiederherstellung**
+
 1. File Level Restore (Für einzelne Dateien) oder Volume Restore aus dem Client aufrufen:
 
 {{< img src="images/image-43.png" alt="Screenshot: File Level Restore und Volume Restore" >}}
@@ -213,11 +213,9 @@ Eine Wiederherstellung kann vom Client (mit dem Veeam Agenten) oder vom plusback
 
 {{< img src="images/image-45.png" alt="Screenshot: Wizardfenster Please wait" >}}
 
-
 {{< img src="images/image-46.png" alt="Screenshot: Test2 Ordner ausgewählt" >}}
 
 {{< img src="images/image-47.png" alt="Screenshot: Restore Button" >}}
-
 
 Restore - Am selben Ort mit selben Namen Wiederherstellen/Überschreiben
 Copy To - Mit anderem Namen Wiederherstellten oder anderen Ort
@@ -255,6 +253,5 @@ Copy To - Mit anderem Namen Wiederherstellten oder anderen Ort
 Download - Lokal Herunterladen
 
 Keep - Mit anderem Namen Wiederherstellten oder anderen Ort
-    
+
 Overwrite - Am selben Ort mit selben Namen Wiederherstellen/Überschreiben
-    

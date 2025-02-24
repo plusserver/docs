@@ -30,10 +30,10 @@ The migration script supports various parameters that allow you to customize the
 
 2. **Prepare CSV File:** Create a CSV file with the necessary information about source and destination storage profiles and their corresponding bucket names. The schema of the CSV file should look like this:
 
-|source_profile|source_bucket|dest_profile|dest_bucket|
-|--------------|-------------|------------|-----------|
-|old_s3|bucket1|new_s3|bucketA|
-|old_s3|bucket2|new_s3|bucketB|
+| source_profile | source_bucket | dest_profile | dest_bucket |
+| -------------- | ------------- | ------------ | ----------- |
+| old_s3         | bucket1       | new_s3       | bucketA     |
+| old_s3         | bucket2       | new_s3       | bucketB     |
 
 (Example of a CSV file with source and destination combinations)
 
@@ -42,18 +42,19 @@ Ideally, name this file buckets.csv. If you choose a different name, you need to
 3. **Start Data Transfer:** Execute the command ./plusserver_transfer_script.sh -f CSV_FILE to start the data transfer. Replace CSV_FILE with the path to the prepared CSV file. The script will perform the transfer between the specified storage targets. If you run the script without the -f parameter, it will default to using buckets.csv.
 
 4. **Optional Parameters:**
-    * -d or \--delimiter: Sets the delimiter character for the CSV file. By default, , is used.
-    * \--delete: Uses the rclone sync operation. When the script is used with the --delete option, objects that were deleted in the source will also be deleted in the destination bucket.
+    - -d or \--delimiter: Sets the delimiter character for the CSV file. By default, , is used.
+    - \--delete: Uses the rclone sync operation. When the script is used with the --delete option, objects that were deleted in the source will also be deleted in the destination bucket.
 
 **Example:**
 
-Assuming you have placed the script on your server at `/home/user/plusserver_transfer_script.sh` and prepared a CSV file named `transfer_data.csv` in the same directory. You want to start the data transfer using the rclone sync operation with the `--delete` option. 
+Assuming you have placed the script on your server at `/home/user/plusserver_transfer_script.sh` and prepared a CSV file named `transfer_data.csv` in the same directory. You want to start the data transfer using the rclone sync operation with the `--delete` option.
 
 **Execute the following command:**
 
 ```bash
 ./plusserver_transfer_script.sh -f transfer_data.csv --delete
 ```
+
 {{% alert title="Info" %}}
 Upon re-execution of the script, only newly added objects between the source and destination buckets will be transferred. If files were deleted in the source buckets, they will remain in the destination bucket unless you use the --delete option.
 {{% /alert %}}

@@ -5,16 +5,18 @@ type: "docs"
 weight: 20
 date: "2024-02-06"
 ---
+
 Here you will find the prices for the various service classes of our PlusServer S3 service.
 
 ## Prices per GB
 
-| Service Class | Price per GB* |
-|---------------|--------------|
-| Standard      | €0.022       |
-| Replication   | €0.039       |
-| Mirror        | €0.044       |
-*List Prices as of 08/02/2024
+| Service Class | Price per GB\* |
+| ------------- | -------------- |
+| Standard      | €0.022         |
+| Replication   | €0.039         |
+| Mirror        | €0.044         |
+
+\*List Prices as of 08/02/2024
 
 ## Storage Policies
 
@@ -51,11 +53,11 @@ When creating buckets in our PlusServer S3 service, please note that your data i
 
 ### Differences between Storage Policies
 
-| Option | Description | Redundancy | Locations | Use Case |
-|--------|-------------|------------|-----------|----------|
-| -mirr  | Dual storage with Erasure Coding and replication in duplicate | Georedundant + Site Redundant | de-north-2 and de-west-1 | Production-critical applications or user data |
-| -repl  | Replication of objects distributed between both data centers | Only Georedundant | de-north-2 and de-west-1 | Double backup, Cost-effective georedundancy |
-| Standard | Regional storage with Erasure Coding and replication | Only Site Redundant | de-north-2 or de-west-1 | Production data, Secure data storage within a geolocation |
+| Option   | Description                                                   | Redundancy                    | Locations                | Use Case                                                  |
+| -------- | ------------------------------------------------------------- | ----------------------------- | ------------------------ | --------------------------------------------------------- |
+| -mirr    | Dual storage with Erasure Coding and replication in duplicate | Georedundant + Site Redundant | de-north-2 and de-west-1 | Production-critical applications or user data             |
+| -repl    | Replication of objects distributed between both data centers  | Only Georedundant             | de-north-2 and de-west-1 | Double backup, Cost-effective georedundancy               |
+| Standard | Regional storage with Erasure Coding and replication          | Only Site Redundant           | de-north-2 or de-west-1  | Production data, Secure data storage within a geolocation |
 
 This table provides an overview of the main differences between the options for creating buckets in our new S3.
 

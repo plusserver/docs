@@ -5,6 +5,7 @@ type: "docs"
 weight: 10
 date: "2024-02-07"
 ---
+
 In diesem Abschnitt werden wir Ihnen zeigen, wie Sie das AWS Command Line Interface (CLI) installieren können, um mit Ihrem plusserver S3-Konto zu interagieren. Beachten Sie bitte, dass die AWS CLI hier lediglich als Beispiel für den Einstieg dient. Jeder alternative S3-Client kann ebenfalls verwendet werden, um auf Ihre S3-Ressourcen zuzugreifen.
 
 ### Schritt 1: Überprüfen der Systemanforderungen
@@ -60,7 +61,6 @@ Nach der Installation müssen Sie die AWS CLI mit Ihren Zugangsdaten konfigurier
 
 Herzlichen Glückwunsch! Sie haben erfolgreich die AWS CLI installiert und konfiguriert, um mit Ihrem plusserver S3-Konto zu kommunizieren. Denken Sie daran, dass Sie jedes andere S3-kompatible Tool verwenden können, um auf Ihre plusserver-s3-Ressourcen zuzugreifen. In den folgenden Abschnitten werden wir Ihnen zeigen, wie Sie grundlegende Aktionen wie das Hochladen von Objekten ausführen können.
 
-
 {{% alert title="Endpunkt Konfiguration" %}}
 
 Die AWS CLI verwendet als Standard den Endpunkt "http://s3.amazonaws.com". Diesen können Sie ändern, indem Sie die Variable im Konfigurationsfile der AWS CLI anpassen. Je nach Betriebssystem befindet sich diese an einem anderen Ort (z.B. Windows: %USERPROFILES%\.aws\config sowie das credential File).
@@ -68,16 +68,20 @@ Die AWS CLI verwendet als Standard den Endpunkt "http://s3.amazonaws.com". Diese
 **Beispielkonfiguration**
 
 Datei: config
+
 ```bash
 [profile plusservers3]
 region = de-west-1
 endpoint_url = https://s3.de-west-1.psmanaged.com
 ```
+
 Datei: credentials
+
 ```bash
 [plusservers3]
 aws_access_key_id = <accesskey>
 aws_secret_access_key = <secretkey>
 ```
+
 Andere S3 CLIs haben ebenfalls Konfigurationsdateien, die entsprechend angepasst werden können.
 {{% /alert %}}

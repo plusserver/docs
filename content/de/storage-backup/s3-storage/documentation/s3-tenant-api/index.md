@@ -46,7 +46,6 @@ Die Mandantenmanagement-API organisiert die verfügbaren Funktionen in verschied
 
 Nutzen Sie die umfassenden Funktionen der Tenant-API, um Ihr Mandantenmanagement effizient zu steuern und anzupassen.
 
-
 ## plusserver S3 Usage via API Query
 
 In diesem Abschnitt erfahren Sie, wie Sie die Nutzungsinformationen für Ihren plusserver S3-Service abrufen können. Damit erhalten Sie Einblicke in die Verwendung Ihrer Buckets via API Abfrage.
@@ -61,6 +60,7 @@ Um auf die S3 Usage-Daten zuzugreifen, benötigen Sie ein Autorisierungstoken. S
 [https://s3-portal.psmanaged.com:9443/api/v3/authorize](https://s3-portal.psmanaged.com:9443/api/v3/authorize)
 
 Verwenden Sie den folgenden JSON-Body in Ihrer Anfrage und ersetzen Sie `<accountId>`, `<username>` und `<password>` durch Ihre entsprechenden Informationen:
+
 ```json
 {
   "accountId": "Ihre_Account_ID",
@@ -122,6 +122,7 @@ echo "$usage_data" > "usage_$timestamp.json"
 
 echo "Usage-Daten wurden als usage_$timestamp.json gespeichert."
 ```
+
 Führen Sie dieses Skript aus, um Ihre S3 Usage-Daten abzurufen und als JSON-Datei zu speichern.
 
 {{% alert title="Info" %}}

@@ -54,7 +54,7 @@ Start by creating a JSON file containing the bucket policy for **"Read Only"** a
 
 Explanation of variables in the JSON Policy:
 
-* \<bucketname>: The name of the bucket for which you are creating the policy.
+- \<bucketname>: The name of the bucket for which you are creating the policy.
 
 ### Step 2: Enable "Bucket Policy" for "Read Only"
 
@@ -66,9 +66,9 @@ aws s3api put-bucket-policy --bucket <bucketname> --policy file://readonly-polic
 
 Explanation of variables:
 
-* \<bucketname>: The name of the bucket you want to set to "Read Only."
-* file://readonly-policy.json: The path to the JSON Policy file on your local system.
-* \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+- \<bucketname>: The name of the bucket you want to set to "Read Only."
+- file://readonly-policy.json: The path to the JSON Policy file on your local system.
+- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -86,8 +86,8 @@ aws s3api get-bucket-policy --bucket <bucketname> --endpoint-url=https://<endpoi
 
 Explanation of variables:
 
-* \<bucketname>: The name of the bucket whose policy you want to check.
-* \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+- \<bucketname>: The name of the bucket whose policy you want to check.
+- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -100,11 +100,13 @@ If you have the **'jq'** tool installed on your server, you can continue to disp
 ```bash
 aws s3api get-bucket-policy --bucket myreadonlybucket --endpoint-url=https://s3.de-west-1.psmanaged.com | jq '.Policy | fromjson'
 ```
+
 By setting a bucket to **"Read Only,"** you can restrict the ability to create or edit objects in the bucket while still allowing the retrieval of existing objects. Ensure that you customize the policy according to your requirements and verify that the desired permissions are granted or denied.
 
 {{% alert title="Info" %}}
 The examples provided above are general guidelines. Exact options may vary depending on the configuration.
 {{% /alert %}}
+
 ### Step 4: Check if the Bucket is Set to Read-Only
 
 To confirm that the bucket is indeed in **Read-Only** mode and no more objects can be uploaded, you can use the following command:
@@ -112,4 +114,5 @@ To confirm that the bucket is indeed in **Read-Only** mode and no more objects c
 ```bash
 aws s3api put-object --bucket <bucketname> --key testfile.txt --body /path/to/local/file.txt --endpoint-url=https://<endpoint-url>
 ```
+
 Here, you should receive a message with **"Access Denied."**
