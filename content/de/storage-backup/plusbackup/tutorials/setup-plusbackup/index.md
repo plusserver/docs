@@ -197,7 +197,7 @@ Nachdem der Backup abgeschlossen ist kann man das letzte Backup mit Timecode sow
 
 {{< img src="images/image-42.png" alt="Screenshot: Backup status fertig" >}}
 
-## Wiederherstellung:
+## Wiederherstellung
 
 Eine Wiederherstellung kann vom Client (mit dem Veeam Agenten) oder vom plusbackup Portal iniitiiert werden.
 

@@ -16,19 +16,19 @@ Stellen Sie sicher, dass das entsprechende Bucket sowohl Versionierung als auch 
 
 Der plusserver S3 Service bietet zwei Modi des Object Lock-Features: Compliance und Governance. Beide Modi dienen dazu, die Unveränderlichkeit von Objekten sicherzustellen, jedoch mit unterschiedlichen Ebenen der Durchsetzung und Möglichkeiten für Benutzeraktionen.
 
-#### Compliance Object Lock:
+#### Compliance Object Lock
 
 - Objekte im Compliance-Modus können nicht gelöscht oder verändert werden, solange die Retention aktiv ist.
 - Einmal gesperrte Objekte können während der festgelegten Retention nicht gelöscht oder verändert werden.
 - Benutzer können Compliance-gesperrte Objekte nicht selbstständig löschen, wodurch eine zusätzliche Schutzebene für kritische Daten gewährleistet wird.
 
-#### Governance Object Lock:
+#### Governance Object Lock
 
 - Objekte im Governance-Modus können nicht gelöscht oder verändert werden, solange die Retention aktiv ist.
 - Im Governance-Modus können bestimmte Benutzeraktionen durchgeführt werden, die normalerweise nicht im Compliance-Modus erlaubt sind.
 - Benutzer mit den erforderlichen Berechtigungen können gesperrte Objekte im Governance-Modus löschen, aber es bleibt eine Audit-Trail von solchen Aktionen erhalten.
 
-#### Folgende Rechte stehen im Zusammenhang mit dem Governance Object Lock:
+#### Folgende Rechte stehen im Zusammenhang mit dem Governance Object Lock
 
 - `s3:BypassGovernanceRetention`: Um die Governance-Retention für ein gesperrtes Objekt zu umgehen.
 - `s3:DeleteObjectVersion`: Um ein gesperrtes Objekt im Governance-Modus zu löschen.

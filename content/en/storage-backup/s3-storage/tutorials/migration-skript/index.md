@@ -16,7 +16,7 @@ Before proceeding with this documentation, please ensure that the rclone configu
 
 In this step, you will learn how to use the migration script on a server to perform automated data transfers between different cloud storage services.
 
-### Preparation:
+### Preparation
 
 **Download the Script:** Download the migration script to the server where you intend to perform the data transfer.
 
