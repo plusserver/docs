@@ -5,16 +5,18 @@ type: "docs"
 weight: 20
 date: "2024-02-06"
 ---
+
 Hier finden Sie die Preise für die verschiedenen Serviceklassen unseres plusserver S3 Service.
 
 ## Preise pro GB
 
-| Serviceklasse | Preis pro GB*  |
-|---------------|--------------|
-| Standard      | 0,022€        |
-| Replikation   | 0,039€        |
-| Mirror        | 0,044€        |
-*Listenpreise Stand 2024-02-08
+| Serviceklasse | Preis pro GB\* |
+| ------------- | -------------- |
+| Standard      | 0,022€         |
+| Replikation   | 0,039€         |
+| Mirror        | 0,044€         |
+
+\*Listenpreise Stand 2024-02-08
 
 ## Speicherrichtlinien
 
@@ -31,7 +33,7 @@ In dieser Serviceklasse gelten folgende Speicherrichtlinien:
 
 Für diese Serviceklasse gelten die folgenden Richtlinien:
 
-- Alle Objekte in diesem Bucket werden in eine andere GEO-Location gespiegelt, um zusätzliche Redundanz zu gewährleisten. Das bedeutet, dass sowohl ein vollständiges Erasure-Coding-Objekt beispielsweise in Köln als auch eine Kopie desselben Objekts in Hamburg gespeichert wird. 
+- Alle Objekte in diesem Bucket werden in eine andere GEO-Location gespiegelt, um zusätzliche Redundanz zu gewährleisten. Das bedeutet, dass sowohl ein vollständiges Erasure-Coding-Objekt beispielsweise in Köln als auch eine Kopie desselben Objekts in Hamburg gespeichert wird.
 - Objekte kleiner als 1 MB werden mit Replikation gespeichert und ebenfalls gespiegelt.
 - Es wird eine minimale Abrechnungsgröße von 128 KB angewendet.
 
@@ -43,7 +45,8 @@ Für diese Serviceklasse gelten folgende Richtlinien:
 - Es wird eine minimale Abrechnungsgröße von 128 KB angewendet.
 
 ### Zusätzliche Info für die Speicherrichtlinien
-Diese Speicherrichtlinien gewährleisten, dass Ihre Daten je nach gewählter Serviceklasse effizient und sicher gespeichert werden. 
+
+Diese Speicherrichtlinien gewährleisten, dass Ihre Daten je nach gewählter Serviceklasse effizient und sicher gespeichert werden.
 Kleine Objekte mit einer Größe unter 128 KB können zwar gespeichert werden, werden jedoch mit einer Mindestgröße von 128 KB berechnet. Dies liegt daran, dass das Speichern solcher kleiner Objekte einen höheren Speicheraufwand in unserem S3-System mit sich bringt.
 
 {{% alert title="Wichtiger Hinweis" %}}
@@ -52,11 +55,11 @@ Bei der Anlage von Buckets in unserem plusserver S3 Service sollten Sie beachten
 
 ### Unterschiede zwischen den Speicherrichtlinien
 
-| Option | Beschreibung | Redundanz | Standorte | Verwendungszweck |
-|--------|--------------|-----------|-----------|------------------|
-| -mirr  | Doppelspeicherung mit Erasure Coding und Replikation in doppelter Ausführung | Georedundant + Site Redundant | de-north-2 und de-west-1 | Produktionskritische Anwendungen oder User-Daten |
-| -repl  | Replikation der Objekte, welche auf beide Rechenzentrum verteilt werden | Nur Georedundant | de-north-2 und de-west-1 | Doppeltes Backup, Kostengünstige Georedundanz |
-| Standard | Regionale Speicherung mit Erasure Coding und Replikation | Nur Site Redundant | de-north-2 oder de-west-1 | Produktions-Daten, Sichere Datenhaltung innerhalb einer Geolokation |
+| Option   | Beschreibung                                                                 | Redundanz                     | Standorte                 | Verwendungszweck                                                    |
+| -------- | ---------------------------------------------------------------------------- | ----------------------------- | ------------------------- | ------------------------------------------------------------------- |
+| -mirr    | Doppelspeicherung mit Erasure Coding und Replikation in doppelter Ausführung | Georedundant + Site Redundant | de-north-2 und de-west-1  | Produktionskritische Anwendungen oder User-Daten                    |
+| -repl    | Replikation der Objekte, welche auf beide Rechenzentrum verteilt werden      | Nur Georedundant              | de-north-2 und de-west-1  | Doppeltes Backup, Kostengünstige Georedundanz                       |
+| Standard | Regionale Speicherung mit Erasure Coding und Replikation                     | Nur Site Redundant            | de-north-2 oder de-west-1 | Produktions-Daten, Sichere Datenhaltung innerhalb einer Geolokation |
 
 Diese Tabelle gibt Ihnen einen Überblick über die Hauptunterschiede zwischen den Optionen für die Erstellung von Buckets in unserem neuen S3.
 

@@ -46,7 +46,7 @@ Es ist wichtig zu beachten, dass sowohl Compliance- als auch Governance-Object L
 
 ### 2. Hinweis
 
-Solange mindestens ein gelocktes Objekt sich innerhalb eines Buckets befindet, kann das Bucket nicht gelöscht werden. 
+Solange mindestens ein gelocktes Objekt sich innerhalb eines Buckets befindet, kann das Bucket nicht gelöscht werden.
 
 **Auch eine Kündigung des plusserver S3 Vertrages ist nicht möglich, solange sich noch gelockte Objekte in dem Kundenaccount befinden. Dieser muss solange weitergeführt werden, bis sämtliche Retention-Locks ausgelaufen sind und/oder die Objekte vom Kunden im Governance Mode gelöscht wurden.**
 {{% /alert %}}
@@ -58,13 +58,15 @@ Verwenden Sie den Befehl `aws s3api put-object`, um ein Objekt mit Object Lock i
 ```bash
 aws s3api put-object --bucket <bucketname> --key <ziel-dateipfad> --body <lokaler-dateipfad> --endpoint-url=https://<endpoint-url> --object-lock-mode GOVERNANCE --object-lock-retain-until-date <zeitstempel>
 ```
-* Ersetzen Sie \<bucketname>: Geben Sie den Namen des Buckets ein, in den Sie das Objekt hochladen möchten.
-* Ersetzen Sie \<ziel-dateipfad>: Geben Sie den Pfad und den Namen an, unter dem das hochgeladene Objekt im Bucket gespeichert werden soll.
-* Ersetzen Sie \<lokaler-dateipfad>: Geben Sie den Pfad und den Namen der lokalen Datei an, die hochgeladen werden soll.
-* Ersetzen Sie \<endpoint-url>: Geben Sie den entsprechenden Endpunkt für Ihren plusserver S3 an.
-* Ersetzen Sie \<zeitstempel>: Geben Sie das Datum und die Uhrzeit an, bis zu der das Objekt im Governance-Modus gesperrt sein soll. Format YYYY-MM-DDTHH:MM:SSZ (Y = Jahr, M = Monat, D = Tag, H = Stunde, M = Minute, S = Sekunde)
+
+- Ersetzen Sie \<bucketname>: Geben Sie den Namen des Buckets ein, in den Sie das Objekt hochladen möchten.
+- Ersetzen Sie \<ziel-dateipfad>: Geben Sie den Pfad und den Namen an, unter dem das hochgeladene Objekt im Bucket gespeichert werden soll.
+- Ersetzen Sie \<lokaler-dateipfad>: Geben Sie den Pfad und den Namen der lokalen Datei an, die hochgeladen werden soll.
+- Ersetzen Sie \<endpoint-url>: Geben Sie den entsprechenden Endpunkt für Ihren plusserver S3 an.
+- Ersetzen Sie \<zeitstempel>: Geben Sie das Datum und die Uhrzeit an, bis zu der das Objekt im Governance-Modus gesperrt sein soll. Format YYYY-MM-DDTHH:MM:SSZ (Y = Jahr, M = Monat, D = Tag, H = Stunde, M = Minute, S = Sekunde)
 
 **Beispiel:**
+
 ```bash
 aws s3api put-object --bucket mylockedbucket --key folder/meinobjekt.pdf --body /pfad/zu/meinobjekt.pdf --endpoint-url=https://s3.de-west-1.psmanaged.com --object-lock-mode GOVERNANCE --object-lock-retain-until-date "2023-08-11T14:35:59Z"
 ```
@@ -72,16 +74,19 @@ aws s3api put-object --bucket mylockedbucket --key folder/meinobjekt.pdf --body 
 ## Schritt 2: Hochladen eines Objekts mit Compliance-Modus
 
 Verwenden Sie den gleichen Befehl mit "COMPLIANCE", um ein Objekt mit Compliance-Modus hochzuladen:
+
 ```bash
 aws s3api put-object --bucket <bucketname> --key <ziel-dateipfad> --body <lokaler-dateipfad> --endpoint-url=https://<endpoint-url> --object-lock-mode COMPLIANCE --object-lock-retain-until-date <zeitstempel>
 ```
-* Ersetzen Sie \<bucketname>: Geben Sie den Namen des Buckets ein, in den Sie das Objekt hochladen möchten.
-* Ersetzen Sie \<ziel-dateipfad>: Geben Sie den Pfad und den Namen an, unter dem das hochgeladene Objekt im Bucket gespeichert werden soll.
-* Ersetzen Sie \<lokaler-dateipfad>: Geben Sie den Pfad und den Namen der lokalen Datei an, die hochgeladen werden soll.
-* Ersetzen Sie \<endpoint-url>: Geben Sie den entsprechenden Endpunkt für Ihren plusserver S3 an.
-* Ersetzen Sie \<zeitstempel>: Geben Sie das Datum und die Uhrzeit an, bis zu der das Objekt im Governance-Modus gesperrt sein soll. Format YYYY-MM-DDTHH:MM:SSZ (Y = Jahr, M = Monat, D = Tag, H = Stunde, M = Minute, S = Sekunde)
+
+- Ersetzen Sie \<bucketname>: Geben Sie den Namen des Buckets ein, in den Sie das Objekt hochladen möchten.
+- Ersetzen Sie \<ziel-dateipfad>: Geben Sie den Pfad und den Namen an, unter dem das hochgeladene Objekt im Bucket gespeichert werden soll.
+- Ersetzen Sie \<lokaler-dateipfad>: Geben Sie den Pfad und den Namen der lokalen Datei an, die hochgeladen werden soll.
+- Ersetzen Sie \<endpoint-url>: Geben Sie den entsprechenden Endpunkt für Ihren plusserver S3 an.
+- Ersetzen Sie \<zeitstempel>: Geben Sie das Datum und die Uhrzeit an, bis zu der das Objekt im Governance-Modus gesperrt sein soll. Format YYYY-MM-DDTHH:MM:SSZ (Y = Jahr, M = Monat, D = Tag, H = Stunde, M = Minute, S = Sekunde)
 
 **Beispiel:**
+
 ```bash
 aws s3api put-object --bucket mylockedbucket --key folder/meinobjekt.pdf --body /pfad/zu/meinobjekt.pdf --endpoint-url=https://s3.de-west-1.psmanaged.com --object-lock-mode COMPLIANCE --object-lock-retain-until-date "2023-08-11T14:35:59Z"
 ```
@@ -89,30 +94,34 @@ aws s3api put-object --bucket mylockedbucket --key folder/meinobjekt.pdf --body 
 ## Schritt 3: Anzeigen und Überprüfen der gesperrten Objekte
 
 Verwenden Sie den Befehl aws s3api get-object-retention, um Informationen zur Object Lock-Retention eines Objekts anzuzeigen:
+
 ```bash
 aws s3api get-object-retention --bucket <bucketname> --key <ziel-dateipfad> --endpoint-url=https://<endpoint>
 ```
 
-* Ersetzen Sie \<bucketname>: Geben Sie den Namen Ihres Buckets an.
-* Ersetzen Sie \<ziel-dateipfad>: Geben Sie den Pfad und Namen des gesperrten Objekts an.
-* Ersetzen Sie \<endpoint>: Geben Sie den Endpunkt für Ihren plusserver S3 Service an.
+- Ersetzen Sie \<bucketname>: Geben Sie den Namen Ihres Buckets an.
+- Ersetzen Sie \<ziel-dateipfad>: Geben Sie den Pfad und Namen des gesperrten Objekts an.
+- Ersetzen Sie \<endpoint>: Geben Sie den Endpunkt für Ihren plusserver S3 Service an.
 
 Beispiel-Ausgaben für Compliance- und Governance-Modus:
 
 **Compliance-Modus:**
+
 ```json
 {
-    "Retention": 
+    "Retention":
     {
         "Mode": "COMPLIANCE",
         "RetainUntilDate": "2023-08-11T15:45:59+00:00"
     }
 }
 ```
+
 **Governance-Modus:**
+
 ```json
 {
-    "Retention": 
+    "Retention":
     {
         "Mode": "GOVERNANCE",
         "RetainUntilDate": "2023-08-11T15:45:59+00:00"

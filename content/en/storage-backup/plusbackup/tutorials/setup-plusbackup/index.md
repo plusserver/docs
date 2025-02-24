@@ -29,7 +29,7 @@ Here you can see all the managed workloads that you manage and add another workl
 {{< img src="images/image-4.png" alt="Screenshot: Wizard window" >}}
 
 Here you can define how long the download link can be used by the management agent (default 12 months). For security reasons, a short duration should be selected here (e.g. 1 day)
-    
+
 {{< img src="images/image-5.png" alt="Screenshot: Setting the time" >}}
 
 Via Create Download Link you will then receive a link via which the future client can download the management software or you can download the agent directly via "Download"
@@ -37,7 +37,7 @@ Via Create Download Link you will then receive a link via which the future clien
 {{< img src="images/image-6.png" alt="Screenshot: link to download" >}}
 
 {{< img src="images/image-7.png" alt="Screenshot: Managment agent will now be downloaded to your computer" >}}
-    
+
 This is now installed on the system to be backed up in the future
 
 {{% alert title="Warning" color="warning" %}}
@@ -45,7 +45,7 @@ Important plusbackup uses the following ports that must be enabled on the client
 
 Veeam Agent (Windows) 9395+, 6183+ - see [Link](https://helpcenter.veeam.com/docs/agentforwindows/userguide/ports.html?ver=60)
 
-Veeam Agent (Linux) 10002,100006, 2500-3300, 10808 - see [Link](https://helpcenter.veeam.com/docs/agentforlinux/userguide/used_ports.html?ver=60) 
+Veeam Agent (Linux) 10002,100006, 2500-3300, 10808 - see [Link](https://helpcenter.veeam.com/docs/agentforlinux/userguide/used_ports.html?ver=60)
 
 Veeam Agent (Mac) 10006,10101, 2500-3300 - see [Link](https://helpcenter.veeam.com/docs/agentformac/userguide/used_ports.html?ver=20 "Optional link title")
 
@@ -61,9 +61,10 @@ If no MTU size has been specified in the instance to be backed up, the MTU is se
 
 ## Step 2: Setting up Plusbackup
 
-We are using a Windows laptop as an example for setting up Plusbackup. 
+We are using a Windows laptop as an example for setting up Plusbackup.
 The installation requires admin or root rights.
-Proceed as follows (see screenshots): 
+Proceed as follows (see screenshots):
+
 1. {{< img src="images/image-8.png" alt="Screenshot: Installation window" >}}
 
 2. {{< img src="images/image-9.png" alt="Screenshot: License agreements" >}}
@@ -72,12 +73,13 @@ Proceed as follows (see screenshots):
 
 4. {{< img src="images/image-11.png" alt="Screenshot: Veeam Service Provider Console Management agent installing" >}}
 
-5. After installation, the agent should be started and will then connect to the plusserver Cloud Gateway via port 6180 (this must of course be accessible or enabled on the firewall or similar). 
+5. After installation, the agent should be started and will then connect to the plusserver Cloud Gateway via port 6180 (this must of course be accessible or enabled on the firewall or similar).
 6. After a few minutes the connectivity should be established, the computer system can also be assigned a tag, which then appears in the HTML GUI.
 
 {{< img src="images/image-12.png" alt="Screenshot: Veeam Management Agent Settings wizard window" >}}
 
 {{< img src="images/image-13.png" alt="Screenshot: agent status is connected" >}}
+
 - If the computer system is a Windows client, the possible connection can also be tested via Powershell (<powershell>: tnc port 6180 de-4-cc-gw01.vcd.get-cloud.io). If no connection is possible, port 6180 must be released (firewall or similar)
 
 {{< img src="images/image-14.png" alt="Screenshot: Test connection via Powershell" >}}
@@ -99,7 +101,6 @@ Proceed as follows (see screenshots):
 9. The backup agent is then installed, which takes several minutes
 
 {{< img src="images/image-19.png" alt="Screenshot: Backup Agent is being installed" >}}
-
 
 ## Step 3: Create backup job/backup policy
 
@@ -125,7 +126,7 @@ Server Features: Parallel disk processing, Retention based on Restore Points, Co
 
 {{< img src="images/image-24.png" alt="Screenshot: Backup mode selected" >}}
 
-6. If File Level has been selected, you can define the files more precisely in this mask. 
+6. If File Level has been selected, you can define the files more precisely in this mask.
 
 {{< img src="images/image-25.png" alt="Screenshot: Files - Define file more precisely" >}}
 
@@ -143,9 +144,9 @@ Server Features: Parallel disk processing, Retention based on Restore Points, Co
 
 Only use the back part of the plusbackup account (the whole user is only necessary in the WEB Gui)
 
-So e.g. account is 123456\kd123456 
-    
-Then only enter kd123456 here 
+So e.g. account is 123456\kd123456
+
+Then only enter kd123456 here
 
 {{< img src="images/image-29.png" alt="Screenshot: Enter example account + password" >}}
 
@@ -164,7 +165,6 @@ Then only enter kd123456 here
 12. Further detailed configurations can be set under "Advanced Settings"
 
 {{< img src="images/image-33.png" alt="Screenshot: Wizard window Advanced Setting" >}}
-
 
 {{% alert title="Notice" %}}
 IMPORTANT - under Advanced Settings → Storage the optimization "Local target" (large blocks) should be selected.
@@ -188,8 +188,6 @@ The backup is either started with the wizard or the job must then be enabled and
 
 {{< img src="images/image-38.png" alt="Screenshot: Start backup job manually" >}}
 
-
-
 14. When starting the backup job, you can see that the backup job has started both in the Web GUI and locally via the agent:
 
 {{< img src="images/image-39.png" alt="Screenshot: running and completed backup jobs" >}}
@@ -199,7 +197,7 @@ The backup is either started with the wizard or the job must then be enabled and
 {{< img src="images/image-41.png" alt="Screenshot: Status and restore point details" >}}
 
 After the backup is completed, you can see the last backup with timecode in both the client and the WEB GUI
-    
+
 {{< img src="images/image-42.png" alt="Screenshot: Backup status done" >}}
 
 ## Restore:
@@ -207,6 +205,7 @@ After the backup is completed, you can see the last backup with timecode in both
 A restore can be initiated from the client (with the Veeam agent) or from the plusbackup portal.
 
 **A - Agent recovery**
+
 1. Call up File Level Restore (for individual files) or Volume Restore from the client:
 
 {{< img src="images/image-43.png" alt="Screenshot: File Level Restore and Volume Restore" >}}
@@ -222,13 +221,12 @@ A restore can be initiated from the client (with the Veeam agent) or from the pl
 {{< img src="images/image-47.png" alt="Screenshot:  Restore Button" >}}
 
 Restore - Restore/overwrite to the same location with the same name
-    
+
 Copy To - Restore to a different name or location
-    
+
 {{< img src="images/image-48.png" alt="Screenshot: Restoring files to NB-61239" >}}
 
 {{< img src="images/image-49.png" alt="Screenshot:  Downloaded backup document" >}}
-
 
 **B - plusserver portal recovery**
 
@@ -252,12 +250,12 @@ Copy To - Restore to a different name or location
 
 4. In the "Restore List" menu item, decide whether the elements should be downloaded, the existing ones overwritten or restored to a different location or under a different name.
 
-{{< img src="images/image-56.png" alt="Screenshot: Backupfile.txt selected" >}}    
+{{< img src="images/image-56.png" alt="Screenshot: Backupfile.txt selected" >}}
 
 {{< img src="images/image-57.png" alt="Screenshot: Restore Button - Keep or Overwrit" >}}
 
 Download - Download locally
 
 Keep - Restore with a different name or location
-    
+
 Overwrite - Restore/overwrite to the same location with the same name

@@ -13,6 +13,7 @@ These example standard groups serve as a starting point and can be adapted to th
 {{% /alert %}}
 
 ### Group with access to specific Buckets
+
 ```json
 {
   "Version": "2012-10-17",
@@ -32,6 +33,7 @@ These example standard groups serve as a starting point and can be adapted to th
   ]
 }
 ```
+
 ### Group with read-only access to specific Buckets
 
 ```json

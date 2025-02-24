@@ -49,6 +49,7 @@ Ab Veeam Backup & Replication 11a ist die Berechtigung **"ListAllMyBuckets"** ni
     ]
 }
 ```
+
 **Ersetzen Sie dabei "yourbucketname" durch den tatsächlichen Namen Ihres Buckets. Beachten Sie, dass die Berechtigung "ListAllMyBuckets" ab Veeam Backup & Replication 11a nicht mehr erforderlich ist, wenn Sie den Bucket-Namen manuell im Wizard angeben.**
 
 ### Immutable Buckets
