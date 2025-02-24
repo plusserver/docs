@@ -16,7 +16,7 @@ Vor der Durchführung dieser Dokumentation stellen Sie bitte sicher, dass die rc
 
 In diesem Schritt erfahren Sie, wie Sie das Migrationsskript auf einem Server verwenden, um die automatisierte Datenübertragung zwischen verschiedenen Cloud-Speicherdiensten durchzuführen.
 
-### Vorbereitung:
+### Vorbereitung
 
 **Skript herunterladen:** Laden Sie das Migrationsskript auf den Server herunter, auf dem Sie die Datenübertragung durchführen möchten.
 
@@ -41,7 +41,7 @@ Im Idealfall nennen Sie dieses buckets.csv. Sollten Sie einen anderen Namen wäh
 
 4. **Optionale Parameter:**
    Das Skript unterstützt auch optionale Parameter zur Anpassung der Datenübertragung:
-   _ -d oder \--delimiter: Legt das Trennzeichen für die CSV-Datei fest. Standardmäßig wird , verwendet.
+   _-d oder \--delimiter: Legt das Trennzeichen für die CSV-Datei fest. Standardmäßig wird , verwendet.
    _ \--delete: Verwendet die rclone sync-Operation. Wird das Skript mit der --delete-Option verwendet, so werden im Destination Bucket Objekte, welche in der Source gelöscht wurden ebenfalls gelöscht.
 
 **Beispiel:**

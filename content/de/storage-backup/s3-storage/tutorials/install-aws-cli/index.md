@@ -18,7 +18,7 @@ Bevor Sie mit der Installation beginnen, stellen Sie sicher, dass Ihr System die
 
 Folgen Sie diesen Schritten, um das AWS CLI auf Ihrem System zu installieren:
 
-#### Windows:
+#### Windows
 
 a. Besuchen Sie die offizielle AWS CLI Installationsseite: [https://aws.amazon.com/cli/](https://aws.amazon.com/cli/)
 
@@ -28,7 +28,7 @@ c. Befolgen Sie die Anweisungen im Installationsprogramm für Windows.
 
 d. Öffnen Sie nach der Installation die Eingabeaufforderung und geben Sie den Befehl `aws --version` ein, um sicherzustellen, dass die Installation erfolgreich war.
 
-#### macOS:
+#### macOS
 
 a. Öffnen Sie das Terminal.
 
@@ -36,7 +36,7 @@ b. Verwenden Sie den Paketmanager "Homebrew", um das AWS CLI zu installieren, in
 
 c. Überprüfen Sie die Installation, indem Sie den Befehl `aws --version` ausführen.
 
-#### Linux:
+#### Linux
 
 a. Öffnen Sie das Terminal.
 
@@ -63,7 +63,7 @@ Herzlichen Glückwunsch! Sie haben erfolgreich die AWS CLI installiert und konfi
 
 {{% alert title="Endpunkt Konfiguration" %}}
 
-Die AWS CLI verwendet als Standard den Endpunkt "http://s3.amazonaws.com". Diesen können Sie ändern, indem Sie die Variable im Konfigurationsfile der AWS CLI anpassen. Je nach Betriebssystem befindet sich diese an einem anderen Ort (z.B. Windows: %USERPROFILES%\.aws\config sowie das credential File).
+Die AWS CLI verwendet als Standard den Endpunkt "<http://s3.amazonaws.com>". Diesen können Sie ändern, indem Sie die Variable im Konfigurationsfile der AWS CLI anpassen. Je nach Betriebssystem befindet sich diese an einem anderen Ort (z.B. Windows: %USERPROFILES%\.aws\config sowie das credential File).
 
 **Beispielkonfiguration**
 
