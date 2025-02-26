@@ -12,8 +12,8 @@ Sie haben die Möglichkeit, Identity Federation zu konfigurieren, wenn Sie Grupp
 
 {{< img src="images/image-1.png" alt="LoginScreen" >}}
 
-- Öffnen Sie Ihren Webbrowser und besuchen Sie die folgende Webseite: [https://s3-portal.psmanaged.com:9443/](https://s3-portal.psmanaged.com:9443/)
-- Verwenden Sie die Ihnen bereitgestellten Benutzerdaten (diese können sie im plusserver Kundenportal: [https://customerservice.plusserver.com/](https://customerservice.plusserver.com/) unter “Verträge und Abrechnung” → "S3 Vertrag auswählen" → "Zugangsdaten" → “Anmeldeinformationen anzeigen” finden), um sich anzumelden. Der Benutzername lautet "root". Bitte verwenden Sie das Ihnen bekannte Passwort. Hier finden Sie zudem die Account ID.
+-   Öffnen Sie Ihren Webbrowser und besuchen Sie die folgende Webseite: [https://s3-portal.psmanaged.com:9443/](https://s3-portal.psmanaged.com:9443/)
+-   Verwenden Sie die Ihnen bereitgestellten Benutzerdaten (diese können sie im plusserver Kundenportal: [https://customerservice.plusserver.com/](https://customerservice.plusserver.com/) unter “Verträge und Abrechnung” → "S3 Vertrag auswählen" → "Zugangsdaten" → “Anmeldeinformationen anzeigen” finden), um sich anzumelden. Der Benutzername lautet "root". Bitte verwenden Sie das Ihnen bekannte Passwort. Hier finden Sie zudem die Account ID.
 
 ### Schritt 2: Richten Sie die Identity Federation ein
 
@@ -25,13 +25,13 @@ Klicken Sie auf der linken Seite unter “ACCESS MANAGEMENT” auf "Identity Fed
 
 Um Ihren Benutzern die angemessenen Berechtigungen zu erteilen, müssen Sie zunächst eine Gruppe erstellen. Befolgen Sie dazu die folgenden Schritte:
 
-- Klicken Sie auf der linken Seite auf "Gruppen" (Groups).
-- Wählen Sie dann "Neue Gruppe erstellen" (Create Group) aus.
-- In der Gruppenerstellungsoberfläche wählen Sie den Reiter "Föderierte Gruppe" (Federated Group) aus.
-- Vergeben Sie einen eindeutigen Namen (Unique Name) für die Gruppe. Dieser Name muss entsprechend der Identitätsquelle festgelegt werden. Verwenden Sie dabei bitte die folgenden Richtlinien:
-    - Active Directory: Verwenden Sie das Attribut "sAMAccountName".
-    - OpenLDAP: Verwenden Sie den "CN" (Common Name).
-    - Andere LDAP-Server: Ermitteln Sie den geeigneten Wert für den eindeutigen Namen, der dem verwendeten LDAP-Server entspricht.
+-   Klicken Sie auf der linken Seite auf "Gruppen" (Groups).
+-   Wählen Sie dann "Neue Gruppe erstellen" (Create Group) aus.
+-   In der Gruppenerstellungsoberfläche wählen Sie den Reiter "Föderierte Gruppe" (Federated Group) aus.
+-   Vergeben Sie einen eindeutigen Namen (Unique Name) für die Gruppe. Dieser Name muss entsprechend der Identitätsquelle festgelegt werden. Verwenden Sie dabei bitte die folgenden Richtlinien:
+    -   Active Directory: Verwenden Sie das Attribut "sAMAccountName".
+    -   OpenLDAP: Verwenden Sie den "CN" (Common Name).
+    -   Andere LDAP-Server: Ermitteln Sie den geeigneten Wert für den eindeutigen Namen, der dem verwendeten LDAP-Server entspricht.
 
 Indem Sie diese Schritte befolgen, legen Sie eine Identity Federation Gruppe fest, die von Ihrer Identity Federation abgeleitet ist. Diese Gruppe wird als zentraler Mechanismus dienen, um Benutzern die entsprechenden Zugriffsberechtigungen auf Ihre Ressourcen zuzuweisen.
 
@@ -47,34 +47,34 @@ Sie möchten nur einen User für ein Bucket zulassen. Folgende Policy würde daf
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Id": "UserBucketPolicy",
-  "Statement": [
-    {
-      "Sid": "AllowUserAccess",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
-      },
-      "Action": "s3:*",
-      "Resource": [
-        "arn:aws:s3:::BUCKET_NAME",
-        "arn:aws:s3:::BUCKET_NAME/*"
-      ]
-    },
-    {
-      "Sid": "DenyOtherAccess",
-      "Effect": "Deny",
-      "NotPrincipal": {
-        "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
-      },
-      "Action": "s3:*",
-      "Resource": [
-        "arn:aws:s3:::BUCKET_NAME",
-        "arn:aws:s3:::BUCKET_NAME/*"
-      ]
-    }
-  ]
+    "Version": "2012-10-17",
+    "Id": "UserBucketPolicy",
+    "Statement": [
+        {
+            "Sid": "AllowUserAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::BUCKET_NAME",
+                "arn:aws:s3:::BUCKET_NAME/*"
+            ]
+        },
+        {
+            "Sid": "DenyOtherAccess",
+            "Effect": "Deny",
+            "NotPrincipal": {
+                "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::BUCKET_NAME",
+                "arn:aws:s3:::BUCKET_NAME/*"
+            ]
+        }
+    ]
 }
 ```
 

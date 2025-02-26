@@ -18,10 +18,10 @@ aws s3api put-object --bucket <bucketname> --key <object-key> --body <local-file
 
 Explanation of variables:
 
-- \<bucketname>: The name of the bucket where you want to upload the object.
-- \<object-key>: The desired location and name of the object in the bucket.
-- \<local-file-path>: The path and name of the local file to be uploaded.
-- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+-   \<bucketname>: The name of the bucket where you want to upload the object.
+-   \<object-key>: The desired location and name of the object in the bucket.
+-   \<local-file-path>: The path and name of the local file to be uploaded.
+-   \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -39,9 +39,9 @@ aws s3 presign s3://<bucketname>/<object-key> --endpoint-url=https://<endpoint-u
 
 Explanation of variables:
 
-- \<bucketname>: The name of the bucket where the object is located.
-- \<object-key>: The path and name of the object in the bucket.
-- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+-   \<bucketname>: The name of the bucket where the object is located.
+-   \<object-key>: The path and name of the object in the bucket.
+-   \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -60,6 +60,6 @@ aws s3 presign s3://<bucketname>/<objekt-key> --expires-in 259200 --endpoint-url
 
 Explanation:
 
-    --expires-in 259200: Sets the validity period to 3 days (3 days * 24 hours/day * 60 minutes/hour * 60 seconds/minute).
+--expires-in 259200: Sets the validity period to 3 days (3 days \* 24 hours/day \* 60 minutes/hour \* 60 seconds/minute).
 
 Default is 3600 seconds. Maximum is 604800 seconds.

@@ -22,7 +22,7 @@ To create a bucket, use the following command:
 aws s3api create-bucket --bucket <bucketname> --endpoint-url=https://<endpoint-url> --region <region> --create-bucket-configuration LocationConstraint=<region>
 ```
 
-Replace <bucketname> with the desired name for your bucket and <endpoint-url> with the corresponding endpoint. For example:
+Replace `<bucketname>` with the desired name for your bucket and `<endpoint-url>` with the corresponding endpoint. For example:
 
 ```bash
 aws s3api create-bucket --bucket mynewbucket --endpoint-url=https://s3.de-west-1.psmanaged.com --region de-west-1 --create-bucket-configuration LocationConstraint=de-west-1

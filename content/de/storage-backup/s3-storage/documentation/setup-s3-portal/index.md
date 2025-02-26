@@ -37,8 +37,8 @@ Bitte seien Sie vorsichtig beim Festlegen von Berechtigungen und stellen Sie sic
 
 ### Schritt 4: Anwenden der Gruppenberechtigungen für die S3 Schnittstelle
 
-- In diesem Beispiel verwenden wir den Punkt "Ransomware Mitigation". Dies ist eine Beispiel-Policy mit gewissen Rechten, welche als Grundlage dienen kann. Es ist wichtig zu betonen, dass diese Policy lediglich als Beispiel dient und Benutzern weitreichende Berechtigungen gewährt, welche ggf. nicht erwünscht sind.
-- Im nächsten Schritt können Sie User dieser Gruppe hinzufügen. Da wir den User allerdings erst in Schritt 5 anlegen, klicken Sie hier auf "Create group".
+-   In diesem Beispiel verwenden wir den Punkt "Ransomware Mitigation". Dies ist eine Beispiel-Policy mit gewissen Rechten, welche als Grundlage dienen kann. Es ist wichtig zu betonen, dass diese Policy lediglich als Beispiel dient und Benutzern weitreichende Berechtigungen gewährt, welche ggf. nicht erwünscht sind.
+-   Im nächsten Schritt können Sie User dieser Gruppe hinzufügen. Da wir den User allerdings erst in Schritt 5 anlegen, klicken Sie hier auf "Create group".
 
 Weitere Informationen zu den einzelnen AWS-Berechtigungen finden Sie in der offiziellen AWS-Dokumentation: [AWS User and role policy examples](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html).
 
@@ -62,21 +62,21 @@ Die Beispiel-Policy für Ransomware-Abwehr kann als Startpunkt dienen. Denken Si
 7. Auf der nächsten Eingabe-Maske können Sie die Gruppe auswählen, die Sie zuvor erstellt haben.
 8. Durch die Zuweisung dieser Gruppe erhält der Benutzer automatisch die zuvor definierten Berechtigungen, die Sie für diese Gruppe festgelegt haben. Klicken Sie zum Abschließen auf "Create user".
 
-{{< img src="images/image-6.png" alt="AddAnotherUser" >}}
+    {{< img src="images/image-6.png" alt="AddAnotherUser" >}}
 
 ### Schritt 6: Anmeldung des Benutzers
 
-- Melden Sie sich entweder mit den Anmeldedaten des neu erstellten Benutzers an oder verwenden Sie den root-Benutzer, um den Benutzer zu bearbeiten.
+-   Melden Sie sich entweder mit den Anmeldedaten des neu erstellten Benutzers an oder verwenden Sie den root-Benutzer, um den Benutzer zu bearbeiten.
 
 ### Schritt 7: Erzeugung eines Access Keys
 
-- Nach erfolgreicher Anmeldung haben Sie die Möglichkeit, einen Access Key zu erzeugen.
-- Ein Access Key ist eine Kombination aus einer Access Key ID und einem Secret Access Key. Diese Zugangsdaten benötigen Sie, um mit der AWS S3 Command Line Interface (CLI) oder anderen kompatiblen Tools auf Ihre Ressourcen zuzugreifen.
-- Wählen Sie auf der linken Seite unter "Storage (S3)" die Option "My access keys".
-- Klicken Sie nun auf den Button "Create Key", um einen neuen Access Key zu erstellen.
-- Auf der ersten Maske haben Sie die Möglichkeit, einen Endpunkt (Ablaufzeitpunkt) für den Access Key festzulegen. Dies bedeutet, dass der Access Key nach Ablauf dieser Zeit ungültig wird. Alternativ können Sie ihn auf "unlimited" setzen, um die Gültigkeit nicht zu beschränken.
-- Nach der Konfiguration werden Ihnen der Access Key und der Secret Access Key angezeigt. Der Secret Access Key wird nur einmalig angezeigt. Wir empfehlen dringend, den Secret Key sorgfältig abzuspeichern und vor unbefugtem Zugriff zu schützen.
-- Alternativ können Sie auch die Möglichkeit nutzen, die Zugangsdaten als Download im CSV-Format herunterzuladen. Dadurch können Sie die Zugangsdaten speichern und verwalten.
+-   Nach erfolgreicher Anmeldung haben Sie die Möglichkeit, einen Access Key zu erzeugen.
+-   Ein Access Key ist eine Kombination aus einer Access Key ID und einem Secret Access Key. Diese Zugangsdaten benötigen Sie, um mit der AWS S3 Command Line Interface (CLI) oder anderen kompatiblen Tools auf Ihre Ressourcen zuzugreifen.
+-   Wählen Sie auf der linken Seite unter "Storage (S3)" die Option "My access keys".
+-   Klicken Sie nun auf den Button "Create Key", um einen neuen Access Key zu erstellen.
+-   Auf der ersten Maske haben Sie die Möglichkeit, einen Endpunkt (Ablaufzeitpunkt) für den Access Key festzulegen. Dies bedeutet, dass der Access Key nach Ablauf dieser Zeit ungültig wird. Alternativ können Sie ihn auf "unlimited" setzen, um die Gültigkeit nicht zu beschränken.
+-   Nach der Konfiguration werden Ihnen der Access Key und der Secret Access Key angezeigt. Der Secret Access Key wird nur einmalig angezeigt. Wir empfehlen dringend, den Secret Key sorgfältig abzuspeichern und vor unbefugtem Zugriff zu schützen.
+-   Alternativ können Sie auch die Möglichkeit nutzen, die Zugangsdaten als Download im CSV-Format herunterzuladen. Dadurch können Sie die Zugangsdaten speichern und verwalten.
 
 {{% alert title="Achtung" color="warning" %}}
 Bitte seien Sie äußerst vorsichtig im Umgang mit den Zugangsdaten, insbesondere dem Secret Access Key. Diese Schlüssel sind entscheidend für den Zugriff auf Ihre Ressourcen und sollten mit größter Sorgfalt behandelt werden. Mit diesem neuen Access Key können Sie nun reibungslos auf Ihre S3-Ressourcen zugreifen.

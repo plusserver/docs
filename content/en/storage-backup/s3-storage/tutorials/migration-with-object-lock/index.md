@@ -71,10 +71,10 @@ mc retention clear ALIAS/BUCKET/PATH --version-id VERSIONID
 
 Replace:
 
-- **ALIAS** with your alias for the S3 service.
-- **BUCKET** with the name of the bucket where the object is located.
-- **PATH** with the path to the object in the bucket.
-- **VERSIONID** with the ID of the version of the object whose Object-Lock information you want to delete.
+-   **ALIAS** with your alias for the S3 service.
+-   **BUCKET** with the name of the bucket where the object is located.
+-   **PATH** with the path to the object in the bucket.
+-   **VERSIONID** with the ID of the version of the object whose Object-Lock information you want to delete.
 
 By executing this command, the Object-Lock information for the specified object and version will be deleted. Ensure you have the appropriate permissions and authorizations for this action, as deleting Object-Lock information in your S3 service may be restricted.
 
@@ -82,7 +82,7 @@ By executing this command, the Object-Lock information for the specified object 
 
 Download the migration script to your system. This script is used to migrate data from your source profile and source bucket to your destination profile and destination bucket.
 
-**migration_script.sh**
+#### migration_script.sh
 
 ```bash
 #!/bin/bash

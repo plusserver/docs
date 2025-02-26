@@ -73,10 +73,10 @@ mc retention clear ALIAS/BUCKET/PATH --version-id VERSIONID
 
 Hierbei ersetzen Sie:
 
-- **ALIAS** durch Ihren Alias für den S3-Service.
-- **BUCKET** durch den Namen des Buckets, in dem sich das Objekt befindet.
-- **PATH** durch den Pfad zum Objekt im Bucket.
-- **VERSIONID** durch die ID der Version des Objekts, dessen Object-Lock-Informationen Sie löschen möchten.
+-   **ALIAS** durch Ihren Alias für den S3-Service.
+-   **BUCKET** durch den Namen des Buckets, in dem sich das Objekt befindet.
+-   **PATH** durch den Pfad zum Objekt im Bucket.
+-   **VERSIONID** durch die ID der Version des Objekts, dessen Object-Lock-Informationen Sie löschen möchten.
 
 Durch die Ausführung dieses Befehls werden die Object-Lock-Informationen für das angegebene Objekt und die angegebene Version gelöscht. Stellen Sie sicher, dass Sie die entsprechenden Berechtigungen und Autorisierungen für diese Aktion haben, da das Löschen von Object-Lock-Informationen in Ihrem S3-Service möglicherweise eingeschränkt ist.
 
@@ -84,7 +84,7 @@ Durch die Ausführung dieses Befehls werden die Object-Lock-Informationen für d
 
 Laden Sie das Migrationsskript auf Ihr System herunter. Dieses Skript wird verwendet, um Daten von Ihrem Quellprofil und Quellbucket zu Ihrem Zielprofil und Zielbucket zu migrieren.
 
-**migration_skript.sh**
+#### migration_skript.sh
 
 ```bash
 
