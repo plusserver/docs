@@ -12,7 +12,7 @@ In this section, we will show you how to install the AWS Command Line Interface 
 
 Before starting the installation, ensure that your system meets the necessary requirements:
 
-- Operating System: The AWS CLI is available on various operating systems such as Windows, macOS, and Linux.
+-   Operating System: The AWS CLI is available on various operating systems such as Windows, macOS, and Linux.
 
 ### Step 2: Installing AWS CLI
 
@@ -52,10 +52,10 @@ For more information, visit: [https://aws.amazon.com/cli/](https://aws.amazon.co
 
 After installation, you need to configure the AWS CLI with your credentials to access your plusserver S3 account:
 
-- Open the terminal or command prompt.
-- Enter the command `aws configure`.
-- Follow the instructions to enter your credentials, including Access Key, Secret Access Key, Region (e.g., de-west-1 for Cologne or de-north-2 for Hamburg), and output format (e.g., json).
-- After successful configuration, you can use the AWS CLI to interact with your plusserver S3 account.
+-   Open the terminal or command prompt.
+-   Enter the command `aws configure`.
+-   Follow the instructions to enter your credentials, including Access Key, Secret Access Key, Region (e.g., de-west-1 for Cologne or de-north-2 for Hamburg), and output format (e.g., json).
+-   After successful configuration, you can use the AWS CLI to interact with your plusserver S3 account.
 
 Congratulations! You have successfully installed and configured the AWS CLI to communicate with your plusserver S3 account. Remember that you can use any other S3-compatible tool to access your plusserver S3 resources. In the following sections, we will show you how to perform basic actions such as uploading objects.
 
@@ -63,7 +63,7 @@ Congratulations! You have successfully installed and configured the AWS CLI to c
 
 The AWS CLI uses "<http://s3.amazonaws.com>" as the default endpoint. You can change this by modifying the variable in the AWS CLI configuration file. Depending on the operating system, this file is located in a different location (e.g., Windows: %USERPROFILES%\.aws\config, as well as the credential file).
 
-**Example Configuration**
+#### Example Configuration
 
 File: config
 

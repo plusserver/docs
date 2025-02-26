@@ -6,7 +6,7 @@ weight: 60
 date: "2024-02-07"
 ---
 
-# Table of Contents
+## Table of Contents
 
 1. [Object Lock with Versioning and Different Retention Policies](#object-lock-with-versioning-and-different-retention-policies)
 2. [Automatically Apply Retention to All Objects in a Bucket](#automatically-apply-retention-to-all-objects-in-a-bucket)
@@ -26,10 +26,10 @@ aws s3 cp <local-file-path> s3://<bucket-name>/<destination-file-path> --endpoin
 
 Explanation of variables:
 
-- \<local-file-path>: The path to the file on your computer.
-- \<bucket-name>: Your bucket's name.
-- \<destination-file-path>: The desired location and name of the object in the bucket.
-- \<endpoint>: The corresponding endpoint for your plusserver S3 service.
+-   \<local-file-path>: The path to the file on your computer.
+-   \<bucket-name>: Your bucket's name.
+-   \<destination-file-path>: The desired location and name of the object in the bucket.
+-   \<endpoint>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -47,11 +47,11 @@ aws s3api put-object-retention --bucket <bucket-name> --key <destination-file-pa
 
 Explanation of variables:
 
-- \<bucket-name>: The bucket's name.
-- \<destination-file-path>: The path of the object in the bucket.
-- \<version-id>: The version ID of the specific object version.
-- \<retention-mode>: The desired Object Lock mode: Governance/Compliance.
-- \<timestamp>: The date and time until which the object should be locked.
+-   \<bucket-name>: The bucket's name.
+-   \<destination-file-path>: The path of the object in the bucket.
+-   \<version-id>: The version ID of the specific object version.
+-   \<retention-mode>: The desired Object Lock mode: Governance/Compliance.
+-   \<timestamp>: The date and time until which the object should be locked.
 
 **Example:**
 
@@ -109,10 +109,10 @@ aws s3api put-object-lock-configuration --bucket <bucket-name> --object-lock-con
 
 Explanation of variables:
 
-- \<bucket-name>: The bucket's name for which you want to enable default Object Lock retention.
-- \<retention-mode>: The desired retention mode (GOVERNANCE or COMPLIANCE) to be applied as a default to all uploaded objects.
-- \<days>: The number of days for which the retention should be set by default.
-- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+-   \<bucket-name>: The bucket's name for which you want to enable default Object Lock retention.
+-   \<retention-mode>: The desired retention mode (GOVERNANCE or COMPLIANCE) to be applied as a default to all uploaded objects.
+-   \<days>: The number of days for which the retention should be set by default.
+-   \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -123,7 +123,7 @@ aws s3api put-object-lock-configuration --bucket mylockedbucket --object-lock-co
 Executing this command sets a default Object Lock retention that will be applied to all newly uploaded objects in this bucket. Objects are automatically protected with the specified retention upon upload. In this example, objects would be protected with a Governance Object Lock for 1 day.
 
 {{% alert title="Info" %}}
-Please make sure to adjust the values for <bucket-name>, <days>, and <mode> according to your requirements. The default retention policy will be applied to all objects in the bucket that do not already have an individual retention.
+Please make sure to adjust the values for `<bucket-name>`, `<days>`, and `<mode>` according to your requirements. The default retention policy will be applied to all objects in the bucket that do not already have an individual retention.
 {{% /alert %}}
 
 ### Step 2: Retrieve the Bucket Rule for Object Lock Retention
@@ -136,8 +136,8 @@ aws s3api get-object-lock-configuration --bucket <bucket-name> --endpoint-url=ht
 
 Explanation of variables:
 
-- \<bucket-name>: The name of the bucket for which you want to retrieve the bucket rule.
-- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+-   \<bucket-name>: The name of the bucket for which you want to retrieve the bucket rule.
+-   \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -171,10 +171,10 @@ aws s3api put-object --bucket <bucket-name> --key <destination-file-path> --body
 
 Explanation of variables:
 
-- \<bucket-name>: The name of the bucket where you want to upload the object.
-- \<destination-file-path>: The desired location and name of the object in the bucket.
-- \<local-file-path>: The path and name of the local file to be uploaded.
-- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+-   \<bucket-name>: The name of the bucket where you want to upload the object.
+-   \<destination-file-path>: The desired location and name of the object in the bucket.
+-   \<local-file-path>: The path and name of the local file to be uploaded.
+-   \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -192,9 +192,9 @@ aws s3api get-object-retention --bucket <bucket-name> --key <destination-file-pa
 
 Explanation of variables:
 
-- \<bucket-name>: The name of the bucket.
-- \<destination-file-path>: The path of the object in the bucket.
-- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+-   \<bucket-name>: The name of the bucket.
+-   \<destination-file-path>: The path of the object in the bucket.
+-   \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -218,10 +218,10 @@ aws s3api put-object --bucket <bucket-name> --key <object-key> --body <local-fil
 
 Explanation of variables:
 
-- \<bucket-name>: The name of the bucket where you want to upload the object.
-- \<object-key>: The desired location and name of the object in the bucket.
-- \<local-file-path>: The path and name of the local file to be uploaded.
-- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+-   \<bucket-name>: The name of the bucket where you want to upload the object.
+-   \<object-key>: The desired location and name of the object in the bucket.
+-   \<local-file-path>: The path and name of the local file to be uploaded.
+-   \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -239,9 +239,9 @@ aws s3api get-object-retention --bucket <bucket-name> --key <object-key> --endpo
 
 Explanation of variables:
 
-- \<bucket-name>: The name of the bucket where the object is located.
-- \<object-key>: The path and name of the object in the bucket.
-- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+-   \<bucket-name>: The name of the bucket where the object is located.
+-   \<object-key>: The path and name of the object in the bucket.
+-   \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -270,10 +270,10 @@ aws s3api put-object-retention --bucket <bucket-name> --key <object-key> --reten
 
 Explanation of variables:
 
-- \<bucket-name>: The name of the bucket where the object is located.
-- \<object-key>: The path and name of the object in the bucket.
-- \<new-date>: The new date and time until which the retention should be extended.
-- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+-   \<bucket-name>: The name of the bucket where the object is located.
+-   \<object-key>: The path and name of the object in the bucket.
+-   \<new-date>: The new date and time until which the retention should be extended.
+-   \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 
@@ -291,9 +291,9 @@ aws s3api get-object-retention --bucket <bucket-name> --key <object-key> --endpo
 
 Explanation of variables:
 
-- \<bucket-name>: The name of the bucket where the object is located.
-- \<object-key>: The path and name of the object in the bucket.
-- \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
+-   \<bucket-name>: The name of the bucket where the object is located.
+-   \<object-key>: The path and name of the object in the bucket.
+-   \<endpoint-url>: The corresponding endpoint for your plusserver S3 service.
 
 **Example:**
 

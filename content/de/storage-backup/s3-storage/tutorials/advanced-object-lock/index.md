@@ -6,7 +6,7 @@ weight: 60
 date: "2024-02-07"
 ---
 
-# Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 1. [Object-Lock mit Versioning und unterschiedlichen Retention-Richtlinien](#object-lock-mit-versioning-und-unterschiedlichen-retention-richtlinien)
 2. [Standardmäßig alle Objekte in einem Bucket mit einer Retention versehen](#standardmäßig-alle-objekte-in-einem-bucket-mit-einer-retention-versehen)
@@ -26,10 +26,10 @@ aws s3 cp <lokaler-dateipfad> s3://<bucketname>/<ziel-dateipfad> --endpoint-url=
 
 Erklärung der Variablen:
 
-- \<lokaler-dateipfad>: Der Pfad zur Datei auf Ihrem Computer.
-- \<bucketname>: Der Name Ihres Buckets.
-- \<ziel-dateipfad>: Der gewünschte Speicherort und Name des Objekts im Bucket.
-- \<endpoint>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<lokaler-dateipfad>: Der Pfad zur Datei auf Ihrem Computer.
+-   \<bucketname>: Der Name Ihres Buckets.
+-   \<ziel-dateipfad>: Der gewünschte Speicherort und Name des Objekts im Bucket.
+-   \<endpoint>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -47,11 +47,11 @@ aws s3api put-object-retention --bucket <bucketname> --key <ziel-dateipfad> --ve
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets.
-- \<ziel-dateipfad>: Der Pfad des Objekts im Bucket.
-- \<versions-id>: Die Versions-ID der spezifischen Version des Objekts.
-- \<retention-Modus>: Der gewünschte Object-Lock Mode: Governance/Compliant
-- \<zeitstempel>: Das Datum und die Uhrzeit, bis zu der das Objekt gesperrt sein soll.
+-   \<bucketname>: Der Name des Buckets.
+-   \<ziel-dateipfad>: Der Pfad des Objekts im Bucket.
+-   \<versions-id>: Die Versions-ID der spezifischen Version des Objekts.
+-   \<retention-Modus>: Der gewünschte Object-Lock Mode: Governance/Compliant
+-   \<zeitstempel>: Das Datum und die Uhrzeit, bis zu der das Objekt gesperrt sein soll.
 
 **Beispiel:**
 
@@ -108,10 +108,10 @@ aws s3api put-object-lock-configuration --bucket <bucketname> --object-lock-conf
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets, für den Sie die standardmäßige Object Lock-Retention aktivieren möchten.
-- \<retention-modus>: Der gewünschte Retention-Modus (GOVERNANCE oder COMPLIANCE), der für alle hochgeladenen Objekte standardmäßig angewendet werden soll.
-- \<tage>: Die Anzahl der Tage, für die die Retention standardmäßig festgelegt werden soll.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets, für den Sie die standardmäßige Object Lock-Retention aktivieren möchten.
+-   \<retention-modus>: Der gewünschte Retention-Modus (GOVERNANCE oder COMPLIANCE), der für alle hochgeladenen Objekte standardmäßig angewendet werden soll.
+-   \<tage>: Die Anzahl der Tage, für die die Retention standardmäßig festgelegt werden soll.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -135,8 +135,8 @@ aws s3api get-object-lock-configuration --bucket <bucketname> --endpoint-url=htt
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets, für den Sie die Bucket-Regel auslesen möchten.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets, für den Sie die Bucket-Regel auslesen möchten.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -170,10 +170,10 @@ aws s3api put-object --bucket <bucketname> --key <ziel-dateipfad> --body <lokale
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets, in den Sie das Objekt hochladen möchten.
-- \<ziel-dateipfad>: Der gewünschte Speicherort und Name des Objekts im Bucket.
-- \<lokaler-dateipfad>: Der Pfad und Name der lokalen Datei, die hochgeladen werden soll.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets, in den Sie das Objekt hochladen möchten.
+-   \<ziel-dateipfad>: Der gewünschte Speicherort und Name des Objekts im Bucket.
+-   \<lokaler-dateipfad>: Der Pfad und Name der lokalen Datei, die hochgeladen werden soll.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -191,9 +191,9 @@ aws s3api get-object-retention --bucket <bucketname> --key <ziel-dateipfad> --en
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets.
-- \<ziel-dateipfad>: Der Pfad des Objekts im Bucket.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets.
+-   \<ziel-dateipfad>: Der Pfad des Objekts im Bucket.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -217,10 +217,10 @@ aws s3api put-object --bucket <bucketname> --key <objekt-key> --body <lokaler-da
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets, in den Sie das Objekt hochladen möchten.
-- \<objekt-key>: Der gewünschte Speicherort und Name des Objekts im Bucket.
-- \<lokaler-dateipfad>: Der Pfad und Name der lokalen Datei, die hochgeladen werden soll.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets, in den Sie das Objekt hochladen möchten.
+-   \<objekt-key>: Der gewünschte Speicherort und Name des Objekts im Bucket.
+-   \<lokaler-dateipfad>: Der Pfad und Name der lokalen Datei, die hochgeladen werden soll.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -238,9 +238,9 @@ aws s3api get-object-retention --bucket <bucketname> --key <objekt-key> --endpoi
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets, in dem sich das Objekt befindet.
-- \<objekt-key>: Der Pfad und Name des Objekts im Bucket.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets, in dem sich das Objekt befindet.
+-   \<objekt-key>: Der Pfad und Name des Objekts im Bucket.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -269,10 +269,10 @@ aws s3api put-object-retention --bucket <bucketname> --key <objekt-key> --retent
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets, in dem sich das Objekt befindet.
-- \<objekt-key>: Der Pfad und Name des Objekts im Bucket.
-- \<neues-datum>: Das neue Datum und die Uhrzeit, bis zu der die Retention verlängert werden soll.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets, in dem sich das Objekt befindet.
+-   \<objekt-key>: Der Pfad und Name des Objekts im Bucket.
+-   \<neues-datum>: Das neue Datum und die Uhrzeit, bis zu der die Retention verlängert werden soll.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -290,9 +290,9 @@ aws s3api get-object-retention --bucket <bucketname> --key <objekt-key> --endpoi
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets, in dem sich das Objekt befindet.
-- \<objekt-key>: Der Pfad und Name des Objekts im Bucket.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets, in dem sich das Objekt befindet.
+-   \<objekt-key>: Der Pfad und Name des Objekts im Bucket.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 

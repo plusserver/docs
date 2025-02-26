@@ -13,14 +13,14 @@ Voraussetzung für das Tutorial: die AWS Standard Credentials des Clients müsse
 
 Bitte laden sie sich das aktuelle s5cmd release: <https://github.com/peak/s5cmd/releases/latest>
 
-```
+```bash
 wget  https://github.com/peak/s5cmd/releases/download/v2.2.2/s5cmd_2.2.2_Linux-64bit.tar.gz
 tar -xvzf s5cmd_2.2.2_Linux-64bit.tar.gz
 ```
 
 bash:
 
-```
+```bash
 #!/bin/bash
 
 AWS_PROFILE="root"
@@ -44,7 +44,7 @@ echo "All buckets have been emptied and deleted."%
 
 Powershell:
 
-```
+```powershell
 $ENDPOINT_URL="https://s3.de-west-1.psmanaged.com"
 $CREDENTIALS_FILE=".\credentials"
 $S3PROFILE="root"

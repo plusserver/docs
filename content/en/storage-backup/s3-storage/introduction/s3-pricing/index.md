@@ -24,24 +24,24 @@ Here you will find the prices for the various service classes of our PlusServer 
 
 In this service class, the following storage policies apply:
 
-- Objects are generally stored with Erasure Coding to ensure efficient and durable storage.
-- For objects smaller than 1 MB, storage with replication is preferred over Erasure Coding.
-- A minimum billing size of 128 KB is applied, meaning even smaller objects will be invoiced at this size.
+-   Objects are generally stored with Erasure Coding to ensure efficient and durable storage.
+-   For objects smaller than 1 MB, storage with replication is preferred over Erasure Coding.
+-   A minimum billing size of 128 KB is applied, meaning even smaller objects will be invoiced at this size.
 
-### S3 Service Class "Mirror" (<bucketname>-mirr)
-
-For this service class, the following guidelines apply:
-
-- All objects in this bucket are mirrored to a different GEO location to provide additional redundancy. This means that a complete Erasure Coding object, for example, in Cologne, has a copy of the same object stored in Hamburg.
-- Objects smaller than 1 MB are stored with replication and also mirrored.
-- A minimum billing size of 128 KB is applied.
-
-### S3 Service Class "Replication" (<bucketname>-repl)
+### S3 Service Class "Mirror" (\<bucketname>-mirr)
 
 For this service class, the following guidelines apply:
 
-- All objects in this bucket are stored as replication between two GEO locations, such as between Cologne and Hamburg. A copy is kept in both Hamburg and Cologne.
-- A minimum billing size of 128 KB is applied.
+-   All objects in this bucket are mirrored to a different GEO location to provide additional redundancy. This means that a complete Erasure Coding object, for example, in Cologne, has a copy of the same object stored in Hamburg.
+-   Objects smaller than 1 MB are stored with replication and also mirrored.
+-   A minimum billing size of 128 KB is applied.
+
+### S3 Service Class "Replication" (\<bucketname>-repl)
+
+For this service class, the following guidelines apply:
+
+-   All objects in this bucket are stored as replication between two GEO locations, such as between Cologne and Hamburg. A copy is kept in both Hamburg and Cologne.
+-   A minimum billing size of 128 KB is applied.
 
 ### Additional Information for Storage Policies
 
