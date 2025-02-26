@@ -26,7 +26,7 @@ This cannot be changed. The encryption of the file is not affected by this. (The
 
 Example:
 
-```
+```bash
 openssl enc -aes-128-cbc -pass pass:secret -P
 
 salt=E9DBB6603C7B3D2A
@@ -44,7 +44,7 @@ Parameter `--body` stands for the path to a file.
 
 Example:
 
-```
+```bash
 aws s3api put-object --bucket <bucket> --key <file> --body "file" --sse-customer-algorithm AES256 --sse-customer-key 23832BAC16516152E560F933F261BF03 --endpoint-url https://s3.example.com --profile <profile>
 ```
 
@@ -54,7 +54,7 @@ If the customer key is not supplied, a 404 error warning is returned instead of 
 
 Example:
 
-```
+```bash
 aws s3api head-object --bucket <bucket> --key <file> --sse-customer-algorithm AES256 --sse-customer-key 23832BAC16516152E560F933F261BF03 --endpoint-url https://s3.example.com --profile <profile>
 
 
@@ -74,7 +74,7 @@ aws s3api head-object --bucket <bucket> --key <file> --sse-customer-algorithm AE
 
 Example:
 
-```
+```bash
 aws s3api get-object --bucket <bucket> --key <file> <file> --sse-customer-algorithm AES256 --sse-customer-key 23832BAC16516152E560F933F261BF03 --endpoint-url https://s3.example.com --profile <profile>
 ```
 
@@ -87,7 +87,7 @@ Please follow these instructions.
 
 Example:
 
-```
+```bash
 aws s3api put-object --bucket testbucket --key testfile --body "testfile" --server-side-encryption AES256 --endpoint-url https://de-2.s3.psmanaged.com --profile plusserver
 ```
 
@@ -95,6 +95,9 @@ aws s3api put-object --bucket testbucket --key testfile --body "testfile" --serv
 
 Example:
 
+```bash
+aws s3api head-object --bucket testbucket --key testfile --endpoint-url https://de-2.s3.psmanaged.com --profile plusserver
 ```
-aws s3api head-object --bucket testbucket --key testfile --endpoint-url https://de-2.s3.psmanaged.com --profile plusserver The following line should appear there: "ServerSideEncryption": "AES256"
-```
+
+The following line should appear there:  
+`"ServerSideEncryption": "AES256"`

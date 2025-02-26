@@ -16,7 +16,7 @@ Example youtube Video with configuration + migration:
 
 [Videolink](https://youtu.be/de5WQ8oGEfs?si=agUt4q7ZQKAS3gkh)
 
-[![](https://i.ytimg.com/vi/de5WQ8oGEfs/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBMgPyh_MA8=&rs=AOn4CLAZX6zx_jZM0mikGg7X_qOywXdJPQ)](https://youtu.be/de5WQ8oGEfs?si=agUt4q7ZQKAS3gkh)
+[![video thumbnail](https://i.ytimg.com/vi/de5WQ8oGEfs/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBMgPyh_MA8=&rs=AOn4CLAZX6zx_jZM0mikGg7X_qOywXdJPQ)](https://youtu.be/de5WQ8oGEfs?si=agUt4q7ZQKAS3gkh)
 
 ### Step 2: Configuring rclone via rclone Configuration Guide
 
@@ -136,11 +136,11 @@ endpoint> _
 
 Here is an overview of the service endpoint migration from our old S3 service to the new S3 service:
 
-| Region | Old S3 Service | New S3 Service |
-|-------------------------|----------------------------------------------|----------------------------------------------|
-| de-north-2 (Hamburg) | [https://de-2.s3.psmanaged.com](https://de-2.s3.psmanaged.com) | [https://s3.de-north-2.psmanaged.com](https://s3.de-north-2.psmanaged.com) |
-| de-west-1 (Cologne) | (not available) | [https://s3.de-west-1.psmanaged.com](https://s3.de-west-1.psmanaged.com) |
-| de-west-2 (Dusseldorf) | [https://de-4.s3.psmanaged.com](https://de-4.s3.psmanaged.com) | (Planned) |
+| Region                 | Old S3 Service                                                 | New S3 Service                                                             |
+| ---------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| de-north-2 (Hamburg)   | [https://de-2.s3.psmanaged.com](https://de-2.s3.psmanaged.com) | [https://s3.de-north-2.psmanaged.com](https://s3.de-north-2.psmanaged.com) |
+| de-west-1 (Cologne)    | (not available)                                                | [https://s3.de-west-1.psmanaged.com](https://s3.de-west-1.psmanaged.com)   |
+| de-west-2 (Dusseldorf) | [https://de-4.s3.psmanaged.com](https://de-4.s3.psmanaged.com) | (Planned)                                                                  |
 
 For detailed information on the new service endpoints, we recommend to read the updated [documentation.](/storage-backup/s3-storage/introduction/s3-regions/).
 

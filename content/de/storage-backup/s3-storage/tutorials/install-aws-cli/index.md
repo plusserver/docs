@@ -12,7 +12,7 @@ In diesem Abschnitt werden wir Ihnen zeigen, wie Sie das AWS Command Line Interf
 
 Bevor Sie mit der Installation beginnen, stellen Sie sicher, dass Ihr System die erforderlichen Voraussetzungen erfüllt:
 
-- Betriebssystem: Der AWS CLI ist auf verschiedenen Betriebssystemen wie Windows, macOS und Linux verfügbar.
+-   Betriebssystem: Der AWS CLI ist auf verschiedenen Betriebssystemen wie Windows, macOS und Linux verfügbar.
 
 ### Schritt 2: Installation des AWS CLI
 
@@ -54,10 +54,10 @@ Mehr Informationen finden Sie unter: [https://aws.amazon.com/cli/](https://aws.a
 
 Nach der Installation müssen Sie die AWS CLI mit Ihren Zugangsdaten konfigurieren, um auf Ihr plusserver S3-Konto zuzugreifen:
 
-- Öffnen Sie das Terminal oder die Eingabeaufforderung.
-- Geben Sie den Befehl `aws configure` ein.
-- Folgen Sie den Anweisungen, um Ihre Zugangsdaten einzugeben, einschließlich Access Key, Secret Access Key, Region (z.B. de-west-1 für Köln oder de-north-2 für Hamburg) und Ausgabeformat (z.B. json).
-- Nach erfolgreicher Konfiguration können Sie das AWS CLI verwenden, um mit Ihrem plusserver S3-Konto zu interagieren.
+-   Öffnen Sie das Terminal oder die Eingabeaufforderung.
+-   Geben Sie den Befehl `aws configure` ein.
+-   Folgen Sie den Anweisungen, um Ihre Zugangsdaten einzugeben, einschließlich Access Key, Secret Access Key, Region (z.B. de-west-1 für Köln oder de-north-2 für Hamburg) und Ausgabeformat (z.B. json).
+-   Nach erfolgreicher Konfiguration können Sie das AWS CLI verwenden, um mit Ihrem plusserver S3-Konto zu interagieren.
 
 Herzlichen Glückwunsch! Sie haben erfolgreich die AWS CLI installiert und konfiguriert, um mit Ihrem plusserver S3-Konto zu kommunizieren. Denken Sie daran, dass Sie jedes andere S3-kompatible Tool verwenden können, um auf Ihre plusserver-s3-Ressourcen zuzugreifen. In den folgenden Abschnitten werden wir Ihnen zeigen, wie Sie grundlegende Aktionen wie das Hochladen von Objekten ausführen können.
 
@@ -65,7 +65,7 @@ Herzlichen Glückwunsch! Sie haben erfolgreich die AWS CLI installiert und konfi
 
 Die AWS CLI verwendet als Standard den Endpunkt "<http://s3.amazonaws.com>". Diesen können Sie ändern, indem Sie die Variable im Konfigurationsfile der AWS CLI anpassen. Je nach Betriebssystem befindet sich diese an einem anderen Ort (z.B. Windows: %USERPROFILES%\.aws\config sowie das credential File).
 
-**Beispielkonfiguration**
+#### Beispielkonfiguration
 
 Datei: config
 
