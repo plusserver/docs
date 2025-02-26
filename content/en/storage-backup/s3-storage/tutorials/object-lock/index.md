@@ -18,23 +18,23 @@ The plusserver S3 service offers two modes of the Object Lock feature: Complianc
 
 #### Compliance Object Lock
 
-- Objects in Compliance mode cannot be deleted or modified as long as the retention period is active.
-- Once locked, objects cannot be deleted or modified during the specified retention period.
-- Users cannot independently delete Compliance-locked objects, providing an additional layer of protection for critical data.
+-   Objects in Compliance mode cannot be deleted or modified as long as the retention period is active.
+-   Once locked, objects cannot be deleted or modified during the specified retention period.
+-   Users cannot independently delete Compliance-locked objects, providing an additional layer of protection for critical data.
 
 #### Governance Object Lock
 
-- Objects in Governance mode cannot be deleted or modified as long as the retention period is active.
-- In Governance mode, certain user actions can be performed, which are typically not allowed in Compliance mode.
-- Users with the required permissions can delete locked objects in Governance mode, but an audit trail of such actions is retained.
+-   Objects in Governance mode cannot be deleted or modified as long as the retention period is active.
+-   In Governance mode, certain user actions can be performed, which are typically not allowed in Compliance mode.
+-   Users with the required permissions can delete locked objects in Governance mode, but an audit trail of such actions is retained.
 
 #### The following rights are associated with Governance Object Lock
 
-- `s3:BypassGovernanceRetention`: To bypass Governance retention for a locked object.
-- `s3:DeleteObjectVersion`: To delete a locked object in Governance mode.
-- `s3:DeleteObjectVersionTagging`: To delete tagging information of a version of a locked object.
-- `s3:PutObjectLegalHold`: To apply a legal hold on a specific version of a locked object.
-- `s3:PutObjectRetention`: To set the retention for a specific version of a locked object.
+-   `s3:BypassGovernanceRetention`: To bypass Governance retention for a locked object.
+-   `s3:DeleteObjectVersion`: To delete a locked object in Governance mode.
+-   `s3:DeleteObjectVersionTagging`: To delete tagging information of a version of a locked object.
+-   `s3:PutObjectLegalHold`: To apply a legal hold on a specific version of a locked object.
+-   `s3:PutObjectRetention`: To set the retention for a specific version of a locked object.
 
 Please note that these permissions grant powerful actions that can impact the integrity and immutability of data. Assign these permissions with caution and ensure that only trusted users have access to them. Additionally, consult with your data protection officers and consider implementing additional safeguards such as "Multiadmin-Verification" to prevent a single person from obtaining deletion rights.
 
@@ -59,13 +59,13 @@ Use the command `aws s3api put-object` to upload an object with Object Lock in G
 aws s3api put-object --bucket <bucketname> --key <destination-file-path> --body <local-file-path> --endpoint-url=https://<endpoint-url> --object-lock-mode GOVERNANCE --object-lock-retain-until-date <timestamp>
 ```
 
-- Replace \<bucketname>: Enter the name of the bucket where you want to upload the object.
-- Replace \<destination-file-path>: Specify the path and name under which the uploaded object will be stored in the bucket.
-- Replace \<local-file-path>: Specify the path and name of the local file to be uploaded.
-- Replace \<endpoint-url>: Provide the corresponding endpoint for your plusserver S3.
-- Replace \<timestamp>: Specify the date and time until which the object should be locked in Governance mode. Format YYYY-MM-DDTHH:MM:SSZ (Y = year, M = month, D = day, H = hour, M = minute, S = second)
+-   Replace \<bucketname>: Enter the name of the bucket where you want to upload the object.
+-   Replace \<destination-file-path>: Specify the path and name under which the uploaded object will be stored in the bucket.
+-   Replace \<local-file-path>: Specify the path and name of the local file to be uploaded.
+-   Replace \<endpoint-url>: Provide the corresponding endpoint for your plusserver S3.
+-   Replace \<timestamp>: Specify the date and time until which the object should be locked in Governance mode. Format YYYY-MM-DDTHH:MM:SSZ (Y = year, M = month, D = day, H = hour, M = minute, S = second)
 
-**Example**
+### Example
 
 ```bash
 aws s3api put-object --bucket mylockedbucket --key folder/myobject.pdf --body /path/to/myobject.pdf --endpoint-url=https://s3.de-west-1.psmanaged.com --object-lock-mode GOVERNANCE --object-lock-retain-until-date "2023-08-11T14:35:59Z"
@@ -79,11 +79,11 @@ Use the same command with "COMPLIANCE" to upload an object with Compliance mode:
 aws s3api put-object --bucket <bucketname> --key <destination-file-path> --body <local-file-path> --endpoint-url=https://<endpoint-url> --object-lock-mode COMPLIANCE --object-lock-retain-until-date <timestamp>
 ```
 
-- Replace \<bucketname>: Enter the name of the bucket where you want to upload the object.
-- Replace \<destination-file-path>: Specify the path and name under which the uploaded object will be stored in the bucket.
-- Replace \<local-file-path>: Specify the path and name of the local file to be uploaded.
-- Replace \<endpoint-url>: Provide the corresponding endpoint for your plusserver S3.
-- Replace \<timestamp>: Specify the date and time until which the object should be locked in Governance mode. Format YYYY-MM-DDTHH:MM:SSZ (Y = year, M = month, D = day, H = hour, M = minute, S = second)
+-   Replace \<bucketname>: Enter the name of the bucket where you want to upload the object.
+-   Replace \<destination-file-path>: Specify the path and name under which the uploaded object will be stored in the bucket.
+-   Replace \<local-file-path>: Specify the path and name of the local file to be uploaded.
+-   Replace \<endpoint-url>: Provide the corresponding endpoint for your plusserver S3.
+-   Replace \<timestamp>: Specify the date and time until which the object should be locked in Governance mode. Format YYYY-MM-DDTHH:MM:SSZ (Y = year, M = month, D = day, H = hour, M = minute, S = second)
 
 **Example:**
 
@@ -99,9 +99,9 @@ Use the command aws s3api get-object-retention to view information about the Obj
 aws s3api get-object-retention --bucket <bucketname> --key <destination-file-path> --endpoint-url=https://<endpoint>
 ```
 
-- Replace \<bucketname>: Enter the name of your bucket.
-- Replace \<destination-file-path>: Specify the path and name of the locked object.
-- Replace \<endpoint>: Provide the endpoint for your plusserver S3 service.
+-   Replace \<bucketname>: Enter the name of your bucket.
+-   Replace \<destination-file-path>: Specify the path and name of the locked object.
+-   Replace \<endpoint>: Provide the endpoint for your plusserver S3 service.
 
 Example outputs for Compliance and Governance modes:
 
@@ -109,8 +109,7 @@ Example outputs for Compliance and Governance modes:
 
 ```json
 {
-    "Retention":
-    {
+    "Retention": {
         "Mode": "COMPLIANCE",
         "RetainUntilDate": "2023-08-11T15:45:59+00:00"
     }
