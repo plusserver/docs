@@ -14,32 +14,32 @@ In comparison, our PlusServer S3 service has a default limitation of 1,000 bucke
 
 ## General features and restrictions
 
-- Maximum of 200 (GET/HEAD) RPOs and 200 (PUT/POST/DELETE) RPOs per tenant
-- Up to 100 million objects per bucket
-- Up to 5 TiB object size
-- 1MB minimum object size recommended (1,000,000 bytes = 1MB)
-- Maximum object size: 5 TB
-- Minimum part size for multipart upload: 5 MiB
-- Maximum part size for multipart upload: 5 GiB
-- Maximum number of parts for multipart uploads: 10,000
-- Bucket versioning per object version: 10,000
-- Maximum number of S3 access keys per user: 100
-- Maximum number of users or access keys in the entire cluster: unlimited
-- AWS S3 API compatible
-- Metadata can be stored for objects as key-value pairs (via S3 API)
-- Object lock support
-- Versioning support
+-   Maximum of 200 (GET/HEAD) RPOs and 200 (PUT/POST/DELETE) RPOs per tenant
+-   Up to 100 million objects per bucket
+-   Up to 5 TiB object size
+-   1MB minimum object size recommended (1,000,000 bytes = 1MB)
+-   Maximum object size: 5 TB
+-   Minimum part size for multipart upload: 5 MiB
+-   Maximum part size for multipart upload: 5 GiB
+-   Maximum number of parts for multipart uploads: 10,000
+-   Bucket versioning per object version: 10,000
+-   Maximum number of S3 access keys per user: 100
+-   Maximum number of users or access keys in the entire cluster: unlimited
+-   AWS S3 API compatible
+-   Metadata can be stored for objects as key-value pairs (via S3 API)
+-   Object lock support
+-   Versioning support
 
 ### Bucket-Namen Features und Beschränkungen
 
-- A bucket name must be between 3 (min) and 63 (max) characters long. The suffix (-mirr / -repl) must be deducted from this
-- a bucket name may only contain lowercase letters, numbers, dots (.) and hyphens
-- A bucket name must not contain the format of an IP address (e.g. 192.168.1.42)
-- If a bucket name ends with the suffix -mirr or -repl, a different class of service is used,
-  storage type and billing is used
-- A bucket name must be unique across the entire plusserver S3 service
-- A bucket name that is already in use by a customer cannot be used until
-  this bucket is deleted by the owner
+-   A bucket name must be between 3 (min) and 63 (max) characters long. The suffix (-mirr / -repl) must be deducted from this
+-   a bucket name may only contain lowercase letters, numbers, dots (.) and hyphens
+-   A bucket name must not contain the format of an IP address (e.g. 192.168.1.42)
+-   If a bucket name ends with the suffix -mirr or -repl, a different class of service is used,
+    storage type and billing is used
+-   A bucket name must be unique across the entire plusserver S3 service
+-   A bucket name that is already in use by a customer cannot be used until
+    this bucket is deleted by the owner
 
 These limitations are designed to ensure the performance and efficiency of our service while providing high flexibility for your use cases. Please consider these limitations when planning your configuration.
 
@@ -63,11 +63,11 @@ Workloads such as real-time databases, virtual machines, transaction-based appli
 
 Access to the S3 endpoint is via the Internet. In this process, bottlenecks may occur that can affect performance. Some examples of possible causes are:
 
-- Using multiple parallel threads can significantly improve performance, especially in backup software solutions that store backup data in S3 (e.g., Veeam).
-- The bottleneck may be the client's internet uplink.
-- The S3 client may not be optimally configured.
-- The S3 client software may not be suitable for the workload.
-- The wrong endpoint is being used.
+-   Using multiple parallel threads can significantly improve performance, especially in backup software solutions that store backup data in S3 (e.g., Veeam).
+-   The bottleneck may be the client's internet uplink.
+-   The S3 client may not be optimally configured.
+-   The S3 client software may not be suitable for the workload.
+-   The wrong endpoint is being used.
 
 Optimal configuration and selecting the right endpoint contribute to ensuring smooth and powerful use of our S3 service.
 
@@ -75,16 +75,16 @@ Optimal configuration and selecting the right endpoint contribute to ensuring sm
 
 ### Suitable Workloads for S3
 
-- Static Websites: Hosting static websites, such as HTML, CSS, and JavaScript, as S3 enables efficient content delivery for web content.
-- Data Archiving: Storing archive data and backups, as S3 offers cost-effective and permanent storage.
-- Big Data and Analytics: Storing large datasets used for big data analytics and data warehousing.
-- Content Delivery Network (CDN): Using S3 as a storage location for content distributed via a CDN to provide content quickly and efficiently worldwide.
-- Media and File Storage: Hosting multimedia files such as images, videos, and audio files for fast and reliable retrieval.
+-   Static Websites: Hosting static websites, such as HTML, CSS, and JavaScript, as S3 enables efficient content delivery for web content.
+-   Data Archiving: Storing archive data and backups, as S3 offers cost-effective and permanent storage.
+-   Big Data and Analytics: Storing large datasets used for big data analytics and data warehousing.
+-   Content Delivery Network (CDN): Using S3 as a storage location for content distributed via a CDN to provide content quickly and efficiently worldwide.
+-   Media and File Storage: Hosting multimedia files such as images, videos, and audio files for fast and reliable retrieval.
 
 ### Unsuitable Workloads for S3
 
-- Real-time Databases: S3 is object-based and not well-suited for applications that require real-time database access.
-- Applications with High Latency Sensitivity: Applications requiring extremely low latency (<25ms) may be affected by the fundamental latency of S3.
-- Virtual Machines: Storing virtual machines in S3 is not recommended.
-- Transaction-based Applications: Applications requiring many transactions or write accesses per second could be inefficient due to the fundamental structure of S3.
-- High IOPS Applications: Applications requiring a high number of input/output operations per second.
+-   Real-time Databases: S3 is object-based and not well-suited for applications that require real-time database access.
+-   Applications with High Latency Sensitivity: Applications requiring extremely low latency (<25ms) may be affected by the fundamental latency of S3.
+-   Virtual Machines: Storing virtual machines in S3 is not recommended.
+-   Transaction-based Applications: Applications requiring many transactions or write accesses per second could be inefficient due to the fundamental structure of S3.
+-   High IOPS Applications: Applications requiring a high number of input/output operations per second.

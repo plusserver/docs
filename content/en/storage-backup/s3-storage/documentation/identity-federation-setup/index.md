@@ -53,34 +53,34 @@ Here is an example of how you could create a policy for a bucket to grant access
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Id": "UserBucketPolicy",
-  "Statement": [
-    {
-      "Sid": "AllowUserAccess",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
-      },
-      "Action": "s3:*",
-      "Resource": [
-        "arn:aws:s3:::BUCKET_NAME",
-        "arn:aws:s3:::BUCKET_NAME/*"
-      ]
-    },
-    {
-      "Sid": "DenyOtherAccess",
-      "Effect": "Deny",
-      "NotPrincipal": {
-        "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
-      },
-      "Action": "s3:*",
-      "Resource": [
-        "arn:aws:s3:::BUCKET_NAME",
-        "arn:aws:s3:::BUCKET_NAME/*"
-      ]
-    }
-  ]
+    "Version": "2012-10-17",
+    "Id": "UserBucketPolicy",
+    "Statement": [
+        {
+            "Sid": "AllowUserAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::BUCKET_NAME",
+                "arn:aws:s3:::BUCKET_NAME/*"
+            ]
+        },
+        {
+            "Sid": "DenyOtherAccess",
+            "Effect": "Deny",
+            "NotPrincipal": {
+                "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::BUCKET_NAME",
+                "arn:aws:s3:::BUCKET_NAME/*"
+            ]
+        }
+    ]
 }
 ```
 

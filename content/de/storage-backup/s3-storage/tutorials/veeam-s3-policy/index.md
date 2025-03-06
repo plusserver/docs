@@ -40,10 +40,7 @@ Ab Veeam Backup & Replication 11a ist die Berechtigung **"ListAllMyBuckets"** ni
         },
         {
             "Effect": "Allow",
-            "Action": [
-                "s3:ListAllMyBuckets",
-                "s3:ListBucket"
-            ],
+            "Action": ["s3:ListAllMyBuckets", "s3:ListBucket"],
             "Resource": "arn:aws:s3:::*"
         }
     ]
@@ -87,10 +84,7 @@ Ab Veeam Backup & Replication 11a ist die Berechtigung **"ListAllMyBuckets"** ni
         },
         {
             "Effect": "Allow",
-            "Action": [
-                "s3:ListAllMyBuckets",
-                "s3:ListBucket"
-            ],
+            "Action": ["s3:ListAllMyBuckets", "s3:ListBucket"],
             "Resource": "arn:aws:s3:::*"
         }
     ]

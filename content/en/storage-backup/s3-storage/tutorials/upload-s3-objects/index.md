@@ -16,10 +16,10 @@ Use the `aws s3 cp` command to upload an object to a bucket:
 aws s3 cp <local-file-path> s3://<bucket-name>/<destination-file-path> --endpoint-url=https://<endpoint-url>
 ```
 
-- \<local-file-path>: Specify the path to the local file you want to upload.
-- \<bucket-name>: Provide the name of the target bucket.
-- \<destination-file-path>: Optional, sets the path in the bucket under which the file will be stored.
-- \<endpoint-url>: The corresponding endpoint, depending on your configuration.
+-   \<local-file-path>: Specify the path to the local file you want to upload.
+-   \<bucket-name>: Provide the name of the target bucket.
+-   \<destination-file-path>: Optional, sets the path in the bucket under which the file will be stored.
+-   \<endpoint-url>: The corresponding endpoint, depending on your configuration.
 
 **Example:**
 

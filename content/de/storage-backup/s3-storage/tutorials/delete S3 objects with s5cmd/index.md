@@ -6,12 +6,13 @@ weight: 30
 ---
 
 {{% alert title="Wichtig" color="warning" %}}
-Voraussetzung für das Tutorial: die AWS Standard Credentials des Clients müssen hinterlegt sein (# vi .aws/credentials).
+Voraussetzung für das Tutorial:  
+Die AWS Standard Credentials des Clients müssen hinterlegt sein (# vi .aws/credentials).
 
-{{< img src="images/image-1.png" alt="Credentials" >}}
+![Credentials](images/image-1.png)
 {{% /alert %}}
 
-Bitte laden sie sich das aktuelle s5cmd release: <https://github.com/peak/s5cmd/releases/latest>
+Bitte laden Sie sich das aktuelle s5cmd release: <https://github.com/peak/s5cmd/releases/latest>
 
 ```bash
 wget  https://github.com/peak/s5cmd/releases/download/v2.2.2/s5cmd_2.2.2_Linux-64bit.tar.gz

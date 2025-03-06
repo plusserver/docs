@@ -128,7 +128,6 @@ region> _
 Nun müssen noch die dementsprechenden Endpoints angegeben werden:
 
 ```bash
-
 Endpoint for S3 API.
 Required when using an S3 clone.
 Enter a value. Press Enter to leave empty.

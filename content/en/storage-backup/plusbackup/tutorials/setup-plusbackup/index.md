@@ -1,10 +1,32 @@
 ---
-title: "Setting up the Plusbackup"
-linkTitle: "Setting up the Plusbackup"
+title: "Setting up plusbackup"
+linkTitle: "Setting up plusbackup"
 type: "docs"
 weight: 20
 date: "2024-02-07"
 ---
+
+{{% alert title="Important" %}}
+For plusbackup to work, there are specific ports that need to be accessible.  
+Make sure your client - as well as its infrastructure - are configured accordingly!
+
+| Software              | Relevant Ports                             |       Official Docs        |
+| --------------------- | ------------------------------------------ | :------------------------: |
+| Veeam Agent (Windows) | 9395+, 6183+                               | [See here][agentports_win] |
+| Veeam Agent (Linux)   | 10002, 100006, 2500-3300, 10808            | [See here][agentports_nix] |
+| Veeam Agent (Mac)     | 10006, 10101, 2500-3300                    | [See here][agentports_mac] |
+| Cloud Gateway         | 6180                                       |                            |
+| plusbackup            | TCP 443 (Download information and updates) |                            |
+| plusbackup            | TCP 80 (Certification revocation lists)    |                            |
+
+[agentports_win]: https://helpcenter.veeam.com/docs/agentforwindows/userguide/ports.html?ver=60 "Veeam Agent Ports - Windows"
+[agentports_nix]: https://helpcenter.veeam.com/docs/agentforlinux/userguide/used_ports.html?ver=60 "Veeam Agent Ports - Linux"
+[agentports_mac]: https://helpcenter.veeam.com/docs/agentformac/userguide/used_ports.html?ver=20 "Veeam Agent Ports - MacOS"
+
+**Important regarding pluscloud open:**  
+If no MTU size has been specified in the instance to be backed up, the MTU is most likely set to 9000.  
+To enable a backup with plusbackup of this instance, the MTU size of the instance must be set to 1,500.
+{{% /alert %}}
 
 ## Step 1: Log into plusbackup
 
@@ -24,7 +46,7 @@ date: "2024-02-07"
 
     {{< img src="images/image-3.png" alt="Screenshot: Select operating system" >}}
 
-    - a wizard opens
+    A wizard opens.
 
     {{< img src="images/image-4.png" alt="Screenshot: Wizard window" >}}
 
@@ -39,25 +61,6 @@ date: "2024-02-07"
     {{< img src="images/image-7.png" alt="Screenshot: Managment agent will now be downloaded to your computer" >}}
 
     This is now installed on the system to be backed up in the future
-
-    {{% alert title="Warning" color="warning" %}}
-    Important plusbackup uses the following ports that must be enabled on the client and in the infrastructure (firewall, edge gateway, ...):
-
-    Veeam Agent (Windows) 9395+, 6183+ - see [Link](https://helpcenter.veeam.com/docs/agentforwindows/userguide/ports.html?ver=60)
-
-    Veeam Agent (Linux) 10002,100006, 2500-3300, 10808 - see [Link](https://helpcenter.veeam.com/docs/agentforlinux/userguide/used_ports.html?ver=60)
-
-    Veeam Agent (Mac) 10006,10101, 2500-3300 - see [Link](https://helpcenter.veeam.com/docs/agentformac/userguide/used_ports.html?ver=20 "Optional link title")
-
-    Cloud Gateway 6180
-
-    TCP 443 (download information and updates)
-
-    TCP 80 (Certification Revocation Lists)
-
-    **Important regarding pluscloud open:**
-    If no MTU size has been specified in the instance to be backed up, the MTU is set to 9000. To enable a backup with plusbackup of this instance, the MTU size of the instance must be set to 1,500.
-    {{% /alert %}}
 
 ## Step 2: Setting up Plusbackup
 
@@ -80,7 +83,7 @@ Proceed as follows (see screenshots):
 
     {{< img src="images/image-13.png" alt="Screenshot: agent status is connected" >}}
 
-    - If the computer system is a Windows client, the possible connection can also be tested via Powershell (\<powershell>: tnc port 6180 de-4-cc-gw01.vcd.get-cloud.io). If no connection is possible, port 6180 must be released (firewall or similar)
+    If the computer system is a Windows client, the possible connection can also be tested via Powershell (\<powershell>: tnc port 6180 de-4-cc-gw01.vcd.get-cloud.io). If no connection is possible, port 6180 must be released (firewall or similar)
 
     {{< img src="images/image-14.png" alt="Screenshot: Test connection via Powershell" >}}
 
@@ -92,7 +95,7 @@ Proceed as follows (see screenshots):
 
     {{< img src="images/image-16.png" alt="Screenshot: Button Install Backup Agent" >}}
 
-    - When installing the backup agent, you can also add it to a **backup policy** or create a new backup policy. However, as this can also be done later, this is not necessary and you can also select "No Policy".
+    When installing the backup agent, you can also add it to a **backup policy** or create a new backup policy. However, as this can also be done later, this is not necessary and you can also select "No Policy".
 
     {{< img src="images/image-17.png" alt="Screenshot: Install Backup Agent wizard window" >}}
 
@@ -158,23 +161,13 @@ Proceed as follows (see screenshots):
 
     {{< img src="images/image-31.png" alt="Screenshot: Wizard window Retention policy" >}}
 
-    - If required, GFS (Grandfather, Father, Son) can be selected so that you can set weekly, monthly and annual backups
+    If required, GFS (Grandfather, Father, Son) can be selected so that you can set weekly, monthly and annual backups
 
     {{< img src="images/image-32.png" alt="Screenshot: Wizard window Configure GFS" >}}
 
-12. Further detailed configurations can be set under "Advanced Settings"
-
-    {{< img src="images/image-33.png" alt="Screenshot: Wizard window Advanced Setting" >}}
-
-    {{% alert title="Notice" %}}
-    IMPORTANT - under Advanced Settings → Storage the optimization "Local target" (large blocks) should be selected.
+12. Make sure that in `Advanced Settings → Storage` the optimization "Local target (large blocks)" is selected!
 
     {{< img src="images/image-34.png" alt="Screenshot: Storage optimization options" >}}
-
-    {{< img src="images/image-35.png" alt="Screenshot: Local target (large blocks) selected" >}}
-
-    Since the plusserver stores all backups as a redundant S3 copy in a georedundant manner. This option ensures the best storage in S3.
-    {{% /alert %}}
 
 13. In the next menu, a backup cache can be set up on the client, which can temporarily store backup data in case the connectivity from the client to the plusserver backup service is temporarily disrupted
 
