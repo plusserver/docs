@@ -20,29 +20,29 @@ You can access the complete API documentation at [https://s3-portal.psmanaged.co
 
 The Tenant API organizes the available functions into different sections:
 
-- **Account:** Operations on the current tenant account, including storing usage information.
+-   **Account:** Operations on the current tenant account, including storing usage information.
 
-- **Auth:** Operations to authenticate the user session with support for the owner token authentication schema.
+-   **Auth:** Operations to authenticate the user session with support for the owner token authentication schema.
 
-- **Config:** Operations related to the product version and versions of the Tenant Management API. You can list the product version and main versions supported by this version.
+-   **Config:** Operations related to the product version and versions of the Tenant Management API. You can list the product version and main versions supported by this version.
 
-- **Container:** Operations on S3 buckets or Swift containers, including functions such as bucket creation, consistency control, CORS configuration, object updates, and more.
+-   **Container:** Operations on S3 buckets or Swift containers, including functions such as bucket creation, consistency control, CORS configuration, object updates, and more.
 
-- **Disabled Functions:** Displaying functions that may have been disabled.
+-   **Disabled Functions:** Displaying functions that may have been disabled.
 
-- **Endpoints:** Operations to manage endpoints, allowing an S3 bucket to use external services for replication, notifications, or search integration.
+-   **Endpoints:** Operations to manage endpoints, allowing an S3 bucket to use external services for replication, notifications, or search integration.
 
-- **Groups:** Operations to manage local tenant groups and retrieve connected tenant groups from an external identity source.
+-   **Groups:** Operations to manage local tenant groups and retrieve connected tenant groups from an external identity source.
 
-- **Identity Source:** Operations to configure an external identity source and manually synchronize federated group and user information.
+-   **Identity Source:** Operations to configure an external identity source and manually synchronize federated group and user information.
 
-- **Regions:** Operations to determine which regions have been configured for the StorageGRID system.
+-   **Regions:** Operations to determine which regions have been configured for the StorageGRID system.
 
-- **s3:** Operations to manage S3 access keys for tenant users.
+-   **s3:** Operations to manage S3 access keys for tenant users.
 
-- **s3-Object-Lock:** Operations on global S3 Object Lock settings to support compliance with legal regulations.
+-   **s3-Object-Lock:** Operations on global S3 Object Lock settings to support compliance with legal regulations.
 
-- **Users:** Operations to view and manage tenant users.
+-   **Users:** Operations to view and manage tenant users.
 
 Utilize the comprehensive features of the Tenant API to efficiently control and customize your tenant management.
 
@@ -62,11 +62,11 @@ Use the following JSON body in your request, replacing `<accountId>`, `<username
 
 ```json
 {
-  "accountId": "Your_Account_ID",
-  "username": "Your_Username",
-  "password": "Your_Password",
-  "cookie": true,
-  "csrfToken": false
+    "accountId": "Your_Account_ID",
+    "username": "Your_Username",
+    "password": "Your_Password",
+    "cookie": true,
+    "csrfToken": false
 }
 ```
 

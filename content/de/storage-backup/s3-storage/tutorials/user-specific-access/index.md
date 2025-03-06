@@ -28,34 +28,34 @@ Policies lassen sich in der Regel durch .json Objekte definieren. In diesem Fall
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Id": "UserBucketPolicy",
-  "Statement": [
-    {
-      "Sid": "AllowUserAccess",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
-      },
-      "Action": "s3:*",
-      "Resource": [
-        "arn:aws:s3:::BUCKET_NAME",
-        "arn:aws:s3:::BUCKET_NAME/*"
-      ]
-    },
-    {
-      "Sid": "DenyOtherAccess",
-      "Effect": "Deny",
-      "NotPrincipal": {
-        "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
-      },
-      "Action": "s3:*",
-      "Resource": [
-        "arn:aws:s3:::BUCKET_NAME",
-        "arn:aws:s3:::BUCKET_NAME/*"
-      ]
-    }
-  ]
+    "Version": "2012-10-17",
+    "Id": "UserBucketPolicy",
+    "Statement": [
+        {
+            "Sid": "AllowUserAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::BUCKET_NAME",
+                "arn:aws:s3:::BUCKET_NAME/*"
+            ]
+        },
+        {
+            "Sid": "DenyOtherAccess",
+            "Effect": "Deny",
+            "NotPrincipal": {
+                "AWS": "arn:aws:iam::ACCOUNT_ID:user/USERNAME"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::BUCKET_NAME",
+                "arn:aws:s3:::BUCKET_NAME/*"
+            ]
+        }
+    ]
 }
 ```
 
@@ -64,34 +64,34 @@ user-policy.json:
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Id": "UserBucketPolicy",
-  "Statement": [
-    {
-      "Sid": "AllowUserAccess",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::700001145864652591:user/mmustermann"
-      },
-      "Action": "s3:*",
-      "Resource": [
-        "arn:aws:s3:::shop-thumbnails",
-        "arn:aws:s3:::shop-thumbnails/*"
-      ]
-    },
-    {
-      "Sid": "DenyOtherAccess",
-      "Effect": "Deny",
-      "NotPrincipal": {
-        "AWS": "arn:aws:iam::700001145864652591:user/mmustermann"
-      },
-      "Action": "s3:*",
-      "Resource": [
-        "arn:aws:s3:::shop-thumbnails",
-        "arn:aws:s3:::shop-thumbnails/*"
-      ]
-    }
-  ]
+    "Version": "2012-10-17",
+    "Id": "UserBucketPolicy",
+    "Statement": [
+        {
+            "Sid": "AllowUserAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::700001145864652591:user/mmustermann"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::shop-thumbnails",
+                "arn:aws:s3:::shop-thumbnails/*"
+            ]
+        },
+        {
+            "Sid": "DenyOtherAccess",
+            "Effect": "Deny",
+            "NotPrincipal": {
+                "AWS": "arn:aws:iam::700001145864652591:user/mmustermann"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::shop-thumbnails",
+                "arn:aws:s3:::shop-thumbnails/*"
+            ]
+        }
+    ]
 }
 ```
 
@@ -103,9 +103,9 @@ aws s3api put-bucket-policy --bucket <bucketname> --policy file://user-policy.js
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen \* \möchten.
-- \<policy-name>: Der Name der von Ihnen angelegten Policy-Datei.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen \* \möchten.
+-   \<policy-name>: Der Name der von Ihnen angelegten Policy-Datei.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -123,8 +123,8 @@ aws s3api get-bucket-policy --bucket <bucketname> --endpoint-url=https://<endpoi
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen möchten.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen möchten.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 

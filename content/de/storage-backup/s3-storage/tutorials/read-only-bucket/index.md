@@ -14,47 +14,40 @@ Erstellen Sie zunächst eine JSON-Datei, die die Bucket-Policy für den "Read On
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Id": "ReadOnlyPolicy",
-  "Statement": [
-    {
-      "Sid": "AllowGet",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::<account-id>:*"
-      },
-      "Action": [
-        "s3:GetObject",
-        "s3:ListBucket"
-      ],
-      "Resource": [
-        "arn:aws:s3:::<bucketname>",
-        "arn:aws:s3:::<bucketname>/*"
-      ]
-    },
-    {
-      "Sid": "DenyPut",
-      "Effect": "Deny",
-      "Principal": {
-        "AWS": "arn:aws:iam::<account-id>:*"
-      },
-      "Action": [
-        "s3:PutObject",
-        "s3:DeleteObject",
-        "s3:PutBucketPolicy"
-      ],
-      "Resource": [
-        "arn:aws:s3:::<bucketname>",
-        "arn:aws:s3:::<bucketname>/*"
-      ]
-    }
-  ]
+    "Version": "2012-10-17",
+    "Id": "ReadOnlyPolicy",
+    "Statement": [
+        {
+            "Sid": "AllowGet",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::<account-id>:*"
+            },
+            "Action": ["s3:GetObject", "s3:ListBucket"],
+            "Resource": [
+                "arn:aws:s3:::<bucketname>",
+                "arn:aws:s3:::<bucketname>/*"
+            ]
+        },
+        {
+            "Sid": "DenyPut",
+            "Effect": "Deny",
+            "Principal": {
+                "AWS": "arn:aws:iam::<account-id>:*"
+            },
+            "Action": ["s3:PutObject", "s3:DeleteObject", "s3:PutBucketPolicy"],
+            "Resource": [
+                "arn:aws:s3:::<bucketname>",
+                "arn:aws:s3:::<bucketname>/*"
+            ]
+        }
+    ]
 }
 ```
 
 Erklärung der Variablen in der JSON-Policy:
 
-- \<bucketname>: Der Name des Buckets, für den Sie die Policy erstellen möchten.
+-   \<bucketname>: Der Name des Buckets, für den Sie die Policy erstellen möchten.
 
 ### Schritt 2: Aktivieren des "Bucket Policy" für "Read Only"
 
@@ -66,9 +59,9 @@ aws s3api put-bucket-policy --bucket <bucketname> --policy file://readonly-polic
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets, den Sie auf "Read Only" setzen möchten.
-- file://readonly-policy.json: Der Pfad zur JSON-Policy-Datei auf Ihrem lokalen System.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets, den Sie auf "Read Only" setzen möchten.
+-   file://readonly-policy.json: Der Pfad zur JSON-Policy-Datei auf Ihrem lokalen System.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 
@@ -86,8 +79,8 @@ aws s3api get-bucket-policy --bucket <bucketname> --endpoint-url=https://<endpoi
 
 Erklärung der Variablen:
 
-- \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen \* \möchten.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<bucketname>: Der Name des Buckets, dessen Policy Sie überprüfen \* \möchten.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 

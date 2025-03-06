@@ -16,10 +16,10 @@ Verwenden Sie den Befehl `aws s3 cp`, um ein Objekt auf einen Bucket hochzuladen
 aws s3 cp <lokaler-dateipfad> s3://<bucketname>/<ziel-dateipfad> --endpoint-url=https://<endpoint-url>
 ```
 
-- \<lokaler-dateipfad>: Geben Sie den Pfad zur lokalen Datei an, die Sie hochladen möchten.
-- \<bucketname>: Geben Sie den Namen des Ziel-Buckets an.
-- \<ziel-dateipfad>: Optional, legt den Pfad im Bucket fest, unter dem die Datei gespeichert wird.
-- \<endpoint-url>: Der entsprechende Endpunkt, abhängig von Ihrer Konfiguration.
+-   \<lokaler-dateipfad>: Geben Sie den Pfad zur lokalen Datei an, die Sie hochladen möchten.
+-   \<bucketname>: Geben Sie den Namen des Ziel-Buckets an.
+-   \<ziel-dateipfad>: Optional, legt den Pfad im Bucket fest, unter dem die Datei gespeichert wird.
+-   \<endpoint-url>: Der entsprechende Endpunkt, abhängig von Ihrer Konfiguration.
 
 Beispiel:
 

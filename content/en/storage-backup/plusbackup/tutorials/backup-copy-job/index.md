@@ -6,56 +6,56 @@ description: ""
 weight: 40
 ---
 
-1.  Backup Copy Job
+## Backup Copy Job
 
-    PlusCloud as source:
+PlusCloud as source:
 
-    -   Under Home → Backup copy → Virtual machine → VMware vCloud Director backup ...
+-   Under Home → Backup copy → Virtual machine → VMware vCloud Director backup ...
 
     {{< img src="images/image-1.png" alt="Screenshot: new vCloud backup Copy Job" >}}
 
-2.  Job
+## Job
 
-    -   Name: Assign a job name. For example→ “kd(customer number)\_copy”
+-   Name: Assign a job name. For example→ "kd(customer number)\_copy”
 
-    -   Copy mode → select “immediate copy (mirroring)”.
+-   Copy mode → select "immediate copy (mirroring)”.
 
     {{< img src="images/image-2.png" alt="Screenshot: New Backup Copy Job" >}}
 
-3.  Objects
+## Objects
 
-    You can choose between “From jobs...” and “From repositories...”:
+-   You can choose between "From jobs...” and "From repositories...”:
 
-    -   From jobs…: if you want to select one or more predefined backup jobs to be copied.
+-   From jobs…: if you want to select one or more predefined backup jobs to be copied.
 
-    -   From repositories...: if entire repositories are to be copied.
+-   From repositories...: if entire repositories are to be copied.
 
     {{< img src="images/image-3.png" alt="Screenshot: Objects" >}}
 
-    -   Then click on “Next”.
+-   Then click on "Next”.
 
     {{< img src="images/image-4.png" alt="Screenshot: Objects - Next" >}}
 
-4.  Target
+## Target
 
-    -   Backup repository: Select your cloud repository.
+-   Backup repository: Select your cloud repository.
 
-    -   Retention policy: Set the retention as high as the backup jobs are set. The backup jobs must be checked here.
+-   Retention policy: Set the retention as high as the backup jobs are set. The backup jobs must be checked here.
 
-    -   GFS: The same applies here as for the retention policy.
+-   GFS: The same applies here as for the retention policy.
 
     {{< img src="images/image-5.png" alt="Screenshot: Target" >}}
 
-5.  Data Transfer
+## Data Transfer
 
-    -   Select “Direct” → “Next”
+-   Select "Direct” → "Next”
 
     {{< img src="images/image-6.png" alt="Screenshot: Data Transfer" >}}
 
-6.  Schedule
+## Schedule
 
-    -   Select “Any time” → “Apply”
+-   Select "Any time” → "Apply”
 
-    -   Then click “Finish”
+-   Then click "Finish”
 
     {{< img src="images/image-7.png" alt="Screenshot: Schedule" >}}

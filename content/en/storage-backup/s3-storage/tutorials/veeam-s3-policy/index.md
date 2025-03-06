@@ -38,10 +38,7 @@ Starting from Veeam Backup & Replication 11a, the **"ListAllMyBuckets"** permiss
         },
         {
             "Effect": "Allow",
-            "Action": [
-                "s3:ListAllMyBuckets",
-                "s3:ListBucket"
-            ],
+            "Action": ["s3:ListAllMyBuckets", "s3:ListBucket"],
             "Resource": "arn:aws:s3:::*"
         }
     ]
@@ -85,10 +82,7 @@ Starting from Veeam Backup & Replication 11a, the **"ListAllMyBuckets"** permiss
         },
         {
             "Effect": "Allow",
-            "Action": [
-                "s3:ListAllMyBuckets",
-                "s3:ListBucket"
-            ],
+            "Action": ["s3:ListAllMyBuckets", "s3:ListBucket"],
             "Resource": "arn:aws:s3:::*"
         }
     ]
