@@ -20,29 +20,29 @@ Sie können die vollständige API-Dokumentation unter [https://s3-portal.psmanag
 
 Die Mandantenmanagement-API organisiert die verfügbaren Funktionen in verschiedene Abschnitte:
 
-- **Account:** Betrieb auf dem aktuellen Mandantenkonto, einschließlich der Speicherung von Informationen zur Nutzung.
+-   **Account:** Betrieb auf dem aktuellen Mandantenkonto, einschließlich der Speicherung von Informationen zur Nutzung.
 
-- **Auth:** Operationen zur Authentifizierung der Benutzersitzung, mit Unterstützung des Authentifizierungsschemas für das Inhabertoken.
+-   **Auth:** Operationen zur Authentifizierung der Benutzersitzung, mit Unterstützung des Authentifizierungsschemas für das Inhabertoken.
 
-- **Config:** Operationen bezogen auf die Produktversion und Versionen der Mandantenmanagement-API. Sie können die Produktversion und die Hauptversionen der von dieser Version unterstützten API auflisten.
+-   **Config:** Operationen bezogen auf die Produktversion und Versionen der Mandantenmanagement-API. Sie können die Produktversion und die Hauptversionen der von dieser Version unterstützten API auflisten.
 
-- **Container:** Betrieb auf S3-Buckets oder Swift-Containern, einschließlich Funktionen wie Bucket-Erstellung, Konsistenzsteuerung, CORS-Konfiguration, Objektupdates und mehr.
+-   **Container:** Betrieb auf S3-Buckets oder Swift-Containern, einschließlich Funktionen wie Bucket-Erstellung, Konsistenzsteuerung, CORS-Konfiguration, Objektupdates und mehr.
 
-- **Disabled Functions:** Anzeigen von Funktionen, die möglicherweise deaktiviert wurden.
+-   **Disabled Functions:** Anzeigen von Funktionen, die möglicherweise deaktiviert wurden.
 
-- **Endpoints:** Operationen zur Verwaltung von Endpunkten, die einem S3-Bucket ermöglichen, externe Services für Replikation, Benachrichtigungen oder Suchintegration zu verwenden.
+-   **Endpoints:** Operationen zur Verwaltung von Endpunkten, die einem S3-Bucket ermöglichen, externe Services für Replikation, Benachrichtigungen oder Suchintegration zu verwenden.
 
-- **Groups:** Operationen zur Verwaltung lokaler Mandantengruppen und zum Abrufen von verbundenen Mandantengruppen aus einer externen Identitätsquelle.
+-   **Groups:** Operationen zur Verwaltung lokaler Mandantengruppen und zum Abrufen von verbundenen Mandantengruppen aus einer externen Identitätsquelle.
 
-- **Identity Source:** Operationen zum Konfigurieren einer externen Identitätsquelle und manuellen Synchronisieren von föderierten Gruppen- und Benutzerinformationen.
+-   **Identity Source:** Operationen zum Konfigurieren einer externen Identitätsquelle und manuellen Synchronisieren von föderierten Gruppen- und Benutzerinformationen.
 
-- **Regions:** Operationen zur Bestimmung, welche Regionen für das StorageGRID-System konfiguriert wurden.
+-   **Regions:** Operationen zur Bestimmung, welche Regionen für das StorageGRID-System konfiguriert wurden.
 
-- **S3:** Betrieb zum Verwalten von S3-Zugriffsschlüsseln für Mandantenbenutzer.
+-   **S3:** Betrieb zum Verwalten von S3-Zugriffsschlüsseln für Mandantenbenutzer.
 
-- **S3-Object-Lock:** Operationen auf globalen S3 Object Lock Einstellungen zur Unterstützung der Einhaltung gesetzlicher Vorschriften.
+-   **S3-Object-Lock:** Operationen auf globalen S3 Object Lock Einstellungen zur Unterstützung der Einhaltung gesetzlicher Vorschriften.
 
-- **Users:** Operationen zum Anzeigen und Verwalten von Mandantenbenutzern.
+-   **Users:** Operationen zum Anzeigen und Verwalten von Mandantenbenutzern.
 
 Nutzen Sie die umfassenden Funktionen der Tenant-API, um Ihr Mandantenmanagement effizient zu steuern und anzupassen.
 
@@ -63,11 +63,11 @@ Verwenden Sie den folgenden JSON-Body in Ihrer Anfrage und ersetzen Sie `<accoun
 
 ```json
 {
-  "accountId": "Ihre_Account_ID",
-  "username": "Ihr_Benutzername",
-  "password": "Ihr_Passwort",
-  "cookie": true,
-  "csrfToken": false
+    "accountId": "Ihre_Account_ID",
+    "username": "Ihr_Benutzername",
+    "password": "Ihr_Passwort",
+    "cookie": true,
+    "csrfToken": false
 }
 ```
 

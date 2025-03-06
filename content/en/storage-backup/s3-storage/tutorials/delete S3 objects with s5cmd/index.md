@@ -5,22 +5,23 @@ type: "docs"
 weight: 30
 ---
 
-{{% alert title="Wichtig" color="warning" %}}
-Prerequisite for the tutorial: the AWS standard credentials of the client must be stored (# vi .aws/credentials).
+{{% alert title="Important" color="warning" %}}
+Prerequisite for the tutorial:  
+The AWS standard credentials of the client must be in place (# vi .aws/credentials).
 
-{{< img src="images/image-1.png" alt="Credentials" >}}
+![Credentials](images/image-1.png)
 {{% /alert %}}
 
 Please download current s5cmd release: <https://github.com/peak/s5cmd/releases/latest>
 
-```
+```bash
 wget  https://github.com/peak/s5cmd/releases/download/v2.2.2/s5cmd_2.2.2_Linux-64bit.tar.gz
 tar -xvzf s5cmd_2.2.2_Linux-64bit.tar.gz
 ```
 
 bash:
 
-```
+```bash
 #!/bin/bash
 
 AWS_PROFILE="root"
@@ -44,7 +45,7 @@ echo "All buckets have been emptied and deleted."%
 
 Powershell:
 
-```
+```powershell
 $ENDPOINT_URL="https://s3.de-west-1.psmanaged.com"
 $CREDENTIALS_FILE=".\credentials"
 $S3PROFILE="root"

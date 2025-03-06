@@ -20,18 +20,19 @@ For the installation and setup of the Minio client and setting up an alias, you 
 
 2. Execute the following commands to download the Minio client, make it executable, and make it available in your path:
 
-```bash
-   curl https://dl.min.io/client/mc/release/linux-amd64/mc \
-     --create-dirs \
-     -o $HOME/minio-binaries/mc
+    ```bash
+    curl https://dl.min.io/client/mc/release/linux-amd64/mc \
+      --create-dirs \
+      -o $HOME/minio-binaries/mc
 
-   chmod +x $HOME/minio-binaries/mc
-   export PATH=$PATH:$HOME/minio-binaries/
-```
+    chmod +x $HOME/minio-binaries/mc
+    export PATH=$PATH:$HOME/minio-binaries/
+    ```
 
-Verify the installation by running the command mc --help. If the Minio client is installed correctly, you will see the help guide.
+Verify the installation by running the command mc --help.  
+If the Minio client is installed correctly, you will see the help guide.
 
-### Step 2: Set Up an Alias
+## Step 2: Set Up an Alias
 
 To access your plusserver S3 service, you need to create an alias. Replace **ACCESS_KEY** and **SECRET_KEY** with your actual access credentials.
 
@@ -41,7 +42,7 @@ mc alias set plusserver https://s3.de-west-1.psmanaged.com ACCESS_KEY SECRET_KEY
 
 With this alias, you can now access your plusserver S3 storage and transfer files. Repeat this process with your existing S3 storage.
 
-### Step 3: Check for Outdated Object-Lock Data
+## Step 3: Check for Outdated Object-Lock Data
 
 To ensure the migration script works smoothly, it is important to confirm that there are no expired Object-Lock information for your objects. You can check this with the following command:
 
@@ -61,7 +62,7 @@ In this case, you should either delete the expired Object-Lock information or th
 The EXPIRED warning is only displayed for objects with the GOVERNANCE status. COMPLIANCE will not be displayed. These need to be reviewed individually or in the single view.
 {{% /alert %}}
 
-### Step 3a: (Optional) Delete Object-Lock Information
+## Step 3a: (Optional) Delete Object-Lock Information
 
 If you want to delete the Object-Lock information of a specific object using the Minio client, you can use the following command:
 
@@ -78,11 +79,11 @@ Replace:
 
 By executing this command, the Object-Lock information for the specified object and version will be deleted. Ensure you have the appropriate permissions and authorizations for this action, as deleting Object-Lock information in your S3 service may be restricted.
 
-### Step 4: Save the Script to Your System
+## Step 4: Save the Script to Your System
 
 Download the migration script to your system. This script is used to migrate data from your source profile and source bucket to your destination profile and destination bucket.
 
-#### migration_script.sh
+### migration_script.sh
 
 ```bash
 #!/bin/bash
