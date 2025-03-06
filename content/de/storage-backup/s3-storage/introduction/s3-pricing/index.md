@@ -50,7 +50,7 @@ Diese Speicherrichtlinien gewährleisten, dass Ihre Daten je nach gewählter Ser
 Kleine Objekte mit einer Größe unter 128 KB können zwar gespeichert werden, werden jedoch mit einer Mindestgröße von 128 KB berechnet. Dies liegt daran, dass das Speichern solcher kleiner Objekte einen höheren Speicheraufwand in unserem S3-System mit sich bringt.
 
 {{% alert title="Wichtiger Hinweis" %}}
-Bei der Anlage von Buckets in unserem plusserver S3 Service sollten Sie beachten, dass Ihre Daten nicht nur durch Site übergreifendes Erasure Coding und Replikation geschützt werden, sondern auch pro S3-Storage-Node durch eine zusätzliche Sicherungsschicht in Form von RAID-Technologie geschützt sind. Dies betrifft auch Buckets, welche ohne Georenundanz angelegt werden (Buckets ohne -repl bzw. -mirr).
+Bei der Anlage von Buckets in unserem plusserver S3 Service sollten Sie beachten, dass Ihre Daten nicht nur durch Site übergreifendes Erasure Coding und Replikation geschützt werden, sondern auch pro S3-Storage-Node durch eine zusätzliche Sicherungsschicht in Form von RAID-Technologie geschützt sind. Dies betrifft auch Buckets, welche ohne Georedundanz angelegt werden (Buckets ohne -repl bzw. -mirr).
 {{% /alert %}}
 
 ### Unterschiede zwischen den Speicherrichtlinien
@@ -64,5 +64,5 @@ Bei der Anlage von Buckets in unserem plusserver S3 Service sollten Sie beachten
 Diese Tabelle gibt Ihnen einen Überblick über die Hauptunterschiede zwischen den Optionen für die Erstellung von Buckets in unserem neuen S3.
 
 {{% alert title="Wichtig" %}}
-Die S3 Speicherklassen werden durch den Bucketnamen bestimmt. Da der S3 Standard kein “Bucket Rename” unterstützt, muss für eine Änderung der Speicherklasse ein neues Bucket angelegt werden und – falls notwendig – die Objektdaten des alten Buckets in das neue Bucket migriert werden.
+Die S3 Speicherklassen werden durch den Bucketnamen bestimmt. Da der S3 Standard kein "Bucket Rename” unterstützt, muss für eine Änderung der Speicherklasse ein neues Bucket angelegt werden und – falls notwendig – die Objektdaten des alten Buckets in das neue Bucket migriert werden.
 {{% /alert %}}

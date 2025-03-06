@@ -12,7 +12,7 @@ Diese Erweiterung unserer Dokumentation führt Sie durch die Verwendung der Migr
 Damit Sie diesen Prozess erfolgreich durchführen können, benötigen Sie zwei unverzichtbare Werkzeuge: Minio und jq. Diese müssen auf Ihrem System installiert sein, um sicherzustellen, dass Ihre Daten sicher und effizient migriert werden.
 {{% /alert %}}
 
-### Schritt 1: Minio-Client installieren und einrichten
+## Schritt 1: Minio-Client installieren und einrichten
 
 Für die Installation und Einrichtung des Minio-Clients sowie das Setzen eines Aliases können Sie die folgende kurze Anleitung verwenden:
 
@@ -20,18 +20,19 @@ Für die Installation und Einrichtung des Minio-Clients sowie das Setzen eines A
 
 2. Führen Sie die folgenden Befehle aus, um den Minio-Client herunterzuladen, ausführbar zu machen und in Ihrem Pfad verfügbar zu machen:
 
-```bash
-curl https://dl.min.io/client/mc/release/linux-amd64/mc \
-   --create-dirs \
-   -o $HOME/minio-binaries/mc
+    ```bash
+    curl https://dl.min.io/client/mc/release/linux-amd64/mc \
+      --create-dirs \
+      -o $HOME/minio-binaries/mc
 
-chmod +x $HOME/minio-binaries/mc
-export PATH=$PATH:$HOME/minio-binaries/
-```
+    chmod +x $HOME/minio-binaries/mc
+    export PATH=$PATH:$HOME/minio-binaries/
+    ```
 
-Überprüfen Sie die Installation, indem Sie den Befehl mc --help ausführen. Wenn der Minio-Client korrekt installiert ist, werden Sie die Hilfeanleitung sehen.
+Überprüfen Sie die Installation, indem Sie den Befehl mc --help ausführen.  
+Wenn der Minio-Client korrekt installiert ist, werden Sie die Hilfeanleitung sehen.
 
-### Schritt 2: Alias setzen
+## Schritt 2: Alias setzen
 
 Um auf Ihren plusserver S3-Dienst zuzugreifen, müssen Sie einen Alias erstellen. Ersetzen Sie ACCESS_KEY und SECRET_KEY durch Ihre tatsächlichen Zugangsdaten.
 
@@ -41,7 +42,7 @@ mc alias set plusserver https://s3.de-west-1.psmanaged.com ACCESS_KEY SECRET_KEY
 
 Mit diesem Alias können Sie nun auf Ihren plusserver S3-Speicher zugreifen und Dateien übertragen. Wiederholen Sie dies mit Ihrem bisherigen S3 Speicher.
 
-### Schritt 3: Überprüfen, ob Object-Lock-Daten veraltet sind
+## Schritt 3: Überprüfen, ob Object-Lock-Daten veraltet sind
 
 Um sicherzustellen, dass das Migrationsskript reibungslos funktioniert, ist es wichtig, sicherzustellen, dass keine abgelaufenen Object-Lock-Informationen für Ihre Objekte vorliegen. Sie können dies mit dem folgenden Befehl überprüfen:
 
@@ -63,7 +64,7 @@ In diesem Fall sollten Sie entweder die abgelaufenen Object-Lock-Informationen o
 Die EXPIRED Warnung wird nur für Objekte angezeigt, welche den GOVERNANCE Status haben. COMPLIANCE wird leider nicht angezeigt. Diese müssen selbstständig oder in der Einzelview betrachtet werden.
 {{% /alert %}}
 
-### Schritt 3a: (Optional) Löschen von Object-Lock-Informationen
+## Schritt 3a: (Optional) Löschen von Object-Lock-Informationen
 
 Wenn Sie die Object-Lock-Informationen eines bestimmten Objekts mit dem Minio-Client löschen möchten, können Sie das folgende Kommando verwenden:
 
@@ -80,11 +81,11 @@ Hierbei ersetzen Sie:
 
 Durch die Ausführung dieses Befehls werden die Object-Lock-Informationen für das angegebene Objekt und die angegebene Version gelöscht. Stellen Sie sicher, dass Sie die entsprechenden Berechtigungen und Autorisierungen für diese Aktion haben, da das Löschen von Object-Lock-Informationen in Ihrem S3-Service möglicherweise eingeschränkt ist.
 
-### Schritt 4: Skript auf Ihr System speichern
+## Schritt 4: Skript auf Ihr System speichern
 
 Laden Sie das Migrationsskript auf Ihr System herunter. Dieses Skript wird verwendet, um Daten von Ihrem Quellprofil und Quellbucket zu Ihrem Zielprofil und Zielbucket zu migrieren.
 
-#### migration_skript.sh
+### migration_skript.sh
 
 ```bash
 

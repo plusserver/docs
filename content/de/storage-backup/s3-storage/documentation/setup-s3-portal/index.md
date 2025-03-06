@@ -15,7 +15,7 @@ Beachten Sie, dass die Sicherheitsempfehlung ist, dass Sie einen neuen Benutzer 
 {{< img src="images/image-1.png" alt="LoginScreen" >}}
 
 1. Öffnen Sie Ihren Webbrowser und besuchen Sie die folgende Webseite: [https://s3-portal.psmanaged.com:9443/](https://s3-portal.psmanaged.com:9443/)
-2. Verwenden Sie die Ihnen bereitgestellten Benutzerdaten (diese können sie im plusserver Kundenportal: [https://customerservice.plusserver.com/](https://customerservice.plusserver.com/) unter “Verträge und Abrechnung” → "S3 Vertrag auswählen" → "Zugangsdaten" → “Anmeldeinformationen anzeigen” finden), um sich anzumelden. Der Benutzername lautet "root". Bitte verwenden Sie das Ihnen bekannte Passwort. Hier finden Sie zudem die Account ID.
+2. Verwenden Sie die Ihnen bereitgestellten Benutzerdaten (diese können sie im plusserver Kundenportal: [https://customerservice.plusserver.com/](https://customerservice.plusserver.com/) unter "Verträge und Abrechnung” → "S3 Vertrag auswählen" → "Zugangsdaten" → "Anmeldeinformationen anzeigen” finden), um sich anzumelden. Der Benutzername lautet "root". Bitte verwenden Sie das Ihnen bekannte Passwort. Hier finden Sie zudem die Account ID.
 
 ### Schritt 2: Erstellen einer Standardgruppe
 

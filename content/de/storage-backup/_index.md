@@ -4,6 +4,6 @@ linkTitle: "Storage & Backup"
 type: "docs"
 weight: 40
 menu:
-  main:
-    weight: 40
+    main:
+        weight: 40
 ---

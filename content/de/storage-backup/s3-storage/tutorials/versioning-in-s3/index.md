@@ -32,10 +32,10 @@ Verwenden Sie den Befehl aws s3 cp, um ein Objekt in Ihr Bucket hochzuladen:
 aws s3 cp <lokaler-dateipfad> s3://<bucketname>/<ziel-dateipfad> --endpoint-url=https://<endpoint>
 ```
 
-- \<lokaler-dateipfad>: Der Pfad zur Datei auf Ihrem Computer, die hochgeladen werden soll.
-- \<bucketname>: Der Name Ihres Buckets.
-- \<ziel-dateipfad>: Der gewünschte Speicherort und Name des hochgeladenen Objekts im Bucket.
-- \<endpoint>: Der entsprechende Endpunkt für Ihren plusserver S3.
+-   \<lokaler-dateipfad>: Der Pfad zur Datei auf Ihrem Computer, die hochgeladen werden soll.
+-   \<bucketname>: Der Name Ihres Buckets.
+-   \<ziel-dateipfad>: Der gewünschte Speicherort und Name des hochgeladenen Objekts im Bucket.
+-   \<endpoint>: Der entsprechende Endpunkt für Ihren plusserver S3.
 
 ## Schritt 2: Überschreiben des Objekts
 
@@ -55,8 +55,8 @@ Um auf frühere Versionen des Objekts zuzugreifen, verwenden Sie die Versions-ID
 aws s3api list-object-versions --bucket <bucketname> --prefix <ziel-dateipfad> --endpoint-url=https://<endpoint>
 ```
 
-- \<bucketname>: Der Name Ihres Buckets.
-- \<ziel-dateipfad>: Der Speicherort und Name des Objekts im Bucket.
+-   \<bucketname>: Der Name Ihres Buckets.
+-   \<ziel-dateipfad>: Der Speicherort und Name des Objekts im Bucket.
 
 Wählen Sie die gewünschte Versions-ID aus der angezeigten Liste.
 
@@ -101,10 +101,10 @@ Verwenden Sie die Versions-ID, um eine bestimmte Version des Objekts herunterzul
 aws s3 cp s3://<bucketname>/<ziel-dateipfad>?versionId=<versions-id> <lokaler-dateipfad> --endpoint-url=https://<endpoint>
 ```
 
-- \<bucketname>: Der Name des Buckets.
-- \<ziel-dateipfad>: Der Speicherort und Name des Objekts im Bucket.
-- \<versions-id>: Die ausgewählte Versions-ID.
-- \<lokaler-dateipfad>: Der Pfad auf Ihrem Computer, unter dem die heruntergeladene Datei gespeichert werden soll.
+-   \<bucketname>: Der Name des Buckets.
+-   \<ziel-dateipfad>: Der Speicherort und Name des Objekts im Bucket.
+-   \<versions-id>: Die ausgewählte Versions-ID.
+-   \<lokaler-dateipfad>: Der Pfad auf Ihrem Computer, unter dem die heruntergeladene Datei gespeichert werden soll.
 
 Durch die Kombination von Object Lock und automatischem Versionierung haben Sie die Möglichkeit, auf frühere Zustände von Objekten zuzugreifen und Ihre Daten vor versehentlichen Änderungen zu schützen.
 
@@ -123,7 +123,7 @@ aws s3api delete-objects --bucket "<bucketname>" --delete "$(aws s3api list-obje
 Bitte beachten Sie, dass das korrekte Handling von Version IDs wichtig ist, um sicherzustellen, dass Sie die gewünschte Version eines Objekts löschen. Wir empfehlen, sorgfältig mit den Version IDs umzugehen, um unerwartetes Datenverhalten oder Datenverlust zu vermeiden. Das oben genannte Kommando löscht ohne Vorwarnung alle Objekte, inklusive aller Versionen eines Objekts innerhalb eines Buckets.
 Erklärung der Variablen
 
-- \<bucketname>: Der Name Ihres Buckets.
+-   \<bucketname>: Der Name Ihres Buckets.
 
 ```bash
 aws s3api delete-objects --bucket "test-versionierung" --delete "$(aws s3api list-object-versions --bucket "test-versionierung" --output=json | jq '{Objects: [.Versions[] | {Key: .Key, VersionId: .VersionId}], Quiet: false}')"

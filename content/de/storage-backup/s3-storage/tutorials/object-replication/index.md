@@ -16,9 +16,9 @@ aws s3 sync s3://<quelle-bucket> s3://<ziel-bucket> --endpoint-url=https://<endp
 
 Erklärung der Variablen:
 
-- \<quelle-bucket>: Der Name des Quell-Buckets.
-- \<ziel-bucket>: Der Name des Ziel-Buckets.
-- \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
+-   \<quelle-bucket>: Der Name des Quell-Buckets.
+-   \<ziel-bucket>: Der Name des Ziel-Buckets.
+-   \<endpoint-url>: Der entsprechende Endpunkt für Ihren plusserver S3 Service.
 
 **Beispiel:**
 

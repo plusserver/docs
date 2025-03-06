@@ -38,8 +38,8 @@ Please be cautious when setting permissions and ensure that users only receive t
 
 ### Step 4: Applying Group Permissions for the S3 Interface
 
-- In this example, we are using the "Ransomware Mitigation" point. This is an example policy with certain rights that can serve as a basis. It is important to emphasize that this policy is only an example and grants users extensive permissions, which may not be desired.
-- In the next step, you can add users to this group. Since we will create the user in Step 5, click on "Create group" here.
+-   In this example, we are using the "Ransomware Mitigation" point. This is an example policy with certain rights that can serve as a basis. It is important to emphasize that this policy is only an example and grants users extensive permissions, which may not be desired.
+-   In the next step, you can add users to this group. Since we will create the user in Step 5, click on "Create group" here.
 
 For more information on individual AWS permissions, refer to the official AWS documentation: [AWS User and role policy examples](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html).
 
@@ -67,17 +67,17 @@ The example policy for ransomware mitigation can serve as a starting point. Reme
 
 ### Step 6: Logging in as the User
 
-- Log in either with the login details of the newly created user or use the root user to edit the user.
+-   Log in either with the login details of the newly created user or use the root user to edit the user.
 
 ### Step 7: Generating an Access Key
 
-- After successful login, you have the option to generate an access key.
-- An access key is a combination of an access key ID and a secret access key. You need these credentials to access your resources with the AWS S3 Command Line Interface (CLI) or other compatible tools.
-- Select "Storage (S3)" on the left and choose "My access keys."
-- Click on the "Create Key" button to create a new access key.
-- On the first screen, you have the option to set an endpoint (expiration time) for the access key. This means the access key will become invalid after this time. Alternatively, you can set it to "unlimited" to not restrict its validity.
-- After configuration, the access key and secret access key will be displayed. The secret access key is displayed only once. We strongly recommend storing the secret key carefully and protecting it from unauthorized access.
-- Alternatively, you can also choose to download the credentials in CSV format. This allows you to store and manage the credentials.
+-   After successful login, you have the option to generate an access key.
+-   An access key is a combination of an access key ID and a secret access key. You need these credentials to access your resources with the AWS S3 Command Line Interface (CLI) or other compatible tools.
+-   Select "Storage (S3)" on the left and choose "My access keys."
+-   Click on the "Create Key" button to create a new access key.
+-   On the first screen, you have the option to set an endpoint (expiration time) for the access key. This means the access key will become invalid after this time. Alternatively, you can set it to "unlimited" to not restrict its validity.
+-   After configuration, the access key and secret access key will be displayed. The secret access key is displayed only once. We strongly recommend storing the secret key carefully and protecting it from unauthorized access.
+-   Alternatively, you can also choose to download the credentials in CSV format. This allows you to store and manage the credentials.
 
 {{% alert title="Caution" color="warning" %}}
 Please be extremely careful with the credentials, especially the secret access key. These keys are crucial for accessing your resources and should be handled with the utmost care. With this new access key, you can now smoothly access your S3 resources.

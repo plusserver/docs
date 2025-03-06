@@ -57,17 +57,16 @@ Example:
 ```bash
 aws s3api head-object --bucket <bucket> --key <file> --sse-customer-algorithm AES256 --sse-customer-key 23832BAC16516152E560F933F261BF03 --endpoint-url https://s3.example.com --profile <profile>
 
-
-            {
-                "AcceptRanges": "bytes",
-                "LastModified": "2022-05-02T19:20:02+00:00",
-                "ContentLength": 47,
-                "ETag": "\"f92ef20ab87e0e13951d9bee862e9f9a\"",
-                "ContentType": "binary/octet-stream",
-                "Metadata": {},
-                "SSECustomerAlgorithm": "AES256",
-                "SSECustomerKeyMD5": "rjGuMdjLpPV1eRuotNaPMQ=="
-            }
+{
+    "AcceptRanges": "bytes",
+    "LastModified": "2022-05-02T19:20:02+00:00",
+    "ContentLength": 47,
+    "ETag": "\"f92ef20ab87e0e13951d9bee862e9f9a\"",
+    "ContentType": "binary/octet-stream",
+    "Metadata": {},
+    "SSECustomerAlgorithm": "AES256",
+    "SSECustomerKeyMD5": "rjGuMdjLpPV1eRuotNaPMQ=="
+}
 ```
 
 ### Step 4: Download object again
