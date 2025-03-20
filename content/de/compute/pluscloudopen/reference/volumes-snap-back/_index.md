@@ -57,7 +57,7 @@ Volume-Typen helfen Ihnen bei der Auswahl des richtigen Speichers für Ihre Work
 Übersicht der veralteten Volume-Typen:
 | Volume-Typ | Verschlüsselt | Lesen IOPS | Schreiben IOPS | Lesen MB/s | Schreiben MB/s |
 |----------------------|---------- |-----------|------------|-----------|------------|
-| Nein | 2500 | 2500 | 256 | 256 |
+| \_\_DEFAULT\_\_  | Nein | 2500 | 2500 | 256 | 256 |
 | LUKS | Ja | 2500 | 2500 | 256 | 256 |
 
 {{% alert title="Hinweis" color="info" %}}
