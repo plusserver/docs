@@ -11,7 +11,7 @@ Die in der Tabelle aufgeführten Parameter stellen die spezifischen Konfiguratio
 | Parameter  | Type  | Default | Min | Max | Zulässige Werte |
 |------------|-------|---------|-----|-----|-----------------|
 | connect_timeout              | integer | 10 | 2 | 31536000 | |
-| innodb_buffer_pool_size     | integer | Abhängig von der Node Größe | 2097152 | 9223372036854776000 | |
+| innodb_buffer_pool_size     | integer | (*) | 2097152 | 9223372036854776000 | |
 | innodb_file_per_table        | string  | ON | | | ON, OFF |
 | innodb_flush_method          | string  | O_DIRECT | | | fsync, O_DSYNC, O_DIRECT, O_DIRECT_NO_FSYNC |
 | innodb_lock_wait_timeout     | integer | 50 | 0 | 100000000 | |
@@ -30,17 +30,17 @@ Die in der Tabelle aufgeführten Parameter stellen die spezifischen Konfiguratio
 | innodb_ft_sort_pll_degree       | integer | 2 | 1 | 32 | |
 | innodb_ft_total_cache_size      | integer | 640000000 | 32000000 | 1600000000 | |
 | innodb_ft_user_stopword_table   | string  | - | | | |
-| key_buffer_size              | integer | Abhängig von der Node Größe | 8 | | |
+| key_buffer_size              | integer | (*) | 8 | | |
 | local_infile                 | string  | OFF |  |  | ON, OFF |
 | lock_wait_timeout            | integer | 86400 | 0 | 31536000 | |
 | log_bin_trust_function_creators | string | OFF | | | ON, OFF |
 | max_binlog_size              | integer | 1073741824 | 4096 | 1073741824 | |
 | max_connect_errors           | integer | 100 | 1 | 4294967295 | |
-| max_connections             | integer | Abhängig von der Node Größe | 10 | 100000 |  |
+| max_connections             | integer | (*) | 10 | 100000 |  |
 | open_files_limit             | integer | 0 |  0         | 4294967295 | |
 | require_secure_transport     | string  | ON | | | ON, OFF |
 | skip_name_resolve            | string  | ON | | | ON, OFF |
-| table_open_cache            | integer | Abhängig von der Node Größe | 1 | 1048576 |  |
+| table_open_cache            | integer | (*) | 1 | 1048576 |  |
 | sql_mode                     | string  | STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION |  |  | ALLOW_INVALID_DATES, ANSI, ANSI_QUOTES, DB2, EMPTY_STRING_IS_NULL, ERROR_FOR_DIVISION_BY_ZERO, HIGH_NOT_PRECEDENCE, IGNORE_BAD_TABLE_OPTIONS, IGNORE_SPACE, MAXDB, MSSQL, MYSQL323, MYSQL40, NO_AUTO_CREATE_USER, NO_AUTO_VALUE_ON_ZERO, NO_BACKSLASH_ESCAPES, NO_DIR_IN_CREATE, NO_ENGINE_SUBSTITUTION, NO_FIELD_OPTIONS, NO_KEY_OPTIONS, NO_TABLE_OPTIONS, NO_UNSIGNED_SUBTRACTION, NO_ZERO_DATE, NO_ZERO_IN_DATE, ONLY_FULL_GROUP_BY, ORACLE, PAD_CHAR_TO_FULL_LENGTH, PIPES_AS_CONCAT, POSTGRESQL, REAL_AS_FLOAT, SIMULTANEOUS_ASSIGNMENT, STRICT_ALL_TABLES, STRICT_TRANS_TABLES, TIME_ROUND_FRACTIONAL|
 
 ### Erläuterung der Tabelle

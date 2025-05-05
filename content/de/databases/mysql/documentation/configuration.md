@@ -11,7 +11,7 @@ Die in der Tabelle aufgeführten Parameter stellen die spezifischen Konfiguratio
 | Parameter | Type | Standard | Min | Max | Zulässige Werte  |
 |-----------|------|----------|-----|-----|----------|
 | connect_timeout                 | integer | 10 | 2 | 31536000 |  |
-| innodb_buffer_pool_size         | integer | Abhängig von der Node Größe | 2097152 | 9223372036854775807 | |
+| innodb_buffer_pool_size         | integer | (*) | 2097152 | 9223372036854775807 | |
 | innodb_flush_method             | string | O_DIRECT | | | fsync, O_DSYNC, littlesync, nosync, O_DIRECT, O_DIRECT_NO_FSYNC |
 | innodb_redo_log_capacity        | integer | 104857600 | 8388608 | 137438953472 | |
 | innodb_lock_wait_timeout        | integer | 50 | 0 | 100000000 | |
@@ -29,9 +29,9 @@ Die in der Tabelle aufgeführten Parameter stellen die spezifischen Konfiguratio
 | innodb_ft_sort_pll_degree       | integer | 2          | 1        | 32                   | |
 | innodb_ft_total_cache_size      | integer | 640000000  | 32000000 | 1600000000           | |
 | innodb_ft_user_stopword_table   | string  | -          |          |                      | |
-| key_buffer_size                 | integer | Abhängig von der Node Größe | 0 | 4294967295 | |
+| key_buffer_size                 | integer | (*) | 0 | 4294967295 | |
 | max_connections                 | integer | 151 | 10 | 100000 | |
-| table_open_cache                | integer | Abhängig von der Node Größe | 1 | 1048576 | |
+| table_open_cache                | integer | (*) | 1 | 1048576 | |
 | log_bin_trust_function_creators | string | OFF | | | ON, OFF |
 | lock_wait_timeout               | integer | 31536000 | 1 | 31536000 | |
 | max_connect_errors              | integer | 100 | 1 | 4294967295 | |
