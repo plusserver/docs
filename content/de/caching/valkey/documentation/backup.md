@@ -4,7 +4,7 @@ linkTitle: "Backup und Restore"
 type: "docs"
 ---
 
-Unsere Caching-as-a-Service CDBaaS) beinhalten Backup- und Restore Funktionen.
+Unsere Caching-as-a-Service (CBaaS) beinhalten Backup- und Restore Funktionen.
 
 ## Backup
 
@@ -14,7 +14,7 @@ Backups werden automatisch jede Nacht durchgeführt. Wir verwenden Dateisystem-S
 
 ## Restore
 
-Im Falle einer Wiederherstellung muss eine neue DBaaS-Instanz mit der gleichen [Node- und Speichergröße](../../documentation/nodesize/) wie das Original erstellt werden. Die Daten können nur auf dieser neuen Instanz wiederhergestellt werden. Dies erfordert die Umkonfigurierung aller Anwendungen, welche die aus dem Backup erstellte Datenbankinstanz verwenden sollen.
+Im Falle einer Wiederherstellung muss eine neue CaaS-Instanz mit der gleichen [Node- und Speichergröße](../../documentation/nodesize/) wie das Original erstellt werden. Die Daten können nur auf dieser neuen Instanz wiederhergestellt werden. Dies erfordert die Umkonfigurierung aller Anwendungen, welche die aus dem Backup erstellte Datenbankinstanz verwenden sollen.
 
 <br>
 
