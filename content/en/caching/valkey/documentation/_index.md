@@ -4,5 +4,5 @@ linkTitle: "Dokumentation"
 type: "docs"
 weight: 20
 description: >
-    Erläuterungen zu verschiedenen Funktionen des Valkey-as-a-Service.
+    Documentation on working with various features of Valkey-as-a-Service.
 ---
