@@ -11,7 +11,7 @@ Caching-as-a-Service (CaaS) ist eine Sammlung von vollständig automatisierten M
 
 ### Unterstützte Valkey-Versionen
 
-* 8.0
+* 8.x
 
 ## Key Features
 
