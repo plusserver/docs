@@ -31,7 +31,7 @@ Es gibt zwei Möglichkeiten, unsere CaaS zu skalieren.
 
 ### Konfiguration
 
-Alles über die Datenbankkonfiguration finden Sie [hier](../../documentation/configuration/).
+Alles über die Konfiguration des Dienstes finden Sie [hier](../../documentation/configuration/).
 
 ## Allgemeine Informationen
 

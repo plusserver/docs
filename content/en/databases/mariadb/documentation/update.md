@@ -18,11 +18,3 @@ Simply provide us with the following information:
 
 - **Day of the Week:** Specify the day of the week that works best for your business, such as "Sunday."
 - **Start Time:** Select the preferred time for patching, for example, 4:15 a.m.
-
-<br><br>
-
-**If you need to customize your patch schedule, please [open a ticket](https://customerservice.plusserver.com/support/ticket-create) with our support team.**
-
-<br>
-
->*We're working on a feature to let you directly set the patch schedule in our customer portal. Until then we thank you for your patience as we improve our services.*

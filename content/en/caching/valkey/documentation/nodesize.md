@@ -53,4 +53,4 @@ Offers higher RAM allocation for memory-intensive workloads.
 
 >*The data disk size can only be increased. To reduce the disk size, you must create a new DBaaS instance and transfer the data manually.*
 
-The persistent disk size determines the capacity for storing your database data. Every Database-as-a-Service (DBaaS) instance requires a minimum disk size of 50GB. You can increase the disk size in increments of 50GB, up to a maximum of 500GB. Increasing the storage size doesn't cause an interruption of the DBaaS.
+The size of the persistent hard disk determines the capacity for caching your caching data. The caching data is stored here as snapshots at regular intervals. Each Caching-as-a-Service (CaaS) instance requires a minimum hard disk size of 50 GB. You can increase the hard disk size in increments of 50 GB up to a maximum of 500 GB. Increasing the disk size does not interrupt the CaaS.

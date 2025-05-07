@@ -1,0 +1,28 @@
+---
+title: "Configuration"
+linkTitle: "Configuration"
+type: "docs"
+---
+
+The parameters listed in the table represent the specific configuration settings that you can customize for the CaaS.
+
+| Parameter  | Type  | Default | Min | Max | Zulässige Werte |
+|------------|-------|---------|-----|-----|-----------------|
+| maxmemory-policy | string | volatile-lru |  | | volatile-lru, allkeys-lru, volatile-lfu, allkeys-lfu, volatile-random, allkeys-random, volatile-ttl, noeviction |
+
+### Column Explanation
+
+- **Parameter:** This column lists the configuration parameters.
+- **Type:** Indicates the data type of the configuration parameter (e.g., integer, string).
+- **Default:** Displays the default value for each parameter.
+- **Min:** Shows the minimum permissible value for numeric parameters.
+- **Max:** Displays the maximum permissible value for numeric parameters.
+- **Allowed Values:** Lists the values allowed for string parameters.
+
+<br>
+
+**For custom DBaaS configurations including parameters not listed above, please submit a [support ticket](https://customerservice.plusserver.com/support/ticket-create) to our team.**
+
+<br>
+
+>*We're working on a feature to let you directly change your DBaaS settings in our customer portal. Until then we thank you for your patience as we improve our services.*

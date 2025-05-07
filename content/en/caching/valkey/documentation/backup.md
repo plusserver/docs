@@ -1,25 +1,17 @@
 ---
-title: "Backup und Restore"
-linkTitle: "Backup und Restore"
+title: "Backup and Restore"
+linkTitle: "Backup and Restore"
 type: "docs"
 ---
 
-Unsere Caching-as-a-Service CDBaaS) beinhalten Backup- und Restore Funktionen.
+Our Caching-as-a-Service (CaaS) includes automated backup and restore functionality.
 
-## Backup
+## Backup Procedure
 
-Backups werden automatisch jede Nacht durchgeführt. Wir verwenden Dateisystem-Snapshots für die Backups. Standardmäßig werden die Backups 7 Tage lang aufbewahrt. Alle Backups werden verschlüsselt, um die Sicherheit zu erhöhen und Ihre Daten zu schützen.
+Backups are conducted automatically every night. We utilize filesystem snapshots for the backups. By default, backups are retained for 7 days. All backups are encrypted to provide enhanced security and protect your data.
 
->*Sie können die von *plusserver* erstellten Backups nicht direkt herunterladen.
+> *You cannot directly download the backups created by plusserver.
 
-## Restore
+## Restore Procedure
 
-Im Falle einer Wiederherstellung muss eine neue DBaaS-Instanz mit der gleichen [Node- und Speichergröße](../../documentation/nodesize/) wie das Original erstellt werden. Die Daten können nur auf dieser neuen Instanz wiederhergestellt werden. Dies erfordert die Umkonfigurierung aller Anwendungen, welche die aus dem Backup erstellte Datenbankinstanz verwenden sollen.
-
-<br>
-
-**Um einen Restore zu beantragen öffnen Sie bitte ein [Ticket](<https://customerservice.plusserver.com/support/ticket-create>) bei unserem Support-Team.**
-
-<br>
-
->*Wir arbeiten an einer Funktion, mit der Sie Backups direkt in unserem Kundenportal wiederherstellen können. Bis dahin danken wir Ihnen für Ihre Geduld, während wir unsere Dienste verbessern.*
+In the event of a restore, the process requires creating a new CaaS instance with the same [Node and Storage Size](../nodesize/) as the original. Data can only be restored to this new instance, necessitating configuration changes to any applications to point to the new CaaS.
