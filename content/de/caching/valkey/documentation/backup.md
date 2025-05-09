@@ -4,7 +4,7 @@ linkTitle: "Backup und Restore"
 type: "docs"
 ---
 
-Unsere Caching-as-a-Service (CBaaS) beinhalten Backup- und Restore Funktionen.
+Unsere Caching-as-a-Service (CaaS) beinhalten Backup- und Restore Funktionen.
 
 ## Backup
 
