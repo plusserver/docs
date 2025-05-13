@@ -101,5 +101,64 @@ Danach können Sie Prometheus und Grafana mit dem Kommando
 
 starten. 
 
+## Prometheus als Datasource für Grafana einrichten
+
+Um die vom Loadbalancer erzeugten Metriken zu visualisieren, muß im Grafana zunächst Prometheus als Datenquelle eingetragen werden. Dazu können Sie das folgende Skript verwenden in dem Sie es z. B. unter `/data/prometheus-grafana/setup_grafana_datasource.sh` speichern, mit `chmod +x /data/prometheus-grafana/setup_grafana_datasource.sh` ausführbar machen und dann auch ausführen. Passen Sie vorher auf jeden Fall das Passwort auf das weiter oben ausgewählte an!
+
+    #!/usr/bin/env bash
+    
+    GRAFANA_URL="http://localhost:3000"
+    DASHBOARD_ID="15828"
+    DATASOURCE_NAME="Prometheus"
+    DATASOURCE_TYPE="prometheus"
+    DATASOURCE_URL="http://prometheus:9090"
+    ADMIN_USER="admin"
+    ADMIN_PASSWORD="S3cure!"
+
+    # install if not da: curl
+    which curl &> /dev/null || sudo apt update && sudo apt install -y curl
+
+    # Warte, bis Grafana verfügbar ist
+    until $(curl --output /dev/null --silent --head --fail $GRAFANA_URL); do
+        echo "Warte auf Grafana..."
+        sleep 5
+    done
+
+    echo "Grafana verfügbar. Füge Datasource hinzu..."
+
+    # Überprüfe, ob die Datasource bereits existiert
+    if ! curl -s -u "$ADMIN_USER:$ADMIN_PASSWORD" "$GRAFANA_URL/api/datasources" | grep -q "\"name\":\"$DATASOURCE_NAME\""; then
+        # Füge die Prometheus Datasource hinzu
+        curl -s -X POST "$GRAFANA_URL/api/datasources" \
+            -H "Content-Type: application/json" \
+            -u "$ADMIN_USER:$ADMIN_PASSWORD" \
+            -d "{
+                \"name\": \"$DATASOURCE_NAME\",
+                \"type\": \"$DATASOURCE_TYPE\",
+                \"access\": \"proxy\",
+                \"url\": \"$DATASOURCE_URL\",
+                \"isDefault\": true,
+	        \"uid\": \"$DASHBOARD_NAME\",
+                \"jsonData\": {
+                    \"timeInterval\": \"5s\"
+                }
+            }"
+        echo "Datasource '$DATASOURCE_NAME' hinzugefügt."
+    else
+        echo "Datasource '$DATASOURCE_NAME' existiert bereits."
+    fi
+    echo "Datenquelle angelegt."
+
+
+## Octavia Dashboard in Grafana importieren
+
+Um auf die Grafana Weboberfläche zuzugreifen, müssen Sie zunächst mit ssh ein Port-Forwarding einrichten. Das funktioniert mit dem folgenden Kommando wobei Sie für "Floating-IP" die Floating-IP Adresse verwenden, die Sie der Instanz zugewiesen haben, auf der Sie eben per Docker Prometheus und Grafana gestartet haben.
+
+    ssh <Floating-IP> -l ubuntu -L 3000:localhost:3000 -L 9090:localhost:9090
+
+Danach sollten Sie in Ihrem lokalen Webbrowser unter der URL http://localhost:3000/ die Weboberfläche von Grafana aufrufen und sich mit dem User "admin" und dem von Ihnen vorher vergebenen Passwort dort einloggen können.
+
+Ist das geschehen, sollten Sie das passende Dashboard importieren, um die vom Prometheus gesammelten Daten visualisieren zu können.
+
 ![Bildschirmfoto des Quellmenüs](./2023-04-24_16-19.png)
 
