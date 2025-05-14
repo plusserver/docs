@@ -25,7 +25,7 @@ Zum Zeitpunkt der Erstellung dieser Dokumentation gelten folgende Werte:
 | Option                 | Taktrate           | Anzahl vCores       |
 |------------------------|--------------------|---------------------|
 | Standard vCore         | mindestens 2,0 GHz | ganzzahlig 1 bis 32 |
-| High-Performance vCore | mindestens 3,1 GHz | ganzzahlig 1 bis 32 |
+| High-Performance vCore | mindestens 3,1 GHz | ganzzahlig 1 bis 16 |
 
 Bitte beachten Sie hierbei:
 
