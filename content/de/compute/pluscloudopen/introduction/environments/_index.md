@@ -82,7 +82,7 @@ Eine Python-venv kann durch Ausführen von `python -m venv openstackclient` erst
 
 Die dritte Möglichkeit ist die Verwendung eines Docker-Containers, der alle benötigten OpenStack-Client-Bits enthält. Wir empfehlen, das openstackclient-Image von [OSISM](https://osism.tech/de) zu verwenden. Sie können diesen Container verwenden, wenn Sie eine lokale Docker- oder Podman-Installation auf Ihrer Workstation haben, indem Sie `docker pull quay.io/osism/openstackclient` bzw. `podman pull quay.io/osism/openstackclient` ausführen.
 
-Für Informationen zur Nutzung des OpenStackClients verweisen wir auf die [upstream documentation](https://docs.openstack.org/python-openstackclient/latest/index.html).
+Für Informationen zur Nutzung des OpenStackClients und seine [Installation](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html) verweisen wir auf die [upstream documentation](https://docs.openstack.org/python-openstackclient/latest/index.html).
 
 ### Terraform-Provider und Packer-Builder
 
