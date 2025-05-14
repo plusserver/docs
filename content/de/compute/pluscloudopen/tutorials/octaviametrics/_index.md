@@ -158,7 +158,40 @@ Um auf die Grafana Weboberfläche zuzugreifen, müssen Sie zunächst mit ssh ein
 
 Danach sollten Sie in Ihrem lokalen Webbrowser unter der URL http://localhost:3000/ die Weboberfläche von Grafana aufrufen und sich mit dem User "admin" und dem von Ihnen vorher vergebenen Passwort dort einloggen können.
 
-Ist das geschehen, sollten Sie das passende Dashboard importieren, um die vom Prometheus gesammelten Daten visualisieren zu können.
+Ist das geschehen, sollten Sie das passende Dashboard importieren, um die vom Prometheus gesammelten Daten visualisieren zu können. Klicken Sie dazu links im Menü auf den Menüpunkt "Dashboards". Sie sollten ungefähr folgende Website sehen:
 
-![Bildschirmfoto des Quellmenüs](./2023-04-24_16-19.png)
+![Bildschirmfoto Dashboards Menü](./grafana-create-dash.png)
+
+Nach dem Klick auf "Create Dashboard" kommt man zu einem Auswahlmenü, welches auch die Option "Import Dashboard" beinhaltet. Diese Option bitte per Klick auswählen:
+
+![Bildschirmfoto nach "Create Dashboard"](./grafana-newdash.png)
+
+Den aufpoppenden Requester bitte mit "Discard" schliessen:
+
+![Bildschirmfoto "Discard"](./grafana-discard.png)
+
+Im Importmenü muss zunächst die URL für das zu importierende Dashboard eingegeben werden. In unserem Fall ist das
+
+    https://grafana.com/grafana/dashboards/15828-openstack-octavia-amphora-load-balancer/
+
+Diese mit Klick auf "Load" laden.
+
+![Bildschirmfoto URL](./grafana-importurl.png)
+
+Im Importmenü muss jetzt die Datasource "Prometheus" ausgewählt werden:
+
+![Bildschirmfoto "Datasource"](grafana-choose-datasource.png)
+
+Danach bitte mit "Import" das Dashboard importieren:
+
+![Bildschirmfoto "Import"](./grafana-clickimport.png)
+
+Danach sollte sich das gerade importierte Dashboard so oder ähnlich öffnen:
+
+![Bildschirmfoto "Dashboard"](./grafana-dashboard.png)
+
+
+
+
+
 

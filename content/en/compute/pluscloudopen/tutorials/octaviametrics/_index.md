@@ -5,43 +5,43 @@ type: "docs"
 weight: 1
 date: 2025-05-13
 description: >
-  Erfassen Sie die Leistungsdaten Ihres Loadbalancers in einer eigenen Prometheus-Instanz
+  Collect performance data from your loadbalancer in your own prometheus instance and visualize it in grafana
 ---
 
-## Überblick
+## Overview
 
-Wenn Sie einen oder mehrere Loadbalancer (Octavia) in Ihren Projekten einsetzen, ist es sinnvoll deren Leistungsdaten z. B. mit Prometheus zu erfassen und dann z. B. mit Grafana zu visualisieren.
+If you use one or more load balancers (Octavia) in your projects, it makes sense to collect their performance data with Prometheus and then visualize it with Grafana, for example.
 
-In diesem Tutorial wird eine Möglichkeit vorgestellt, dies zu realisieren.
+This tutorial presents one way of doing this.
 
-## Voraussetzungen
+## Requirements
 
-Dieses Tutorial geht davon aus, dass Sie bereits über ein OpenStack Projekt in der pluscloud open verfügen, dass in diesem Projekt mindestens eine Instanz (z. B. mit Ubuntu) läuft, auf der auch bereits Docker installiert ist. Weiterhin sollte die Instanz bereits über eine Floating-IP und via SSH von Ihnen erreichbar sein. Zusätzlich ist es hilfreich, wenn Sie den OpenStack-Client installiert haben, um Ihre Umgebung zu verwalten.
+This tutorial assumes that you already have an OpenStack project in the pluscloud open, that at least one instance (e.g. with Ubuntu) is running in this project and that Docker is already installed on it. Furthermore, the instance should already be accessible by you via a floating IP and via SSH. It is also helpful if you have installed the OpenStack client to manage your environment.
 
-## Loadbalancer erzeugen
+## Create the loadbalancer
 
-Als erstes, wird der Loadbalancer und der Listener für Prometheus erzeugt:
+First we create the loadbalancer and the listener for Prometheus:
 
-    openstack loadbalancer create --name testlb --vip-subnet-id <Ihr-Subnetz-Name> --wait
+    openstack loadbalancer create --name testlb --vip-subnet-id <Your-Subnet-Name> --wait
     openstack loadbalancer listener create --name stats-listener --protocol PROMETHEUS --protocol-port 8088 testlb
 
-Für "Ihr-Subnetz-Name" müssen Sie Ihr gewünschtes Subnetz einsetzen. Mit dem OpenStack-Client können Sie diese einfach listen:
+For "Your-Subnet-Name", you must enter your desired subnet. You can easily list these with the OpenStack client:
 
     openstack subnet list
 
-Nachdem der Loadbalancer erzeugt ist, sollten Sie die `vip_address` mit
+After the loadbalancer has been created, you should find out the `vip_address` with
 
     openstack loadbalancer list
 
-ermitteln und für später merken. Das könnte z. B. so aussehen:
+and save it for later. That could look like this, for example:
 
     openstack loadbalancer show -c vip_address testlb
 
-Nachdem ein Loadbalancer mit dem entsprechenden Listener erstellt worden ist, werden jetzt noch die Werkzeuge erstellt, um die Metriken einzusammeln und zu visualisieren.
+After a load balancer has been created with the corresponding listener, the tools are now created to collect and visualize the metrics.
 
-## Prometheus und Grafana via docker-compose bereitstellen
+## Deploy prometheus and grafana via docker-compose
 
-Speichern Sie dazu die folgende Konfigurationsdatei unter dem Namen `docker-compose.yml` auf Ihrer OpenStack-Instanz in einem eigenen Verzeichnis (z. B. `/data/prometheus-grafana/`) ab (die drei Striche gehören dazu!). 
+To do this, save the following configuration file under the name `docker-compose.yml` on your OpenStack instance in a separate directory (e.g. `/data/prometheus-grafana/`) (the three dashes belong to it!).
 
     ---
      
@@ -74,13 +74,13 @@ Speichern Sie dazu die folgende Konfigurationsdatei unter dem Namen `docker-comp
           - GF_SECURITY_ADMIN_USER=admin
           - GF_SECURITY_ADMIN_PASSWORD=S3cure!
 
-Bitte setzen Sie Ihr eigenes Passwort für Grafana!
+Please set your own password for Grafana!
 
-Erzeugen Sie danach auf der Instanz das Verzeichnis `/etc/prometheus`
+Then create the directory `/etc/prometheus` on the instance
 
     mkdir -p /etc/prometheus
 
-und speichern Sie dort die folgende Konfigurationsdatei unter dem Namen `prometheus.yaml` ab.
+and save the following configuration file there under the name `prometheus.yaml`.
 
     global:
       scrape_interval: 15s
@@ -93,17 +93,15 @@ und speichern Sie dort die folgende Konfigurationsdatei unter dem Namen `prometh
       - targets: ['LB_IP:8088']
 
 
-Setzen Sie statt "LB_IP" dort bitte die IP-Adresse ein, die Sie vorher oben gespeichert hatten.
+Instead of “LB_IP”, please enter the IP address that you previously saved above.
 
-Danach können Sie Prometheus und Grafana mit dem Kommando
+You can then start Prometheus and Grafana with the following command
 
     /data/prometheus-grafana: docker compose up -d
 
-starten. 
+## Set up Prometheus as a datasource for Grafana
 
-## Prometheus als Datasource für Grafana einrichten
-
-Um die vom Loadbalancer erzeugten Metriken zu visualisieren, muß im Grafana zunächst Prometheus als Datenquelle eingetragen werden. Dazu können Sie das folgende Skript verwenden in dem Sie es z. B. unter `/data/prometheus-grafana/setup_grafana_datasource.sh` speichern, mit `chmod +x /data/prometheus-grafana/setup_grafana_datasource.sh` ausführbar machen und dann auch ausführen. Passen Sie vorher auf jeden Fall das Passwort auf das weiter oben ausgewählte an!
+In order to visualize the metrics generated by the loadbalancer, Prometheus must first be set up as the data source in Grafana. To do this, you can use the following script by saving it e.g. under `/data/prometheus-grafana/setup_grafana_datasource.sh`, making it executable with `chmod +x /data/prometheus-grafana/setup_grafana_datasource.sh` and then executing it. Be sure to change the password to the one selected above beforehand!
 
     #!/usr/bin/env bash
     
@@ -118,17 +116,17 @@ Um die vom Loadbalancer erzeugten Metriken zu visualisieren, muß im Grafana zun
     # install if not da: curl
     which curl &> /dev/null || sudo apt update && sudo apt install -y curl
 
-    # Warte, bis Grafana verfügbar ist
+    # Wait until Grafana is up
     until $(curl --output /dev/null --silent --head --fail $GRAFANA_URL); do
-        echo "Warte auf Grafana..."
+        echo "Waiting for Grafana..."
         sleep 5
     done
 
-    echo "Grafana verfügbar. Füge Datasource hinzu..."
+    echo "Grafana is up and running. Adding Datasource..."
 
-    # Überprüfe, ob die Datasource bereits existiert
+    # Test whether Datasource is already set up
     if ! curl -s -u "$ADMIN_USER:$ADMIN_PASSWORD" "$GRAFANA_URL/api/datasources" | grep -q "\"name\":\"$DATASOURCE_NAME\""; then
-        # Füge die Prometheus Datasource hinzu
+        # Add the Prometheus Datasource
         curl -s -X POST "$GRAFANA_URL/api/datasources" \
             -H "Content-Type: application/json" \
             -u "$ADMIN_USER:$ADMIN_PASSWORD" \
@@ -143,22 +141,54 @@ Um die vom Loadbalancer erzeugten Metriken zu visualisieren, muß im Grafana zun
                     \"timeInterval\": \"5s\"
                 }
             }"
-        echo "Datasource '$DATASOURCE_NAME' hinzugefügt."
+        echo "Datasource '$DATASOURCE_NAME' added."
     else
-        echo "Datasource '$DATASOURCE_NAME' existiert bereits."
+        echo "Datasource '$DATASOURCE_NAME' was already configured."
     fi
-    echo "Datenquelle angelegt."
+    echo "Datasource added."
 
 
-## Octavia Dashboard in Grafana importieren
+## Import Octavia Dashboard into Grafana
 
-Um auf die Grafana Weboberfläche zuzugreifen, müssen Sie zunächst mit ssh ein Port-Forwarding einrichten. Das funktioniert mit dem folgenden Kommando wobei Sie für "Floating-IP" die Floating-IP Adresse verwenden, die Sie der Instanz zugewiesen haben, auf der Sie eben per Docker Prometheus und Grafana gestartet haben.
+To access the Grafana web interface, you must first set up port forwarding via ssh. This works with the following command, using the floating IP address for “Floating IP” that you have assigned to the instance on which you have just started Prometheus and Grafana via Docker.
 
     ssh <Floating-IP> -l ubuntu -L 3000:localhost:3000 -L 9090:localhost:9090
 
-Danach sollten Sie in Ihrem lokalen Webbrowser unter der URL http://localhost:3000/ die Weboberfläche von Grafana aufrufen und sich mit dem User "admin" und dem von Ihnen vorher vergebenen Passwort dort einloggen können.
+You should then be able to browse the Grafana web interface in your local web browser under the URL http://localhost:3000/ and log in with the user “admin” and the password you previously entered.
 
-Ist das geschehen, sollten Sie das passende Dashboard importieren, um die vom Prometheus gesammelten Daten visualisieren zu können.
+Once this is done, you should import the appropriate dashboard to visualize the data collected by Prometheus. To do this, click on the "Dashboards" menu item in the menu on the left. You should see approximately the following website:
 
-![Bildschirmfoto des Quellmenüs](./2023-04-24_16-19.png)
+![Screenshot Dashboards Menü](./grafana-create-dash.png)
+
+After clicking on “Create Dashboard”, a selection menu appears, which also contains the option “Import Dashboard”. Please select this option by clicking on it:
+
+![Screenshot after "Create Dashboard"](./grafana-newdash.png)
+
+Please close the pop-up requester with "Discard":
+
+![Screenshot "Discard"](./grafana-discard.png)
+
+The URL for the dashboard to be imported must first be entered in the import menu. In our case, this is
+
+    https://grafana.com/grafana/dashboards/15828-openstack-octavia-amphora-load-balancer/
+
+Please load it with a click on "Load".
+
+![Screenshot URL](./grafana-importurl.png)
+
+From the import menu please choose the datasource "Prometheus":
+
+![Screenshot Datasource](grafana-choose-datasource.png)
+
+After this please import the dashboard with clik on "Import":
+
+![Screenshot "Import"](./grafana-clickimport.png)
+
+Now the freshly imported dashboard should at least open:
+
+![Bildschirmfoto "Dashboard"](./grafana-dashboard.png)
+
+
+
+
 
