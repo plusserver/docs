@@ -188,6 +188,9 @@ Now the freshly imported dashboard should at least open:
 
 ![Bildschirmfoto "Dashboard"](./grafana-dashboard.png)
 
+## Hint
+
+If you plan to use this in a production setup, make sure to add the option `--allowed-cidr` followed by an appropriate cidr range during the creation of the listener in order to allow only wanted ip-ranges to poll the listener.
 
 
 

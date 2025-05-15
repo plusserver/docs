@@ -190,6 +190,11 @@ Danach sollte sich das gerade importierte Dashboard so oder ähnlich öffnen:
 
 ![Bildschirmfoto "Dashboard"](./grafana-dashboard.png)
 
+## Tipp
+
+Wenn Sie planen diese Funktionen in einer Produktionsumgebung zu nutzen, sollten Sie die Option `--allowed-cidr` gefolgt von einem passenden Netzwerkbereich in CIDR-Notation bei der Erzeugung des Listeners verwenden damit dieser nur von den gewünschten IP-Netzen gepollt werden kann.
+
+
 
 
 
