@@ -180,7 +180,7 @@ From the import menu please choose the datasource "Prometheus":
 
 ![Screenshot Datasource](grafana-choose-datasource.png)
 
-After this please import the dashboard with clik on "Import":
+After this please import the dashboard with click on "Import":
 
 ![Screenshot "Import"](./grafana-clickimport.png)
 
