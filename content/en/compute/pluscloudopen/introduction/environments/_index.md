@@ -82,7 +82,7 @@ A Python venv can be created by executing `python -m venv openstackclient`. Chan
 
 The third option is to use a Docker container, which includes all the required OpenStackclient bits. We recommend to use the openstackclient image from [OSISM](https://osism.tech/en). You can pull this container if you have a local Docker or Podman installation on your workstation by executing `docker pull quay.io/osism/openstackclient` or `podman pull quay.io/osism/openstackclient` respectively.
 
-For information on the OpenStackClient please see the upstream documentation [upstream documentation](https://docs.openstack.org/python-openstackclient/latest/index.html).
+For information on the OpenStackClient and its [installation](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html) please see the upstream documentation [upstream documentation](https://docs.openstack.org/python-openstackclient/latest/index.html).
 
 ### Terraform provider and Packer builder
 
