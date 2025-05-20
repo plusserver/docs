@@ -9,7 +9,7 @@ weight: 30
 
 Suchen Sie zunächst nach dem entsprechenden [Vertrag.](https://customerservice.plusserver.com/billing/contracts)
 
-![Verträge](/images/content/04-msl/de/databases/get_credentials/1-contracts.png)
+![Verträge](/images/content/04-msl/de/caching/get_credentials/1-contracts.png)
 
 ### Vertragsdetails anzeigen
 
@@ -21,4 +21,4 @@ Rufen Sie den Vertrag auf und lassen Sie sich die Anmeldedaten unten in den Vert
 
 Sie sehen dann die Zugangsdaten, die Sie benötigen, um sich mit der CaaS zu verbinden.
 
-![Zugangsdaten](/images/content/04-msl/de/databases/get_credentials/3-credentials-view.png)
+![Zugangsdaten](/images/content/04-msl/de/caching/get_credentials/3-credentials-view.png)

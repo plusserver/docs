@@ -5,29 +5,21 @@ type: "docs"
 weight: 20
 ---
 
-> **Hinweis:** Im Folgenden wird MariaDB als Beispiel angeführt. Der Prozess gilt jedoch gleichermaßen für die anderen DBaaS-Typen.
-
 ### Kundenportal
 
 Sie starten immer in unserem [Cloudhub.](https://customerservice.plusserver.com)
 
-### Auswahl Datenbanken
+### Auswahl Service
 
-Navigieren Sie zunächst zu Cloud Services / Datenbanken.
+Navigieren Sie zunächst zu Cloud Services / Caching.
 
-![Auswahl Cloud Service DBaaS](/images/content/04-msl/de/databases/ordering/1-cloud_service_databases.png)
-
-### Auswahl Datenbanktyp
-
-Wählen Sie Ihre gewünschte DBaaS aus.
-
-![Auswahl DBaaS](/images/content/04-msl/de/databases/ordering/2-selection-database-type.png)
+![Auswahl Cloud Service CaaS](/images/content/04-msl/de/caching/ordering/1-cloud_service_caching.png)
 
 ### Auswahl Nodesize
 
 Wählen Sie nun die Größe bzw. Leistungsfähigkeit aus. Sie wissen noch nicht welche Leistung Sie benötigen? Dann wählen Sie die kleinste Node und skalieren bei Bedarf später.
 
-![Selection Nodesize](/images/content/04-msl/de/databases/ordering/3-selection-node-size.png)
+![Selection Nodesize](/images/content/04-msl/de/caching/ordering/3-selection-node-size.png)
 
 ### Auswahl der Speichergröße
 
@@ -45,7 +37,7 @@ Der Service ist über eine öffentliche IP erreichbar. Da diese frei aus dem Int
 
 Hier können Sie die [Region](../documentation/az/) auswählen, in der der Dienst bereitgestellt werden soll.
 
-![Auswahl der Region](/images/content/04-msl/de/databases/ordering/6-selection_region.png)
+![Auswahl der Region](/images/content/04-msl/de/caching/ordering/6-selection_region.png)
 
 ### Auswahl des Abrechnungsprofils
 
@@ -57,7 +49,7 @@ Sie sind neuer Kunde bei *plusserver* und bekommen noch keine Rechnung? Dann wä
 
 Prüfen Sie bitte über die Zusammenfassung Ihre eingegeben Daten. Lesen Sie bitte die Bestimmungen und Vereinbarungen und bestätigen diese. Erst danach können Sie die Bestellung mit dem Button ***jetzt kostenpflichtig bestellen*** abschließen.
 
-![Zusammenfassung der Bestellung](/images/content/04-msl/de/databases/ordering/8-order-overview.png)
+![Zusammenfassung der Bestellung](/images/content/04-msl/de/caching/ordering/8-order-overview.png)
 
 ### Bestellstatus verfolgen
 
@@ -68,4 +60,4 @@ Unmittelbar nach Ihrer Bestellung werden Sie zu [Bestellstatus](https://customer
 - failed: Es ist leider etwas schiefgegangen, bitte öffnen Sie ein [Ticket](https://customerservice.plusserver.com/support/ticket-create) hier im Portal, so dass wir Ihnen schnellstmöglich helfen können.
 - DONE: Herzlichen Glückwunsch, Ihr neuer DBaaS steht zur Verfügung
 
-![Bestellung erfolgreich abgeschlossen](/images/content/04-msl/de/databases/ordering/10-order_status.png)
+![Bestellung erfolgreich abgeschlossen](/images/content/04-msl/de/caching/ordering/10-order_status.png)
