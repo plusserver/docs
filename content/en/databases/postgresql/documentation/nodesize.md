@@ -54,7 +54,3 @@ Offers higher RAM allocation for memory-intensive workloads.
 >*The data disk size can only be increased. To reduce the disk size, you must create a new DBaaS instance and transfer the data manually.*
 
 The persistent disk size determines the capacity for storing your database data. Every Database-as-a-Service (DBaaS) instance requires a minimum disk size of 50GB. You can increase the disk size in increments of 50GB, up to a maximum of 500GB. Increasing the storage size doesn't cause an interruption of the DBaaS.
-
-**To customize your DBaaS Node Size, please [open a ticket](https://customerservice.plusserver.com/support/ticket-create) with our support team.**
-
->*We're working on a feature to let you directly modify the Node Size in our customer portal. Until then we thank you for your patience as we improve our services.*
