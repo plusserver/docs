@@ -17,21 +17,21 @@ Caching-as-a-Service (CaaS) ist eine Sammlung von vollständig automatisierten M
 
 **Automatisierter Rollout:**
 
-- Vollständig automatisierte Softwareinstallation und -Updates.
+* Vollständig automatisierte Softwareinstallation und -Updates.
 
 **Skalierbarkeit:**
 
-- Vertikale Skalierung durch Anpassung der Instanzgrößen.
-- Horizontale Skalierung durch Hinzufügen von Read Replicas.
+* Vertikale Skalierung durch Anpassung der Instanzgrößen.
+* Horizontale Skalierung durch Hinzufügen von Read Replicas.
 
 **Automatische Backups:**
 
-- Tägliche automatische Backups mit einer Standardaufbewahrungszeit von 7 Tagen.
+* Tägliche automatische Backups mit einer Standardaufbewahrungszeit von 7 Tagen.
 
 **Hohe Sicherheitsstandards:**
 
-- Verschlüsselte Übertragung der Daten.
+* Verschlüsselte Übertragung der Daten.
 
 **Automatische Software Updates:**
 
-- Caching-Instanzen erhalten automatische Updates, um auf dem neuesten Stand zu bleiben.
+ Caching-Instanzen erhalten automatische Updates, um auf dem neuesten Stand zu bleiben.
