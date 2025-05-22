@@ -6,7 +6,6 @@ weight: 10
 date: 2024-02-06
 description: >
     Everything you need for a perfect start with your S3 Storage
-
 ---
 
 Welcome to the plusstorage S3 customer guide and documentation.
