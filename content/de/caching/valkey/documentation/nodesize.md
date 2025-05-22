@@ -51,4 +51,4 @@ Bietet eine höhere RAM-Zuweisung für speicherintensive Workloads.
 
 Die Größe der persistenten Festplatte bestimmt die Kapazität für die Zwischenspeicherung Ihrer Cachingdaten. Hier werden in regelmäßigen Abständen die Caching Daten als Snapshots abgelegt. Jede Caching-as-a-Service (CaaS)-Instanz benötigt eine Mindestfestplattengröße von 50 GB. Sie können die Festplattengröße in Schritten von 50 GB bis zu einem Maximum von 500 GB erhöhen. Die Vergrößerung der Speichergröße führt nicht zu einer Unterbrechung des CaaS.
 
->*Die Größe des Datenträgers kann nur erhöht werden. Um die Plattengröße zu verringern, müssen Sie eine neue DBaaS-Instanz erstellen und die Daten manuell übertragen.*
+>*Die Größe des Datenträgers kann nur erhöht werden. Um die Plattengröße zu verringern, müssen Sie eine neue CaaS-Instanz erstellen und die Daten manuell übertragen.*

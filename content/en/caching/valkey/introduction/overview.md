@@ -38,4 +38,4 @@ Caching-as-a-Service (CaaS) is a collection of fully automated microservices tha
 
 **Automatic Software Upgrades:**
 
-- DBaaS instances receive automatic updates to keep them up to date.Ideally, only the one IP from which the service is used is enabled here.
+- CaaS instances receive automatic updates to keep them up to date.Ideally, only the one IP from which the service is used is enabled here.

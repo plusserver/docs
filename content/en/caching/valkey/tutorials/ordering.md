@@ -5,7 +5,6 @@ type: "docs"
 weight: 20
 ---
 
-> Note: Below, MariaDB is exemplified. However, the process applies equally to the other DBaaS types.
 
 ### Customer portal
 
@@ -13,10 +12,9 @@ You always start in our [customer portal.](https://customerservice.plusserver.co
 
 ### Select Databases
 
-First navigate to Cloud Services / Databases.
+First navigate to Cloud Services / Caching.
 
 ![Select Cloud Service CaaS](/images/content/04-msl/en/caching/ordering/1-cloud_service_caching.png)
-
 
 ### Select Nodesize
 
@@ -32,7 +30,7 @@ You always start with at least 50GB memory for your data.
 
 ### Enabling access
 
-The service is accessible via a public IP. As this is freely available from the Internet and could potentially be "attacked" by anyone, we intially block all access to the service. The mere protection provided by an encrypted connection with a user name and password is not sufficient. It is therefore necessary to specify the trusted sources from which the DBaaS should be accessible.
+The service is accessible via a public IP. As this is freely available from the Internet and could potentially be "attacked" by anyone, we intially block all access to the service. The mere protection provided by an encrypted connection with a user name and password is not sufficient. It is therefore necessary to specify the trusted sources from which the CaaS should be accessible.
 You must enable access from one or more external addresses or address ranges. Ideally, only the one IP from which the service is used is enabled here. In this example IP 123.123.123.123/32 and subnet 222.222.222.128/28 will be added to the trusted sources.
 
 ![Setting up external access](/images/content/04-msl/en/databases/ordering/5-selection-trusted-sources.png)
@@ -45,7 +43,7 @@ Here you can select the [region](https://docs.xaas.get-cloud.io/docs/01-dbaas/02
 
 ### Select the invoice profile
 
-Are you a new plusserver customer and do not yet receive an invoice? Then select *New invoice profile*. If you are already a customer, you can choose from existing invoice profiles and will receive the new DBaaS on an existing invoice, which you select in the next step.
+Are you a new plusserver customer and do not yet receive an invoice? Then select *New invoice profile*. If you are already a customer, you can choose from existing invoice profiles and will receive the new CaaS on an existing invoice, which you select in the next step.
 
 ![Select invoice profile](/images/content/04-msl/en/databases/ordering/7-selection-invoice-profile.png)
 
@@ -62,6 +60,6 @@ You will be redirected to [Order status](https://customerservice.plusserver.com/
 * new: Status directly after the order
 * processing: Status as soon as automatic provision has started
 * failed: Unfortunately something has gone wrong, please open a [ticket](https://customerservice.plusserver.com/support/ticket-create) here in the portal so that we can help you as quickly as possible.
-* DONE: Congratulations, your DBaaS instance is available
+* DONE: Congratulations, your CaaS instance is available
 
 ![Order successfully completed](/images/content/04-msl/en/caching/ordering/10-order_status.png)

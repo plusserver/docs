@@ -43,7 +43,7 @@ Stellen Sie sicher, dass Sie nur bekannte Quell-IP-Adressen zulassen, die Ihre A
 
 #### Verschlüsselung
 
-Wir verlangen eine sichere, verschlüsselte Kommunikation zwischen dem Kunden/der Anwendung und unserem DBaaS. Selbst wenn jemand den Netzwerkverkehr abfängt, kann er die Daten nicht sehen.
+Wir verlangen eine sichere, verschlüsselte Kommunikation zwischen dem Kunden/der Anwendung und unserem CaaS. Selbst wenn jemand den Netzwerkverkehr abfängt, kann er die Daten nicht sehen.
 
 Wenn Sie Zertifizierungsfehler erhalten, stellen Sie sicher, dass die erforderlichen [Let's Encrypt-(Zwischen)-Zertifikate](https://letsencrypt.org/certificates/) auf dem zugreifenden System verfügbar sind.
 
@@ -53,7 +53,7 @@ Alle Details zu den Backup- und Restore-Automatisierungen finden Sie in unserem 
 
 ### Aktualisierungen
 
-Erfahren Sie mehr über die Patchroutine für unser DBaaS im Dokument [Updates](../../documentation/update/).
+Erfahren Sie mehr über die Patchroutine für unser CaaS im Dokument [Updates](../../documentation/update/).
 
 ### Überwachung
 

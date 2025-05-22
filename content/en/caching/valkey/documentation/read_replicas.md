@@ -7,9 +7,9 @@ type: "docs"
 
 ## Read Replica
 
-Read Replicas enhance database scalability by distributing read operations across multiple DBaaS instances, effectively managing high read traffic without impacting the performance of the primary database. This approach is ideal for applications requiring fast read access, as it improves response times while preserving the primary database's ability to handle write operations efficiently.
+Read Replicas enhance database scalability by distributing read operations across multiple CaaS instances, effectively managing high read traffic without impacting the performance of the primary database. This approach is ideal for applications requiring fast read access, as it improves response times while preserving the primary database's ability to handle write operations efficiently.
 
-To establish a DBaaS Read Replica, the system utilizes a filesystem snapshot from the primary database instance to initialize the secondary instance. It then employs the database engine's native asynchronous replication to ensure the read replica remains consistently updated with any alterations occurring in the source database instance.
+To establish a CaaS Read Replica, the system utilizes a filesystem snapshot from the primary database instance to initialize the secondary instance. It then employs the database engine's native asynchronous replication to ensure the read replica remains consistently updated with any alterations occurring in the source database instance.
 
 ## Limitations
 

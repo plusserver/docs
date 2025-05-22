@@ -51,6 +51,6 @@ Offers higher RAM allocation for memory-intensive workloads.
 
 ## Storage Size
 
->*The data disk size can only be increased. To reduce the disk size, you must create a new DBaaS instance and transfer the data manually.*
+>*The data disk size can only be increased. To reduce the disk size, you must create a new CaaS instance and transfer the data manually.*
 
 The size of the persistent hard disk determines the capacity for caching your caching data. The caching data is stored here as snapshots at regular intervals. Each Caching-as-a-Service (CaaS) instance requires a minimum hard disk size of 50 GB. You can increase the hard disk size in increments of 50 GB up to a maximum of 500 GB. Increasing the disk size does not interrupt the CaaS.
