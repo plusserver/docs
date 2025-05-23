@@ -55,7 +55,7 @@ Speichern Sie dazu die folgende Konfigurationsdatei unter dem Namen `docker-comp
         container_name: prometheus
         restart: unless-stopped
         volumes:
-          - ./prometheus/:/etc/prometheus/
+          - /etc/prometheus/:/etc/prometheus/
           - prometheus_data:/prometheus
         ports:
           - 9090:9090
