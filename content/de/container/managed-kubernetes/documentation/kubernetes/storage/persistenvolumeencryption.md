@@ -44,3 +44,4 @@ spec:
 ```
 
 In diesem Beispiel sorgt die StorageClass "encrypted" dafür, dass das auf OpenStack erstellte Volume mit LUKS verschlüsselt wird.
+[Siehe pluscloud open für Details.](../../../../../compute/pluscloudopen/reference/volumes-snap-back/#encrypted-volumes)

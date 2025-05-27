@@ -25,7 +25,7 @@ At the time of writing, the following values apply:
 | Option                 | Clock speed      | Number of vCores          |
 |------------------------|------------------|---------------------------|
 | Standard vCore         | at least 2.0 GHz | whole number from 1 to 32 |
-| High-Performance vCore | at least 3.1 GHz | whole number from 1 to 32 |
+| High-Performance vCore | at least 3.1 GHz | whole number from 1 to 16 |
 
 Please note:
 

@@ -13,16 +13,17 @@ Jede pluscloud-open-Umgebung ist als "shared nothing" Infrastruktur konzipiert, 
 
 ## Umgebungen der pluscloud open
 
-| Umgebung | Region   | Availability Zone | Horizon/UI Endpunkt                   | Keystone Endpunkt                           |
-|----------|----------|-------------------|---------------------------------------|---------------------------------------------|
-| prod1    | DE-WEST  | DE-WEST-1         | <https://prod1.api.pco.get-cloud.io>  | <https://prod1.api.pco.get-cloud.io:5000>   |
-| prod2    | DE-NORTH | DE-NORTH-1        | <https://prod2.api.pco.get-cloud.io>  | <https://prod2.api.pco.get-cloud.io:5000>   |
-| prod3    | DE-NORTH | DE-NORTH-2        | <https://prod3.api.pco.get-cloud.io>  | <https://prod3.api.pco.get-cloud.io:5000>   |
-| prod4    | DE-WEST  | DE-WEST-2         | <https://prod4.api.pco.get-cloud.io>  | <https://prod4.api.pco.get-cloud.io:5000>   |
-| scs1     | DE-WEST  | DE-WEST-2         | <https://ui.gx-scs.sovereignit.cloud> | <https://api.gx-scs.sovereignit.cloud:5000> |
+| Region   | Availability Zone | Interner Name | Horizon/UI Endpunkt                   | Keystone Endpunkt                           | Lebenszyklus |
+|----------|-------------------|---------------|---------------------------------------|---------------------------------------------|--------------|
+| DE-WEST  | DE-WEST-1         | prod1         | <https://prod1.api.pco.get-cloud.io>  | <https://prod1.api.pco.get-cloud.io:5000>   | Aktiv        |
+| DE-NORTH | DE-NORTH-1        | prod2         | <https://prod2.api.pco.get-cloud.io>  | <https://prod2.api.pco.get-cloud.io:5000>   | Aktiv        |
+| DE-NORTH | DE-NORTH-2        | prod3         | <https://prod3.api.pco.get-cloud.io>  | <https://prod3.api.pco.get-cloud.io:5000>   | Aktiv        |
+| DE-WEST  | DE-WEST-2         | prod4         | <https://prod4.api.pco.get-cloud.io>  | <https://prod4.api.pco.get-cloud.io:5000>   | Aktiv        |
+| DE-WEST  | DE-WEST-2         | scs1          | <https://ui.gx-scs.sovereignit.cloud> | <https://api.gx-scs.sovereignit.cloud:5000> | Abgekündigt  |
+| DE-WEST  | DE-WEST-1         | scs2          | <https://scs2.api.pco.get-cloud.io>   | <https://scs2.api.pco.get-cloud.io:5000>    | Aktiv        |
 
 {{% alert title="Hinweis" color="info" %}}
-scs1 ist eine Entwicklungsumgebung, die ausschließlich im Kontext von [Sovereign Cloud Stack](https://scs.community) & [Gaia-X](https://gaia-x.eu) bereitgestellt wird.
+scs1 (Abgekündigt) und scs2 sind Entwicklungsumgebungen, die ausschließlich im Kontext von [Sovereign Cloud Stack](https://scs.community) & [Gaia-X](https://gaia-x.eu) bereitgestellt wird.
 {{% /alert %}}
 
 ## Zugriff
@@ -81,7 +82,7 @@ Eine Python-venv kann durch Ausführen von `python -m venv openstackclient` erst
 
 Die dritte Möglichkeit ist die Verwendung eines Docker-Containers, der alle benötigten OpenStack-Client-Bits enthält. Wir empfehlen, das openstackclient-Image von [OSISM](https://osism.tech/de) zu verwenden. Sie können diesen Container verwenden, wenn Sie eine lokale Docker- oder Podman-Installation auf Ihrer Workstation haben, indem Sie `docker pull quay.io/osism/openstackclient` bzw. `podman pull quay.io/osism/openstackclient` ausführen.
 
-Für Informationen zur Nutzung des OpenStackClients verweisen wir auf die [upstream documentation](https://docs.openstack.org/python-openstackclient/latest/index.html).
+Für Informationen zur Nutzung des OpenStackClients und seine [Installation](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html) verweisen wir auf die [upstream documentation](https://docs.openstack.org/python-openstackclient/latest/index.html).
 
 ### Terraform-Provider und Packer-Builder
 
@@ -96,3 +97,24 @@ Darüber hinaus gibt es einen [OpenStack Builder für Packer](https://developer.
 Ansible ist ein beliebtes Automatisierungswerkzeug, das für die Konfiguration und Verwaltung von Infrastrukturen verwendet werden kann. Ansible bietet eine Sammlung namens `openstack.cloud`, die eine Reihe von Ansible-Modulen für die Interaktion mit offenen pluscloud-open-Ressourcen enthält. Diese Module können zum Erstellen, Aktualisieren, Löschen und Abfragen von Ressourcen wie virtuellen Maschinen, Netzwerken, Sicherheitsgruppen und mehr verwendet werden.
 
 Die Sammlung "openstack.cloud" ist auf der offiziellen Ansible-Website unter <https://docs.ansible.com/ansible/latest/collections/openstack/index.html> verfügbar.
+
+## Maintenance
+
+### Platform Maintenance
+
+Eine Aktualisierung/Wartung der Plattform wird immer im Voraus angekündigt und umfasst alle Openstack-Komponenten. Dies hat normalerweise keine Auswirkungen auf Ihre Workload (VMs, Kubernetes-Cluster, ...). Es sind „nur“ die APIs betroffen, da die zugrundeliegenden Dienste neu gestartet werden müssen. Diese Wartungsarbeiten finden in der Regel einmal alle sechs Monate statt.
+
+### Hypervisor Maintenance
+
+Jeder Hypervisor muss in regelmäßigen Abständen aktualisiert und neu gestartet werden. Dies ist in der Regel einmal im Monat der Fall.
+
+Geplante Wartungsfenster finden in der Regel jeden Tag nach 22:00 Uhr MESZ statt.
+Ein gewöhnlicher Neustart des Hypervisors dauert ca. 15 Minuten, kann in Ausnahmefällen aber auch länger dauern.
+
+Bevor ein Hypervisor neu gestartet wird, versuchen wir, alle VMs live auf einen anderen zu migrieren, damit es keine Auswirkungen auf die VMs gibt. Es gibt jedoch einen Metadatenschlüssel namens **ps_automatic_maintenance**, der Sie darüber informiert, wann die Migration stattfinden wird, und Sie können entscheiden, ob Sie vor der Migration Maßnahmen ergreifen wollen oder nicht. Die meisten Anwendungen haben jedoch keine Probleme mit der Live-Migration.
+
+{{% alert title="Es gibt jedoch Ausnahmen!" color="warning" %}}
+Für [einige Flavors](../../reference/local-storage/) und [Server Groups](../../reference/instances-and-images/server-groups/) können wir die VMs nicht live migrieren. In diesem Fall werden wir die VMs für die Dauer des Hypervisor-Neustarts herunterfahren.
+
+Für mehr Informationen zu den Ausnahmen schauen sie in die [Details zu den Wartungsarbeiten](../../reference/maintenance).
+{{% /alert %}}

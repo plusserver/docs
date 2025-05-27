@@ -12,7 +12,7 @@ Um eine DBaaS-Read einzurichten, verwendet das System einen Dateisystem-Snapshot
 
 ## Beschränkungen
 
-- Read Replicas sind für die DBaaS MariaDB, MySQL und PostgreSQL verfügbar.  
+- Read Replicas sind für die DBaaS MariaDB, MySQL und PostgreSQL verfügbar.
 - Sie können maximal drei zusätzliche Read Replicas pro DBaaS erstellen.
 - Die Compute-Ressourcen und der Datenspeicher müssen mit dem ursprünglichen DBaaS übereinstimmen.
 - Es ist nicht möglich, einen sekundären Server in einen primären Server umzuwandeln, um Schreibzugriff zu ermöglichen.
@@ -25,11 +25,3 @@ Um Ihre Anwendung korrekt für den Einsatz von Read Replicas zu konfigurieren, i
 - Schreiboperationen: Verbindungen sollten ausschließlich an die primäre Instanz gerichtet sein, auf der Datenänderungen (INSERT, UPDATE, DELETE) erlaubt sind.
 
 - Leseoperationen: Verbindungen für Abfragen, die nur Daten abrufen (SELECT), sollten zu den Lese-Replikaten geleitet werden.
-
-<br>
-
-**Wenn Sie an der Nutzung unserer Read Replicas interessiert sind, eröffnen Sie bitte ein [Ticket](https://customerservice.plusserver.com/support/ticket-create) in unserem Kundenportal.**
-
-<br>
-
->*Wir arbeiten an einer Funktion, mit der Sie direkt in unserem Kundenportal Read-Replicas erstellen können. Bis dahin danken wir Ihnen für Ihre Geduld, während wir unseren Service verbessern.*
