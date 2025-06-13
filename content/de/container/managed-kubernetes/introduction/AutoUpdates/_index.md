@@ -2,7 +2,7 @@
 title: "AutoUpdates"
 linkTitle: "AutoUpdates"
 type: "docs"
-weight: 31
+weight: 50
 date: 2025-06-13
 ---
 
