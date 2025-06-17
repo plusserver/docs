@@ -11,14 +11,14 @@ description: >
 
 ### Restrictions
 
-The firewall, which is included with your dedicated server, is a simple packet filter that only filters incoming packets. The following additional restrictions apply:
+The firewall included with your dedicated server is a basic packet filter that only processes incoming packets. The following additional restrictions apply:
 
 * Removing (not deactivating) ALL firewall rules results in the firewall itself being deactivated - no more filtering takes place (Any-Any Accept)!
-* Conversely, this means: Adding a single rule always activates the firewall - only packets that have been explicitly enabled are allowed.
+* This also means: Adding a single rule always activates the firewall - only packets that have been explicitly enabled are allowed.
 * A maximum of 20 rules can be created.
 * We do not have any logs of rejected or accepted packets, so these cannot be used to assist with troubleshooting.
 
-### Manage
+### How to edit
 
 To edit the firewall rules of your server, log in to CloudHub and open the dashboard of your server (Cloud Services -> Dedicated Server -> Select Server). At the bottom of the page you will find "Firewall configurations".
 
@@ -35,15 +35,15 @@ If you want to add new firewall rules (1), please note the following:
 
 ![Firewall Regeln editieren](../bmc-firewall-2.png)
 
-The changes are then saved via "Confirm changes". It may take a few minutes for the changes to become active.
+The changes are then saved via "Save" & "Confirm changes". It may take a few minutes for the changes to become active.
 
 ## Hard disks
 
-Your server has two hard disks in the default configuration, that are configured as RAID1 and on which the operating system is installed. Any additional hard disks are not configured automatically - this must be done using configuration tools:
+In the default configuration, your server has two hard disks, configured as RAID 1, on which the operating system is installed. Any additional hard disks are not configured automatically - this must be done using configuration tools:
 
 ### Installation RAID management tool
 
-As we use servers from HPE, a proprietary tool from HPE is required to configure the RAID, which we provide on our mirror.
+To configure the RAID, you will need to use a proprietary HPE tool, which is available on our mirror.
 
 ```bash
 wget https://mirror.plusserver.com/hp-mcp/debian/pool/non-free/ssacli-6.45-8.0_amd64.deb -O ssacli.deb
@@ -57,9 +57,9 @@ wget https://mirror.plusserver.com/hp-mcp/ubuntu/pool/non-free/ssacli-6.45-8.0_a
 dpkg -i ssacli.deb
 ```
 
-### Configure raid
+### Configure RAID
 
-To configure the RAID, the identifier of the unassigned SSDs must be determined. This is done using the command `ssacli ctrl slot=0 pd all show`, the output then looks like this, for example:
+To configure the RAID, the identifier of the unassigned SSDs must be determined. This is done using the command `ssacli ctrl slot=0 pd all show`, ant the output looks like this, for example:
 
 ```bash
 ssacli ctrl slot=0 pd all show

@@ -31,7 +31,7 @@ We currently offer Debian 12 and Ubuntu 24.04 as pre-installable operating syste
 
 ### Access data
 
-In order to gain access to your system, a [SSH Public Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) must be provided and will be assigned to an initial user.
+In order to gain access to your system, an [SSH Public Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) must be provided and will be assigned to an initial user.
 The name of this user depends on the operating system chosen.
 
 | OS     | Username |
