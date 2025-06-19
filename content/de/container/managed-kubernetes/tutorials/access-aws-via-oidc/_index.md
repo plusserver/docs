@@ -8,14 +8,14 @@ date: 2025-06-16
 
 ## Einführung
 
-Dieses Tutorial zeigt Ihnen, wie Sie Ihren Shoot Kubernetes Cluster für den sicheren Zugriff auf AWS-Ressourcen
+Dieses Tutorial beschreibt, wie Sie Ihren Shoot Kubernetes Cluster für den sicheren Zugriff auf AWS-Ressourcen
 einrichten, indem Sie Ihren API-Server so konfigurieren, dass er als OIDC-Provider für AWS fungiert.
 Danach können Sie einen ServiceAccount mit automatisch rotierenden Token erstellen, um auf
-AWS-Ressourcen zuzugreifen. Hier finden Sie ein Beispiel für den Abruf von Daten aus dem AWS Parameter Store.
+AWS-Ressourcen zuzugreifen. Am Ende des Tutorials wird exemplarisch der Zugriff auf den AWS Parameter Store demonstriert.
 
-## Konfigurarion
+## Konfiguration
 
-In den folgenden Schritten werden die folgenden beiden Ressourcen referenziert. Es wird empfohlen, sie als Variablen zu setzen.
+In den folgenden Schritten werden der Kubernetes API-Server und die AWS Account ID häufig referenziert. Es wird empfohlen, sie als Variablen zu setzen.
 
 ```bash
 export API_SERVER="api.shoot.project.internal.prod.gardener.get-cloud.io"
@@ -24,16 +24,16 @@ export AWS_ACCOUNT_ID="nnnnnnnnnnnnnn"
 
 ### Shoot Konfiguration
 
-Der API-Server Ihres Shoots fungiert bereits als OIDC-Provider. Allerdings nur für interne Ressourcen. Jeder Shoot ist mit einer eigenen privaten Root-CA signiert, die nur dem Cluster selbst bekannt ist. Die folgenden Schritte
+Der API-Server Ihres Shoots dient bereits als OIDC-Provider. Allerdings nur für interne Ressourcen. Jeder Shoot ist mit einer eigenen privaten Root-CA ausgestattet, die nur dem Cluster selbst bekannt ist. Die folgenden Schritte
 erlauben den Zugriff auf OpenID Connect spezifische URLs, so dass diese von AWS genutzt werden können.
 
-In der Spezifikation Ihres Shoot müssen Sie die anonyme Authentifizierung aktivieren:
+In der Spezifikation Ihres Shoot muss anonyme Authentifizierung aktiviert werden:
 
 ```bash
-  #   enableAnonymousAuthentication: false
-  ```
+  enableAnonymousAuthentication: true
+```
 
-Danach müssen Sie eine Clusterrolle und eine Clusterrollenbindung erstellen, um den Zugriff zu ermöglichen:
+Danach brauchen wir noch eine Clusterrolle und eine Clusterrollenbindung, um den Zugriff zu ermöglichen:
 
 ```bash
 apiVersion: rbac.authorization.k8s.io/v1
@@ -60,10 +60,15 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-Wenden Sie dieses Manifest an. Dann sollten Sie in der Lage sein, über Curl auf die folgenden Links zuzugreifen:
+Jetzt spielen wir das Manifest ein. Danach sollten über Curl die folgenden Links erreichbar sein:
 
 * https://$API_SERVER/.well-known/openid-configuration
 * https://$API_SERVER/openid/v1/jwks
+
+{{% alert title="Note" color="info" %}}
+Das Feature Anonymous Requests ist bereits deprecated, wird aber noch eine Weile funktionieren. Ab Kubernetes 1.32 wird das Feature
+[Anonymous Authenticator Configuration](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#anonymous-authenticator-configuration) zur Verfügung stehen, welches künftig benutzt werden sollte.
+{{% /alert %}}
 
 ### AWS Konfiguration
 
@@ -129,9 +134,11 @@ aws iam attach-role-policy --role-name KubernetesParameterStoreRole \
   --policy-arn arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess
 ```
 
+Das war's für die AWS Seite.
+
 ## Beispiel: Zugriff auf den AWS Parameter Store
 
-Zuerst brauchen wir einen ServiceAccount, der mit der AWS-Rolle verbunden ist:
+Zunächst brauchen wir einen ServiceAccount, der mit der AWS-Rolle verbunden ist:
 
 ```bash
 apiVersion: v1
@@ -140,7 +147,7 @@ metadata:
   name: aws-parameter-reader
   namespace: default
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::$AWS_ACCOUNT_ID$:role/KubernetesParameterStoreRole
+    eks.amazonaws.com/role-arn: arn:aws:iam::$AWS_ACCOUNT_ID:role/KubernetesParameterStoreRole
 ```
 
 Nun erstellen wir einen Pod, der diesen ServiceAccount verwendet. Außerdem verwenden wir die Funktion „Projected Volume“, um diesen ServiceAccount über ein automatisch rotierendes Token zu nutzen:
@@ -187,10 +194,10 @@ Nun temporäre Zugriffscredentials anfordern:
 
 ```bash
 
-aws sts assume-role-with-web-identity --role-arn arn:aws:iam::$AWS_ACOUNT_ID$:role/KubernetesParameterStoreRole  --role-session-name test-session --web-identity-token "$(cat /var/run/secrets/eks.amazonaws.com/serviceaccount/token)"
+aws sts assume-role-with-web-identity --role-arn arn:aws:iam::$AWS_ACOUNT_ID:role/KubernetesParameterStoreRole  --role-session-name test-session --web-identity-token "$(cat /var/run/secrets/eks.amazonaws.com/serviceaccount/token)"
 ```
 
-Wenn alles geklappt hat, dann gibt es eine JSON Antwort mit den Daten **AccessKeyId**, **SecretAccessKey** und **SessionToken**.
+Wenn alles geklappt hat, dann gibt es eine JSON Antwort mit **AccessKeyId**, **SecretAccessKey** und **SessionToken**.
 
 Damit können wir nun auf den AWS Parameter Store zugreifen:
 
@@ -202,11 +209,11 @@ export AWS_SESSION_TOKEN="SessionToken"
 aws sts get-caller-identity
 {
     "UserId": "ARONNNNTJ4IJAYEHS6KGR:test-session",
-    "Account": "AWS_ACCOUNT_ID$",
-    "Arn": "arn:aws:sts::AWS_ACCOUNT_ID$:assumed-role/KubernetesParameterStoreRole/test-session"
+    "Account": "AWS_ACCOUNT_ID",
+    "Arn": "arn:aws:sts::AWS_ACCOUNT_ID:assumed-role/KubernetesParameterStoreRole/test-session"
 }
 
-aws ssm get-parameter --name /amachowiak/cronjobserver/image-id
+aws ssm get-parameter --name /demo/demo/image-id
 {
     "Parameter": {
         "Name": "/demo/demo/image-id",
