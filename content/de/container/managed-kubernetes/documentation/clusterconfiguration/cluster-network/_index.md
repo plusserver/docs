@@ -108,7 +108,7 @@ Mit der obigen Konfiguration kann ein Shoot-Cluster höchstens **32 Knoten** hab
 
 ## Load Balancer mit privater IP-Adresse
 
-Für den Load Balancer kann eine beliebige, freie IP-Adresse aus dem Node(1)-Netzwerk 10.250.0.0/16 des jeweiligen PSKE-Clusters verwendet werden.
+Für den Load Balancer kann eine beliebige, freie IP-Adresse aus dem Node-Netzwerk 10.250.0.0/16 des jeweiligen PSKE-Clusters verwendet werden.
 
 Konfigurationsoptionen:
 
@@ -124,8 +124,7 @@ Konfigurationsoptionen:
 - loadBalancerIP: 10.250.0.2
   - Gibt die IP-Adresse des Load Balancers an.
 
-  Bei einem internen Load Balancer (openstack-internal-load-balancer: true) wird hier die private IPv4-Adresse innerhalb des Clusternetzes definiert
-  Alternativ kann hier eine bereits reservierte Floating IP verwendet werden, wenn openstack-internal-load-balancer auf false gesetzt ist.
+Bei einem internen Load Balancer (openstack-internal-load-balancer: true) wird hier die private IPv4-Adresse innerhalb des Clusternetzes definiertAlternativ kann hier eine bereits reservierte Floating IP verwendet werden, wenn openstack-internal-load-balancer auf false gesetzt ist.
 
 ```yaml
   service:
