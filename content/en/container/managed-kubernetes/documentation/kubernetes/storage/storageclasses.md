@@ -12,12 +12,14 @@ plusserver provides the following StorageClasses for  your PSKE:
 
 ```bash
 kubectl get storageclasses
-NAME                             PROVISIONER                RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION
-csi-cinder-sc-delete (default)   cinder.csi.openstack.org   Delete          Immediate           true
-csi-cinder-sc-retain             cinder.csi.openstack.org   Retain          Immediate           true
+NAME                  PROVISIONER                RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION
+default (default)     cinder.csi.openstack.org   Delete          WaitForFirstConsumer   true                   
+default-class         cinder.csi.openstack.org   Delete          WaitForFirstConsumer   true                   
+encrypted             cinder.csi.openstack.org   Delete          Immediate              false
+csi-cinder-sc-retain  cinder.csi.openstack.org   Retain          Immediate              true
 ```
 
-- **csi-cinder-sc-delete** is the default StorageClass and is used if no explicit StorageClass is specified in the PersistentVolumeClaim.
+- **default (default)** is the default StorageClass and is used if no explicit StorageClass is specified in the PersistentVolumeClaim.
 
 ## Provisioner
 

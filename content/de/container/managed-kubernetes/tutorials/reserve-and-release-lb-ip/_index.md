@@ -48,3 +48,20 @@ spec:
 ## Freigabe von FloatingIPs, welche nicht mehr bekannt sind
 
 Wenn Sie nicht mehr wissen, welche Floating-IPs Sie aktuell nutzen, öffnen Sie bitte ein Support-Ticket in Ihrem Kundenportal.
+
+## Anpassung der LoadBalancer Default-Timeouts
+
+Der Default-Timeout für OpenStack LoadBalancer liegt bei 30 Sekunden und kann über folgende Annotationen angepasst werden:
+
+```yaml
+metadata:
+    annotations:
+        loadbalancer.openstack.org/timeout-client-data: "70000"
+        loadbalancer.openstack.org/timeout-member-data: "70000"
+```
+
+Erklärung der Parameter:
+- timeout-client-data: Legt fest, wie lange der Loadbalancer auf Daten vom Client wartet (in Millisekunden).
+- timeout-member-data: Legt fest, wie lange der Loadbalancer auf Daten vom Backend (Member) wartet (ebenfalls in Millisekunden).
+
+Weitere Konfigurationsmöglichkeiten sind in der offiziellen Dokumentation unter diesem [Link](https://github.com/kubernetes/cloud-provider-openstack/blob/master/docs/openstack-cloud-controller-manager/expose-applications-using-loadbalancer-type-service.md#service-annotations) zu finden.
