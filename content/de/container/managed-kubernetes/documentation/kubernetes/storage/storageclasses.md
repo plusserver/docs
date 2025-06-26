@@ -19,7 +19,7 @@ encrypted             cinder.csi.openstack.org   Delete          Immediate      
 csi-cinder-sc-retain  cinder.csi.openstack.org   Retain          Immediate              true
 ```
 
-- **csi-cinder-sc-delete** ist die Standard StorageClass und wird verwendet, wenn im PersistentVolumeClaim keine explizite StorageClass angegeben ist.
+- **default (default)** ist die Standard StorageClass und wird verwendet, wenn im PersistentVolumeClaim keine explizite StorageClass angegeben ist.
 
 ## Provisioner
 
