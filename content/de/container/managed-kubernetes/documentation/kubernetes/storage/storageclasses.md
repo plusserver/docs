@@ -12,9 +12,11 @@ plusserver stellt die folgenden StorageClasses für "plusserver Kubernetes Engin
 
 ```bash
 kubectl get storageclasses
-NAME                             PROVISIONER                RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION
-csi-cinder-sc-delete (default)   cinder.csi.openstack.org   Delete          Immediate           true
-csi-cinder-sc-retain             cinder.csi.openstack.org   Retain          Immediate           true
+NAME                  PROVISIONER                RECLAIMPOLICY   VOLUMEBINDINGMODE      ALLOWVOLUMEEXPANSION
+default (default)     cinder.csi.openstack.org   Delete          WaitForFirstConsumer   true                   
+default-class         cinder.csi.openstack.org   Delete          WaitForFirstConsumer   true                   
+encrypted             cinder.csi.openstack.org   Delete          Immediate              false
+csi-cinder-sc-retain  cinder.csi.openstack.org   Retain          Immediate              true
 ```
 
 - **csi-cinder-sc-delete** ist die Standard StorageClass und wird verwendet, wenn im PersistentVolumeClaim keine explizite StorageClass angegeben ist.
