@@ -2,7 +2,7 @@
 title: "My Account"
 linkTitle: "My Account"
 type: "docs"
-weight: 1
+weight: 5
 description: >
     Information about your account settings in CloudHub
 ---
