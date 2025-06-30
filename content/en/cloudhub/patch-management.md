@@ -2,7 +2,7 @@
 title: "Patch Management"
 linkTitle: "Patch Management"
 type: "docs"
-weight: 1
+weight: 8
 description: >
     Information about the patch management in CloudHub
 ---
