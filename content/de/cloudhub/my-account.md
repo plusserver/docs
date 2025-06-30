@@ -2,7 +2,7 @@
 title: "Mein Konto"
 linkTitle: "Mein Konto"
 type: "docs"
-weight: 1
+weight: 5
 description: >
     Informationen zu den Kontoeinstellungen im CloudHub
 ---

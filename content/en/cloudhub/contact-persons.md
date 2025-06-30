@@ -2,7 +2,7 @@
 title: "Ansprechpartner"
 linkTitle: "Ansprechpartner"
 type: "docs"
-weight: 1
+weight: 3
 description: >
     Information for Contact Persons in CloudHub
 ---
