@@ -1,10 +1,10 @@
 ---
-title: "Patch Overview"
-linkTitle: "Patch Overview"
+title: "Patch Management"
+linkTitle: "Patch Management"
 type: "docs"
 weight: 1
 description: >
-    Information about the patch overview in CloudHub
+    Information about the patch management in CloudHub
 ---
 
 ## Overview
