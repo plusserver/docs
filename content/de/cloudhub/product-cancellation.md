@@ -1,55 +1,35 @@
 ---
-title: "Ticketmodul"
-linkTitle: "Ticketmodul"
+title: "Produkte kündigen"
+linkTitle: "Produkte kündigen"
 type: "docs"
 weight: 11
 description: >
-    Informationen zum Erstellen und Anzeigen von Tickets
+    Informationen zur Kündigung von Produkten im CloudHub
 ---
 
-## Ticketübersicht anzeigen
 
-### Schritt 1: Support-Bereich öffnen
+## Produkte kündigen Schritt für Schritt
 
-![Support in der Sidebar auswählen](../img/ticket-modul/a1.png)\
-Wähle in der linken Seitenleiste den Button „Ticketübersicht“ aus.
+### Schritt 1: Produkt-Dashboard öffnen
 
-### Schritt 2: Ticketübersicht
+![Produkt Dashboard in der Sidebar auswählen](../img/canceling-products/k1.png)\
+Wähle in der linken Seitenleiste den Button „Produkt Dashboard“ aus.
 
-![Ticketübersicht in der Sidebar auswählen](../img/ticket-modul/a2.png)\
-Hier befindet sich eine Tabelle mit den Support-Tickets. Es gibt zwei Tabs: einen, in dem nur die offenen Tickets angezeigt werden, und einen, in dem alle Tickets angezeigt werden. Die angezeigten Tickets lassen sich nach jeder Spalte der Tabelle sortieren.
+### Schritt 2: Produktart auswählen
 
-## Ticket erstellen
+![In der Seitenleiste die Produktart auswählen](../img/canceling-products/k2.png)\
+Wähle die Produktart, die gekündigt werden soll (z. B. Pluscloud Open, Datenbanken etc.).
 
-### Schritt 1: Kategorieauswahl
+### Schritt 3: Vertrag auswählen
 
-![Kategorie für das Ticket auswählen](../img/ticket-modul/a3.png)\
-Der Prozess der Ticketerstellung besteht aus drei Schritten, beginnend mit der Auswahl der Kategorie. Hat man vor Kurzem bereits ein Ticket begonnen, aber nicht abgeschickt (sondern ist woanders im CloudHub hingegangen), hat man die Möglichkeit, den Entwurf wiederherzustellen.
+![Vertrag auswählen](../img/canceling-products/k3.png)\
 
-### Schritt 2: Produkt/Leistung auswählen
+### Schritt 4: Kündigung einleiten
 
-![Produkt/Leistung auswählen](../img/ticket-modul/a4.png)\
-Hier werden alle Verträge aufgelistet; diese lassen sich auch durchsuchen.
+![Klicke auf den Button "Produkt kündigen"](../img/canceling-products/k4.png)\
+Klicke auf den Button „Produkt kündigen“.
 
-### Schritt 3: Details eingeben
+### Schritt 5: Kündigung bestätigen
 
-![Details zu dem Ticket angeben](../img/ticket-modul/a5.png)\
-Je nach Auswahl im Schritt „Kategorieauswahl“ wird hier abgefragt, worum es genau geht – inklusive Anhänge sowie Informationen für Rückfragen und weiteren Austausch.
-
-Es können weitere Empfänger im CC angegeben werden.
-
-Falls bei der Ticketkategorie „Service Requests“ ausgewählt wurde, besteht nun die Möglichkeit, vorgefertigte Templates auszufüllen oder ohne Template fortzufahren.
-
-### Schritt 4: Templates anzeigen lassen
-
-![Templates anzeigen lassen](../img/ticket-modul/a5.5.png)\
-
-### Schritt 5: Auswahl der Templates
-
-![Auswahl der Templates](../img/ticket-modul/a6.png)\
-Ein Template sieht dann zum Beispiel so aus:
-
-### Schritt 6: Template ausfüllen
-
-![Das Formular vom Template ausfüllen](../img/ticket-modul/a7.png)\
-Das Formular des Templates ausfüllen und anschließend auf den Button „Ticket erstellen“ klicken.
+![Pop-up-Fenster bestätigen](../img/canceling-products/k5.png)\
+Ein Pop-up-Fenster öffnet sich – validiere die Kündigung, um den Vorgang abzuschließen
