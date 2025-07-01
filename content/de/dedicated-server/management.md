@@ -15,12 +15,12 @@ Die Firewall, welche bei Ihrem Dedicated Server inkludiert ist, ist ein einfache
 
 * Das Entfernen (nicht das Deaktivieren) ALLER Firewallregeln führt dazu, dass die Firewall an sich deaktiviert wird - es findet keinerlei Filterung mehr statt (Any-Any Accept)!
 * Umgekehrt bedeutet dies: Das Hinzufügen einer einzelnen Regel aktiviert die Firewall grundsätzlich - es werden nur noch Pakete erlaubt, welche explizit freigeschaltet wurden.
-* Es können maximal 26 Regeln angelegt werden.
+* Es können maximal 20 Regeln angelegt werden.
 * Uns liegen keinerlei Logs von abgelehnten oder akzeptierten Paketen vor, diese können daher auch nicht zur Unterstützung bei der Entstörung herangezogen werden.
 
 ### Verwalten
 
-Um die Firewallregeln Ihres Systems zu editieren, melden Sie sich im CloudHub an und öffnen das Dashboard Ihres Servers (Produkt-Dashboard -> Bare Metal -> Server auswählen). Am Ende der Seite finden Sie den Punkt "Firewall-Konfigurationen".
+Um die Firewallregeln Ihres Systems zu editieren, melden Sie sich im CloudHub an und öffnen das Dashboard Ihres Servers (Produkt-Dashboard -> Dedicated Server -> Server auswählen). Am Ende der Seite finden Sie den Punkt "Firewall-Konfigurationen".
 
 Die Firewallregeln sind in IPv4-/IPv6-Regeln unterteilt (1). Um die Regeln zu editieren, wechseln Sie in den Bearbeitungsmodus (2).
 
