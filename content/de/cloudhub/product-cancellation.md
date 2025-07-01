@@ -2,7 +2,7 @@
 title: "Ticketmodul"
 linkTitle: "Ticketmodul"
 type: "docs"
-weight: 12
+weight: 11
 description: >
     Informationen zum Erstellen und Anzeigen von Tickets
 ---
