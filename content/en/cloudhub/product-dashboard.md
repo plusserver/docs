@@ -24,7 +24,7 @@ Level 2: Here you will find an overview of all products in a category. In additi
 Level 3: Here you will find a detailed product view and related information: parameters from the order wizard/product, monitoring (own release), consumption data (own release) and a filtered ticket overview (only the tickets for this product). You can also cancel your product/contract by ticket here.\
 ![Example Level 3](../img/product-dashboard/structure-product-dashboard-3.png)
 
-Roles and permissions for the dashboard are managed in the “User Management” area.
+Roles and permissions for the dashboard are managed in the “User Management” area.\
 ![Example Role and Permissions Management for Product-Dashboard](../img/product-dashboard/roles-and-rights-management.png)
 
 ### The entry page - Level 1
@@ -38,7 +38,7 @@ In addition to this written how-to, you can view an explanation video (approx. 7
 #### My booked products
 
 Sorted by category, you can see the active products that you have ordered in the CloudHub.
-This also means that you do not see any products that you have booked through other channels. And you will not be shown any products for which the termination date of the contracts has been exceeded by at least 14 days.
+This also means that you do not see any products that you have booked through other channels. And you will not be shown any products for which the termination date of the contracts has been exceeded by at least 14 days.\
 ![Level 1: Booked products displayed within categories (tabs) and type (tiles)](../img/product-dashboard/lvl-1-booked-products.png)
 
 If you click on the tile, you will be taken to level 2 and see an overview of the selected product type. You can also click on the shopping cart symbol on the tile to access the product's order wizard.
@@ -85,7 +85,7 @@ If your product is “Cancelled”, use this button to open a ticket directly fo
 
 The following links can be found on level 2:
 Product documentation: This is where you will find all the information about the product you are currently viewing.
-Order more: From here you can go directly to the order process for a new product of the type/category you are currently viewing.
+Order more: From here you can go directly to the order process for a new product of the type/category you are currently viewing.\
 ![Level 2: Quick Links via Button](../img/product-dashboard/lvl-2-quick-links-1.png)
 
 ### The detaileed product view - Level 3

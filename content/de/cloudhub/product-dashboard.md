@@ -15,7 +15,7 @@ In der folgenden Anleitung erklären wir Ihnen die verschiedenen Bereiche des Pr
 
 ## Aufbau des Produkt-Dashboards
 
-Level 1: Das ist die Einstiegsseite für das Dashboard. Hier finden Sie die Übersicht Ihrer gebuchten Produkte (strukturiert nach Kategorien) sowie weiterführende Links auf andere CloudHub-Bereiche und unsere Produktdokumentation. Über einen Klick auf eine Produktkachel gelangen Sie auf Level 2.
+Level 1: Das ist die Einstiegsseite für das Dashboard. Hier finden Sie die Übersicht Ihrer gebuchten Produkte (strukturiert nach Kategorien) sowie weiterführende Links auf andere CloudHub-Bereiche und unsere Produktdokumentation. Über einen Klick auf eine Produktkachel gelangen Sie auf Level 2.\
 ![Beispiel Level 1](../img/product-dashboard/structure-product-dashboard-1.png)
 
 Level 2: Hier finden Sie eine Übersicht aller Produkte einer Kategorie. Neben den Informationen gibt es auch Quick-Links zur Dokumentation, dem jeweiligen Bestellformular (Wizard) und zur Ticketerstellung.
@@ -24,7 +24,7 @@ Level 2: Hier finden Sie eine Übersicht aller Produkte einer Kategorie. Neben d
 Level 3: Hier finden Sie die detaillierte Produktansicht und dazugehörige Informationen: Parameter aus dem Bestell-Wizard/Produkt, Monitoring (eigener Release), Verbrauchsdaten (eigener Release) und eine gefilterte Ticketübersicht (nur die Tickets zu diesem Produkt). Hier können Sie auch Ihr Produkt/Ihren Vertrag per Ticket kündigen.\
 ![Beispiel Level 3](../img/product-dashboard/structure-product-dashboard-3.png)
 
-Sonstiges: Rollen und Rechte für das Dashboard werden im Bereich "User Management" verwaltet.
+Sonstiges: Rollen und Rechte für das Dashboard werden im Bereich "User Management" verwaltet.\
 ![Beispiel Rollen-und-Rechte-Verwaltung für das Produkt-Dashboard](../img/product-dashboard/roles-and-rights-management.png)
 
 ### Die Einsteigsseite - Level 1
@@ -38,7 +38,7 @@ Neben diesem schriftlichen How-to können Sie ein Erklärvideo (ca. 7 Min.) jede
 #### Meine gebuchten Produkte
 
 Sortiert nach Kategorien sehen Sie hier die aktiven Produkte, die Sie im CLoudHub bestellt haben.
-Das heißt auch, dass Sie keine Produkte sehen, die Sie über andere Kanäle gebucht haben. Und es werden Ihnen keine Produkte angezeigt, bei denen das Kündugungsdatum der Verträge um mind. 14 Tage überschritten ist.
+Das heißt auch, dass Sie keine Produkte sehen, die Sie über andere Kanäle gebucht haben. Und es werden Ihnen keine Produkte angezeigt, bei denen das Kündugungsdatum der Verträge um mind. 14 Tage überschritten ist.\
 ![Level 1: Gebuchte Produkte werden in Kategorien (Tabs) und Typen (Kacheln) angezeigt](../img/product-dashboard/lvl-1-booked-products.png)
 
 Wenn Sie auf die Kachel klicken, kommen Sie auf Level 2 zu einer Übersicht der in dieser Kategorie verfügbaren Produkttypen/-arten. Auf der Kachel können Sie zudem auf das Einkaufswagen-Symbol klicken und so zum Bestell-Wizard des Produktes gelangen.
@@ -68,7 +68,7 @@ Eine Übersicht Ihre Projekte, in denen verschiedene Produkte zusammen angezeigt
 Sie erhalten auf Level 2 einen Überblick über Ihre aktiven Produkte. Wenn Sie auf eine Zeile der Tabelle klicken, kommen Sie auf Level 3 und damit in die Detailansicht Ihrer Produkte.
 Die Informationen sollen Ihnen einen ersten Überblick Ihrer Produkte ermöglichen. Je nach Produkt variiert noch die Anzeige.
 „Aktiv“ bedeutet hier: Der Vertrag ist aktiv und wurde noch nicht gekündigt. Sobald das Kündigungsdatum eingetragen ist, wechselt der Status von „aktiv“ auf „gekündigt“. Details zu den aktuellen Status finden Sie in der Legende unter der Tabelle.
-Sobald das Kündigungsdatum um 14 Tage überschritten wurde, wird das Produkt auf Level 2 im Produkt-Dashboard nicht mehr angezeigt, auch nicht in der Vertragsübersicht unter „Verträge“. Sollten Sie Fragen zu Ihren gekündigten Verträgen haben, wenden Sie sich bitte über unser Ticketsystem an unsere Kolleg:innen der Vertragsabteilung. Wählen Sie dazu bitte die Kategorie „Verträge und Rechnungen“.
+Sobald das Kündigungsdatum um 14 Tage überschritten wurde, wird das Produkt auf Level 2 im Produkt-Dashboard nicht mehr angezeigt, auch nicht in der Vertragsübersicht unter „Verträge“. Sollten Sie Fragen zu Ihren gekündigten Verträgen haben, wenden Sie sich bitte über unser Ticketsystem an unsere Kolleg:innen der Vertragsabteilung. Wählen Sie dazu bitte die Kategorie „Verträge und Rechnungen“.\
 ![Level 2: Beispiel eines pluscloud-VMware-Produktes](../img/product-dashboard/lvl-2-example-pcv-product.png)
 ![Level 2: Beispiel eines Datenbank-Produktes](../img/product-dashboard/lvl-2-example-db-product.png)
 
@@ -97,7 +97,7 @@ In den Bereich oberhalb der Tabs sehen Sie immer auf den ersten Blick einen Stec
 ![Level 3: Informationen](../img/product-dashboard/lvl-3-information.png)
 
 Im ersten Tab sehen Sie grundlegende Informationen zu diesem Produkt. Viele der Informationen kennen Sie bereits aus dem Bestellprozess.
-Für die Produkte „pluscloud open“, „pluscloud VMware“ und „Managed Kubernetes (PSKE)“ haben wir zudem die Links zu den jeweiligen Dashboards eingebaut.
+Für die Produkte „pluscloud open“, „pluscloud VMware“ und „Managed Kubernetes (PSKE)“ haben wir zudem die Links zu den jeweiligen Dashboards eingebaut.\
 ![Level 3: Tab 1 - Beispiel pluscloud VMware](../img/product-dashboard/lvl-3-example-pcv.png)
 
 Für die Produkte "Private Registry", "Datenbanken" und "Keycloak" ist eine Anpassbarkeit der dort dargestellten Informationen möglich.\
@@ -146,12 +146,12 @@ Mit Klick auf „Änderungen speichern“ erscheint eine Information mit der Pre
 ![Level 3: Anpassung der Whitelist, Backup und Patch](../img/product-dashboard/lvl-3-adjustmend-whitlist-backup-patch.png)
 
 Bei der **Primary Node** können Sie die Node Disk und die Node Disk Size anpassen, wobei letztere nur erhöht werden kann. Sie können beide Werte zusammen oder nur einen davon anpassen.
-Die Anpassung führt unmittelbar zu einer kurzen Betriebsunterbrechung zu Aktivierung der geänderten Werten.
+Die Anpassung führt unmittelbar zu einer kurzen Betriebsunterbrechung zu Aktivierung der geänderten Werten.\
 ![Level 3: Anpassung der Primary Node - 1](../img/product-dashboard/lvl-3-customization-primary-node-1.png)
 ![Level 3: Anpassung der Primary Node - 2](../img/product-dashboard/lvl-3-customization-primary-node-2.png)
 ![Level 3: Anpassung der Primary Node - 3](../img/product-dashboard/lvl-3-customization-primary-node-3.png)
 
-Nur für die Datenbanken können Sie (bis zu drei) **Read Replica** erstellen, anpassen oder auch löschen. Diese Änderungen sind nur nacheinander über den jeweiligen Button möglich. Die Read Replica ist dabei immer eine exakte Kopie der Primary Node und wird entsprechend auch abgerechnet.
+Nur für die Datenbanken können Sie (bis zu drei) **Read Replica** erstellen, anpassen oder auch löschen. Diese Änderungen sind nur nacheinander über den jeweiligen Button möglich. Die Read Replica ist dabei immer eine exakte Kopie der Primary Node und wird entsprechend auch abgerechnet.\
 ![Level 3: Anpassungen der Read Replicas (nur für Datenbanken)](../img/product-dashboard/lvl-3-db-modification-read-replicas-1.png)
 
 Das bedeutet auch, dass Sie eine Read Replica nur über Änderung der Primary Node anpassen können bzw. eine Read Replica immer mit verändert wird. Um das transparent zu machen, werden bei der Read Replica die Parameter gelb hinterlegt, die Sie in der Primary Node anpassen. Alle Änderung der Primary Node und Read Replica führen zu Änderungen in Ihrer Abrechnung.\
