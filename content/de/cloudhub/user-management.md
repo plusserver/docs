@@ -20,6 +20,7 @@ Zu finden ist die Funktionalität in der Seitenleiste des Cloudhubs, im Bereich 
 ### Rollenübersicht
 
 ![Rollenübersicht](../img/user-management/u1.png)
+
 Hier sieht man eine Übersicht über alle angelegten Rollen und ob diese spezielle Rolle regelt, welche Seiten jemand sehen kann ("Seitenverwaltung"), auf welche Verträge die Rolle Zugriff hat ("Vertragsverwaltung") oder welche Aktionen die Rolle im Produkt-Dashboard tätigen kann.
 
 Unter Aktionen kann man Rollen löschen oder in die Bearbeitungsmaske gehen.
