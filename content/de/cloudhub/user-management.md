@@ -31,6 +31,7 @@ Unter "Neue Rolle anlegen" öffnet sich ein Menü. Hier können Einstellungen zu
 ![Rollen-Tab im User Management auswählen](../img/user-management/u5.png)
 
 ![Rolle erstellen auswählen](../img/user-management/u6.png)
+
 Hier können Berechtigungen hinzugefügt werden
 
 ![Checkboxen auswählen und speichern](../img/user-management/u7.png)
