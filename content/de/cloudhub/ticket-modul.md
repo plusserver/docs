@@ -52,6 +52,7 @@ Falls bei der Ticketkategorie „Service Requests“ ausgewählt wurde, besteht 
 ### Schritt 5: Auswahl der Templates
 
 ![Auswahl der Templates](../img/ticket-modul/a6.png)
+
 Ein Template sieht dann zum Beispiel so aus:
 
 ### Schritt 6: Template ausfüllen
