@@ -7,7 +7,7 @@ description: >
     Information on ordering products in the CloudHub
 ---
 
-## Step-by-Step guide to ordering products
+## Step-by-step guide to ordering products
 
 ### Step 1: Select a Product
 
