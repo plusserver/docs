@@ -1,6 +1,6 @@
 ---
 title: "Patch-Management"
-linkTitle: "Patch-Management"
+linkTitle: "Patch Management"
 type: "docs"
 weight: 8
 description: >
