@@ -35,3 +35,5 @@ Bei einem internen Load Balancer (openstack-internal-load-balancer: true) wird h
       service.beta.kubernetes.io/openstack-internal-load-balancer: "true"
       loadbalancer.openstack.org/loadBalancerIP: 10.250.0.2
 ```
+
+Weitere Konfigurationsmöglichkeiten sind in der offiziellen Dokumentation unter diesem [Link](https://github.com/kubernetes/cloud-provider-openstack/blob/master/docs/openstack-cloud-controller-manager/expose-applications-using-loadbalancer-type-service.md#service-annotations) zu finden.
