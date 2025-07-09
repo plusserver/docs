@@ -104,34 +104,3 @@ Number of IPs per podCIDRs: 128
 ```
 
 With the configuration above, a Shoot cluster can at most have **32 nodes** which are ready to run workload in the Pod network.
-
-
-## Load Balancer with Private IP Address
-
-Any available, unused IP address from the node network 10.250.0.0/16 of the respective PSKE cluster can be used for the load balancer.
-
-Configuration options:
-
-- keep-floatingip: true | false 
-  - Reserves the floating IP address in OpenStack.
-
-- proxy-protocol: true | false 
-  - Enables or disables support for the Proxy Protocol.
-
-- openstack-internal-load-balancer: true | false
-  - Creates an internal load balancer in OpenStack without assigning a floating IP.
-
-- loadBalancerIP: 10.250.0.2
-  - Specifies the IP address of the load balancer.
-
-For an internal load balancer (openstack-internal-load-balancer: true), this defines the private IPv4 address within the cluster network.
-Alternatively, a previously reserved floating IP can be used here if openstack-internal-load-balancer is set to false.
-
-```yaml
-  service:
-    annotations:
-      loadbalancer.openstack.org/proxy-protocol: "true"
-      loadbalancer.openstack.org/keep-floatingip: "false"
-      service.beta.kubernetes.io/openstack-internal-load-balancer: "true"
-      loadbalancer.openstack.org/loadBalancerIP: 10.250.0.2
-```
