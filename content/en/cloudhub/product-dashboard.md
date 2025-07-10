@@ -97,7 +97,7 @@ On level 3, you will find a detailed product view with various information about
 
 In the first tab, you will see basic information about this product. You already know a lot of the information from the ordering process.
 For “pluscloud open”, “pluscloud VMware” and “Managed Kubernetes (PSKE)”, we have also included links to the respective dashboards.\
-![Level 3: Tab 1 - Example pluscloud VMware](../img/product-dashboard/lvl-3-example-pcv.png)
+![Level 3: Tab 1 - Example pluscloud open](../img/product-dashboard/lvl-3-example-pco.png)
 
 For the products “Private Registry”, “Databases” and “Keycloak”, you can now customize the information displayed there from the dashboard.\
 ![Level 3: Tab 1. - Example Databases](../img/product-dashboard/lvl-3-example-db.png)
@@ -144,7 +144,7 @@ Second, there must be a gap of 2.5 hours between the backup and patch schedule, 
 
 By clicking on “Save changes”, information about the price change appears. If you then confirm with “Order with obligation to pay”, the change will take effect as described above.
 
-![Level 3: Adjusting the whitelist, backups and patches](../img/product-dashboard/lvl-3-adjustmend-whitlist-backup-patch.png)
+![Level 3: Adjusting the whitelist, backups and patches](../img/product-dashboard/lvl-3-adjustmend-whitelist-backup-patch.png)
 
 For the **primary node**, you can adjust the node disk and the node disk size, although the latter can only be increased. You can adjust both values together or just one of them.
 The adjustment immediately leads to a brief interruption of operation to activate the changed values.\
