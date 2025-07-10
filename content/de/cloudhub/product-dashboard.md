@@ -98,7 +98,7 @@ In den Bereich oberhalb der Tabs sehen Sie immer auf den ersten Blick einen Stec
 
 Im ersten Tab sehen Sie grundlegende Informationen zu diesem Produkt. Viele der Informationen kennen Sie bereits aus dem Bestellprozess.
 Für die Produkte „pluscloud open“, „pluscloud VMware“ und „Managed Kubernetes (PSKE)“ haben wir zudem die Links zu den jeweiligen Dashboards eingebaut.\
-![Level 3: Tab 1 - Beispiel pluscloud VMware](../img/product-dashboard/lvl-3-example-pcv.png)
+![Level 3: Tab 1 - Beispiel pluscloud open](../img/product-dashboard/lvl-3-example-pco.png)
 
 Für die Produkte "Private Registry", "Datenbanken" und "Keycloak" ist eine Anpassbarkeit der dort dargestellten Informationen möglich.\
 ![Level 3: Tab 1. - Beispiel Datenbanken](../img/product-dashboard/lvl-3-example-db.png)
@@ -111,7 +111,7 @@ Die nächsten Tabs „Monitoring“ und „Verbrauchsdaten“ sind aktuell in Ar
 ![Level 3: Tab 4 - Verbrauchsdaten](../img/product-dashboard/lvl-3-consumption-data.png)
 
 Im Tab "Tickets" sehen Sie eine gefilterte Ansicht aller Tickets, die zu diesem Produkt/Vertrag eröffnet sind, sortiert nach "geöffnet" und "alle". Wenn Sie eine Gesamtübersicht all Ihrer Tickets wünschen, ist diese im Bereich "Support" zu finden.\
-![Level 3: Tab 5 - Tickets (gefiltert anch Produkt)](../img/product-dashboard/lvl-3-tickets.png)
+![Level 3: Tab 5 - Tickets (gefiltert nach Produkt)](../img/product-dashboard/lvl-3-tickets.png)
 
 #### Weiterführende Links
 
@@ -143,7 +143,7 @@ Zum einen sind 7 Backups in Ihrem Vertrag inklusive und sind auch die Mindestmen
 Zum anderen müssen zwischen dem Backup- und Patch-Zeitplan 2,5 Stunden Abstand eingehalten werden, da sie sich nicht überschneiden dürfen. Beispiel: Wenn das Backup ab 02:00 starten soll, darf der Patch-Zeitplan nicht vor 04:30 starten.
 
 Mit Klick auf „Änderungen speichern“ erscheint eine Information mit der Preisänderung. Wenn Sie dann mit „Zahlungspflichtig bestellen“ bestätigen, wird die Änderung wirksam wie oben beschrieben.
-![Level 3: Anpassung der Whitelist, Backup und Patch](../img/product-dashboard/lvl-3-adjustmend-whitlist-backup-patch.png)
+![Level 3: Anpassung der Whitelist, Backup und Patch](../img/product-dashboard/lvl-3-adjustmend-whitelist-backup-patch.png)
 
 Bei der **Primary Node** können Sie die Node Disk und die Node Disk Size anpassen, wobei letztere nur erhöht werden kann. Sie können beide Werte zusammen oder nur einen davon anpassen.
 Die Anpassung führt unmittelbar zu einer kurzen Betriebsunterbrechung zu Aktivierung der geänderten Werten.\
