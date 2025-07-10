@@ -37,8 +37,8 @@ Neben diesem schriftlichen How-to können Sie ein Erklärvideo (ca. 7 Min.) jede
 
 #### Meine gebuchten Produkte
 
-Sortiert nach Kategorien sehen Sie hier die aktiven Produkte, die Sie im CLoudHub bestellt haben.
-Das heißt auch, dass Sie keine Produkte sehen, die Sie über andere Kanäle gebucht haben. Und es werden Ihnen keine Produkte angezeigt, bei denen das Kündugungsdatum der Verträge um mind. 14 Tage überschritten ist.\
+Sortiert nach Kategorien sehen Sie hier die aktiven Produkte, die Sie im CloudHub bestellt haben.
+Das heißt auch, dass Sie keine Produkte sehen, die Sie über andere Kanäle gebucht haben. Und es werden Ihnen keine Produkte angezeigt, bei denen das Kündigungsdatum der Verträge um mind. 14 Tage überschritten ist.\
 ![Level 1: Gebuchte Produkte werden in Kategorien (Tabs) und Typen (Kacheln) angezeigt](../img/product-dashboard/lvl-1-booked-products.png)
 
 Wenn Sie auf die Kachel klicken, kommen Sie auf Level 2 zu einer Übersicht der in dieser Kategorie verfügbaren Produkttypen/-arten. Auf der Kachel können Sie zudem auf das Einkaufswagen-Symbol klicken und so zum Bestell-Wizard des Produktes gelangen.
@@ -46,15 +46,15 @@ Wenn Sie auf die Kachel klicken, kommen Sie auf Level 2 zu einer Übersicht der 
 #### Weiterführende Links
 
 Über das blaue Element gelangen Sie zur Übersichtsseite der im CloudHub verfügbaren Produkte und von dort aus in den jeweiligen Bestellprozess. Zudem können Sie über den anderen Link zu unserer Webseite navigieren, um sich über unser gesamtes Produktportfolio zu informieren.
-Weiterführende Links führen zur Auftragsstatus-Tabelle, zur Übersichtstabelle der Produkte und Leistungen (alle über den CloudHub gebuchten plusserver-Produkte) und zur Dokumentation in Docsy.
-Auftragsstatus: Verfolgen Sie hier den Status der Bereitstellung Ihrer über den CloudHub gebuchten Produkte. Diese Übersicht erreichen Sie auch über die Navigation unter „Meine Produkte“ > „Auftragsstatus“.
-Produkte und Leistungen: Hier finden Sie eine Übersicht über alle aktiven Verträge Ihrer gebuchten plusserver-Produkte, also auch der Produkte, die Sie nicht über den CloudHub bestellt haben.
-Dokumentation: Hier finden Sie unsere Produktdokumentation.\
+Weiterführende Links führen zur Auftragsstatus-Tabelle, zur Übersichtstabelle der Produkte und Leistungen (alle über den CloudHub gebuchten plusserver-Produkte) und zur Dokumentation in Docsy.\
+_Auftragsstatus:_ Verfolgen Sie hier den Status der Bereitstellung Ihrer über den CloudHub gebuchten Produkte. Diese Übersicht erreichen Sie auch über die Navigation unter „Meine Produkte“ > „Auftragsstatus“.\
+_Produkte und Leistungen:_ Hier finden Sie eine Übersicht über alle aktiven Verträge Ihrer gebuchten plusserver-Produkte, also auch der Produkte, die Sie nicht über den CloudHub bestellt haben.\
+_Dokumentation:_ Hier finden Sie unsere Produktdokumentation.\
 ![Level 1: Quick Links zu weiteren Produkten, Informationen und Dokumentationen](../img/product-dashboard/lvl-1-quick-links-2.png)
 
-Support: Hier gelangen Sie in unseren Support-Bereich und können für verschiedene Anliegen Tickets erstellen, um die sich die Support-Kolleg:innen schnellstmöglich kümmern, die Gesamtübersicht Ihrer Tickets einsehen, weitere Kontaktdaten finden und vieles mehr.
-Kontaktdaten: Die wichtigsten Kontaktdaten haben wir hier für Sie zusammengestellt.
-FAQs: Hier finden Sie, aufbereitet nach Kategorien, viele Fragen und Antworten zu den wichtigsten Funktionen und Hintergründen.
+_Support:_ Hier gelangen Sie in unseren Support-Bereich und können für verschiedene Anliegen Tickets erstellen, um die sich die Support-Kolleg:innen schnellstmöglich kümmern, die Gesamtübersicht Ihrer Tickets einsehen, weitere Kontaktdaten finden und vieles mehr.\
+_Kontaktdaten:_ Die wichtigsten Kontaktdaten haben wir hier für Sie zusammengestellt.\
+_FAQs:_ Hier finden Sie, aufbereitet nach Kategorien, viele Fragen und Antworten zu den wichtigsten Funktionen und Hintergründen.
 
 ### Die tabellarische Produktübersicht - Level 2
 
@@ -67,7 +67,7 @@ Eine Übersicht Ihre Projekte, in denen verschiedene Produkte zusammen angezeigt
 
 Sie erhalten auf Level 2 einen Überblick über Ihre aktiven Produkte. Wenn Sie auf eine Zeile der Tabelle klicken, kommen Sie auf Level 3 und damit in die Detailansicht Ihrer Produkte.
 Die Informationen sollen Ihnen einen ersten Überblick Ihrer Produkte ermöglichen. Je nach Produkt variiert noch die Anzeige.
-„Aktiv“ bedeutet hier: Der Vertrag ist aktiv und wurde noch nicht gekündigt. Sobald das Kündigungsdatum eingetragen ist, wechselt der Status von „aktiv“ auf „gekündigt“. Details zu den aktuellen Status finden Sie in der Legende unter der Tabelle.
+„Aktiv“ bedeutet hier: Der Vertrag ist aktiv und wurde noch nicht gekündigt. Sobald das Kündigungsdatum eingetragen ist, wechselt der Status von „aktiv“ auf „gekündigt“. Details zu dem aktuellen Status finden Sie in der Legende unter der Tabelle.\
 Sobald das Kündigungsdatum um 14 Tage überschritten wurde, wird das Produkt auf Level 2 im Produkt-Dashboard nicht mehr angezeigt, auch nicht in der Vertragsübersicht unter „Verträge“. Sollten Sie Fragen zu Ihren gekündigten Verträgen haben, wenden Sie sich bitte über unser Ticketsystem an unsere Kolleg:innen der Vertragsabteilung. Wählen Sie dazu bitte die Kategorie „Verträge und Rechnungen“.\
 ![Level 2: Beispiel eines pluscloud-VMware-Produktes](../img/product-dashboard/lvl-2-example-pcv-product.png)
 ![Level 2: Beispiel eines Datenbank-Produktes](../img/product-dashboard/lvl-2-example-db-product.png)
@@ -110,8 +110,11 @@ Wenn Sie die entsprechenden Rechte besitzen, dann sehen Sie als zweites einen Ta
 Die nächsten Tabs „Monitoring“ und „Verbrauchsdaten“ sind aktuell in Arbeit und kommen in den nächsten Monaten. Da uns aber wichtig war, Ihnen direkt die finale Struktur des Dashboards zu präsentieren, haben wir entsprechende Infobanner mit mehr Informationen eingebaut.\
 ![Level 3: Tab 4 - Verbrauchsdaten](../img/product-dashboard/lvl-3-consumption-data.png)
 
-Im Tab "Tickets" sehen Sie eine gefilterte Ansicht aller Tickets, die zu diesem Produkt/Vertrag eröffnet sind, sortiert nach "geöffnet" und "alle". Wenn Sie eine Gesamtübersicht all Ihrer Tickets wünschen, ist diese im Bereich "Support" zu finden.\
-![Level 3: Tab 5 - Tickets (gefiltert nach Produkt)](../img/product-dashboard/lvl-3-tickets.png)
+Im Tab "Changelog" wird eine Auflistung aller vorgenommenen Änderungen am Produkt mit dem Zeitpunkt und einer kurzen Zusammenfassung angezeigt.\
+![Level 3: Tab 5 - Changelog](../img/product-dashboard/lvl-3-changelog.png)
+
+Im letzten Tab "Tickets" sehen Sie eine gefilterte Ansicht aller Tickets, die zu diesem Produkt/Vertrag eröffnet sind, sortiert nach "geöffnet" und "alle". Wenn Sie eine Gesamtübersicht all Ihrer Tickets wünschen, ist diese im Bereich "Support" zu finden.\
+![Level 3: Tab 6 - Tickets (gefiltert nach Produkt)](../img/product-dashboard/lvl-3-tickets.png)
 
 #### Weiterführende Links
 
@@ -136,7 +139,7 @@ Zudem dokumentieren wir Ihre Anpassung in einem Ticket, über das Sie per E-Mail
 ![Level 3: Ticket zur Dokumentation der Anpassungen - 1](../img/product-dashboard/lvl-3-ticket-for-documentation-of-customization-1.png)
 ![Level 3: Ticket zur Dokumentation der Anpassungen - 2](../img/product-dashboard/lvl-3-ticket-for-documentation-of-customization-2.png)
 
-Sie können bspw. **vertrauenswürdige Quellen** anpassen, die **Anzahl der Backups** erhöhren sowie den **Backup- und Patch-Zeitplan** anpassen. Die Felder, die Sie ändern können sind in diesem Bereich noch einmal blau herborgehiben.
+Sie können bspw. **vertrauenswürdige Quellen** anpassen, die **Anzahl der Backups** erhöhen sowie den **Backup- und Patch-Zeitplan** anpassen. Die Felder, die Sie ändern können sind in diesem Bereich noch einmal blau herborgehiben.
 
 **Folgende Hinweise möchten wir Ihnen mitgeben, da sie produktspezifisch sind:**\
 Zum einen sind 7 Backups in Ihrem Vertrag inklusive und sind auch die Mindestmenge, die eingestellt sein muss. Sie können auf bis zu maximal 90 Backups erhöhen. Die Änderung der Anzahl der Backups führt zu Änderungen in Ihrer Abrechnung.
@@ -157,7 +160,7 @@ Nur für die Datenbanken können Sie (bis zu drei) **Read Replica** erstellen, a
 Das bedeutet auch, dass Sie eine Read Replica nur über Änderung der Primary Node anpassen können bzw. eine Read Replica immer mit verändert wird. Um das transparent zu machen, werden bei der Read Replica die Parameter gelb hinterlegt, die Sie in der Primary Node anpassen. Alle Änderung der Primary Node und Read Replica führen zu Änderungen in Ihrer Abrechnung.\
 ![Level 3: Anpassungen er Read Replica auf Basis der Primary Node (nur für Datenbanken)](../img/product-dashboard/lvl-3-db-modification-read-replicas-2.png)
 
-Sie können jederzeit eine oder alle Read Replica löschen. Dazu nutzen Sie den entsprechenden Button und markieren eine oder mehrere über das Kästchen in der linken oberen Ecke. Nach der Löschung wird die Read Replica nicht mehr abgerechnet.\
+Sie können jederzeit eine oder alle Read Replica löschen. Dazu nutzen Sie den entsprechenden Button und markieren eine oder mehrere über das Kästchen in der rechten oberen Ecke. Nach der Löschung wird die Read Replica nicht mehr abgerechnet.\
 ![Level 3: Löschen der Read Replica (nur für Datenbanken)](../img/product-dashboard/lvl-3-db-delete-read-replica.png)
 
 #### Produktkündigung über Level 3
@@ -172,8 +175,8 @@ Falls Sie mehrere Produkte kündigen möchten, besteht die Möglichkeit diese ge
 #### Informationen und kommende Funktionen
 
 Der Tab "Verbrauchsdaten wird Ihnen in Zukunft Verbrauchsdaten dieses Produktes auf tagesaktueller Basis anzeigen.
-Der Tab "Monitoring" wird Ihnen in Zukunft MOnitoring-Daten aus Icinga2 anzeien, damit Sie auf den ersten Blick den Status Ihres Produktes erfassen können. Des Weiteren werden Sie Verlinkungen auf die entsprechenden Detailinfos in Icinga2 vorfinden.
-Es ist geplant, die Produkt-Dashboards der Produkte "pluscloud open", "pluscloud VMware" und "Managed Kubernetes (PSKE)" noch enger mit dem CLoudHub Produkt-Dashboard zu verzahnen.
+Der Tab "Monitoring" wird Ihnen in Zukunft Monitoring-Daten aus Icinga2 anzeigen, damit Sie auf den ersten Blick den Status Ihres Produktes erfassen können. Des Weiteren werden Sie Verlinkungen auf die entsprechenden Detailinfos in Icinga2 vorfinden.
+Es ist geplant, die Produkt-Dashboards der Produkte "pluscloud open", "pluscloud VMware" und "Managed Kubernetes (PSKE)" noch enger mit dem CloudHub Produkt-Dashboard zu verzahnen.
 
 ## Rollen und Rechte für das Produkt-Dashboard
 

@@ -52,9 +52,9 @@ Products and services: Here you will find an overview of all active contracts fo
 Documentation: You can find our product documentation here.\
 ![Level 1: Quick Links to more products, information and documentation](../img/product-dashboard/lvl-1-quick-links-2.png)
 
-Support: This will take you to our support area, where you can create tickets for various issues, which our support colleagues will deal with as quickly as possible, view the complete overview of your tickets, find further contact details and much more.
-Contact details: We have compiled the most important contact details for you here.
-FAQ: Here you will find, organized by category, many questions and answers about the most important functions and background information.
+_Support:_ This will take you to our support area, where you can create tickets for various issues, which our support colleagues will deal with as quickly as possible, view the complete overview of your tickets, find further contact details and much more.\
+_Contact details:_ We have compiled the most important contact details for you here.\
+_FAQ:_ Here you will find, organized by category, many questions and answers about the most important functions and background information.
 
 ### Product summary table - Level 2
 
@@ -110,13 +110,16 @@ If not you will get a information via banner, that you don’t have the permissi
 The next tabs, “Monitoring” and “Consumption data”, are currently in development and will be added in the next months. However, since it was important to us to present you with the final structure of the dashboard right away, we have included corresponding info banners with more information.\
 ![Level 3: Tab 4 - Consumption Data](../img/product-dashboard/lvl-3-consumption-data.png)
 
+The "Changelog" tab displays a list of all changes made to the product with the date and a brief summary.\
+![Level 3: Tab 5 - Changelog](../img/product-dashboard/lvl-3-changelog.png)
+
 In the “Tickets” tab, you will see a filtered view of all tickets that have been opened for this product/contract, sorted by “opened” and “all”. If you want a complete overview of all your tickets, you can find it in the “Support” section.\
-![Level 3: Tab 5 – Tickets (filtered for this product)](../img/product-dashboard/lvl-3-tickets.png)
+![Level 3: Tab 6 – Tickets (filtered for this product)](../img/product-dashboard/lvl-3-tickets.png)
 
 #### Further links
 
-*Create ticket:* From level 3, you can create a ticket for this product with just a few clicks. Your “service request” then goes directly to our support. The process is the same as creating a ticket at level 2.
-*Cancel product/contract:* At this point, you have the option of creating a cancellation ticket and initiating the cancellation process with just a few clicks.
+_Create ticket:_ From level 3, you can create a ticket for this product with just a few clicks. Your “service request” then goes directly to our support. The process is the same as creating a ticket at level 2.\
+_Cancel product/contract:_ At this point, you have the option of creating a cancellation ticket and initiating the cancellation process with just a few clicks.
 
 ### Product customizations in Level 3
 
@@ -158,7 +161,7 @@ You can create (up to three), modify or delete **read replica** for the database
 This also means that you can only customize a read replica by modifying the primary node, and that a modification of the primary node always means that the read replica is also changed. To make this transparent, the parameters that you customize in the primary node are also highlighted in yellow in the read replica. All changes of the primary node and read replicas are leading to changes on your billing.\
 ![Level 3: Modifying the read replica based on the primary node (only for databases)](../img/product-dashboard/lvl-3-db-modification-read-replicas-2.png)
 
-You can delete one or all read replica at any time. To do this, use the corresponding button and select one or more by checking the box in the upper left corner. After deletion, the read replica will no longer be billed.\
+You can delete one or all read replica at any time. To do this, use the corresponding button and select one or more by checking the box in the upper right corner. After deletion, the read replica will no longer be billed.\
 ![Level 3: Deletion of the read replica (oyl for databases)](../img/product-dashboard/lvl-3-db-delete-read-replica.png)
 
 #### Product cancellation via Level 3
@@ -233,4 +236,4 @@ Access data can be seen in the dashboard with all three roles except the “Read
 
 All permissions outside of the product dashboard, such as viewing contracts or invoices, managing contact persons, etc., must be restricted/edited under “page management” or “contract management”.
 
-*Info*: We are testing a simplification of roles and permissions in the CloudHub with the product dashboard permissions and welcome any feedback. You will be informed in good time before there is a new major change. Also, you can find all of our changes in the changelog (in the navigation in the "Support" section).
+_Info:_ We are testing a simplification of roles and permissions in the CloudHub with the product dashboard permissions and welcome any feedback. You will be informed in good time before there is a new major change. Also, you can find all of our changes in the changelog (in the navigation in the "Support" section).
