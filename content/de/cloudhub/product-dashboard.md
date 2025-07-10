@@ -110,7 +110,7 @@ Wenn Sie die entsprechenden Rechte besitzen, dann sehen Sie als zweites einen Ta
 Die nächsten Tabs „Monitoring“ und „Verbrauchsdaten“ sind aktuell in Arbeit und kommen in den nächsten Monaten. Da uns aber wichtig war, Ihnen direkt die finale Struktur des Dashboards zu präsentieren, haben wir entsprechende Infobanner mit mehr Informationen eingebaut.\
 ![Level 3: Tab 4 - Verbrauchsdaten](../img/product-dashboard/lvl-3-consumption-data.png)
 
-Im Tab "Changelog" wird eine Auflistung aller vorgenommenen Änderungen am Produkt mit dem Zeitpunkt und einer kurzen Zusammenfassung angezeigt.\
+Im Tab "Changelog" wird eine Auflistung aller vorgenommenen technischen Änderungen am Produkt mit dem Zeitpunkt und einer kurzen Zusammenfassung angezeigt.\
 ![Level 3: Tab 5 - Changelog](../img/product-dashboard/lvl-3-changelog.png)
 
 Im letzten Tab "Tickets" sehen Sie eine gefilterte Ansicht aller Tickets, die zu diesem Produkt/Vertrag eröffnet sind, sortiert nach "geöffnet" und "alle". Wenn Sie eine Gesamtübersicht all Ihrer Tickets wünschen, ist diese im Bereich "Support" zu finden.\

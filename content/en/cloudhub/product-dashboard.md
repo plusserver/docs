@@ -110,7 +110,7 @@ If not you will get a information via banner, that you don’t have the permissi
 The next tabs, “Monitoring” and “Consumption data”, are currently in development and will be added in the next months. However, since it was important to us to present you with the final structure of the dashboard right away, we have included corresponding info banners with more information.\
 ![Level 3: Tab 4 - Consumption Data](../img/product-dashboard/lvl-3-consumption-data.png)
 
-The "Changelog" tab displays a list of all changes made to the product with the date and a brief summary.\
+The "Changelog" tab displays a list of all technical changes made to the product with the date and a brief summary.\
 ![Level 3: Tab 5 - Changelog](../img/product-dashboard/lvl-3-changelog.png)
 
 In the “Tickets” tab, you will see a filtered view of all tickets that have been opened for this product/contract, sorted by “opened” and “all”. If you want a complete overview of all your tickets, you can find it in the “Support” section.\
