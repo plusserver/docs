@@ -7,6 +7,11 @@ description: >
     Informationen zum Einladen von weiteren Nutzern per Mail
 ---
 
+## Wo ist es zu finden?
+Die Funktion zum Einladen weiterer Nutzer per E-Mail ist in der Sidebar des CloudHubs unter Usermanagement zu finden. Dort kann ein Admin-Nutzer über die Schaltfläche Benutzer einladen neue Nutzer per E-Mail hinzufügen.
+
+![User-Management Position](../img/admin-user-invite/usr-mngmt-location.png)
+
 
 ## Einladung aus der Perspektive des Admins
 
