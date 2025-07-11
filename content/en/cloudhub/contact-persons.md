@@ -1,6 +1,6 @@
 ---
-title: "Ansprechpartner"
-linkTitle: "Ansprechpartner"
+title: "Contact Persons"
+linkTitle: "Contact Persons"
 type: "docs"
 weight: 3
 description: >
@@ -17,10 +17,12 @@ The contacts can be found in the CloudHub sidebar under Contacts.
 
 ![contact persons overview](../img/contact-persons/contact-persons-overview.png)
 In general, there are two areas here:
+
 - the management of the contacts themselves
 - Sorting the specified contacts into a sequence to be contacted in the event of escalations or other emergencies
 
 ## Add, edit and delete a Contact Person
+
 ### Add a new Contact Person
 
 First, a few basic contact details are requested
