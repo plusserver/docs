@@ -18,7 +18,7 @@ Die Funktion zum Einladen weiterer Nutzer per E-Mail ist in der Sidebar des Clou
 ### Einladungsprozess
 
 1. Admin geht auf die Seite "User Management"
-2. Admin klickt dort auf den Knopf "Benutzer einladen"
+2. Admin klickt dort auf den Knopf "Benutzer einladen"\
 ![User Management Knopf "Neuen User anlegen"](../img/admin-user-invite/usr-mngmt-new-user.png)
 3. Admin sieht einen Pop-up Fenster, wo er die E-Mail-Adresse des Nutzers eingeben kann, den er einladen will. (E-Mail-Adresse = Pflichtfeld).
 4. In diesem Pop-up Fenster können jetzt auch direkt die Rollen vergeben werden (eine und mehrere).
@@ -38,7 +38,7 @@ Sobald die Einladung erfolgreich angenomen wurde, taucht der hinzugefügt Nutzer
 
 ### Weitere Funktionen für den Admin im Einladungs-Kontext
 
-1. In der Tabelle "Einladungen" innerhalb des Bereiches "User Management" erhält der Admin einen Überblick über alle versendeten Einladungen und deren Status ("Ausstehend"/"Abgelaufen") und kann diese dort verwalten.
+1. In der Tabelle "Einladungen" innerhalb des Bereiches "User Management" erhält der Admin einen Überblick über alle versendeten Einladungen und deren Status ("Ausstehend"/"Abgelaufen") und kann diese dort verwalten.\
 ![User Management - Tabelle "Einladungen"](../img/admin-user-invite/usr-mngmt-table-invitations-1.png)
 2. Admin kann über die Einladungs-Tabelle Einladungen erneut versenden (Symbol Kreis-Pfeil)
 ![User Management - Einladungen erneut versenden ](../img/admin-user-invite/usr-mngmt-resend-invitation.png)
@@ -66,7 +66,7 @@ Sobald die Einladung erfolgreich angenomen wurde, taucht der hinzugefügt Nutzer
 
 ### Weitere Funktionen für den Nutzer
 
-1. Über "Einstellungen" kann der User nun die Funktion erreichen, selbstständig den Zugriff auf eine Kundennummer aufzuheben, wenn er für diese nicht mehr im CloudHub tätig ist. Da die Aufhebung von einer Kundennummer ein kritischer Schritt ist, haben wir uns dazu entschlossen dem Nutzer zwei Fenster zur Bestätigung dieser Aufhebung vorzulegen, damit er die sichere Möglichkeit hat den Schritt für sich zu prüfen und ggf. rechtzeitig abzubrechen.
+1. Über "Einstellungen" kann der User nun die Funktion erreichen, selbstständig den Zugriff auf eine Kundennummer aufzuheben, wenn er für diese nicht mehr im CloudHub tätig ist. Da die Aufhebung von einer Kundennummer ein kritischer Schritt ist, haben wir uns dazu entschlossen dem Nutzer zwei Fenster zur Bestätigung dieser Aufhebung vorzulegen, damit er die sichere Möglichkeit hat den Schritt für sich zu prüfen und ggf. rechtzeitig abzubrechen.\
 ![CloudHub Einstellungen - Kundennummer aufheben](../img/admin-user-invite/cloudhub-settings-cancel-access-to-customer-number.png)
 ![Auswahl der Kundennummer, auf die der Zugriff aufgehoben werden soll](../img/admin-user-invite/select-customer-number-to-cancel-access.png)
 ![Bestätigung des Aufhebens des Zugriffs auf die Kundenummer](../img/admin-user-invite/confirm-cancel-access-to-customer-number.png)

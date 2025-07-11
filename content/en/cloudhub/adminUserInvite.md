@@ -17,7 +17,7 @@ The function for inviting additional users by email can be found in the CloudHub
 ### Invitation process
 
 1. Admin goes to the "User Management" page
-2. Admin clicks on the button "Invite User"
+2. Admin clicks on the button "Invite User"\
 ![User Management button "Create new user"](../img/admin-user-invite/usr-mngmt-new-user.png)
 3. Admin sees a pop-up screen where he can enter the e-mail address of the user he wants to invite. (Email Address = mandatory field).
 4. The roles can now also be assigned directly in this pop-up screen (one and several).
@@ -39,7 +39,7 @@ As soon as the invitation has been successfully accepted, the added user appears
 
 1. In the "Invitations" table within the "User Management" area, the admin receives an overview of all sent invitations and their status ("Pending"/"Expired") and can manage them there.
 ![User Management - "Invitations" table](../img/admin-user-invite/usr-mngmt-table-invitations-1.png)
-2. Admin can resend invitations via the invitation table (circle-arrow icon)
+2. Admin can resend invitations via the invitation table (circle-arrow icon)\
 ![User Management - Resend invitations ](../img/admin-user-invite/usr-mngmt-resend-invitation.png)
 3. Admin can delete invitations via the invitation table (rubbish bin icon). The deletion must always be confirmed.
 ![User Management - Delete invitation](../img/admin-user-invite/usr-mngmt-delete-invitation.png)
