@@ -7,13 +7,18 @@ description: >
     Information for Contact Persons in CloudHub
 ---
 
+## Where to find it?
+
+The contacts can be found in the CloudHub sidebar under Contacts.
+
+![Contact Persons location](../img/contact-persons/contact-persons-location.png)
+
 ## Contact Persons Overview
 
 ![contact persons overview](../img/contact-persons/contact-persons-overview.png)
 In general, there are two areas here:
 - the management of the contacts themselves
 - Sorting the specified contacts into a sequence to be contacted in the event of escalations or other emergencies
-
 
 ## Add, edit and delete a Contact Person
 ### Add a new Contact Person
