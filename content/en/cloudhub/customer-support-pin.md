@@ -9,10 +9,11 @@ description: >
 
 ## Change Pin
 
-Under “Settings” you will find an interface where you can change the PIN
+Under “Settings” you will find an interface where you can change the PIN. You can access the settings by clicking on your email address in the top right-hand corner of the top bar and then selecting the "Settings" menu item.\
+![Settings in topbar](../img/customer-support-pin/settings-in-topbar.png)
 
-![customer support pin settings](../img/customer-support-pin/customer-support-pin-settings.png)
+![Customer support pin settings](../img/customer-support-pin/customer-support-pin-settings.png)
 
 You can then enter and save the PIN:
 
-![customer support change pin](../img/customer-support-pin/customer-support-pin-change.png)
+![Customer support change pin](../img/customer-support-pin/customer-support-pin-change.png)

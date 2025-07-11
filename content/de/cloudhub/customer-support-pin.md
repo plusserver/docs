@@ -9,7 +9,8 @@ description: >
 
 ## Pin ändern
 
-Unter "Einstellungen" finden Sie eine Oberfläche, wo er die PIN geändert werden kann
+Unter "Einstellungen" finden Sie eine Oberfläche, wo er die PIN geändert werden kann. Die Einstellungen erreicht man, indem man oben rechts auf die eigene E-Mail-Adresse in der Topbar klickt und anschließend den Menüpunkt "Einstellungen" auswählt.\
+![Einstellungen in der Topbar](../img/customer-support-pin/settings-in-topbar.png)
 
 ![customer support pin settings](../img/customer-support-pin/customer-support-pin-settings.png)
 
