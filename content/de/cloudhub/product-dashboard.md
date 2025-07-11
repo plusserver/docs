@@ -90,9 +90,9 @@ Folgende Links sind auf Level 2 zu finden:\
 
 ### Die Produkt-Detailansicht - Level 3
 
-#### Informaitonen in den Tabs
+#### Informationen in den Tabs
 
-In Level 3 finden Sie eine detaillierte Produktansicht mit verschiedenen Informaitonen zu diesem konkreten Produkt.
+In Level 3 finden Sie eine detaillierte Produktansicht mit verschiedenen Informationen zu diesem konkreten Produkt.
 In den Bereich oberhalb der Tabs sehen Sie immer auf den ersten Blick einen Steckbrief Ihres Produktes mit den wichtigsten Informationen.\
 ![Level 3: Informationen](../img/product-dashboard/lvl-3-information.png)
 
