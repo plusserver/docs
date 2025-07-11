@@ -7,6 +7,11 @@ description: >
     Information about the patch management in CloudHub
 ---
 
+## Where to find it?
+
+The patch overview function is available in CloudHub under Support. This can be accessed by selecting the Support area in the left-hand navigation in the self-service portal and then clicking on Service status.\
+![Patch-management in sidebar](../img/patch-management/patch-management-sidebar.png)
+
 ## Overview
 
 All systems subject to patching (provided they are managed via Patch-Up) are listed per user:
