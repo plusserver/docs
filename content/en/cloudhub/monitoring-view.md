@@ -7,11 +7,12 @@ description: >
     Information on the monitoring view in CloudHub
 ---
 
-## Where can it be found?
+## Where to find it?
 
 The functionality can be found in the self-service portal, in the "Support" area under the "Service status" entry, directly next to the ticket area.
-
 Visibility is not generally restricted, unless the user generally does not have access to the "Support" area.
+
+![Monitoring View location](../img/monitoring-view/monitoring-view-location.png)
 
 ## How is this feature organised?
 

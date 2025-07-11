@@ -10,8 +10,9 @@ description: >
 ## Wo ist es zu finden?
 
 Zu finden ist die Funktionalität im Self-Service Portal, im Bereich "Support" unter dem Eintrag "Service-Status", direkt beim Ticketbereich.
-
 Die Sichtbarkeit ist pauschal nicht eingeschränkt, außer der User hat allgemein keinen Zugriff auf den "Support"-Bereich.
+
+![Monitoring View Position](../img/monitoring-view/monitoring-view-location.png)
 
 ## Wie ist dieses Feature aufgebaut?
 
