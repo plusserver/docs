@@ -12,6 +12,12 @@ description: >
 **Hinweis:** Für diesen Vorgang benötigt Ihr Benutzer die Rolle `Organisationsadministrator`.
 {{% /alert %}}
 
+{{% alert title="Achtung!" color=warning %}}
+Wenn Sie bereits eine Anbindung an einen Identitätsanbieter eingerichtet haben, wird durch die Erstellung neuer Zertifikate die aktuelle Verbindung deaktiviert.
+
+Dies führt dazu, dass Benutzer, die Ihren Identitätsanbieter verwenden, sich nicht mehr authentifizieren können, bis die Föderation mit den neuen Zertifikaten neu konfiguriert ist!
+{{% /alert %}}
+
 Jede Organisation verfügt immer über mindestens einen Satz SAML-Zertifikate, um die Anbindung an einen SSO-Identitätsanbieter Ihrer Wahl zu ermöglichen.
 Die übliche Gültigkeitsdauer beträgt hier in der Regel ein ganzes Jahr.
 
