@@ -72,7 +72,7 @@ Falls für das Produkt Zugangsdaten hinterlegt sind und Sie die nötigen Berecht
 
 Übersicht aller zu diesem Produkt gehörenden Rechnungen, inklusive Downloadmöglichkeit.\
 ![Weitere Inhalte - Rechnungen](../img/products-services/further-content-invoices.png)
-Über den Knopf "Alle Rechnungen anzeigen" gelangen Sie zur Seite [Rechnungen](../invoices), in welcher Sie eine Übersicht über alle Rechnungen von allen Produkten, die Sie bei uns erworben haben.\
+Über den Knopf "Alle Rechnungen anzeigen" gelangen Sie zur Seite [**Rechnungen**](../invoices), in welcher Sie eine Übersicht über alle Rechnungen von allen Produkten, die Sie bei uns erworben haben.\
 ![Weitere Inhalte - Weg zur Rechnungsübersicht](../img/products-services/further-content-show-all-invoices.png)
 
 Jeder Tab kann individuell aufgerufen werden und liefert gezielte Informationen rund um das jeweilige Produkt.
