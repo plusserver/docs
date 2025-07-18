@@ -44,9 +44,9 @@ Sie haben die Möglichkeit, die aktuelle Tabellenansicht als **CSV-Datei** herun
 
 ## Detailansicht
 
-Durch Klicken auf die *Projektvertragskennung*, *Produktbezeichnung*, *Projektname* oder der *Projektkennung* eines Produktes in der Produktübersicht-Tabelle gelangen Sie zu der Detailansicht des Produktes.
+Durch Klicken auf die "Projektvertragskennung", "Produktbezeichnung", "Projektname" oder der "Projektkennung" eines Produktes in der Produktübersicht-Tabelle gelangen Sie zu der Detailansicht des Produktes.
 
-Die **Detailansicht** eines Produktes zeigt alle relevanten Informationen zu einem einzelnen, von Ihnen erworbenen Produkt. Sie gelangen zur Detailansicht durch einen Klick auf das gewünschte Produkt in der Übersichtstabelle auf der Seite **„Produkte / Leistungen“**.
+<!-- Die **Detailansicht** eines Produktes zeigt alle relevanten Informationen zu einem einzelnen, von Ihnen erworbenen Produkt. Sie gelangen zur Detailansicht durch einen Klick auf das gewünschte Produkt in der Übersichtstabelle auf der Seite **„Produkte / Leistungen“**. -->
 
 ### Allgemeine Produktinformationen
 
@@ -72,7 +72,7 @@ Falls für das Produkt Zugangsdaten hinterlegt sind und Sie die nötigen Berecht
 
 Übersicht aller zu diesem Produkt gehörenden Rechnungen, inklusive Downloadmöglichkeit.\
 ![Weitere Inhalte - Rechnungen](../img/products-services/further-content-invoices.png)
-Über den Knopf "Alle Rechnungen anzeigen" gelangen Sie zur Seite [**Rechnungen**](../invoices), in welcher Sie eine Übersicht über alle Rechnungen von allen Produkten, die Sie bei uns erworben haben.\
+Über den Knopf "Alle Rechnungen anzeigen" gelangen Sie zur Seite [Rechnungen](../invoices), in welcher Sie eine Übersicht über alle Rechnungen von allen Produkten, die Sie bei uns erworben haben.\
 ![Weitere Inhalte - Weg zur Rechnungsübersicht](../img/products-services/further-content-show-all-invoices.png)
 
 Jeder Tab kann individuell aufgerufen werden und liefert gezielte Informationen rund um das jeweilige Produkt.
