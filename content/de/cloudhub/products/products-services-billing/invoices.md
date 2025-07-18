@@ -11,7 +11,6 @@ description: >
 ## Rechnungen
 
 Auf der Seite **„Rechnungen“** finden Sie alle abrechnungsbezogenen Dokumente zu Ihren gebuchten Produkten und Leistungen, sowie die Möglichkeit diese herunterzuladen. Die Inhalte sind in zwei Tabs unterteilt: **Rechnungen** und **Rechnungsanhänge**.
-<!-- ![Rechnungen - Tabs](../img/invoices/tabs-invoices-annexes.png) -->
 
 ### Rechnungen
 
