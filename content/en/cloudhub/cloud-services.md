@@ -13,15 +13,15 @@ Welcome to the Cloud Services section of CloudHub! Here you can order the variou
 
 ## Structure of the Cloud Service areas
 
-This is the homepage for the dashboard. Here you will find an overview of our cloud services (structured by category) as well as links to other CloudHub areas and our product documentation. Clicking on the “Order Now” link in the product tile will take you to the order wizard and clicking on the "Product information" link will take you to the overview of the respective product.
+On the start page you will find an overview of our cloud services (structured by category), as well as links to other CloudHub areas and our product documentation. Clicking on the “Order now” link in the product tile will take you to the order form (wizard) and clicking on the “Find out more” link will take you to the overview of the respective product.
 
 ![Cloud Services Overview](../img/cloud-services/cloud-services-overview.png)
 
-Here you will find an overview of all products in a category. In addition to the information, there is also a quick link to the relevant order wizard.
+Overview: Here you will find all the information about the respective product in a category. There is also a quick link to the relevant order form (wizard).
 
 ![Cloud Services Produkt Details](../img/cloud-services/cloud-services-level2.png)
 
-Here you will find the order wizard, in which there are various details that must be filled out in order to order a product. As soon as all mandatory fields have been filled in, you can switch to the order overview via the quick link.
+Order wizard: Here you will find the order form (wizard), in which there are various details that need to be filled out in order to order a product. As soon as all mandatory fields have been filled in, you can switch to the order overview via the quick link.
 
 ![Cloud Services Order Wizard](../img/cloud-services/cloud-services-level3.png)
 

@@ -7,19 +7,21 @@ description: >
     Informationen zu Cloud Services im CloudHub
 ---
 
-## Wo ist es zu finden?
+## Cloud Services User Guide
+
 Willkommen im Bereich Cloud Services des CloudHubs! Hier können Sie die verschiedenen Produkte bestellen. In der folgenden Anleitung erklären wir Ihnen die verschiedene Cloud Service Bereiche und was Sie dort an Informationen, Links und Funktionen finden.
 
 ## Aufbau des Cloud-Service Bereichs
-Das ist die Einstiegsseite für das Dashboard. Hier finden Sie die Übersicht unserer Cloud Services (strukturiert nach Kategorien) sowie weiterführende Links auf andere CloudHub-Bereiche und unsere Produktdokumentation. Über einen Klick auf den Link "Jetzt bestellen" in der Produktkachel gelangen Sie auf das Bestellformular (Wizard) und mit einem Klick auf den Link "Mehr erfahren" gelangen Sie in die Übersicht des jeweiligen Produktes.
+
+Auf der Startseite finden Sie die Übersicht unserer Cloud Services (strukturiert nach Kategorien), sowie weiterführende Links auf andere CloudHub-Bereiche und unsere Produktdokumentation. Über einen Klick auf den Link "Jetzt bestellen" in der Produktkachel gelangen Sie auf das Bestellformular (Wizard) und mit einem Klick auf den Link "Mehr erfahren" gelangen Sie in die Übersicht des jeweiligen Produktes.
 
 ![Cloud Services Übersicht](../img/cloud-services/cloud-services-overview.png)
 
-Hier finden Sie eine Übersicht aller Produkte einer Kategorie. Neben den Informationen gibt es auch einen Quick-Link zum jeweiligen Bestellformular (Wizard).
+Übersicht: Hier finden Sie alle Informationen des jeweiligen Produktes einer Kategorie. Dazu gibt es einen Quick-Link zum jeweiligen Bestellformular (Wizard).
 
 ![Cloud Services Produkt Details](../img/cloud-services/cloud-services-level2.png)
 
-Hier finden Sie das Bestellformular (Wizard), in dem es unterschiedliche Angaben gibt, die ausgefüllt werden müssen, um ein Produkt bestellen zu können. Sobald alle Pflichtfelder ausgefüllt wurden, kann über den Quick-Link zur Bestellübersicht gewechselt werden.
+Bestellformular: Hier finden Sie das Bestellformular (Wizard), in dem es unterschiedliche Angaben gibt, die ausgefüllt werden müssen, um ein Produkt bestellen zu können. Sobald alle Pflichtfelder ausgefüllt wurden, kann über den Quick-Link zur Bestellübersicht gewechselt werden.
 
 ![Cloud Services Bestellformular](../img/cloud-services/cloud-services-level3.png)
 
