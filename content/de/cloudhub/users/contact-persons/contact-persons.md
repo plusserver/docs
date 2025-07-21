@@ -16,6 +16,7 @@ Die Ansprechpartner sind in der Sidebar des CloudHubs unter Ansprechpartner zu f
 ## Ansprechpartner Überblick
 
 ![contact persons overview](../../../img/contact-persons/contact-persons-overview.png)
+
 Allgemein gibt es hier zwei Bereiche:
 - die Verwaltung der Kontakte selbst
 - die Sortierung der angegebenen Kontakte in eine Reihenfolge, die bei Eskalationen oder anderen Notfällen kontaktiert werden soll
