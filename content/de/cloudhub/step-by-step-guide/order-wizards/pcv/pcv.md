@@ -9,7 +9,7 @@ description: >
 
 ## Einleitung
 
-Wilkommen zum Bestellforumular der pluscloud VMware. Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue pluscloud VMware bestellt werden kann.
+Wilkommen zum Bestellformular der pluscloud VMware. Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue pluscloud VMware bestellt werden kann.
 
 ![alt text](../../../../img/cloud-services/cloud-services-level3.png)
 
