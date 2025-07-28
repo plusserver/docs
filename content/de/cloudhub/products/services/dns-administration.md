@@ -18,8 +18,7 @@ Im Tab **„Nameserver“** verwalten Sie die DNS-Zonen Ihrer Domains.\
 #### Übersichtstabelle
 
 - Alle vorhandenen Domains werden in einer Tabelle aufgelistet.
-- Über ein Suchfeld oberhalb der Tabelle können Sie gezielt nach Domains suchen.\
-![Nameserver-Tabelle - Suchfeld](../img/dns-administration/nameserver-table-searchfield.png)
+- Über ein Suchfeld oberhalb der Tabelle können Sie gezielt nach Domains suchen.
 - Für jede Domain stehen folgende Aktionen zur Verfügung:
   - **Bearbeiten**: DNS-Einträge der Domain verwalten\
   ![Nameserver-Tabelle - Eintrag bearbeiten](../img/dns-administration/nameserver-table-edit.png)
@@ -47,8 +46,7 @@ Beim Bearbeiten einer Domain sehen Sie eine Tabelle mit allen zugehörigen DNS-E
 
 ##### Funktionen
 
-- **Suchfeld** zum schnellen Auffinden einzelner Einträge\
-![Tabelle DNS-Einträge - Suchfeld](../img/dns-administration/table-dns-eintries-searchfield.png)
+- **Suchfeld** zum schnellen Auffinden einzelner Einträge
 - Für jeden DNS-Eintrag:
   - **Bearbeiten** (bearbeitbar sind: Wert und TTL)\
   ![Tabelle DNS-Einträge - Eintrag bearbeiten 1](../img/dns-administration/table-dns-entries-edit-entry-1.png)\
@@ -76,8 +74,7 @@ Im Tab **„Reverse DNS“** verwalten Sie PTR-Einträge für Ihre IP-Adressen.\
 #### Übersichtstabelle
 
 - Alle vorhandenen Reverse DNS-Einträge werden in einer Tabelle angezeigt.
-- Ein **Suchfeld** ermöglicht die gezielte Suche nach IP-Adressen oder Hostnamen.\
-![Reverse DNS Tabelle - Suchfeld](../img/dns-administration/reverse-dns-table-searchfield.png)
+- Ein **Suchfeld** ermöglicht die gezielte Suche nach IP-Adressen oder Hostnamen.
 - Für jeden Eintrag stehen folgende Aktionen zur Verfügung:
   - **Bearbeiten** (führt zur Seite „DNS-Reverse-Eintrag bearbeiten“)\
   ![Reverse DNS Tabelle - Eintrag bearbeiten](../img/dns-administration/reverse-dns-table-edit-entry.png)

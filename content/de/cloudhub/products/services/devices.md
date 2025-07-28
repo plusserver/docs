@@ -16,8 +16,7 @@ Alle Geräte werden in einer Tabelle, welche wichtige Basisdaten enthäht, darge
 ![Geräte-Tabelle](../img/devices/devices-table.png)
 
 - **Suchfunktion:**
-  Über das Suchfeld oberhalb der Tabelle können Sie gezielt nach Geräten oder Projektkennungen suchen.\
-  ![Geräte-Tabelle - Suchfeld](../img/devices/devices-table-searchfield.png)
+  Über das Suchfeld oberhalb der Tabelle können Sie gezielt nach Geräten oder Projektkennungen suchen.
 
 - **Navigation zur Produkt-Detailansicht:**
   Durch einen Klick auf die **Projektkennung** gelangen Sie zur jeweiligen [Detailansicht des zugehörigen Produktes](../../products-services-billing/products-services/#detailansicht).\
