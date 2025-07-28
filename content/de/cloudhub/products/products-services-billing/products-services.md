@@ -8,8 +8,6 @@ description: >
   Informationen zu Produkte / Leistungen im CloudHub
 ---
 
-## Produkte / Leistungen
-
 Auf der Seite **„Produkte / Leistungen“** erhalten Sie eine übersichtliche Darstellung aller Produkte und Leistungen, die Sie bei uns erworben haben. Die Informationen werden in einer Tabelle angezeigt und können flexibel gefiltert oder durchsucht werden.
 
 ### Funktionen im Überblick
