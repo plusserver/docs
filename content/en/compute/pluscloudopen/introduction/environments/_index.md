@@ -66,8 +66,8 @@ Another option is to download an OpenRC environment file from the Horizon web in
 Then set the environment variables contained in the file as follows:
 
 ```bash
-source ./<Ihre openstack rc Datei>-openrc.sh
-Bitte geben Sie Ihr OpenStack-Passwort für das Projekt <IhrProjekt> als Benutzer <Ihr Anmeldename> ein
+source ./<your_project_name>-openrc.sh
+Please enter your OpenStack Password for project <your_project_name> as user <your username>:
 ```
 
 ## Tools
