@@ -4,13 +4,64 @@ linkTitle: "Pluscloud Open"
 type: "docs"
 weight: 2
 description: >
-    Schritt für Schritt Anleitung für pluscloud Open
+    Schritt für Schritt Anleitung für pluscloud open
 ---
 
-![alt text](../img/pco-overview1.png)
-![alt text](../img/pco-overview2.png)
-![alt text](../img/pco-project.png)
-![alt text](../img/pco-region.png)
-![alt text](../img/pco-onboarding.png)
-![alt text](../img/pco-existing-project.png)
+## Einleitung
+
+Willkommen zum Bestellformular der pluscloud open. Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue pluscloud VMware bestellt werden kann.
+
+Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
+
+![PCO Überblick Nr.1](../img/pco-overview1.png)
+
+![PCO Überblick Nr.2](../img/pco-overview2.png)
+
+## Schritt 1: Projekt- und Benutzerinformationen
+
+In diesem Schritt machen Sie Angaben zum Projekt und zum Benutzer. Es gibt mehrere Eingabefelder:
+
+- Projekt:
+  - Projektname – Prefix *(nicht änderbar)*: Enthält bereits eine fest vergebene Kennung  
+  - Projektname – Suffix: Standardwert ist `default`, kann aber angepasst werden  
+  - Kurzbeschreibung (optional)
+
+- Benutzer:
+  - Benutzername – Prefix *(nicht änderbar)*  
+  - Benutzername – Suffix: Standardwert ist `default`, kann geändert werden  
+  - Kurzbeschreibung (optional)
+
+- E-Mail-Adresse *(Pflichtfeld)*:  
+  Dieses Feld ist bereits mit der E-Mail-Adresse vorausgefüllt, mit der Sie aktuell angemeldet sind. Die E-Mail-Adresse kann jedoch bei Bedarf angepasst werden.
+
+![PCO Projekt und Benutzer Eingabe](../img/pco-project.png)
+
+## Schritt 2: Onboarding Workshop (optional)
+
+Wie zuvor kann ein Onboarding Workshop für 99 € hinzugebucht werden.  
+Er unterstützt Sie bei der Einrichtung und Nutzung Ihrer pluscloud open Umgebung.
+
+![PCO Onboarding](../img/pco-region.png)
+
+## Schritt 3: Region auswählen
+
+Wählen Sie die gewünschte Region aus, in der Ihre pluscloud open Umgebung bereitgestellt werden soll.  
+Bitte beachten: Es kann nur eine pluscloud open Instanz pro Region erstellt werden.
+
+Verfügbare Regionen:
+
+- DE-WEST-1 CGN3 (Cologne)  
+- DE-WEST-2 DUS6 (Düsseldorf)  
+- DE-NORTH-2 HAM6 (Hamburg)
+
+![PCO Region Auswahl](../img/pco-onboarding.png)
+
+## Schritt 4: Projektvertragskennung
+
+Wie bereits im vorherigen Formular:
+
+- Neue Projektvertragskennung  
+- Existierende Projektvertragskennung (Auswahl aus einer Liste)
+
+![PCO Projektkennung](../img/pco-existing-project.png)
 
