@@ -63,5 +63,5 @@ Wie bereits im vorherigen Formular:
 - Neue Projektvertragskennung  
 - Existierende Projektvertragskennung (Auswahl aus einer Liste)
 
-![PCO Projektkennung](../img/pco-existing-project.png)
+![PCO Projektvertragskennung](../img/pco-existing-project.png)
 
