@@ -9,7 +9,7 @@ description: >
 
 ## Einleitung
 
-Willkommen zum Bestellformular der pluscloud open. Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue pluscloud VMware bestellt werden kann.
+Willkommen zum Bestellformular der pluscloud open. Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue pluscloud open bestellt werden kann.
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
