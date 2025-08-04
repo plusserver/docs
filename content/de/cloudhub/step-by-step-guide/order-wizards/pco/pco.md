@@ -36,7 +36,7 @@ In diesem Schritt machen Sie Angaben zum Projekt und zum Benutzer. Es gibt mehre
 
 ![PCO Projekt und Benutzer Eingabe](../img/pco-project.png)
 
-## Schritt 2: Onboarding Workshop (optional)
+## Schritt 2: Onboarding Workshop
 
 Optional kann ein Onboarding Workshop für 299 € hinzugebucht werden.  
 Er unterstützt Sie bei der Einrichtung und Nutzung Ihrer pluscloud open Umgebung.
