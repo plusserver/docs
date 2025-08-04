@@ -13,7 +13,7 @@ Willkommen zum Bestellformular der pluscloud VMware. Hier wird beschrieben, welc
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
-![alt text](../../../../img/cloud-services/cloud-services-level3.png)
+![PCV Überblick](../../../../img/cloud-services/cloud-services-level3.png)
 
 ## Schritt 1: Auswahl der CPU-Kategorie
 
@@ -39,7 +39,7 @@ Zusätzlich können über ein Dropdown-Menü weitere Optionen und Preise eingese
 - Backup-Volumen  
 - Public IP-Adressen  
 
-![alt text](../img/pcv-cpu.png)
+![PCV CPU Auswahl](../img/pcv-cpu.png)
 
 ## Schritt 2: Angaben für den Administrator
 
@@ -49,14 +49,14 @@ Hier tragen Sie die Daten der verantwortlichen Ansprechperson ein:
 - E-Mail-Adresse (Pflichtfeld)  
 - Kurzbeschreibung (optional)  
 
-![alt text](../img/pcv-admin.png)
+![PCV Administrator Angaben](../img/pcv-admin.png)
 
 ## Schritt 3: Onboarding Workshop
 
 Optional kann ein Onboarding Workshop für 99 € hinzugebucht werden.  
 Dieser Workshop unterstützt Sie bei der Einführung und Nutzung der pluscloud VMware.
 
-![alt text](../img/pcv-onboarding.png)
+![PCV Onboarding](../img/pcv-onboarding.png)
 
 ## Schritt 4: Projektvertragskennung
 
@@ -65,4 +65,4 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 - Neue Projektvertragskennung  
 - Existierende Projektvertragskennung (Auswahl aus einer Liste)
 
-![alt text](../img/pcv-project.png)
+![PCV Projektvertragskennung](../img/pcv-project.png)
