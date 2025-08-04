@@ -58,7 +58,7 @@ Verfügbare Regionen:
 
 ## Schritt 4: Projektvertragskennung
 
-Wie bereits im vorherigen Formular:
+Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 
 - Neue Projektvertragskennung  
 - Existierende Projektvertragskennung (Auswahl aus einer Liste)

@@ -67,7 +67,7 @@ Zukünftig wird sie eine Überwachung durch unser Analystenteam ermöglichen, um
 
 ## Schritt 6: Projektvertragskennung
 
-Wie in den vorherigen Formularen:
+Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 
 - Neue Projektvertragskennung  
 - Existierende Projektvertragskennung (Auswahl aus einer Liste)
