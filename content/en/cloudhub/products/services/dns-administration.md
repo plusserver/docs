@@ -8,11 +8,11 @@ description: >
   Information on DNS Administration in CloudHub
 ---
 
-The **‘DNS Management’** page provides you with a central interface for managing your DNS settings. It is divided into two tabs: **Nameserver** and **Reverse DNS**. Both areas allow you to independently configure your DNS zones and PTR entries.
+The **"DNS Management"** page provides you with a central interface for managing your DNS settings. It is divided into two tabs: **Nameserver** and **Reverse DNS**. Both areas allow you to independently configure your DNS zones and PTR entries.
 
 ### Nameservers
 
-In the **‘Nameserver’** tab, you can manage the DNS zones of your domains.\
+In the **"Nameserver"** tab, you can manage the DNS zones of your domains.\
 ![Nameserver table](../img/dns-administration/nameserver-table.png)
 
 #### Summary table
@@ -31,7 +31,7 @@ In the **‘Nameserver’** tab, you can manage the DNS zones of your domains.\
 
 #### Add domain
 
-The ‘Add domain’ button takes you to the ‘Add DNS domain’ page.\
+The "Add domain" button takes you to the "Add DNS domain" page.\
 ![Nameserver table - Add domain](../img/dns-administration/nameserver-table-add-domain.png)
 
 ### Add DNS domain
@@ -56,7 +56,7 @@ When editing a domain, you will see a table with all associated DNS entries.
 
 ##### Add DNS entry
 
-Clicking on the **‘Add DNS entry’** button will display a new entry line at the top of the table. Enter the following values there:\
+Clicking on the **"Add DNS entry"** button will display a new entry line at the top of the table. Enter the following values there:\
 ![Table DNS entries - Add entry](../img/dns-administration/table-dns-entries-add-entry.png)
 
 - **Name**
@@ -68,7 +68,7 @@ Rechts in der Zeile können Sie den neuen Eintrag speichern oder das Hinzufügen
 
 ### Reverse DNS
 
-In the **‘Reverse DNS’** tab, you can manage PTR entries for your IP addresses.
+In the **"Reverse DNS"** tab, you can manage PTR entries for your IP addresses.
 ![Reverse DNS table](../img/dns-administration/reverse-dns-table.png)
 
 #### Summary table
@@ -76,12 +76,12 @@ In the **‘Reverse DNS’** tab, you can manage PTR entries for your IP address
 - All existing reverse DNS entries are displayed in a table.
 - A **search field** allows you to search for specific IP addresses or host names.
 - The following actions are available for each entry:
-- **Edit** (takes you to the ‘Edit DNS reverse entry’ page)\
+- **Edit** (takes you to the "Edit DNS reverse entry" page)\
   ![Reverse DNS table - Edit entry](../img/dns-administration/reverse-dns-table-edit-entry.png)
   - **Delete** the entry\
   ![Reverse DNS table - Delete entry](../img/dns-administration/reverse-dns-table-delete-entry.png)
 
-Click on the ‘Add entry’ button to go to the ‘Add DNS reverse entry’ page.\
+Click on the "Add entry" button to go to the "Add DNS reverse entry" page.\
 ![Reverse DNS table - Add entry](../img/dns-administration/reverse-dns-table-add-entry.png)
 
 ##### Edit DNS reverse entry
