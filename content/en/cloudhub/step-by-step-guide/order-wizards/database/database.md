@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the database order form. Here you will find a description of the available configuration options and how to order a new database.
+Welcome to the database order wizard. Here you will find a description of the available configuration options and how to order a new database.
 
 Below, we will guide you step by step through the ordering process and explain the individual selection options and input fields.
 

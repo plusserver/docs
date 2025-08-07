@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the dedicated server order form. Here you will find a description of the available configuration options and how to order a new dedicated server.
+Welcome to the dedicated server order wizard. Here you will find a description of the available configuration options and how to order a new dedicated server.
 
 Below, we will guide you step by step through the ordering process and explain the individual options and input fields.
 
