@@ -123,10 +123,9 @@ Der Key muss im OpenSSH-Format (z. B. `ssh-ed25519` oder `ssh-rsa`) vorliegen 
 
 ## Schritt 8: Region auswählen
 
-Wählen Sie die gewünschte Region für die Bereitstellung Ihrer Datenbank:
+Aktuell steht eine Region für die Bereitstellung Ihrer Datenbank zur Verfügung:
 
 - DE-WEST-1 CGN3 (Köln)
-- DE-NORTH-2 HAM6 (Hamburg)
 
 ![Dedicated Server Regionen](../img/dedicated-server-region.png)
 
