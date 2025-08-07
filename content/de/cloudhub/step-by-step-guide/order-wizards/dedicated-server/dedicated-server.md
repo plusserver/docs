@@ -49,7 +49,7 @@ Im ersten Schritt stehen vier unterschiedliche Servertypen zur Auswahl:
    - 2× 10 GbE NIC
    - 665,56 €
 
-![Dedicated Server Server Typ](../img/dedicated-server-servertype.png)
+![Dedicated Server Typ](../img/dedicated-server-servertype.png)
 
 ## Schritt 2: Größe des RAM-Speichers
 

@@ -102,11 +102,11 @@ Select the desired region for your database deployment:
 
 ![Databases Region](../img/database-region.png)
 
-## Step 7: Project contract ID
+## Step 7: Project Contract ID
 
 Select whether a project contract ID already exists:
 
 - New project contract ID
 - Existing project contract ID (select from a list)
 
-![Databases Project contract ID](../img/database-existing-project.png)
+![Databases Project Contract ID](../img/database-existing-project.png)
