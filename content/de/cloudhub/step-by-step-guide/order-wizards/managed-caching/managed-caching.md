@@ -13,7 +13,7 @@ Willkommen zum Bestellformular des Managed Cachings. Hier wird beschrieben, welc
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
-Die Private Registry basiert auf Valkey, einer skalierbaren und leistungsstarken In-Memory-Datenbank, die für schnelle Datenverarbeitung und Caching-Lösungen optimiert ist.
+Das Managed Caching basiert auf Valkey, einer skalierbaren und leistungsstarken In-Memory-Datenbank, die für schnelle Datenverarbeitung und Caching-Lösungen optimiert ist.
 
 ![Managed Caching Überblick 1](../img/managed-caching-overview1.png)
 ![Managed Caching Überblick 2](../img/managed-caching-overview2.png)
