@@ -1,6 +1,6 @@
 ---
-title: "Step by Step Guide"
-linkTitle: "Step by Step Guide"
+title: "Step by Step Guides"
+linkTitle: "Step by Step Guides"
 type: "docs"
 weight: 3
 ---
