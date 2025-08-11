@@ -22,9 +22,14 @@ The Managed Caching is based on Valkey, a scalable and powerful in-memory databa
 
 Select the desired ratio of vCPU to vRAM:
 
-- Basic Usage – ratio 1:2
-- All Purpose – ratio 1:4
-- RAM Optimised – ratio 1:8
+#### Basic Usage
+- Nodes with a vCPU/vRAM ratio of 1:2
+
+#### All Purpose
+- Nodes with a vCPU/vRAM ratio of 1:4
+
+#### RAM Optimised
+- Nodes with a vCPU/vRAM ratio of 1:8
 
 ## Step 2: Select instance size
 
@@ -60,9 +65,9 @@ Instance sizes:
 ![Managed Caching All Purpose](../img/managed-caching-all-purpose.png)
 ![Managed Caching RAM Optimised](../img/managed-caching-ram.png)
 
-## Step 3: Memory size
+## Step 3: Storage size
 
-Select the desired memory size via a slider:
+Select the desired storage size via a slider:
 
 - Min.: 50 GB
 - Max.: 1000 GB
@@ -73,7 +78,6 @@ Select the desired memory size via a slider:
 ## Step 4: Trusted Sources
 
 Enter the permitted network addresses in CIDR format.
-This is a compulsory field.
 
 Example:
 `10.10.10.10/24`

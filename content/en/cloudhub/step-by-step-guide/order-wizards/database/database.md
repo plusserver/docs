@@ -9,9 +9,9 @@ description: >
 
 ## Introduction
 
-Welcome to the database order wizard. Here you will find a description of the available configuration options and how to order a new database.
+Welcome to the database order wizard. Here it is described which configuration options are available and how a new database can be ordered.
 
-Below, we will guide you step by step through the ordering process and explain the individual selection options and input fields.
+In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
 ![Database overview 1](../img/database-overview1.png)
 ![Database overview 2](../img/database-overview2.png)
@@ -35,9 +35,14 @@ Select the desired database system and the appropriate version:
 
 Select the desired ratio of vCPU to vRAM:
 
-- Basic Usage – Ratio 1:2
-- All Purpose – Ratio 1:4
-- RAM Optimised – Ratio 1:8
+#### Basic Usage
+- Nodes with a vCPU/vRAM ratio of 1:2
+
+#### All Purpose
+- Nodes with a vCPU/vRAM ratio of 1:4
+
+#### RAM Optimised
+- Nodes with a vCPU/vRAM ratio of 1:8
 
 ## Step 3: Select instance size
 

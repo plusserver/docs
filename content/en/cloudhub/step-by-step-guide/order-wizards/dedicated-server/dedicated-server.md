@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the dedicated server order wizard. Here you will find a description of the available configuration options and how to order a new dedicated server.
+Welcome to the Dedicated Server order wizard. Here it is described which configuration options are available and how a new Dedicated Server can be ordered.
 
 Below, we will guide you step by step through the ordering process and explain the individual options and input fields.
 
@@ -21,28 +21,28 @@ Below, we will guide you step by step through the ordering process and explain t
 
 In the first step, you can choose from four different server types:
 
-1. Essential - 100
+#### Essential - 100
    - Intel 16C/32T (2,1 GHz)
    - 2× 960 GB SSD (HW RAID)
    - 64 GB RAM
    - 2× 10 GbE NIC
    - 198,89 €
 
-2. Essential - 200
+#### Essential - 200
    - Intel 12C/24T (3,4 GHz)
    - 2× 960 GB SSD (HW RAID)
    - 64 GB RAM
    - 2× 10 GbE NIC
    - 310 €
 
-3. Performance - 100 (aktuell nicht verfügbar)
+#### Performance - 100 (aktuell nicht verfügbar)
    - AMD EPYC 9355P 32C/64T, 3.55-4.40GHz
    - 2× 1,92 TB NVMe (Soft RAID)
    - 128 GB RAM
    - 2× 10 GbE NIC
    - 554,44 €
 
-4. Performance - 200 (aktuell nicht verfügbar)
+#### Performance - 200 (aktuell nicht verfügbar)
    - AMD EPYC 9555P 64C/128T, 3.2-4.40GHz
    - 2× 1,92 TB NVMe (Soft RAID)
    - 128 GB RAM
@@ -56,7 +56,7 @@ In the first step, you can choose from four different server types:
 In this step, select the desired size of the RAM (RAM) for your server.
 By default, 64 GB RAM are included. Alternatively, you can increase the performance of your server by selecting 128 GB RAM.
 
-### Options:
+#### Options:
 
 - 64 GB: 0 € (included in the basic price)
 - 128 GB: 38,40 € additionally
@@ -93,7 +93,6 @@ If you need more storage space than the 2× 960GB contained in the basic price, 
 ## Step 5: Trusted Sources
 
 Enter the permitted network addresses in CIDR format.
-This is a compulsory field.
 
 Example:
 `10.10.10.10/24`
@@ -105,9 +104,9 @@ Example:
 In this step, select the desired operating system for your server.
 There are two popular Linux distributions to choose from, each in the current stable version:
 
-- Ubuntu
+#### Ubuntu
   - Ubuntu 24.04 LTS: 0 €
-- Debian
+#### Debian
   - Debian 12: 0 €
 
 ![Dedicated Server Operating system](../img/dedicated-server-os.png)

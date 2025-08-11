@@ -22,9 +22,14 @@ Das Managed Caching basiert auf Valkey, einer skalierbaren und leistungsstarken 
 
 Wählen Sie das gewünschte Verhältnis von vCPU zu vRAM:
 
-- Basic Usage – Verhältnis 1:2
-- All Purpose – Verhältnis 1:4
-- RAM Optimised – Verhältnis 1:8
+#### Basic Usage
+- Nodes mit einem vCPU/vRAM-Verhältnis von 1:2
+
+#### All Purpose
+- Nodes mit einem vCPU/vRAM-Verhältnis von 1:4
+
+#### RAM Optimised
+- Nodes mit einem vCPU/vRAM-Verhältnis von 1:8
 
 ## Schritt 2: Instanzgröße auswählen
 
@@ -73,7 +78,6 @@ Wählen Sie die gewünschte Speichergröße über einen Schieberegler:
 ## Schritt 4: Vertrauenswürdige Quellen
 
 Geben Sie die erlaubten Netzwerkadressen im CIDR-Format an.
-Dies ist ein Pflichtfeld.
 
 Beispiel:
 `10.10.10.10/24`

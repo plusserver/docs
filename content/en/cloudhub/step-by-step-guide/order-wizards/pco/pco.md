@@ -1,6 +1,6 @@
 ---
-title: "Pluscloud Open"
-linkTitle: "Pluscloud Open"
+title: "pluscloud Open"
+linkTitle: "pluscloud Open"
 type: "docs"
 weight: 2
 description: >
@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the PlusCloud Open order wizard. Here it is described which configuration options are available and how a new PlusCloud Open can be ordered.
+Welcome to the pluscloud Open order wizard. Here it is described which configuration options are available and how a new pluscloud Open can be ordered.
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
@@ -18,17 +18,17 @@ In the following we guide you step by step through the ordering process and expl
 
 ## Step 1: Project and user information
 
-In this step you provide information about the project and the user.There are several input fields:
+In the first step, you provide information about the project and the user.There are several input fields:
 
 - Project:
     - Project name - Prefix *(not changeable)*: already contains a fixed identifier
     - Project name - Suffix: Standard value is `default`, but can be adjusted
-    - Brief description (optional)
+    - short description (optional)
 
 - User:
     - Username - Prefix *(not changeable)*
     - Username - suffix: default value is `default`, can be changed
-    - Brief description (optional)
+    - short description (optional)
 
 - Email address *(Required field)*:
     This field has already been prefilled with the email address with which you are currently registered. However, the email address can be adjusted if necessary.
@@ -40,7 +40,7 @@ In this step you provide information about the project and the user.There are se
 Optionally, an onboarding workshop can be booked for 299€.
 He supports you in setting up and using your PlusCloud Open environment.
 
-![PCO Onboarding](../img/pco-region.png)
+![PCO Onboarding](../img/pco-onboarding.png)
 
 ## Step 3: Select region
 
@@ -53,7 +53,7 @@ Available regions:
 - DE-WEST-2 DUS6 (Düsseldorf)
 - DE-NORTH-2 HAM6 (Hamburg)
 
-![PCO Region Auswahl](../img/pco-onboarding.png)
+![PCO Region Auswahl](../img/pco-region.png)
 
 ## Step 4: Project Contract ID
 

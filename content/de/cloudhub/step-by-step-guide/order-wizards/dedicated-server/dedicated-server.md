@@ -21,28 +21,28 @@ Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und e
 
 Im ersten Schritt stehen vier unterschiedliche Servertypen zur Auswahl:
 
-1. Essential - 100
+#### Essential - 100
    - Intel 16C/32T (2,1 GHz)
    - 2× 960 GB SSD (HW RAID)
    - 64 GB RAM
    - 2× 10 GbE NIC
    - 198,89 €
 
-2. Essential - 200
+#### Essential - 200
    - Intel 12C/24T (3,4 GHz)
    - 2× 960 GB SSD (HW RAID)
    - 64 GB RAM
    - 2× 10 GbE NIC
    - 310 €
 
-3. Performance - 100 (aktuell nicht verfügbar)
+#### Performance - 100 (aktuell nicht verfügbar)
    - AMD EPYC 9355P 32C/64T, 3.55-4.40GHz
    - 2× 1,92 TB NVMe (Soft RAID)
    - 128 GB RAM
    - 2× 10 GbE NIC
    - 554,44 €
 
-4. Performance - 200 (aktuell nicht verfügbar)
+#### Performance - 200 (aktuell nicht verfügbar)
    - AMD EPYC 9555P 64C/128T, 3.2-4.40GHz
    - 2× 1,92 TB NVMe (Soft RAID)
    - 128 GB RAM
@@ -93,7 +93,6 @@ Falls Sie mehr Speicherplatz benötigen als die im Grundpreis enthaltenen 2× 
 ## Schritt 5: Vertrauenswürdige Quellen
 
 Geben Sie die erlaubten Netzwerkadressen im CIDR-Format an.
-Dies ist ein Pflichtfeld.
 
 Beispiel:
 `10.10.10.10/24`

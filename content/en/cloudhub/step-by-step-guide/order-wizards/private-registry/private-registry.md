@@ -9,21 +9,20 @@ description: >
 
 ## Introduction
 
-Welcome to the private registry order wizard. Here it is described which configuration options are available and how a new private registry can be ordered.
+Welcome to the Private Registry order wizard. Here it is described which configuration options are available and how a new Private Registry can be ordered.
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
-The private registry is based on Harbor, a cloudnative open source registry for container images.
-
+The Private Registry is based on Harbor, a cloudnative open source registry for container images.
 
 ![Private Registry Overview 1](../img/private-registry-overview1.png)
 ![Private Registry Overview 2](../img/private-registry-overview2.png)
 
 ## Step 1: Instance type
 
-Only one instance type is currently available:
+In the first step, you can choose an instance type:
 
-- Basic usage
+#### Basic usage
 - Nodes with a vCPU/vRAM ratio of 1:2
 
 ![Private Registry Instance type](../img/private-registry-instanz-type.png)
@@ -32,18 +31,17 @@ Only one instance type is currently available:
 
 Select one of the following instance sizes:
 
-- B2-4
+#### B2-4
 - 2 vCPU(s) and 4 GB RAM
 - 0.11 €/hour
 
-- B4-8
+#### B4-8
 - 4 vCPU(s) and 8 GB RAM
 - 0.22 €/hour
 
 ![Private Registry Instance size](../img/private-registry-instanz-size.png)
 
 ## Step 3: Storage Size
-
 
 Select the desired storage size via a slider:
 
@@ -56,7 +54,6 @@ Select the desired storage size via a slider:
 ## Schritt 4: Trusted Sources
 
 Enter the permitted network addresses in CIDR format.
-This is a required field.
 
 Example:
 `10.10.10.10/24`

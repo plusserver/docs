@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the order wizard of the Keycloak. Here it is described which configuration options are available and how a new Keycloak can be ordered.
+Welcome to the Keycloak order wizard. Here it is described which configuration options are available and how a new Keycloak can be ordered.
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
@@ -18,9 +18,9 @@ The Keycloak is currently offered on version 26 and uses an instance size (node)
 ![Keycloak overview 1](../img/keycloak-overview1.png)
 ![Keycloak overview 2](../img/keycloak-overview2.png)
 
-## Schritt 1: Memory size
+## Schritt 1: Storage size
 
-Select the desired memory size via a slider:
+Select the desired storage size via a slider:
 
 - Min.: 50 GB
 - Max.: 200 GB
@@ -31,7 +31,6 @@ Select the desired memory size via a slider:
 ## Schritt 2: Trusted Sources
 
 Enter the permitted network addresses in CIDR format.
-This is a compulsory field.
 
 Example:
 `10.10.10.10/24`

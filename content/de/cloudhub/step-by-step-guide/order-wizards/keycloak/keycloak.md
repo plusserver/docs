@@ -31,7 +31,6 @@ Wählen Sie die gewünschte Speichergröße über einen Schieberegler:
 ## Schritt 2: Vertrauenswürdige Quellen
 
 Geben Sie die erlaubten Netzwerkadressen im CIDR-Format an.
-Dies ist ein Pflichtfeld.
 
 Beispiel:
 `10.10.10.10/24`

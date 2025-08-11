@@ -1,6 +1,6 @@
 ---
-title: "Pluscloud VMware"
-linkTitle: "Pluscloud VMware"
+title: "pluscloud VMware"
+linkTitle: "pluscloud VMware"
 type: "docs"
 weight: 1
 description: >
@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the PlusCloud VMware order wizard. Here it is described which configuration options are available and how a new PlusCloud VMware can be ordered.
+Welcome to the pluscloud VMware order wizard. Here it is described which configuration options are available and how a new pluscloud VMware can be ordered.
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
@@ -19,10 +19,10 @@ In the following we guide you step by step through the ordering process and expl
 
 In the first step, select the CPU category for your VMware:
 
-- **Standard CPU**
+- Standard CPU
     - at least 2 GHz
     - no GPU support
-- **High CPU**
+- High CPU
     - at least 3 GHz
     - GPU support available
 

@@ -41,7 +41,7 @@ In diesem Schritt machen Sie Angaben zum Projekt und zum Benutzer. Es gibt mehre
 Optional kann ein Onboarding Workshop für 299 € hinzugebucht werden.
 Er unterstützt Sie bei der Einrichtung und Nutzung Ihrer pluscloud open Umgebung.
 
-![PCO Onboarding](../img/pco-region.png)
+![PCO Onboarding](../img/pco-onboarding.png)
 
 ## Schritt 3: Region auswählen
 
@@ -54,7 +54,7 @@ Verfügbare Regionen:
 - DE-WEST-2 DUS6 (Düsseldorf)
 - DE-NORTH-2 HAM6 (Hamburg)
 
-![PCO Region Auswahl](../img/pco-onboarding.png)
+![PCO Region Auswahl](../img/pco-region.png)
 
 ## Schritt 4: Projektvertragskennung
 

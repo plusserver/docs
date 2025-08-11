@@ -32,11 +32,11 @@ Aktuell steht nur ein Instanztyp zur Verfügung:
 
 Wählen Sie eine der folgenden Instanzgrößen:
 
-- b2-4
+#### b2-4
   - 2 vCPU(s) und 4 GB RAM
   - 0,11 €/Stunde
 
-- b4-8
+#### b4-8
   - 4 vCPU(s) und 8 GB RAM
   - 0,22 €/Stunde
 
@@ -55,7 +55,6 @@ Wählen Sie die gewünschte Speichergröße über einen Schieberegler:
 ## Schritt 4: Vertrauenswürdige Quellen
 
 Geben Sie die erlaubten Netzwerkadressen im CIDR-Format an.
-Dies ist ein Pflichtfeld.
 
 Beispiel:
 `10.10.10.10/24`

@@ -35,9 +35,14 @@ Wählen Sie das gewünschte Datenbanksystem und die passende Version:
 
 Wählen Sie das gewünschte Verhältnis von vCPU zu vRAM:
 
-- Basic Usage – Verhältnis 1:2
-- All Purpose – Verhältnis 1:4
-- RAM Optimised – Verhältnis 1:8
+#### Basic Usage
+- Nodes mit einem vCPU/vRAM-Verhältnis von 1:2
+
+#### All Purpose
+- Nodes mit einem vCPU/vRAM-Verhältnis von 1:4
+
+#### RAM Optimised
+- Nodes mit einem vCPU/vRAM-Verhältnis von 1:8
 
 ## Schritt 3: Instanzgröße auswählen
 

@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the Managed Kubernetes order wizard. Here it is described which configuration options are available and how a new managed Kubernetes can be ordered.
+Welcome to the Managed Kubernetes order wizard. Here it is described which configuration options are available and how a new Managed Kubernetes can be ordered.
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
@@ -18,7 +18,7 @@ In the following we guide you step by step through the ordering process and expl
 
 ## Step 1: Selection of the infrastructure
 
-In this step, the infrastructure is selected.
+In the first step, the infrastructure is selected.
 Currently only one option is available that is already preselected:
 
 - pluscloud open:
