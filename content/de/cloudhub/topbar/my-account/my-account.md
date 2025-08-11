@@ -2,19 +2,20 @@
 title: "Mein Konto"
 linkTitle: "Mein Konto"
 type: "docs"
-weight: 5
+weight: 1
 description: >
     Informationen zu den Kontoeinstellungen im CloudHub
 ---
 
 ## Wo ist es zu finden?
 
-Mein Konto ist im CloudHub unter "Mein Konto" verfügbar. Diese erreicht man, indem man oben rechts auf die eigene E-Mail-Adresse in der Topbar klickt und anschließend den Menüpunkt "Mein Konto" auswählt.\
-![Mein Konto in der Topbar](../img/my-account/my-account-topbar.png)
+Mein Konto ist im CloudHub unter "Mein Konto" verfügbar. Diese erreicht man, indem man oben rechts auf die eigene E-Mail-Adresse in der Topbar klickt und anschließend den Menüpunkt "Mein Konto" auswählt.
+
+![Mein Konto in der Topbar](../img/my-account-topbar.png)
 
 ## Übersicht
 
-![Mein Konto](../img/my-account/my-account-overview.png)
+![Mein Konto](../img/my-account-overview.png)
 
 ### Kontodaten
 
