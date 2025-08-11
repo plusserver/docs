@@ -51,7 +51,8 @@ Sie erhalten auf dem Überblick alle Informationen der angebotenen Produkte. Wen
 
 ### Das Bestellformular (Wizard)
 
-Hier finden Sie das Bestellformular (Wizard) mit verschiedenen Optionen zu diesem konkreten Produkt. Dieser User Guide erläutert den Aufbau des Bestellformulars für die pluscloud VMware. Die restlichen Bestellformulare finden Sie unter: ...
+Hier finden Sie das Bestellformular (Wizard) mit verschiedenen Optionen zu diesem konkreten Produkt. Dieser User Guide erläutert den Aufbau des Bestellformulars für die pluscloud VMware. Die restlichen Bestellformulare finden Sie unter:
+[Bestellformulare der Produkte](http://localhost:1313/de/cloudhub/step-by-step-guide/order-wizards/).
 
 #### Aufbau
 
@@ -59,11 +60,11 @@ Das Bestellformular (Wizard) für die pluscloud VMware ist in verschiedene Absch
 
 ![Cloud Services Level 3 CPU-Kategorie](../img/cloud-services/cloud-services-level3-cpu.png)
 
-Darauf folgt ein Bereich zur Erfassung der Administratordaten. Hier sind der Vor- und Nachname sowie die E-Mail-Adresse als Pflichtangaben erforderlich; zusätzlich kann eine Kurzbeschreibung angegeben werden. 
+Darauf folgt ein Bereich zur Erfassung der Administratordaten. Hier sind der Vor- und Nachname sowie die E-Mail-Adresse als Pflichtangaben erforderlich; zusätzlich kann eine Kurzbeschreibung angegeben werden.
 
 ![Cloud Services Level 3 Administrator](../img/cloud-services/cloud-services-level3-administrator.png)
 
-Im Anschluss daran bietet das Formular die Möglichkeit, einen optionalen Onboarding-Workshop durch das Aktivieren einer Checkbox hinzuzubuchen. 
+Im Anschluss daran bietet das Formular die Möglichkeit, einen optionalen Onboarding-Workshop durch das Aktivieren einer Checkbox hinzuzubuchen.
 
 ![Cloud Services Level 3 Onboarding-Workshop](../img/cloud-services/cloud-services-level3-onboarding.png)
 
