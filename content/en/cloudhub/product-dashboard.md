@@ -2,7 +2,7 @@
 title: "Product Dashboard"
 linkTitle: "Product Dashboard"
 type: "docs"
-weight: 9
+weight: 5
 description: >
     Information on the Product Dashboard in CloudHub
 ---

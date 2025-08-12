@@ -2,7 +2,7 @@
 title: "Cloud Services in CloudHub"
 linkTitle: "Cloud Services"
 type: "docs"
-weight: 1
+weight: 2
 description: >
     Informationen for Cloud Services in CloudHub
 ---
@@ -51,7 +51,8 @@ The overview provides you with all the information about the products on offer. 
 
 ### The Order Wizard
 
-Here you will find the order wizard with various options for this specific product. This User Guide explains the structure of the order wizard for pluscloud VMware. You can find the other order wizards under: ...
+Here you will find the order wizard with various options for this specific product. This User Guide explains the structure of the order wizard for pluscloud VMware. You can find the other order wizards under:
+[Order Wizards of all Products](http://localhost:1313/en/cloudhub/step-by-step-guide/order-wizards/).
 
 #### Structure
 

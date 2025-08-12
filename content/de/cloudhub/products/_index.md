@@ -1,6 +1,6 @@
 ---
-title: "Produkte"
-linkTitle: "Produkte"
+title: "Products"
+linkTitle: "Products"
 type: "docs"
 weight: 3
 menu:

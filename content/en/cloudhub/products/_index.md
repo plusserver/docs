@@ -2,7 +2,7 @@
 title: "Products"
 linkTitle: "Products"
 type: "docs"
-weight: 3
+weight: 4
 menu:
   main:
     weight: 3
