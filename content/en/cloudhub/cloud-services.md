@@ -1,5 +1,5 @@
 ---
-title: "Cloud Services in CloudHub"
+title: "Cloud Services"
 linkTitle: "Cloud Services"
 type: "docs"
 weight: 2
