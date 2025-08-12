@@ -2,5 +2,5 @@
 title: "Step by Step Guides"
 linkTitle: "Step by Step Guides"
 type: "docs"
-weight: 100
+weight: 5
 ---
