@@ -66,8 +66,8 @@ Eine weitere Möglichkeit besteht darin, eine OpenRC-Umgebungsdatei von der Hori
 Danach setzen Sie die in der Datei enthaltenen Umgebungsvariablen wie folgt:
 
 ```bash
-source ./<Ihre openstack rc Datei>-openrc.sh
-Bitte geben Sie Ihr OpenStack-Passwort für das Projekt <IhrProjekt> als Benutzer <Ihr Anmeldename> ein
+source ./<ihr_projekt_name>-openrc.sh
+Bitte geben Sie Ihr OpenStack-Passwort für das Projekt <ihr_projekt_name> als Benutzer <ihr_username> ein:
 ```
 
 ## Tools
