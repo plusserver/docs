@@ -2,7 +2,7 @@
 title: "Kunden Support PIN"
 linkTitle: "Kunden Support PIN"
 type: "docs"
-weight: 4
+weight: 5
 description: >
     Informationen zum Kunden Support PIN im CloudHub
 ---

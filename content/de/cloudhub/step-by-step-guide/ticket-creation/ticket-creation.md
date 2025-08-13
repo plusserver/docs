@@ -2,7 +2,7 @@
 title: "Ticket erstellen"
 linkTitle: "Ticket erstellen"
 type: "docs"
-weight: 5
+weight: 6
 description: >
     Informationen zum Erstellen von Tickets
 ---

@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Produkte bestellen"
 linkTitle: "Produkte bestellen"
 type: "docs"
@@ -19,7 +19,7 @@ Wähle in der linken Seitenleiste den Button „Cloud Services“ aus und klicke
 
 ![Auf jetzt bestellen klicken](../img/ordering-products/best2.png)
 
-Auf dieser Informationsseite können sie sich über Preise und Vorzüge des Produkts und seinen Zusatzleistungen (z.B. Onboarding Workshop) informieren. 
+Auf dieser Informationsseite können sie sich über Preise und Vorzüge des Produkts und seinen Zusatzleistungen (z.B. Onboarding Workshop) informieren.
 Um den Bestellvorgang einzuleiten muss der Button "Jetzt bestellen" geklickt werden.
 
 ### Schritt 3: Bestellwizard ausfüllen
@@ -57,4 +57,4 @@ Bevor die Bestellung abgeschlossen werden kann, müssen die Vertragsbedingungen 
 Jetzt öffnet sich der Bereich "Auftragsstatus", hier sind die Produkte (inklusive detailierter Informationen) aufgeführt, die Sie über den CloudHub bestellt haben.
 
 Ganz rechts findet man die Spalte Aktionen. Dort werden weiterführende Aktionen angeboten. Man kann auf die Oberfläche des Produktes gehen und dort direkt mit dem Produkt loslegen. Wenn man die Bestellung null und nichtig machen möchte (oder einfach Hilfe braucht), wird man zum Ticketmodul geführt, wo das alles möglich ist.
-
+ -->
