@@ -2,7 +2,7 @@
 title: "Create Ticket"
 linkTitle: "Create Ticket"
 type: "docs"
-weight: 5
+weight: 6
 description: >
     Information about creating tickets
 ---

@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Order Products"
 linkTitle: "Order Products"
 type: "docs"
@@ -19,12 +19,12 @@ In the left sidebar, select the “Cloud Services” button and click on the des
 
 ![Click on Order Now](../img/ordering-products/beste2.png)
 
-On this information page, you can learn about the product's pricing, benefits, and optional services (e.g., onboarding workshop).  
+On this information page, you can learn about the product's pricing, benefits, and optional services (e.g., onboarding workshop).
 To initiate the ordering process, click the “Order Now” button.
 
 ### Step 3: Fill Out the Order Wizard
 
-![Fill out order wizard](../img/ordering-products/beste3.0.png)  
+![Fill out order wizard](../img/ordering-products/beste3.0.png)
 ![Fill out order wizard](../img/ordering-products/beste3.5.png)
 
 The general structure of the wizards is as follows:
@@ -46,7 +46,7 @@ The general structure of the wizards is as follows:
 
 ![Review and confirm order](../img/ordering-products/beste5.png)
 
-Here, the order parameters and the associated costs are shown again.  
+Here, the order parameters and the associated costs are shown again.
 If the order only generates usage-based charges, the price table can be accessed in the top right. Otherwise, the one-time cost is displayed under “Place paid order now”.
 
 Before completing the order, the terms and conditions must be accepted.
@@ -57,5 +57,5 @@ Before completing the order, the terms and conditions must be accepted.
 
 The “Order Status” section now opens. Here you’ll find all products you have ordered through CloudHub, including detailed information.
 
-On the far right, you’ll see the Actions column. Here, further actions are available. You can access the product interface and start working with the product right away.  
-If you want to cancel the order or need help, you’ll be directed to the ticket module where everything can be handled.
+On the far right, you’ll see the Actions column. Here, further actions are available. You can access the product interface and start working with the product right away.
+If you want to cancel the order or need help, you’ll be directed to the ticket module where everything can be handled. -->
