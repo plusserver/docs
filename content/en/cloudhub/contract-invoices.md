@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Contracts and Invoices"
 linkTitle: "Contracts and Invoices"
 type: "docs"
@@ -41,4 +41,4 @@ All invoices are listed here and the associated PDF can also be downloaded.
 
 ![Show invoice attachments](../img/contract-invoices/ce5.png)
 
-All invoice attachments are listed here and the associated PDF can also be downloaded.
+All invoice attachments are listed here and the associated PDF can also be downloaded. -->
