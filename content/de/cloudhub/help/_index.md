@@ -1,6 +1,6 @@
 ---
-title: "Help"
-linkTitle: "Help"
+title: "Hilfe"
+linkTitle: "Hilfe"
 type: "docs"
 weight: 5
 menu:
