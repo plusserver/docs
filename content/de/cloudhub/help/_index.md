@@ -1,11 +1,11 @@
 ---
-title: "Hilfe"
-linkTitle: "Hilfe"
+title: "Help"
+linkTitle: "Help"
 type: "docs"
-weight: 4
+weight: 5
 menu:
   main:
-    weight: 4
+    weight: 5
 ---
 
 Die Sektion „Hilfe“ bietet schnellen Zugriff auf den Support sowie Antworten auf häufig gestellte Fragen (FAQ).
