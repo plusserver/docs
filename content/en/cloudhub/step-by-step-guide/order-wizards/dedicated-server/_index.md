@@ -13,9 +13,9 @@ Welcome to the Dedicated Server order wizard. Here it is described which configu
 
 Below, we will guide you step by step through the ordering process and explain the individual options and input fields.
 
-![Dedicated Server Overview 1](../img/dedicated-server-overview1.png)
-![Dedicated Server Overview 2](../img/dedicated-server-overview2.png)
-![Dedicated Server Overview 3](../img/dedicated-server-overview3.png)
+![Dedicated Server Overview 1](img/dedicated-server-overview1.png)
+![Dedicated Server Overview 2](img/dedicated-server-overview2.png)
+![Dedicated Server Overview 3](img/dedicated-server-overview3.png)
 
 ## Step 1: Server Type
 
@@ -49,7 +49,7 @@ In the first step, you can choose from four different server types:
    - 2× 10 GbE NIC
    - 665,56 €
 
-![Dedicated Server Type](../img/dedicated-server-servertype.png)
+![Dedicated Server Type](img/dedicated-server-servertype.png)
 
 ## Step 2: RAM memory size
 
@@ -63,7 +63,7 @@ By default, 64 GB RAM are included. Alternatively, you can increase the performa
 
 The selection of the right RAM value depends on the planned use of your server-for example, the higher variant is recommended for memory-intensive applications or large databases.
 
-![Dedicated Server RAM](../img/dedicated-server-ram.png)
+![Dedicated Server RAM](img/dedicated-server-ram.png)
 
 ## Step 3: System memory (included in the basic price)
 
@@ -73,7 +73,7 @@ By default, the following configuration is included in the price and already pre
 
 - 2× 960 GB SSD (In the hardware raid network)
 
-![Dedicated Server System Storage](../img/dedicated-server-storage.png)
+![Dedicated Server System Storage](img/dedicated-server-storage.png)
 
 ## Step 4: Additional memory
 
@@ -88,7 +88,7 @@ If you need more storage space than the 2× 960GB contained in the basic price, 
 - Standard configuration: provision within approx. 1 hour
 - Individual configuration: provision within approx. 1 working day
 
-![Dedicated Server extra Speicher](../img/dedicated-server-extra-storage.png)
+![Dedicated Server extra Speicher](img/dedicated-server-extra-storage.png)
 
 ## Step 5: Trusted Sources
 
@@ -97,7 +97,7 @@ Enter the permitted network addresses in CIDR format.
 Example:
 `10.10.10.10/24`
 
-![Dedicated Server Trusted Sources](../img/dedicated-server-sources.png)
+![Dedicated Server Trusted Sources](img/dedicated-server-sources.png)
 
 ## Schritt 6: Operating system
 
@@ -109,7 +109,7 @@ There are two popular Linux distributions to choose from, each in the current st
 #### Debian
   - Debian 12: 0 €
 
-![Dedicated Server Operating system](../img/dedicated-server-os.png)
+![Dedicated Server Operating system](img/dedicated-server-os.png)
 
 ## Step 7: Access restrictions
 
@@ -118,7 +118,7 @@ A login without SSH-key is not possible.
 
 The key must be available in the OpenSSH format (e.g. `SSH-ED25519` or` SSH-RSA`) and is inserted via an input field.
 
-![Dedicated Server Access restrictions](../img/dedicated-server-ssh.png)
+![Dedicated Server Access restrictions](img/dedicated-server-ssh.png)
 
 ## Step 8: Choose region
 
@@ -126,7 +126,7 @@ A region is currently available for providing your database:
 
 - DE-WEST-1 CGN3 (Cologne)
 
-![Dedicated Server Regions](../img/dedicated-server-region.png)
+![Dedicated Server Regions](img/dedicated-server-region.png)
 
 ## Schritt 9: Contract Term
 
@@ -138,7 +138,7 @@ Select the desired contract term for your server.
 
 The contract is automatically extended by another day if it is not terminated in time.
 
-![Dedicated Server Contract Term](../img/dedicated-server-contract-runtime.png)
+![Dedicated Server Contract Term](img/dedicated-server-contract-runtime.png)
 
 ## Schritt 10: Project Contract ID
 
@@ -147,4 +147,14 @@ Choose whether there is already a project contract detection:
 - New project contract recognition
 - Existing project contract detection (selection from a list)
 
-![Dedicated Server Project Contract ID](../img/dedicated-server-existing-project.png)
+![Dedicated Server Project Contract ID](img/dedicated-server-existing-project.png)
+
+## Step 11: Order Overview
+
+The order overview displays a table with all configurations you have selected.
+Below the table, there is a checkbox that allows you to accept the following attachments and terms.
+The attachments include various downloadable PDF documents, such as the General Terms and Conditions and other relevant contractual documents.
+To the right of the table, the total price and the Order button are displayed.
+This button is disabled by default and will only be activated once the attachments and terms have been accepted.
+
+![Dedicated Server Order Overview](img/dedicated-server-order-overview.png)

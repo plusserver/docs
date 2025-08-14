@@ -13,9 +13,9 @@ Willkommen zum Bestellformular der pluscloud open. Hier wird beschrieben, welche
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
-![PCO Überblick Nr.1](../img/pco-overview1.png)
+![PCO Überblick Nr.1](img/pco-overview1.png)
 
-![PCO Überblick Nr.2](../img/pco-overview2.png)
+![PCO Überblick Nr.2](img/pco-overview2.png)
 
 ## Schritt 1: Projekt- und Benutzerinformationen
 
@@ -34,14 +34,14 @@ In diesem Schritt machen Sie Angaben zum Projekt und zum Benutzer. Es gibt mehre
 - E-Mail-Adresse *(Pflichtfeld)*:
   Dieses Feld ist bereits mit der E-Mail-Adresse vorausgefüllt, mit der Sie aktuell angemeldet sind. Die E-Mail-Adresse kann jedoch bei Bedarf angepasst werden.
 
-![PCO Projekt und Benutzer Eingabe](../img/pco-project.png)
+![PCO Projekt und Benutzer Eingabe](img/pco-project.png)
 
 ## Schritt 2: Onboarding Workshop
 
 Optional kann ein Onboarding Workshop für 299 € hinzugebucht werden.
 Er unterstützt Sie bei der Einrichtung und Nutzung Ihrer pluscloud open Umgebung.
 
-![PCO Onboarding](../img/pco-onboarding.png)
+![PCO Onboarding](img/pco-onboarding.png)
 
 ## Schritt 3: Region auswählen
 
@@ -54,7 +54,7 @@ Verfügbare Regionen:
 - DE-WEST-2 DUS6 (Düsseldorf)
 - DE-NORTH-2 HAM6 (Hamburg)
 
-![PCO Region Auswahl](../img/pco-region.png)
+![PCO Region Auswahl](img/pco-region.png)
 
 ## Schritt 4: Projektvertragskennung
 
@@ -63,5 +63,14 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 - Neue Projektvertragskennung
 - Existierende Projektvertragskennung (Auswahl aus einer Liste)
 
-![PCO Projektvertragskennung](../img/pco-existing-project.png)
+![PCO Projektvertragskennung](img/pco-existing-project.png)
 
+## Schritt 5: Bestellübersicht
+
+Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigurationen.
+Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
+Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die Allgemeinen Geschäftsbedingungen und weitere relevante Vertragsunterlagen.\
+Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
+Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
+
+![PCO Bestellübersicht](img/pco-order-overview.png)

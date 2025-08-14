@@ -13,8 +13,8 @@ Willkommen zum Bestellformular der Datenbanken. Hier wird beschrieben, welche Ko
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
-![Datenbanken Überblick 1](../img/database-overview1.png)
-![Datenbanken Überblick 2](../img/database-overview2.png)
+![Datenbanken Überblick 1](img/database-overview1.png)
+![Datenbanken Überblick 2](img/database-overview2.png)
 
 ## Schritt 1: Datenbank-Auswahl
 
@@ -27,9 +27,9 @@ Wählen Sie das gewünschte Datenbanksystem und die passende Version:
 - MariaDB: 11.4, 10.11, 10.6
 - CouchDB: 3.3
 
-![Datenbanken MySQL](../img/database-mysql.png)
-![Datenbanken PostgreSQL](../img/database-postgres.png)
-![Datenbanken MariaDB](../img/database-mariadb.png)
+![Datenbanken MySQL](img/database-mysql.png)
+![Datenbanken PostgreSQL](img/database-postgres.png)
+![Datenbanken MariaDB](img/database-mariadb.png)
 
 ## Schritt 2: Instanztyp auswählen
 
@@ -74,9 +74,9 @@ Instanzgrößen:
 - r8-64 – 8 vCPU, 64 GB RAM – 0,97 €/Stunde
 - r16-128 – 16 vCPU, 128 GB RAM – 1,94 €/Stunde
 
-![Datenbanken Instanztyp Basic Usage](../img/database-basic-usage.png)
-![Datenbanken Instanztyp All Purpose](../img/database-all-purpose.png)
-![Datenbanken Instanztyp RAM Optimised](../img/database-ram.png)
+![Datenbanken Instanztyp Basic Usage](img/database-basic-usage.png)
+![Datenbanken Instanztyp All Purpose](img/database-all-purpose.png)
+![Datenbanken Instanztyp RAM Optimised](img/database-ram.png)
 
 ## Schritt 4: Speichergröße
 
@@ -86,7 +86,7 @@ Wählen Sie die gewünschte Speichergröße über einen Schieberegler:
 - Max.: 1000 GB
 - Kosten: 14,30 €/Monat pro 50 GB
 
-![Datenbanken Speichergröße](../img/database-storage-size.png)
+![Datenbanken Speichergröße](img/database-storage-size.png)
 
 ## Schritt 5: Vertrauenswürdige Quellen
 
@@ -96,7 +96,7 @@ Dies ist ein Pflichtfeld.
 Beispiel:
 `10.10.10.10/24`
 
-![Datenbanken vertrauenswürdige Quellen](../img/database-sources.png)
+![Datenbanken vertrauenswürdige Quellen](img/database-sources.png)
 
 ## Schritt 6: Region auswählen
 
@@ -105,7 +105,7 @@ Wählen Sie die gewünschte Region für die Bereitstellung Ihrer Datenbank:
 - DE-WEST-1 CGN3 (Köln)
 - DE-NORTH-2 HAM6 (Hamburg)
 
-![Datenbanken Region](../img/database-region.png)
+![Datenbanken Region](img/database-region.png)
 
 ## Schritt 7: Projektvertragskennung
 
@@ -114,4 +114,14 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 - Neue Projektvertragskennung
 - Existierende Projektvertragskennung (Auswahl aus einer Liste)
 
-![Datenbanken Projektvertragskennung](../img/database-existing-project.png)
+![Datenbanken Projektvertragskennung](img/database-existing-project.png)
+
+## Schritt 8: Bestellübersicht
+
+Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigurationen.
+Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
+Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die Allgemeinen Geschäftsbedingungen und weitere relevante Vertragsunterlagen.\
+Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
+Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
+
+![Datenbanken Bestellübersicht](img/database-order-overview.png)

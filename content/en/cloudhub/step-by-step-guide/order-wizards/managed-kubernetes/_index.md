@@ -13,8 +13,8 @@ Welcome to the Managed Kubernetes order wizard. Here it is described which confi
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
-![Kube overview 1](../img/managed-kube-overview1.png)
-![Kube overview 2](../img/managed-kube-overview2.png)
+![Kube overview 1](img/managed-kube-overview1.png)
+![Kube overview 2](img/managed-kube-overview2.png)
 
 ## Step 1: Selection of the infrastructure
 
@@ -27,7 +27,7 @@ Currently only one option is available that is already preselected:
   - DE‑NORTH-2 (Hamburg)
   - DE‑WEST-2 (Düsseldorf)
 
-![Kube Infrastructure](../img/managed-kube-infrastructure.png)
+![Kube Infrastructure](img/managed-kube-infrastructure.png)
 
 ## Step 2: Email for provision information
 
@@ -35,13 +35,13 @@ Currently only one option is available that is already preselected:
     This field is prefilled with the email address with which you are currently registered.
     However, the address can be adjusted if necessary.
 
-![Kube Email](../img/managed-kube-mail.png)
+![Kube Email](img/managed-kube-mail.png)
 
 ## Step 3: Onboarding Workshop
 
 Optionally, an onboarding workshop can be booked for 199 € to support you in commissioning the area.
 
-![Kube Onboarding](../img/managed-kube-onboaring.png)
+![Kube Onboarding](img/managed-kube-onboaring.png)
 
 ## Workload Protection as a Service
 
@@ -56,14 +56,14 @@ Performance features:
 - Platform protection (e.g. AWS)
 - SOC integration *(on request) *: 24x7 monitoring by a team of analysts with recommendations for action in cyber attacks
 
-![Kube Services](../img/managed-kube-services.png)
+![Kube Services](img/managed-kube-services.png)
 
 ## Step 5: SOC Integration *(Coming Soon)*
 
 The 24x7 SoC integration is not yet available.
 In the future, it will enable monitoring by our team of analysts to recognize and react early.
 
-![Kube SOC Integration](../img/managed-kube-soc.png)
+![Kube SOC Integration](img/managed-kube-soc.png)
 
 ## Step 6: Project Contract ID
 
@@ -72,4 +72,14 @@ Select whether a project contract ID already exists:
 - New project contract ID
 - Existing project contract ID (select from a list)
 
-![Kube Projektvertragskennung](../img/managed-kube-existing-project.png)
+![Kube Projektvertragskennung](img/managed-kube-existing-project.png)
+
+## Step 7: Order Overview
+
+The order overview displays a table with all configurations you have selected.
+Below the table, there is a checkbox that allows you to accept the following attachments and terms.
+The attachments include various downloadable PDF documents, such as the General Terms and Conditions and other relevant contractual documents.
+To the right of the table, the total price and the Order button are displayed.
+This button is disabled by default and will only be activated once the attachments and terms have been accepted.
+
+![Kube Order Overview](img/managed-kube-order-overview.png)
