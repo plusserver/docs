@@ -13,8 +13,8 @@ Welcome to the database order wizard. Here it is described which configuration o
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
-![Database overview 1](../img/database-overview1.png)
-![Database overview 2](../img/database-overview2.png)
+![Database overview 1](img/database-overview1.png)
+![Database overview 2](img/database-overview2.png)
 
 ## Step 1: Database selection
 
@@ -27,9 +27,9 @@ Select the desired database system and the appropriate version:
 - MariaDB: 11.4, 10.11, 10.6
 - CouchDB: 3.3
 
-![Databases MySQL](../img/database-mysql.png)
-![Databases PostgreSQL](../img/database-postgres.png)
-![Databases MariaDB](../img/database-mariadb.png)
+![Databases MySQL](img/database-mysql.png)
+![Databases PostgreSQL](img/database-postgres.png)
+![Databases MariaDB](img/database-mariadb.png)
 
 ## Step 2: Select instance type
 
@@ -74,9 +74,9 @@ Instance sizes:
 - r8-64 – 8 vCPU, 64 GB RAM – 0,97 €/Stunde
 - r16-128 – 16 vCPU, 128 GB RAM – 1,94 €/Stunde
 
-![Database Instance Type Basic Usage](../img/database-basic-usage.png)
-![Database Instance Type All Purpose](../img/database-all-purpose.png)
-![Database Instance Type RAM Optimised](../img/database-ram.png)
+![Database Instance Type Basic Usage](img/database-basic-usage.png)
+![Database Instance Type All Purpose](img/database-all-purpose.png)
+![Database Instance Type RAM Optimised](img/database-ram.png)
 
 ## Step 4: Storage size
 
@@ -86,7 +86,7 @@ Select the desired storage size using a slider:
 - Max.: 1000 GB
 - Cost: 14,30 €/month per 50 GB
 
-![Database Storage size](../img/database-storage-size.png)
+![Database Storage size](img/database-storage-size.png)
 
 ## Step 5: Trusted sources
 
@@ -96,7 +96,7 @@ This is a mandatory field.
 Example:
 `10.10.10.10/24`
 
-![Databases trusted sources](../img/database-sources.png)
+![Databases trusted sources](img/database-sources.png)
 
 ## Step 6: Select region
 
@@ -105,7 +105,7 @@ Select the desired region for your database deployment:
 - DE-WEST-1 CGN3 (Cologne)
 - DE-NORTH-2 HAM6 (Hamburg)
 
-![Databases Region](../img/database-region.png)
+![Databases Region](img/database-region.png)
 
 ## Step 7: Project Contract ID
 
@@ -114,4 +114,14 @@ Select whether a project contract ID already exists:
 - New project contract ID
 - Existing project contract ID (select from a list)
 
-![Databases Project Contract ID](../img/database-existing-project.png)
+![Databases Project Contract ID](img/database-existing-project.png)
+
+## Step 8: Order Overview
+
+The order overview displays a table with all configurations you have selected.
+Below the table, there is a checkbox that allows you to accept the following attachments and terms.
+The attachments include various downloadable PDF documents, such as the General Terms and Conditions and other relevant contractual documents.
+To the right of the table, the total price and the Order button are displayed.
+This button is disabled by default and will only be activated once the attachments and terms have been accepted.
+
+![Databases Order Overview](img/database-order-overview.png)

@@ -13,9 +13,9 @@ Willkommen zum Bestellformular der Dedicated Server. Hier wird beschrieben, welc
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
-![Dedicated Server Überblick 1](../img/dedicated-server-overview1.png)
-![Dedicated Server Überblick 2](../img/dedicated-server-overview2.png)
-![Dedicated Server Überblick 3](../img/dedicated-server-overview3.png)
+![Dedicated Server Überblick 1](img/dedicated-server-overview1.png)
+![Dedicated Server Überblick 2](img/dedicated-server-overview2.png)
+![Dedicated Server Überblick 3](img/dedicated-server-overview3.png)
 
 ## Schritt 1: Servertyp
 
@@ -49,7 +49,7 @@ Im ersten Schritt stehen vier unterschiedliche Servertypen zur Auswahl:
    - 2× 10 GbE NIC
    - 665,56 €
 
-![Dedicated Server Typ](../img/dedicated-server-servertype.png)
+![Dedicated Server Typ](img/dedicated-server-servertype.png)
 
 ## Schritt 2: Größe des RAM-Speichers
 
@@ -63,7 +63,7 @@ Standardmäßig sind 64 GB RAM enthalten. Alternativ können Sie die Leistung Ih
 
 Die Auswahl des passenden RAM-Werts hängt von der geplanten Nutzung Ihres Servers ab – etwa bei speicherintensiven Anwendungen oder großen Datenbanken empfiehlt sich die höhere Variante.
 
-![Dedicated Server RAM](../img/dedicated-server-ram.png)
+![Dedicated Server RAM](img/dedicated-server-ram.png)
 
 ## Schritt 3: System-Speicher (im Grundpreis enthalten)
 
@@ -73,7 +73,7 @@ Standardmäßig ist folgende Konfiguration im Preis enthalten und bereits voraus
 
 - 2× 960 GB SSD (im Hardware-RAID-Verbund)
 
-![Dedicated Server System Speicher](../img/dedicated-server-storage.png)
+![Dedicated Server System Speicher](img/dedicated-server-storage.png)
 
 ## Schritt 4: Zusätzlicher Speicher
 
@@ -88,7 +88,7 @@ Falls Sie mehr Speicherplatz benötigen als die im Grundpreis enthaltenen 2× 
 - Standard-Konfiguration: Bereitstellung innerhalb ca. 1 Stunde
 - Individuelle Konfiguration: Bereitstellung innerhalb ca. 1 Arbeitstag
 
-![Dedicated Server extra Speicher](../img/dedicated-server-extra-storage.png)
+![Dedicated Server extra Speicher](img/dedicated-server-extra-storage.png)
 
 ## Schritt 5: Vertrauenswürdige Quellen
 
@@ -97,7 +97,7 @@ Geben Sie die erlaubten Netzwerkadressen im CIDR-Format an.
 Beispiel:
 `10.10.10.10/24`
 
-![Dedicated Server vertrauenswürdige Quellen](../img/dedicated-server-sources.png)
+![Dedicated Server vertrauenswürdige Quellen](img/dedicated-server-sources.png)
 
 ## Schritt 6: Betriebssystem
 
@@ -109,7 +109,7 @@ Zur Auswahl stehen zwei beliebte Linux-Distributionen, jeweils in der aktuellen 
 - Debian
   - Debian 12: 0 €
 
-![Dedicated Server Betriebssystem](../img/dedicated-server-os.png)
+![Dedicated Server Betriebssystem](img/dedicated-server-os.png)
 
 ## Schritt 7: Zugriffsbeschränkungen
 
@@ -118,7 +118,7 @@ Ein Login ohne SSH-Key ist nicht möglich.
 
 Der Key muss im OpenSSH-Format (z. B. `ssh-ed25519` oder `ssh-rsa`) vorliegen und wird über ein Eingabefeld eingefügt.
 
-![Dedicated Server Zugriffsbeschränkungen](../img/dedicated-server-ssh.png)
+![Dedicated Server Zugriffsbeschränkungen](img/dedicated-server-ssh.png)
 
 ## Schritt 8: Region auswählen
 
@@ -126,7 +126,7 @@ Aktuell steht eine Region für die Bereitstellung Ihrer Datenbank zur Verfügung
 
 - DE-WEST-1 CGN3 (Köln)
 
-![Dedicated Server Regionen](../img/dedicated-server-region.png)
+![Dedicated Server Regionen](img/dedicated-server-region.png)
 
 ## Schritt 9: Vertragslaufzeit
 
@@ -138,7 +138,7 @@ Wählen Sie die gewünschte Vertragslaufzeit für Ihren Server.
 
 Der Vertrag verlängert sich jeweils automatisch um einen weiteren Tag, wenn er nicht rechtzeitig gekündigt wird.
 
-![Dedicated Server Vertragslaufzeit](../img/dedicated-server-contract-runtime.png)
+![Dedicated Server Vertragslaufzeit](img/dedicated-server-contract-runtime.png)
 
 ## Schritt 10: Projektvertragskennung
 
@@ -147,4 +147,14 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 - Neue Projektvertragskennung
 - Existierende Projektvertragskennung (Auswahl aus einer Liste)
 
-![Dedicated Server Projektvertragskennung](../img/dedicated-server-existing-project.png)
+![Dedicated Server Projektvertragskennung](img/dedicated-server-existing-project.png)
+
+## Schritt 11: Bestellübersicht
+
+Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigurationen.
+Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
+Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die Allgemeinen Geschäftsbedingungen und weitere relevante Vertragsunterlagen.\
+Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
+Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
+
+![Dedicated Server Bestellübersicht](img/dedicated-server-order-overview.png)

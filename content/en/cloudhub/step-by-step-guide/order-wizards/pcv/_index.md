@@ -13,7 +13,7 @@ Welcome to the pluscloud VMware order wizard. Here it is described which configu
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
-![PCV Overview](../../../../img/cloud-services/cloud-services-level3.png)
+![PCV Overview](img/cloud-services/cloud-services-level3.png)
 
 ## Step 1: Selection of the CPU category
 
@@ -39,7 +39,7 @@ In addition, further options and prices can be viewed via a dropdown menu:
 - backup volume
 - Public IP addresses
 
-![PCV CPU Selection](../img/pcv-cpu.png)
+![PCV CPU Selection](img/pcv-cpu.png)
 
 ## Step 2: Information for the administrator
 
@@ -49,14 +49,14 @@ Here you enter the data of the responsible contact person:
 - Email address (Required field)
 - Brief description (optional)
 
-![PCV Administrator Angaben](../img/pcv-admin.png)
+![PCV Administrator Angaben](img/pcv-admin.png)
 
 ## Step 3: Onboarding workshop
 
 Optionally, an onboarding workshop can be booked for 99 €.
 This workshop supports you in the introduction and use of the PlusCloud VMware.
 
-![PCV Onboarding](../img/pcv-onboarding.png)
+![PCV Onboarding](img/pcv-onboarding.png)
 
 ## Step 4: Project Contract ID
 
@@ -65,4 +65,14 @@ Select whether a project contract ID already exists:
 - New project contract ID
 - Existing project contract ID (select from a list)
 
-![PCV Projektvertragskennung](../img/pcv-existing-project.png)
+![PCV Projektvertragskennung](img/pcv-existing-project.png)
+
+## Step 5: Order Overview
+
+The order overview displays a table with all configurations you have selected.
+Below the table, there is a checkbox that allows you to accept the following attachments and terms.
+The attachments include various downloadable PDF documents, such as the General Terms and Conditions and other relevant contractual documents.
+To the right of the table, the total price and the Order button are displayed.
+This button is disabled by default and will only be activated once the attachments and terms have been accepted.
+
+![PCV Order Overview](img/pcv-order-overview.png)

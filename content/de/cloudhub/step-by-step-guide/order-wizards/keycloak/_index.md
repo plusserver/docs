@@ -15,8 +15,8 @@ Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und e
 
 Die Keycloak wird aktuell auf der Version 26 angeboten und nutzt eine Instanzgröße (Node) mit 4 vCPU(s) und 8 GB RAM.
 
-![Keycloak Überblick 1](../img/keycloak-overview1.png)
-![Keycloak Überblick 2](../img/keycloak-overview2.png)
+![Keycloak Überblick 1](img/keycloak-overview1.png)
+![Keycloak Überblick 2](img/keycloak-overview2.png)
 
 ## Schritt 1: Speichergröße
 
@@ -26,7 +26,7 @@ Wählen Sie die gewünschte Speichergröße über einen Schieberegler:
 - Max.: 200 GB
 - Kosten: 14,30 €/Monat pro 50 GB
 
-![Keycloak Speicher](../img/keycloak-storage.png)
+![Keycloak Speicher](img/keycloak-storage.png)
 
 ## Schritt 2: Vertrauenswürdige Quellen
 
@@ -35,7 +35,7 @@ Geben Sie die erlaubten Netzwerkadressen im CIDR-Format an.
 Beispiel:
 `10.10.10.10/24`
 
-![Keycloak Vertrauenswürdige Quellen](../img/keycloak-sources.png)
+![Keycloak Vertrauenswürdige Quellen](img/keycloak-sources.png)
 
 ## Schritt 3: Region auswählen
 
@@ -44,7 +44,7 @@ Wählen Sie die gewünschte Region für die Bereitstellung Ihrer Datenbank:
 - DE-WEST-1 CGN3 (Köln)
 - DE-NORTH-2 HAM6 (Hamburg)
 
-![Keycloak Region](../img/keycloak-regions.png)
+![Keycloak Region](img/keycloak-regions.png)
 
 ## Schritt 4: Projektvertragskennung
 
@@ -53,4 +53,14 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 - Neue Projektvertragskennung
 - Existierende Projektvertragskennung (Auswahl aus einer Liste)
 
-![Keycloak Projektvertragskennung](../img/keycloak-existing-project.png)
+![Keycloak Projektvertragskennung](img/keycloak-existing-project.png)
+
+## Schritt 5: Bestellübersicht
+
+Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigurationen.
+Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
+Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die Allgemeinen Geschäftsbedingungen und weitere relevante Vertragsunterlagen.\
+Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
+Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
+
+![Keycloak Bestellübersicht](img/keycloak-order-overview.png)
