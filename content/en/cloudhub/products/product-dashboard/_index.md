@@ -16,16 +16,16 @@ In the following tutorial, we will explain the different areas of the product da
 ## Structure of the Product Dashboard
 
 Level 1: This is the entry page for the dashboard. Here you will find an overview of your booked products (structured by category) as well as links to other CloudHub areas and our product documentation. Clicking on a product tile takes you to level 2.\
-![Example Level 1](../img/product-dashboard/structure-product-dashboard-1.png)
+![Example Level 1](img/structure-product-dashboard-1.png)
 
 Level 2: Here you will find an overview of all products in a category. In addition to the information, there are also quick links to the documentation, the respective order wizards and ticket creation.
-![Example Level 2](../img/product-dashboard/structure-product-dashboard-2.png)
+![Example Level 2](img/structure-product-dashboard-2.png)
 
 Level 3: Here you will find a detailed product view and related information: parameters from the order wizard/product, monitoring (own release), consumption data (own release) and a filtered ticket overview (only the tickets for this product). You can also cancel your product/contract by ticket here.\
-![Example Level 3](../img/product-dashboard/structure-product-dashboard-3.png)
+![Example Level 3](img/structure-product-dashboard-3.png)
 
 Roles and permissions for the dashboard are managed in the “User Management” area.\
-![Example Role and Permissions Management for Product-Dashboard](../img/product-dashboard/roles-and-rights-management.png)
+![Example Role and Permissions Management for Product-Dashboard](img/roles-and-rights-management.png)
 
 ### The entry page - Level 1
 
@@ -33,13 +33,13 @@ Roles and permissions for the dashboard are managed in the “User Management”
 
 The product dashboard is currently still labeled “Beta” because it does not yet have the full range of functionality. We will provide this with continuous releases (for more information, see “Information and upcoming features”).
 In addition to this written how-to, you can view an explanation video (approx. 7 min.) at any time. You will find the links under the intro text.\
-![Level 1: Quick Links to the how-to and the video for an overview of the dashboard](../img/product-dashboard/lvl-1-quick-links-1.png)
+![Level 1: Quick Links to the how-to and the video for an overview of the dashboard](img/lvl-1-quick-links-1.png)
 
 #### My booked products
 
 Sorted by category, you can see the active products that you have ordered in the CloudHub.
 This also means that you do not see any products that you have booked through other channels. And you will not be shown any products for which the termination date of the contracts has been exceeded by at least 14 days.\
-![Level 1: Booked products displayed within categories (tabs) and type (tiles)](../img/product-dashboard/lvl-1-booked-products.png)
+![Level 1: Booked products displayed within categories (tabs) and type (tiles)](img/lvl-1-booked-products.png)
 
 If you click on the tile, you will be taken to level 2 and see an overview of the selected product type. You can also click on the shopping cart symbol on the tile to access the product's order wizard.
 
@@ -50,7 +50,7 @@ Below that, you will find further links to the order status table, the overview 
 Order status: Track the status of the provisioning of your products booked via the CloudHub. You can also access this overview via the navigation under “My products” > “Order status”.
 Products and services: Here you will find an overview of all active contracts for your booked plusserver products. This also includes products that you did not order via the CloudHub.
 Documentation: You can find our product documentation here.\
-![Level 1: Quick Links to more products, information and documentation](../img/product-dashboard/lvl-1-quick-links-2.png)
+![Level 1: Quick Links to more products, information and documentation](img/lvl-1-quick-links-2.png)
 
 _Support:_ This will take you to our support area, where you can create tickets for various issues, which our support colleagues will deal with as quickly as possible, view the complete overview of your tickets, find further contact details and much more.\
 _Contact details:_ We have compiled the most important contact details for you here.\
@@ -69,15 +69,15 @@ On level 2 you receive an overview of your active products. If you click on a ro
 The information should give you an initial overview of your products. Depending on the product, the display of the individual information in the overview may still vary.
 “Active” here means: The contract is active and has not yet reached the cancellation date. You can find details in the legend below the table.
 As soon as the cancellation date has been exceeded by 14 days, the product is no longer displayed on level 2 in the product dashboard. It is also no longer displayed in the contract overview under “Contracts”. If you have any questions about your canceled contracts, please contact our colleagues in the contracts department via our ticket system. To do so, please select the category “Contracts and Invoices”.
-![Level 2: Example of a pluscloud VMware Product](../img/product-dashboard/lvl-2-example-pcv-product.png)
-![Level 2: Example of a Database Product](../img/product-dashboard/lvl-2-example-db-product.png)
+![Level 2: Example of a pluscloud VMware Product](img/lvl-2-example-pcv-product.png)
+![Level 2: Example of a Database Product](img/lvl-2-example-db-product.png)
 
 #### Create tickets directly from Level 2
 
 In the table, on the far right, there is an icon/button for creating tickets. We have implemented a pre-set process to save you time. However, you can click on “Create ticket” at any time and adjust the category and the selected contract.
 The pre-set process is as follows:
 If your product is “In Deployment” or “Active”, use this button to open a “Service Request” ticket and get in touch with our support team directly.\
-![Level 2: Example of the start of the ticket creation > Service Request](../img/product-dashboard/lvl-2-example-begin-ticket-creation.png)
+![Level 2: Example of the start of the ticket creation > Service Request](img/lvl-2-example-begin-ticket-creation.png)
 
 If your product is “Cancelled”, use this button to open a ticket directly for our colleagues in the contracts department, who are your first point of contact for your product/contract from this status onwards.
 
@@ -86,35 +86,35 @@ If your product is “Cancelled”, use this button to open a ticket directly fo
 The following links can be found on level 2:
 Product documentation: This is where you will find all the information about the product you are currently viewing.
 Order more: From here you can go directly to the order process for a new product of the type/category you are currently viewing.\
-![Level 2: Quick Links via Button](../img/product-dashboard/lvl-2-quick-links-1.png)
+![Level 2: Quick Links via Button](img/lvl-2-quick-links-1.png)
 
 ### The detaileed product view - Level 3
 
 #### Information on the tabs
 
 On level 3, you will find a detailed product view with various information about this specific product. In the area above the tabs, you will always see an overview of your product.\
-![Level 3: Informationen](../img/product-dashboard/lvl-3-information.png)
+![Level 3: Informationen](img/lvl-3-information.png)
 
 In the first tab, you will see basic information about this product. You already know a lot of the information from the ordering process.
 For “pluscloud open”, “pluscloud VMware” and “Managed Kubernetes (PSKE)”, we have also included links to the respective dashboards.\
-![Level 3: Tab 1 - Example pluscloud open](../img/product-dashboard/lvl-3-example-pco.png)
+![Level 3: Tab 1 - Example pluscloud open](img/lvl-3-example-pco.png)
 
 For the products “Private Registry”, “Databases” and “Keycloak”, you can now customize the information displayed there from the dashboard.\
-![Level 3: Tab 1. - Example Databases](../img/product-dashboard/lvl-3-example-db.png)
+![Level 3: Tab 1. - Example Databases](img/lvl-3-example-db.png)
 
 If you have the appropriate permissions, you will see the access data for your product in the second tab, including a link to the respective GUI.
 If not you will get a information via banner, that you don’t have the permissions and need to contact your admin user.\
-![Level 3: Tab 2 - Credentials](../img/product-dashboard/lvl-3-credentials.png)
-![Level 3: Tab 2 - Credentials - No permissions](../img/product-dashboard/lvl-3-credentials-no-permissions.png)
+![Level 3: Tab 2 - Credentials](img/lvl-3-credentials.png)
+![Level 3: Tab 2 - Credentials - No permissions](img/lvl-3-credentials-no-permissions.png)
 
 The next tabs, “Monitoring” and “Consumption data”, are currently in development and will be added in the next months. However, since it was important to us to present you with the final structure of the dashboard right away, we have included corresponding info banners with more information.\
-![Level 3: Tab 4 - Consumption Data](../img/product-dashboard/lvl-3-consumption-data.png)
+![Level 3: Tab 4 - Consumption Data](img/lvl-3-consumption-data.png)
 
 The "Changelog" tab displays a list of all technical changes made to the product with the date and a brief summary.\
-![Level 3: Tab 5 - Changelog](../img/product-dashboard/lvl-3-changelog.png)
+![Level 3: Tab 5 - Changelog](img/lvl-3-changelog.png)
 
 In the “Tickets” tab, you will see a filtered view of all tickets that have been opened for this product/contract, sorted by “opened” and “all”. If you want a complete overview of all your tickets, you can find it in the “Support” section.\
-![Level 3: Tab 6 – Tickets (filtered for this product)](../img/product-dashboard/lvl-3-tickets.png)
+![Level 3: Tab 6 – Tickets (filtered for this product)](img/lvl-3-tickets.png)
 
 #### Further links
 
@@ -125,19 +125,19 @@ _Cancel product/contract:_ At this point, you have the option of creating a canc
 
 From now on, you can customize certain product features (e.g. whitelist, backups, patches, primary node and read replica) for all databases, Private Registry and Keycloak in the first tab “Information”.
 The corresponding buttons activate the editing mode. A blue marker highlights all the parameters that you can adjust, while yellow markers help you to track your changes at every step. Since not all parameters can be adjusted simultaneously due to the product, the areas that cannot be adjusted in the same step are grayed out. \
-![Level 3: Adjustments in edit mode - 1](../img/product-dashboard/lvl-3-adjustments-in-edit-mode-1.png)
-![Level 3: Adjustments in edit mode - 2](../img/product-dashboard/lvl-3-adjustments-in-edit-mode-2.png)
+![Level 3: Adjustments in edit mode - 1](img/lvl-3-adjustments-in-edit-mode-1.png)
+![Level 3: Adjustments in edit mode - 2](img/lvl-3-adjustments-in-edit-mode-2.png)
 
 Since every change affects your billing, you will be informed again transparently about the cost changes before the final confirmation.\
-![Level 3: Example of an info pop-up for the cost changes](../img/product-dashboard/lvl-3-info-pop-up-cost-change.png)
+![Level 3: Example of an info pop-up for the cost changes](img/lvl-3-info-pop-up-cost-change.png)
 
 After you have confirmed the adjustment, you will see the progress in a banner or in the order status overview.
 Until the process is complete, no further changes can be made to the same product. As soon as the banner has disappeared and the buttons are no longer grayed out, you can change further parameters.\
-![Level 3: progress of customization](../img/product-dashboard/lvl-3-progress-of-customization.png)
+![Level 3: progress of customization](img/lvl-3-progress-of-customization.png)
 
 We also document your adjustments in a ticket, about which you will be notified by email. You can also find this ticket in the “Tickets” tab and in the ticket overview in the support area.
-![Level 3: Ticket for documentation of customization - 1](../img/product-dashboard/lvl-3-ticket-for-documentation-of-customization-1.png)
-![Level 3: Ticket for documantation of customization - 2](../img/product-dashboard/lvl-3-ticket-for-documentation-of-customization-2.png)
+![Level 3: Ticket for documentation of customization - 1](img/lvl-3-ticket-for-documentation-of-customization-1.png)
+![Level 3: Ticket for documantation of customization - 2](img/lvl-3-ticket-for-documentation-of-customization-2.png)
 
 For example, you can change **trusted sources**, increase the **number of backups**, and adjust the **backup and patch schedules**. The fields that you can modify are highlighted in blue again in this area.
 
@@ -147,29 +147,29 @@ Second, there must be a gap of 2.5 hours between the backup and patch schedule, 
 
 By clicking on “Save changes”, information about the price change appears. If you then confirm with “Order with obligation to pay”, the change will take effect as described above.
 
-![Level 3: Adjusting the whitelist, backups and patches](../img/product-dashboard/lvl-3-adjustmend-whitelist-backup-patch.png)
+![Level 3: Adjusting the whitelist, backups and patches](img/lvl-3-adjustmend-whitelist-backup-patch.png)
 
 For the **primary node**, you can adjust the node disk and the node disk size, although the latter can only be increased. You can adjust both values together or just one of them.
 The adjustment immediately leads to a brief interruption of operation to activate the changed values.\
-![Level 3: Customization of the primary node - 1](../img/product-dashboard/lvl-3-customization-primary-node-1.png)
-![Level 3: Customization of the primary node - 2](../img/product-dashboard/lvl-3-customization-primary-node-2.png)
-![Level 3: Customization of the primary node - 3](../img/product-dashboard/lvl-3-customization-primary-node-3.png)
+![Level 3: Customization of the primary node - 1](img/lvl-3-customization-primary-node-1.png)
+![Level 3: Customization of the primary node - 2](img/lvl-3-customization-primary-node-2.png)
+![Level 3: Customization of the primary node - 3](img/lvl-3-customization-primary-node-3.png)
 
 You can create (up to three), modify or delete **read replica** for the databases only. Each of these changes is only possible one after the other using the respective button. The read replica is always an exact copy of the primary node and is billed accordingly.\
-![Level 3: Modyfying the read replica (only for databases)](../img/product-dashboard/lvl-3-db-modification-read-replicas-1.png)
+![Level 3: Modyfying the read replica (only for databases)](img/lvl-3-db-modification-read-replicas-1.png)
 
 This also means that you can only customize a read replica by modifying the primary node, and that a modification of the primary node always means that the read replica is also changed. To make this transparent, the parameters that you customize in the primary node are also highlighted in yellow in the read replica. All changes of the primary node and read replicas are leading to changes on your billing.\
-![Level 3: Modifying the read replica based on the primary node (only for databases)](../img/product-dashboard/lvl-3-db-modification-read-replicas-2.png)
+![Level 3: Modifying the read replica based on the primary node (only for databases)](img/lvl-3-db-modification-read-replicas-2.png)
 
 You can delete one or all read replica at any time. To do this, use the corresponding button and select one or more by checking the box in the upper right corner. After deletion, the read replica will no longer be billed.\
-![Level 3: Deletion of the read replica (oyl for databases)](../img/product-dashboard/lvl-3-db-delete-read-replica.png)
+![Level 3: Deletion of the read replica (oyl for databases)](img/lvl-3-db-delete-read-replica.png)
 
 #### Product cancellation via Level 3
 
 Unfortunately, there is currently no function available for automated product cancellation. This is only possible via a ticket.
 You can create the ticket via the product dashboard in the product detail view (level 3). Click on the button and you will receive an info pop-up with all the necessary information. In this pop-up, please confirm the cancellation again and a ticket will automatically be opened with our colleagues.
 You will be informed about the status of your cancellation via the opened tickets. You can find this ticket on level 3 or in the complete ticket overview in the support area.\
-![Level 3: Cancellation](../img/product-dashboard/lvl-3-cancellation-ticket.png)
+![Level 3: Cancellation](img/lvl-3-cancellation-ticket.png)
 
 If you want to cancel several products, you can write them all in one ticket and report them via the category “Contracts and Invoices”. To do this, the colleagues need the respective project IDs.
 
@@ -185,7 +185,7 @@ The roles and permissions for the product dashboard can be managed under “User
 Click on the “Add new role” button (top right). You can then name the role and assign permissions to it.
 There is a distinction between “Page Management”, “Contract Management” and “Product Dashboard Management”.
 “Page Management” refers to the pages displayed in the CloudHub. “Contract Management” refers to individual contracts and “Product Dashboard Management” refers to the areas and products in the dashboard.\
-![Roles & Permissions: Create Role](../img/product-dashboard/rnr-create-role.png)
+![Roles & Permissions: Create Role](img/rnr-create-role.png)
 
 ### Four predefined roles
 
@@ -208,7 +208,7 @@ The main focus of the “Manager” role is to be able to order and cancel produ
 
 The role “Read-Only” is intended primarily for those people in your company to whom you want to give easy access to the information in the dashboard, but with the assurance that they cannot change, order or cancel anything.
 
-![Roles & Permissions: Example create role for the dashboard](../img/product-dashboard/rnr-example-create-role-for-dashboard.png)
+![Roles & Permissions: Example create role for the dashboard](img/rnr-example-create-role-for-dashboard.png)
 
 ### Important notes for the roles (functions in the dashboard)
 
