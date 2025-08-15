@@ -11,7 +11,7 @@ description: >
 
 Auf der Seite **„Kontakte“** finden Sie die wichtigsten Kontaktmöglichkeiten zu unseren Teams und Ansprechpartnern, übersichtlich in vier Kacheln dargestellt.
 Jede Kachel steht für einen spezifischen Kommunikationsbereich und bietet Ihnen die relevanten Informationen, um schnell den richtigen Ansprechpartner zu erreichen.
-![CloudHub Kontakte](../img/contacts/overview.png)
+![CloudHub Kontakte](../img/contact/overview.png)
 
 ### Kontaktkategorien
 
