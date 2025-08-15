@@ -11,7 +11,7 @@ description: >
 
 Welcome to the FAQ page, which serves as a central point to quickly find answers to frequently asked questions.
 
-![FAQ Overview](../img/faq-overview.png)
+![FAQ Overview](./img/faq-overview.png)
 
 ## Category Overview
 
@@ -28,18 +28,18 @@ The following categories cover the main areas:
 8. Functions in Other Portals
 9. Product Documentation
 
-![FAQ Category Selection](../img/faq-select.png)
+![FAQ Category Selection](./img/faq-select.png)
 
 After selecting a category, the relevant questions for that area are displayed in a clear accordion layout.
 Clicking on a question expands the corresponding answer to provide the requested information.
 This functionality works the same way in all categories.
 The accordion is only displayed after a category has been selected to maintain the page’s clarity.
 
-![FAQ Accordion](../img/faq-accordion.png)
+![FAQ Accordion](./img/faq-accordion.png)
 
 ## Contact Option
 
 At the bottom of the page, there is a grey section titled *"Still have questions?"*.
 Here, a contact button allows you to reach our support team directly if your query is not answered in the FAQ.
 
-![FAQ Contact Option](../img/faq-contact.png)
+![FAQ Contact Option](./img/faq-contact.png)
