@@ -10,7 +10,8 @@ description: >
 ## Patchübersicht
 
 Auf der Seite **„Patchübersicht“** erhalten Sie eine vollständige Übersicht über alle automatischem Patchjobs Ihrer Systeme. Die Anzeige erfolgt in einer Tabelle mit allen relevanten Informationen zu den einzelnen Patchvorgängen.
-![Tabelle Patchübersicht](../img/patch-shedule/table-patch-schedule.png)
+
+![Tabelle Patchübersicht](../img/patch-schedule/table-patch-schedule.png)
 
 ### Tabellenübersicht
 
