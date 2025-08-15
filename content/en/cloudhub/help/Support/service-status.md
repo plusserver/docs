@@ -4,7 +4,7 @@ linkTitle: "Service Status"
 type: "docs"
 weight: 3
 description: >
-    Informationen zu Service Status im CloudHub
+    Information about service status in CloudHub
 ---
 
 ## Service Status
