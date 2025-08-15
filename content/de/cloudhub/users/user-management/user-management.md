@@ -9,7 +9,7 @@ description: >
 
 ## Übersicht
 
-## Wo ist es zu finden?
+### Wo ist es zu finden?
 
 ![User Management in der Sidebar auswählen](../../../img/user-management/u0.5.png)
 
@@ -48,7 +48,7 @@ Wichtig sind drei Bereiche:
   - Seitenverwaltung: Hier sieht man entsprechend der Struktur der Sidebar eine Übersicht der Seiten und dazugehörigen Unterseiten (nach dem Aufklappen). Die durchgestrichenen Kategorien signalisieren, dass eine Option nicht möglich ist.
   - Vertragsverwaltung: Hier sieht man ein paar Grundinformationen zu den vorhandenen Verträgen und kann das auswählen, welche für die Rolle sichtbar sind.
   - Produkt-Dashboard-Verwaltung: Hier sieht man ein paar Grundaktionen, die man zu den Produkten tätigen kann, und kann auswählen, welche für die Rolle verfügbar sind.
-  
+
 Nachdem man auf "Rolle speichern" gedrückt hat, kommt man wieder auf die Übersichtsseite und findet die eben angelegte Rolle wieder.
 
 ### Rollen editieren
