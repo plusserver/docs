@@ -9,7 +9,7 @@ description: >
 
 ## Overview
 
-## Where to find it?
+### Where to find it?
 
 ![Select User Management in the sidebar](../../../img/user-management/u0.5.png)
 
