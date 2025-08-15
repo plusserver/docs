@@ -2,7 +2,7 @@
 title: "Monitoring View"
 linkTitle: "Monitoring View"
 type: "docs"
-weight: 6
+weight: 7
 description: >
     Information on the monitoring view in CloudHub
 ---

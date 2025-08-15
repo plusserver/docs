@@ -2,7 +2,7 @@
 title: "Ticket Overview"
 linkTitle: "Ticket Overview"
 type: "docs"
-weight: 12
+weight: 10
 description: >
     Information about viewing tickets
 ---
