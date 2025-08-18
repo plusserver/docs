@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Ticketübersicht"
 linkTitle: "Ticketübersicht"
 type: "docs"
@@ -19,4 +19,4 @@ Wähle in der linken Seitenleiste den Button „Ticketübersicht“ aus.
 
 ![Ticketübersicht in der Sidebar auswählen](../img/ticket-modul/a2.png)
 
-Hier befindet sich eine Tabelle mit den Support-Tickets. Es gibt zwei Tabs: einen, in dem nur die offenen Tickets angezeigt werden, und einen, in dem alle Tickets angezeigt werden. Die angezeigten Tickets lassen sich nach jeder Spalte der Tabelle sortieren.
+Hier befindet sich eine Tabelle mit den Support-Tickets. Es gibt zwei Tabs: einen, in dem nur die offenen Tickets angezeigt werden, und einen, in dem alle Tickets angezeigt werden. Die angezeigten Tickets lassen sich nach jeder Spalte der Tabelle sortieren. -->
