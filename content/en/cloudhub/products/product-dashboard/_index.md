@@ -7,7 +7,7 @@ description: >
     Information on the Product Dashboard in CloudHub
 ---
 
-# Product Dashboard User Guide
+## Product Dashboard User Guide
 
 Welcome to the new section of the CloudHub, your product dashboard!
 Here you can view and manage the products you have booked in the CloudHub.

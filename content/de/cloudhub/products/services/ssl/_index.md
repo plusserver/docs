@@ -13,7 +13,7 @@ Auf der Seite **„SSL“** können Sie Ihre bestehenden SSL-Zertifikate verwalt
 ### Übersicht
 
 Im Tab **„Übersicht“** sehen Sie eine tabellarische Darstellung aller SSL-Zertifikate und CSRs, die in Ihrem Kundenaccount hinterlegt sind.\
-![SSL Übersicht Tabelle](../img/ssl/ssl-overview-table.png)
+![SSL Übersicht Tabelle](img/ssl-overview-table.png)
 
 #### Funktionen
 
@@ -40,7 +40,7 @@ Auf dieser Seite können Sie ein vorhandenes SSL-Zertifikat sicher im CloudHub h
 ### SSL-Zertifikat bearbeiten
 
 Wenn Sie ein bestehendes SSL-Zertifikat über die Übersicht bearbeiten, gelangen Sie auf die Seite **„SSL-Zertifikat bearbeiten“**.\
-![SSL Zertifikat bearbeiten](../img/ssl/ssl-edit-certificate.png)
+![SSL Zertifikat bearbeiten](img/ssl-edit-certificate.png)
 
 ### Bearbeitbare Felder
 
@@ -52,7 +52,7 @@ Für beide Felder gibt es auch die Möglichkeit eines Uploads.
 ### CSR-Generator
 
 Im Tab **„CSR-Generator“** können Sie eine Zertifikatsignierungsanforderung (CSR) erzeugen, um ein neues SSL-Zertifikat bei einer Zertifizierungsstelle zu beantragen.\
-![CSR-Generator](../img/ssl/csr-generator.png)
+![CSR-Generator](img/csr-generator.png)
 
 #### Felder zur Erstellung einer CSR
 
@@ -78,7 +78,7 @@ Nach dem Erstellen wird der CSR ihnen in der **Übersicht** angezeigt. Außerdem
 ### Kontakt hinzufügen
 
 Wenn Sie im CSR-Generator auf „Kontakt hinzufügen“ klicken, gelangen Sie zu einem Formular zur Erstellung eines neuen Kontakts.\
-![Kontakt Erstellung](../img/ssl/create-contact.png)
+![Kontakt Erstellung](img/create-contact.png)
 
 #### Erforderliche Angaben
 

@@ -12,8 +12,9 @@ Auf der Seite **„Domains“** können Sie Ihre gebuchten Domains einsehen und 
 
 ### Übersicht
 
-Im Tab **„Übersicht“** sehen Sie eine tabellarische Auflistung aller Domains, die Sie über uns gebucht haben.\
-![Domain Tabelle](../img/domains/domain-table.png)
+Im Tab **„Übersicht“** sehen Sie eine tabellarische Auflistung aller Domains, die Sie über uns gebucht haben.
+
+![Domain Tabelle](img/domain-table.png)
 
 #### Funktionen
 
@@ -27,8 +28,9 @@ Dieser Bereich dient als schnelle Übersicht über Ihre registrierten Domains.
 
 ### Verwaltung
 
-Im Tab **„Verwaltung“** finden Sie die Zugangsdaten zum separaten Verwaltungstool für Ihre Domains.\
-![Domain Verwaltung](../img/domains/domain-administration.png)
+Im Tab **„Verwaltung“** finden Sie die Zugangsdaten zum separaten Verwaltungstool für Ihre Domains.
+
+![Domain Verwaltung](img/domain-administration.png)
 
 #### Inhalte
 
