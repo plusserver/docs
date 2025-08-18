@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Monitoring View"
 linkTitle: "Monitoring View"
 type: "docs"
@@ -19,4 +19,4 @@ Die Sichtbarkeit ist pauschal nicht eingeschränkt, außer der User hat allgemei
 Es gibt eine allgemeine Übersicht zu Hosts und Services, inkl. Legende:
 ![Monitoring View - Übersicht](../img/monitoring-view/overview.png)
 Und man kann bei allen Hosts und Services, die nicht den Status "OK" haben details zu eventuell vorhandenen Störungen einsehen.
-![Detailansicht zu eventuell vorhandenen Störungen an Hosts und Services](../img/monitoring-view/detailed-view.png)
+![Detailansicht zu eventuell vorhandenen Störungen an Hosts und Services](../img/monitoring-view/detailed-view.png) -->

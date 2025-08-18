@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Patch-Management"
 linkTitle: "Patch Management"
 type: "docs"
@@ -20,4 +20,4 @@ Alle patchpflichtigen Systeme, sofern sie über Patch-Up verwaltet werden, werde
 
 Für weitere Details zu den einzelnen Services kann das Icon ganz rechts verwendet werden, um zusätzliche Informationen anzuzeigen:
 
-![Patch Management Details](../img/patch-management/patch-management-details.png)
+![Patch Management Details](../img/patch-management/patch-management-details.png) -->
