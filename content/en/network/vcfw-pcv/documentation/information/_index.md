@@ -13,11 +13,11 @@ description: >
 ### IP addresses Port 1 and Port 2
 
 The IP addresses on port 1 and port 2 must **not** be modified.
-The RFC3927 link local IPv4 addresses are required for cluster communication and the Internet connection via pluscloud vmware.
+The RFC3927 link local IPv4 addresses are required for cluster communication and the Internet connection via pluscloud VMware.
 
 ### HA Heartebat Type
 
-The HA heartbeat type must **not** be changed from *unicast* to *broadcast*. Otherwise the internal cluster communication in the pluscloud vmware environment is no longer possible.
+The HA heartbeat type must **not** be changed from *unicast* to *broadcast*. Otherwise the internal cluster communication in the pluscloud VMware environment is no longer possible.
 
 ### User admin
 

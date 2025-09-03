@@ -5,7 +5,7 @@ type: "docs"
 weight: 1
 date: 2025-08-15
 description: >
-  Grundlegende Informationen über die Nutzung der Virtual Cloud Firewall - pluscloud vmware
+  Grundlegende Informationen über die Nutzung der Virtual Cloud Firewall - pluscloud VMware
 ---
 
 ## Bereitstellung
@@ -14,7 +14,7 @@ Die **Virtual Cloud Firewall** (VCFW) wird als virtuelle Maschinen (VMs) mit ins
 
 Diese VMs erhalten die erforderlichen CPU-, Speicher-, Festplatten- und Netzwerkressourcen. Nach der Bereitstellung wird die **VCFW** mit grundlegenden Einstellungen wie IP-Adresse, Hostname und administrativen Anmeldeinformationen konfiguriert.
 
-Die Netzwerkschnittstellen werden konfiguriert, um mit diesen entsprechende Sicherheitszonen und externe Netzwerke zu verbinden.
+Die Netzwerkschnittstellen werden konfiguriert, um mit diesen entsprechenden Sicherheitszonen und externe Netzwerke zu verbinden.
 
 Sicherheitsrichtlinien und NAT-Regeln werden eingerichtet, um den Datenverkehr basierend auf festgelegten Regeln zuzulassen oder zu blockieren.
 
@@ -58,7 +58,7 @@ Die **VCFW** generiert Protokolle und bietet Überwachungsfunktionen für Netzwe
 
 ### Regelmäßige Firmware-Updates
 
-Das wird stetig weiterentwickelt, gerade im Bezug auf Sicherheitslücken sollte somit die aktuell eingesetzte Major Version immer auf die letzte freigegebene Minorversion aktualisiert werden. Hiermit werden häufig auch zusätzliche Verbesserungen vom Hersteller bereitgestellt.
+Das wird stetig weiterentwickelt, gerade in Bezug auf Sicherheitslücken sollte somit die aktuell eingesetzte Major Version immer auf die letzte freigegebene Minorversion aktualisiert werden. Hiermit werden häufig auch zusätzliche Verbesserungen vom Hersteller bereitgestellt.
 
 ### Sicherung von Konfigurationen
 

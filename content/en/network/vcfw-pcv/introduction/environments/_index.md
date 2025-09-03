@@ -5,7 +5,7 @@ type: "docs"
 weight: 1
 date: 2025-09-19
 description: >
-  Everything you need for a perfect start with your virtual cloud firewall - pluscloud vmware
+  Everything you need for a perfect start with your virtual cloud firewall - pluscloud VMware
 ---
 
 ## Deployment

@@ -5,7 +5,7 @@ type: "docs"
 weight: 2
 date: 2025-08-19
 description: >
-  The first steps with your new virtual cloud firewall - pluscloud vmware
+  The first steps with your new virtual cloud firewall - pluscloud VMware
 ---
 
 ## First steps with your Virtual Cloud Firewall

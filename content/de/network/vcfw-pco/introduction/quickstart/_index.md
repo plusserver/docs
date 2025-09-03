@@ -17,7 +17,7 @@ Der gesamte Bereitstellungsprozess ist automatisiert und Sie bekommen nach erfol
 Die beiden Firewalls werden in einem parallelen Service Projekt auf der pluscloud open bereitgestellt. In Ihrem Mandanten können Sie nur den Teil mit den "*_internal"-Netzwerken sehen.
 ![Übersicht Service Projekt](01_vcfw_pco_serviceproject.png)
 
-Ihr Cluster bzw. die virtuellen Maschinen haben den Präfix **fw** und sind nach dem Bereitstellungprozess über die angegebene öffentliche IP-Adresse von extern erreichbar.
+Ihr Cluster bzw. die virtuellen Maschinen haben das Präfix **fw** und sind nach dem Bereitstellungprozess über die angegebene öffentliche IP-Adresse von extern erreichbar.
 
 Hier noch einmal die Ansicht der Instanzen, die für Sie bereitgestellt werden. Auch diese sind auf Grund der Bereitstellung im parallelen Service Projekt für Sie nicht einsehbar. Die Grafik dient nur der Übersicht.
 ![Übersicht bereitgestellte Instanze](02_vcfw_pco_instance_overview.png)
@@ -27,7 +27,7 @@ Weitere Informationen zum Umgang mit Ihrer pluscloud open-Instanz, finden Sie un
 
 ### Erste Anmeldung
 
-Die Zustellung der Zugangsdaten erfolgt via E-Mail über unser Passwort-Tool: pwx. In der entsprechenden E-Mail finden Sie die notwendigen Information bzw. Anweisungen für die Anmeldung.
+Die Zustellung der Zugangsdaten erfolgt via E-Mail über unser Passwort-Tool: pwx. In der entsprechenden E-Mail finden Sie die notwendigen Informationen bzw. Anweisungen für die Anmeldung.
 
 Sie können auf Ihre Virtual Cloud Firewall über folgende Protokolle zugreifen:
 
@@ -41,19 +41,19 @@ Hier ein entsprechendes Beispiel einer Anmeldemaske:
 
 Sie sollten das SSL-Zertifikat gegen ein (gültiges) öffentliches Zertifikat austauschen. Hierzu können Sie ebenso den eingebauten ACME-Mechanismus nutzen, der ein entsprechendes Zertifikat ausstellt.
 
-Weitere Information finden Sie hier:
+Weitere Informationen finden Sie hier:
 [ACME certificate support](https://docs.fortinet.com/document/fortigate/7.0.0/new-features/822087/acme-certificate-support)
 
 ### Grundkonfiguration
 
-Nach einer erfolgreichen Anmeldung an Ihrer Virtual Cloud Firewall-Instanz, haben Sie je nach gebuchten Managment Level einen ReadOnly Zugriff oder einen vollen Zugriff auf die administrative Web-Oberfläche.
+Nach einer erfolgreichen Anmeldung an Ihrer Virtual Cloud Firewall-Instanz, haben Sie je nach gebuchten Management Level einen ReadOnly Zugriff oder einen vollen Zugriff auf die administrative Web-Oberfläche.
 ![Dashboard](04_vcfw_pco_dashboard.png)
 
 Im Management Level Full Management können Sie hier wie gewohnt die weitere Konfiguration bzw. Anpassungen vornehmen.
 
 #### Management Zugriff auf die Virtual Cloud Firewall-Instanz über eine VPN (Virtual Private Network)-Verbindung
 
-Der administrative Zugang zu Ihrer Virtual Cloud Firewall-Instanz, kann durch einen zusätzlichen VPN-Tunnel abgesichert werden. Hierzu können Sie einen zusätzlichen Tunnel mit den entsprechenden Parameter konfigurieren:
+Der administrative Zugang zu Ihrer Virtual Cloud Firewall-Instanz, kann durch einen zusätzlichen VPN-Tunnel abgesichert werden. Hierzu können Sie einen zusätzlichen Tunnel mit den entsprechenden Parametern konfigurieren:
 ![VPN Konfiguration](05_vcfw_pco_vpn.png)
 
 #### Routing-Konfiguration
@@ -71,7 +71,7 @@ Hier ein Beispiel:
 
 #### Überprüfung der Internet-Konnektivität
 
-Für grundlegende Überprüfung der Internet-Konnektivität, können Sie eine Test-VM hinter der Virtual Cloud Firewall bereitstellen. Ebenso können Sie hiermit etwaige NAT-Regeln und  Sicherheitsrichtlinien mit überprüfen.
+Für grundlegende Überprüfung der Internet-Konnektivität, können Sie eine Test-VM hinter der Virtual Cloud Firewall bereitstellen. Ebenso können Sie hiermit etwaige NAT-Regeln und Sicherheitsrichtlinien mit überprüfen.
 
 Hier ein Beispiel mit einer Test-VM:
 ![Beispiel mit einer Test-VM](07_vcfw_pco_example_test_vm.png)
