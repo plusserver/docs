@@ -8,6 +8,7 @@ description: >
 ---
 
 ## Where to find it?
+
 Two-factor authentication (2FA) is available in CloudHub under Settings. This can be accessed by clicking on your email address in the top right-hand corner of the top bar and then selecting the Settings menu item. The two-factor authentication (2FA) option can be found under the Password & Security section.
 
 ![2FA location](img/2fa-location.png)

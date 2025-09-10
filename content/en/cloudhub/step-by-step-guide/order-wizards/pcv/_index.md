@@ -20,11 +20,11 @@ In the following we guide you step by step through the ordering process and expl
 In the first step, select the CPU category for your VMware:
 
 - Standard CPU
-    - at least 2 GHz
-    - no GPU support
+  - at least 2 GHz
+  - no GPU support
 - High CPU
-    - at least 3 GHz
-    - GPU support available
+  - at least 3 GHz
+  - GPU support available
 
 In addition, further options and prices can be viewed via a dropdown menu:
 

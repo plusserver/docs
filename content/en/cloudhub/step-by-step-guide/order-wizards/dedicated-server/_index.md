@@ -21,33 +21,37 @@ Below, we will guide you step by step through the ordering process and explain t
 
 In the first step, you can choose from four different server types:
 
-#### Essential - 100
-   - Intel 16C/32T (2,1 GHz)
-   - 2× 960 GB SSD (HW RAID)
-   - 64 GB RAM
-   - 2× 10 GbE NIC
-   - 198,89 €
+### Essential - 100
 
-#### Essential - 200
-   - Intel 12C/24T (3,4 GHz)
-   - 2× 960 GB SSD (HW RAID)
-   - 64 GB RAM
-   - 2× 10 GbE NIC
-   - 310 €
+- Intel 16C/32T (2,1 GHz)
+- 2× 960 GB SSD (HW RAID)
+- 64 GB RAM
+- 2× 10 GbE NIC
+- 198,89 €
 
-#### Performance - 100 (aktuell nicht verfügbar)
-   - AMD EPYC 9355P 32C/64T, 3.55-4.40GHz
-   - 2× 1,92 TB NVMe (Soft RAID)
-   - 128 GB RAM
-   - 2× 10 GbE NIC
-   - 554,44 €
+### Essential - 200
 
-#### Performance - 200 (aktuell nicht verfügbar)
-   - AMD EPYC 9555P 64C/128T, 3.2-4.40GHz
-   - 2× 1,92 TB NVMe (Soft RAID)
-   - 128 GB RAM
-   - 2× 10 GbE NIC
-   - 665,56 €
+- Intel 12C/24T (3,4 GHz)
+- 2× 960 GB SSD (HW RAID)
+- 64 GB RAM
+- 2× 10 GbE NIC
+- 310 €
+
+### Performance - 100 (aktuell nicht verfügbar)
+
+- AMD EPYC 9355P 32C/64T, 3.55-4.40GHz
+- 2× 1,92 TB NVMe (Soft RAID)
+- 128 GB RAM
+- 2× 10 GbE NIC
+- 554,44 €
+
+### Performance - 200 (aktuell nicht verfügbar)
+
+- AMD EPYC 9555P 64C/128T, 3.2-4.40GHz
+- 2× 1,92 TB NVMe (Soft RAID)
+- 128 GB RAM
+- 2× 10 GbE NIC
+- 665,56 €
 
 ![Dedicated Server Type](img/dedicated-server-servertype.png)
 
@@ -56,7 +60,7 @@ In the first step, you can choose from four different server types:
 In this step, select the desired size of the RAM (RAM) for your server.
 By default, 64 GB RAM are included. Alternatively, you can increase the performance of your server by selecting 128 GB RAM.
 
-#### Options:
+### Options:
 
 - 64 GB: 0 € (included in the basic price)
 - 128 GB: 38,40 € additionally
@@ -83,7 +87,7 @@ If you need more storage space than the 2× 960GB contained in the basic price, 
 - \+ 4× 960 GB: 62,58 €
 - \+ 6× 960 GB: 93,87 €
 
-#### Note on provision
+### Note on provision
 
 - Standard configuration: provision within approx. 1 hour
 - Individual configuration: provision within approx. 1 working day
@@ -104,10 +108,13 @@ Example:
 In this step, select the desired operating system for your server.
 There are two popular Linux distributions to choose from, each in the current stable version:
 
-#### Ubuntu
-  - Ubuntu 24.04 LTS: 0 €
-#### Debian
-  - Debian 12: 0 €
+### Ubuntu
+
+- Ubuntu 24.04 LTS: 0 €
+
+### Debian
+
+- Debian 12: 0 €
 
 ![Dedicated Server Operating system](img/dedicated-server-os.png)
 
@@ -116,7 +123,7 @@ There are two popular Linux distributions to choose from, each in the current st
 In this step, put a public SSH key with which you can access the server.
 A login without SSH-key is not possible.
 
-The key must be available in the OpenSSH format (e.g. `SSH-ED25519` or` SSH-RSA`) and is inserted via an input field.
+The key must be available in the OpenSSH format (e.g. `SSH-ED25519` or`SSH-RSA`) and is inserted via an input field.
 
 ![Dedicated Server Access restrictions](img/dedicated-server-ssh.png)
 

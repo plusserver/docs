@@ -22,7 +22,8 @@ The Private Registry is based on Harbor, a cloudnative open source registry for 
 
 In the first step, you can choose an instance type:
 
-#### Basic usage
+### Basic usage
+
 - Nodes with a vCPU/vRAM ratio of 1:2
 
 ![Private Registry Instance type](img/private-registry-instanz-type.png)
@@ -31,11 +32,13 @@ In the first step, you can choose an instance type:
 
 Select one of the following instance sizes:
 
-#### B2-4
+### B2-4
+
 - 2 vCPU(s) and 4 GB RAM
 - 0.11 €/hour
 
-#### B4-8
+### B4-8
+
 - 4 vCPU(s) and 8 GB RAM
 - 0.22 €/hour
 
