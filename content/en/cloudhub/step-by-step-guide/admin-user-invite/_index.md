@@ -8,6 +8,7 @@ description: >
 ---
 
 ## Where to find it?
+
 The function for inviting additional users by email can be found in the CloudHub sidebar under User management. There, an admin user can add new users by email using the Invite user button.
 
 ![User Management location](img/usr-mngmt-location.png)
