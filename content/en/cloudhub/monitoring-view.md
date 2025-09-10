@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Monitoring View"
 linkTitle: "Monitoring View"
 type: "docs"
@@ -19,4 +19,4 @@ Visibility is not generally restricted, unless the user generally does not have 
 There is a general overview of hosts and services, including a legend:
 ![Monitoring View - Übersicht](../img/monitoring-view/overview.png)
 And you can view details of any faults for all hosts and services that do not have the "OK" status.
-![Detailansicht zu eventuell vorhandenen Störungen an Hosts und Services](../img/monitoring-view/detailed-view.png)
+![Detailansicht zu eventuell vorhandenen Störungen an Hosts und Services](../img/monitoring-view/detailed-view.png) -->

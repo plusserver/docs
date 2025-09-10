@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Patch Management"
 linkTitle: "Patch Management"
 type: "docs"
@@ -20,4 +20,4 @@ All systems subject to patching (provided they are managed via Patch-Up) are lis
 
 For additional details about the services, more information can be revealed by expanding the section using the icon on the far right:
 
-![Patch Management Details](../img/patch-management/patch-management-details.png)
+![Patch Management Details](../img/patch-management/patch-management-details.png) -->

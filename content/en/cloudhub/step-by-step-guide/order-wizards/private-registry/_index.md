@@ -51,7 +51,7 @@ Select the desired storage size via a slider:
 
 ![Private Registry Storage Size](img/private-registry-storage.png)
 
-## Schritt 4: Trusted Sources
+## Step 4: Trusted Sources
 
 Enter the permitted network addresses in CIDR format.
 
@@ -60,7 +60,7 @@ Example:
 
 ![Private Registry Trusted Sources](img/private-registry-sources.png)
 
-## Schritt 5: Region selection
+## Step 5: Region selection
 
 Select the desired region for providing the registry:
 
@@ -69,7 +69,7 @@ Select the desired region for providing the registry:
 
 ![Private Registry Region](img/private-registry-region.png)
 
-## Schritt 6: Project Contract ID
+## Step 6: Project Contract ID
 
 Select whether a project contract ID already exists:
 

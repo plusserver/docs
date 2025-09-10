@@ -10,7 +10,7 @@ description: >
 ## Where to find it?
 The function for inviting additional users by email can be found in the CloudHub sidebar under User management. There, an admin user can add new users by email using the Invite user button.
 
-![User Management location](../img/usr-mngmt-location.png)
+![User Management location](img/usr-mngmt-location.png)
 
 ## Invitation from the admin's perspective
 
@@ -19,7 +19,7 @@ The function for inviting additional users by email can be found in the CloudHub
 1. Admin goes to the "User Management" page
 2. Admin clicks on the button "Invite User"
 
-![User Management button "Create new user"](../img/usr-mngmt-new-user.png)
+![User Management button "Create new user"](img/usr-mngmt-new-user.png)
 
 3. Admin sees a pop-up screen where he can enter the e-mail address of the user he wants to invite. (Email Address = mandatory field).
 4. The roles can now also be assigned directly in this pop-up screen (one and several).
@@ -27,11 +27,11 @@ The function for inviting additional users by email can be found in the CloudHub
     2. We have also added notes to "Delete role" and "Edit role" that this can have an effect on open invitations.
 5. The admin confirms the sending of the e-mail invitation via the "Send invitation" button (a loading screen appears)
 
-![Pop-up window Invite new user - Send invitation](../img/pop-up-invite-new-user-3.png)
+![Pop-up window Invite new user - Send invitation](img/pop-up-invite-new-user-3.png)
 
 6. Once the invitation has been successfully sent, the user can either invite another user directly from here, go to the list of all invitations or simply close the window.
 
-![Pop-up window Invite new user - Invitation sent successfully](../img/pop-up-invite-new-user-4.png)
+![Pop-up window Invite new user - Invitation sent successfully](img/pop-up-invite-new-user-4.png)
 
 Safety precautions:
 
@@ -44,16 +44,16 @@ As soon as the invitation has been successfully accepted, the added user appears
 
 1. In the "Invitations" table within the "User Management" area, the admin receives an overview of all sent invitations and their status ("Pending"/"Expired") and can manage them there.
 
-![User Management - "Invitations" table](../img/usr-mngmt-table-invitations-1.png)
+![User Management - "Invitations" table](img/usr-mngmt-table-invitations-1.png)
 
 2. Admin can resend invitations via the invitation table (circle-arrow icon)
 
-![User Management - Resend invitations ](../img/usr-mngmt-resend-invitation.png)
+![User Management - Resend invitations ](img/usr-mngmt-resend-invitation.png)
 
 3. Admin can delete invitations via the invitation table (rubbish bin icon). The deletion must always be confirmed.
 
-![User Management - Delete invitation](../img/usr-mngmt-delete-invitation.png)
-![User Management - Confirmation cancellation of an invitation](../img/usr-mngmt-confirm-delete-user.png)
+![User Management - Delete invitation](img/usr-mngmt-delete-invitation.png)
+![User Management - Confirmation cancellation of an invitation](img/usr-mngmt-confirm-delete-user.png)
 
 ## Invitation from the perspective of the invited user
 
@@ -64,18 +64,18 @@ As soon as the invitation has been successfully accepted, the added user appears
     1. Users who already have a CloudHub account can continue to log in with their usual login details.
     2. Users who do not yet have a CloudHub account will be asked to enter their password during the process to create the account.
 
-![CloudHub Account creation](../img/cloudhub-register-new-account.png)
+![CloudHub Account creation](img/cloudhub-register-new-account.png)
 
 3. After successfully entering the data / successfully logging in, the users can access the CloudHub.
 4. If the respective user has not yet received any rights from the admin, the users have restricted access to the CloudHub for security reasons
     1. In this case, the user only has access to the following functions / pages Home page, FAQs, settings, "Change customer" if applicable (if they are assigned to several customer numbers), feedback and the links on the home page that lead to the website or receive PDFs for the products
     2. The user is shown an info banner for this status until the rights have been assigned. Then the banner disappears automatically
 
-    ![CloudHub view with restricted access](../img/cloudhub-restricted-access.png)
+    ![CloudHub view with restricted access](img/cloudhub-restricted-access.png)
 
     3. As soon as the user receives their rights, the next time they log in to CloudHub they will be shown the steps in the welcome tour for the areas where the user then has access.
 
-    ![CloudHub Welcome-Tour](../img/cloudhub-welcome-tour.png)
+    ![CloudHub Welcome-Tour](img/cloudhub-welcome-tour.png)
 
 5. However, like all newly registered users, the user receives a welcome e-mail with an overview of all the important information about CloudHub.
 
@@ -83,9 +83,9 @@ As soon as the invitation has been successfully accepted, the added user appears
 
 1. Via "Settings", the user can now access the function to independently cancel access to a customer number if they are no longer active in CloudHub for this number. Since the cancellation of a customer number is a critical step, we have decided to present the user with two windows to confirm this cancellation so that they have the secure option of checking the step for themselves and cancelling it in good time if necessary.
 
-![CloudHub Einstellungen - Cancel customer number](../img/cloudhub-settings-cancel-access-to-customer-number.png)
-![Selection of the customer number to which access is to be cancelled](../img/select-customer-number-to-cancel-access.png)
-![Confirmation of cancellation of access to the customer number](../img/confirm-cancel-access-to-customer-number.png)
+![CloudHub Einstellungen - Cancel customer number](img/cloudhub-settings-cancel-access-to-customer-number.png)
+![Selection of the customer number to which access is to be cancelled](img/select-customer-number-to-cancel-access.png)
+![Confirmation of cancellation of access to the customer number](img/confirm-cancel-access-to-customer-number.png)
 
 Consequences for the user for cancelling access to a customer number:
 
