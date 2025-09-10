@@ -13,7 +13,7 @@ Welcome to the pluscloud VMware order wizard. Here it is described which configu
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
-![PCV Overview](img/cloud-services/cloud-services-level3.png)
+![PCV Overview](../../../img/cloud-services/cloud-services-level3.png)
 
 ## Step 1: Selection of the CPU category
 

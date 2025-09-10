@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Ticket Overview"
 linkTitle: "Ticket Overview"
 type: "docs"
@@ -19,4 +19,4 @@ In the left sidebar, select the “Ticket Overview” button.
 
 ![Select Ticket Overview in the sidebar](../img/ticket-modul/ae2.png)
 
-A table with all support tickets will be displayed here. There are two tabs: one shows only open tickets, and the other shows all tickets. The displayed tickets can be sorted by each column in the table.
+A table with all support tickets will be displayed here. There are two tabs: one shows only open tickets, and the other shows all tickets. The displayed tickets can be sorted by each column in the table. -->

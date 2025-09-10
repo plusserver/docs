@@ -128,7 +128,7 @@ A region is currently available for providing your database:
 
 ![Dedicated Server Regions](img/dedicated-server-region.png)
 
-## Schritt 9: Contract Term
+## Step 9: Contract Term
 
 Select the desired contract term for your server.
 
@@ -140,7 +140,7 @@ The contract is automatically extended by another day if it is not terminated in
 
 ![Dedicated Server Contract Term](img/dedicated-server-contract-runtime.png)
 
-## Schritt 10: Project Contract ID
+## Step 10: Project Contract ID
 
 Choose whether there is already a project contract detection:
 
