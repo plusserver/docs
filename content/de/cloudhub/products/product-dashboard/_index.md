@@ -7,8 +7,6 @@ description: >
     Informationen zum Produkt-Dashboard im CloudHub
 ---
 
-## Produkt-Dashboard User Guide
-
 Willkommen im neuen Bereich des CloudHubs, Ihrem Produkt-Dashboard!
 Hier können Sie die von ihnen im CloudHub gebuchten Produkte einsehen und verwalten.
 In der folgenden Anleitung erklären wir Ihnen die verschiedenen Bereiche des Produkt-Dashboards (auch Level genannt) und was Sie dort an Informationen, Links und zukünftig auch Funktionen finden.
