@@ -26,6 +26,6 @@ In the Password and Security section, you can manage and enhance the protection 
 
 - **Change password** – Use the provided link to update your password and secure your account.
 - **Set up Two-Factor Authentication (2FA)** – Add an extra layer of security to your login.
-- **Change Customer Service PIN** – Update the PIN used for identity verification when contacting support. You can find detailed instructions for this [here](../../step-by-step-guide/customer-support-pin).
+- **Change Customer Service PIN** – Update the PIN used for identity verification when contacting support. You can find detailed instructions for this [here](../step-by-step-guide/customer-support-pin).
 - **Revoke access to a customer number** – Remove a linked customer number if it is no longer needed.
 - **API Key Management** – Manage API keys to control programmatic access to your services.
