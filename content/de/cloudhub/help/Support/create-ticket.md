@@ -12,3 +12,5 @@ description: >
 Auf der Seite **„Ticket erstellen“** können Sie schnell und einfach ein Support-Ticket anlegen, um Hilfe bei technischen Problemen, Fragen zu Ihren Produkten oder sonstigen Anliegen zu erhalten.
 
 [In dieser Anleitung](../../../step-by-step-guide/ticket-creation/ticket-creation) finden Sie eine detaillierte Schritt-für-Schritt-Beschreibung zur Erstellung eines Tickets.
+
+Ihre erstellten Tickets können Sie dann auf der Seite [Ticketübersicht](ticket-overview) einsehen.
