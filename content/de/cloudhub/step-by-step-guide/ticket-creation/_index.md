@@ -7,40 +7,32 @@ description: >
     Informationen zum Erstellen von Tickets
 ---
 
-### Schritt 1: Kategorieauswahl
+## Ticket erstellen
 
-![Kategorie für das Ticket auswählen](img/a3.png)
+Auf der Seite **„Ticket erstellen“** können Sie ein neues Support-Ticket anlegen. Das Formular führt Sie Schritt für Schritt durch den Erstellungsprozess und passt sich abhängig von der gewählten Kategorie und ggf. Vorlage an.
 
-Der Prozess der Ticketerstellung besteht aus drei Schritten, beginnend mit der Auswahl der Kategorie. Hat man vor Kurzem bereits ein Ticket begonnen, aber nicht abgeschickt (sondern ist woanders im CloudHub hingegangen), hat man die Möglichkeit, den Entwurf wiederherzustellen.
+### Schritte zur Ticketerstellung
 
-### Schritt 2: Produkt/Leistung auswählen
+1. **Kategorie auswählen:**
+   Wählen Sie zunächst die passende Kategorie für Ihr Anliegen (z. B. Technischer Support, Abrechnung, Vertragsfragen).
+   Diese Auswahl bestimmt, welche Informationen im weiteren Verlauf abgefragt werden.
+   ![Ticketerstellung: Kategorieauswahl](img/select-category.png)
 
-![Produkt/Leistung auswählen](img/a4.png)
+2. **Vorlage auswählen (optional):**
+   Falls für die gewählte Kategorie Vorlagen verfügbar sind, haben Sie die Möglichkeit eine passende Vorlage auszuwählen.
+   ![Ticketerstellung: Auswahl einer Vorlage](img/select-template.png)
 
-Hier werden alle Verträge aufgelistet; diese lassen sich auch durchsuchen.
+3. **Produkt oder Dienstleistung auswählen (optional):**
+   Sie können das Ticket einem bestimmten Produkt oder einer Dienstleistung zuordnen.
+   ![Ticketerstellung: Auswahl eines Produktes/Dienstleistung](img/select-contract.png)
 
-### Schritt 3: Details eingeben
+4. **Details eingeben:**
+   Abhängig von der gewählten Kategorie und Vorlage werden spezifische Informationen abgefragt.
+   Geben Sie hier bitte alle relevanten Details zu Ihrem Anliegen ein, damit unser Support-Team Ihr Ticket effizient bearbeiten kann.
+   ![Ticketerstellung: Eingabe von Ticketdetails](img/input-ticket-details.png)
 
-![Details zu dem Ticket angeben](img/a5.png)
+### Ticket wiederherstellen
 
-Je nach Auswahl im Schritt „Kategorieauswahl“ wird hier abgefragt, worum es genau geht – inklusive Anhänge sowie Informationen für Rückfragen und weiteren Austausch.
-
-Es können weitere Empfänger im CC angegeben werden.
-
-Falls bei der Ticketkategorie „Service Requests“ ausgewählt wurde, besteht nun die Möglichkeit, vorgefertigte Templates auszufüllen oder ohne Template fortzufahren.
-
-### Schritt 4: Templates anzeigen lassen
-
-![Templates anzeigen lassen](img/a5.5.png)
-
-### Schritt 5: Auswahl der Templates
-
-![Auswahl der Templates](img/a6.png)
-
-Ein Template sieht dann zum Beispiel so aus:
-
-### Schritt 6: Template ausfüllen
-
-![Das Formular vom Template ausfüllen](img/a7.png)
-
-Das Formular des Templates ausfüllen und anschließend auf den Button „Ticket erstellen“ klicken.
+Sollten Sie das Formular zur Ticketerstellung bereits teilweise ausgefüllt haben und die Seite verlassen haben, können Sie Ihre Eingaben wiederherstellen.
+Dafür nutzen Sie den Button **„Ticket wiederherstellen“**, der sich oben rechts auf der Seite befindet.
+![Ticketerstellung: Ticket wiederherstellen](img/restore-autosaved-ticket.png)
