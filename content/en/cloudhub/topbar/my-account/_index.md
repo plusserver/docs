@@ -11,11 +11,11 @@ description: >
 
 My account is available in CloudHub under **"My account"**. This can be accessed by clicking on your email address in the top right-hand corner of the top bar and then selecting the "My account" menu item.
 
-![My Account in topbar](../img/my-account-topbar.png)
+![My Account in topbar](img/my-account-topbar.png)
 
 ## Overview
 
-![My Account](../img/my-account-overview.png)
+![My Account](img/my-account-overview.png)
 
 ### Account Details
 
