@@ -42,7 +42,7 @@ Sie haben die Möglichkeit, die aktuelle Tabellenansicht als **CSV-Datei** herun
 
 ## Detailansicht
 
-Durch Klicken auf die "Projektvertragskennung", "Produktbezeichnung", "Projektname" oder der "Projektkennung" eines Produktes in der Produktübersicht-Tabelle gelangen Sie zu der Detailansicht des Produktes.
+Durch Klicken auf eine Reihe in der Produktübersicht-Tabelle gelangen Sie zu der Detailansicht des Produktes.
 
 ### Allgemeine Produktinformationen
 

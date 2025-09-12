@@ -44,7 +44,7 @@ You have the option of downloading the current table view as a **CSV file**. Thi
 
 ## Detailed view
 
-By clicking on the "Project contract identifier", "Product name", "Project name" or the "Project identifier" of a product in the product overview table, you can access the detailed view of the product.
+By clicking on a row in the product overview table, you can access the detailed view of the product.
 
 ### General product information
 
