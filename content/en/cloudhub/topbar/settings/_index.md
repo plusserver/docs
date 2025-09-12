@@ -19,7 +19,6 @@ Welcome to the CloudHub settings. Here you can configure various settings relate
 
 ![Settings Overview](img/settings-overview.png)
 
-
 ## Password and Security
 
 In the Password and Security section, you can manage and enhance the protection of your account. The following options are available:
