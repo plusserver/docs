@@ -9,19 +9,19 @@ description: >
 
 ## Where to find it?
 
-Welcome to the Cloud Services section of CloudHub! Here you can order the various products. In the following instructions, we will explain the various cloud service areas and what information, links and functions you will find there.
+Welcome to the **Cloud Services** section of CloudHub! Here you can order the various products. In the following instructions, we will explain the various cloud service areas and what information, links and functions you will find there.
 
 ## Structure of the Cloud Service areas
 
-On the start page you will find an overview of our cloud services (structured by category), as well as links to other CloudHub areas and our product documentation. Clicking on the “Order now” link in the product tile will take you to the order form (wizard) and clicking on the “Find out more” link will take you to the overview of the respective product.
+On the start page you will find an overview of our cloud services (structured by category), as well as links to other CloudHub areas and our product documentation. Clicking on the “Order now” link in the product tile will take you to the [order form (wizard)](#the-order-wizard) and clicking on the “Find out more” link will take you to the [overview of the respective product](#the-products-overview).
 
 ![Cloud Services Overview](../img/cloud-services/cloud-services-overview.png)
 
-Overview: Here you will find all the information about the respective product in a category. There is also a quick link to the relevant order form (wizard).
+**Overview:** Here you will find all the information about the respective product in a category. There is also a quick link to the relevant order form (wizard).
 
 ![Cloud Services Produkt Details](../img/cloud-services/cloud-services-level2.png)
 
-Order wizard: Here you will find the order form (wizard), in which there are various details that need to be filled out in order to order a product. As soon as all mandatory fields have been filled in, you can switch to the order overview via the quick link.
+**Order wizard:** Here you will find the order form (wizard), in which there are various details that need to be filled out in order to order a product. As soon as all mandatory fields have been filled in, you can switch to the order overview via the quick link.
 
 ![Cloud Services Order Wizard](../img/cloud-services/cloud-services-level3.png)
 
@@ -29,7 +29,7 @@ Order wizard: Here you will find the order form (wizard), in which there are var
 
 #### Cloud Services
 
-Sorted by category, here you can see the various products that you can order from CloudHub. On the tile, you can either click on "Product information" to access an overview of the product types and styles available in this category, or on “Order now” to be taken directly to the product's order wizard.
+Sorted by category, here you can see the various products that you can order from CloudHub. On the tile, you can either click on "Product information" to access an overview of the product types and styles available in this category, or on “Order now” to be taken directly to the product's [order wizard](#the-order-wizard).
 
 ![Cloud Services Products](../img/cloud-services/cloud-services-products.png)
 
