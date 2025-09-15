@@ -67,7 +67,6 @@ Wenn man auf das Mülleimer-Symbol auf der Übersichtsseite klickt, taucht ein k
 
 ![Lösch-Button auswählen](../../img/user-management/u10.png)
 
-
 ## Nutzer
 
 ### Nutzerübersicht
