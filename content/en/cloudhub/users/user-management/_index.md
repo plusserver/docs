@@ -11,19 +11,19 @@ description: >
 
 ### Where to find it?
 
-![Select User Management in the sidebar](../../img/user-management/u0.5.png)
-
 The functionality can be found in the CloudHub sidebar, under the "User Management" section.
+
+![Select User Management in the sidebar](../../img/user-management/u0.5.png)
 
 ## Roles
 
 ### Role Overview
 
-![Role Overview](../../img/user-management/ue2.png)
-
 Here you can see an overview of all created roles and whether the specific role controls which pages someone can view ("Page Management"), which contracts the role has access to ("Contract Management"), or what actions the role can perform in the Product Dashboard.
 
 Under "Actions," you can delete roles or open the edit dialog.
+
+![Role Overview](../../img/user-management/ue2.png)
 
 ### Add Roles
 
@@ -31,22 +31,19 @@ Clicking "Add New Role" opens a menu. Here, settings for the corresponding role 
 
 ![Select Roles tab in User Management](../../img/user-management/ue3.png)
 
-![Select Create Role](../../img/user-management/ue4.png)
-
 Here you can add permissions.
-
-![Select checkboxes and save](../../img/user-management/ue5.png)
-
-![Role overview is displayed](../../img/user-management/ue6.png)
 
 Three sections are important:
 
-- Role Name: This label will also appear in the overview.
+- **Role Name:** This label will also appear in the overview.
 - The checkboxes for "Page Management", "Product Management", and "Product Dashboard Management"
 - The respective configuration options for each section:
-  - Page Management: Shows a sidebar-like structure with an overview of pages and subpages (expandable). Strikethrough categories indicate options that are not available.
-  - Contract Management: Shows basic information about the existing contracts and lets you select which are visible to the role.
-  - Product Dashboard Management: Shows basic product actions, and lets you select which are available to the role.
+  - **Page Management:** Shows a sidebar-like structure with an overview of pages and subpages (expandable). Strikethrough categories indicate options that are not available.\
+  ![Create role - Page Management](../../img/user-management/ue4.png)
+  - **Contract Management:** Shows basic information about the existing contracts and lets you select which are visible to the role.\
+  ![Create role - Product Management](../../img/user-management/ue5.png)
+  - **Product Dashboard Management:** Shows basic product actions, and lets you select which are available to the role.\
+  ![Create role - Product Dashboard Management](../../img/user-management/ue6.png)
 
 After clicking "Save Role", you'll return to the overview page, where the newly created role will be listed.
 

@@ -11,19 +11,19 @@ description: >
 
 ### Wo ist es zu finden?
 
-![User Management in der Sidebar auswählen](../../img/user-management/u0.5.png)
-
 Zu finden ist die Funktionalität in der Seitenleiste des Cloudhubs, im Bereich "User Management".
+
+![User Management in der Sidebar auswählen](../../img/user-management/u0.5.png)
 
 ## Rollen
 
 ### Rollenübersicht
 
-![Rollenübersicht](../../img/user-management/u1.png)
-
 Hier sieht man eine Übersicht über alle angelegten Rollen und ob diese spezielle Rolle regelt, welche Seiten jemand sehen kann ("Seitenverwaltung"), auf welche Verträge die Rolle Zugriff hat ("Vertragsverwaltung") oder welche Aktionen die Rolle im Produkt-Dashboard tätigen kann.
 
 Unter Aktionen kann man Rollen löschen oder in die Bearbeitungsmaske gehen.
+
+![Rollenübersicht](../../img/user-management/u1.png)
 
 ### Rollen hinzufügen
 
@@ -31,23 +31,20 @@ Unter "Neue Rolle anlegen" öffnet sich ein Menü. Hier können Einstellungen zu
 
 ![Rollen-Tab im User Management auswählen](../../img/user-management/u5.png)
 
-![Rolle erstellen auswählen](../../img/user-management/u6.png)
-
-Hier können Berechtigungen hinzugefügt werden
-
-![Checkboxen auswählen und speichern](../../img/user-management/u7.png)
-
-![Rollen Übersicht wird angezeigt](../../img/user-management/u8.png)
-
 Wichtig sind drei Bereiche:
 
-- Rollenname: unter dieser Bezeichnung taucht die Rolle auch in der Übersicht auf
+- **Rollenname:** unter dieser Bezeichnung taucht die Rolle auch in der Übersicht auf
 - Die Checkboxen zwischen "Seitenverwaltung", "Produktverwaltung" und "Produkt-Dashboard-Verwaltung"
 
 - Dann jeweils die Auswahlmöglichkeiten zwischen der Rolle
-  - Seitenverwaltung: Hier sieht man entsprechend der Struktur der Sidebar eine Übersicht der Seiten und dazugehörigen Unterseiten (nach dem Aufklappen). Die durchgestrichenen Kategorien signalisieren, dass eine Option nicht möglich ist.
-  - Vertragsverwaltung: Hier sieht man ein paar Grundinformationen zu den vorhandenen Verträgen und kann das auswählen, welche für die Rolle sichtbar sind.
-  - Produkt-Dashboard-Verwaltung: Hier sieht man ein paar Grundaktionen, die man zu den Produkten tätigen kann, und kann auswählen, welche für die Rolle verfügbar sind.
+  - **Seitenverwaltung:** Hier sieht man entsprechend der Struktur der Sidebar eine Übersicht der Seiten und dazugehörigen Unterseiten (nach dem Aufklappen). Die durchgestrichenen Kategorien signalisieren, dass eine Option nicht möglich ist.\
+  ![Rolle erstellen - Seitenverwaltung](../../img/user-management/u6.png)
+
+  - **Vertragsverwaltung:** Hier sieht man ein paar Grundinformationen zu den vorhandenen Verträgen und kann das auswählen, welche für die Rolle sichtbar sind.\
+  ![Rolle erstellen: Produktverwaltung](../../img/user-management/u7.png)
+
+  - **Produkt-Dashboard-Verwaltung:** Hier sieht man ein paar Grundaktionen, die man zu den Produkten tätigen kann, und kann auswählen, welche für die Rolle verfügbar sind.\
+  ![Rolle erstellen: Produkt-Dashboard-Verwaltung](../../img/user-management/u8.png)
 
 Nachdem man auf "Rolle speichern" gedrückt hat, kommt man wieder auf die Übersichtsseite und findet die eben angelegte Rolle wieder.
 
