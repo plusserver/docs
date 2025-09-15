@@ -9,7 +9,7 @@ description: >
 
 ## Wo ist es zu finden?
 
-Die Ansprechpartner sind in der Sidebar des CloudHubs unter Ansprechpartner zu finden.
+Die Ansprechpartner sind in der Sidebar des CloudHubs unter **"Ansprechpartner"** zu finden.
 
 ![Ansprechpartner Position](../../img/contact-persons/contact-persons-location.png)
 

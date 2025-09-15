@@ -9,7 +9,7 @@ description: >
 
 ## Where to find it?
 
-The contacts can be found in the CloudHub sidebar under Contacts.
+The contact persons can be found in the CloudHub sidebar under **"Contacts Persons"**.
 
 ![Contact Persons location](../../img/contact-persons/contact-persons-location.png)
 
