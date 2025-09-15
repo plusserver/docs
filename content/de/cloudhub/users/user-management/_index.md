@@ -11,7 +11,7 @@ description: >
 
 ### Wo ist es zu finden?
 
-![User Management in der Sidebar auswählen](../../../img/user-management/u0.5.png)
+![User Management in der Sidebar auswählen](../../img/user-management/u0.5.png)
 
 Zu finden ist die Funktionalität in der Seitenleiste des Cloudhubs, im Bereich "User Management".
 
@@ -19,7 +19,7 @@ Zu finden ist die Funktionalität in der Seitenleiste des Cloudhubs, im Bereich 
 
 ### Rollenübersicht
 
-![Rollenübersicht](../../../img/user-management/u1.png)
+![Rollenübersicht](../../img/user-management/u1.png)
 
 Hier sieht man eine Übersicht über alle angelegten Rollen und ob diese spezielle Rolle regelt, welche Seiten jemand sehen kann ("Seitenverwaltung"), auf welche Verträge die Rolle Zugriff hat ("Vertragsverwaltung") oder welche Aktionen die Rolle im Produkt-Dashboard tätigen kann.
 
@@ -29,15 +29,15 @@ Unter Aktionen kann man Rollen löschen oder in die Bearbeitungsmaske gehen.
 
 Unter "Neue Rolle anlegen" öffnet sich ein Menü. Hier können Einstellungen zu der entsprechenden Rolle vorgenommen werden.
 
-![Rollen-Tab im User Management auswählen](../../../img/user-management/u5.png)
+![Rollen-Tab im User Management auswählen](../../img/user-management/u5.png)
 
-![Rolle erstellen auswählen](../../../img/user-management/u6.png)
+![Rolle erstellen auswählen](../../img/user-management/u6.png)
 
 Hier können Berechtigungen hinzugefügt werden
 
-![Checkboxen auswählen und speichern](../../../img/user-management/u7.png)
+![Checkboxen auswählen und speichern](../../img/user-management/u7.png)
 
-![Rollen Übersicht wird angezeigt](../../../img/user-management/u8.png)
+![Rollen Übersicht wird angezeigt](../../img/user-management/u8.png)
 
 Wichtig sind drei Bereiche:
 
@@ -55,7 +55,7 @@ Nachdem man auf "Rolle speichern" gedrückt hat, kommt man wieder auf die Übers
 
 Eine bereits existierende Rolle kann man natürlich auch editieren.
 
-![Editier Button auswählen](../../../img/user-management/u9.png)
+![Editier Button auswählen](../../img/user-management/u9.png)
 
 Je nachdem, für welchen Bereich die Rolle ist, kann man dort wieder die jeweiligen Optionen auswählen. Den Rollennamen kann man auch ändern.
 
@@ -65,14 +65,14 @@ Die Auswahl, welche Verwaltung die Rolle betrifft, kann man an dieser Stelle nic
 
 Wenn man auf das Mülleimer-Symbol auf der Übersichtsseite klickt, taucht ein kleines Fenster auf, wo man bestätigt, dass die Rolle wirklich gelöscht werden soll.
 
-![Lösch-Button auswählen](../../../img/user-management/u10.png)
+![Lösch-Button auswählen](../../img/user-management/u10.png)
 
 
 ## Nutzer
 
 ### Nutzerübersicht
 
-![Nutzer im Tab auswählen](../../../img/user-management/u11.png)
+![Nutzer im Tab auswählen](../../img/user-management/u11.png)
 
 Hier sieht man welche Nutzer angelegt sind. Neben dem unique identifier E-Mail-Adresse wird auf aufgelistet, welche Rollen diesem Nutzer zugeordnet sind.
 
@@ -82,22 +82,22 @@ Analog zu der Rollenverwaltung kann man hier auch die Aktionen "Editieren" und "
 
 Wenn man auf "Benutzer einladen" drückt, öffnet sich eine Oberfläche, welche die E-Mail-Adresse und die gewünschten Rollen (die ja im vorherigen Schritt angelegt wurden) für diesen Nutzer abfragt.
 
-![E-Mail eingeben und Rollen hinzufügen](../../../img/user-management/u12.png)
+![E-Mail eingeben und Rollen hinzufügen](../../img/user-management/u12.png)
 
 ### Nutzer editieren
 
 Wenn man über die Nutzerübersichtsseite das Editieren-Symbol gefunden hat, kommt man auf eine Übersicht, die die Anpassung der vergebenen Rollen ermöglicht
 
-![Nutzer auswählen](../../../img/user-management/u14.png)
+![Nutzer auswählen](../../img/user-management/u14.png)
 
-![Rollen auswählen](../../../img/user-management/u15.png)
+![Rollen auswählen](../../img/user-management/u15.png)
 
 Um nachvollziehen zu können, welche Summe an Berechtigungen die ausgewählten Rollen ergeben, kann man in dem zweiten Tab eine read-only-Ansicht aufmachen und sehe welche Seiten sichtbar sein werden.
 
-![Berechtigungsübersicht anzeigen](../../../img/user-management/u16.png)
+![Berechtigungsübersicht anzeigen](../../img/user-management/u16.png)
 
 ### Nutzer löschen
 
 Analog zum Löschen von Rollen, können auch Nutzer gelöscht werden. Damit das nicht aus Versehen passiert, wird zur Sicherheit darum gebeten, dass man ein Wort abtippt.
 
-![Löschen bestätigen](../../../img/user-management/u17.png)
+![Löschen bestätigen](../../img/user-management/u17.png)
