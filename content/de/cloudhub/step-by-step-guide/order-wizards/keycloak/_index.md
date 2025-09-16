@@ -9,11 +9,11 @@ description: >
 
 ## Einleitung
 
-Willkommen zum Bestellformular der Keycloak. Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue Keycloak bestellt werden kann.
+Willkommen zum [Bestellformular der Keycloak](https://cloudhub.plusserver.com/cloud-services/keycloak/order). Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue Keycloak bestellt werden kann.
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
-Die Keycloak wird aktuell auf der Version 26 angeboten und nutzt eine Instanzgröße (Node) mit 4 vCPU(s) und 8 GB RAM.
+Die Keycloak wird aktuell auf der **Version 26** angeboten und nutzt eine Instanzgröße (Node) mit 4 vCPU(s) und 8 GB RAM.
 
 ![Keycloak Überblick 1](img/keycloak-overview1.png)
 ![Keycloak Überblick 2](img/keycloak-overview2.png)
@@ -59,7 +59,7 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 
 Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigurationen.
 Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
-Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die Allgemeinen Geschäftsbedingungen und weitere relevante Vertragsunterlagen.\
+Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die **Allgemeinen Geschäftsbedingungen** und **weitere relevante Vertragsunterlagen**.\
 Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
 Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
 
