@@ -9,7 +9,7 @@ description: >
 
 ## Wo ist es zu finden?
 
-Die Funktion zum Einladen weiterer Nutzer per E-Mail ist in der Sidebar des CloudHubs unter Usermanagement zu finden. Dort kann ein Admin-Nutzer über die Schaltfläche Benutzer einladen neue Nutzer per E-Mail hinzufügen.
+Die Funktion zum **Einladen weiterer Nutzer** per E-Mail ist in der Sidebar des CloudHubs unter [User Management](https://cloudhub.plusserver.com/user-management) zu finden. Dort kann ein Admin-Nutzer über die Schaltfläche Benutzer einladen neue Nutzer per E-Mail hinzufügen.
 
 ![User-Management Position](img/usr-mngmt-location.png)
 
@@ -24,7 +24,7 @@ Die Funktion zum Einladen weiterer Nutzer per E-Mail ist in der Sidebar des Clou
 
 3. Admin sieht einen Pop-up Fenster, wo er die E-Mail-Adresse des Nutzers eingeben kann, den er einladen will. (E-Mail-Adresse = Pflichtfeld).
 4. In diesem Pop-up Fenster können jetzt auch direkt die Rollen vergeben werden (eine und mehrere).
-    1. Die Rollen müssen jedoch vorher angelegt werden.
+    1. Die Rollen müssen jedoch **vorher** angelegt werden.
     2. Ebenfalls haben wir Hinweise bei "Rolle löschen" und "Rolle editieren" eingebaut, dass dies Auswirkungen auf offene Einladungen haben kann.
 5. Über den Knopf "Einladung senden" bestätigt der Admin den Versand der E-Mail Einladung (ein Ladebildschirm erscheint)
 
@@ -37,7 +37,7 @@ Die Funktion zum Einladen weiterer Nutzer per E-Mail ist in der Sidebar des Clou
 Sicherheitsvorkehrungen:
 
 - Die Einladungn sind limitiert auf 50 Einladungen pro Admin pro Tag
-- Der Link in der Einladungsmail ist nur 1 Tag gültig
+- Der Link in der Einladungsmail ist **nur 1 Tag gültig**
 
 Sobald die Einladung erfolgreich angenomen wurde, taucht der hinzugefügt Nutzer in der User Management-Tabelle auf.
 
