@@ -9,7 +9,7 @@ description: >
 
 ## Einleitung
 
-Willkommen zum Bestellformular der Dedicated Server. Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie einen neuen Dedicated Server bestellt werden kann.
+Willkommen zum [Bestellformular der Dedicated Server](https://cloudhub.plusserver.com/cloud-services/dedicated-server/order). Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie einen neuen Dedicated Server bestellt werden kann.
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
@@ -21,33 +21,37 @@ Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und e
 
 Im ersten Schritt stehen vier unterschiedliche Servertypen zur Auswahl:
 
-#### Essential - 100
-   - Intel 16C/32T (2,1 GHz)
-   - 2× 960 GB SSD (HW RAID)
-   - 64 GB RAM
-   - 2× 10 GbE NIC
-   - 198,89 €
+### Essential - 100
 
-#### Essential - 200
-   - Intel 12C/24T (3,4 GHz)
-   - 2× 960 GB SSD (HW RAID)
-   - 64 GB RAM
-   - 2× 10 GbE NIC
-   - 310 €
+- Intel 16C/32T (2,1 GHz)
+- 2× 960 GB SSD (HW RAID)
+- 64 GB RAM
+- 2× 10 GbE NIC
+- 198,89 €
 
-#### Performance - 100 (aktuell nicht verfügbar)
-   - AMD EPYC 9355P 32C/64T, 3.55-4.40GHz
-   - 2× 1,92 TB NVMe (Soft RAID)
-   - 128 GB RAM
-   - 2× 10 GbE NIC
-   - 554,44 €
+### Essential - 200
 
-#### Performance - 200 (aktuell nicht verfügbar)
-   - AMD EPYC 9555P 64C/128T, 3.2-4.40GHz
-   - 2× 1,92 TB NVMe (Soft RAID)
-   - 128 GB RAM
-   - 2× 10 GbE NIC
-   - 665,56 €
+- Intel 12C/24T (3,4 GHz)
+- 2× 960 GB SSD (HW RAID)
+- 64 GB RAM
+- 2× 10 GbE NIC
+- 310 €
+
+### Performance - 100 (aktuell nicht verfügbar)
+
+- AMD EPYC 9355P 32C/64T, 3.55-4.40GHz
+- 2× 1,92 TB NVMe (Soft RAID)
+- 128 GB RAM
+- 2× 10 GbE NIC
+- 554,44 €
+
+### Performance - 200 (aktuell nicht verfügbar)
+
+- AMD EPYC 9555P 64C/128T, 3.2-4.40GHz
+- 2× 1,92 TB NVMe (Soft RAID)
+- 128 GB RAM
+- 2× 10 GbE NIC
+- 665,56 €
 
 ![Dedicated Server Typ](img/dedicated-server-servertype.png)
 
@@ -83,7 +87,7 @@ Falls Sie mehr Speicherplatz benötigen als die im Grundpreis enthaltenen 2× 
 - \+ 4× 960 GB: 62,58 €
 - \+ 6× 960 GB: 93,87 €
 
-#### Hinweis zur Bereitstellung
+### Hinweis zur Bereitstellung
 
 - Standard-Konfiguration: Bereitstellung innerhalb ca. 1 Stunde
 - Individuelle Konfiguration: Bereitstellung innerhalb ca. 1 Arbeitstag
@@ -153,7 +157,7 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 
 Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigurationen.
 Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
-Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die Allgemeinen Geschäftsbedingungen und weitere relevante Vertragsunterlagen.\
+Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die **Allgemeinen Geschäftsbedingungen** und **weitere relevante Vertragsunterlagen**.\
 Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
 Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
 
