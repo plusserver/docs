@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the pluscloud Open order wizard. Here it is described which configuration options are available and how a new pluscloud Open can be ordered.
+Welcome to the [pluscloud Open order wizard](https://cloudhub.plusserver.com/cloud-services/pluscloud-open/order). Here it is described which configuration options are available and how a new pluscloud Open can be ordered.
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
