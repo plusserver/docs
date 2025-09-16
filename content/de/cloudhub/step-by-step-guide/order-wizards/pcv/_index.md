@@ -71,7 +71,7 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 
 Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigurationen.
 Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
-Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die Allgemeinen Geschäftsbedingungen und weitere relevante Vertragsunterlagen.\
+Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die **Allgemeinen Geschäftsbedingungen** und **weitere relevante Vertragsunterlagen**.\
 Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
 Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
 
