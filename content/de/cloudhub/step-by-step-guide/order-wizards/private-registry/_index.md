@@ -9,7 +9,7 @@ description: >
 
 ## Einleitung
 
-Willkommen zum Bestellformular der Private Registry. Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue Private Registry bestellt werden kann.
+Willkommen zum [Bestellformular der Private Registry](https://cloudhub.plusserver.com/cloud-services/private-registry/order). Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue Private Registry bestellt werden kann.
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
@@ -33,12 +33,14 @@ Aktuell steht nur ein Instanztyp zur Verfügung:
 Wählen Sie eine der folgenden Instanzgrößen:
 
 #### b2-4
-  - 2 vCPU(s) und 4 GB RAM
-  - 0,11 €/Stunde
+
+- 2 vCPU(s) und 4 GB RAM
+- 0,11 €/Stunde
 
 #### b4-8
-  - 4 vCPU(s) und 8 GB RAM
-  - 0,22 €/Stunde
+
+- 4 vCPU(s) und 8 GB RAM
+- 0,22 €/Stunde
 
 ![Private Registry Instanzgröße](img/private-registry-instanz-size.png)
 
@@ -83,7 +85,7 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 
 Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigurationen.
 Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
-Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die Allgemeinen Geschäftsbedingungen und weitere relevante Vertragsunterlagen.\
+Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die **Allgemeinen Geschäftsbedingungen** und **weitere relevante Vertragsunterlagen**.\
 Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
 Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
 
