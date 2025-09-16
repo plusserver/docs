@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the database order wizard. Here it is described which configuration options are available and how a new database can be ordered.
+Welcome to the [database order wizard](https://cloudhub.plusserver.com/cloud-services/databases/order). Here it is described which configuration options are available and how a new database can be ordered.
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
@@ -20,7 +20,7 @@ In the following we guide you step by step through the ordering process and expl
 
 Select the desired database system and the appropriate version:
 
-#### Available databases and versions:
+### Available databases and versions:
 
 - MySQL: 8.4, 8.0
 - PostgreSQL: 17, 16, 15, 14
@@ -35,40 +35,46 @@ Select the desired database system and the appropriate version:
 
 Select the desired ratio of vCPU to vRAM:
 
-#### Basic Usage
+### Basic Usage
+
 - Nodes with a vCPU/vRAM ratio of 1:2
 
-#### All Purpose
+### All Purpose
+
 - Nodes with a vCPU/vRAM ratio of 1:4
 
-#### RAM Optimised
+### RAM Optimised
+
 - Nodes with a vCPU/vRAM ratio of 1:8
 
 ## Step 3: Select instance size
 
 Depending on the instance type you select, there are different sizes to choose from:
 
-#### Basic Usage:
+### Basic Usage:
 
 Instance sizes:
+
 - b2-4 – 2 vCPU, 4 GB RAM – 0,11 €/Stunde
 - b4-8 – 4 vCPU, 8 GB RAM – 0,22 €/Stunde
 - b8-16 – 8 vCPU, 16 GB RAM – 0,44 €/Stunde
 - b16-32 – 16 vCPU, 32 GB RAM – 0,88 €/Stunde
 - b32-64 – 32 vCPU, 64 GB RAM – 1,76 €/Stunde
 
-#### All Purpose:
+### All Purpose:
 
 Instance sizes:
+
 - a2-8 – 2 vCPU, 8 GB RAM – 0,15 €/Stunde
 - a4-16 – 4 vCPU, 16 GB RAM – 0,31 €/Stunde
 - a8-32 – 8 vCPU, 32 GB RAM – 0,62 €/Stunde
 - a16-64 – 16 vCPU, 64 GB RAM – 1,23 €/Stunde
 - a32-128 – 32 vCPU, 128 GB RAM – 2,46 €/Stunde
 
-#### RAM Optimised:
+### RAM Optimised:
 
 Instance sizes:
+
 - r2-16 – 2 vCPU, 16 GB RAM – 0,24 €/Stunde
 - r4-32 – 4 vCPU, 32 GB RAM – 0,48 €/Stunde
 - r8-64 – 8 vCPU, 64 GB RAM – 0,97 €/Stunde
@@ -120,7 +126,7 @@ Select whether a project contract ID already exists:
 
 The order overview displays a table with all configurations you have selected.
 Below the table, there is a checkbox that allows you to accept the following attachments and terms.
-The attachments include various downloadable PDF documents, such as the General Terms and Conditions and other relevant contractual documents.
+The attachments include various downloadable PDF documents, such as the **General Terms and Conditions** and **other relevant contractual documents**.
 To the right of the table, the total price and the Order button are displayed.
 This button is disabled by default and will only be activated once the attachments and terms have been accepted.
 
