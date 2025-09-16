@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the pluscloud VMware order wizard. Here it is described which configuration options are available and how a new pluscloud VMware can be ordered.
+Welcome to the [pluscloud VMware order wizard](https://cloudhub.plusserver.com/cloud-services/pluscloud-v/order). Here it is described which configuration options are available and how a new pluscloud VMware can be ordered.
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
@@ -45,9 +45,9 @@ In addition, further options and prices can be viewed via a dropdown menu:
 
 Here you enter the data of the responsible contact person:
 
-- first and last name (Required field)
-- Email address (Required field)
-- Brief description (optional)
+- first and last name (*Required field*)
+- Email address (*Required field*)
+- Brief description (*optional*)
 
 ![PCV Administrator Angaben](img/pcv-admin.png)
 
