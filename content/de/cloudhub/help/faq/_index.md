@@ -9,13 +9,13 @@ description: >
 
 ## Einleitung
 
-Willkommen auf der FAQ-Seite, welche als dient zentrale Anlaufstelle dient, um schnell Antworten auf häufig gestellte Fragen zu finden.
+Willkommen auf der [FAQ-Seite](https://cloudhub.plusserver.com/faq), welche als dient zentrale Anlaufstelle dient, um schnell Antworten auf häufig gestellte Fragen zu finden.
 
 ![FAQ Überblick](./img/faq-overview.png)
 
 ## Kategorienübersicht
 
-Auf der FAQ-Seite stehen Ihnen neun Themenkategorien zur Auswahl, um gezielt nach Antworten zu suchen.
+Auf der FAQ-Seite stehen Ihnen **neun Themenkategorien** zur Auswahl, um gezielt nach Antworten zu suchen.
 Die folgenden Kategorien decken die wichtigsten Bereiche ab:
 
 1. Bestellprozess und Zugangsdaten

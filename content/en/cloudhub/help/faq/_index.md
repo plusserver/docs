@@ -9,13 +9,13 @@ description: >
 
 ## Introduction
 
-Welcome to the FAQ page, which serves as a central point to quickly find answers to frequently asked questions.
+Welcome to the [FAQ page](https://cloudhub.plusserver.com/faq), which serves as a central point to quickly find answers to frequently asked questions.
 
 ![FAQ Overview](./img/faq-overview.png)
 
 ## Category Overview
 
-The FAQ page offers nine topic categories to choose from, allowing you to quickly find relevant answers.
+The FAQ page offers **nine topic categories** to choose from, allowing you to quickly find relevant answers.
 The following categories cover the main areas:
 
 1. Ordering Process and Access Data
