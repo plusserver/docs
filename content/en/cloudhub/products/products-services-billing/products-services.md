@@ -10,7 +10,7 @@ description: >
 
 ## Products / Services
 
-The **"Products / Services"** page provides you with a clear overview of all the products and services you have purchased from us. The information is displayed in a table and can be flexibly filtered or searched.
+The ["Products / Services"](https://cloudhub.plusserver.com/billing/products-and-services) page provides you with a clear overview of all the products and services you have purchased from us. The information is displayed in a table and can be flexibly filtered or searched.
 
 ### Functions at a glance
 

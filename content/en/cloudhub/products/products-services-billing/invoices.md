@@ -10,7 +10,7 @@ description: >
 
 ## Invoices
 
-On the **"Invoices"** page, you will find all billing-related documents for your booked products and services, as well as the option to download them. The content is divided into two tabs: **Invoices** and **Invoice Attachments**.
+On the ["Invoices"](https://cloudhub.plusserver.com/billing/invoices) page, you will find all billing-related documents for your booked products and services, as well as the option to download them. The content is divided into two tabs: **Invoices** and **Invoice Attachments**.
 
 ### Invoices
 
