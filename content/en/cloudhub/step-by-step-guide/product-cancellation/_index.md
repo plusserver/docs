@@ -12,7 +12,7 @@ description: >
 
 ### Step 1: Open the Product Dashboard
 
-Select the **“Product Dashboard”** button in the left sidebar.
+Select the [“Product Dashboard”](https://cloudhub.plusserver.com/product-dashboard) button in the left sidebar.
 
 ![Select Product Dashboard in the sidebar](img/cancel1.png)
 

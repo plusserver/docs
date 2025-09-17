@@ -12,7 +12,7 @@ description: >
 
 ### Schritt 1: Produkt-Dashboard öffnen
 
-Wähle in der linken Seitenleiste den Button **„Produkt Dashboard“** aus.
+Wähle in der linken Seitenleiste den Button [„Produkt Dashboard“](https://cloudhub.plusserver.com/product-dashboard) aus.
 
 ![Produkt Dashboard in der Sidebar auswählen](img/k1.png)
 
