@@ -9,7 +9,7 @@ description: >
 
 ## Cloud Services User Guide
 
-Willkommen im Bereich **Cloud Services** des CloudHubs! Hier können Sie die verschiedenen Produkte bestellen. In der folgenden Anleitung erklären wir Ihnen die verschiedene Cloud Service Bereiche und was Sie dort an Informationen, Links und Funktionen finden.
+Willkommen im Bereich [Cloud Services](https://cloudhub.plusserver.com/cloud-services) des CloudHubs! Hier können Sie die verschiedenen Produkte bestellen. In der folgenden Anleitung erklären wir Ihnen die verschiedene Cloud Service Bereiche und was Sie dort an Informationen, Links und Funktionen finden.
 
 ## Aufbau des Cloud-Service Bereichs
 

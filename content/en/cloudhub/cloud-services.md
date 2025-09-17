@@ -9,7 +9,7 @@ description: >
 
 ## Where to find it?
 
-Welcome to the **Cloud Services** section of CloudHub! Here you can order the various products. In the following instructions, we will explain the various cloud service areas and what information, links and functions you will find there.
+Welcome to the [Cloud Services](https://cloudhub.plusserver.com/cloud-services) section of CloudHub! Here you can order the various products. In the following instructions, we will explain the various cloud service areas and what information, links and functions you will find there.
 
 ## Structure of the Cloud Service areas
 
