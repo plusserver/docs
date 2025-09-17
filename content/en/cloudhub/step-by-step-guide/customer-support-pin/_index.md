@@ -9,9 +9,11 @@ description: >
 
 ## Change Pin
 
-Under “Settings” you will find an interface where you can change the PIN. You can access the settings by clicking on your email address in the top right-hand corner of the top bar and then selecting the "Settings" menu item.
+Under **“Settings”** you will find an interface where you can change the PIN. You can access the [settings](https://cloudhub.plusserver.com/settings) by clicking on your email address in the top right-hand corner of the top bar and then selecting the "Settings" menu item.
 
 ![Settings in topbar](img/settings-in-topbar.png)
+
+Select "Edit PIN" under the "Customer Service PIN" tile.
 
 ![Customer support pin settings](img/customer-support-pin-settings.png)
 
