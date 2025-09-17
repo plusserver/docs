@@ -7,7 +7,7 @@ description: >
     Informationen zum Produkt-Dashboard im CloudHub
 ---
 
-Willkommen im neuen Bereich des CloudHubs, Ihrem Produkt-Dashboard!
+Willkommen im neuen Bereich des CloudHubs, Ihrem [Produkt-Dashboard](https://cloudhub.plusserver.com/product-dashboard)!
 Hier können Sie die von ihnen im CloudHub gebuchten Produkte einsehen und verwalten.
 In der folgenden Anleitung erklären wir Ihnen die verschiedenen Bereiche des Produkt-Dashboards (auch Level genannt) und was Sie dort an Informationen, Links und zukünftig auch Funktionen finden.
 
@@ -82,8 +82,8 @@ Ist Ihr Produkt "Gekündigt", öffnen Sie über dieses Icon direkt ein Ticket f�
 #### Weiterführende Links
 
 Folgende Links sind auf Level 2 zu finden:\
-*Produktdokumentation:* Hier gelangen Sie zur Dokumentation, in der Sie alles über das Produkt erfahren, das Sie sich gerade ansehen.\
-*Mehr bestellen:* Von hier aus kommen Sie direkt in den Bestellprozess eines neuen Produktes der Art/Kategorie, in der Sie sich gerade befinden.\
+_Produktdokumentation:_ Hier gelangen Sie zur Dokumentation, in der Sie alles über das Produkt erfahren, das Sie sich gerade ansehen.\
+_Mehr bestellen:_ Von hier aus kommen Sie direkt in den Bestellprozess eines neuen Produktes der Art/Kategorie, in der Sie sich gerade befinden.\
 ![Level 2: Quick Links via Button](./img/lvl-2-quick-links-1.png)
 
 ### Die Produkt-Detailansicht - Level 3
@@ -233,5 +233,5 @@ Zugangsdaten können im Dashboard von allen drei Rollen außer der „Read-Only�
 
 Alle Rechte außerhalb des Produkt-Dashboards, wie „Vertragsdaten" oder „Rechnungen“ einsehen, „Ansprechpartner“ verwalten etc., müssen jeweils unter „Seitenverwaltung“ oder „Vertragsverwaltung“ eingeschränkt/bearbeitet werden.
 
-*Info*: Wir testen mit den Produkt-Dashboard-Rechten eine Vereinfachung der Rollen und Rechte im CloudHub und freuen uns über jegliches Feedback. Nutzen Sie dazu gerne unsere Feedback-Funktion, sie ist in der Navigation unten verlinkt.
+_Info_: Wir testen mit den Produkt-Dashboard-Rechten eine Vereinfachung der Rollen und Rechte im CloudHub und freuen uns über jegliches Feedback. Nutzen Sie dazu gerne unsere Feedback-Funktion, sie ist in der Navigation unten verlinkt.
 Bevor es eine neue größere Änderung geben wird, werden Sie rechtzeitig informiert. Ansonsten finden Sie all unsere Änderungen im Changelog (in der Navigation im Bereich „Support).
