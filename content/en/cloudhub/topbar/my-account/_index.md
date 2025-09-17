@@ -9,7 +9,7 @@ description: >
 
 ## Where to find it?
 
-My account is available in CloudHub under **"My account"**. This can be accessed by clicking on your email address in the top right-hand corner of the top bar and then selecting the "My account" menu item.
+My account is available in CloudHub under ["My account"](https://cloudhub.plusserver.com/my-account). This can be accessed by clicking on your email address in the top right-hand corner of the top bar and then selecting the "My account" menu item.
 
 ![My Account in topbar](img/my-account-topbar.png)
 

@@ -9,7 +9,7 @@ description: >
 
 ## Wo ist es zu finden?
 
-Mein Konto ist im CloudHub unter **"Einstellungen"** verfügbar. Diese erreicht man, indem man oben rechts auf die eigene E-Mail-Adresse in der Topbar klickt und anschließend den Menüpunkt "Einstellungen" auswählt.
+Mein Konto ist im CloudHub unter ["Einstellungen"](https://cloudhub.plusserver.com/settings) verfügbar. Diese erreicht man, indem man oben rechts auf die eigene E-Mail-Adresse in der Topbar klickt und anschließend den Menüpunkt "Einstellungen" auswählt.
 
 ![Einstellungen in der Topbar](img/settings-topbar.png)
 

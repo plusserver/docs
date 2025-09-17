@@ -9,7 +9,7 @@ description: >
 
 ## Where to find it?
 
-My account is available in CloudHub under **"Settings"**. This can be accessed by clicking on your email address in the top right-hand corner of the top bar and then selecting the "Settings" menu item.
+My account is available in CloudHub under ["Settings"](https://cloudhub.plusserver.com/settings). This can be accessed by clicking on your email address in the top right-hand corner of the top bar and then selecting the "Settings" menu item.
 
 ![Settings in the topbar](img/settings-topbar.png)
 
