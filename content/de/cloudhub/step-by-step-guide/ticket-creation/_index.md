@@ -9,7 +9,7 @@ description: >
 
 ## Ticket erstellen
 
-Auf der Seite **„Ticket erstellen“** können Sie ein neues Support-Ticket anlegen. Das Formular führt Sie Schritt für Schritt durch den Erstellungsprozess und passt sich abhängig von der gewählten Kategorie und ggf. Vorlage an.
+Auf der Seite [„Ticket erstellen“](https://cloudhub.plusserver.com/support/ticket-create) können Sie ein neues Support-Ticket anlegen. Das Formular führt Sie Schritt für Schritt durch den Erstellungsprozess und passt sich abhängig von der gewählten Kategorie und ggf. Vorlage an.
 
 ### Schritte zur Ticketerstellung
 

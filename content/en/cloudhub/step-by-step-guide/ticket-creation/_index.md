@@ -9,7 +9,7 @@ description: >
 
 ## Create Ticket
 
-On the **"Create ticket"** page, you can create a new support ticket. The form guides you step by step through the creation process and adapts depending on the selected category and, if applicable, template.
+On the ["Create ticket"](https://cloudhub.plusserver.com/support/ticket-create) page, you can create a new support ticket. The form guides you step by step through the creation process and adapts depending on the selected category and, if applicable, template.
 
 ### Steps for creating a ticket
 
