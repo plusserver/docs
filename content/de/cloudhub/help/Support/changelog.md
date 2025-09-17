@@ -9,7 +9,7 @@ description: >
 
 ## Changelog
 
-Auf der Seite **„Changelog“** finden Sie eine chronologische Übersicht aller Änderungen, Neuerungen und Anpassungen des CloudHubs.
+Auf der Seite [„Changelog“](https://cloudhub.plusserver.com/support/changelog) finden Sie eine chronologische Übersicht aller Änderungen, Neuerungen und Anpassungen des CloudHubs.
 Die Einträge werden in Listenform dargestellt, jeweils mit Titel, einer kurzen Beschreibung der Änderung und Datum.
 ![Liste Changelog](../img/changelog/list-changelog.png)
 

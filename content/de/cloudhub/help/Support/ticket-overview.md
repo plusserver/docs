@@ -9,8 +9,8 @@ description: >
 
 ## Ticketübersicht
 
-Auf der Seite **„Ticketübersicht“** können Sie alle von Ihnen erstellten Support-Tickets einsehen und verwalten.
-Die Seite ist in zwei Tabs unterteilt und bietet zusätzlich die Möglichkeit, direkt ein neues Ticket zu erstellen.
+Auf der Seite [„Ticketübersicht“](https://cloudhub.plusserver.com/support/tickets) können Sie alle von Ihnen erstellten Support-Tickets einsehen und verwalten.
+Die Seite ist in zwei Tabs unterteilt und bietet zusätzlich die Möglichkeit, direkt ein [neues Ticket zu erstellen](create-ticket).
 ![Ticketübersicht](../img/ticket-overview/ticket-overview.png)
 
 ### Ticket erstellen

@@ -9,7 +9,7 @@ description: >
 
 ## Patchübersicht
 
-Auf der Seite **„Patchübersicht“** erhalten Sie eine vollständige Übersicht über alle automatischem Patchjobs Ihrer Systeme. Die Anzeige erfolgt in einer Tabelle mit allen relevanten Informationen zu den einzelnen Patchvorgängen.
+Auf der Seite [„Patchübersicht“](https://cloudhub.plusserver.com/support/patch-schedule) erhalten Sie eine vollständige Übersicht über alle automatischem Patchjobs Ihrer Systeme. Die Anzeige erfolgt in einer Tabelle mit allen relevanten Informationen zu den einzelnen Patchvorgängen.
 
 ![Tabelle Patchübersicht](../img/patch-schedule/table-patch-schedule.png)
 

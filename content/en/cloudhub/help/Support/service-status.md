@@ -9,7 +9,7 @@ description: >
 
 ## Service Status
 
-The **"Service Status"** page provides you with an up-to-date overview of the status of your monitored systems and services. The information is displayed in two pie charts – one for hosts and one for services.
+The ["Service Status"](https://cloudhub.plusserver.com/support/server-status) page provides you with an up-to-date overview of the status of your monitored systems and services. The information is displayed in two pie charts – one for hosts and one for services.
 ![Pie charts showing malfunctions](../img/service-status/diagrams-malfunctions.png)
 
 ### Status display

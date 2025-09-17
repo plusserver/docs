@@ -9,7 +9,7 @@ description: >
 
 ## Contacts
 
-On the **"Contacts"** page, you will find the most important contact details for our teams and contact persons, clearly displayed in four tiles.
+On the ["Contacts"](https://cloudhub.plusserver.com/support/contact) page, you will find the most important contact details for our teams and contact persons, clearly displayed in four tiles.
 Each tile represents a specific area of communication and provides you with the relevant information you need to quickly reach the right contact person.
 ![CloudHub Contacts](../img/contact/overview.png)
 

@@ -9,7 +9,7 @@ description: >
 
 ## Downloads
 
-On the **"Downloads"** page, you can view and download all documents relevant to you.
+On the ["Downloads"](https://cloudhub.plusserver.com/support/download) page, you can view and download all documents relevant to you.
 The documents are displayed in a clear table.
 
 ![Downloads table](../img/downloads/table-downloads.png)

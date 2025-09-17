@@ -9,7 +9,7 @@ description: >
 
 ## Changelog
 
-On the **"Changelog"** page, you will find a chronological overview of all changes, innovations and adjustments to CloudHub.
+On the ["Changelog"](https://cloudhub.plusserver.com/support/changelog) page, you will find a chronological overview of all changes, innovations and adjustments to CloudHub.
 The entries are displayed in list form, each with a title, a short description of the change and the date.
 ![Changelog list](../img/changelog/list-changelog.png)
 
