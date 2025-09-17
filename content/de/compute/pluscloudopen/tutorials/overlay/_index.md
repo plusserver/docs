@@ -121,7 +121,7 @@ Mit `ip addr show nebula1` sollte dann ungefähr so eine Ausgabe erscheinen:
         inet6 fe80::2002:e730:cd87:a72f/64 scope link stable-privacy 
            valid_lft forever preferred_lft forever
 
-Das `nebula1` Interface sollte die IP-Adresse haben, die Sie vorher bei der Erstellung des Zertifikats ausgesucht haben.
+Das `nebula1` Interface sollte die IP-Adresse haben, die Sie vorher bei der Erstellung des Zertifikats ausgesucht haben. In OpenStack muss der Instanz eine Floating-IP zugeordnet werden, damit diese aus dem Internet erreichbar ist. Zusätzlich sollten Sie eine Security-Group erzeugen, die sicherstellt, dass die Instanz nur auf dem UDP Port 4242 angesprochen werden kann.
 
 Da das erste Lighthouse jetzt steht, können wir uns jetzt den anderen Instanzen zuwenden. 
 
@@ -219,7 +219,7 @@ Für alle weiteren Instanzen gilt dasselbe Vorgehen:
 
 1. Nebula Binary herunterladen und installieren
 2. Zertifikat erstellen und die beiden Dateien auf die Instanz nach `/etc/nebula` kopieren
-3. `ca.crt` Datei auf die Instanz nach `/etc/nebula` kopieren
+3. `ca.crt` Datei der CA auf die Instanz nach `/etc/nebula` kopieren
 4. Konfigurationsdatei `config.yaml` für die Instanz erzeugen und nach `/etc/nebula` kopieren
 5. Unit-File für systemd auf der Instanz erzeugen, den Dienst aktivieren und starten 
 
