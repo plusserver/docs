@@ -204,7 +204,7 @@ Für die Instanzen werden auch etwas ausführlichere Konfigurationsdateien benö
           proto: tcp
           host: any
 
-Die zwei vorher erzeugten Zertifikatsdateien, das Zertifikat der CA (aber nicht der Key der CA!) und diese Konfigurationsdatei (`config.yaml`) werden auf den jeweiligen Instanzen nach `/etc/nebula` abgelegt (vorher oben den Namen der Zertifikatsdatei anpassen). Genau wie bei der Lighthouse-Instanz wird ebenfalls ein Nebula Startfile für systemd erzeugt, der Dienst enabled und dann gestartet. Danach sollte von beiden Instanzen die IP-Adresse der Lighthouse-Instanz pingbar sein
+Die zwei vorher erzeugten Zertifikatsdateien, das Zertifikat der CA (aber nicht der Key der CA!) und diese Konfigurationsdatei (`config.yaml`) werden auf den jeweiligen Instanzen nach `/etc/nebula` abgelegt (vorher oben unter "pki" den Namen der Zertifikatsdatei anpassen). Genau wie bei der Lighthouse-Instanz wird ebenfalls ein Nebula Startfile für systemd erzeugt, der Dienst enabled und dann gestartet. Danach sollte von beiden Instanzen die IP-Adresse der Lighthouse-Instanz pingbar sein
 
     root@postgresql-0:~# ping 10.10.10.1
     PING 10.10.10.1 (10.10.10.1) 56(84) bytes of data.
@@ -225,7 +225,7 @@ Für alle weiteren Instanzen gilt dasselbe Vorgehen:
 
 ## Tipp
 Wenn Sie planen dies in einer Produktionsumgebung zu nutzen, sollten Sie mehrere Lighthouse-Instanzen in verschiedenen Cloud-Umgebungen starten.
-Weiterhin bietet die Firma [Defined Networking](https://www.defined.net/) Nebula in einer "managed" Variante an, die erlaubt, das hier geschilderte Setup mit Hilfe einer [API](https://docs.defined.net/guides/automating-host-creation/), stark zu automatisieren. 
+Weiterhin bietet die Firma [Defined Networking](https://www.defined.net/) Nebula in einer "managed" Variante an die erlaubt, das hier geschilderte Setup mit Hilfe einer [API](https://docs.defined.net/guides/automating-host-creation/), stark zu automatisieren. 
 
 
 
