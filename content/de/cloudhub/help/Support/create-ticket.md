@@ -13,4 +13,4 @@ Auf der Seite [„Ticket erstellen“](https://cloudhub.plusserver.com/support/t
 
 [In dieser Anleitung](../../../step-by-step-guide/ticket-creation/ticket-creation) finden Sie eine detaillierte Schritt-für-Schritt-Beschreibung zur Erstellung eines Tickets.
 
-Ihre erstellten Tickets können Sie dann auf der Seite [Ticketübersicht](ticket-overview) einsehen.
+Ihre erstellten Tickets können Sie dann auf der Seite [Ticketübersicht](ticket-overview) einsehen. Zusätzlich werden Sie für jedes Ticket per E-Mail über den aktuellen Bearbeitungsstand informiert.
