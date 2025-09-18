@@ -13,7 +13,7 @@ Die Seite **„IP-Übersicht“** bietet Ihnen eine vollständige Einsicht in al
 ### IP-Adressen
 
 Im Tab **„IP-Adressen“** finden Sie eine tabellarische Übersicht aller IP-Adressen, die aktuell durch Ihre Produkte und Dienste genutzt werden.\
-![IP-Übersicht Tabelle](../img/ip-overview/ip-overview-table.png)
+![IP-Übersicht Tabelle](img/ip-overview-table.png)
 
 #### Funktionen
 
@@ -30,7 +30,7 @@ Die Tabelle enthält zudem weitere Informationen, wie z. B. IP-Typ (IPv4/IPv6)
 ### Netze
 
 Der Tab **„Netze“** zeigt alle IP-Netze, die Ihrem Kundenaccount zugeordnet sind, in der CIDR-Notation.\
-![Netze Tabelle](../img/ip-overview/nets-table.png)
+![Netze Tabelle](img/nets-table.png)
 
 #### Funktionen
 

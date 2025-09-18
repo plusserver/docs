@@ -12,24 +12,28 @@ Auf der Seite **„Geräte“** erhalten Sie eine vollständige Übersicht über
 
 ### Geräte-Tabelle
 
-Alle Geräte werden in einer Tabelle, welche wichtige Basisdaten enthäht, dargestellt.\
-![Geräte-Tabelle](../img/devices/devices-table.png)
+Alle Geräte werden in einer Tabelle, welche wichtige Basisdaten enthäht, dargestellt.
+
+![Geräte-Tabelle](img/devices-table.png)
 
 - **Suchfunktion:**
   Über das Suchfeld oberhalb der Tabelle können Sie gezielt nach Geräten oder Projektkennungen suchen.
 
 - **Navigation zur Produkt-Detailansicht:**
-  Durch einen Klick auf die **Projektkennung** gelangen Sie zur jeweiligen [Detailansicht des zugehörigen Produktes](../../products-services-billing/products-services/#detailansicht).\
-  ![Geräte-Tabelle - Produkt-Detailansicht](../img/devices/devices-table-product-detail-page.png)
+  Durch einen Klick auf die **Projektkennung** gelangen Sie zur jeweiligen [Detailansicht des zugehörigen Produktes](../../products-services-billing/products-services/#detailansicht).
+
+![Geräte-Tabelle - Produkt-Detailansicht](img/devices-table-product-detail-page.png)
 
 - **Gerätedetails anzeigen:**
-  Über den Button „Details anzeigen“ in der jeweiligen Tabellenzeile gelangen Sie zur **Geräte-Detailseite**, auf der weiterführende Informationen zum gewählten Gerät dargestellt werden.\
-  ![Geräte-Tabelle - Gerät-Detailansicht](../img/devices/devices-table-device-detailview.png)
+  Über den Button „Details anzeigen“ in der jeweiligen Tabellenzeile gelangen Sie zur **Geräte-Detailseite**, auf der weiterführende Informationen zum gewählten Gerät dargestellt werden.
+
+![Geräte-Tabelle - Gerät-Detailansicht](img/devices-table-device-detailview.png)
 
 ### Geräte-Detailseite
 
-Die Seite **„Geräte-Details“** zeigt erweiterte Informationen zu einem spezifischen Gerät. Über einen Zurück-Button am unteren Seitenrand gelangen Sie wieder zur Geräteübersicht.\
-![Gerät-Detailansicht](../img/devices/device-detailview.png)
+Die Seite **„Geräte-Details“** zeigt erweiterte Informationen zu einem spezifischen Gerät. Über einen Zurück-Button am unteren Seitenrand gelangen Sie wieder zur Geräteübersicht.
+
+![Gerät-Detailansicht](img/device-detailview.png)
 
 #### Angezeigte Informationen
 

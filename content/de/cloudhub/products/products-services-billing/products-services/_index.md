@@ -15,30 +15,30 @@ Auf der Seite [„Produkte / Leistungen“](https://cloudhub.plusserver.com/bill
 #### Produktübersicht
 
 In der Tabelle finden Sie eine vollständige Auflistung Ihrer gekauften Produkte inklusive relevanter Informationen wie Produktname, Produktart, Status u. v. m.\
-![Produktübersicht in Tabellenform](../img/products-services/products-table.png)
+![Produktübersicht in Tabellenform](img/products-table.png)
 
 #### Suchfunktion
 
 Über ein zentrales Suchfeld oberhalb der Tabelle können Sie gezielt nach Produkten suchen. Die Suche erfolgt dabei über alle angezeigten Spalten.\
-![Produktübersicht - Suchfeld](../img/products-services/products-table-search-field.png)
+![Produktübersicht - Suchfeld](img/products-table-search-field.png)
 
 #### Filtermöglichkeiten
 
 Um die Ansicht einzugrenzen, stehen Ihnen folgende Filter zur Verfügung:
 
 - **Status des Produktes** (z. B. aktiv, inaktiv)
-![Produktübersicht - Filter nach Status](../img/products-services/products-table-filter-status.png)
+![Produktübersicht - Filter nach Status](img/products-table-filter-status.png)
 - **Produktname**\
-![Produktübersicht - Filter nach Produktname](../img/products-services/products-table-filter-productname.png)
+![Produktübersicht - Filter nach Produktname](img/products-table-filter-productname.png)
 - **Produktart**\
-![Produktübersicht - Filter nach Produktart](../img/products-services/products-table-filter-producttype.png)
+![Produktübersicht - Filter nach Produktart](img/products-table-filter-producttype.png)
 
 _Um nach dem Produktnamen oder der Produktart filtern zu können muss der Button "Filter bearbeiten" betätigt werden_
 
 #### Exportfunktion
 
 Sie haben die Möglichkeit, die aktuelle Tabellenansicht als **CSV-Datei** herunterzuladen. Damit können Sie Ihre Produktdaten bei Bedarf weiterverarbeiten oder archivieren.\
-![Produktübersicht - Herunterladen CSV](../img/products-services/products-table-download-csv.png)
+![Produktübersicht - Herunterladen CSV](img/products-table-download-csv.png)
 
 ## Detailansicht
 
@@ -48,7 +48,7 @@ Durch Klicken auf eine Reihe in der Produktübersicht-Tabelle gelangen Sie zu de
 
 Im oberen Bereich der Seite werden zentrale Informationen zum Produkt angezeigt, sowie geben wir Ihnen die Möglichkeit den Projektalias, Ihr persönliches Kennzeichen für den Vertrag, zu bearbeiten.
 
-![Detailansicht des Produktes](../img/products-services/detail-view.png)
+![Detailansicht des Produktes](img/detail-view.png)
 
 ### Weitere Inhalte
 
@@ -57,16 +57,16 @@ Unterhalb der allgemeinen Informationen können Sie, in drei Tabs aufgeteilt, we
 #### Produktinhalt
 
 Hier werden die detaillierten Inhalte des Vertrags in einer Tabelle dargestellt.\
-![Weitere Inhalte - Produktinhalt](../img/products-services/further-content-product-contents.png)
+![Weitere Inhalte - Produktinhalt](img/further-content-product-contents.png)
 
 #### Zugangsdaten
 
 Falls für das Produkt Zugangsdaten hinterlegt sind und Sie die nötigen Berechtigungen haben diese einzusehen, werden die Zugangsdaten hier angezeigt.\
-![Weitere Inhalte - Zugangsdaten](../img/products-services/further-content-credentials.png)
+![Weitere Inhalte - Zugangsdaten](img/further-content-credentials.png)
 
 #### Rechnungen
 
 Übersicht aller zu diesem Produkt gehörenden Rechnungen, inklusive Downloadmöglichkeit.\
-![Weitere Inhalte - Rechnungen](../img/products-services/further-content-invoices.png)
+![Weitere Inhalte - Rechnungen](img/further-content-invoices.png)
 Über den Knopf "Alle Rechnungen anzeigen" gelangen Sie zur Seite [Rechnungen](../invoices), in welcher Sie eine Übersicht über alle Rechnungen von allen Produkten, die Sie bei uns erworben haben.\
-![Weitere Inhalte - Weg zur Rechnungsübersicht](../img/products-services/further-content-show-all-invoices.png)
+![Weitere Inhalte - Weg zur Rechnungsübersicht](img/further-content-show-all-invoices.png)

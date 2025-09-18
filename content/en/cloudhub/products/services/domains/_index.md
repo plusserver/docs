@@ -13,7 +13,7 @@ On the **"Domains"** page, you can view and manage your registered domains. The 
 ### Overview
 
 In the **"Overview"** tab, you will see a tabular list of all domains that you have booked through us.\
-![Domain table](../img/domains/domain-table.png)
+![Domain table](img/domain-table.png)
 
 #### Features
 
@@ -28,7 +28,7 @@ This area provides a quick overview of your registered domains.
 ### Administration
 
 In the **"Administration"** tab, you will find the access data for the separate administration tool for your domains.
-![Domain Administration](../img/domains/domain-administration.png)
+![Domain Administration](img/domain-administration.png)
 
 #### Contents
 

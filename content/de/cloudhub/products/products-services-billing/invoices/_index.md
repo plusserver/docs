@@ -13,38 +13,38 @@ Auf der Seite [„Rechnungen“](https://cloudhub.plusserver.com/billing/invoice
 ### Rechnungen
 
 Im Tab **„Rechnungen“** erhalten Sie eine tabellarische Übersicht aller für Sie ausgestellten Rechnungen. Die Tabelle bietet verschiedene Möglichkeiten zur Filterung und Suche, um gezielt bestimmte Dokumente zu finden.\
-![Rechnungen - Übersicht](../img/invoices/invoices-overview.png)
+![Rechnungen - Übersicht](img/invoices-overview.png)
 
 #### Funktionen
 
 - **Filter nach Rechnungstyp:**\
-![Rechnungen - Filter nach Rechnungstyp](../img/invoices/invoices-filter-invoice-type.png)
+![Rechnungen - Filter nach Rechnungstyp](img/invoices-filter-invoice-type.png)
 
 - **Zeitraumfilter:**
   Sie können sich Rechnungen innerhalb eines bestimmten Zeitraums anzeigen lassen.\
-  ![Rechnungen - Filter nach Zeitraum](../img/invoices/invoices-filter-period.png)
+  ![Rechnungen - Filter nach Zeitraum](img/invoices-filter-period.png)
 
 - **Suchfunktion:**
   Über die Suchleiste können Sie gezielt nach Rechnungen suchen (z. B. nach Rechnungsnummer, Betreff, o. ä.).\
-  ![Rechnungen - Suchleiste](../img/invoices/invoices-searchbar.png)
+  ![Rechnungen - Suchleiste](img/invoices-searchbar.png)
 
 - **Downloadmöglichkeit:**
   Jede Rechnung in der Tabelle kann einzeln im PDF-Format heruntergeladen werden.\
-  ![Rechnungen - Download](../img/invoices/invoices-download.png)
+  ![Rechnungen - Download](img/invoices-download.png)
 
 ### Rechnungsanhänge
 
 Der Tab **„Rechnungsanhänge“** enthält eine Übersicht aller zugehörigen Rechnungsanhänge.
-![Rechnungsanhänge - Übersicht](../img/invoices/annexes-overview.png)
+![Rechnungsanhänge - Übersicht](img/annexes-overview.png)
 
 #### Funktionen
 
 - **Suchfunktion:**
   Eine einfache Suchleiste ermöglicht das gezielte Auffinden einzelner Anhänge anhand von Schlagwörtern oder Dateinamen.\
-  ![Rechnungsanhänge - Suchleiste](../img/invoices/annexes-searchbar.png)
+  ![Rechnungsanhänge - Suchleiste](img/annexes-searchbar.png)
 
 - **Downloadmöglichkeit:**
   Jeder Rechnungsanhang kann einzeln direkt aus der Tabelle heruntergeladen werden.\
-  ![Rechnungsanhänge - Download](../img/invoices/annexes-download.png)
+  ![Rechnungsanhänge - Download](img/annexes-download.png)
 
 *Filterfunktionen oder eine Zeitraumauswahl gibt es für diesen Tab nicht.*

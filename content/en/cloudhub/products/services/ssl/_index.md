@@ -13,7 +13,7 @@ On the **SSL** page, you can manage your existing SSL certificates, add new cert
 ### Overview
 
 In the **"Overview"** tab, you will see a tabular display of all SSL certificates and CSRs stored in your customer account.
-![SSL overview table](../img/ssl/ssl-overview-table.png)
+![SSL overview table](img/ssl-overview-table.png)
 
 #### Features
 
@@ -40,7 +40,7 @@ On this page, you can securely upload an existing SSL certificate to CloudHub.
 ### Edit SSL certificate
 
 If you edit an existing SSL certificate via the overview, you will be taken to the **"Edit SSL certificate"** page.
-![Edit SSL certificate](../img/ssl/ssl-edit-certificate.png)
+![Edit SSL certificate](img/ssl-edit-certificate.png)
 
 ### Editable fields
 
@@ -52,7 +52,7 @@ Both fields also offer the option of uploading files.
 ### CSR Generator
 
 In the **"CSR Generator"** tab, you can generate a certificate signing request (CSR) to apply for a new SSL certificate from a certification authority.
-![CSR Generator](../img/ssl/csr-generator.png)
+![CSR Generator](img/csr-generator.png)
 
 #### Fields for creating a CSR
 
@@ -78,7 +78,7 @@ Once created, the CSR will be displayed in the **Overview**. We will also provid
 ### Add contact
 
 When you click on "Add contact" in the CSR generator, you will be taken to a form for creating a new contact.
-![Contact Creation](../img/ssl/create-contact.png)
+![Contact Creation](img/create-contact.png)
 
 #### Required information
 
