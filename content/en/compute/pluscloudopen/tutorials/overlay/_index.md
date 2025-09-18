@@ -23,19 +23,19 @@ Dieses Tutorial geht davon aus, dass Sie bereits über zwei OpenStack Instanzen 
 Um Zertifikate für Instanzen erzeugen zu können, wird eine Certificate Authority (CA) benötigt. Um diese zu erzeugen, laden Sie zunächst die Nebula-Binaries von https://github.com/slackhq/nebula/releases für Ihre Plattform herunter und packen Sie als User "root" im Verzeichnis `/usr/local/bin` aus.
 
 
-    nl $ ~ → sudo tar -xvzf Downloads/nebula-linux-amd64.tar.gz -C /usr/local/bin 
+    laptop $ ~ → sudo tar -xvzf Downloads/nebula-linux-amd64.tar.gz -C /usr/local/bin 
     nebula
     nebula-cert
-    nl $ ~ → sudo chmod +x /usr/local/bin/nebula*
+    laptop $ ~ → sudo chmod +x /usr/local/bin/nebula*
 
 Legen Sie ein Verzeichnis `nebula-ca` an, wechseln Sie hinein und erzeugen Sie die CA:
 
-    nl $ ~ → mkdir nebula-ca
+    laptop $ ~ → mkdir nebula-ca
     mkdir: Verzeichnis 'nebula-ca' angelegt
-    nl $ ~ → cd nebula-ca/
+    laptop $ ~ → cd nebula-ca/
     /data/nebula-ca
-    nl $ nebula-ca → nebula-cert ca -name "My New CA"
-    nl $ nebula-ca → ls
+    laptop $ nebula-ca → nebula-cert ca -name "My New CA"
+    laptop $ nebula-ca → ls
     ca.crt  ca.key
 
 Die Datei `ca.key` enthält den Schlüssel, mit dem alle folgenden Zertifikate unterschrieben werden. Sie sollten sie gut aufheben und ggfs. zusätzlich verschlüsseln (z. B. mit gpg). Die so erzeugte CA hat eine Gültigkeit von einem Jahr. Danach müssen die Zertifikate erneuert werden. Der Parameter `-duration` erlaubt es, länger gültige Schlüssel zu erzeugen. 
@@ -44,10 +44,10 @@ Jetzt können wir uns dem Aufbau des Overlay-VPN zuwenden.
 
 ## Lighthouse erstellen
 
-Der erste Schritt zum Aufbau des Overlay-VPN ist die Erstellung einer sogenannten "Lighthouse" Instanz. Sie wird benötigt, damit sich die verschiedenen Instanzen gegenseitig finden können. Die Lighthouse Instanz benötigt nur geringe CPU- und Memory-Ressourcen. Wichtig ist, dass sie über den UDP-Port 4242 aus dem Internet erreichbar ist. Erstellen Sie zunächst ein Zertifikat für die Lighthouse Instanz:
+Der erste Schritt zum Aufbau des Overlay-VPN ist die Erstellung einer sogenannten "Lighthouse" Instanz. Sie wird benötigt, damit sich die verschiedenen Instanzen gegenseitig finden können. Die Lighthouse Instanz benötigt nur geringe CPU- und Memory-Ressourcen. Wichtig ist, dass sie über den UDP-Port 4242 aus dem Internet erreichbar ist. Erstellen Sie zunächst ein Zertifikat für die Lighthouse Instanz mit Hilfe Ihrer neuen CA:
 
-    nl $ nebula-ca → nebula-cert sign -name "leuchtturm1" -ip "10.10.10.1/24"
-    nl $ nebula-ca → ls leucht*
+    laptop $ nebula-ca → nebula-cert sign -name "leuchtturm1" -ip "10.10.10.1/24"
+    laptop $ nebula-ca → ls leucht*
     leuchtturm1.crt  leuchtturm1.key
 
 Auch hier könnte die "Haltbarkeit" des Zertifikates mit dem Parameter `-duration` angepasst werden.
@@ -89,8 +89,9 @@ Im zweiten Schritt muß eine Konfigurationsdatei für die Lighthouse Instanz ers
           proto: icmp
           host: any
 
-Auf der Instanz, auf der das Lighthouse laufen soll, erzeugen Sie das Verzeichnis `/etc/nebula` und kopieren Sie die Konfigurationsdatei `config.yaml` sowie die beiden entstandenen Zertifikatsdateien dorthin. 
-Weiterhin benötigen Sie folgende Startdatei für den Dienst:
+Auf der Instanz, auf der das Lighthouse laufen soll, erzeugen Sie das Verzeichnis `/etc/nebula` und kopieren Sie die obige Konfigurationsdatei `config.yaml`, die beiden bei der Zertifikatserstellung entstandenen Dateien (`leuchtturm1.crt` und `leuchtturm1.key`) sowie die Zertifikatsdatei Ihrer CA - `ca.crt` - dorthin.
+
+Als Nächstes benötigen Sie folgende Startdatei für den Dienst, damit dieser über systemd gestartet werden kann:
 
     [Unit]
     Description=Nebula overlay networking tool
@@ -129,12 +130,12 @@ Da das erste Lighthouse jetzt steht, können wir uns jetzt den anderen Instanzen
 
 Auch für die "normalen" Instanzen, auf denen Nebula laufen soll, werden zunächst wieder Zertifikate von der CA benötigt. Wir erzeugen Sie wie gehabt:
 
-    nl $ nebula-ca → nebula-cert sign -name "prod1-postgresql-0" -ip "10.10.10.2/24"
-    nl $ nebula-ca → nebula-cert sign -name "prod4-postgresql-0" -ip "10.10.10.3/24"
+    laptop $ nebula-ca → nebula-cert sign -name "prod1-postgresql-0" -ip "10.10.10.2/24"
+    laptop $ nebula-ca → nebula-cert sign -name "prod4-postgresql-0" -ip "10.10.10.3/24"
 
 Und natürlich muss auch auf jede Instanz, auf der Nebula laufen soll, das entsprechende Binary heruntergeladen werden und nach `/usr/local/bin` kopiert werden (s. o.).
 
-Für die Instanzen werden auch etwas ausführlichere Konfigurationsdateien benötigt:
+Für die Instanzen werden etwas ausführlichere Konfigurationsdateien benötigt als für das Lighthouse:
 
     pki:
       ca: /etc/nebula/ca.crt
@@ -204,9 +205,9 @@ Für die Instanzen werden auch etwas ausführlichere Konfigurationsdateien benö
           proto: tcp
           host: any
 
-Die zwei vorher erzeugten Zertifikatsdateien, das Zertifikat der CA (aber nicht der Key der CA!) und diese Konfigurationsdatei (`config.yaml`) werden auf den jeweiligen Instanzen nach `/etc/nebula` abgelegt (vorher oben unter "pki" den Namen der Zertifikatsdatei anpassen). Genau wie bei der Lighthouse-Instanz wird ebenfalls ein Nebula Startfile für systemd erzeugt, der Dienst enabled und dann gestartet. Danach sollte von beiden Instanzen die IP-Adresse der Lighthouse-Instanz pingbar sein
+Speichern Sie - wie beim Lighthouse - die auf die jeweilige Instanz angepasste Konfigurationsdatei (`config.yaml`), die passenden Zertifikatsdateien (`prod1-postgresql-0.crt` und `prod1-postgresql-0.key` bzw. `prod4-postgresql-0.crt` und `prod4-postgresql-0.key`) und das Zertifikat Ihrer CA - `ca.crt` - auf den jeweiligen Instanzen nach `/etc/nebula` (vorher oben unter "pki" den Namen der Zertifikatsdatei anpassen). Genau wie bei der Lighthouse-Instanz wird ebenfalls ein Nebula Startfile für systemd erzeugt, der Dienst enabled und dann gestartet. Danach sollte von beiden Instanzen die IP-Adresse der Lighthouse-Instanz pingbar sein
 
-    root@postgresql-0:~# ping 10.10.10.1
+    root@prod1-postgresql-0:~# ping 10.10.10.1
     PING 10.10.10.1 (10.10.10.1) 56(84) bytes of data.
     64 bytes from 10.10.10.1: icmp_seq=1 ttl=64 time=1.73 ms
     64 bytes from 10.10.10.1: icmp_seq=2 ttl=64 time=1.73 ms 
@@ -214,6 +215,18 @@ Die zwei vorher erzeugten Zertifikatsdateien, das Zertifikat der CA (aber nicht 
     --- 10.10.10.1 ping statistics ---
     2 packets transmitted, 2 received, 0% packet loss, time 1002ms
     rtt min/avg/max/mdev = 1.729/1.730/1.731/0.001 ms
+
+Ausserdem sollten sich die Instanzen gegenseitig pingen können:
+
+    root@prod1-postgresql-0:/etc/nebula# ping 10.10.10.3
+    PING 10.10.10.3 (10.10.10.3) 56(84) bytes of data.
+    64 bytes from 10.10.10.3: icmp_seq=1 ttl=64 time=1.69 ms
+    64 bytes from 10.10.10.3: icmp_seq=2 ttl=64 time=1.91 ms
+    64 bytes from 10.10.10.3: icmp_seq=3 ttl=64 time=1.84 ms
+    ^C
+    --- 10.10.10.3 ping statistics ---
+    3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+    rtt min/avg/max/mdev = 1.687/1.813/1.914/0.094 ms
 
 Für alle weiteren Instanzen gilt dasselbe Vorgehen:
 
