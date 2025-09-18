@@ -1,26 +1,26 @@
 ---
 #https://gohugo.io/content-management/page-bundles/
-title: "Instanzen AZ-übergreifend per Overlay-VPN vernetzen"
+title: "Connect VMs over AZ borders via overlay VPNs"
 type: "docs"
 weight: 1
-date: 2025-09-17
+date: 2025-09-18
 description: >
-  Vernetzen Sie Instanzen über AZ-Grenzen hinweg mit Hilfe eines Overlay-VPNs
+  Connect your VMs spanning AZ borders using an overlay VPN
 ---
 
-## Überblick
+## Overview
 
-Es kann sinnvoll sein Instanzen, die sich in verschiedenen Availability Zonen (AZ) befinden, über ein Overlay-VPN zu vernetzen. Klassische Beispiele wären z. B. Datenbankreplikation, Failovercluster oder das Einbinden weiterer plusserver Produkte wie Instanzen aus der [pluscloud VMware](https://www.plusserver.com/produkt/pluscloud-vmware/) oder [Dedicated Server](https://www.plusserver.com/produkt/dedicated-server/). 
+It can make sense to connect VMs, which live in different availability zones (AZs), via an overlay VPN. Good use cases might be database replication, failover cluster or the integration of other plusserver products like VMs from [pluscloud VMware](https://www.plusserver.com/produkt/pluscloud-vmware/) or [Dedicated Servers](https://www.plusserver.com/produkt/dedicated-server/). 
 
-In diesem Tutorial wird vorgestellt, wie man dies mit Hilfe von [Nebula](https://github.com/slackhq/nebula/) realisiert. Lesen Sie dazu bitte auch die [Nebula Dokumentation](https://nebula.defined.net/docs/).
+This tutorial presents a way to accomplish that with [Nebula](https://github.com/slackhq/nebula/). Please have a look at the [Nebula Dokumentation](https://nebula.defined.net/docs/), as well.
 
-## Voraussetzungen
+## Requirements
 
-Dieses Tutorial geht davon aus, dass Sie bereits über zwei OpenStack Instanzen in verschiedenen AZs der pluscloud open verfügen, die Sie miteinander vernetzen wollen. Weiterhin benötigen Sie eine dritte Instanz, entweder in einer der bestehenden Umgebungen oder in einer dritten.
+This tutorial assumes, that you already have two OpenStack VMs in different AZs of the pluscloud open, which you want to connect with eachother. Furthermore you'll need a third VM, either in one of the existing environments or in a third one.
 
-## Certificate Authority (CA) erzeugen
+## Create a Certificate Authority (CA) 
 
-Um Zertifikate für Instanzen erzeugen zu können, wird eine Certificate Authority (CA) benötigt. Um diese zu erzeugen, laden Sie zunächst die Nebula-Binaries von https://github.com/slackhq/nebula/releases für Ihre Plattform herunter und packen Sie als User "root" im Verzeichnis `/usr/local/bin` aus.
+In order to create certificates for our VMs, we need a Certificate Authority (CA). To create one, first fetch the Nebula binaries from https://github.com/slackhq/nebula/releases for your operating system and unpack them as user "root" into the directory `/usr/local/bin`.
 
 
     laptop $ ~ → sudo tar -xvzf Downloads/nebula-linux-amd64.tar.gz -C /usr/local/bin 
@@ -28,31 +28,32 @@ Um Zertifikate für Instanzen erzeugen zu können, wird eine Certificate Authori
     nebula-cert
     laptop $ ~ → sudo chmod +x /usr/local/bin/nebula*
 
-Legen Sie ein Verzeichnis `nebula-ca` an, wechseln Sie hinein und erzeugen Sie die CA:
+Create a directory `nebula-ca`, change into it and create the CA:
 
     laptop $ ~ → mkdir nebula-ca
-    mkdir: Verzeichnis 'nebula-ca' angelegt
+    mkdir: directory 'nebula-ca' created
     laptop $ ~ → cd nebula-ca/
     /data/nebula-ca
     laptop $ nebula-ca → nebula-cert ca -name "My New CA"
     laptop $ nebula-ca → ls
     ca.crt  ca.key
 
-Die Datei `ca.key` enthält den Schlüssel, mit dem alle folgenden Zertifikate unterschrieben werden. Sie sollten sie gut aufheben und ggfs. zusätzlich verschlüsseln (z. B. mit gpg). Die Datei sollte _nicht_ auf Ihre Lighthouse Instanz oder auf andere Instanzen kopiert werden. Die so erzeugte CA hat eine Gültigkeit von einem Jahr. Danach müssen die Zertifikate erneuert werden. Der Parameter `-duration` erlaubt es, länger gültige Schlüssel zu erzeugen. 
+The file `ca.key` contains the key, which is used to sign all new certificates in your network. Therefore it is one of the most valuable assets in your setup. You should keep it safe and maybe use additional encryption (e. g. gpg) on it. The file should _never_ end up on your Lighthouse VM or any other of your VMs. The CA we just created is valid for one year. Thus after one year the certificate has to be renewed. Using the parameter `-duration` allows to create CAs with longer lifetimes. 
 
-Jetzt können wir uns dem Aufbau des Overlay-VPN zuwenden.
+Now we can start setting up our first lighthouse VM.
 
-## Lighthouse erstellen
+## Create a Lighthouse VM
 
-Der erste Schritt zum Aufbau des Overlay-VPN ist die Erstellung einer sogenannten "Lighthouse" Instanz. Sie wird benötigt, damit sich die verschiedenen Instanzen gegenseitig finden können. Die Lighthouse Instanz benötigt nur geringe CPU- und Memory-Ressourcen. Wichtig ist, dass sie über den UDP-Port 4242 aus dem Internet erreichbar ist. Erstellen Sie zunächst ein Zertifikat für die Lighthouse Instanz mit Hilfe Ihrer neuen CA:
+The first step to set up an overlay VPN is the installation of a so called "lighthouse" VM. It is neccessary for the various VMs to find each other over the network. The VM does only consume small CPU- and memory-resources - thus you can choose a small flavor. It is important, that the VM is reachable via UDP port 4242 from the internet. 
+First let's create a certificate for the lighthouse VM with our new CA:
 
     laptop $ nebula-ca → nebula-cert sign -name "leuchtturm1" -ip "10.10.10.1/24"
     laptop $ nebula-ca → ls leucht*
     leuchtturm1.crt  leuchtturm1.key
 
-Auch hier könnte die "Haltbarkeit" des Zertifikates mit dem Parameter `-duration` angepasst werden.
+As above you could extend the lifetime of the certificate by using `-duration` with more than a year in the command.
 
-Im zweiten Schritt muß eine Konfigurationsdatei für die Lighthouse Instanz erstellt werden. Nebula bietet eine [Beispieldatei](https://github.com/slackhq/nebula/blob/master/examples/config.yml) auf Github zum Download an. In unserem Beispiel könnte die `config.yaml` wie folgt aussehen:
+Second we have to create a configuration file for the lighthouse VM. Nebula offers an [example configuration file](https://github.com/slackhq/nebula/blob/master/examples/config.yml) on github to download. For our case the `config.yaml` could look like this:
 
     pki:
       ca: /etc/nebula/ca.crt
@@ -89,9 +90,9 @@ Im zweiten Schritt muß eine Konfigurationsdatei für die Lighthouse Instanz ers
           proto: icmp
           host: any
 
-Auf der Instanz, auf der das Lighthouse laufen soll, erzeugen Sie das Verzeichnis `/etc/nebula` und kopieren Sie die obige Konfigurationsdatei `config.yaml`, die beiden bei der Zertifikatserstellung entstandenen Dateien (`leuchtturm1.crt` und `leuchtturm1.key`) sowie die Zertifikatsdatei Ihrer CA - `ca.crt` - dorthin.
+On the VM, which should get the lighthouse servcie, create the directory `/etc/nebula` and copy the above config file `config.yaml`, the two certificate files, which were created during certificate creation (`leuchtturm1.crt` and `leuchtturm1.key`) as well as the certificate of our CA - `ca.crt` - into it.
 
-Als Nächstes benötigen Sie folgende Startdatei für den Dienst, damit dieser über systemd gesteuert werden kann:
+Next we need a unit file for the service, in order to let systemd manage it:
 
     [Unit]
     Description=Nebula overlay networking tool
@@ -110,9 +111,9 @@ Als Nächstes benötigen Sie folgende Startdatei für den Dienst, damit dieser �
     [Install]
     WantedBy=multi-user.target
 
-Speichern Sie diese unter `/etc/systemd/system/nebula.service` und laden Sie die systemd-Konfiguration mit `sudo systemctl daemon-reload` neu. Danach können Sie den neuen Dienst mit `sudo systemctl enable nebula.service` aktivieren. Mit `sudo systemctl start nebula` sollte der Dienst dann starten.
+Save it as `/etc/systemd/system/nebula.service` and reload the systemd configuration with `sudo systemctl daemon-reload`. After that you can activate the new service with `sudo systemctl enable nebula.service`. With `sudo systemctl start nebula` you can start it.
 
-Mit `ip addr show nebula1` sollte dann ungefähr so eine Ausgabe erscheinen:
+The command `ip addr show nebula1` shoud now give you some output like this:
 
     nl $ ~ → ip addr show nebula1
     4: nebula1: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1300 qdisc fq_codel state UNKNOWN group default qlen 500
@@ -122,20 +123,20 @@ Mit `ip addr show nebula1` sollte dann ungefähr so eine Ausgabe erscheinen:
         inet6 fe80::2002:e730:cd87:a72f/64 scope link stable-privacy 
            valid_lft forever preferred_lft forever
 
-Das `nebula1` Interface sollte die IP-Adresse haben, die Sie vorher bei der Erstellung des Zertifikats ausgesucht haben. In OpenStack muss der Instanz eine Floating-IP zugeordnet werden, damit diese aus dem Internet erreichbar ist. Zusätzlich sollten Sie eine Security-Group erzeugen, die sicherstellt, dass die Instanz nur auf dem UDP Port 4242 von außen angesprochen werden kann.
+Ths `nebula1` interface should show the ip address, that you assigned to it during the creation of the certificate. In OpenStack you should associate a floating ip to the VM to make it reachable from the internet. Additionally you should create a security group which makes sure, that the VM can only be reached on UDP port 4242 from outside.
 
-Da das erste Lighthouse jetzt steht, können wir uns nun den anderen Instanzen zuwenden. 
+As the first lighthouse is now up and running, we can now deal with the other VMs. 
 
-## Nebula Instanzen konfigurieren
+## Configure Nebula VMs
 
-Auch für die "normalen" Instanzen, auf denen Nebula laufen soll, werden zunächst wieder Zertifikate von der CA benötigt. Wir erzeugen Sie wie gehabt:
+For all the "normal" VMs, which should run Nebula, we need certificates from our CA, too. We create the like before:
 
     laptop $ nebula-ca → nebula-cert sign -name "prod1-postgresql-0" -ip "10.10.10.2/24"
     laptop $ nebula-ca → nebula-cert sign -name "prod4-postgresql-0" -ip "10.10.10.3/24"
 
-Und natürlich muss auch auf jede Instanz, auf der Nebula laufen soll, das entsprechende Binary heruntergeladen werden und nach `/usr/local/bin` kopiert werden (s. o.).
+And naturally we need the Nebula binaries on any VM, that should run Nebula, installed in `/usr/local/bin` (see above).
 
-Für die Instanzen werden etwas ausführlichere Konfigurationsdateien benötigt als für das Lighthouse:
+For the "normal" VMs the configuration files are a little bigger that for the lighthouse:
 
     pki:
       ca: /etc/nebula/ca.crt
@@ -205,7 +206,7 @@ Für die Instanzen werden etwas ausführlichere Konfigurationsdateien benötigt 
           proto: tcp
           host: any
 
-Speichern Sie - wie beim Lighthouse - die auf die jeweilige Instanz angepasste Konfigurationsdatei (`config.yaml`), die passenden Zertifikatsdateien (`prod1-postgresql-0.crt` und `prod1-postgresql-0.key` bzw. `prod4-postgresql-0.crt` und `prod4-postgresql-0.key`) und das Zertifikat Ihrer CA - `ca.crt` - auf den jeweiligen Instanzen nach `/etc/nebula` (vorher oben unter "pki" den Namen der Zertifikatsdatei anpassen). Genau wie bei der Lighthouse-Instanz wird ebenfalls ein Nebula Startfile für systemd erzeugt, der Dienst enabled und dann gestartet. Danach sollte von beiden Instanzen die IP-Adresse der Lighthouse-Instanz pingbar sein
+Save - like with the lighthouse VM - the customized configuration file for the respective VM (`config.yaml`), the matching certificates (`prod1-postgresql-0.crt` and `prod1-postgresql-0.key` resp. `prod4-postgresql-0.crt` and `prod4-postgresql-0.key`) and the CA certificate - `ca.crt` - in `/etc/nebula` on the respective VM (customize the name of the certificate files under "pki" before). Like with the lighthouse VM we create the Nebula unit file for systemd, enable the service and start it. After that you should be able to ping the lighthouse VM from both "normal" VMs:
 
     root@prod1-postgresql-0:~# ping 10.10.10.1
     PING 10.10.10.1 (10.10.10.1) 56(84) bytes of data.
@@ -216,7 +217,7 @@ Speichern Sie - wie beim Lighthouse - die auf die jeweilige Instanz angepasste K
     2 packets transmitted, 2 received, 0% packet loss, time 1002ms
     rtt min/avg/max/mdev = 1.729/1.730/1.731/0.001 ms
 
-Ausserdem sollten sich die Instanzen gegenseitig pingen können:
+Furthermore the VMs should be able to ping eachother:
 
     root@prod1-postgresql-0:/etc/nebula# ping 10.10.10.3
     PING 10.10.10.3 (10.10.10.3) 56(84) bytes of data.
@@ -228,19 +229,19 @@ Ausserdem sollten sich die Instanzen gegenseitig pingen können:
     3 packets transmitted, 3 received, 0% packet loss, time 2004ms
     rtt min/avg/max/mdev = 1.687/1.813/1.914/0.094 ms
 
-Für alle weiteren Instanzen gilt dasselbe Vorgehen:
+For all further instances it is the same procedure:
 
-1. Nebula Binary herunterladen und installieren
-2. Zertifikat erstellen und die beiden Dateien auf die Instanz nach `/etc/nebula` kopieren
-3. `ca.crt` Datei der CA auf die Instanz nach `/etc/nebula` kopieren
-4. Konfigurationsdatei `config.yaml` für die Instanz erzeugen und nach `/etc/nebula` kopieren
-5. Unit-File für systemd auf der Instanz erzeugen, den Dienst aktivieren und starten 
+1. Download the Nebula binaries herunterladen and install the to `/usr/local/bin`
+2. Create the certificate for the new VM and copy them to `/etc/nebula` on the new VM
+3. Copy the `ca.crt` of your CA to `/etc/nebula` on the new VM
+4. Create a configuration file `config.yaml` for the new VM and copy it to `/etc/nebula` on it
+5. Create the unit file for systemd on the new VM, activate the service and start it 
 
-## Tipp
-Wenn Sie planen dies in einer Produktionsumgebung zu nutzen, sollten Sie mehrere Lighthouse-Instanzen in verschiedenen Cloud-Umgebungen starten.
-Weiterhin bietet die Firma [Defined Networking](https://www.defined.net/) Nebula in einer "managed" Variante an die erlaubt, das hier geschilderte Setup mit Hilfe einer [API](https://docs.defined.net/guides/automating-host-creation/), stark zu automatisieren. 
+## Hint
+If you plan to use this in a production environment, you should create more than one lighthouse VM in different cloud environments.
+Additionally you can get a "managed" version of Nebula from [Defined Networking](https://www.defined.net/) which allows to automate the above setup using an [API](https://docs.defined.net/guides/automating-host-creation/). 
 
-Es gibt auch eine [Sammlung von systemd-Units](https://github.com/quickvm/defined-systemd-units), mit denen man Instanzen automatisiert (z. B. beim Start) zum Overlay-VPN von Defined Networking hinzufügen resp. (beim Herunterfahren) daraus entfernen kann. 
+There is even a [collection of systemd units](https://github.com/quickvm/defined-systemd-units), which allows to enroll (e. g. during start) VMs to the overlay VPN from Defined Networking resp. to unenroll them (e. g. during deletion) from it. 
 
 
 

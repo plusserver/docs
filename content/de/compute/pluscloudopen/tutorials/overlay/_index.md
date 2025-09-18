@@ -20,7 +20,7 @@ Dieses Tutorial geht davon aus, dass Sie bereits über zwei OpenStack Instanzen 
 
 ## Certificate Authority (CA) erzeugen
 
-Um Zertifikate für Instanzen erzeugen zu können, wird eine Certificate Authority (CA) benötigt. Um diese zu erzeugen, laden Sie zunächst die Nebula-Binaries von https://github.com/slackhq/nebula/releases für Ihre Plattform herunter und packen Sie als User "root" im Verzeichnis `/usr/local/bin` aus.
+Um Zertifikate für Instanzen erzeugen zu können, wird eine Certificate Authority (CA) benötigt. Um diese zu erzeugen, laden Sie zunächst die Nebula-Binaries von https://github.com/slackhq/nebula/releases für Ihr Betriebssystem herunter und packen Sie als User "root" im Verzeichnis `/usr/local/bin` aus.
 
 
     laptop $ ~ → sudo tar -xvzf Downloads/nebula-linux-amd64.tar.gz -C /usr/local/bin 
