@@ -9,7 +9,7 @@ description: >
 
 ## Einleitung
 
-Willkommen zum Bestellformular der Datenbanken. Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue Datenbank bestellt werden kann.
+Willkommen zum [Bestellformular der Datenbanken](https://cloudhub.plusserver.com/cloud-services/databases/order). Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue Datenbank bestellt werden kann.
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
@@ -20,7 +20,7 @@ Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und e
 
 Wählen Sie das gewünschte Datenbanksystem und die passende Version:
 
-#### Verfügbare Datenbanken und Versionen:
+### Verfügbare Datenbanken und Versionen:
 
 - MySQL: 8.4, 8.0
 - PostgreSQL: 17, 16, 15, 14
@@ -35,38 +35,43 @@ Wählen Sie das gewünschte Datenbanksystem und die passende Version:
 
 Wählen Sie das gewünschte Verhältnis von vCPU zu vRAM:
 
-#### Basic Usage
+### Basic Usage
+
 - Nodes mit einem vCPU/vRAM-Verhältnis von 1:2
 
-#### All Purpose
+### All Purpose
+
 - Nodes mit einem vCPU/vRAM-Verhältnis von 1:4
 
-#### RAM Optimised
+### RAM Optimised
+
 - Nodes mit einem vCPU/vRAM-Verhältnis von 1:8
 
 ## Schritt 3: Instanzgröße auswählen
 
 Je nach gewähltem Instanztyp stehen verschiedene Größen zur Auswahl:
 
-#### Basic Usage:
+### Basic Usage:
 
 Instanzgrößen:
+
 - b2-4 – 2 vCPU, 4 GB RAM – 0,11 €/Stunde
 - b4-8 – 4 vCPU, 8 GB RAM – 0,22 €/Stunde
 - b8-16 – 8 vCPU, 16 GB RAM – 0,44 €/Stunde
 - b16-32 – 16 vCPU, 32 GB RAM – 0,88 €/Stunde
 - b32-64 – 32 vCPU, 64 GB RAM – 1,76 €/Stunde
 
-#### All Purpose:
+### All Purpose:
 
 Instanzgrößen:
+
 - a2-8 – 2 vCPU, 8 GB RAM – 0,15 €/Stunde
 - a4-16 – 4 vCPU, 16 GB RAM – 0,31 €/Stunde
 - a8-32 – 8 vCPU, 32 GB RAM – 0,62 €/Stunde
 - a16-64 – 16 vCPU, 64 GB RAM – 1,23 €/Stunde
 - a32-128 – 32 vCPU, 128 GB RAM – 2,46 €/Stunde
 
-#### RAM Optimised:
+### RAM Optimised:
 
 Instanzgrößen:
 - r2-16 – 2 vCPU, 16 GB RAM – 0,24 €/Stunde
@@ -120,7 +125,7 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 
 Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigurationen.
 Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
-Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die Allgemeinen Geschäftsbedingungen und weitere relevante Vertragsunterlagen.\
+Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die **Allgemeinen Geschäftsbedingungen** und **weitere relevante Vertragsunterlagen**.\
 Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
 Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
 

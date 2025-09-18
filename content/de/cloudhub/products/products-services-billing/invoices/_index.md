@@ -8,7 +8,7 @@ description: >
   Informationen zur Rechnungsübersicht im CloudHub
 ---
 
-Auf der Seite **„Rechnungen“** finden Sie alle abrechnungsbezogenen Dokumente zu Ihren gebuchten Produkten und Leistungen, sowie die Möglichkeit diese herunterzuladen. Die Inhalte sind in zwei Tabs unterteilt: **Rechnungen** und **Rechnungsanhänge**.
+Auf der Seite [„Rechnungen“](https://cloudhub.plusserver.com/billing/invoices) finden Sie alle abrechnungsbezogenen Dokumente zu Ihren gebuchten Produkten und Leistungen, sowie die Möglichkeit diese herunterzuladen. Die Inhalte sind in zwei Tabs unterteilt: **Rechnungen** und **Rechnungsanhänge**.
 
 ### Rechnungen
 

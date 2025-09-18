@@ -8,7 +8,7 @@ description: >
   Informationen zu Produkte / Leistungen im CloudHub
 ---
 
-Auf der Seite **„Produkte / Leistungen“** erhalten Sie eine übersichtliche Darstellung aller Produkte und Leistungen, die Sie bei uns erworben haben. Die Informationen werden in einer Tabelle angezeigt und können flexibel gefiltert oder durchsucht werden.
+Auf der Seite [„Produkte / Leistungen“](https://cloudhub.plusserver.com/billing/products-and-services) erhalten Sie eine übersichtliche Darstellung aller Produkte und Leistungen, die Sie bei uns erworben haben. Die Informationen werden in einer Tabelle angezeigt und können flexibel gefiltert oder durchsucht werden.
 
 ### Funktionen im Überblick
 
@@ -33,7 +33,7 @@ Um die Ansicht einzugrenzen, stehen Ihnen folgende Filter zur Verfügung:
 - **Produktart**\
 ![Produktübersicht - Filter nach Produktart](img/products-table-filter-producttype.png)
 
-*Um nach dem Produktnamen oder der Produktart filtern zu können muss der Button "Filter bearbeiten" betätigt werden*
+_Um nach dem Produktnamen oder der Produktart filtern zu können muss der Button "Filter bearbeiten" betätigt werden_
 
 #### Exportfunktion
 
@@ -42,7 +42,7 @@ Sie haben die Möglichkeit, die aktuelle Tabellenansicht als **CSV-Datei** herun
 
 ## Detailansicht
 
-Durch Klicken auf die "Projektvertragskennung", "Produktbezeichnung", "Projektname" oder der "Projektkennung" eines Produktes in der Produktübersicht-Tabelle gelangen Sie zu der Detailansicht des Produktes.
+Durch Klicken auf eine Reihe in der Produktübersicht-Tabelle gelangen Sie zu der Detailansicht des Produktes.
 
 ### Allgemeine Produktinformationen
 

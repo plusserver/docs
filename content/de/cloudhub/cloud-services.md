@@ -9,19 +9,19 @@ description: >
 
 ## Cloud Services User Guide
 
-Willkommen im Bereich Cloud Services des CloudHubs! Hier können Sie die verschiedenen Produkte bestellen. In der folgenden Anleitung erklären wir Ihnen die verschiedene Cloud Service Bereiche und was Sie dort an Informationen, Links und Funktionen finden.
+Willkommen im Bereich [Cloud Services](https://cloudhub.plusserver.com/cloud-services) des CloudHubs! Hier können Sie die verschiedenen Produkte bestellen. In der folgenden Anleitung erklären wir Ihnen die verschiedene Cloud Service Bereiche und was Sie dort an Informationen, Links und Funktionen finden.
 
 ## Aufbau des Cloud-Service Bereichs
 
-Auf der Startseite finden Sie die Übersicht unserer Cloud Services (strukturiert nach Kategorien), sowie weiterführende Links auf andere CloudHub-Bereiche und unsere Produktdokumentation. Über einen Klick auf den Link "Jetzt bestellen" in der Produktkachel gelangen Sie auf das Bestellformular (Wizard) und mit einem Klick auf den Link "Mehr erfahren" gelangen Sie in die Übersicht des jeweiligen Produktes.
+Auf der Startseite finden Sie die Übersicht unserer Cloud Services (strukturiert nach Kategorien), sowie weiterführende Links auf andere CloudHub-Bereiche und unsere Produktdokumentation. Über einen Klick auf den Link "Jetzt bestellen" in der Produktkachel gelangen Sie auf das [Bestellformular (Wizard)](#das-bestellformular-wizard) und mit einem Klick auf den Link "Mehr erfahren" gelangen Sie in die [Übersicht des jeweiligen Produktes](#die-produktübersicht).
 
 ![Cloud Services Übersicht](../img/cloud-services/cloud-services-overview.png)
 
-Übersicht: Hier finden Sie alle Informationen des jeweiligen Produktes einer Kategorie. Dazu gibt es einen Quick-Link zum jeweiligen Bestellformular (Wizard).
+**Übersicht:** Hier finden Sie alle Informationen des jeweiligen Produktes einer Kategorie. Dazu gibt es einen Quick-Link zum jeweiligen Bestellformular (Wizard).
 
 ![Cloud Services Produkt Details](../img/cloud-services/cloud-services-level2.png)
 
-Bestellformular: Hier finden Sie das Bestellformular (Wizard), in dem es unterschiedliche Angaben gibt, die ausgefüllt werden müssen, um ein Produkt bestellen zu können. Sobald alle Pflichtfelder ausgefüllt wurden, kann über den Quick-Link zur Bestellübersicht gewechselt werden.
+**Bestellformular:** Hier finden Sie das Bestellformular (Wizard), in dem es unterschiedliche Angaben gibt, die ausgefüllt werden müssen, um ein Produkt bestellen zu können. Sobald alle Pflichtfelder ausgefüllt wurden, kann über den Quick-Link zur [Bestellübersicht](#die-bestellübersicht) gewechselt werden.
 
 ![Cloud Services Bestellformular](../img/cloud-services/cloud-services-level3.png)
 
@@ -29,7 +29,7 @@ Bestellformular: Hier finden Sie das Bestellformular (Wizard), in dem es untersc
 
 #### Cloud Services
 
-Sortiert nach Kategorien sehen Sie hier die verschiedenen Produkte, die Sie im CloudHub bestellen können. Auf der Kachel können Sie entweder auf „Mehr erfahren“ klicken, um zu einer Übersicht der in dieser Kategorie verfügbaren Produkttypen und -arten zu gelangen, oder auf „Jetzt bestellen“, um direkt zum Bestell-Wizard des Produkts weitergeleitet zu werden.
+Sortiert nach Kategorien sehen Sie hier die verschiedenen Produkte, die Sie im CloudHub bestellen können. Auf der Kachel können Sie entweder auf „Mehr erfahren“ klicken, um zu einer Übersicht der in dieser Kategorie verfügbaren Produkttypen und -arten zu gelangen, oder auf „Jetzt bestellen“, um direkt zum [Bestell-Wizard](#das-bestellformular-wizard) des Produkts weitergeleitet zu werden.
 
 ![Cloud Services Produkte](../img/cloud-services/cloud-services-products.png)
 
@@ -77,7 +77,6 @@ Abschließend folgt ein Abschnitt zur Projektvertragskennung, in dem abgefragt w
 Die Bestellübersicht fasst alle zuvor gemachten Angaben übersichtlich in einer Tabelle zusammen. Rechts neben der Tabelle wird der Gesamtpreis für die ausgewählte Konfiguration angezeigt.
 
 ![Cloud Services Level 3 Projektvertragskennung](../img/cloud-services/cloud-services-order-overview-table.png)
-
 
 Unterhalb der Übersicht befindet sich eine Checkbox mit dem Hinweis „Ich akzeptiere die folgenden Anlagen und Bedingungen als Bestandteil des Vertrags mit plusserver.“ – diese muss aktiviert werden, um die Bestellung abschließen zu können.
 Darunter stehen relevante Dokumente zum Download bereit.

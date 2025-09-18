@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the Dedicated Server order wizard. Here it is described which configuration options are available and how a new Dedicated Server can be ordered.
+Welcome to the [Dedicated Server order wizard](https://cloudhub.plusserver.com/cloud-services/dedicated-server/order). Here it is described which configuration options are available and how a new Dedicated Server can be ordered.
 
 Below, we will guide you step by step through the ordering process and explain the individual options and input fields.
 
@@ -160,7 +160,7 @@ Choose whether there is already a project contract detection:
 
 The order overview displays a table with all configurations you have selected.
 Below the table, there is a checkbox that allows you to accept the following attachments and terms.
-The attachments include various downloadable PDF documents, such as the General Terms and Conditions and other relevant contractual documents.
+The attachments include various downloadable PDF documents, such as the **General Terms and Conditions** and **other relevant contractual documents**.
 To the right of the table, the total price and the Order button are displayed.
 This button is disabled by default and will only be activated once the attachments and terms have been accepted.
 

@@ -10,7 +10,7 @@ description: >
 
 ## Products / Services
 
-The **"Products / Services"** page provides you with a clear overview of all the products and services you have purchased from us. The information is displayed in a table and can be flexibly filtered or searched.
+The ["Products / Services"](https://cloudhub.plusserver.com/billing/products-and-services) page provides you with a clear overview of all the products and services you have purchased from us. The information is displayed in a table and can be flexibly filtered or searched.
 
 ### Functions at a glance
 
@@ -44,7 +44,7 @@ You have the option of downloading the current table view as a **CSV file**. Thi
 
 ## Detailed view
 
-By clicking on the "Project contract identifier", "Product name", "Project name" or the "Project identifier" of a product in the product overview table, you can access the detailed view of the product.
+By clicking on a row in the product overview table, you can access the detailed view of the product.
 
 ### General product information
 

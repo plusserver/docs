@@ -9,7 +9,7 @@ description: >
 
 ## Patch overview
 
-The **"Patch overview"** page provides a complete overview of all automatic patch jobs for your systems. The information is displayed in a table containing all relevant information about the individual patch processes.
+The ["Patch Schedule"](https://cloudhub.plusserver.com/support/patch-schedule) page provides a complete overview of all automatic patch jobs for your systems. The information is displayed in a table containing all relevant information about the individual patch processes.
 
 ![Patch overview table](../img/patch-schedule/table-patch-schedule.png)
 

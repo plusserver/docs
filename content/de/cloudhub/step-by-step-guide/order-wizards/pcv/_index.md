@@ -9,7 +9,7 @@ description: >
 
 ## Einleitung
 
-Willkommen zum Bestellformular der pluscloud VMware. Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue pluscloud VMware bestellt werden kann.
+Willkommen zum [Bestellformular der pluscloud VMware](https://cloudhub.plusserver.com/cloud-services/pluscloud-v/order). Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neue pluscloud VMware bestellt werden kann.
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
@@ -45,9 +45,9 @@ Zusätzlich können über ein Dropdown-Menü weitere Optionen und Preise eingese
 
 Hier tragen Sie die Daten der verantwortlichen Ansprechperson ein:
 
-- Vor- und Nachname (Pflichtfeld)
-- E-Mail-Adresse (Pflichtfeld)
-- Kurzbeschreibung (optional)
+- Vor- und Nachname (*Pflichtfeld*)
+- E-Mail-Adresse (*Pflichtfeld*)
+- Kurzbeschreibung (*optional*)
 
 ![PCV Administrator Angaben](img/pcv-admin.png)
 
@@ -71,7 +71,7 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 
 Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigurationen.
 Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
-Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die Allgemeinen Geschäftsbedingungen und weitere relevante Vertragsunterlagen.\
+Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die **Allgemeinen Geschäftsbedingungen** und **weitere relevante Vertragsunterlagen**.\
 Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
 Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
 

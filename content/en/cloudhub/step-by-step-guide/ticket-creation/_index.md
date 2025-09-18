@@ -7,40 +7,32 @@ description: >
     Information about creating tickets
 ---
 
-### Step 1: Select a Category
+## Create Ticket
 
-![Select a category for the ticket](img/ae3.png)
+On the ["Create ticket"](https://cloudhub.plusserver.com/support/ticket-create) page, you can create a new support ticket. The form guides you step by step through the creation process and adapts depending on the selected category and, if applicable, template.
 
-The ticket creation process consists of three steps, starting with selecting a category. If you recently started a ticket but didn’t submit it (and navigated elsewhere in CloudHub), you’ll have the option to restore the draft.
+### Steps for creating a ticket
 
-### Step 2: Select Product/Service
+1. **Select category:**
+   First, select the appropriate category for your request (e.g. technical support, billing, contract questions).
+   This selection determines what information will be requested later on.
+   ![Ticket creation: Category selection](img/select-category.png)
 
-![Select product/service](img/ae4.png)
+2. **Select template (optional):**
+   If templates are available for the selected category, you have the option of selecting a suitable template.
+   ![Ticket creation: Selecting a template](img/select-template.png)
 
-All related contracts are listed here; they can also be searched.
+3. **Select product or service (optional):**
+   You can assign the ticket to a specific product or service.
+   ![Ticket creation: Selecting a product/service](img/select-contract.png)
 
-### Step 3: Enter Details
+4. **Enter details:**
+   Specific information will be requested depending on the selected category and template.
+   Please enter all relevant details about your request here so that our support team can process your ticket efficiently.
+   ![Ticket creation: Entering ticket details](img/input-ticket-details.png)
 
-![Enter details for the ticket](img/ae5.png)
+### Restore ticket
 
-Depending on the selected category, you’ll be asked to provide specific information – including attachments and additional details for follow-up or further communication.
-
-You can also add additional recipients in CC.
-
-If the category “Service Requests” was selected, you now have the option to either use predefined templates or proceed without a template.
-
-### Step 4: Display Templates
-
-![Display templates](img/ae6.png)
-
-### Step 5: Select a Template
-
-![Select a template](img/ae7.png)
-
-A template might look something like this:
-
-### Step 6: Fill Out the Template
-
-![Fill out the template form](img/ae8.png)
-
-Fill out the template form and then click the “Create Ticket” button.
+If you have already partially completed the ticket creation form and left the page, you can restore your entries.
+To do this, use the **"Restore ticket"** button located at the top right of the page.
+![Ticket creation: Restore ticket](img/restore-autosaved-ticket.png)

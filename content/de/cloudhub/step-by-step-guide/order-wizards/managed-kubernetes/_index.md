@@ -9,7 +9,7 @@ description: >
 
 ## Einleitung
 
-Willkommen zum Bestellformular des Managed Kubernetes. Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neues Managed Kubernetes bestellt werden kann.
+Willkommen zum [Bestellformular des Managed Kubernetes](https://cloudhub.plusserver.com/cloud-services/managed-kubernetes/order). Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie eine neues Managed Kubernetes bestellt werden kann.
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
@@ -45,7 +45,7 @@ Optional kann ein Onboarding Workshop für 199 € gebucht werden, um Sie bei 
 
 ## Workload Protection as a Service
 
-Ein Sicherheitsdienst zur Erweiterung Ihrer PSKE-Plattform mit umfassendem Schutz für Anwendungen, Container und Infrastruktur, was mit einem Hacken in der Checkbox ausgewählt werden kann.
+Ein Sicherheitsdienst zur Erweiterung Ihrer **PSKE-Plattform** mit umfassendem Schutz für Anwendungen, Container und Infrastruktur, was mit einem Hacken in der Checkbox ausgewählt werden kann.
 
 Leistungsmerkmale:
 
@@ -78,7 +78,7 @@ Wählen Sie, ob bereits eine Projektvertragskennung besteht:
 
 Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigurationen.
 Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
-Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die Allgemeinen Geschäftsbedingungen und weitere relevante Vertragsunterlagen.\
+Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die **Allgemeinen Geschäftsbedingungen** und **weitere relevante Vertragsunterlagen**.\
 Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
 Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
 

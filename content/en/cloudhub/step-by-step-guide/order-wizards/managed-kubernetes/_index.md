@@ -9,7 +9,7 @@ description: >
 
 ## Introduction
 
-Welcome to the Managed Kubernetes order wizard. Here it is described which configuration options are available and how a new Managed Kubernetes can be ordered.
+Welcome to the [Managed Kubernetes order wizard](https://cloudhub.plusserver.com/cloud-services/managed-kubernetes/order). Here it is described which configuration options are available and how a new Managed Kubernetes can be ordered.
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
@@ -45,7 +45,7 @@ Optionally, an onboarding workshop can be booked for 199 € to support you in c
 
 ## Workload Protection as a Service
 
-A security service for expanding your PSKE platform with comprehensive protection for applications, containers and infrastructure, which can be selected with a chop in the checkbox.
+A security service for expanding your **PSKE platform** with comprehensive protection for applications, containers and infrastructure, which can be selected with a chop in the checkbox.
 
 Performance features:
 
@@ -78,7 +78,7 @@ Select whether a project contract ID already exists:
 
 The order overview displays a table with all configurations you have selected.
 Below the table, there is a checkbox that allows you to accept the following attachments and terms.
-The attachments include various downloadable PDF documents, such as the General Terms and Conditions and other relevant contractual documents.
+The attachments include various downloadable PDF documents, such as the **General Terms and Conditions** and **other relevant contractual documents**.
 To the right of the table, the total price and the Order button are displayed.
 This button is disabled by default and will only be activated once the attachments and terms have been accepted.
 

@@ -9,7 +9,7 @@ description: >
 
 ## Downloads
 
-Auf der Seite **„Downloads“** können Sie alle für Sie relevanten Dokumente einsehen und herunterladen.
+Auf der Seite [„Downloads“](https://cloudhub.plusserver.com/support/download) können Sie alle für Sie relevanten Dokumente einsehen und herunterladen.
 Die Dokumente werden in einer übersichtlichen Tabelle dargestellt.
 
 ![Downloads Tabelle](../img/downloads/table-downloads.png)

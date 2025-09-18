@@ -9,7 +9,7 @@ description: >
 
 ## Service-Status
 
-Auf der Seite **„Service-Status“** erhalten Sie einen aktuellen Überblick über den Zustand Ihrer überwachten Systeme und Dienste. Die Darstellung erfolgt in zwei Kreisdiagrammen – eines für Hosts und eines für Services.
+Auf der Seite [„Service-Status“](https://cloudhub.plusserver.com/support/server-status) erhalten Sie einen aktuellen Überblick über den Zustand Ihrer überwachten Systeme und Dienste. Die Darstellung erfolgt in zwei Kreisdiagrammen – eines für Hosts und eines für Services.
 ![Kreisdiagramme Störungen](../img/service-status/diagrams-malfunctions.png)
 
 ### Statusanzeige

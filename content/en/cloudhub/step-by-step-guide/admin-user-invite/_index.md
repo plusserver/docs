@@ -9,7 +9,7 @@ description: >
 
 ## Where to find it?
 
-The function for inviting additional users by email can be found in the CloudHub sidebar under User management. There, an admin user can add new users by email using the Invite user button.
+The function for **inviting additional users** by email can be found in the CloudHub sidebar under [User Management](https://cloudhub.plusserver.com/user-management). There, an admin user can add new users by email using the Invite user button.
 
 ![User Management location](img/usr-mngmt-location.png)
 
@@ -24,7 +24,7 @@ The function for inviting additional users by email can be found in the CloudHub
 
 3. Admin sees a pop-up screen where he can enter the e-mail address of the user he wants to invite. (Email Address = mandatory field).
 4. The roles can now also be assigned directly in this pop-up screen (one and several).
-    1. However, the rolls must be created beforehand.
+    1. However, the rolls must be created **beforehand**.
     2. We have also added notes to "Delete role" and "Edit role" that this can have an effect on open invitations.
 5. The admin confirms the sending of the e-mail invitation via the "Send invitation" button (a loading screen appears)
 
@@ -37,7 +37,7 @@ The function for inviting additional users by email can be found in the CloudHub
 Safety precautions:
 
 - The invitations are limited to 50 invitations per admin per day
-- The link in the invitation email is only valid for 1 day
+- The link in the invitation email is **only valid for 1 day**
 
 As soon as the invitation has been successfully accepted, the added user appears in the User Management table.
 

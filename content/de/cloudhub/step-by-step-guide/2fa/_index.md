@@ -9,7 +9,7 @@ description: >
 
 ## Wo ist es zu finden?
 
-Die Zwei-Faktor-Authentifizierung (2FA) ist im CloudHub unter Einstellungen verfügbar. Diese erreicht man, indem man oben rechts auf die eigene E-Mail-Adresse in der Topbar klickt und anschließend den Menüpunkt Einstellungen auswählt. Unter dem Abschnitt Passwort & Sicherheit befindet sich die Option Zwei-Faktor-Authentifizierung (2FA).
+Die **Zwei-Faktor-Authentifizierung (2FA)** ist im CloudHub unter Einstellungen verfügbar. Diese erreicht man, indem man oben rechts auf die eigene E-Mail-Adresse in der Topbar klickt und anschließend den Menüpunkt [Einstellungen](https://cloudhub.plusserver.com/settings) auswählt. Unter dem Abschnitt Passwort & Sicherheit befindet sich die Option Zwei-Faktor-Authentifizierung (2FA).
 
 ![2FA Position](img/2fa-location.png)
 
