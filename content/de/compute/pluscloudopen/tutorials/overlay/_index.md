@@ -12,7 +12,7 @@ description: >
 
 Es kann sinnvoll sein Instanzen, die sich in verschiedenen Availability Zonen (AZ) befinden, über ein Overlay-VPN zu vernetzen. Klassische Beispiele wären z. B. Datenbankreplikation, Failovercluster oder das Einbinden weiterer plusserver Produkte wie Instanzen aus der [pluscloud VMware](https://www.plusserver.com/produkt/pluscloud-vmware/) oder [Dedicated Server](https://www.plusserver.com/produkt/dedicated-server/). 
 
-In diesem Tutorial wird vorgestellt, dies mit Hilfe von [Nebula](https://github.com/slackhq/nebula/) zu realisieren. Lesen Sie dazu bitte auch die [Nebula Dokumentation](https://nebula.defined.net/docs/).
+In diesem Tutorial wird vorgestellt, wie man dies mit Hilfe von [Nebula](https://github.com/slackhq/nebula/) realisiert. Lesen Sie dazu bitte auch die [Nebula Dokumentation](https://nebula.defined.net/docs/).
 
 ## Voraussetzungen
 
@@ -91,7 +91,7 @@ Im zweiten Schritt muß eine Konfigurationsdatei für die Lighthouse Instanz ers
 
 Auf der Instanz, auf der das Lighthouse laufen soll, erzeugen Sie das Verzeichnis `/etc/nebula` und kopieren Sie die obige Konfigurationsdatei `config.yaml`, die beiden bei der Zertifikatserstellung entstandenen Dateien (`leuchtturm1.crt` und `leuchtturm1.key`) sowie die Zertifikatsdatei Ihrer CA - `ca.crt` - dorthin.
 
-Als Nächstes benötigen Sie folgende Startdatei für den Dienst, damit dieser über systemd gestartet werden kann:
+Als Nächstes benötigen Sie folgende Startdatei für den Dienst, damit dieser über systemd gesteuert werden kann:
 
     [Unit]
     Description=Nebula overlay networking tool
@@ -122,9 +122,9 @@ Mit `ip addr show nebula1` sollte dann ungefähr so eine Ausgabe erscheinen:
         inet6 fe80::2002:e730:cd87:a72f/64 scope link stable-privacy 
            valid_lft forever preferred_lft forever
 
-Das `nebula1` Interface sollte die IP-Adresse haben, die Sie vorher bei der Erstellung des Zertifikats ausgesucht haben. In OpenStack muss der Instanz eine Floating-IP zugeordnet werden, damit diese aus dem Internet erreichbar ist. Zusätzlich sollten Sie eine Security-Group erzeugen, die sicherstellt, dass die Instanz nur auf dem UDP Port 4242 angesprochen werden kann.
+Das `nebula1` Interface sollte die IP-Adresse haben, die Sie vorher bei der Erstellung des Zertifikats ausgesucht haben. In OpenStack muss der Instanz eine Floating-IP zugeordnet werden, damit diese aus dem Internet erreichbar ist. Zusätzlich sollten Sie eine Security-Group erzeugen, die sicherstellt, dass die Instanz nur auf dem UDP Port 4242 von außen angesprochen werden kann.
 
-Da das erste Lighthouse jetzt steht, können wir uns jetzt den anderen Instanzen zuwenden. 
+Da das erste Lighthouse jetzt steht, können wir uns nun den anderen Instanzen zuwenden. 
 
 ## Nebula Instanzen konfigurieren
 
@@ -239,6 +239,8 @@ Für alle weiteren Instanzen gilt dasselbe Vorgehen:
 ## Tipp
 Wenn Sie planen dies in einer Produktionsumgebung zu nutzen, sollten Sie mehrere Lighthouse-Instanzen in verschiedenen Cloud-Umgebungen starten.
 Weiterhin bietet die Firma [Defined Networking](https://www.defined.net/) Nebula in einer "managed" Variante an die erlaubt, das hier geschilderte Setup mit Hilfe einer [API](https://docs.defined.net/guides/automating-host-creation/), stark zu automatisieren. 
+
+Es gibt auch eine [Sammlung von systemd-Units](https://github.com/quickvm/defined-systemd-units), mit denen man Instanzen automatisiert (z. B. beim Start) zum Overlay-VPN von Defined Networking hinzufügen resp. (beim Herunterfahren) daraus entfernen kann. 
 
 
 
