@@ -122,7 +122,7 @@ Mit `ip addr show nebula1` sollte dann ungefähr so eine Ausgabe erscheinen:
         inet6 fe80::2002:e730:cd87:a72f/64 scope link stable-privacy 
            valid_lft forever preferred_lft forever
 
-Das `nebula1` Interface sollte die IP-Adresse haben, die Sie vorher bei der Erstellung des Zertifikats ausgesucht haben. In OpenStack muss der Instanz eine Floating-IP zugeordnet werden, damit diese aus dem Internet erreichbar ist. Zusätzlich sollten Sie eine Security-Group erzeugen, die sicherstellt, dass die Instanz nur auf dem UDP Port 4242 von außen angesprochen werden kann.
+Das `nebula1` Interface sollte die IP-Adresse haben, die Sie vorher bei der Erstellung des Zertifikats ausgesucht haben. In OpenStack muss der Instanz eine Floating-IP zugeordnet werden, damit diese aus dem Internet erreichbar ist. Zusätzlich sollten Sie eine Security-Group erzeugen, die sicherstellt, dass die Instanz nur auf dem UDP Port 4242 von außen angesprochen werden kann. Die Floating-IP wird später in die Konfiguration auf allen anderen Instanzen eingetragen werden.
 
 Da das erste Lighthouse jetzt steht, können wir uns nun den anderen Instanzen zuwenden. 
 
@@ -205,7 +205,7 @@ Für die Instanzen werden etwas ausführlichere Konfigurationsdateien benötigt 
           proto: tcp
           host: any
 
-Speichern Sie - wie beim Lighthouse - die auf die jeweilige Instanz angepasste Konfigurationsdatei (`config.yaml`), die passenden Zertifikatsdateien (`prod1-postgresql-0.crt` und `prod1-postgresql-0.key` bzw. `prod4-postgresql-0.crt` und `prod4-postgresql-0.key`) und das Zertifikat Ihrer CA - `ca.crt` - auf den jeweiligen Instanzen nach `/etc/nebula` (vorher oben unter "pki" den Namen der Zertifikatsdatei anpassen). Genau wie bei der Lighthouse-Instanz wird ebenfalls ein Nebula Startfile für systemd erzeugt, der Dienst enabled und dann gestartet. Danach sollte von beiden Instanzen die IP-Adresse der Lighthouse-Instanz pingbar sein
+Speichern Sie - wie beim Lighthouse - die auf die jeweilige Instanz angepasste Konfigurationsdatei (`config.yaml`), die passenden Zertifikatsdateien (`prod1-postgresql-0.crt` und `prod1-postgresql-0.key` bzw. `prod4-postgresql-0.crt` und `prod4-postgresql-0.key`) und das Zertifikat Ihrer CA - `ca.crt` - auf den jeweiligen Instanzen nach `/etc/nebula` (vorher oben unter "pki" den Namen der Zertifikatsdatei anpassen und unter "`static_host_map` die Floating-IP der Lighthouse Instanz eintragen). Genau wie bei der Lighthouse-Instanz wird ebenfalls ein Nebula Startfile für systemd erzeugt, der Dienst enabled und dann gestartet. Danach sollte von beiden Instanzen die IP-Adresse der Lighthouse-Instanz pingbar sein
 
     root@prod1-postgresql-0:~# ping 10.10.10.1
     PING 10.10.10.1 (10.10.10.1) 56(84) bytes of data.
