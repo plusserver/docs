@@ -38,7 +38,7 @@ Legen Sie ein Verzeichnis `nebula-ca` an, wechseln Sie hinein und erzeugen Sie d
     laptop $ nebula-ca → ls
     ca.crt  ca.key
 
-Die Datei `ca.key` enthält den Schlüssel, mit dem alle folgenden Zertifikate unterschrieben werden. Sie sollten sie gut aufheben und ggfs. zusätzlich verschlüsseln (z. B. mit gpg). Die so erzeugte CA hat eine Gültigkeit von einem Jahr. Danach müssen die Zertifikate erneuert werden. Der Parameter `-duration` erlaubt es, länger gültige Schlüssel zu erzeugen. 
+Die Datei `ca.key` enthält den Schlüssel, mit dem alle folgenden Zertifikate unterschrieben werden. Sie sollten sie gut aufheben und ggfs. zusätzlich verschlüsseln (z. B. mit gpg). Die Datei sollte _nicht_ auf Ihre Lighthouse Instanz oder auf andere Instanzen kopiert werden. Die so erzeugte CA hat eine Gültigkeit von einem Jahr. Danach müssen die Zertifikate erneuert werden. Der Parameter `-duration` erlaubt es, länger gültige Schlüssel zu erzeugen. 
 
 Jetzt können wir uns dem Aufbau des Overlay-VPN zuwenden.
 
