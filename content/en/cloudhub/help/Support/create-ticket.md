@@ -13,4 +13,4 @@ On the ["Create ticket"](https://cloudhub.plusserver.com/support/ticket-create) 
 
 [This guide](../../../step-by-step-guide/ticket-creation/ticket-creation) provides a detailed step-by-step description of how to create a ticket.
 
-You can then view the tickets you have created on the [Ticket Overview](ticket-overview) page.
+You can then view the tickets you have created on the [Ticket Overview](ticket-overview) page. In addition, you will be informed of the current processing status for each ticket by email.
