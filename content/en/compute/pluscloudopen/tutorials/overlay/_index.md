@@ -16,7 +16,7 @@ The tutorial presents a way to accomplish this with [nebula](https://github.com/
 
 ## Requirements
 
-This tutorial assumes, that you already have two OpenStack VMs in different AZs of the pluscloud open, which you want to connect with eachother. Furthermore you'll need a third VM, either in one of the existing environments or in a third one.
+This tutorial assumes, that you already have two OpenStack VMs in different AZs of the pluscloud open, which you want to connect with each other. Furthermore you'll need a third VM, either in one of the existing environments or in a third one.
 
 ## Create a Certificate Authority (CA) 
 
