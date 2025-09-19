@@ -205,7 +205,7 @@ Für die Instanzen werden etwas ausführlichere Konfigurationsdateien benötigt 
           proto: tcp
           host: any
 
-Speichern Sie - wie beim Lighthouse - die auf die jeweilige Instanz angepasste Konfigurationsdatei (`config.yaml`), die passenden Zertifikatsdateien (`prod1-postgresql-0.crt` und `prod1-postgresql-0.key` bzw. `prod4-postgresql-0.crt` und `prod4-postgresql-0.key`) und das Zertifikat Ihrer CA - `ca.crt` - auf den jeweiligen Instanzen nach `/etc/nebula` (vorher oben unter "pki" den Namen der Zertifikatsdatei anpassen und unter "`static_host_map` die Floating-IP der Lighthouse Instanz eintragen). Genau wie bei der Lighthouse-Instanz wird ebenfalls ein Nebula Startfile für systemd erzeugt, der Dienst enabled und dann gestartet. Danach sollte von beiden Instanzen die IP-Adresse der Lighthouse-Instanz pingbar sein
+Speichern Sie - wie beim Lighthouse - die auf die jeweilige Instanz angepasste Konfigurationsdatei (`config.yaml`), die passenden Zertifikatsdateien (`prod1-postgresql-0.crt` und `prod1-postgresql-0.key` bzw. `prod4-postgresql-0.crt` und `prod4-postgresql-0.key`) und das Zertifikat Ihrer CA - `ca.crt` - auf den jeweiligen Instanzen nach `/etc/nebula` (vorher oben unter "pki" den Namen der Zertifikatsdatei anpassen und unter "`static_host_map` die Floating-IP der Lighthouse Instanz eintragen). Genau wie bei der Lighthouse-Instanz wird ebenfalls ein Nebula Startfile für systemd erzeugt, der Dienst enabled und dann gestartet. Danach sollte von beiden Instanzen die IP-Adresse der Lighthouse-Instanz pingbar sein.
 
     root@prod1-postgresql-0:~# ping 10.10.10.1
     PING 10.10.10.1 (10.10.10.1) 56(84) bytes of data.
