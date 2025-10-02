@@ -18,7 +18,57 @@ Dieses Tutorial geht davon aus, dass Sie bereits über ein funktionierendes Cons
 
 ## Consul Client installieren
 
+Consul Konfigurationsdatei:
+
+    datacenter = "de-west"
+    data_dir   =  "/opt/consul"
+    log_level  =  "INFO"
+    node_name  =  "prod4-postgresql-0"
+    server     =  false
+    leave_on_terminate = true
+
+    retry_join = [ "100.102.0.30", "100.102.0.31", "100.102.0.32" ]
+
+    encrypt    = "myencryptionkey"
+
+    ca_file    = "/etc/consul/certificates/ca.pem"
+    cert_file  = "/etc/consul/certificates/cert.pem"
+    key_file   = "/etc/consul/certificates/private_key.pem"
+
+    bind_addr      = "{{ GetInterfaceIP \"nebula1\" }}"
+    advertise_addr = "{{ GetInterfaceIP \"nebula1\" }}"
+    client_addr    = "{{ GetInterfaceIP \"nebula1\" }}"
+
+    addresses {
+       http     = "{{ GetInterfaceIP \"nebula1\" }}"
+       https    = "{{ GetInterfaceIP \"nebula1\" }}"
+       grpc     = "{{ GetInterfaceIP \"nebula1\" }}"
+    }
+
+
 tls, interface binding, systemd unit file
+
+    [Unit]
+    Description="HashiCorp Consul - A service mesh solution"
+    Documentation=https://www.consul.io/
+    Requires=network-online.target
+    After=network-online.target
+    ConditionFileNotEmpty=/etc/consul/consul.hcl
+
+    [Service]
+    EnvironmentFile=-/etc/consul.d/consul.env
+    User=consul
+    Group=consul
+    ExecStart=/usr/local/bin/consul agent -config-dir=/etc/consul/ -bind '{{ GetInterfaceIP "defined1" }}'
+    ExecReload=/bin/kill --signal HUP $MAINPID
+    KillMode=process
+    KillSignal=SIGTERM
+    Restart=on-failure
+    LimitNOFILE=65536
+
+    [Install]
+    WantedBy=multi-user.target
+
 
 ## PostgreSQL
 
