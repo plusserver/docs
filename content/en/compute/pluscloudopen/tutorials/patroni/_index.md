@@ -1,26 +1,26 @@
 ---
 #https://gohugo.io/content-management/page-bundles/
-title: "PostgreSQL Cluster AZ-übergreifend mit Patroni aufbauen"
+title: "Set up a AZ-agnostic PostgreSQL Cluster with Patroni"
 type: "docs"
 weight: 1
-date: 2025-10-02
+date: 2025-10-07
 description: >
-  Erzeugen Sie einen PostgreSQL Cluster in zwei AZs mit Hilfe eines Overlay-VPNs und Patroni
+  Create a PostgreSQL Cluster spanning two AZs using an Overlay-VPNs and Patroni
 ---
 
-## Überblick
+## Overview
 
-Viele Kunden haben den Wunsch, Infrastruktur möglichst ausfallsicher aufzubauen. Das schließt oft auch den Betrieb von Datenbankclustern an zwei unabhängigen Standorten bzw. Rechenzentren mit ein. Dieses Tutorial zeigt, wie man ein PostgreSQL Cluster in zwei verschiedenen Availability Zonen (AZs) mit Hilfe eines Overlay-VPNs ([Nebula](https://github.com/slackhq/nebula/)) und [Patroni](https://patroni.readthedocs.io/en/latest/)  aufbaut. 
+Many customers want to set up infrastructure, that is resilient to crashes and outages. This includes the operation of database clusters which span two different, independent datacenters. This tutorial shows, how to set up a PostgreSQL cluster in two different availability zones (AZs) using the overlay VPN ([Nebula](https://github.com/slackhq/nebula/)) and the clustermanager [Patroni](https://patroni.readthedocs.io/en/latest/).
 
-## Voraussetzungen
+## Requirements
 
-Dieses Tutorial geht davon aus, dass Sie bereits über ein funktionierendes Consul Cluster verfügen, welches Teil Ihres Overlay-VPNs ist (der Aufbau eines Consul Clusters über mehrere AZs wird Gegenstand eines anderen Tutorials). Weiterhin benötigen Sie zwei OpenStack-Umgebungen mit mindestens je einer Instanz für die PostgreSQL Datenbanken in verschiedenen AZs der pluscloud open (am besten in einer Region), die Sie zu einem Cluster verbinden wollen und die ebenfalls bereits Teil des Overlay-VPNs auf Basis von Nebula sind (die Verbindung von VMs über ein Overlay-VPN) ist Gegenstand eines anderen [Tutorials](https://docs.plusserver.com/de/compute/pluscloudopen/tutorials/overlay/).
+This tutorial assumes that you already have a functional Consul cluster which is part of your overlay VPN (the setup of a Consul cluster spanning multiple AZs will be subject of a coming tutorial). Furthermore you need two separate OpenStack environments in two pluscloud open AZs with at least one instance each (for the PostgreSQL database) located in the same region. The two instances, that will be part of the database cluster should already be part of the overlay VPN based on nebula (connecting VMs with an overlay VPN is subject of another [tutorial](https://docs.plusserver.com/de/compute/pluscloudopen/tutorials/overlay/)).
 
-## Consul Client installieren
+## Install Consul Client
 
-Patroni verwendet einen "Distributed Configuration Store" (DCS), um den PostgreSQL Cluster zu koordinieren und zu verwalten. Ein von Patroni unterstützter DCS ist Consul. Der Consul Client stellt die Verbindung zum Consul Cluster her und muß deshalb auf den VMs installiert werden, auf denen auch PostgreSQL installiert werden soll.
+Patroni uses a "Distributed Configuration Store" (DCS) in order to coordinate and manage the PostgreSQL cluster. One of the DCS supported by Patroni is Consul. The Consul client is the connection to the Consul cluster and therefore needs to be installed on the VMs, that get PostgreSQL installed later.
 
-Die Installation ist denkbar einfach: Wir laden uns die aktuelle Consul Version bei [Hashicorp](https://releases.hashicorp.com/consul/) für unser Betriebssystem herunter und installieren sie im Verzeichnis `/usr/local/bin`. Unter Linux also etwa
+The installation is simple: We fetch the current Consul version from [Hashicorp](https://releases.hashicorp.com/consul/) for our operating system and install it under `/usr/local/bin`. For Linux like this:
 
     root@postgresql-0 ~ → wget -c -q https://releases.hashicorp.com/consul/1.21.5/consul_1.21.5_linux_amd64.zip
     root@postgresql-0 ~ → unzip consul_1.21.5_linux_amd64.zip
@@ -30,7 +30,7 @@ Die Installation ist denkbar einfach: Wir laden uns die aktuelle Consul Version 
     root@postgresql-0 ~ → mv consul /usr/local/bin
     root@postgresql-0 ~ → chmod +x /usr/local/bin/consul
 
-Jetzt benötigen wir noch ein Unit-File, damit wir Consul per systemd starten und stoppen können. Erzeugen Sie dazu mit einem Editor als User "root" die Datei `/etc/systemd/system/consul.service`, kopieren Sie den untenstehenden Inhalt hinein und speichern Sie die Datei ab. 
+Now we need a unit file in order to start and stop Consul via systemd. Use an editor tor create the file `/etc/systemd/system/consul.service` as user "root", copy the following content into it and save it afterwards. 
 
     [Unit]
     Description="HashiCorp Consul - A service mesh solution"
@@ -53,13 +53,13 @@ Jetzt benötigen wir noch ein Unit-File, damit wir Consul per systemd starten un
     [Install]
     WantedBy=multi-user.target
 
-Anschliessend sollten Sie die systemd Konfiguration mit dem Kommando `systemctl daemon-reload` neu einlesen. 
+Afterwards you should reload the systemd configuration with the command `systemctl daemon-reload`. 
 
-Wie im systemd Unit-File angegeben, erwartet Consul seine Konfiguration im Verzeichnis `/etc/consul`. Zusätzlich soll der Dienst vom User "consul" in der Gruppe "consul" ausgeführt werden und sein Heimatverzeichnis soll `/opt/consul` werden. Legen Sie also zunächst den neuen User und die Gruppe mit dem Kommando `useradd -d /opt/consul consul` an, erzeugen Sie sein Homeverzeichnis mit `mkdir -p /opt/consul` und geben Sie ihm mit dem Kommando `chown -R consul:consul /opt/consul` Zugriff auf sein eigenes Homeverzeichnis.
+As you see in the systemd unit file Consul expects its configuration to be located in the directory `/etc/consul`. Additionally the service should be executed by the user "consul" and the group "consul" and its home directory should be `/opt/consul`. Create the new user and the new group with `useradd -d /opt/consul consul`, create the home directory with `mkdir -p /opt/consul` and assign access to it for consul with `chown -R consul:consul /opt/consul`.
 
-Erzeugen Sie nun die Consul Konfiguration in dem Sie als User "root" die Datei `/etc/consul/consul.hcl` in einem Editor öffnen. Kopieren Sie dann den untenstehenden Inhalt hinein und speichern Sie die Datei ab. 
+Now you can create the consul configuration file by opening `/etc/consul/consul.hcl` in an editor as the user "root". Copy the following content into it. 
 
-Vorher sollten Sie die Parameter `datacenter`, `node_name`, `retry_join` und `encrypt` auf Ihre Situation anpassen. Der Name des Datacenters muß zu Ihrem Consul Cluster passen und der Node Name könnte zum Beispiel dem Namen Ihrer VM entsprechen. Hinter `retry_join` müssen Sie die IP-Adressen Ihrer drei Consul Server aufführen und bei `encrypt` muß der Gossip Encryption Key Ihres Consul Clusters aufgeführt werden. Die Parameter `ca_file`, `cert_file` und `key_file` verweisen auf die Zertifikatsdateien Ihres Consul Clusters bzw. des Consul Clients.
+You should adapt the paramters `datacenter`, `node_name`, `retry_join` and `encrypt` to your current situation. The name of the datacenter has to match that of your consul cluster and the node name could be adapted to your database name. Otherwise you can leave it out an consul will use the hostname of your VM instead. Behind `retry_join` you should set the ip addresses of your three consul servers and behind `encrypt` you need to add the gossip encryption key of your consul clusters. The parameters `ca_file`, `cert_file` and `key_file` contain path and name of the certificate files that have been created for your consul clients, in order to be able to join the cluster.
 
     datacenter = "de-west"
     data_dir   =  "/opt/consul"
@@ -95,40 +95,40 @@ Vorher sollten Sie die Parameter `datacenter`, `node_name`, `retry_join` und `en
     }
 
 
-## PostgreSQL
+## Install PostgreSQL
 
-Für den Aufbau des PostgreSQL Clusters muß auf beiden Clusterknoten die Datenbanksoftware installiert werden. Dazu benutzen wir die Softwarepakete, die für die verwendete Linux Distribution verfügbar sind. Zum Beispiel:
+To set up the PostgreSQL cluster the database software has to be installed on both cluster nodes. We use the software packages that come with our Linux distribution for that. For Ubuntu/Debian like this:
 
     sudo apt-get -y install postgresql-14
     sudo apt-get -y install postgresql-contrib
 
-Nach der Installation sollte sichergestellt werden, dass der Datenbankdienst nicht automatisch gestartet wird. Wir möchten, dass Patroni die Datenbanksoftware stoppen und starten kann:
+After the installation we should ensure, that the database service is not automatically started. We want, that only Patroni can start and stop the database:
 
     sudo systemctl disable postgresql.service
 
-Weiterhin sollten Sie ein Verzeichnis anlegen, in welchem Patroni die Datenbank erzeugen kann. Das Verzeichnis sollte nicht von den Softwarepaketen der Linux Distribution verwendet oder verwaltet werden. Das Verzeichnis muß dem User "postgres" gehören und passende Rechte zugewiesen bekommen. Zum Beispiel so: 
+Furthermore you should create a directory that Patroni will use to create the database in. It should not collide with being used by your Linux distribution or its package management. The directory has to be owned by the user "postgres" and needs the proper rights assigned to it, like this: 
 
     mkdir -p /var/lib/postgresql/data
     chown postgres:postgres /var/lib/postgresql/data
     chmod 0700 /var/lib/postgresql/data
 
-Zusätzlich werden noch die Pakete `python-psycopg2` und `pgbackrest` benötigt:
+Additionally we need the software packages `python-psycopg2` and `pgbackrest` installed:
 
      sudo apt-get -y install python3-psycopg2
      sudo apt-get -y install pgbackrest
 
 
-## Patroni
+## Set up Patroni
 
-Als Letztes erfolgt die Installation von Patroni. Patroni ist in Python geschrieben und lässt sich am einfachsten mit dem Python Package Installer (pip) installieren. Je nach Linux Distribution muß dieser möglicherweise selbst erst installiert werden:
+Next we install Patroni. Patroni is written in Python and can be easily installed by the Python package installer (`pip`). Depending on your Linux distribution `pip` itself must be installed first:
 
     sudo apt-get -y install python3-pip
 
-Ist das geschehen, kann danach gleich Patroni installiert werden. Da wir Consul als DCS verwenden wollen, wählen wir die Consul Variante:
+With `pip` installed you can now install Patroni. As we use Consul as DCS we choose the this version:
 
     sudo pip3 install patroni[consul]
 
-Da Patroni kein Unit File für systemd mitinstalliert, müssen wir dies selbst hinzufügen. Öffnen Sie dazu in einem Editor die Datei `/etc/systemd/system/patroni.service` und kopieren Sie untenstehenden Inhalt hinein:
+As Patroni does not install a unit file for systemd we have to provide one ourselves. Open the file `/etc/systemd/system/patroni.service` in an editor and copy the following content into it:
 
     [Unit]
     Description=Runners to orchestrate a high-availability PostgreSQL
@@ -170,15 +170,15 @@ Da Patroni kein Unit File für systemd mitinstalliert, müssen wir dies selbst h
     [Install]
     WantedBy=multi-user.target
 
-Speichern Sie die Datei ab.
+Save the file and reload the systemd configuration with the command `systemctl daemon-reload`.
 
-Wie wir sehen, wird patroni als User "postgres" laufen. Erzeugen Sie bitte noch mit einem Editor die Datei `/etc/patroni_env.conf` und kopieren Sie den untenstehenden Inhalt hinein:
+As we can see from the file patroni will be run as user "postgres". Please create a file `/etc/patroni_env.conf` with an editor and copy the following line into it:
 
     PATH=$PATH:/usr/lib/postgresql/14/bin
 
-Speichern Sie die Datei ab. Hier wird der Pfad angegeben, an dem Patroni die PostgreSQL Binaries finden kann, die wir vorher mit den Softwarepaketen der Linux Distribution installiert haben.
+And then save the file. This is the path where the package management of your Linux distribution has installed the PostgreSQL binaries - and where Patroni should be able to find them.
 
-Weiterhin benötigt Patroni zum Start eine Konfigurationsdatei (`patroni.yml`). Die Konfiguration von Patroni hat viele Parameter, die in der entsprechenden [Dokumentation](https://patroni.readthedocs.io/en/latest/yaml_configuration.html) erläutert werden. Öffnen Sie die Datei als User "postgres" unter `/var/lib/postgresql/patroni.yml` und kopieren Sie den folgenden Inhalt hinein:
+Furthermore Patroni needs a configuration file (`patroni.yml`) in order to even start. The configuration of Patroni knows many parameters, which are explained in the [documentation](https://patroni.readthedocs.io/en/latest/yaml_configuration.html). Open the file as user "postgres" in `/var/lib/postgresql/patroni.yml` and copy the following content into it:
 
     scope: patroni42
     namespace: terra42
@@ -253,9 +253,9 @@ Weiterhin benötigt Patroni zum Start eine Konfigurationsdatei (`patroni.yml`). 
         clonefrom: false
         nosync: false
 
-Es gibt einige Stellen in dieser Konfigurationsdatei, an denen Sie Anpassungen vornehmen müssen, die Ihr aktuelles Setup wiederspiegeln. Bei `name` sollten Sie den Namen Ihrer VM oder einen anderen sprechenden Namen eintragen. An den Stellen wo im Beispiel noch `<instance-nebula-ip>` steht, muß die IP-Adresse eingetragen werden, die die jeweilige VM im Overlay-VPN bekommen hat. Also bei `listen`, `connect_address` (kommt zweimal vor) und `host`. Bei `<instance-nebula-network>` sollten Sie die Netzwerkadresse des Overlay-VPNs in CIDR-Notation eintragen (also zum Beispiel `100.102.0.0/22`). 
+You have to change several lines in this configuration file in order to reflect your current setup. Behind `name` you should add the name of your VM or a name for your cluster node. Where you see `<instance-nebula-ip>` you have to insert the ip address in the overlay vpn your respective VM has. The same behind `listen`, `connect_address` ((two times) and `host`. At `<instance-nebula-network>` you should insert the network address of your overlay VPN in CIDR notation eintragen (like this, e. g. `100.102.1.0/22`). 
 
-Wenn Sie die Konfigurationsdateien für beide PostgreSQL-Server erzeugt haben können Sie auf den VMs nacheinander Patroni mit dem Kommando `systemctl start patroni` starten. Patroni sollte dann PostgreSQL starten und eine Replikation einrichten. Den Erfolg können Sie zum Beispiel mit `patronictl` überprüfen:
+As soon as you have finalised the configuration files for both PostgreSQL servers you can start Patroni - on one VM after the other - with the command `systemctl start patroni`. Patroni should start PostgreSQL and establish a replication. You can check the success with `patronictl`:
 
     postgres@postgresql-0:~$ patronictl -c patroni.yml list
     + Cluster: patroni42 (7550645978936616804) ---+-----------+----+-----------+
@@ -265,18 +265,18 @@ Wenn Sie die Konfigurationsdateien für beide PostgreSQL-Server erzeugt haben k�
     | prod4-postgresql-0 | 100.102.1.36 | Leader  | running   |  7 |           |
     +--------------------+--------------+---------+-----------+----+-----------+
 
-## Tipps
+## Hints
 
-Natürlich gibt es rund um die Themen Consul und Patroni noch viele Dinge zu entdecken und einzurichten. Zum Beispiel kann es hilfreich sein, dnsmasq zu installieren und zu [konfgurieren](https://developer.hashicorp.com/consul/docs/manage/dns/forwarding/enable?page=services&page=discovery&page=dns-forwarding&page=enable) damit Consul DNS für alle Dienste auf den VMs funktioniert (auch auf den Datenbank Clients). Auf diese Weise lässt sich eventuell der Einsatz eines Loadbalancers einsparen:
+Obviously there are many things to discover and configure around the subjects Consul and Patroni. It can be helpful to install dnsmasq and to [configure](https://developer.hashicorp.com/consul/docs/manage/dns/forwarding/enable?page=services&page=discovery&page=dns-forwarding&page=enable) it to be able to use Consul DNS for all services on your VMs (especially on VMs, that want to access the database). This can allow to go without a loadbalancer between database clients and servers:
 
     debian@nom-b544a874-fe78:~$ dig +short primary.patroni42.service.consul
     100.102.0.36
     debian@nom-b544a874-fe78:~$ dig +short replica.patroni42.service.consul
     100.102.0.37
 
-Eine weitere interessante Komponente ist auch [Percona Monitoring and Management](https://docs.percona.com/percona-monitoring-and-management/3/index.html) welches sich hervorragend für Monitoring, Alerting und Analyse des Patroni Clusters eignet und dafür auch ein eigenes [Dashboard](https://docs.percona.com/percona-monitoring-and-management/3/reference/dashboards/dashboard-postgresql-patroni-details.html?h=patroni) mitbringt.
+Another interesting component is [Percona Monitoring and Management](https://docs.percona.com/percona-monitoring-and-management/3/index.html) which can be used for monitoring, alerting and inspection of the Patroni cluster and brings its own [dashboard](https://docs.percona.com/percona-monitoring-and-management/3/reference/dashboards/dashboard-postgresql-patroni-details.html?h=patroni) for it.
 
-Und Patroni selbst hat natürlich auch noch viele weitere Fähigkeiten. Mit [wal-g](https://wal-g.readthedocs.io/) kann Patroni beispielsweise Backups direkt nach S3 speichern. Oder mit Hilfe der [Citus Extension](https://docs.citusdata.com/en/stable/installation/multi_node.html), [Multi-Node Citus Cluster](https://patroni.readthedocs.io/en/latest/citus.html) aufzubauen. Es lohnt sich auf jeden Fall, die [Patroni Dokumentation](https://patroni.readthedocs.io/en/latest/index.html) durchzugehen. 
+And Patroni itself has a lot more to offer. Using [wal-g](https://wal-g.readthedocs.io/) Patroni can save backup directly to S3, for example. Or be used to set up [multi-node citus clusters](https://patroni.readthedocs.io/en/latest/citus.html)  using the [citus extension](https://docs.citusdata.com/en/stable/installation/multi_node.html). It is worth in any case to go through the [patroni documentation](https://patroni.readthedocs.io/en/latest/index.html) to see all its features. 
 
 
 

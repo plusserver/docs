@@ -253,7 +253,7 @@ Weiterhin benötigt Patroni zum Start eine Konfigurationsdatei (`patroni.yml`). 
         clonefrom: false
         nosync: false
 
-Es gibt einige Stellen in dieser Konfigurationsdatei, an denen Sie Anpassungen vornehmen müssen, die Ihr aktuelles Setup wiederspiegeln. Bei `name` sollten Sie den Namen Ihrer VM oder einen anderen sprechenden Namen eintragen. An den Stellen wo im Beispiel noch `<instance-nebula-ip>` steht, muß die IP-Adresse eingetragen werden, die die jeweilige VM im Overlay-VPN bekommen hat. Also bei `listen`, `connect_address` (kommt zweimal vor) und `host`. Bei `<instance-nebula-network>` sollten Sie die Netzwerkadresse des Overlay-VPNs in CIDR-Notation eintragen (also zum Beispiel `100.102.0.0/22`). 
+Es gibt einige Stellen in dieser Konfigurationsdatei, an denen Sie Anpassungen vornehmen müssen, die Ihr aktuelles Setup wiederspiegeln. Bei `name` sollten Sie den Namen Ihrer VM oder einen anderen sprechenden Namen eintragen. An den Stellen wo im Beispiel noch `<instance-nebula-ip>` steht, muß die IP-Adresse eingetragen werden, die die jeweilige VM im Overlay-VPN bekommen hat. Also bei `listen`, `connect_address` (kommt zweimal vor) und `host`. Bei `<instance-nebula-network>` sollten Sie die Netzwerkadresse des Overlay-VPNs in CIDR-Notation eintragen (also zum Beispiel `100.102.1.0/22`). 
 
 Wenn Sie die Konfigurationsdateien für beide PostgreSQL-Server erzeugt haben können Sie auf den VMs nacheinander Patroni mit dem Kommando `systemctl start patroni` starten. Patroni sollte dann PostgreSQL starten und eine Replikation einrichten. Den Erfolg können Sie zum Beispiel mit `patronictl` überprüfen:
 
