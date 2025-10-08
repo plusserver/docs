@@ -94,6 +94,7 @@ Vorher sollten Sie die Parameter `datacenter`, `node_name`, `retry_join` und `en
        grpc     = "{{ GetInterfaceIP \"nebula1\" }}"
     }
 
+Mit der fertigen Konfigurationsdatei sollten Sie Consul mit dem Kommando `systemctl start consul` starten und sehen können, wie Consul dem Cluster beitritt.
 
 ## PostgreSQL
 
@@ -102,7 +103,7 @@ Für den Aufbau des PostgreSQL Clusters muß auf beiden Clusterknoten die Datenb
     sudo apt-get -y install postgresql-14
     sudo apt-get -y install postgresql-contrib
 
-Nach der Installation sollte sichergestellt werden, dass der Datenbankdienst nicht automatisch gestartet wird. Wir möchten, dass Patroni die Datenbanksoftware stoppen und starten kann:
+Nach der Installation sollte sichergestellt werden, dass der Datenbankdienst nicht automatisch gestartet wird. Wir möchten, dass nur Patroni die Datenbanksoftware stoppen und starten kann:
 
     sudo systemctl disable postgresql.service
 
@@ -120,7 +121,7 @@ Zusätzlich werden noch die Pakete `python-psycopg2` und `pgbackrest` benötigt:
 
 ## Patroni
 
-Als Letztes erfolgt die Installation von Patroni. Patroni ist in Python geschrieben und lässt sich am einfachsten mit dem Python Package Installer (pip) installieren. Je nach Linux Distribution muß dieser möglicherweise selbst erst installiert werden:
+Als Letztes erfolgt die Installation von Patroni. Patroni ist in Python geschrieben und lässt sich am einfachsten mit dem Python Package Installer (`pip`) installieren. Je nach Linux Distribution muß dieser möglicherweise selbst erst installiert werden:
 
     sudo apt-get -y install python3-pip
 
