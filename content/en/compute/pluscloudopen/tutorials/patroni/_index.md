@@ -10,7 +10,7 @@ description: >
 
 ## Overview
 
-Many customers want to set up infrastructure, that is resilient to crashes and outages. This includes the operation of database clusters which span two different, independent datacenters. This tutorial shows, how to set up a PostgreSQL cluster in two different availability zones (AZs) using the overlay VPN ([Nebula](https://github.com/slackhq/nebula/)) and the clustermanager [Patroni](https://patroni.readthedocs.io/en/latest/).
+Many customers want to set up infrastructure, that is resilient to crashes and outages. This includes the operation of database clusters which span two different, independent datacenters. This tutorial shows how to set up a PostgreSQL cluster in two different availability zones (AZs) using the overlay VPN ([nebula](https://github.com/slackhq/nebula/)) and the clustermanager [patroni](https://patroni.readthedocs.io/en/latest/).
 
 ## Requirements
 
@@ -18,7 +18,7 @@ This tutorial assumes that you already have a functional Consul cluster which is
 
 ## Install Consul Client
 
-Patroni uses a "Distributed Configuration Store" (DCS) in order to coordinate and manage the PostgreSQL cluster. One of the DCS supported by Patroni is Consul. The Consul client is the connection to the Consul cluster and therefore needs to be installed on the VMs, that get PostgreSQL installed later.
+Patroni uses a "Distributed Configuration Store" (DCS) in order to coordinate and manage the PostgreSQL cluster. One of the DCS supported by patroni is Consul. The Consul client is the connection to the Consul cluster and therefore needs to be installed on the VMs, that get PostgreSQL installed later.
 
 The installation is simple: We fetch the current Consul version from [Hashicorp](https://releases.hashicorp.com/consul/) for our operating system and install it under `/usr/local/bin`. For Linux like this:
 
@@ -59,7 +59,7 @@ As you see in the systemd unit file Consul expects its configuration to be locat
 
 Now you can create the consul configuration file by opening `/etc/consul/consul.hcl` in an editor as the user "root". Copy the following content into it. 
 
-You should adapt the paramters `datacenter`, `node_name`, `retry_join` and `encrypt` to your current situation. The name of the datacenter has to match that of your consul cluster and the node name could be adapted to your database name. Otherwise you can leave it out an consul will use the hostname of your VM instead. Behind `retry_join` you should set the ip addresses of your three consul servers and behind `encrypt` you need to add the gossip encryption key of your consul clusters. The parameters `ca_file`, `cert_file` and `key_file` contain path and name of the certificate files that have been created for your consul clients, in order to be able to join the cluster.
+You should adapt the paramters `datacenter`, `node_name`, `retry_join` and `encrypt` to your current situation. The name of the datacenter has to match that of your consul cluster and the node name could be adapted to your database name. Otherwise you can leave it out an consul will use the hostname of your VM instead. Behind `retry_join` you should set the ip addresses of your three consul servers and behind `encrypt` you need to add the gossip encryption key of your consul cluster. The parameters `ca_file`, `cert_file` and `key_file` contain path and name of the certificate files that have been created for your consul clients, in order to be able to join the cluster.
 
     datacenter = "de-west"
     data_dir   =  "/opt/consul"
@@ -94,6 +94,7 @@ You should adapt the paramters `datacenter`, `node_name`, `retry_join` and `encr
        grpc     = "{{ GetInterfaceIP \"nebula1\" }}"
     }
 
+With the configuration file ready, you should be able start Consul with `systemctl start consul` and see it join the Consul cluster.
 
 ## Install PostgreSQL
 
@@ -102,11 +103,11 @@ To set up the PostgreSQL cluster the database software has to be installed on bo
     sudo apt-get -y install postgresql-14
     sudo apt-get -y install postgresql-contrib
 
-After the installation we should ensure, that the database service is not automatically started. We want, that only Patroni can start and stop the database:
+After the installation we should ensure, that the database service is not automatically started. We want, that only patroni can start and stop the database:
 
     sudo systemctl disable postgresql.service
 
-Furthermore you should create a directory that Patroni will use to create the database in. It should not collide with being used by your Linux distribution or its package management. The directory has to be owned by the user "postgres" and needs the proper rights assigned to it, like this: 
+Furthermore you should create a directory that patroni will use to create the database in. It should not collide with being used by your Linux distribution or its package management. The directory has to be owned by the user "postgres" and needs the proper rights assigned to it like this: 
 
     mkdir -p /var/lib/postgresql/data
     chown postgres:postgres /var/lib/postgresql/data
@@ -124,7 +125,7 @@ Next we install Patroni. Patroni is written in Python and can be easily installe
 
     sudo apt-get -y install python3-pip
 
-With `pip` installed you can now install Patroni. As we use Consul as DCS we choose the this version:
+With `pip` installed you can now install patroni. As we use Consul as DCS we choose this version:
 
     sudo pip3 install patroni[consul]
 
@@ -253,7 +254,7 @@ Furthermore Patroni needs a configuration file (`patroni.yml`) in order to even 
         clonefrom: false
         nosync: false
 
-You have to change several lines in this configuration file in order to reflect your current setup. Behind `name` you should add the name of your VM or a name for your cluster node. Where you see `<instance-nebula-ip>` you have to insert the ip address in the overlay vpn your respective VM has. The same behind `listen`, `connect_address` ((two times) and `host`. At `<instance-nebula-network>` you should insert the network address of your overlay VPN in CIDR notation eintragen (like this, e. g. `100.102.1.0/22`). 
+You have to change several lines in this configuration file in order to reflect your current setup. Behind `name` you should add the name of your VM or a name for your cluster node. Where you see `<instance-nebula-ip>` you have to insert the ip address of your respective VM in the overlay vpn. The same behind `listen`, `connect_address` (two times) and `host`. At `<instance-nebula-network>` you should insert the network address of your overlay VPN in CIDR notation (like this, e. g. `100.102.1.0/22`). 
 
 As soon as you have finalised the configuration files for both PostgreSQL servers you can start Patroni - on one VM after the other - with the command `systemctl start patroni`. Patroni should start PostgreSQL and establish a replication. You can check the success with `patronictl`:
 
@@ -267,7 +268,7 @@ As soon as you have finalised the configuration files for both PostgreSQL server
 
 ## Hints
 
-Obviously there are many things to discover and configure around the subjects Consul and Patroni. It can be helpful to install dnsmasq and to [configure](https://developer.hashicorp.com/consul/docs/manage/dns/forwarding/enable?page=services&page=discovery&page=dns-forwarding&page=enable) it to be able to use Consul DNS for all services on your VMs (especially on VMs, that want to access the database). This can allow to go without a loadbalancer between database clients and servers:
+Obviously there are many things to discover and configure around the subjects Consul and patroni. It can be helpful to install dnsmasq and to [configure](https://developer.hashicorp.com/consul/docs/manage/dns/forwarding/enable?page=services&page=discovery&page=dns-forwarding&page=enable) it to be able to use Consul DNS for all services on your VMs (especially on VMs, that want to access the database). This can allow you to go without a loadbalancer between database clients and servers (just use `primary.patroni42.service.consul` in your database access configuration):
 
     debian@nom-b544a874-fe78:~$ dig +short primary.patroni42.service.consul
     100.102.0.36
@@ -276,7 +277,7 @@ Obviously there are many things to discover and configure around the subjects Co
 
 Another interesting component is [Percona Monitoring and Management](https://docs.percona.com/percona-monitoring-and-management/3/index.html) which can be used for monitoring, alerting and inspection of the Patroni cluster and brings its own [dashboard](https://docs.percona.com/percona-monitoring-and-management/3/reference/dashboards/dashboard-postgresql-patroni-details.html?h=patroni) for it.
 
-And Patroni itself has a lot more to offer. Using [wal-g](https://wal-g.readthedocs.io/) Patroni can save backup directly to S3, for example. Or be used to set up [multi-node citus clusters](https://patroni.readthedocs.io/en/latest/citus.html)  using the [citus extension](https://docs.citusdata.com/en/stable/installation/multi_node.html). It is worth in any case to go through the [patroni documentation](https://patroni.readthedocs.io/en/latest/index.html) to see all its features. 
+And patroni itself has a lot more to offer. Using [wal-g](https://wal-g.readthedocs.io/) patroni can save backup directly to S3, for example. Or be used to set up [multi-node citus clusters](https://patroni.readthedocs.io/en/latest/citus.html)  using the [citus extension](https://docs.citusdata.com/en/stable/installation/multi_node.html). It is worth in any case to go through the [patroni documentation](https://patroni.readthedocs.io/en/latest/index.html) to see all its features. 
 
 
 
