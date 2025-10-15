@@ -12,18 +12,18 @@ This allows you to prepare for important updates in good time and ensure that yo
 
 ## Release-Plan 2025
 
-| Monat | Datum | Change-Typ | Info |
+| Month | Date | Change-Typ | Info |
 | --- | --- | --- | --- |
-| Januar | - | - | - |
-| Februar | 19.02.2025 | Change | [Launch PSKE Version 1.18.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-18-0/) |
-| März | - | - | - |
-| Mai | - | - | - |
-| April | 03.04.2025 | Change | [Launch PSKE Version 1.18.1](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-18-1/) |
-| Juni | - | - | - |
-| Juli | - | - | - |
+| January | - | - | - |
+| February | 19.02.2025 | Change | [Launch PSKE Version 1.18.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-18-0/) |
+| March | - | - | - |
+| April | - | - | - |
+| May | 03.04.2025 | Change | [Launch PSKE Version 1.18.1](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-18-1/) |
+| June | - | - | - |
+| July | - | - | - |
 | August | - | - | - |
 | September | 30.09.2025 | Change | [Launch PSKE Version 1.19.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-19-0/) |
-| Oktober | - | - | - |
+| October | - | - | - |
 
 
 ## Release Plan 2024
