@@ -15,7 +15,7 @@ In this section, you will learn how to register and gain access to our customer 
 
 1. Open the **shop**.
 2. Click on the **account symbol** (person icon) in the top right-hand corner.
-3. Select ‘Log in / Register’ from the menu.
+3. Select "Log in / Register" from the menu.
 ![Shop - Homepage](../img/customer-registration/shop-homepage.png)
 4. You will then be redirected to our login page.
 5. Click on ‘Register’ at the bottom of the page to create a new account.
