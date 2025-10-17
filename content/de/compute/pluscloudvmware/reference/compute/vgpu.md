@@ -22,7 +22,7 @@ Um vGPU für Ihre Workloads zu aktivieren, können Sie ein Ticket in unserem Hel
 
 Windows - <https://www.nvidia.com/en-us/drivers/details/254614/>
 
-Linux   - <https://www.nvidia.com/en-us/drivers/details/254606/)>
+Linux   - <https://www.nvidia.com/en-us/drivers/details/254606/>
 
 ## Treiberinstallation
 
