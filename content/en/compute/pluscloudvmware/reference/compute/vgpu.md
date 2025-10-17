@@ -20,9 +20,9 @@ For enabling vGPU for your workloads, you can create a ticket in our Helpdesk or
 
 ## Driver Download
 
-Windows - <https://www.nvidia.com/download/driverResults.aspx/221942/>
+Windows - <https://www.nvidia.com/en-us/drivers/details/254614/>
 
-Linux - <https://www.nvidia.com/Download/driverResults.aspx/218856/>
+Linux   - <https://www.nvidia.com/en-us/drivers/details/254606/>
 
 ## Driver Installation
 
