@@ -22,7 +22,7 @@ For enabling vGPU for your workloads, you can create a ticket in our Helpdesk or
 
 Windows - <https://www.nvidia.com/en-us/drivers/details/254614/>
 
-Linux   - <https://www.nvidia.com/en-us/drivers/details/254606/)>
+Linux   - <https://www.nvidia.com/en-us/drivers/details/254606/>
 
 ## Driver Installation
 
