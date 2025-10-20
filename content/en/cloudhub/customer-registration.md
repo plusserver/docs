@@ -1,6 +1,6 @@
 ---
-title: "Neukundenregistrierung"
-linkTitle: "Neukundenregistrierung"
+title: "New customer registration"
+linkTitle: "New customer registration"
 type: "docs"
 weight: 1
 description: >
