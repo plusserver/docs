@@ -9,7 +9,7 @@ description: >
 
 ## Einleitung
 
-Willkommen zum [Bestellformular der Dedicated Server](https://cloudhub.plusserver.com/cloud-services/dedicated-server/order). Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie einen neuen Dedicated Server bestellt werden kann.
+Willkommen zum [Bestellformular der Dedicated Server](https://cloudhub.plusserver.com/cloud-services/dedicated-server/order). Hier wird beschrieben, welche Konfigurationsmöglichkeiten es gibt und wie ein neuer Dedicated Server bestellt werden kann.
 
 Im Folgenden führen wir Sie Schritt für Schritt durch den Bestellprozess und erläutern die einzelnen Auswahlmöglichkeiten und Eingabefelder.
 
