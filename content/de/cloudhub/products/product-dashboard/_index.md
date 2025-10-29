@@ -105,8 +105,28 @@ Wenn Sie die entsprechenden Rechte besitzen, dann sehen Sie als zweites einen Ta
 ![Level 3: Tab 2 - Credentials](./img/lvl-3-credentials.png)
 ![Level 3: Tab 2 - Credentials - Keine Rechte](./img/lvl-3-credentials-no-permissions.png)
 
-Die nächsten Tabs „Monitoring“ und „Verbrauchsdaten“ sind aktuell in Arbeit und kommen in den nächsten Monaten. Da uns aber wichtig war, Ihnen direkt die finale Struktur des Dashboards zu präsentieren, haben wir entsprechende Infobanner mit mehr Informationen eingebaut.\
-![Level 3: Tab 4 - Verbrauchsdaten](./img/lvl-3-consumption-data.png)
+Der nächste Tab „Monitoring“ ist aktuell in Arbeit und kommt in den nächsten Monaten. Da uns aber wichtig war, Ihnen direkt die finale Struktur des Dashboards zu präsentieren, haben wir entsprechende Infobanner mit mehr Informationen eingebaut.\
+![Level 3: Tab 3 - Monitoring](./img/lvl-3-monitoring.png)
+
+Die „Verbrauchsdaten“ werden in Balkendiagrammen der letzten Monate dargestellt. Dabei sind die verschiedenen Verbrauchstypen (in Stunden) durch unterschiedliche Farben klar voneinander abgegrenzt.\
+![Level 3: Tab 4 - Verbrauchsdaten 1](./img/lvl-3-consumption-data1.png)
+![Level 3: Tab 4 - Verbrauchsdaten 2](./img/lvl-3-consumption-data2.png)
+
+Alternativ steht eine Tabellenansicht zur Verfügung, in der die Verbrauchsdaten übersichtlich in tabellarischer Form dargestellt sind. Diese Daten können bei Bedarf als .CSV-Datei heruntergeladen werden.\
+![Level 3: Tab 4 - Verbrauchsdaten 3](./img/lvl-3-consumption-data3.png)
+
+Je nach Produkt werden unterschiedliche Verbrauchstypen dargestellt:
+|Produkt|Verbrauchstypen|
+|-------|-----|
+|PCV|aktuell keine Verbrauchsdaten verfügbar|
+|PCO|vGPU, vRAM, Cluster, Loadbalancer, Public IP-Adressen, Storage|
+|PSKE|vGPU, vRAM, Cluster, Loadbalancer, Public IP-Adressen, Storage|
+|Private Registry|Node Size, Storage|
+|Datenbanken|aktuell keine Verbrauchsdaten verfügbar|
+|Caching|aktuell keine Verbrauchsdaten verfügbar|
+|Keycloak|aktuell keine Verbrauchsdaten verfügbar|
+|Dedicated Server|aktuell keine Verbrauchsdaten verfügbar|
+
 
 Im Tab "Changelog" wird eine Auflistung aller vorgenommenen technischen Änderungen am Produkt mit dem Zeitpunkt und einer kurzen Zusammenfassung angezeigt.\
 ![Level 3: Tab 5 - Changelog](./img/lvl-3-changelog.png)

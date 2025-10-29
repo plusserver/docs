@@ -105,8 +105,27 @@ If not you will get a information via banner, that you don’t have the permissi
 ![Level 3: Tab 2 - Credentials](img/lvl-3-credentials.png)
 ![Level 3: Tab 2 - Credentials - No permissions](img/lvl-3-credentials-no-permissions.png)
 
-The next tabs, “Monitoring” and “Consumption data”, are currently in development and will be added in the next months. However, since it was important to us to present you with the final structure of the dashboard right away, we have included corresponding info banners with more information.\
-![Level 3: Tab 4 - Consumption Data](img/lvl-3-consumption-data.png)
+The next tab, “Monitoring,” is currently in development and will be available in the coming months. However, since it was important to us to present the final structure of the dashboard to you directly, we have included corresponding info banners with more information.\
+![Level 3: Tab 3 - Monitoring](img/lvl-3-monitoring.png)
+
+The “consumption data” is shown in bar charts for the last few months. The different types of consumption (in hours) are clearly distinguished from each other by different colors.\
+![Level 3: Tab 4 - Consumption Data 1](./img/lvl-3-consumption-data1.png)
+![Level 3: Tab 4 - Consumption Data 2](./img/lvl-3-consumption-data2.png)
+
+Alternatively, a table view is available in which the consumption data is clearly displayed in tabular form. This data can be downloaded as a .CSV file if required.\
+![Level 3: Tab 4 - Consumption Data 3](./img/lvl-3-consumption-data3.png)
+
+Different consumption types are displayed depending on the product:
+|Product|Consumption Types|
+|-------|-----|
+|PCV|no consumption data currently available|
+|PCO|vGPU, vRAM, Cluster, Loadbalancer, Public IP addresses, Storage|
+|PSKE|vGPU, vRAM, Cluster, Loadbalancer, Public IP addresses, Storage|
+|Private Registry|Node Size, Storage|
+|Datenbanken|no consumption data currently available|
+|Caching|no consumption data currently available|
+|Keycloak|no consumption data currently available|
+|Dedicated Server|no consumption data currently available|
 
 The "Changelog" tab displays a list of all technical changes made to the product with the date and a brief summary.\
 ![Level 3: Tab 5 - Changelog](img/lvl-3-changelog.png)
