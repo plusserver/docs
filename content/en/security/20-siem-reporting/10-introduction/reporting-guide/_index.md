@@ -4,7 +4,6 @@ linkTitle: "Reporting Guide"
 date: 2024-11-26
 type: docs
 description: "Guide for using the Reporting Dashboards"
-type: docs
 ---
 # Reporting Guide
 
