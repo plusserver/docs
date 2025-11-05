@@ -24,7 +24,7 @@ This allows you to prepare for important updates in good time and ensure that yo
 | August | - | - | - |
 | September | 30.09.2025 | Change | [Launch PSKE Version 1.19.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-19-0/) |
 | October | - | - | - |
-
+| November | 03.11.2025 | Change | [Launch PSKE Version 1.20.0](https://docs.plusserver.com/en/container/managed-kubernetes/releasenotes/notes/1-20-0/) |
 
 ## Release Plan 2024
 
