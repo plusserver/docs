@@ -4,7 +4,6 @@ linkTitle: "Anleitung zum Reporting"
 date: 2024-11-26
 type: docs
 description: "Anleitung zur Verwendung der Reporting Dashboards"
-type: docs
 ---
 # Reporting Guide
 
