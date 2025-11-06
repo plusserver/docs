@@ -1,6 +1,6 @@
 ---
-title: "Kyverno im PSKE-Cluster mit hibernation verwenden"
-linkTitle: "Kyverno im PSKE-Cluster mit hibernation verwenden"
+title: "Using Kyverno in your PSKE cluster with hibernation"
+linkTitle: "Using Kyverno in your PSKE cluster with hibernation"
 type: "docs"
 weight: 20
 date: 2023-02-21
