@@ -13,7 +13,7 @@ In this section, you will learn how to register and gain access to our customer 
 
 ### 1. Start registration in the shop
 
-1. Open the **shop**.
+1. Open the [shop](https://shop.plusserver.com/).
 2. Click on the **account symbol** (person icon) in the top right-hand corner.
 3. Select "Log in / Register" from the menu.
 ![Shop - Homepage](../img/customer-registration/shop-homepage.png)
