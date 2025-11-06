@@ -34,9 +34,9 @@ In addition, further options and prices can be viewed via a dropdown menu:
 - Performance Storage (Georedundant)
 - High Performance Storage (Georedundant)
 - Windows server license
-- Red has Rhel license
+- Red Hat RHEL license
 - VM backup
-- backup volume
+- Backup volume
 - Public IP addresses
 
 ![PCV CPU Selection](img/pcv-cpu.png)
