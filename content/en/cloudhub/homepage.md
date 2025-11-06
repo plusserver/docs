@@ -2,7 +2,7 @@
 title: "Homepage"
 linkTitle: "Homepage"
 type: "docs"
-weight: 3
+weight: 2
 description: >
     Information on the homepage in CloudHub
 ---
