@@ -22,6 +22,16 @@ Allgemein gibt es hier zwei Bereiche:
 - die Verwaltung der Kontakte selbst
 - die Sortierung der angegebenen Kontakte in eine Reihenfolge, die bei Eskalationen oder anderen Notfällen kontaktiert werden soll
 
+## Hauptkontakt
+
+Dieser Kontakt ist unabhängig von den anderen Ansprechpartner.
+
+Er ist der Hauptkontakt in all unseren Systemen, meist die Person, die sich registriert hat oder die den Vertrag mit uns geschlossen hat.
+
+Es darf nur **einen Hauptkontakt** geben und dieser Hauptkontakt darf nicht gelöscht werden. Im CloudHub können die Angaben aktualisiert werden. Es muss jedoch immer dieser Hauptkontakt hinterlegt sein.
+
+Er ist immer blau markiert in der Tabelle.
+
 ## Ansprechpartner hinzufügen, editieren und löschen
 
 ### Neuen Ansprechpartner anlegen
@@ -32,7 +42,28 @@ Zunächst werden ein paar grundlegende Kontaktinformationen abgefragt
 
 Danach kann man auswählen, für welche Belange diese Person kontaktiert werden soll/darf. In der zweiten Spalte sieht man bequemerweise auch, ob und welche andere Ansprechpartner bereits für dieses Thema informiert werden.
 
-![choose contact persons type](../../img/contact-persons/contact-persons-type.png)
+| Name | Bedeutung |
+| ---- | --------- |
+| Standard | Unser Erst-Kontakt bei allen Fällen, die keine Sonderfälle sind bzw. die andern Kontaktdaten betreffend |
+| DPA-Kontakt | Ansprechpartner in Belangen des Auftragsverarbeitungsvertrag. (Data Processing Agreement) |
+| Änderungsberechtigt |  |
+| Buchhaltung | Ansprechpartner für Verträge, Rechnungen, Kontakt zu Preiserhöhungen etc. |
+| End-/Subkunde |  |
+| Inhaber | Inhaber des Unternehmens |
+| Meldeberechtigt |  |
+| Missbrauch | Unser Ansprechpartner bei Themen rund um „Abuse“ |
+| Nachrichtenberechtigt | Darf Ticket Benachrichtigungen erhalten |
+| Technik | Bei vielen sicherlich mit dem „Notfallkontakt 24/7“ überschneidend. Primär unser Ansprechpartner bei technischen Dingen |
+| Nachrichtenberechtigt | Berechtigt Ticket-Notifications zu erhalten |
+| Notfallkontakt 24/7 | (Technischer) Notfallkontakt, Information zu Wartungsankündigungen |
+| Patch-Management | Technischer Ansprechpartner für alle Patch-Themen (Die Devs beim Kunden, die sich nur um die Patches kümmern) |
+| Technik | Ansprechpartner für technische Fragen |
+| Unbekannt |  |
+| Zeichnungsberechtigter | Ansprechpartner, der für Anforderungen, die eine Unterschrift benötigen, unser Ansprechpartner ist |
+| Sicherheitsvorfall | Ansprechpartner bei Incident |
+| Sonstiges | Wenn keiner der Typen passt, kann dieser ausgewählt werden und dan im Kommentarfeld weitere Infos hinterlegt werden, für welche Themen dieser Kontakt der Ansprechpartner ist. |
+
+<!-- ![choose contact persons type](../../img/contact-persons/contact-persons-type.png) -->
 
 ### Ansprechpartner editieren
 

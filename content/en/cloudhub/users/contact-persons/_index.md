@@ -22,6 +22,16 @@ In general, there are two areas here:
 - the management of the contacts themselves
 - Sorting the specified contacts into a sequence to be contacted in the event of escalations or other emergencies
 
+## Main contact
+
+This contact is independent of the other contacts.
+
+They are the main contact in all our systems, usually the person who registered or who concluded the contract with us.
+
+There can only be **one main** contact, and this main contact cannot be deleted. The details can be updated in CloudHub. However, this main contact must always be stored.
+
+It is always marked in blue in the table.
+
 ## Add, edit and delete a Contact Person
 
 ### Add a new Contact Person
@@ -32,7 +42,28 @@ First, a few basic contact details are requested
 
 You can then select the issues for which this person should/may be contacted. In the second column, you can also conveniently see whether and which other contact persons have already been informed for this topic.
 
-![choose contact persons type](../../img/contact-persons/contact-persons-type.png)
+| Name | Meaning |
+| ---- | --------- |
+| Default | Our initial contact for all cases that are not special cases or that concern other contact details |
+| DPA Contact | Contact person for matters relating to the data processing agreement. |
+| Change Entitled |  |
+| Accounting | Contact person for contracts, invoices, price increases, etc. |
+| End-/SubCustomer |  |
+| Owner | owner of the company |
+| Ticket Entitled |  |
+| Abuse | Our contact person for issues relating to "abuse" |
+| Ticket Notification | May receive ticket notifications |
+| Engineering | For many, this will certainly overlap with the ‘24/7 emergency contact’. Primarily our point of contact for technical matters. |
+| Ticket Notification | Eligible to receive ticket notifications |
+| Emergency Contact 24/7 | (Technical) emergency contact, information on maintenance announcements |
+| Patch-Management | Technical contact for all patch-related issues (the developers at the customer's site who only deal with patches) |
+| Engineering | Contact person for technical questions |
+| Unknown |  |
+| Subscription Approver | Contact person who is our point of contact for requests requiring a signature |
+| Security Incident | Contact person in case of incident |
+| Others | If none of the types fit, this one can be selected and further information can be entered in the comment field to indicate which topics this contact is responsible for. |
+
+<!-- ![choose contact persons type](../../img/contact-persons/contact-persons-type.png) -->
 
 ### Edit a Contact Person
 
