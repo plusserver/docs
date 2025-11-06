@@ -2,7 +2,7 @@
 title: "Topbar"
 linkTitle: "Topbar"
 type: "docs"
-weight: 1
+weight: 2
 description: >
     Informationen for the topbar in CloudHub
 ---
