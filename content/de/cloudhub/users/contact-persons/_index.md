@@ -52,8 +52,6 @@ Danach kann man auswählen, für welche Belange diese Person kontaktiert werden 
 | Inhaber | Inhaber des Unternehmens |
 | Meldeberechtigt |  |
 | Missbrauch | Unser Ansprechpartner bei Themen rund um „Abuse“ |
-| Nachrichtenberechtigt | Darf Ticket Benachrichtigungen erhalten |
-| Technik | Bei vielen sicherlich mit dem „Notfallkontakt 24/7“ überschneidend. Primär unser Ansprechpartner bei technischen Dingen |
 | Nachrichtenberechtigt | Berechtigt Ticket-Notifications zu erhalten |
 | Notfallkontakt 24/7 | (Technischer) Notfallkontakt, Information zu Wartungsankündigungen |
 | Patch-Management | Technischer Ansprechpartner für alle Patch-Themen (Die Devs beim Kunden, die sich nur um die Patches kümmern) |
@@ -62,8 +60,6 @@ Danach kann man auswählen, für welche Belange diese Person kontaktiert werden 
 | Zeichnungsberechtigter | Ansprechpartner, der für Anforderungen, die eine Unterschrift benötigen, unser Ansprechpartner ist |
 | Sicherheitsvorfall | Ansprechpartner bei Incident |
 | Sonstiges | Wenn keiner der Typen passt, kann dieser ausgewählt werden und dan im Kommentarfeld weitere Infos hinterlegt werden, für welche Themen dieser Kontakt der Ansprechpartner ist. |
-
-<!-- ![choose contact persons type](../../img/contact-persons/contact-persons-type.png) -->
 
 ### Ansprechpartner editieren
 

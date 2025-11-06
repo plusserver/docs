@@ -19,7 +19,7 @@ The contact persons can be found in the CloudHub sidebar under **"Contacts Perso
 
 In general, there are two areas here:
 
-- the management of the contacts themselves
+- The management of the contacts themselves
 - Sorting the specified contacts into a sequence to be contacted in the event of escalations or other emergencies
 
 ## Main contact
@@ -53,8 +53,6 @@ You can then select the issues for which this person should/may be contacted. In
 | Ticket Entitled |  |
 | Abuse | Our contact person for issues relating to "abuse" |
 | Ticket Notification | May receive ticket notifications |
-| Engineering | For many, this will certainly overlap with the ‘24/7 emergency contact’. Primarily our point of contact for technical matters. |
-| Ticket Notification | Eligible to receive ticket notifications |
 | Emergency Contact 24/7 | (Technical) emergency contact, information on maintenance announcements |
 | Patch-Management | Technical contact for all patch-related issues (the developers at the customer's site who only deal with patches) |
 | Engineering | Contact person for technical questions |
