@@ -2,7 +2,7 @@
 title: "Help"
 linkTitle: "Help"
 type: "docs"
-weight: 5
+weight: 7
 description: >
     Informationen for Help section in CloudHub
 ---

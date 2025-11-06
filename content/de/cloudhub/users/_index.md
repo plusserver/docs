@@ -2,7 +2,7 @@
 title: "Users"
 linkTitle: "Users"
 type: "docs"
-weight: 2
+weight: 5
 description: >
     Informationen zu Users im CloudHub
 ---

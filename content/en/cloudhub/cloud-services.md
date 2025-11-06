@@ -2,7 +2,7 @@
 title: "Cloud Services"
 linkTitle: "Cloud Services"
 type: "docs"
-weight: 2
+weight: 4
 description: >
     Informationen for Cloud Services in CloudHub
 ---
