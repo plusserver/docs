@@ -33,10 +33,7 @@ rbac:
 controller:
   publishService:
     enabled: true
-  # Octavia config
   config:
-    use-forwarded-headers: "true"
-    compute-full-forwarded-for: "true"
     use-proxy-protocol: "true"
   service:
     annotations:
