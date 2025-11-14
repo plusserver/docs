@@ -5,7 +5,7 @@ type: "docs"
 weight: 4
 date: 2025-07-21
 description: >
-  Informationen zu IP-Übersicht im CloudHub
+  Informationen zur IP-Übersicht im CloudHub
 ---
 
 Die Seite **„IP-Übersicht“** bietet Ihnen eine vollständige Einsicht in alle IP-Adressen und Netzbereiche, die Ihrem Kundenaccount zugewiesen sind. Die Seite ist in zwei Tabs unterteilt: **IP-Adressen** und **Netze**.

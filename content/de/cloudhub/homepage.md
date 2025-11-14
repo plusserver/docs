@@ -1,13 +1,13 @@
 ---
-title: "Homepage"
-linkTitle: "Homepage"
+title: "Startseite"
+linkTitle: "Startseite"
 type: "docs"
 weight: 2
 description: >
-    Informationen zur Homepage im CloudHub
+    Informationen zur Startseite im CloudHub
 ---
 
-## Homepage
+## Startseite
 
 Die [Homepage](https://cloudhub.plusserver.com/home) ist Ihr zentraler Einstiegspunkt in das Kundenportal und bietet direkten Zugang zu Bestellmöglichkeiten, Verwaltungsfunktionen und wichtigen Informationen rund um unsere Produkte und Services.
 
@@ -23,20 +23,20 @@ Von hier aus gelangen Sie direkt zu folgenden Kernfunktionen:
 
 Oben rechts befindet sich zusätzlich ein Button, der Sie direkt zur [Service-Status-Seite](https://status.plusserver.com/) führt.
 
-### Produktübersicht (Top 3 Produkte)
+### Produktübersicht (Top-3-Produkte)
 
-![Produktübersicht - top 3 produkte](../img/homepage/product-overview-top-3.png)
+![Produktübersicht - Top-3-Produkte](../img/homepage/product-overview-top-3.png)
 
-Unterhalb der Willkommenssektion werden drei unserer wichtigsten Produkte prominent dargestellt.
+Unterhalb des Willkommensabschnitts werden drei unserer wichtigsten Produkte prominent dargestellt.
 Jedes Produkt enthält:
 
 - eine kurze Beschreibung
 - einen Button zur Bestellung
 - Links zu Datenblättern und Dokumentationen
 
-Diese Sektion bietet einen schnellen Überblick über zentrale Angebote.
+Der Abschnitt bietet einen schnellen Überblick über zentrale Angebote.
 
-### Akkordeon: Erweiterte Informationen & Unterstützung
+### Akkordeon: Erweiterte Informationen und Unterstützung
 
 Im nächsten Abschnitt stehen Ihnen drei ausklappbare Bereiche zur Verfügung:
 

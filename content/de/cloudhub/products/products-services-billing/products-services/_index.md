@@ -46,7 +46,7 @@ Durch Klicken auf eine Reihe in der Produktübersicht-Tabelle gelangen Sie zu de
 
 ### Allgemeine Produktinformationen
 
-Im oberen Bereich der Seite werden zentrale Informationen zum Produkt angezeigt, sowie geben wir Ihnen die Möglichkeit den Projektalias, Ihr persönliches Kennzeichen für den Vertrag, zu bearbeiten.
+Im oberen Bereich der Seite werden zentrale Informationen zum Produkt angezeigt. Zudem geben wir Ihnen die Möglichkeit, den Projektalias, Ihr persönliches Kennzeichen für den Vertrag, zu bearbeiten.
 
 ![Detailansicht des Produktes](img/detail-view.png)
 
@@ -61,12 +61,12 @@ Hier werden die detaillierten Inhalte des Vertrags in einer Tabelle dargestellt.
 
 #### Zugangsdaten
 
-Falls für das Produkt Zugangsdaten hinterlegt sind und Sie die nötigen Berechtigungen haben diese einzusehen, werden die Zugangsdaten hier angezeigt.\
+Falls für das Produkt Zugangsdaten hinterlegt sind und Sie die nötigen Berechtigungen haben, diese einzusehen, werden die Zugangsdaten hier angezeigt.\
 ![Weitere Inhalte - Zugangsdaten](img/further-content-credentials.png)
 
 #### Rechnungen
 
 Übersicht aller zu diesem Produkt gehörenden Rechnungen, inklusive Downloadmöglichkeit.\
 ![Weitere Inhalte - Rechnungen](img/further-content-invoices.png)
-Über den Knopf "Alle Rechnungen anzeigen" gelangen Sie zur Seite [Rechnungen](../invoices), in welcher Sie eine Übersicht über alle Rechnungen von allen Produkten, die Sie bei uns erworben haben.\
+Über den Link "Alle Rechnungen anzeigen" gelangen Sie zur Seite [Rechnungen](../invoices), in welcher Sie eine Übersicht über alle Rechnungen von allen Produkten, die Sie bei uns erworben haben.\
 ![Weitere Inhalte - Weg zur Rechnungsübersicht](img/further-content-show-all-invoices.png)

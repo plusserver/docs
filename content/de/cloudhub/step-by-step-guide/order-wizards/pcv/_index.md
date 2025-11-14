@@ -45,15 +45,15 @@ Zusätzlich können über ein Dropdown-Menü weitere Optionen und Preise eingese
 
 Hier tragen Sie die Daten der verantwortlichen Ansprechperson ein:
 
-- Vor- und Nachname (*Pflichtfeld*)
-- E-Mail-Adresse (*Pflichtfeld*)
-- Kurzbeschreibung (*optional*)
+- Vor- und Nachname _(Pflichtfeld)_
+- E-Mail-Adresse _(Pflichtfeld)_
+- Kurzbeschreibung _(optional)_
 
 ![PCV Administrator Angaben](img/pcv-admin.png)
 
-## Schritt 3: Onboarding Workshop
+## Schritt 3: Onboarding-Workshop
 
-Optional kann ein Onboarding Workshop für 99 € hinzugebucht werden.
+Optional kann ein Onboarding-Workshop für 0,00 € hinzugebucht werden.
 Dieser Workshop unterstützt Sie bei der Einführung und Nutzung der pluscloud VMware.
 
 ![PCV Onboarding](img/pcv-onboarding.png)
@@ -73,6 +73,6 @@ Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigur
 Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
 Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die **Allgemeinen Geschäftsbedingungen** und **weitere relevante Vertragsunterlagen**.\
 Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
-Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
+Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptiert wurden.
 
 ![PCV Bestellübersicht](img/pcv-order-overview.png)

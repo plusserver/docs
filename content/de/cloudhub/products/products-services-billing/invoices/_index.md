@@ -25,7 +25,7 @@ Im Tab **„Rechnungen“** erhalten Sie eine tabellarische Übersicht aller fü
   ![Rechnungen - Filter nach Zeitraum](img/invoices-filter-period.png)
 
 - **Suchfunktion:**
-  Über die Suchleiste können Sie gezielt nach Rechnungen suchen (z. B. nach Rechnungsnummer, Betreff, o. ä.).\
+  Über die Suchleiste können Sie gezielt nach Rechnungen suchen (z. B. nach Rechnungsnummer, Betreff o. ä.).\
   ![Rechnungen - Suchleiste](img/invoices-searchbar.png)
 
 - **Downloadmöglichkeit:**

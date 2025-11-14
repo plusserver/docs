@@ -31,15 +31,15 @@ On the [Keycloak page](https://idm.psmanaged.com/realms/plusIDM/account/#/securi
 
 On the right is the link to ‘Set up Authenticator application’, where you will find further step-by-step instructions and the actual setup of 2FA.
 
-### Step 3: Erneut einloggen
+### Step 3: Log in again
 
 ![CloudHub Login](img/2fa-cloudhub-login-1.png)\
 After clicking on ‘Set up Authentificator application’, you must log in again.
 
-### Step 4: 2-FA einrichten
+### Step 4: Set up 2FA
 
 ![Step-by-step guide to configuring multiple authentication](img/2fa-instruction-1.png)\
-After successfully logging in, you will be taken to a step-by-step guide from Keycloak on how to set up the 2-FA.
+After successfully logging in, you will be taken to a step-by-step guide from Keycloak on how to set up the 2FA.
 
 **The following three steps must be carried out:**
 

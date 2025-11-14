@@ -1,11 +1,11 @@
 ---
-title: "Produkte / Leistungen und Abrechnungen"
-linkTitle: "Produkte / Leistungen und Abrechnungen"
+title: "Produkte / Leistungen und Abrechnung"
+linkTitle: "Produkte / Leistungen und Abrechnung"
 type: "docs"
 weight: 2
 date: 2025-07-14
 description: >
-  Informationen zu Produkte / Leistungen und Abrechnungen im CloudHub
+  Informationen zu Produkte / Leistungen und Abrechnung im CloudHub
 ---
 
 ## Produkte / Leistungen und Abrechnung

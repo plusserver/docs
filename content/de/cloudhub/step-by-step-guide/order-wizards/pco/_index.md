@@ -1,6 +1,6 @@
 ---
-title: "Pluscloud Open"
-linkTitle: "Pluscloud Open"
+title: "pluscloud open"
+linkTitle: "pluscloud open"
 type: "docs"
 weight: 2
 description: >
@@ -36,17 +36,17 @@ In diesem Schritt machen Sie Angaben zum Projekt und zum Benutzer. Es gibt mehre
 
 ![PCO Projekt und Benutzer Eingabe](img/pco-project.png)
 
-## Schritt 2: Onboarding Workshop
+## Schritt 2: Onboarding-Workshop
 
-Optional kann ein Onboarding Workshop für 299 € hinzugebucht werden.
-Er unterstützt Sie bei der Einrichtung und Nutzung Ihrer pluscloud open Umgebung.
+Optional kann ein Onboarding-Workshop für 0,00 € hinzugebucht werden.
+Er unterstützt Sie bei der Einrichtung und Nutzung Ihrer pluscloud-open-Umgebung.
 
 ![PCO Onboarding](img/pco-onboarding.png)
 
 ## Schritt 3: Region auswählen
 
-Wählen Sie die gewünschte Region aus, in der Ihre pluscloud open Umgebung bereitgestellt werden soll.
-Bitte beachten: Es kann nur eine pluscloud open Instanz pro Region erstellt werden.
+Wählen Sie die gewünschte Region aus, in der Ihre pluscloud-open-Umgebung bereitgestellt werden soll.
+Bitte beachten: Es kann nur eine pluscloud-open-Instanz pro Region erstellt werden.
 
 Verfügbare Regionen:
 
@@ -71,6 +71,6 @@ Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigur
 Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
 Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die **Allgemeinen Geschäftsbedingungen** und **weitere relevante Vertragsunterlagen**.\
 Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
-Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
+Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptiert wurden.
 
 ![PCO Bestellübersicht](img/pco-order-overview.png)

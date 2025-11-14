@@ -9,7 +9,7 @@ description: >
 
 ## Einleitung
 
-Willkommen auf der [FAQ-Seite](https://cloudhub.plusserver.com/faq), welche als dient zentrale Anlaufstelle dient, um schnell Antworten auf häufig gestellte Fragen zu finden.
+Die [FAQ-Seite](https://cloudhub.plusserver.com/faq), dient als zentrale Anlaufstelle, um schnell Antworten auf häufig gestellte Fragen zu finden.
 
 ![FAQ Überblick](./img/faq-overview.png)
 
@@ -30,10 +30,10 @@ Die folgenden Kategorien decken die wichtigsten Bereiche ab:
 
 ![FAQ Kategorie Auswahl](./img/faq-select.png)
 
-Nach Auswahl einer Kategorie werden die relevanten Fragen zu diesem Bereich in einer übersichtlichen Akkordeon-Darstellung angezeigt.
+Nach Auswahl einer Kategorie werden die relevanten Fragen zu diesem Bereich in einer übersichtlichen Akkordeon-Darstellung geöffnet.
 Mit einem Klick auf eine Frage öffnet sich der dazugehörige Antwortbereich und liefert die passenden Informationen.
 Dieses Funktionsprinzip ist in allen Kategorien identisch.
-Das Akkordeon wird nur angezeigt, wenn zuvor eine Kategorie ausgewählt wurde, um die Übersichtlichkeit der Seite zu gewährleisten.
+Das Akkordeon wird nur geöffnet, wenn zuvor eine Kategorie ausgewählt wurde, um die Übersichtlichkeit der Seite zu gewährleisten.
 
 ![FAQ Akkordeon](./img/faq-accordion.png)
 

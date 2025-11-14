@@ -8,7 +8,7 @@ description: >
 ---
 
 Willkommen im neuen Bereich des CloudHubs, Ihrem [Produkt-Dashboard](https://cloudhub.plusserver.com/product-dashboard)!
-Hier können Sie die von ihnen im CloudHub gebuchten Produkte einsehen und verwalten.
+Hier können Sie die von Ihnen im CloudHub gebuchten Produkte einsehen und verwalten.
 In der folgenden Anleitung erklären wir Ihnen die verschiedenen Bereiche des Produkt-Dashboards (auch Level genannt) und was Sie dort an Informationen, Links und zukünftig auch Funktionen finden.
 
 ## Aufbau des Produkt-Dashboards
@@ -30,7 +30,7 @@ Sonstiges: Rollen und Rechte für das Dashboard werden im Bereich "User Manageme
 #### Beta-Kennzeichnung und Links zu How-tos
 
 Aktuell ist es noch mit "Beta" gekennzeichnet, da es noch nicht den vollen Funkionsumfang hat. Diesen liefern wir mit kontinuierlichen Releases nach (mehr dazu unter "Informationen und kommende Funkitonen").
-Neben diesem schriftlichen How-to können Sie ein Erklärvideo (ca. 7 Min.) jederzeit aufrufen. Die Links finden Sie unter dem Intro-text.\
+Neben diesem schriftlichen How-to können Sie ein Erklärvideo (ca. 7 Min.) jederzeit aufrufen. Die Links finden Sie unter dem Intro-Text.\
 ![Level 1: Quick Links zur Anleitung und zum Video für einen Überblick über das Dashboard](./img/lvl-1-quick-links-1.png)
 
 #### Meine gebuchten Produkte
@@ -59,7 +59,7 @@ _FAQs:_ Hier finden Sie, aufbereitet nach Kategorien, viele Fragen und Antworten
 #### Produkt vs Projekt
 
 Aktuell finden Sie hier eine reine Produktübersicht vor.
-Eine Übersicht Ihre Projekte, in denen verschiedene Produkte zusammen angezeigt und verwaltet werden können, ist bereits in Arbeit.
+Eine Übersicht Ihrer Projekte, in denen verschiedene Produkte zusammen angezeigt und verwaltet werden können, ist bereits in Arbeit.
 
 #### Alle aktiven Produkte einer Kategorie auf einen Blick
 
@@ -77,7 +77,7 @@ Der voreingestellte Prozess sieht wie folgt aus:
 Ist Ihr Produkt „In Bereitstellung“ oder „Aktiv“, öffnen Sie über dieses Icon ein „Service Request“-Ticket und kommen direkt mit den Support-Kolleg:innen in Kontakt.\
 ![Level 2: Beispiel für den Beginn der Ticketerstellung > Service Request](./img/lvl-2-example-begin-ticket-creation.png)
 
-Ist Ihr Produkt "Gekündigt", öffnen Sie über dieses Icon direkt ein Ticket für unsere Kolleg:innen in der Vertragsabteilung, die ab diesem Stauts Ihre Ansprechpersonen in erster Instanz für Ihr Produkt/Ihren Vertrag sind.
+Ist Ihr Produkt "Gekündigt", öffnen Sie über dieses Icon direkt ein Ticket für unsere Kolleg:innen in der Vertragsabteilung, die ab diesem Status Ihre Ansprechpersonen in erster Instanz für Ihr Produkt/Ihren Vertrag sind.
 
 #### Weiterführende Links
 
@@ -91,7 +91,7 @@ _Mehr bestellen:_ Von hier aus kommen Sie direkt in den Bestellprozess eines neu
 #### Informationen in den Tabs
 
 In Level 3 finden Sie eine detaillierte Produktansicht mit verschiedenen Informationen zu diesem konkreten Produkt.
-In den Bereich oberhalb der Tabs sehen Sie immer auf den ersten Blick einen Steckbrief Ihres Produktes mit den wichtigsten Informationen.\
+Im Bereich oberhalb der Tabs sehen Sie immer auf den ersten Blick einen Steckbrief Ihres Produktes mit den wichtigsten Informationen.\
 ![Level 3: Informationen](./img/lvl-3-information.png)
 
 Im ersten Tab sehen Sie grundlegende Informationen zu diesem Produkt. Viele der Informationen kennen Sie bereits aus dem Bestellprozess.
@@ -101,26 +101,26 @@ Für die Produkte „pluscloud open“, „pluscloud VMware“ und „Managed Ku
 Für die Produkte "Private Registry", "Datenbanken" und "Keycloak" ist eine Anpassbarkeit der dort dargestellten Informationen möglich.\
 ![Level 3: Tab 1. - Beispiel Datenbanken](./img/lvl-3-example-db.png)
 
-Wenn Sie die entsprechenden Rechte besitzen, dann sehen Sie als zweites einen Tab mit den Zugangsdaten zu Ihrem Produkte inkl. Link zu der jeweiligen GUI.\
+Wenn Sie die entsprechenden Rechte besitzen, dann sehen Sie als Zweites einen Tab mit den Zugangsdaten zu Ihrem Produkte inkl. Link zu der jeweiligen GUI.\
 ![Level 3: Tab 2 - Credentials](./img/lvl-3-credentials.png)
 ![Level 3: Tab 2 - Credentials - Keine Rechte](./img/lvl-3-credentials-no-permissions.png)
 
 Der nächste Tab „Monitoring“ ist aktuell in Arbeit und kommt in den nächsten Monaten. Da uns aber wichtig war, Ihnen direkt die finale Struktur des Dashboards zu präsentieren, haben wir entsprechende Infobanner mit mehr Informationen eingebaut.\
 ![Level 3: Tab 3 - Monitoring](./img/lvl-3-monitoring.png)
 
-Die „Verbrauchsdaten“ werden in Balkendiagrammen der letzten Monate dargestellt. Dabei sind die verschiedenen Verbrauchstypen (in Stunden) durch unterschiedliche Farben klar voneinander abgegrenzt.\
+Die „Verbrauchsdaten“ der letzten Monate werden in Balkendiagrammen dargestellt. Dabei sind die verschiedenen Verbrauchstypen (in Stunden) durch unterschiedliche Farben klar voneinander abgegrenzt.\
 ![Level 3: Tab 4 - Verbrauchsdaten 1](./img/lvl-3-consumption-data1.png)
 ![Level 3: Tab 4 - Verbrauchsdaten 2](./img/lvl-3-consumption-data2.png)
 
-Alternativ steht eine Tabellenansicht zur Verfügung, in der die Verbrauchsdaten übersichtlich in tabellarischer Form dargestellt sind. Diese Daten können bei Bedarf als .CSV-Datei heruntergeladen werden.\
+Alternativ steht eine Tabellenansicht zur Verfügung, in der die Verbrauchsdaten übersichtlich in tabellarischer Form dargestellt sind. Diese Daten können bei Bedarf als CSV-Datei heruntergeladen werden.\
 ![Level 3: Tab 4 - Verbrauchsdaten 3](./img/lvl-3-consumption-data3.png)
 
 Je nach Produkt werden unterschiedliche Verbrauchstypen dargestellt:
 |Produkt|Verbrauchstypen|
 |-------|-----|
-|PCV|aktuell keine Verbrauchsdaten verfügbar|
-|PCO|vGPU, vRAM, Cluster, Loadbalancer, Public IP-Adressen, Storage|
-|PSKE|vGPU, vRAM, Cluster, Loadbalancer, Public IP-Adressen, Storage|
+|pluscloud VMware|aktuell keine Verbrauchsdaten verfügbar|
+|pluscloud open|vGPU, vRAM, Cluster, Loadbalancer, Public IP-Adressen, Storage|
+|Managed Kubernetes|vGPU, vRAM, Cluster, Loadbalancer, Public IP-Adressen, Storage|
 |Private Registry|Node Size, Storage|
 |Datenbanken|aktuell keine Verbrauchsdaten verfügbar|
 |Caching|aktuell keine Verbrauchsdaten verfügbar|
@@ -131,13 +131,13 @@ Je nach Produkt werden unterschiedliche Verbrauchstypen dargestellt:
 Im Tab "Changelog" wird eine Auflistung aller vorgenommenen technischen Änderungen am Produkt mit dem Zeitpunkt und einer kurzen Zusammenfassung angezeigt.\
 ![Level 3: Tab 5 - Changelog](./img/lvl-3-changelog.png)
 
-Im letzten Tab "Tickets" sehen Sie eine gefilterte Ansicht aller Tickets, die zu diesem Produkt/Vertrag eröffnet sind, sortiert nach "geöffnet" und "alle". Wenn Sie eine Gesamtübersicht all Ihrer Tickets wünschen, ist diese im Bereich "Support" zu finden.\
+Im letzten Tab "Tickets" sehen Sie eine gefilterte Ansicht aller Tickets, die zu diesem Produkt/Vertrag eröffnet sind, gruppiert nach „offen“ und „alle“ und sortiert nach Datum und Uhrzeit. Wenn Sie eine Gesamtübersicht all Ihrer Tickets wünschen, ist diese im Bereich "Support" zu finden.\
 ![Level 3: Tab 6 - Tickets (gefiltert nach Produkt)](./img/lvl-3-tickets.png)
 
 #### Weiterführende Links
 
-Ticket erstellen: Aus Level 3 heraus können Sie mit wenigen Klicks ein Ticket genau für dieses Produkt erstellen. Ihr „Service Request“ wird dann direkt von unserem Support bearbeitet. Der Prozess verläuft wie beim „Ticket erstellen“ auf Level 2.
-Kündigung des Produktes/des Vertrages: An dieser Stelle befindet sich die Möglichkeit, ein Kündigungsticket zu erstellen und den Kündigungsprozess mit wenigen Klicks einzuleiten.
+_Ticket erstellen:_ Aus Level 3 heraus können Sie mit wenigen Klicks ein Ticket genau für dieses Produkt erstellen. Ihr „Service Request“ wird dann direkt von unserem Support bearbeitet. Der Prozess verläuft wie beim „Ticket erstellen“ auf Level 2.\
+_Kündigung des Produktes/des Vertrages:_ An dieser Stelle befindet sich die Möglichkeit, ein Kündigungsticket zu erstellen und den Kündigungsprozess mit wenigen Klicks einzuleiten.
 
 ### Produktanpassungen in Level 3
 
@@ -157,17 +157,17 @@ Zudem dokumentieren wir Ihre Anpassung in einem Ticket, über das Sie per E-Mail
 ![Level 3: Ticket zur Dokumentation der Anpassungen - 1](./img/lvl-3-ticket-for-documentation-of-customization-1.png)
 ![Level 3: Ticket zur Dokumentation der Anpassungen - 2](./img/lvl-3-ticket-for-documentation-of-customization-2.png)
 
-Sie können bspw. **vertrauenswürdige Quellen** anpassen, die **Anzahl der Backups** erhöhen sowie den **Backup- und Patch-Zeitplan** anpassen. Die Felder, die Sie ändern können sind in diesem Bereich noch einmal blau herborgehiben.
+Sie können bspw. **vertrauenswürdige Quellen** anpassen, die **Anzahl der Backups** erhöhen sowie den **Backup- und Patch-Zeitplan** anpassen. Die Felder, die Sie ändern können, sind in diesem Bereich noch einmal blau hervorgehoben.
 
 **Folgende Hinweise möchten wir Ihnen mitgeben, da sie produktspezifisch sind:**\
 Zum einen sind 7 Backups in Ihrem Vertrag inklusive und sind auch die Mindestmenge, die eingestellt sein muss. Sie können auf bis zu maximal 90 Backups erhöhen. Die Änderung der Anzahl der Backups führt zu Änderungen in Ihrer Abrechnung.
-Zum anderen müssen zwischen dem Backup- und Patch-Zeitplan 2,5 Stunden Abstand eingehalten werden, da sie sich nicht überschneiden dürfen. Beispiel: Wenn das Backup ab 02:00 starten soll, darf der Patch-Zeitplan nicht vor 04:30 starten.
+Zum anderen müssen zwischen dem Backup- und Patch-Zeitplan 2,5 Stunden Abstand eingehalten werden, da sie sich nicht überschneiden dürfen. Beispiel: Wenn das Backup ab 02:00 Uhr starten soll, darf der Patch-Zeitplan nicht vor 04:30 Uhr starten.
 
 Mit Klick auf „Änderungen speichern“ erscheint eine Information mit der Preisänderung. Wenn Sie dann mit „Zahlungspflichtig bestellen“ bestätigen, wird die Änderung wirksam wie oben beschrieben.
 ![Level 3: Anpassung der Whitelist, Backup und Patch](./img/lvl-3-adjustmend-whitelist-backup-patch.png)
 
 Bei der **Primary Node** können Sie die Node Disk und die Node Disk Size anpassen, wobei letztere nur erhöht werden kann. Sie können beide Werte zusammen oder nur einen davon anpassen.
-Die Anpassung führt unmittelbar zu einer kurzen Betriebsunterbrechung zu Aktivierung der geänderten Werten.\
+Die Anpassung führt unmittelbar zu einer kurzen Betriebsunterbrechung zur Aktivierung der geänderten Werte.\
 ![Level 3: Anpassung der Primary Node - 1](./img/lvl-3-customization-primary-node-1.png)
 ![Level 3: Anpassung der Primary Node - 2](./img/lvl-3-customization-primary-node-2.png)
 ![Level 3: Anpassung der Primary Node - 3](./img/lvl-3-customization-primary-node-3.png)
@@ -175,7 +175,7 @@ Die Anpassung führt unmittelbar zu einer kurzen Betriebsunterbrechung zu Aktivi
 Nur für die Datenbanken können Sie (bis zu drei) **Read Replica** erstellen, anpassen oder auch löschen. Diese Änderungen sind nur nacheinander über den jeweiligen Button möglich. Die Read Replica ist dabei immer eine exakte Kopie der Primary Node und wird entsprechend auch abgerechnet.\
 ![Level 3: Anpassungen der Read Replicas (nur für Datenbanken)](./img/lvl-3-db-modification-read-replicas-1.png)
 
-Das bedeutet auch, dass Sie eine Read Replica nur über Änderung der Primary Node anpassen können bzw. eine Read Replica immer mit verändert wird. Um das transparent zu machen, werden bei der Read Replica die Parameter gelb hinterlegt, die Sie in der Primary Node anpassen. Alle Änderung der Primary Node und Read Replica führen zu Änderungen in Ihrer Abrechnung.\
+Das bedeutet auch, dass Sie eine Read Replica nur über Änderung der Primary Node anpassen können bzw. eine Read Replica immer mit verändert wird. Um das transparent zu machen, werden bei der Read Replica die Parameter gelb hinterlegt, die Sie in der Primary Node anpassen. Alle Änderungen der Primary Node und Read Replica führen zu Änderungen in Ihrer Abrechnung.\
 ![Level 3: Anpassungen er Read Replica auf Basis der Primary Node (nur für Datenbanken)](./img/lvl-3-db-modification-read-replicas-2.png)
 
 Sie können jederzeit eine oder alle Read Replica löschen. Dazu nutzen Sie den entsprechenden Button und markieren eine oder mehrere über das Kästchen in der rechten oberen Ecke. Nach der Löschung wird die Read Replica nicht mehr abgerechnet.\
@@ -192,16 +192,16 @@ Falls Sie mehrere Produkte kündigen möchten, besteht die Möglichkeit diese ge
 
 #### Informationen und kommende Funktionen
 
-Der Tab "Verbrauchsdaten wird Ihnen in Zukunft Verbrauchsdaten dieses Produktes auf tagesaktueller Basis anzeigen.
+Der Tab "Verbrauchdaten" wird Ihnen in Zukunft Verbrauchsdaten dieses Produktes auf tagesaktueller Basis anzeigen.
 Der Tab "Monitoring" wird Ihnen in Zukunft Monitoring-Daten aus Icinga2 anzeigen, damit Sie auf den ersten Blick den Status Ihres Produktes erfassen können. Des Weiteren werden Sie Verlinkungen auf die entsprechenden Detailinfos in Icinga2 vorfinden.
-Es ist geplant, die Produkt-Dashboards der Produkte "pluscloud open", "pluscloud VMware" und "Managed Kubernetes (PSKE)" noch enger mit dem CloudHub Produkt-Dashboard zu verzahnen.
+Es ist geplant, die Produkt-Dashboards der Produkte "pluscloud open", "pluscloud VMware" und "Managed Kubernetes (PSKE)" noch enger mit dem Produkt-Dashboard des CloudHub zu verzahnen.
 
 ## Rollen und Rechte für das Produkt-Dashboard
 
 Die Rollen und Rechte für das Produkt-Dashboard können unter „User Management“ verwaltet werden.
 Klicken Sie dort auf den Button „Neue Rolle anlegen“ (oben rechts). Dort können Sie dann diese Rolle benennen und mit Rechten versehen.
 Es gibt die Unterscheidung zwischen „Seitenverwaltung“, „Vertragsverwaltung“ und „Produkt-Dashboard-Verwaltung“.
-„Seitenverwaltung“ bezieht sich auf die angezeigten Seiten im CloudHub. „Vertragsverwaltung“ auf einzelne Verträge/Leistungen und „Produkt-Dashboard-Verwaltung“ auf die Bereiche und Produkte im Dashboard.\
+„Seitenverwaltung“ bezieht sich auf die angezeigten Seiten im CloudHub, „Vertragsverwaltung“ auf einzelne Verträge/Leistungen und „Produkt-Dashboard-Verwaltung“ auf die Bereiche und Produkte im Dashboard.\
 ![Rollen und Berechtigungen: Rolle erstellen](./img/rnr-create-role.png)
 
 ### Vier vordefinierte Rollen
@@ -233,7 +233,7 @@ Die Rolle „Read-Only“ ist vor allem für die Personen aus Ihrem Unternehmen 
 
 Die Rollen „Techniker“, „Manager“, „Read-only“ können nach Anlage bearbeitet werden. Beispiel: Sie vergeben eine Techniker-Rolle für pluscloud open und müssen ein paar Wochen später demselben User die gleichen Rechte für Managed Kubernetes geben. Suchen Sie einfach unter „User-Management“ > „Rollen“ die jeweilige Rolle und klicken auf das Symbol für „bearbeiten“. Dann können Sie entsprechend das weitere Produkt anhaken und die Rechte für diese Rolle haben sich erweitert.
 
-### Ein Nutzer soll alles im Dashboard für Datenbanken einsehen und verwalten können
+#### Ein Nutzer soll alles im Dashboard für Datenbanken einsehen und verwalten können
 
 Wenn Sie möchten, dass jemand nur für die Datenbankprodukte alle verfügbaren Informationen im Dashboard einsehen und die Funktionen nutzen kann, dann vergeben Sie ihm bitte die Rolle „Techniker“ und die Rolle „Manager“ jeweils eingeschränkt für die Datenbankprodukte.
 

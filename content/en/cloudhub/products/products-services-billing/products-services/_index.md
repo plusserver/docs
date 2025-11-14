@@ -24,7 +24,7 @@ In the table you will find a complete list of your purchased products including 
 You can search for specific products using a central search field above the table. The search is performed across all displayed columns.\
 ![Product overview - Searchfield](img/products-table-search-field.png)
 
-#### Filteroptions
+#### Filter options
 
 The following filters are available to narrow down the view:
 
