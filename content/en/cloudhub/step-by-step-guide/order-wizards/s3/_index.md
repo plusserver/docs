@@ -4,7 +4,7 @@ linkTitle: "S3"
 type: "docs"
 weight: 9
 description: >
-    Step by Step Guide for S3
+    Step-by-Step Guide for S3 Object Storage
 ---
 
 ## Introduction

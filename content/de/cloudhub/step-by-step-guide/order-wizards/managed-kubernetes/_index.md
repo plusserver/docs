@@ -29,7 +29,7 @@ Aktuell steht nur eine Option zur Verfügung, die bereits vorausgewählt ist:
 
 ![Kube Infrastruktur](img/managed-kube-infrastructure.png)
 
-## Schritt 2: E-Mail für Bereitstellungsinformationen
+## Schritt 2: E-Mail-Adresse für Bereitstellungsinformationen
 
 - E-Mail-Adresse:
   Dieses Feld ist vorausgefüllt mit der E-Mail-Adresse, mit der Sie aktuell angemeldet sind.
@@ -37,15 +37,15 @@ Aktuell steht nur eine Option zur Verfügung, die bereits vorausgewählt ist:
 
 ![Kube Email](img/managed-kube-mail.png)
 
-## Schritt 3: Onboarding Workshop
+## Schritt 3: Onboarding-Workshop
 
-Optional kann ein Onboarding Workshop für 199 € gebucht werden, um Sie bei der Inbetriebnahme der Umgebung zu unterstützen.
+Optional kann ein Onboarding-Workshop für 0,00 € gebucht werden, um Sie bei der Inbetriebnahme der Umgebung zu unterstützen.
 
 ![Kube Onboarding](img/managed-kube-onboaring.png)
 
 ## Workload Protection as a Service
 
-Ein Sicherheitsdienst zur Erweiterung Ihrer **PSKE-Plattform** mit umfassendem Schutz für Anwendungen, Container und Infrastruktur, was mit einem Hacken in der Checkbox ausgewählt werden kann.
+Ein Sicherheitsdienst zur Erweiterung Ihrer **PSKE-Plattform** mit umfassendem Schutz für Anwendungen, Container und Infrastruktur, was mit einem Haken in der Checkbox ausgewählt werden kann.
 
 Leistungsmerkmale:
 
@@ -80,6 +80,6 @@ Die Bestellübersicht zeigt eine Tabelle mit allen von Ihnen gewählten Konfigur
 Unterhalb der Tabelle befindet sich eine Checkbox, mit der Sie die folgenden Anlagen und Bedingungen akzeptieren können.
 Zu den Anlagen gehören verschiedene herunterladbare PDF-Dokumente, wie z. B. die **Allgemeinen Geschäftsbedingungen** und **weitere relevante Vertragsunterlagen**.\
 Rechts neben der Tabelle werden der Gesamtpreis sowie der Bestellen-Button angezeigt.
-Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptieren wurden.
+Dieser Button ist standardmäßig deaktiviert und wird erst aktiviert, wenn die Anlagen und Bedingungen akzeptiert wurden.
 
 ![Kube Bestellübersicht](img/managed-kube-order-overview.png)

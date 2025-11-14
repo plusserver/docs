@@ -233,7 +233,7 @@ The role “Read-Only” is intended primarily for those people in your company 
 
 The “Technician”, “Manager” and “Read-only” roles can be edited after creation. Example: You assign a technician role for pluscloud open and a few weeks later you need to give the same user the same permissions for Managed Kubernetes. Simply go to “User Management” > “Roles”, find the respective role and click on the “Edit” icon. Then you can check the additional product and the permissions for this role have been extended.
 
-### A user should be able to view and manage everything for databases
+#### A user should be able to view and manage everything for databases
 
 If you want someone to be able to view everything in the dashboard and use the functions for the database products only, then please assign them the “Technician” and “Manager” roles, each restricted to the database products.
 
@@ -249,7 +249,7 @@ The roles “Dashboard Admin”, “Technician” and “Manager” automaticall
 
 Access data can be seen in the dashboard with all three roles except the “Read-Only” role, with the corresponding restrictions (for individual contracts) that may already have been assigned.
 
-#### Permissions outsiode of the dashboard
+#### Permissions outside of the dashboard
 
 All permissions outside of the product dashboard, such as viewing contracts or invoices, managing contact persons, etc., must be restricted/edited under “page management” or “contract management”.
 

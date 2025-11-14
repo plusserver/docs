@@ -17,7 +17,7 @@ On the start page you will find an overview of our cloud services (structured by
 
 ![Cloud Services Overview](../img/cloud-services/cloud-services-overview.png)
 
-**Overview:** Here you will find all the information about the respective product in a category. There is also a quick link to the relevant order form (wizard).
+**Overview:** Here you will find all the information about the respective product in a category. There is also a button to the relevant order form (wizard).
 
 ![Cloud Services Produkt Details](../img/cloud-services/cloud-services-level2.png)
 

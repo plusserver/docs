@@ -4,7 +4,7 @@ linkTitle: "Ansprechpartner"
 type: "docs"
 weight: 3
 description: >
-    Informationen zu Ansprechpartner im CloudHub
+    Informationen zu Ansprechpartnern im CloudHub
 ---
 
 ## Wo ist es zu finden?
@@ -13,18 +13,18 @@ Die Ansprechpartner sind in der Sidebar des CloudHubs unter **"Ansprechpartner"*
 
 ![Ansprechpartner Position](../../img/contact-persons/contact-persons-location.png)
 
-## Ansprechpartner Überblick
+## Ansprechpartner-Überblick
 
 ![contact persons overview](../../img/contact-persons/contact-persons-overview.png)
 
 Allgemein gibt es hier zwei Bereiche:
 
 - die Verwaltung der Kontakte selbst
-- die Sortierung der angegebenen Kontakte in eine Reihenfolge, die bei Eskalationen oder anderen Notfällen kontaktiert werden soll
+- die Sortierung der angegebenen Kontakte in eine Reihenfolge, wie sie bei Eskalationen oder anderen Notfällen kontaktiert werden sollen.
 
 ## Hauptkontakt
 
-Dieser Kontakt ist unabhängig von den anderen Ansprechpartner.
+Dieser Kontakt ist unabhängig von den anderen Ansprechpartnern.
 
 Er ist der Hauptkontakt in all unseren Systemen, meist die Person, die sich registriert hat oder die den Vertrag mit uns geschlossen hat.
 
@@ -63,7 +63,7 @@ Danach kann man auswählen, für welche Belange diese Person kontaktiert werden 
 
 ### Ansprechpartner editieren
 
-Wenn man bei der Übersicht auf das Stift-Symbol klickt, wird von der rechten Seite ein Menü eingeblendet, wo man die angegebenen Informationen sichten kann. Möchte man diese bearbeiten, ist rechts oben ein Button mit "Bearbeiten". Das sieht dann so aus:
+Wenn man bei der Übersicht auf das Stift-Symbol klickt, wird von der rechten Seite eine Sidebar eingeblendet, wo man die angegebenen Informationen sichten kann. Möchte man diese bearbeiten, ist rechts oben ein Button mit "Bearbeiten". Das sieht dann so aus:
 
 ![edit contact person](../../img/contact-persons/contact-persons-edit.png)
 

@@ -18,7 +18,7 @@ Im Tab **„Übersicht“** sehen Sie eine tabellarische Darstellung aller SSL-Z
 #### Funktionen
 
 - **Suchfunktion:**
-  Mithilfe der Suchleiste können Sie gezielt nach SSl-Zertifikaten oder CRSs suchen (z. B. durch Suche nach der Domain).
+  Mithilfe der Suchleiste können Sie gezielt nach SSL-Zertifikaten oder CRSs suchen (z. B. durch Suche nach der Domain).
 
 - **SSL-Zertifikat hinzufügen:**
   Über den Button „SSL-Zertifikat hinzufügen“ gelangen Sie zu einer separaten Seite, auf der Sie ein vorhandenes SSL-Zertifikat sicher im CloudHub hochladen können.
@@ -73,7 +73,7 @@ Im Tab **„CSR-Generator“** können Sie eine Zertifikatsignierungsanforderung
   - Geben Sie den SAN in ASCII-Form ein (Pflichtfeld)
   - Für **Multi-Domain-Zertifikate** geben Sie die Domains als kommagetrennte Liste ein (z. B. `example.com,www.example.com,shop.example.com`)
 
-Nach dem Erstellen wird der CSR ihnen in der **Übersicht** angezeigt. Außerdem geben wir Ihnen eine Anleitung, wie Sie mit verschiedenen Tools einen privaten Schlüssel aus dem CSR erstellen können.
+Nach dem Erstellen wird Ihnen der CSR in der **Übersicht** angezeigt. Außerdem geben wir Ihnen eine Anleitung, wie Sie mit verschiedenen Tools einen privaten Schlüssel aus dem CSR erstellen können.
 
 ### Kontakt hinzufügen
 

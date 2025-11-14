@@ -1,15 +1,15 @@
 ---
-title: "pluscloud Open"
-linkTitle: "pluscloud Open"
+title: "pluscloud open"
+linkTitle: "pluscloud open"
 type: "docs"
 weight: 2
 description: >
-    Step by Step Guide for pluscloud Open
+    Step by Step Guide for pluscloud open
 ---
 
 ## Introduction
 
-Welcome to the [pluscloud Open order wizard](https://cloudhub.plusserver.com/cloud-services/pluscloud-open/order). Here it is described which configuration options are available and how a new pluscloud Open can be ordered.
+Welcome to the [pluscloud open order wizard](https://cloudhub.plusserver.com/cloud-services/pluscloud-open/order). Here it is described which configuration options are available and how a new pluscloud open can be ordered.
 
 In the following we guide you step by step through the ordering process and explain the individual selection options and input fields.
 
@@ -37,15 +37,15 @@ In the first step, you provide information about the project and the user.There 
 
 ## Step 2: Onboarding workshop
 
-Optionally, an onboarding workshop can be booked for 299€.
-He supports you in setting up and using your PlusCloud Open environment.
+Optionally, an onboarding workshop can be booked for 0,00 €.
+He supports you in setting up and using your pluscloud open environment.
 
 ![PCO Onboarding](img/pco-onboarding.png)
 
 ## Step 3: Select region
 
-Select the desired region in which your PlusCloud Open environment is to be provided.
-Please note: Only a PlusCloud Open Instance per region can be created.
+Select the desired region in which your pluscloud open environment is to be provided.
+Please note: Only a pluscloud open Instance per region can be created.
 
 Available regions:
 

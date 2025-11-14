@@ -9,15 +9,15 @@ description: >
 
 ## Cloud Services User Guide
 
-Willkommen im Bereich [Cloud Services](https://cloudhub.plusserver.com/cloud-services) des CloudHubs! Hier können Sie die verschiedenen Produkte bestellen. In der folgenden Anleitung erklären wir Ihnen die verschiedene Cloud Service Bereiche und was Sie dort an Informationen, Links und Funktionen finden.
+Willkommen im Bereich [Cloud Services](https://cloudhub.plusserver.com/cloud-services) des CloudHubs! Hier können Sie die verschiedenen Produkte bestellen. In der folgenden Anleitung erklären wir Ihnen die verschiedenen Cloud-Services-Bereiche und was Sie dort an Informationen, Links und Funktionen finden.
 
 ## Aufbau des Cloud-Service Bereichs
 
-Auf der Startseite finden Sie die Übersicht unserer Cloud Services (strukturiert nach Kategorien), sowie weiterführende Links auf andere CloudHub-Bereiche und unsere Produktdokumentation. Über einen Klick auf den Link "Jetzt bestellen" in der Produktkachel gelangen Sie auf das [Bestellformular (Wizard)](#das-bestellformular-wizard) und mit einem Klick auf den Link "Mehr erfahren" gelangen Sie in die [Übersicht des jeweiligen Produktes](#die-produktübersicht).
+Auf der Startseite finden Sie die Übersicht unserer Cloud Services (strukturiert nach Kategorien) sowie weiterführende Links auf andere CloudHub-Bereiche und unsere Produktdokumentation. Über einen Klick auf den Link "Jetzt bestellen" in der Produktkachel gelangen Sie auf das [Bestellformular (Wizard)](#das-bestellformular-wizard) und mit einem Klick auf den Link "Mehr erfahren" gelangen Sie in die [Übersicht des jeweiligen Produktes](#die-produktübersicht).
 
 ![Cloud Services Übersicht](../img/cloud-services/cloud-services-overview.png)
 
-**Übersicht:** Hier finden Sie alle Informationen des jeweiligen Produktes einer Kategorie. Dazu gibt es einen Quick-Link zum jeweiligen Bestellformular (Wizard).
+**Übersicht:** Hier finden Sie alle Informationen des jeweiligen Produktes einer Kategorie. Dazu gibt es eine Schaltfläche zum jeweiligen Bestellformular (Wizard).
 
 ![Cloud Services Produkt Details](../img/cloud-services/cloud-services-level2.png)
 
@@ -36,7 +36,7 @@ Sortiert nach Kategorien sehen Sie hier die verschiedenen Produkte, die Sie im C
 #### Hilfebereich
 
 Im Hilfebereich können Sie über die Kachel "Ticket erstellen" direkt ein Support-Ticket an den Kundenservice senden.
-Für technische Unterstützung steht der 2nd-Level-Support rund um die Uhr zur Verfügung. Bei Störungen und Ausfällen sowie bei Service- und Change Requests erreichen Sie den technischen Support unter der Telefonnummer +49 (0) 2203 1045 3600. Zusätzlich können Sie über die jeweiligen Links ein entsprechendes Ticket erstellen.
+Für technische Unterstützung steht der 2nd-Level-Support rund um die Uhr zur Verfügung. Bei Störungen und Ausfällen sowie bei Service und Change Requests erreichen Sie den technischen Support unter der Telefonnummer +49 (0) 2203 1045 3600. Zusätzlich können Sie über die jeweiligen Links ein entsprechendes Ticket erstellen.
 Für Fragen zu Produkten und Services steht Ihnen die vertriebliche Beratung werktags von 9 bis 17 Uhr zur Verfügung. Wenn Sie ein Cloud-Projekt anfragen möchten, erreichen Sie den Vertrieb unter +49 (0) 2203 1045 3500 oder über den Link zum Verkaufsticket.
 
 ![Cloud Services Hilfebereich](../img/cloud-services/cloud-services-products-help-area.png)
@@ -45,7 +45,7 @@ Für Fragen zu Produkten und Services steht Ihnen die vertriebliche Beratung wer
 
 #### Alle Informationen zu den Produkten in jeweils einem Akkordeon
 
-Sie erhalten auf dem Überblick alle Informationen der angebotenen Produkte. Wenn Sie auf den Quick-Link zum bestellen klicken, kommen Sie auf in das Bestellformular (Wizard). Die Informationen sollen Ihnen helfen, sich schnell und umfassend über die Produkte zu informieren. In den einzelnen Bereichen finden Sie Details zu den Produktfunktionen, Preisen sowie dem Onboarding-Prozess. Zusätzlich erhalten Sie Hinweise zum kostenfreien Testzugang und können häufige Fragen direkt klären. Bitte beachten Sie, dass sich die Inhalte je nach Produkt leicht unterscheiden können.
+Sie erhalten auf dem Überblick alle Informationen der angebotenen Produkte. Wenn Sie auf den Quick-Link zum bestellen klicken, kommen Sie in das Bestellformular (Wizard). Die Informationen sollen Ihnen helfen, sich schnell und umfassend über die Produkte zu informieren. In den einzelnen Bereichen finden Sie Details zu den Produktfunktionen, Preisen sowie dem Onboarding-Prozess. Zusätzlich erhalten Sie Hinweise zum kostenfreien Testzugang und können häufige Fragen direkt klären. Bitte beachten Sie, dass sich die Inhalte je nach Produkt leicht unterscheiden können.
 
 ![Cloud Services Level 2 Details](../img/cloud-services/cloud-services-level2-details.png)
 
@@ -68,7 +68,7 @@ Im Anschluss daran bietet das Formular die Möglichkeit, einen optionalen Onboar
 
 ![Cloud Services Level 3 Onboarding-Workshop](../img/cloud-services/cloud-services-level3-onboarding.png)
 
-Abschließend folgt ein Abschnitt zur Projektvertragskennung, in dem abgefragt wird, ob bereits eine solche Kennung vorliegt und gegebenenfalls eingetragen werden kann. Sobald alle Pflichtfelder ausgefüllt sind, kann über den Quick-Link zur Bestellübersicht gewechselt werden.
+Abschließend folgt ein Abschnitt zur Projektvertragskennung, in dem abgefragt wird, ob bereits eine solche Kennung vorliegt und gegebenenfalls ausgewählt werden kann. Sobald alle Pflichtfelder ausgefüllt sind, kann über den Quick-Link zur Bestellübersicht gewechselt werden.
 
 ![Cloud Services Level 3 Projektvertragskennung](../img/cloud-services/cloud-services-level3-project-contract-number.png)
 

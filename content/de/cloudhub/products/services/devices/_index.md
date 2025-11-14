@@ -12,7 +12,7 @@ Auf der Seite **„Geräte“** erhalten Sie eine vollständige Übersicht über
 
 ### Geräte-Tabelle
 
-Alle Geräte werden in einer Tabelle, welche wichtige Basisdaten enthäht, dargestellt.
+Alle Geräte werden in einer Tabelle, welche wichtige Basisdaten enthält, dargestellt.
 
 ![Geräte-Tabelle](img/devices-table.png)
 

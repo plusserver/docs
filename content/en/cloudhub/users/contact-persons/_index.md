@@ -75,7 +75,7 @@ If a contact is no longer needed, it can be easily deleted using the trash can b
 
 ![delete contact person](../../img/contact-persons/contact-persons-delete.png)
 
-### Escalation-Matrix
+### Escalation Matrix
 
 The contact persons that have already been created can be put in a sensible order here for situations where it is time-critical to get hold of the correct decision-maker at the customer's premises. In addition, you can add information for each escalation level, e.g. on the availability of this person or other information that helps us to act quickly.
 

@@ -38,4 +38,4 @@ Im Tab **„Verwaltung“** finden Sie die Zugangsdaten zum separaten Verwaltung
   Anzeige von Benutzername, ggf. Passwort-Hinweis oder andere relevante Verbindungsdaten für den Zugang zum externen Domain-Tool.
 
 - **Verwaltungslink:**
-  Ein Button führt Sie direkt zum Domain-Verwaltungstool, in dem Sie Ihre Domains managen können.
+  Ein Link führt Sie direkt zum Domain-Verwaltungstool, in dem Sie Ihre Domains managen können.

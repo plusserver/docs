@@ -15,7 +15,7 @@ Die Seite ist in zwei Tabs unterteilt und bietet zusätzlich die Möglichkeit, d
 
 ### Ticket erstellen
 
-Oben Rechts auf der Seite befindet sich eine Kachel „Ticket erstellen“.
+Oben rechts auf der Seite befindet sich eine Kachel „Ticket erstellen“.
 Über den dort enthaltenen Button gelangen Sie direkt zur Seite **„Ticket erstellen“**, um ein neues Support-Ticket anzulegen.
 
 ### Offene Tickets

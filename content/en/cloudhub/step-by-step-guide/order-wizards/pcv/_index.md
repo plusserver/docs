@@ -53,7 +53,7 @@ Here you enter the data of the responsible contact person:
 
 ## Step 3: Onboarding workshop
 
-Optionally, an onboarding workshop can be booked for 99 €.
+Optionally, an onboarding workshop can be booked for 0,00 €.
 This workshop supports you in the introduction and use of the PlusCloud VMware.
 
 ![PCV Onboarding](img/pcv-onboarding.png)

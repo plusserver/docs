@@ -39,7 +39,7 @@ Currently only one option is available that is already preselected:
 
 ## Step 3: Onboarding Workshop
 
-Optionally, an onboarding workshop can be booked for 199 € to support you in commissioning the area.
+Optionally, an onboarding workshop can be booked for 0,00 € to support you in commissioning the area.
 
 ![Kube Onboarding](img/managed-kube-onboaring.png)
 

@@ -4,5 +4,5 @@ linkTitle: "Order Wizards of all Products"
 type: "docs"
 weight: 3
 description: >
-    Informationen for all order wizards in CloudHub
+    Information about all order wizards in CloudHub
 ---

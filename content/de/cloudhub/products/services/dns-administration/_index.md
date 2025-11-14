@@ -5,7 +5,7 @@ type: "docs"
 weight: 5
 date: 2025-07-21
 description: >
-  Informationen zu DNS-Verwaltung im CloudHub
+  Informationen zur DNS-Verwaltung im CloudHub
 ---
 
 Die Seite **„DNS-Verwaltung“** bietet Ihnen eine zentrale Oberfläche zur Verwaltung Ihrer DNS-Einstellungen. Sie ist in zwei Tabs unterteilt: **Nameserver** und **Reverse DNS**. Beide Bereiche ermöglichen Ihnen die eigenständige Konfiguration Ihrer DNS-Zonen und PTR-Einträge.
@@ -73,7 +73,7 @@ Im Tab **„Reverse DNS“** verwalten Sie PTR-Einträge für Ihre IP-Adressen.\
 
 #### Übersichtstabelle
 
-- Alle vorhandenen Reverse DNS-Einträge werden in einer Tabelle angezeigt.
+- Alle vorhandenen Reverse-DNS-Einträge werden in einer Tabelle angezeigt.
 - Ein **Suchfeld** ermöglicht die gezielte Suche nach IP-Adressen oder Hostnamen.
 - Für jeden Eintrag stehen folgende Aktionen zur Verfügung:
   - **Bearbeiten** (führt zur Seite „DNS-Reverse-Eintrag bearbeiten“)\
@@ -93,7 +93,7 @@ Auf dieser Seite können Sie die Einstellungen eines bestehenden PTR-Eintrags ä
 
 Die zugehörige IP-Adresse ist nicht änderbar.
 
-### Reverse DNS-Eintrag hinzufügen
+### Reverse-DNS-Eintrag hinzufügen
 
 ![Reverse DNS Eintrag hinzufügen](img/add-reverse-dns-entry.png)
 

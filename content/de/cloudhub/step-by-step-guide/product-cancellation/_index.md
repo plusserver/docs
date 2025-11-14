@@ -12,13 +12,13 @@ description: >
 
 ### Schritt 1: Produkt-Dashboard öffnen
 
-Wähle in der linken Seitenleiste den Button [„Produkt Dashboard“](https://cloudhub.plusserver.com/product-dashboard) aus.
+Wählen Sie in der linken Seitenleiste den Button [„Produkt Dashboard“](https://cloudhub.plusserver.com/product-dashboard) aus.
 
 ![Produkt Dashboard in der Sidebar auswählen](img/k1.png)
 
 ### Schritt 2: Produktart auswählen
 
-Wähle die Produktart, die gekündigt werden soll (z. B. Pluscloud Open, Datenbanken etc.).
+Wählen Sie die Produktart, die gekündigt werden soll (z. B. Pluscloud Open, Datenbanken etc.).
 
 ![In der Seitenleiste die Produktart auswählen](img/k2.png)
 
@@ -28,12 +28,12 @@ Wähle die Produktart, die gekündigt werden soll (z. B. Pluscloud Open, Daten
 
 ### Schritt 4: Kündigung einleiten
 
-Klicke auf den Button „Produkt kündigen“.
+Klicken Sie auf den Button „Produkt kündigen“.
 
 ![Klicke auf den Button "Produkt kündigen"](img/k4.png)
 
 ### Schritt 5: Kündigung bestätigen
 
-Ein Pop-up-Fenster öffnet sich – validiere die Kündigung, um den Vorgang abzuschließen
+Ein Pop-up-Fenster öffnet sich – validieren Sie die Kündigung, um den Vorgang abzuschließen
 
 ![Pop-up-Fenster bestätigen](img/k5.png)

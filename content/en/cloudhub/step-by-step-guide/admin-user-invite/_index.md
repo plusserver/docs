@@ -1,10 +1,10 @@
 ---
-title: "Admin user can invite further users by e-mail"
-linkTitle: "Admin user can invite further users by e-mail"
+title: "Admin user can invite further users by email"
+linkTitle: "Admin user can invite further users by email"
 type: "docs"
 weight: 2
 description: >
-    Information on inviting additional users by e-mail
+    Information on inviting additional users by email
 ---
 
 ## Where to find it?
@@ -22,11 +22,11 @@ The function for **inviting additional users** by email can be found in the Clou
 
 ![User Management button "Create new user"](img/usr-mngmt-new-user.png)
 
-3. Admin sees a pop-up screen where he can enter the e-mail address of the user he wants to invite. (Email Address = mandatory field).
+3. Admin sees a pop-up screen where he can enter the email address of the user he wants to invite. (Email Address = mandatory field).
 4. The roles can now also be assigned directly in this pop-up screen (one and several).
     1. However, the rolls must be created **beforehand**.
     2. We have also added notes to "Delete role" and "Edit role" that this can have an effect on open invitations.
-5. The admin confirms the sending of the e-mail invitation via the "Send invitation" button (a loading screen appears)
+5. The admin confirms the sending of the email invitation via the "Send invitation" button (a loading screen appears)
 
 ![Pop-up window Invite new user - Send invitation](img/pop-up-invite-new-user-3.png)
 
@@ -78,7 +78,7 @@ As soon as the invitation has been successfully accepted, the added user appears
 
     ![CloudHub Welcome-Tour](img/cloudhub-welcome-tour.png)
 
-5. However, like all newly registered users, the user receives a welcome e-mail with an overview of all the important information about CloudHub.
+5. However, like all newly registered users, the user receives a welcome email with an overview of all the important information about CloudHub.
 
 ### Further functions for the user
 
@@ -95,4 +95,4 @@ Consequences for the user for cancelling access to a customer number:
 3. If a user is then only assigned to one customer number, they will be redirected to the start page in CloudHub, within the remaining customer number.
 4. If a user is then no longer assigned to any customer number at all, access is completely restricted. The user will then only see a screen in the CloudHub and we will inform them to contact the admin or support if they wish to delete their account. (We are not yet able to offer automated deletion). The user can only set the language here and log out.
 
-The admin user receives an e-mail informing them when a user has logged out of a customer number.
+The admin user receives an email informing them when a user has logged out of a customer number.
